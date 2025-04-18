@@ -1,0 +1,21 @@
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "No One Respects a Weak Man",
+    "description": "Strength is power in all domains. Learn how to build resilience and command respect with Tzeptosoft.",
+    "author": {
+      "@type": "Person",
+      "name": "Clinton"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Tzeptosoft",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://tzeptosoft.com/assets/logo.webp"
+      }
+    },
+    "datePublished": "2025-04-16",
+    "image": "https://tzeptosoft.com/assets/blog-1.webp",
+    "url": "https://tzeptosoft.com/blog/no-one-respects-weakness"
+  }
