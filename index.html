@@ -3,24 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Tzeptosoft: Empowering the future with life advice, coding, and innovation. Join the elite path.">
-  <meta name="keywords" content="life advice, personal growth, coding, innovation, Tzeptosoft">
+  <meta name="description" content="Tzeptosoft: Tech solutions, coding insights, and life advice for young coders, ambitious individuals, and businesses.">
+  <meta name="keywords" content="tech agency, coding tutorials, life advice, software development, Tzeptosoft">
   <meta name="author" content="Clinton | Tzeptosoft">
   <!-- Open Graph Tags -->
   <meta property="og:title" content="Tzeptosoft | Empowering the Future">
-  <meta property="og:description" content="Discover life advice, coding tips, and innovation strategies with Tzeptosoft. Join the elite path.">
+  <meta property="og:description" content="Discover tech solutions, coding insights, and life advice to elevate your journey with Tzeptosoft.">
   <meta property="og:image" content="https://tzeptosoft.com/assets/og-image.webp">
   <meta property="og:url" content="https://tzeptosoft.com">
   <meta property="og:type" content="website">
   <!-- Twitter Card Tags -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Tzeptosoft | Empowering the Future">
-  <meta name="twitter:description" content="Discover life advice, coding tips, and innovation strategies with Tzeptosoft. Join the elite path.">
+  <meta name="twitter:description" content="Discover tech solutions, coding insights, and life advice to elevate your journey with Tzeptosoft.">
   <meta name="twitter:image" content="https://tzeptosoft.com/assets/og-image.webp">
   <title>Tzeptosoft | Empowering the Future</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Mono:wght@700&family=Orbitron:wght@900&family=JetBrains+Mono:wght@400;700&display=swap">
-  <link rel="stylesheet" href="/assets/css/blog-style.css">
-  <link rel="icon" type="image/webp" href="/assets/images/favicon.webp">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/webp" href="/assets/favicon.webp">
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Tzeptosoft",
+    "url": "https://tzeptosoft.com",
+    "logo": "https://tzeptosoft.com/assets/logo.webp",
+    "description": "Tzeptosoft empowers young coders, ambitious individuals, and businesses with innovative tech solutions and life advice.",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "clintonmiruka100@gmail.com",
+      "contactType": "Customer Support"
+    },
+    "sameAs": [
+      "https://twitter.com/tzeptosoft",
+      "https://linkedin.com/company/tzeptosoft"
+    ]
+  }
+  </script>
 </head>
 <body>
   <!-- Preloader -->
@@ -35,33 +55,756 @@
   <div id="cursor-trail"></div>
 
   <!-- Hero Section -->
-  <div id="hero"></div>
+  <div class="hero">
+    <h1>TZEPTOSOFT</h1>
+    <h2>Empowering the Future</h2>
+    <div class="auto-typing">Code. Innovate. Thrive.</div>
+    <a href="mailto:clintonmiruka100@gmail.com" class="btn-cta" aria-label="Contact Tzeptosoft">Get in Touch</a>
+    <div class="holo-element" style="top: 20%; left: 10%;"></div>
+    <div class="holo-element" style="top: 30%; right: 15%;"></div>
+    <div class="holo-element" style="bottom: 25%; left: 20%;"></div>
+    <div class="holo-element" style="bottom: 15%; right: 10%;"></div>
+  </div>
 
-  <!-- Navbar -->
-  <div id="navbar"></div>
-
-  <!-- Blog Previews -->
   <main>
-    <div class="blog-container">
-      <h2 class="hero-title">Latest Posts</h2>
+    <!-- Blog Section -->
+    <div class="section" id="blog">
+      <h2>Insights for Ambitious Minds</h2>
+      <div class="blog-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="coding">Coding</button>
+        <button class="filter-btn" data-filter="life-advice">Life Advice</button>
+        <button class="filter-btn" data-filter="business">Business</button>
+      </div>
+      <div class="manifesto">
+        <h3>Build Your Legacy</h3>
+        <p>Tzeptosoft is more than code—it's a mindset. Our insights empower you to rise above challenges and create a lasting impact.</p>
+      </div>
       <ul class="blog-list">
         <li data-category="life-advice">
-          <h3><a href="/life-advice-for-young-men.html">Life Advice for Young Men: 21 Commandments for the Future Kings</a></h3>
-          <p>Discover 21 commandments to forge future kings with discipline, strategy, and power.</p>
-          <a href="/life-advice-for-young-men.html">Read More</a>
+          <h3><a href="/blog/life-advice-for-18-year-olds">Life Advice for 18-Year-Olds: 21 Raw Lessons</a></h3>
+          <p>Discover 21 lessons to kickstart your journey to success.</p>
+          <a href="/blog/life-advice-for-18-year-olds">Read More</a>
         </li>
         <li data-category="life-advice">
-          <h3><a href="/no-one-respects-weakness.html">No One Respects a Weak Man</a></h3>
-          <p>Strength is power in all domains. Learn how to build resilience and command respect.</p>
-          <a href="/no-one-respects-weakness.html">Read More</a>
+          <h3><a href="/blog/you-are-alone">You Are Alone</a></h3>
+          <p>Rely on yourself. Freedom comes from self-dependence.</p>
+          <a href="/blog/you-are-alone">Read More</a>
+        </li>
+        <li data-category="life-advice">
+          <h3><a href="/blog/no-one-respects-weakness">No One Respects a Weak Man</a></h3>
+          <p>Strength is power in all domains.</p>
+          <a href="/blog/no-one-respects-weakness">Read More</a>
+        </li>
+        <li data-category="life-advice">
+          <h3><a href="/blog/friends-might-hate-you">Your Friends Might Secretly Hate You</a></h3>
+          <p>Jealousy is real. Move in silence.</p>
+          <a href="/blog/friends-might-hate-you">Read More</a>
+        </li>
+        <li data-category="life-advice">
+          <h3><a href="/blog/women-dont-want-nice-guys">Women Don’t Want Nice Guys</a></h3>
+          <p>Be a strong, purpose-driven leader.</p>
+          <a href="/blog/women-dont-want-nice-guys">Read More</a>
+        </li>
+        <li data-category="life-advice">
+          <h3><a href="/blog/discipline-over-motivation">Discipline > Motivation</a></h3>
+          <p>Show up regardless of how you feel.</p>
+          <a href="/blog/discipline-over-motivation">Read More</a>
+        </li>
+        <li data-category="life-advice">
+          <h3><a href="/blog/gym-is-church">The Gym is Church</a></h3>
+          <p>Train your body like your life depends on it.</p>
+          <a href="/blog/gym-is-church">Read More</a>
+        </li>
+        <li data-category="life-advice">
+          <h3><a href="/blog/build-skills">Build Skills, Not Just Dreams</a></h3>
+          <p>Skills = Leverage = Freedom.</p>
+          <a href="/blog/build-skills">Read More</a>
+        </li>
+        <li data-category="life-advice">
+          <h3><a href="/blog/avoid-useless-entertainment">Avoid Useless Entertainment</a></h3>
+          <p>Garbage in, garbage out. Control what you consume.</p>
+          <a href="/blog/avoid-useless-entertainment">Read More</a>
+        </li>
+        <li data-category="life-advice">
+          <h3><a href="/blog/embrace-pain">Embrace Pain. Use It.</a></h3>
+          <p>Turn pain into fuel.</p>
+          <a href="/blog/embrace-pain">Read More</a>
+        </li>
+        <li data-category="life-advice">
+          <h3><a href="/blog/master-your-voice">Master Your Voice</a></h3>
+          <p>Your voice is a weapon. Learn to speak well.</p>
+          <a href="/blog/master-your-voice">Read More</a>
+        </li>
+        <li data-category="life-advice">
+          <h3><a href="/blog/dont-burn-bridges">Don’t Burn Bridges</a></h3>
+          <p>Leave with grace. Keep options open.</p>
+          <a href="/blog/dont-burn-bridges">Read More</a>
+        </li>
+        <li data-category="life-advice">
+          <h3><a href="/blog/live-on-your-terms">Live on Your Terms</a></h3>
+          <p>Take full ownership of your destiny.</p>
+          <a href="/blog/live-on-your-terms">Read More</a>
+        </li>
+        <li data-category="life-advice">
+          <h3><a href="/blog/read-more-than-talk">Read More Than You Talk</a></h3>
+          <p>Learn aggressively. Apply knowledge.</p>
+          <a href="/blog/read-more-than-talk">Read More</a>
+        </li>
+        <li data-category="life-advice">
+          <h3><a href="/blog/dont-backpack">Don’t Backpack Your Life Away</a></h3>
+          <p>Build your base before exploring.</p>
+          <a href="/blog/dont-backpack">Read More</a>
+        </li>
+        <li data-category="life-advice">
+          <h3><a href="/blog/care-for-body">Take Ruthless Care of Your Body</a></h3>
+          <p>Lifelong investment. Stay sharp and healthy.</p>
+          <a href="/blog/care-for-body">Read More</a>
+        </li>
+        <li data-category="life-advice">
+          <h3><a href="/blog/ask-then-take">Ask, Then Take</a></h3>
+          <p>Don’t wait. Go for what you want.</p>
+          <a href="/blog/ask-then-take">Read More</a>
+        </li>
+        <li data-category="life-advice">
+          <h3><a href="/blog/master-money">Master Your Money</a></h3>
+          <p>Spend smart. Invest. Build assets.</p>
+          <a href="/blog/master-money">Read More</a>
+        </li>
+        <li data-category="life-advice">
+          <h3><a href="/blog/stop-weak-music">Stop Listening to Weak Music</a></h3>
+          <p>Soundtrack your mind with power.</p>
+          <a href="/blog/stop-weak-music">Read More</a>
+        </li>
+        <li data-category="life-advice">
+          <h3><a href="/blog/dont-be-victim">Don’t Be a Victim</a></h3>
+          <p>Own your life. No one’s coming to save you.</p>
+          <a href="/blog/dont-be-victim">Read More</a>
+        </li>
+        <li data-category="life-advice">
+          <h3><a href="/blog/start-now">Start Now. Not Tomorrow.</a></h3>
+          <p>Take action immediately.</p>
+          <a href="/blog/start-now">Read More</a>
+        </li>
+        <li data-category="life-advice">
+          <h3><a href="/blog/build-legend">Build Your Legend</a></h3>
+          <p>Be undeniable. Leave a legacy.</p>
+          <a href="/blog/build-legend">Read More</a>
         </li>
       </ul>
+    </div>
+
+    <!-- About Section -->
+    <div class="section" id="about">
+      <h2>About Tzeptosoft</h2>
+      <p>Founded by Clinton, Tzeptosoft is a hub for innovation, offering tech solutions, coding mentorship, and life advice to empower young coders, ambitious individuals, and businesses.</p>
+      <blockquote>
+        <em>"We build the future, one line of code at a time."</em>
+      </blockquote>
+    </div>
+
+    <!-- Services Section -->
+    <div class="section" id="services">
+      <h2>Our Services</h2>
+      <ul>
+        <li><strong>Custom Web Development</strong>: High-performance websites tailored to your needs.</li>
+        <li><strong>API Integration</strong>: Seamless connectivity for your systems.</li>
+        <li><strong>Tech Consulting</strong>: Strategic guidance to scale your business.</li>
+        <li><strong>Coding Mentorship</strong>: Personalized training for aspiring developers.</li>
+      </ul>
+    </div>
+
+    <!-- Projects Section -->
+    <div class="section" id="projects">
+      <h2>Our Projects</h2>
+      <ul>
+        <li><strong>NeoPortfolio</strong>: A cyberpunk-inspired portfolio builder.</li>
+        <li><strong>CodeForge</strong>: AI-powered coding assistant.</li>
+        <li><strong>EliteMind</strong>: Productivity app for high-performers.</li>
+      </ul>
+    </div>
+
+    <!-- Terminal Section -->
+    <div class="section" id="terminal">
+      <h2>>>> INITIATE SEQUENCE</h2>
+      <div class="terminal-content">
+        <div class="terminal-line" data-text="> Initializing Tzeptosoft..."></div>
+        <div class="terminal-line" data-text="> Establishing secure connection..."></div>
+        <div class="terminal-line" data-text="> Connection status: SECURE ✅"></div>
+        <div class="terminal-line" data-text="> Welcome to the future."></div>
+      </div>
+      <button class="hack-btn" aria-label="Start hack simulation">Initiate Hack Simulation</button>
+      <div class="hack-output">
+        <div class="terminal-line" data-text="> Bypassing firewall..."></div>
+        <div class="terminal-line" data-text="> Access granted."></div>
+      </div>
+    </div>
+
+    <!-- Testimonials Section -->
+    <div class="section" id="testimonials">
+      <h2>Testimonials</h2>
+      <p>"Tzeptosoft’s web development transformed our brand." – Jane Doe, TechTrend</p>
+      <p>"Clinton’s mentorship was a game-changer!" – John Smith, Developer</p>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="section" id="contact">
+      <h2>Contact Us</h2>
+      <p>Email: <a href="mailto:clintonmiruka100@gmail.com">clintonmiruka100@gmail.com</a></p>
+      <form class="newsletter-form" action="https://formspree.io/f/your-form-id" method="POST">
+        <label for="email">Join Our Newsletter</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        <button type="submit" class="btn-cta" aria-label="Subscribe to newsletter">Subscribe</button>
+      </form>
     </div>
   </main>
 
   <!-- Footer -->
-  <div id="footer"></div>
+  <footer>
+    <p>© 2025 Tzeptosoft | All Rights Reserved</p>
+    <div class="social-links">
+      <a href="https://twitter.com/tzeptosoft" aria-label="Twitter"><img src="/assets/twitter.webp" alt="Twitter" width="24" height="24" loading="lazy"></a>
+      <a href="https://linkedin.com/company/tzeptosoft" aria-label="LinkedIn"><img src="/assets/linkedin.webp" alt="LinkedIn" width="24" height="24" loading="lazy"></a>
+    </div>
+  </footer>
 
-  <script src="/assets/js/blog-script.js"></script>
+  <!-- Blog Post Placeholder -->
+  <div class="blog-container hidden" id="blog-post">
+    <header>
+      <h1 class="hero-title"></h1>
+      <div class="author-info">
+        <p class="author-name">Clinton | Tzeptosoft</p>
+        <img src="/assets/images/tzeptosoft-logo.webp" alt="Tzeptosoft Logo" class="author-logo" width="150" height="150" loading="lazy">
+        <p class="author-title">Empowering the Next Generation</p>
+      </div>
+      <hr>
+    </header>
+    <div class="cta-container">
+      <h3 class="cta-title">Ready to Level Up?</h3>
+      <a href="#contact" class="cta-button">Join the Elite</a>
+    </div>
+    <div class="social-share">
+      <h3>Share This Post</h3>
+      <a href="https://twitter.com/intent/tweet?url=https://tzeptosoft.com/blog/life-advice-for-18-year-olds&text=Check out these 21 raw lessons for 18-year-olds!" aria-label="Share on Twitter">Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://tzeptosoft.com/blog/life-advice-for-18-year-olds" aria-label="Share on LinkedIn">LinkedIn</a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https://tzeptosoft.com/blog/life-advice-for-18-year-olds" aria-label="Share on Facebook">Facebook</a>
+      <a href="https://www.reddit.com/submit?url=https://tzeptosoft.com/blog/life-advice-for-18-year-olds&title=Life Advice for 18-Year-Olds: 21 Raw Lessons" aria-label="Share on Reddit">Reddit</a>
+      <a href="https://api.whatsapp.com/send?text=Check out these 21 raw lessons for 18-year-olds! https://tzeptosoft.com/blog/life-advice-for-18-year-olds" aria-label="Share on WhatsApp">WhatsApp</a>
+    </div>
+    <!-- Structured Data for Blog Post -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Life Advice for 18-Year-Olds: 21 Raw Lessons",
+      "description": "21 lessons to kickstart your journey to success as a young adult.",
+      "author": {
+        "@type": "Person",
+        "name": "Clinton"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Tzeptosoft",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://tzeptosoft.com/assets/logo.webp"
+        }
+      },
+      "datePublished": "2025-04-16",
+      "image": "https://tzeptosoft.com/assets/blog-1.webp",
+      "url": "https://tzeptosoft.com/blog/life-advice-for-18-year-olds"
+    }
+    </script>
+    <link rel="stylesheet" href="blog-style.css">
+  </div>
+
+  <!-- CSS (style.css) -->
+  <style>
+    /*
+     * TZEPTOSOFT Main Stylesheet
+     * A cyberpunk-inspired stylesheet for the main site
+     * Created for Clinton Miruka | TZEPTOSOFT
+     * Version: 1.0
+     */
+    :root {
+      --primary: #0066CC;
+      --secondary: #00CCFF;
+      --accent: #FFFFFF;
+      --bg-dark: #0B0F1A;
+      --text-dark: #FFFFFF;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg-dark);
+      color: var(--text-dark);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    /* Preloader */
+    #preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--bg-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+    .loader {
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--secondary);
+      font-size: 1.5em;
+      animation: blinkCaret 0.5s step-end infinite;
+    }
+    @keyframes blinkCaret {
+      50% { border-color: transparent; }
+    }
+    /* Galaxy Background */
+    #galaxy-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle, rgba(0, 204, 255, 0.2), transparent);
+      z-index: -3;
+      animation: rotateGalaxy 60s infinite linear;
+    }
+    @keyframes rotateGalaxy {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    /* Matrix Rain */
+    #matrix-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+      opacity: 0.7;
+    }
+    .matrix-char {
+      position: absolute;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 16px;
+      color: #00FF00;
+      opacity: 0.8;
+      animation: matrix-fall 5s linear infinite;
+    }
+    @keyframes matrix-fall {
+      0% { transform: translateY(-100vh); opacity: 0.8; }
+      100% { transform: translateY(100vh); opacity: 0; }
+    }
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+      background: rgba(18, 18, 18, 0.9);
+      position: relative;
+      z-index: 1;
+    }
+    .hero h1 {
+      font-size: 5em;
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 10px var(--primary);
+      animation: gradientShift 3s ease infinite;
+    }
+    @keyframes gradientShift {
+      0% { background-position: 0%; }
+      50% { background-position: 100%; }
+      100% { background-position: 0%; }
+    }
+    .hero h2 {
+      font-size: 1.8em;
+      color: var(--secondary);
+      text-shadow: 0 0 10px var(--secondary);
+    }
+    .auto-typing {
+      font-size: 1.8em;
+      color: var(--secondary);
+      font-family: 'JetBrains Mono', monospace;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 0.15em solid var(--secondary);
+      width: 0;
+      animation: typing 3s steps(40) 1s forwards, blinkCaret 0.5s step-end infinite;
+    }
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+    .btn-cta {
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      color: var(--accent);
+      padding: 15px 30px;
+      text-decoration: none;
+      font-size: 1.5em;
+      border-radius: 5px;
+      box-shadow: 0 0 20px var(--primary);
+      animation: pulse 2s infinite;
+    }
+    .btn-cta:hover {
+      background: linear-gradient(90deg, var(--secondary), var(--primary));
+      transform: scale(1.1);
+    }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(0, 102, 204, 0.4); }
+      70% { box-shadow: 0 0 0 10px rgba(0, 102, 204, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(0, 102, 204, 0); }
+    }
+    /* Holographic Elements */
+    .holo-element {
+      position: absolute;
+      width: 70px;
+      height: 70px;
+      background: radial-gradient(circle, var(--primary), transparent);
+      border-radius: 50%;
+      animation: float 4s infinite ease-in-out;
+    }
+    @keyframes float {
+      0% { transform: translateY(0); opacity: 0.5; }
+      50% { transform: translateY(-30px); opacity: 1; }
+      100% { transform: translateY(0); opacity: 0.5; }
+    }
+    /* Sections */
+    .section {
+      padding: 80px 20px;
+      max-width: 800px;
+      margin: 0 auto;
+      background: rgba(18, 18, 18, 0.9);
+      border: 3px solid var(--secondary);
+      animation: borderGlow 2s infinite;
+    }
+    @keyframes borderGlow {
+      0% { border-color: var(--primary); }
+      50% { border-color: var(--secondary); }
+      100% { border-color: var(--primary); }
+    }
+    .section h2 {
+      font-size: 2.5em;
+      color: var(--secondary);
+      text-shadow: 0 0 15px var(--secondary);
+    }
+    .section p {
+      color: var(--text-dark);
+      font-size: 1.2em;
+    }
+    .section a {
+      color: var(--secondary);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(0, 204, 255, 0.3);
+    }
+    .section a:hover {
+      color: var(--accent);
+      background: rgba(0, 204, 255, 0.1);
+    }
+    /* Blog Section */
+    .blog-filters {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .filter-btn {
+      background: #1C1C1C;
+      color: var(--text-dark);
+      padding: 10px 20px;
+      border: 2px solid var(--secondary);
+      cursor: pointer;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .filter-btn.active, .filter-btn:hover {
+      background: var(--secondary);
+      color: #000;
+    }
+    .blog-list li {
+      background: #1C1C1C;
+      padding: 20px;
+      border: 2px solid var(--secondary);
+      margin-bottom: 20px;
+      transition: transform 0.3s ease;
+    }
+    .blog-list li:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 40px var(--secondary);
+    }
+    .blog-list img {
+      max-width: 100%;
+      height: auto;
+    }
+    .blog-list h3 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.5em;
+      color: var(--accent);
+      margin: 0 0 10px;
+    }
+    .blog-list p {
+      margin: 0 0 10px;
+    }
+    /* Newsletter Form */
+    .newsletter-form {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .newsletter-form label {
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--secondary);
+    }
+    .newsletter-form input {
+      padding: 10px;
+      border: 2px solid var(--secondary);
+      background: #1C1C1C;
+      color: var(--text-dark);
+      font-size: 1em;
+      font-family: 'Inter', sans-serif;
+    }
+    /* Terminal Section */
+    .terminal-content, .hack-output {
+      background: #1a1a1a;
+      padding: 20px;
+      border: 1px solid var(--secondary);
+      border-radius: 4px;
+      margin: 20px 0;
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--secondary);
+      font-size: 1em;
+    }
+    .hack-output {
+      display: none;
+    }
+    .hack-output.active {
+      display: block;
+      animation: fadeIn 0.5s ease-out;
+    }
+    .terminal-line {
+      opacity: 0;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    .terminal-line.typed {
+      opacity: 1;
+      animation: typing 0.5s steps(40) forwards;
+    }
+    .hack-btn {
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      color: var(--accent);
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1em;
+      transition: transform 0.3s ease;
+    }
+    .hack-btn:hover {
+      transform: scale(1.05);
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      border-top: 1px solid #1E1E2E;
+    }
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 10px;
+    }
+    .social-links img {
+      width: 24px;
+      height: 24px;
+    }
+    /* Social Share */
+    .social-share {
+      margin: 2rem 0;
+      text-align: center;
+    }
+    .social-share h3 {
+      font-family: 'Orbitron', sans-serif;
+      color: var(--secondary);
+      margin-bottom: 10px;
+    }
+    .social-share a {
+      margin: 0 10px;
+      padding: 10px 20px;
+      background: var(--primary);
+      color: var(--accent);
+      border-radius: 4px;
+      text-decoration: none;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .social-share a:hover {
+      background: var(--secondary);
+      color: #000;
+    }
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 3em; }
+      .section { padding: 40px 10px; }
+      .blog-list li { padding: 15px; }
+      .hero { padding: 60px 10px; }
+    }
+    @media (max-width: 480px) {
+      .hero h1 { font-size: 2em; }
+      .hero h2 { font-size: 1.2em; }
+      .auto-typing { font-size: 1.2em; }
+      .btn-cta { font-size: 1em; padding: 10px 20px; }
+      .section h2 { font-size: 1.8em; }
+      .blog-list h3 { font-size: 1.2em; }
+      .terminal-content, .hack-output { font-size: 0.9em; }
+    }
+    /* Reduced Motion */
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; transition: none !important; }
+    }
+    /* Print Styles */
+    @media print {
+      body { background: white; color: black; }
+      .section { background: white; border: none; }
+      a { color: var(--primary); text-decoration: underline; }
+      .btn-cta, .hack-btn { background: white; color: var(--primary); border: 1px solid var(--primary); }
+      #galaxy-bg, #matrix-bg, #particles, #cursor-trail, .holo-element { display: none; }
+    }
+  </style>
+
+  <!-- JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Preloader
+      window.addEventListener('load', () => {
+        document.getElementById('preloader').style.display = 'none';
+      });
+
+      // Intersection Observer
+      const sections = document.querySelectorAll('.section');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            if (entry.target.id === 'terminal' && !entry.target.dataset.animated) {
+              startTerminalSequence();
+              entry.target.dataset.animated = 'true';
+            }
+          }
+        });
+      }, { threshold: 0.1 });
+      sections.forEach(section => observer.observe(section));
+
+      // Terminal Sequence
+      function startTerminalSequence() {
+        const lines = document.querySelectorAll('#terminal .terminal-content .terminal-line');
+        let delay = 0;
+        lines.forEach(line => {
+          line.textContent = ''; // Clear text
+          const text = line.dataset.text;
+          let charIndex = 0;
+          setTimeout(() => {
+            const type = () => {
+              if (charIndex < text.length) {
+                line.textContent += text[charIndex];
+                charIndex++;
+                setTimeout(type, 30);
+              } else {
+                line.classList.add('typed');
+              }
+            };
+            type();
+          }, delay);
+          delay += 1000;
+        });
+      }
+
+      // Hack Simulation
+      const hackBtn = document.querySelector('.hack-btn');
+      const hackOutput = document.querySelector('.hack-output');
+      let isHacking = false;
+      if (hackBtn) {
+        hackBtn.addEventListener('click', () => {
+          if (isHacking) return; // Prevent multiple clicks
+          isHacking = true;
+          hackOutput.classList.add('active');
+          const hackLines = hackOutput.querySelectorAll('.terminal-line');
+          let delay = 0;
+          hackLines.forEach(line => {
+            line.textContent = ''; // Clear text
+            const text = line.dataset.text;
+            let charIndex = 0;
+            setTimeout(() => {
+              const type = () => {
+                if (charIndex < text.length) {
+                  line.textContent += text[charIndex];
+                  charIndex++;
+                  setTimeout(type, 30);
+                } else {
+                  line.classList.add('typed');
+                }
+              };
+              type();
+            }, delay);
+            delay += 1000;
+          });
+          // Reset after animation completes
+          setTimeout(() => { isHacking = false; }, delay + 1000);
+        });
+      }
+
+      // Blog Filters
+      const filterBtn = document.querySelectorAll('.filter-btn');
+      const blogItems = document.querySelectorAll('.blog-list li');
+      filterBtn.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtn.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          const filter = btn.dataset.filter;
+          blogItems.forEach(item => {
+            item.style.display = filter === 'all' || item.dataset.category === filter ? 'block' : 'none';
+          });
+        });
+      });
+
+      // Matrix Rain
+      const matrixBg = document.getElementById('matrix-bg');
+      for (let i = 0; i < 50; i++) {
+        const char = document.createElement('div');
+        char.classList.add('matrix-char');
+        char.textContent = String.fromCharCode(33 + Math.random() * 94);
+        char.style.left = Math.random() * 100 + 'vw';
+        char.style.animationDelay = Math.random() * 5 + 's';
+        matrixBg.appendChild(char);
+      }
+
+      // Particles
+      const particleContainer = document.getElementById('particles');
+      for (let i = 0; i < 50; i++) {
+        const particle = document.createElement('div');
+        particle.classList.add('particle');
+        particle.style.left = Math.random() * 100 + 'vw';
+        particle.style.top = Math.random() * 100 + 'vh';
+        particle.style.animationDelay = Math.random() * 3 + 's';
+        particleContainer.appendChild(particle);
+      }
+
+      // Cursor Trail
+      const cursorTrail = document.getElementById('cursor-trail');
+      document.addEventListener('mousemove', (e) => {
+        cursorTrail.style.left = e.clientX - 15 + 'px';
+        cursorTrail.style.top = e.clientY - 15 + 'px';
+      });
+    });
+  </script>
 </body>
 </html>

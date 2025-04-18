@@ -443,3 +443,14 @@
     .btn-cta, .cta-button, .hack-btn { background: white; color: var(--primary); border: 1px solid var(--primary); }
     #galaxy-bg, #matrix-bg, #particles, #cursor-trail, .holo-element { display: none; }
   }
+  .author-logo {
+    display: block;
+    margin: 10px auto;
+    width: 150px;
+    height: 150px;
+    filter: drop-shadow(0 0 10px #00CCFF);
+    border-radius: 50%;
+  }
+  .author-info {
+    text-align: center;
+  }

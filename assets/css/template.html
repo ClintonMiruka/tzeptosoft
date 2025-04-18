@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{TITLE}}</title>
+  <link rel="stylesheet" href="/assets/css/blog-style.css">
+  <link rel="icon" href="/assets/images/favicon.webp" type="image/webp">
+</head>
+<body>
+  <include src="/components/blog-header.html"></include>
+  <include src="/components/navbar.html"></include>
+  <main>
+    <article>
+      <h1>{{TITLE}}</h1>
+      <div class="meta">Published on {{DATE}} by Clinton Miruka</div>
+      {{CONTENT}}
+      <div class="author-info">
+        <p class="author-name">Clinton | Tzeptosoft</p>
+        <img src="/assets/images/tzeptosoft-logo.webp" alt="Tzeptosoft Logo" class="author-logo" width="150" height="150" loading="lazy">
+        <p class="author-title">Empowering the Next Generation</p>
+      </div>
+    </article>
+  </main>
+  <include src="/components/footer.html"></include>
+  <script src="/assets/js/blog-script.js"></script>
+</body>
+</html>
