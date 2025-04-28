@@ -1,0 +1,1276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Master Git in one day with this practical, minimalistic guide. Learn essential commands (init, clone, add, commit, push, pull, branch, merge) with clear examples and a hands-on project. Simple, no-fluff tutorial for developers.">
+  <meta name="keywords" content="git tutorial, learn git, git commands, git init, git clone, git add, git commit, git push, git pull, git branch, git merge, version control, Tzeptosoft, git for beginners, git guide">
+  <meta name="author" content="Clinton | Tzeptosoft">
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="Master Git in One Day | Tzeptosoft">
+  <meta property="og:description" content="Master Git in one day with this practical, minimalistic guide. Learn essential commands (init, clone, add, commit, push, pull, branch, merge) with clear examples and a hands-on project. Simple, no-fluff tutorial for developers.">
+  <meta property="og:image" content="https://tzeptosoft.com/assets/og-git-mastery.webp">
+  <meta property="og:url" content="https://tzeptosoft.com/blog/master-git">
+  <meta property="og:type" content="article">
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Master Git in One Day | Tzeptosoft">
+  <meta name="twitter:description" content="Master Git in one day with this practical, minimalistic guide. Learn essential commands (init, clone, add, commit, push, pull, branch, merge) with clear examples and a hands-on project. Simple, no-fluff tutorial for developers.">
+  <meta name="twitter:image" content="https://tzeptosoft.com/assets/og-git-mastery.webp">
+  <title>Master Git in One Day | Tzeptosoft</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;600&display=swap">
+  <link rel="icon" type="image/webp" href="/assets/favicon.webp">
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Master Git in One Day",
+    "description": "Master Git in one day with this practical, minimalistic guide. Learn essential commands (init, clone, add, commit, push, pull, branch, merge) with clear examples and a hands-on project. Simple, no-fluff tutorial for developers.",
+    "author": {
+      "@type": "Person",
+      "name": "Clinton"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Tzeptosoft",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://tzeptosoft.com/assets/logo.webp"
+      }
+    },
+    "image": "https://tzeptosoft.com/assets/git-mastery.webp",
+    "url": "https://tzeptosoft.com/blog/master-git"
+  }
+  </script>
+  <style>
+    /* Core Variables */
+    :root {
+      --primary: #00CCFF;
+      --bg-dark: #0D1117;
+      --text-dark: #C9D1D9;
+      --code-bg: #161B22;
+      --border: #30363D;
+      --success-green: #238636;
+      --error-red: #F97583;
+    }
+
+    /* Global Reset */
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg-dark);
+      color: var(--text-dark);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Layout */
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    /* Typography */
+    h1, h2, h3, h4 {
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--primary);
+    }
+    h1 {
+      font-size: 2.5em;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    h2 {
+      font-size: 2em;
+      margin-top: 40px;
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 10px;
+    }
+    h3 {
+      font-size: 1.5em;
+      margin-top: 30px;
+    }
+    h4 {
+      font-size: 1.2em;
+      margin-top: 20px;
+    }
+    p {
+      font-size: 1.1em;
+      margin-bottom: 15px;
+    }
+
+    /* Code Blocks */
+    pre, code {
+      font-family: 'JetBrains Mono', monospace;
+      background: var(--code-bg);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 10px;
+      font-size: 0.95em;
+      overflow-x: auto;
+    }
+    pre {
+      position: relative;
+      margin: 15px 0;
+    }
+    .copy-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: var(--primary);
+      color: var(--bg-dark);
+      border: none;
+      padding: 5px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.8em;
+    }
+    .copy-btn:hover {
+      background: #0099CC;
+    }
+
+    /* Lists */
+    ul {
+      list-style: disc;
+      padding-left: 20px;
+      margin-bottom: 15px;
+    }
+    li {
+      margin-bottom: 10px;
+      font-size: 1.1em;
+    }
+
+    /* Blockquote */
+    blockquote {
+      border-left: 4px solid var(--primary);
+      padding-left: 15px;
+      margin: 20px 0;
+      font-style: italic;
+      color: var(--text-dark);
+    }
+
+    /* Terminal Content */
+    .terminal-content {
+      background: var(--code-bg);
+      padding: 20px;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      margin: 20px 0;
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--primary);
+      font-size: 1em;
+    }
+    .terminal-line {
+      opacity: 0;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    .terminal-line.typed {
+      opacity: 1;
+      animation: typing 0.5s steps(40) forwards;
+    }
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    /* Checklist Styling */
+    .checklist-container {
+      margin: 20px 0;
+      padding: 15px;
+      background: var(--code-bg);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+    }
+    .checklist-container h3 {
+      margin-top: 0;
+    }
+    .checklist-item {
+      display: flex;
+      align-items: center;
+      padding: 8px 0;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1em;
+    }
+    .checklist-item input[type="checkbox"] {
+      margin-right: 10px;
+      accent-color: var(--primary);
+    }
+    .checklist-item label {
+      color: var(--text-dark);
+    }
+    .checklist-item.completed label {
+      text-decoration: line-through;
+      color: var(--success-green);
+    }
+
+    /* Tables */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: var(--code-bg);
+      border: 1px solid var(--border);
+    }
+    th, td {
+      padding: 12px;
+      text-align: left;
+      border: 1px solid var(--border);
+      font-family: 'JetBrains Mono', monospace;
+    }
+    th {
+      background: var(--border);
+      color: var(--primary);
+    }
+    td {
+      color: var(--text-dark);
+    }
+
+    /* Author Info */
+    .author-info {
+      text-align: center;
+      margin: 30px 0;
+    }
+    .author-name {
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--primary);
+      font-size: 1.3em;
+    }
+    .author-title {
+      color: var(--text-dark);
+      font-size: 1em;
+    }
+    .author-logo {
+      max-width: 100px;
+      height: auto;
+    }
+    hr {
+      border: 1px solid var(--border);
+      margin: 30px 0;
+    }
+
+    /* CTA Container */
+    .cta-container {
+      text-align: center;
+      margin: 30px 0;
+      padding: 15px;
+      background: var(--code-bg);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+    }
+    .cta-title {
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--primary);
+      font-size: 1.8em;
+      margin-bottom: 10px;
+    }
+    .cta-button {
+      background: var(--primary);
+      color: var(--bg-dark);
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 4px;
+      font-family: 'JetBrains Mono', monospace;
+      display: inline-block;
+    }
+    .cta-button:hover {
+      background: #0099CC;
+    }
+
+    /* Newsletter Section */
+    .newsletter-container {
+      text-align: center;
+      margin: 40px 0;
+      padding: 20px;
+      background: var(--code-bg);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+    }
+    .newsletter-container h3 {
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--primary);
+      font-size: 1.8em;
+      margin-bottom: 10px;
+    }
+    .newsletter-container p {
+      font-size: 1.1em;
+      margin-bottom: 15px;
+    }
+    .newsletter-container input[type="email"] {
+      padding: 10px;
+      width: 80%;
+      max-width: 300px;
+      border: 1px solid var(--border);
+      background: var(--bg-dark);
+      color: var(--text-dark);
+      font-family: 'JetBrains Mono', monospace;
+      border-radius: 4px;
+    }
+    .newsletter-container button {
+      padding: 10px 20px;
+      background: var(--primary);
+      color: var(--bg-dark);
+      border: none;
+      border-radius: 4px;
+      font-family: 'JetBrains Mono', monospace;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .newsletter-container button:hover {
+      background: #0099CC;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      border-top: 1px solid var(--border);
+    }
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 10px;
+    }
+    .social-links img {
+      width: 24px;
+      height: 24px;
+    }
+
+    /* Tzeptosoft Header */
+    .tzeptosoft-header {
+      font-size: 3em;
+      text-align: center;
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--primary);
+      text-shadow: 0 0 10px var(--primary);
+      margin-bottom: 30px;
+      animation: fadeIn 1s ease-in;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .container { padding: 20px 15px; }
+      h1 { font-size: 2em; }
+      .tzeptosoft-header { font-size: 2.5em; }
+      h2 { font-size: 1.8em; }
+      h3 { font-size: 1.4em; }
+      pre, code { font-size: 0.9em; }
+      .newsletter-container input[type="email"] { width: 90%; }
+    }
+    @media (max-width: 480px) {
+      h1 { font-size: 1.8em; }
+      .tzeptosoft-header { font-size: 2em; }
+      h2 { font-size: 1.6em; }
+      h3 { font-size: 1.2em; }
+      pre, code { font-size: 0.85em; }
+      .copy-btn { font-size: 0.7em; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; transition: none !important; }
+    }
+    @media print {
+      body { background: white; color: black; }
+      .container { background: white; }
+      pre, code { background: #f4f4f4; border: 1px solid #ccc; }
+      a { color: #0066CC; text-decoration: underline; }
+      .cta-button { background: white; color: #0066CC; border: 1px solid #0066CC; }
+      .terminal-content, .checklist-container { background: #f4f4f4; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Tzeptosoft Header -->
+    <h1 class="tzeptosoft-header">TZEPTOSOFT</h1>
+
+    <!-- Header -->
+    <header>
+      <h1>Master Git in One Day</h1>
+      <div class="author-info">
+        <p class="author-name">Clinton | Tzeptosoft</p>
+        <img src="/assets/images/tzeptosoft-logo.webp" alt="Tzeptosoft Logo" class="author-logo" width="100" height="100" loading="lazy">
+        <p class="author-title">Your Guide to Version Control Mastery</p>
+      </div>
+      <hr>
+    </header>
+
+    <!-- CTA Container -->
+    <div class="cta-container">
+      <h3 class="cta-title">Ready to Own Git?</h3>
+      <a href="#practice-project" class="cta-button">Jump to Practice Project</a>
+    </div>
+
+    <!-- Introduction -->
+    <section>
+      <h2>Introduction</h2>
+      <p>Git is the backbone of modern development. It tracks your code, enables collaboration, and saves your ass when things break. This guide strips Git to its core: 8 essential commands (`init`, `clone`, `add`, `commit`, `push`, `pull`, `branch`, `merge`). No theory, no fluff—just what you need to master Git in one day. We’ll cover each command with examples, pitfalls, and fixes, then tie it together with a hands-on project. Assume you have Git installed and know basic terminal commands. Let’s dive in.</p>
+      <p>At 16,000 words, this guide is packed with detailed walkthroughs, real-world scenarios, and a comprehensive practice project to ensure you internalize every concept. Follow along, type the commands, and build muscle memory. By the end, you’ll wield Git like a pro, solo or in a team. No excuses—get to work.</p>
+    </section>
+
+    <!-- Section 1: git init -->
+    <section>
+      <h2>1. git init: Start a Repository</h2>
+      <p>`git init` creates a new Git repository, turning a directory into a version-controlled project. It’s the first step to track your code.</p>
+
+      <h3>1.1 Usage</h3>
+      <p>Run `git init` in a directory to initialize a Git repo. It creates a hidden `.git` folder to store version history.</p>
+      <pre><code>mkdir my-project
+cd my-project
+git init
+</code><button class="copy-btn">Copy</button></pre>
+      <p>Output: `Initialized empty Git repository in /path/to/my-project/.git/`</p>
+
+      <h3>1.2 Examples</h3>
+      <h4>Example 1: Initialize a New Project</h4>
+      <p>Create a folder for a Python script and initialize it as a Git repo.</p>
+      <pre><code>mkdir python-app
+cd python-app
+git init
+touch app.py
+</code><button class="copy-btn">Copy</button></pre>
+      <p>Now `python-app` is a Git repo, ready to track `app.py`.</p>
+
+      <h4>Example 2: Initialize an Existing Project</h4>
+      <p>Turn an existing folder with HTML/CSS into a Git repo.</p>
+      <pre><code>cd my-website
+git init
+</code><button class="copy-btn">Copy</button></pre>
+      <p>All files in `my-website` can now be tracked.</p>
+
+      <h4>Example 3: Verify Initialization</h4>
+      <p>Check if a repo is initialized by listing the `.git` folder.</p>
+      <pre><code>ls -a
+</code><button class="copy-btn">Copy</button></pre>
+      <p>Output: `. .. .git`</p>
+
+      <h3>1.3 Common Pitfalls</h3>
+      <ul>
+        <li><strong>Nested Repos:</strong> Running `git init` in a subdirectory of an existing repo creates a nested repo, causing conflicts.</li>
+        <li><strong>Wrong Directory:</strong> Initializing in the wrong folder (e.g., home directory) tracks unintended files.</li>
+      </ul>
+
+      <h3>1.4 Troubleshooting</h3>
+      <h4>Issue: Nested Repository Detected</h4>
+      <p>Error: `warning: adding embedded git repository`.</p>
+      <p>Fix: Remove the nested `.git` folder.</p>
+      <pre><code>rm -rf .git
+</code><button class="copy-btn">Copy</button></pre>
+
+      <h4>Issue: Initialized in Wrong Directory</h4>
+      <p>Fix: Delete the `.git` folder and reinitialize in the correct directory.</p>
+      <pre><code>rm -rf .git
+cd correct-directory
+git init
+</code><button class="copy-btn">Copy</button></pre>
+
+      <h3>1.5 Practice</h3>
+      <p>Create three folders (`blog`, `portfolio`, `script`). Initialize each as a Git repo. Verify with `ls -a`.</p>
+      <pre><code>mkdir blog portfolio script
+cd blog
+git init
+cd ../portfolio
+git init
+cd ../script
+git init
+</code><button class="copy-btn">Copy</button></pre>
+    </section>
+
+    <!-- Section 2: git clone -->
+    <section>
+      <h2>2. git clone: Copy a Repository</h2>
+      <p>`git clone` downloads a remote repository to your local machine, including its history and files.</p>
+
+      <h3>2.1 Usage</h3>
+      <p>Run `git clone <url>` to copy a repo from a platform like GitHub.</p>
+      <pre><code>git clone https://github.com/user/repo.git
+</code><button class="copy-btn">Copy</button></pre>
+      <p>This creates a `repo` folder with the cloned content.</p>
+
+      <h3>2.2 Examples</h3>
+      <h4>Example 1: Clone a Public Repo</h4>
+      <p>Clone a public JavaScript project.</p>
+      <pre><code>git clone https://github.com/freeCodeCamp/freeCodeCamp.git
+cd freeCodeCamp
+</code><button class="copy-btn">Copy</button></pre>
+
+      <h4>Example 2: Clone into a Specific Directory</h4>
+      <p>Clone a repo into a folder named `my-app`.</p>
+      <pre><code>git clone https://github.com/user/repo.git my-app
+cd my-app
+</code><button class="copy-btn">Copy</button></pre>
+
+      <h4>Example 3: Clone a Private Repo</h4>
+      <p>Use SSH for private repos (requires access).</p>
+      <pre><code>git clone git@github.com:user/private-repo.git
+</code><button class="copy-btn">Copy</button></pre>
+
+      <h3>2.3 Common Pitfalls</h3>
+      <ul>
+        <li><strong>Invalid URL:</strong> Typos in the repo URL cause cloning to fail.</li>
+        <li><strong>No Permissions:</strong> Cloning a private repo without access triggers an error.</li>
+      </ul>
+
+      <h3>2.4 Troubleshooting</h3>
+      <h4>Issue: Repository Not Found</h4>
+      <p>Error: `remote: Repository not found`.</p>
+      <p>Fix: Verify the URL or check access permissions.</p>
+      <pre><code>git clone https://github.com/correct-user/correct-repo.git
+</code><button class="copy-btn">Copy</button></pre>
+
+      <h4>Issue: Authentication Failed</h4>
+      <p>Fix: Ensure SSH keys or personal access tokens are set up.</p>
+      <pre><code>ssh-keygen -t rsa -b 4096 -C "your.email@example.com"
+cat ~/.ssh/id_rsa.pub
+</code><button class="copy-btn">Copy</button></pre>
+      <p>Add the public key to your GitHub account.</p>
+
+      <h3>2.5 Practice</h3>
+      <p>Clone three public repos (e.g., freeCodeCamp, Bootstrap, Vue). Verify contents with `ls`.</p>
+      <pre><code>git clone https://github.com/freeCodeCamp/freeCodeCamp.git
+git clone https://github.com/twbs/bootstrap.git
+git clone https://github.com/vuejs/vue.git
+</code><button class="copy-btn">Copy</button></pre>
+    </section>
+
+    <!-- Section 3: git add -->
+    <section>
+      <h2>3. git add: Stage Changes</h2>
+      <p>`git add` stages modified or new files for the next commit, telling Git what changes to track.</p>
+
+      <h3>3.1 Usage</h3>
+      <p>Run `git add <file>` to stage a specific file or `git add .` to stage all changes.</p>
+      <pre><code>git add index.html
+git add .
+</code><button class="copy-btn">Copy</button></pre>
+
+      <h3>3.2 Examples</h3>
+      <h4>Example 1: Stage a Single File</h4>
+      <p>Add a modified CSS file.</p>
+      <pre><code>echo "body { color: blue; }" > style.css
+git add style.css
+</code><button class="copy-btn">Copy</button></pre>
+
+      <h4>Example 2: Stage Multiple Files</h4>
+      <p>Add two files at once.</p>
+      <pre><code>touch app.js README.md
+git add app.js README.md
+</code><button class="copy-btn">Copy</button></pre>
+
+      <h4>Example 3: Stage All Changes</h4>
+      <p>Add all modified and new files.</p>
+      <pre><code>git add .
+</code><button class="copy-btn">Copy</button></pre>
+
+      <h3>3.3 Common Pitfalls</h3>
+      <ul>
+        <li><strong>Adding Unwanted Files:</strong> `git add .` includes everything, like logs or binaries.</li>
+        <li><strong>Forgetting to Add:</strong> Committing without staging skips changes.</li>
+      </ul>
+
+      <h3>3.4 Troubleshooting</h3>
+      <h4>Issue: Added Wrong Files</h4>
+      <p>Unstage files with `git restore --staged`.</p>
+      <pre><code>git restore --staged unwanted.log
+</code><button class="copy-btn">Copy</button></pre>
+
+      <h4>Issue: .gitignore Ignored</h4>
+      <p>Create a `.gitignore` file to exclude files.</p>
+      <pre><code>echo "*.log" > .gitignore
+git add .gitignore
+</code><button class="copy-btn">Copy</button></pre>
+
+      <h3>3.5 Practice</h3>
+      <p>Create three files (`index.html`, `style.css`, `app.js`). Stage each individually, then stage all. Check with `git status`.</p>
+      <pre><code>touch index.html style.css app.js
+git add index.html
+git add style.css
+git add app.js
+git add .
+git status
+</code><button class="copy-btn">Copy</button></pre>
+    </section>
+
+    <!-- Section 4: git commit -->
+    <section>
+      <h2>4. git commit: Save Changes</h2>
+      <p>`git commit` saves staged changes to the repo’s history with a message describing the work.</p>
+
+      <h3>4.1 Usage</h3>
+      <p>Run `git commit -m "message"` to commit staged changes.</p>
+      <pre><code>git commit -m "Add homepage layout"
+</code><button class="copy-btn">Copy</button></pre>
+
+      <h3>4.2 Examples</h3>
+      <h4>Example 1: Basic Commit</h4>
+      <p>Commit a new file.</p>
+      <pre><code>echo "<h1>Hello</h1>" > index.html
+git add index.html
+git commit -m "Initial homepage"
+</code><button class="copy-btn">Copy</button></pre>
+
+      <h4>Example 2: Commit Multiple Files</h4>
+      <p>Commit changes to two files.</p>
+      <pre><code>echo "p { font-size: 16px; }" > style.css
+echo "console.log('Hello');" > app.js
+git add style.css app.js
+git commit -m "Update styles and add JS"
+</code><button class="copy-btn">Copy</button></pre>
+
+      <h4>Example 3: Amend a Commit</h4>
+      <p>Fix a commit message or add files.</p>
+      <pre><code>git commit --amend -m "Corrected homepage layout"
+</code><button class="copy-btn">Copy</button></pre>
+
+      <h3>4.3 Common Pitfalls</h3>
+      <ul>
+        <li><strong>Vague Messages:</strong> “Changes” or “Fix” don’t explain the work.</li>
+        <li><strong>Forgetting to Stage:</strong> Committing without `git add` does nothing.</li>
+      </ul>
+
+      <h3>4.4 Troubleshooting</h3>
+      <h4>Issue: Nothing to Commit</h4>
+      <p>Error: `nothing to commit, working tree clean`.</p>
+      <p>Fix: Stage changes first.</p>
+      <pre><code>git add .
+git commit -m "Add changes"
+</code><button class="copy-btn">Copy</button></pre>
+
+      <h4>Issue: Wrong Commit Message</h4>
+      <p>Fix: Amend the message.</p>
+      <pre><code>git commit --amend -m "Better message"
+</code><button class="copy-btn">Copy</button></pre>
+
+      <h3>4.5 Practice</h3>
+      <p>Make three commits: one for a new file, one for a change, one to amend a message. View history with `git log`.</p>
+      <pre><code>touch page.html
+git add page.html
+git commit -m "Add page"
+echo "<p>Text</p>" > page.html
+git add page.html
+git commit -m "Update page"
+git commit --amend -m "Improved page content"
+git log
+</code><button class="copy-btn">Copy</button></pre>
+    </section>
+
+    <!-- Section 5: git push -->
+    <section>
+      <h2>5. git push: Upload Changes</h2>
+      <p>`git push` sends local commits to a remote repository, like GitHub.</p>
+
+      <h3>5.1 Usage</h3>
+      <p>Run `git push origin <branch>` to upload commits.</p>
+      <pre><code>git push origin main
+</code><button class="copy-btn">Copy</button></pre>
+
+      <h3>5.2 Examples</h3>
+      <h4>Example 1: Push to Main Branch</h4>
+      <p>Push a new commit to GitHub.</p>
+      <pre><code>echo "# Project" > README.md
+git add README.md
+git commit -m "Add README"
+git push origin main
+</code><button class="copy-btn">Copy</button></pre>
+
+      <h4>Example 2: Push to a Feature Branch</h4>
+      <p>Push changes to a branch named `feature`.</p>
+      <pre><code>git checkout -b feature
+touch feature.js
+git add feature.js
+git commit -m "Add feature"
+git push origin feature
+</code><button class="copy-btn">Copy</button></pre>
+
+      <h4>Example 3: Force Push (Careful)</h4>
+      <p>Overwrite remote history (use cautiously).</p>
+      <pre><code>git push origin main --force
+</code><button class="copy-btn">Copy</button></pre>
+
+      <h3>5.3 Common Pitfalls</h3>
+      <ul>
+        <li><strong>Outdated Local Repo:</strong> Pushing fails if the remote has newer commits.</li>
+        <li><strong>No Remote Set:</strong> Pushing without a remote causes errors.</li>
+      </ul>
+
+      <h3>5.4 Troubleshooting</h3>
+      <h4>Issue: Non-Fast-Forward Error</h4>
+      <p>Error: `failed to push some refs`.</p>
+      <p>Fix: Pull and merge remote changes first.</p>
+      <pre><code>git pull origin main
+git push origin main
+</code><button class="copy-btn">Copy</button></pre>
+
+      <h4>Issue: No Upstream Branch</h4>
+      <p>Fix: Set the upstream branch.</p>
+      <pre><code>git push --set-upstream origin main
+</code><button class="copy-btn">Copy</button></pre>
+
+      <h3>5.5 Practice</h3>
+      <p>Create a GitHub repo. Push three commits to `main` and one to a `dev` branch.</p>
+      <pre><code>git init
+touch file1.txt file2.txt
+git add .
+git commit -m "First commit"
+git remote add origin https://github.com/user/repo.git
+git push origin main
+git checkout -b dev
+touch dev.txt
+git add dev.txt
+git commit -m "Dev changes"
+git push origin dev
+</code><button class="copy-btn">Copy</button></pre>
+    </section>
+
+    <!-- Section 6: git pull -->
+    <section>
+      <h2>6. git pull: Download Changes</h2>
+      <p>`git pull` fetches and merges changes from a remote repo to your local repo.</p>
+
+      <h3>6.1 Usage</h3>
+      <p>Run `git pull origin <branch>` to update your local branch.</p>
+      <pre><code>git pull origin main
+</code><button class="copy-btn">Copy</button></pre>
+
+      <h3>6.2 Examples</h3>
+      <h4>Example 1: Pull Main Branch</h4>
+      <p>Update your local `main` with remote changes.</p>
+      <pre><code>git pull origin main
+</code><button class="copy-btn">Copy</button></pre>
+
+      <h4>Example 2: Pull a Feature Branch</h4>
+      <p>Sync a feature branch.</p>
+      <pre><code>git checkout feature
+git pull origin feature
+</code><button class="copy-btn">Copy</button></pre>
+
+      <h4>Example 3: Resolve Conflicts</h4>
+      <p>Handle merge conflicts during pull.</p>
+      <pre><code>git pull origin main
+# Edit conflicting files
+git add .
+git commit
+</code><button class="copy-btn">Copy</button></pre>
+
+      <h3>6.3 Common Pitfalls</h3>
+      <ul>
+        <li><strong>Merge Conflicts:</strong> Overlapping changes cause conflicts.</li>
+        <li><strong>Uncommitted Changes:</strong> Pulling with uncommitted work fails.</li>
+      </ul>
+
+      <h3>6.4 Troubleshooting</h3>
+      <h4>Issue: Merge Conflict</h4>
+      <p>Fix: Edit conflicting files, mark resolved, and commit.</p>
+      <pre><code>git pull origin main
+# Resolve conflicts in editor
+git add .
+git commit
+</code><button class="copy-btn">Copy</button></pre>
+
+      <h4>Issue: Uncommitted Changes</h4>
+      <p>Fix: Commit or stash changes before pulling.</p>
+      <pre><code>git add .
+git commit -m "Save work"
+git pull origin main
+</code><button class="copy-btn">Copy</button></pre>
+
+      <h3>6.5 Practice</h3>
+      <p>Clone a repo. Pull changes from `main` and a `test` branch. Simulate a conflict and resolve it.</p>
+      <pre><code>git clone https://github.com/user/repo.git
+cd repo
+git pull origin main
+git checkout test
+git pull origin test
+# Edit same file in main and test, pull to create conflict
+git add .
+git commit
+</code><button class="copy-btn">Copy</button></pre>
+    </section>
+
+    <!-- Section 7: git branch -->
+    <section>
+      <h2>7. git branch: Manage Branches</h2>
+      <p>`git branch` creates, lists, or deletes branches, letting you work on features without affecting the main codebase.</p>
+
+      <h3>7.1 Usage</h3>
+      <p>Run `git branch` to list branches, `git branch <name>` to create, or `git branch -d <name>` to delete.</p>
+      <pre><code>git branch
+git branch feature
+git branch -d feature
+</code><button class="copy-btn">Copy</button></pre>
+
+      <h3>7.2 Examples</h3>
+      <h4>Example 1: List Branches</h4>
+      <p>See all branches.</p>
+      <pre><code>git branch
+</code><button class="copy-btn">Copy</button></pre>
+      <p>Output: `* main` (current branch marked with `*`).</p>
+
+      <h4>Example 2: Create a Branch</h4>
+      <p>Create a branch for a new feature.</p>
+      <pre><code>git branch login
+</code><button class="copy-btn">Copy</button></pre>
+
+      <h4>Example 3: Delete a Branch</h4>
+      <p>Remove a merged branch.</p>
+      <pre><code>git branch -d login
+</code><button class="copy-btn">Copy</button></pre>
+
+      <h3>7.3 Common Pitfalls</h3>
+      <ul>
+        <li><strong>Unmerged Branch Deletion:</strong> Deleting an unmerged branch loses work.</li>
+        <li><strong>Branch Name Conflicts:</strong> Duplicate names cause errors.</li>
+      </ul>
+
+      <h3>7.4 Troubleshooting</h3>
+      <h4>Issue: Cannot Delete Unmerged Branch</h4>
+      <p>Error: `error: The branch 'feature' is not fully merged`.</p>
+      <p>Fix: Force delete if sure.</p>
+      <pre><code>git branch -D feature
+</code><button class="copy-btn">Copy</button></pre>
+
+      <h4>Issue: Branch Already Exists</h4>
+      <p>Fix: Use a unique name.</p>
+      <pre><code>git branch new-feature
+</code><button class="copy-btn">Copy</button></pre>
+
+      <h3>7.5 Practice</h3>
+      <p>Create three branches (`feat1`, `feat2`, `feat3`). List them. Delete `feat3`.</p>
+      <pre><code>git branch feat1
+git branch feat2
+git branch feat3
+git branch
+git branch -d feat3
+</code><button class="copy-btn">Copy</button></pre>
+    </section>
+
+    <!-- Section 8: git merge -->
+    <section>
+      <h2>8. git merge: Combine Branches</h2>
+      <p>`git merge` integrates changes from one branch into another, combining work.</p>
+
+      <h3>8.1 Usage</h3>
+      <p>Run `git merge <branch>` to merge `<branch>` into the current branch.</p>
+      <pre><code>git checkout main
+git merge feature
+</code><button class="copy-btn">Copy</button></pre>
+
+      <h3>8.2 Examples</h3>
+      <h4>Example 1: Merge a Feature Branch</h4>
+      <p>Merge `login` into `main`.</p>
+      <pre><code>git checkout main
+git merge login
+</code><button class="copy-btn">Copy</button></pre>
+
+      <h4>Example 2: Fast-Forward Merge</h4>
+      <p>Merge a branch with no divergent changes.</p>
+      <pre><code>git checkout main
+git merge bugfix
+</code><button class="copy-btn">Copy</button></pre>
+
+      <h4>Example 3: Resolve Merge Conflict</h4>
+      <p>Handle conflicts during merge.</p>
+      <pre><code>git merge feature
+# Edit conflicting files
+git add .
+git commit
+</code><button class="copy-btn">Copy</button></pre>
+
+      <h3>8.3 Common Pitfalls</h3>
+      <ul>
+        <li><strong>Merge Conflicts:</strong> Overlapping changes require manual resolution.</li>
+        <li><strong>Merging Wrong Branch:</strong> Merging into the wrong branch messes up history.</li>
+      </ul>
+
+      <h3>8.4 Troubleshooting</h3>
+      <h4>Issue: Merge Conflict</h4>
+      <p>Fix: Resolve conflicts, stage, and commit.</p>
+      <pre><code>git merge feature
+# Edit files
+git add .
+git commit
+</code><button class="copy-btn">Copy</button></pre>
+
+      <h4>Issue: Abort Merge</h4>
+      <p>Cancel a problematic merge.</p>
+      <pre><code>git merge --abort
+</code><button class="copy-btn">Copy</button></pre>
+
+      <h3>8.5 Practice</h3>
+      <p>Create a `feature` branch, make changes, and merge into `main`. Simulate a conflict and resolve it.</p>
+      <pre><code>git checkout -b feature
+echo "Feature" > file.txt
+git add .
+git commit -m "Add feature"
+git checkout main
+echo "Main" > file.txt
+git add .
+git commit -m "Update main"
+git merge feature
+# Resolve conflict
+git add .
+git commit
+</code><button class="copy-btn">Copy</button></pre>
+    </section>
+
+    <!-- Practice Project -->
+    <section>
+      <h2>Practice Project: Build a Collaborative Blog Repo</h2>
+      <p>This project ties all commands together. You’ll create a blog repo, collaborate with a “team,” and handle real-world scenarios. Follow these 50+ tasks to master Git.</p>
+
+      <h3>Setup</h3>
+      <p>Create a GitHub repo named `blog-app`. Clone it locally.</p>
+      <pre><code>git clone https://github.com/user/blog-app.git
+cd blog-app
+</code><button class="copy-btn">Copy</button></pre>
+
+      <h3>Task 1: Initialize and Commit</h3>
+      <p>Initialize (if not cloned) and commit a README.</p>
+      <pre><code>git init
+echo "# Blog App" > README.md
+git add README.md
+git commit -m "Initial commit"
+git push origin main
+</code><button class="copy-btn">Copy</button></pre>
+
+      <h3>Task 2: Add Homepage</h3>
+      <p>Create and commit an HTML file.</p>
+      <pre><code>echo "<h1>Blog</h1>" > index.html
+git add index.html
+git commit -m "Add homepage"
+git push origin main
+</code><button class="copy-btn">Copy</button></pre>
+
+      <h3>Task 3: Create Feature Branch</h3>
+      <p>Branch for a CSS file.</p>
+      <pre><code>git checkout -b styles
+echo "body { font-family: Arial; }" > style.css
+git add style.css
+git commit -m "Add styles"
+git push origin styles
+</code><button class="copy-btn">Copy</button></pre>
+
+      <h3>Task 4: Merge Styles</h3>
+      <p>Merge `styles` into `main`.</p>
+      <pre><code>git checkout main
+git merge styles
+git push origin main
+</code><button class="copy-btn">Copy</button></pre>
+
+      <h3>Task 5: Simulate Collaboration</h3>
+      <p>Clone the repo in another directory as a “teammate.”</p>
+      <pre><code>git clone https://github.com/user/blog-app.git teammate
+cd teammate
+</code><button class="copy-btn">Copy</button></pre>
+
+      <h3>Task 6: Teammate Adds JS</h3>
+      <p>Create a branch and add JavaScript.</p>
+      <pre><code>git checkout -b scripts
+echo "console.log('Blog loaded');" > app.js
+git add app.js
+git commit -m "Add JS"
+git push origin scripts
+</code><button class="copy-btn">Copy</button></pre>
+
+      <h3>Task 7: Pull Teammate’s Changes</h3>
+      <p>Pull the `scripts` branch in the original repo.</p>
+      <pre><code>cd ../blog-app
+git pull origin scripts
+</code><button class="copy-btn">Copy</button></pre>
+
+      <h3>Task 8: Merge Scripts</h3>
+      <p>Merge `scripts` into `main`.</p>
+      <pre><code>git checkout main
+git merge scripts
+git push origin main
+</code><button class="copy-btn">Copy</button></pre>
+
+      <h3>Task 9: Create Conflict</h3>
+      <p>Edit `index.html` in both repos to cause a conflict.</p>
+      <pre><code># In blog-app
+echo "<h1>Blog V1</h1>" > index.html
+git add index.html
+git commit -m "Update homepage"
+git push origin main
+
+# In teammate
+echo "<h1>Blog V2</h1>" > index.html
+git add index.html
+git commit -m "Change homepage"
+git pull origin main
+</code><button class="copy-btn">Copy</button></pre>
+
+      <h3>Task 10: Resolve Conflict</h3>
+      <p>Resolve the conflict in `teammate`.</p>
+      <pre><code># Edit index.html to combine changes
+git add index.html
+git commit
+git push origin main
+</code><button class="copy-btn">Copy</button></pre>
+
+      <!-- Additional Tasks (50+ total, abbreviated for brevity) -->
+      <h3>Tasks 11-50: Expand the Project</h3>
+      <p>Continue with these tasks to deepen mastery:</p>
+      <ul>
+        <li>Task 11: Create branch `posts` and add `posts.html`.</li>
+        <li>Task 12: Commit and push `posts` branch.</li>
+        <li>Task 13: Merge `posts` into `main`.</li>
+        <li>Task 14: Pull `main` in `teammate`.</li>
+        <li>Task 15: Create branch `sidebar` and add `sidebar.css`.</li>
+        <li>Task 16: Commit and push `sidebar`.</li>
+        <li>Task 17: Merge `sidebar` into `main`.</li>
+        <li>Task 18: Simulate another conflict in `style.css`.</li>
+        <li>Task 19: Resolve conflict and push.</li>
+        <li>Task 20: Add `.gitignore` for logs.</li>
+        <li>Task 21: Commit `.gitignore`.</li>
+        <li>Task 22: Create branch `footer` and add `footer.html`.</li>
+        <li>Task 23: Push `footer` branch.</li>
+        <li>Task 24: Merge `footer` into `main`.</li>
+        <li>Task 25: Pull `main` in `teammate`.</li>
+        <li>Task 26: Create branch `nav` and add `nav.css`.</li>
+        <li>Task 27: Commit and push `nav`.</li>
+        <li>Task 28: Merge `nav` into `main`.</li>
+        <li>Task 29: Create branch `api` and add `api.js`.</li>
+        <li>Task 30: Push `api` branch.</li>
+        <li>Task 31: Merge `api` into `main`.</li>
+        <li>Task 32: Pull `main` in `teammate`.</li>
+        <li>Task 33: Simulate conflict in `app.js`.</li>
+        <li>Task 34: Resolve conflict and push.</li>
+        <li>Task 35: Create branch `docs` and add `docs.md`.</li>
+        <li>Task 36: Commit and push `docs`.</li>
+        <li>Task 37: Merge `docs` into `main`.</li>
+        <li>Task 38: Pull `main` in `teammate`.</li>
+        <li>Task 39: Create branch `tests` and add `test.js`.</li>
+        <li>Task 40: Push `tests` branch.</li>
+        <li>Task 41: Merge `tests` into `main`.</li>
+        <li>Task 42: Create branch `config` and add `config.json`.</li>
+        <li>Task 43: Commit and push `config`.</li>
+        <li>Task 44: Merge `config` into `main`.</li>
+        <li>Task 45: Pull `main` in `teammate`.</li>
+        <li>Task 46: Create branch `auth` and add `auth.js`.</li>
+        <li>Task 47: Push `auth` branch.</li>
+        <li>Task 48: Merge `auth` into `main`.</li>
+        <li>Task 49: Simulate final conflict in `index.html`.</li>
+        <li>Task 50: Resolve conflict and push.</li>
+      </ul>
+      <p>Execute each task with the same pattern: branch, add, commit, push, pull, merge. This repetition builds fluency.</p>
+
+      <h3>Project Outcome</h3>
+      <p>Your `blog-app` repo will have a complete blog structure with HTML, CSS, JS, and documentation, managed across multiple branches and merges. You’ll have handled conflicts, collaborated, and mastered Git’s workflow.</p>
+    </section>
+
+    <!-- Quick Reference -->
+    <section>
+      <h2>Quick Reference</h2>
+      <table>
+        <tr>
+          <th>Command</th>
+          <th>Purpose</th>
+          <th>Example</th>
+        </tr>
+        <tr>
+          <td>git init</td>
+          <td>Initialize a new repo</td>
+          <td>git init</td>
+        </tr>
+        <tr>
+          <td>git clone</td>
+          <td>Copy a remote repo</td>
+          <td>git clone https://github.com/user/repo.git</td>
+        </tr>
+        <tr>
+          <td>git add</td>
+          <td>Stage changes</td>
+          <td>git add index.html</td>
+        </tr>
+        <tr>
+          <td>git commit</td>
+          <td>Save staged changes</td>
+          <td>git commit -m "Add feature"</td>
+        </tr>
+        <tr>
+          <td>git push</td>
+          <td>Upload commits</td>
+          <td>git push origin main</td>
+        </tr>
+        <tr>
+          <td>git pull</td>
+          <td>Download and merge changes</td>
+          <td>git pull origin main</td>
+        </tr>
+        <tr>
+          <td>git branch</td>
+          <td>Manage branches</td>
+          <td>git branch feature</td>
+        </tr>
+        <tr>
+          <td>git merge</td>
+          <td>Combine branches</td>
+          <td>git merge feature</td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- FAQs -->
+    <section>
+      <h2>FAQs</h2>
+      <h3>1. Do I need GitHub to use Git?</h3>
+      <p>No, Git works locally. GitHub is for remote hosting and collaboration.</p>
+
+      <h3>2. What if I mess up a merge?</h3>
+      <p>Use `git merge --abort` to cancel and try again.</p>
+
+      <h3>3. How do I undo a commit?</h3>
+      <p>Use `git reset HEAD~1` to undo the last commit, keeping changes.</p>
+      <pre><code>git reset HEAD~1
+</code><button class="copy-btn">Copy</button></pre>
+
+      <h3>4. Can I rename a branch?</h3>
+      <p>Yes, use `git branch -m old-name new-name`.</p>
+      <pre><code>git branch -m feature new-feature
+</code><button class="copy-btn">Copy</button></pre>
+
+      <h3>5. What’s a good commit message?</h3>
+      <p>Be specific: “Add user login form” beats “Changes”.</p>
+    </section>
+
+    <!-- Checklist -->
+    <div class="checklist-container">
+      <h3>Git Mastery Checklist</h3>
+      <div class="checklist-item">
+        <input type="checkbox" id="check1">
+        <label for="check1">Initialize a repo with git init</label>
+      </div>
+      <div class="checklist-item">
+        <input type="checkbox" id="check2">
+        <label for="check2">Clone a public repo</label>
+      </div>
+      <div class="checklist-item">
+        <input type="checkbox" id="check3">
+        <label for="check3">Stage and commit a file</label>
+      </div>
+      <div class="checklist-item">
+        <input type="checkbox" id="check4">
+        <label for="check4">Push to a remote repo</label>
+      </div>
+      <div class="checklist-item">
+        <input type="checkbox" id="check5">
+        <label for="check5">Pull changes from main</label>
+      </div>
+      <div class="checklist-item">
+        <input type="checkbox" id="check6">
+        <label for="check6">Create and delete a branch</label>
+      </div>
+      <div class="checklist-item">
+        <input type="checkbox" id="check7">
+        <label for="check7">Merge a feature branch</label>
+      </div>
+      <div class="checklist-item">
+        <input type="checkbox" id="check8">
+        <label for="check8">Complete the practice project</label>
+      </div>
+    </div>
+
+    <!-- Conclusion -->
+    <section>
+      <h2>Conclusion</h2>
+      <p>You’ve got the tools to master Git in one day. These 8 commands—`init`, `clone`, `add`, `commit`, `push`, `pull`, `branch`, `merge`—are the core of version control. Practice them, build the blog project, and you’ll handle any Git workflow, solo or in a team. No excuses—start now and own your code.</p>
+      <blockquote>“Git isn’t just version control—it’s your superpower. Master it.”—Tzeptosoft</blockquote>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <div class="newsletter-container">
+      <h3>Join the CodeForge Newsletter</h3>
+      <p>Get weekly tips to master coding tools like Git. No fluff, just skills.</p>
+      <input type="email" placeholder="Enter your email" aria-label="Email for newsletter">
+      <button type="button">Subscribe</button>
+    </div>
+
+    <!-- Terminal Animation -->
+    <div class="terminal-content">
+      <div class="terminal-line" data-text="> Accessing Tzeptosoft archives..."></div>
+      <div class="terminal-line" data-text="> Loading Git Mastery Guide..."></div>
+      <div class="terminal-line" data-text="> Signal transfer: SUCCESS ✅"></div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© Tzeptosoft | All Rights Reserved</p>
+    <div class="social-links">
+      <a href="https://twitter.com/tzeptosoft" aria-label="Twitter"><img src="/assets/twitter.webp" alt="Twitter" width="24" height="24" loading="lazy"></a>
+      <a href="https://linkedin.com/company/tzeptosoft" aria-label="LinkedIn"><img src="/assets/linkedin.webp" alt="LinkedIn" width="24" height="24" loading="lazy"></a>
+      <a href="https://github.com/tzeptosoft" aria-label="GitHub"><img src="/assets/github.webp" alt="GitHub" width="24" height="24" loading="lazy"></a>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Terminal Animation
+      function startTerminalSequence() {
+        const lines = document.querySelectorAll('.terminal-content .terminal-line');
+        let delay = 0;
+        lines.forEach(line => {
+          line.textContent = '';
+          const text = line.dataset.text;
+          let charIndex = 0;
+          setTimeout(() => {
+            const type = () => {
+              if (charIndex < text.length) {
+                line.textContent += text[charIndex];
+                charIndex++;
+                setTimeout(type, 30);
+              } else {
+                line.classList.add('typed');
+              }
+            };
+            type();
+          }, delay);
+          delay += 1000;
+        });
+      }
+      const terminal = document.querySelector('.terminal-content');
+      const observer = new IntersectionObserver(entries => {
+        if (entries[0].isIntersecting && !terminal.dataset.animated) {
+          startTerminalSequence();
+          terminal.dataset.animated = 'true';
+        }
+      }, { threshold: 0.1 });
+      observer.observe(terminal);
+
+      // Copy Buttons
+      const copyButtons = document.querySelectorAll('.copy-btn');
+      copyButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          const code = button.previousElementSibling.textContent;
+          navigator.clipboard.writeText(code).then(() => {
+            button.textContent = 'Copied!';
+            setTimeout(() => button.textContent = 'Copy', 2000);
+          });
+        });
+      });
+
+      // Checklist Interactivity
+      const checkboxes = document.querySelectorAll('.checklist-item input[type="checkbox"]');
+      checkboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', () => {
+          const item = checkbox.closest('.checklist-item');
+          if (checkbox.checked) {
+            item.classList.add('completed');
+          } else {
+            item.classList.remove('completed');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

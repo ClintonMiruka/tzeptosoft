@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover the silent power of training like a warrior as a programmer. Blend fitness philosophy, coding discipline, and a warrior mindset to unlock peak performance in tech and life. Intense guide for driven coders.">
+  <meta name="keywords" content="programmer fitness, coding discipline, warrior mindset, fitness for coders, tech lifestyle, mental toughness, physical training for programmers, Tzeptosoft, coding performance, warrior training">
+  <meta name="author" content="Clinton | Tzeptosoft">
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="The Silent Power: Why Every Programmer Should Train Like a Warrior | Tzeptosoft">
+  <meta property="og:description" content="Discover the silent power of training like a warrior as a programmer. Blend fitness philosophy, coding discipline, and a warrior mindset to unlock peak performance in tech and life. Intense guide for driven coders.">
+  <meta property="og:image" content="https://tzeptosoft.com/assets/og-warrior-coder.webp">
+  <meta property="og:url" content="https://tzeptosoft.com/blog/warrior-coder">
+  <meta property="og:type" content="article">
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Silent Power: Why Every Programmer Should Train Like a Warrior | Tzeptosoft">
+  <meta name="twitter:description" content="Discover the silent power of training like a warrior as a programmer. Blend fitness philosophy, coding discipline, and a warrior mindset to unlock peak performance in tech and life. Intense guide for driven coders.">
+  <meta name="twitter:image" content="https://tzeptosoft.com/assets/og-warrior-coder.webp">
+  <title>The Silent Power: Why Every Programmer Should Train Like a Warrior | Tzeptosoft</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Mono:wght@700&family=Orbitron:wght@900&family=JetBrains+Mono:wght@400;700&display=swap">
+  <link rel="icon" type="image/webp" href="/assets/favicon.webp">
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "The Silent Power: Why Every Programmer Should Train Like a Warrior",
+    "description": "Discover the silent power of training like a warrior as a programmer. Blend fitness philosophy, coding discipline, and a warrior mindset to unlock peak performance in tech and life. Intense guide for driven coders.",
+    "author": {
+      "@type": "Person",
+      "name": "Clinton"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Tzeptosoft",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://tzeptosoft.com/assets/logo.webp"
+      }
+    },
+    "image": "https://tzeptosoft.com/assets/warrior-coder.webp",
+    "url": "https://tzeptosoft.com/blog/warrior-coder"
+  }
+  </script>
+  <style>
+    /* Core Variables */
+    :root {
+      --primary: #0066CC;
+      --secondary: #00CCFF;
+      --accent: #FFFFFF;
+      --bg-dark: #0B0F1A;
+      --text-dark: #FFFFFF;
+      --matrix-green: #00FF00;
+      --shadow-dark: rgba(0, 102, 204, 0.4);
+      --error-red: #FF3333;
+      --success-green: #33FF33;
+    }
+
+    /* Global Reset */
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg-dark);
+      color: var(--text-dark);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.8;
+      overflow-x: hidden;
+    }
+
+    /* Background Effects */
+    #galaxy-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle, rgba(0, 204, 255, 0.2), transparent);
+      z-index: -3;
+      animation: rotateGalaxy 60s infinite linear;
+    }
+    @keyframes rotateGalaxy {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    #matrix-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+      opacity: 0.7;
+    }
+    .matrix-char {
+      position: absolute;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 16px;
+      color: var(--matrix-green);
+      opacity: 0.8;
+      animation: matrix-fall 5s linear infinite;
+    }
+    @keyframes matrix-fall {
+      0% { transform: translateY(-100vh); opacity: 0.8; }
+      100% { transform: translateY(100vh); opacity: 0; }
+    }
+
+    #particles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+    .particle {
+      position: absolute;
+      width: 5px;
+      height: 5px;
+      background: var(--secondary);
+      border-radius: 50%;
+      animation: drift 10s infinite linear;
+    }
+    @keyframes drift {
+      0% { transform: translate(0, 0); opacity: 0.5; }
+      50% { opacity: 1; }
+      100% { transform: translate(100px, 100px); opacity: 0.5; }
+    }
+
+    /* Cursor Trail */
+    #cursor-trail {
+      position: fixed;
+      width: 30px;
+      height: 30px;
+      background: radial-gradient(circle, var(--secondary), transparent);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 1000;
+      transition: all 0.1s ease;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 120px 20px;
+      background: rgba(18, 18, 18, 0.9);
+      position: relative;
+      z-index: 1;
+    }
+    .hero h1 {
+      font-size: 5.5em;
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 15px var(--primary);
+      animation: gradientShift 3s ease infinite;
+      margin-bottom: 0;
+    }
+    .matrix-animation {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1.8em;
+      color: var(--matrix-green);
+      text-shadow: 0 0 10px var(--matrix-green);
+      margin-top: 15px;
+      overflow: hidden;
+      white-space: nowrap;
+      display: inline-block;
+    }
+    .matrix-animation.typing {
+      animation: typeMatrix 2s steps(20) forwards, glitch 0.1s infinite alternate;
+    }
+    @keyframes typeMatrix {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+    @keyframes glitch {
+      0% { transform: translate(0); opacity: 1; }
+      50% { transform: translate(2px, -2px); opacity: 0.8; }
+      100% { transform: translate(-2px, 2px); opacity: 0.9; }
+    }
+    @keyframes gradientShift {
+      0% { background-position: 0%; }
+      50% { background-position: 100%; }
+      100% { background-position: 0%; }
+    }
+    .hero h2 {
+      font-size: 2em;
+      color: var(--secondary);
+      text-shadow: 0 0 10px var(--secondary);
+      margin-top: 20px;
+    }
+    .btn-cta {
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      color: var(--accent);
+      padding: 15px 30px;
+      text-decoration: none;
+      font-size: 1.5em;
+      border-radius: 5px;
+      box-shadow: 0 0 20px var(--primary);
+      animation: pulse 2s infinite;
+      margin-top: 20px;
+      display: inline-block;
+    }
+    .btn-cta:hover {
+      background: linear-gradient(90deg, var(--secondary), var(--primary));
+      transform: scale(1.1);
+    }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 var(--shadow-dark); }
+      70% { box-shadow: 0 0 0 10px rgba(0, 102, 204, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(0, 102, 204, 0); }
+    }
+
+    /* Holographic Elements */
+    .holo-element {
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      background: radial-gradient(circle, var(--primary), transparent);
+      border-radius: 50%;
+      animation: float 4s infinite ease-in-out;
+    }
+    @keyframes float {
+      0% { transform: translateY(0); opacity: 0.5; }
+      50% { transform: translateY(-30px); opacity: 1; }
+      100% { transform: translateY(0); opacity: 0.5; }
+    }
+
+    /* Blog Container */
+    .blog-container {
+      padding: 100px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+      background: rgba(18, 18, 18, 0.95);
+      border: 3px solid var(--secondary);
+      animation: borderGlow 2s infinite;
+    }
+    @keyframes borderGlow {
+      0% { border-color: var(--primary); }
+      50% { border-color: var(--secondary); }
+      100% { border-color: var(--primary); }
+    }
+    .blog-container h1 {
+      font-size: 3em;
+      color: var(--secondary);
+      text-shadow: 0 0 15px var(--secondary);
+      font-family: 'Orbitron', sans-serif;
+    }
+    .blog-container h2 {
+      font-size: 2.2em;
+      color: var(--secondary);
+      font-family: 'Orbitron', sans-serif;
+      margin-top: 2.5em;
+    }
+    .blog-container h3 {
+      font-size: 1.8em;
+      color: var(--secondary);
+      font-family: 'Space Mono', monospace;
+      margin-top: 2em;
+    }
+    .blog-container h4 {
+      font-size: 1.4em;
+      color: var(--secondary);
+      font-family: 'JetBrains Mono', monospace;
+      margin-top: 1.5em;
+    }
+    .blog-container p {
+      color: var(--text-dark);
+      font-size: 1.3em;
+      margin-bottom: 1em;
+    }
+    .blog-container ul {
+      list-style: none;
+      padding: 0;
+    }
+    .blog-container li {
+      background: #1C1C1C;
+      padding: 20px;
+      border: 2px solid var(--secondary);
+      margin-bottom: 20px;
+      transition: transform 0.3s ease;
+    }
+    .blog-container li:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 40px var(--secondary);
+    }
+    .blog-container blockquote {
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--secondary);
+      border-left: 4px solid var(--secondary);
+      padding-left: 20px;
+      margin: 20px 0;
+      font-style: italic;
+      font-size: 1.2em;
+    }
+
+    /* Author Info */
+    .author-info {
+      margin: 30px 0;
+      text-align: center;
+    }
+    .author-name {
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--secondary);
+      font-size: 1.4em;
+    }
+    .author-title {
+      color: var(--text-dark);
+      font-size: 1.1em;
+    }
+    .author-logo {
+      max-width: 120px;
+      height: auto;
+    }
+    hr {
+      border: 1px solid var(--secondary);
+      margin: 30px 0;
+    }
+
+    /* CTA Container */
+    .cta-container {
+      text-align: center;
+      margin: 30px 0;
+      padding: 20px;
+      background: #1C1C1C;
+      border: 2px solid var(--secondary);
+      border-radius: 4px;
+    }
+    .cta-title {
+      font-family: 'Orbitron', sans-serif;
+      color: var(--secondary);
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+    .cta-button {
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      color: var(--accent);
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 4px;
+      font-family: 'JetBrains Mono', monospace;
+      display: inline-block;
+    }
+    .cta-button:hover {
+      background: linear-gradient(90deg, var(--secondary), var(--primary));
+      transform: scale(1.05);
+    }
+
+    /* Newsletter Section */
+    .newsletter-container {
+      text-align: center;
+      margin: 50px 0;
+      padding: 30px;
+      background: #1C1C1C;
+      border: 2px solid var(--secondary);
+      border-radius: 4px;
+    }
+    .newsletter-container h3 {
+      font-family: 'Orbitron', sans-serif;
+      color: var(--secondary);
+      font-size: 2em;
+      margin-bottom: 15px;
+    }
+    .newsletter-container p {
+      font-size: 1.3em;
+      margin-bottom: 20px;
+    }
+    .newsletter-container input[type="email"] {
+      padding: 12px;
+      width: 80%;
+      max-width: 350px;
+      border: 2px solid var(--secondary);
+      background: #1a1a1a;
+      color: var(--text-dark);
+      font-family: 'JetBrains Mono', monospace;
+      border-radius: 4px;
+    }
+    .newsletter-container button {
+      padding: 12px 24px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      color: var(--accent);
+      border: none;
+      border-radius: 4px;
+      font-family: 'JetBrains Mono', monospace;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .newsletter-container button:hover {
+      background: linear-gradient(90deg, var(--secondary), var(--primary));
+      transform: scale(1.05);
+    }
+
+    /* Social Share */
+    .social-share {
+      margin: 3rem 0;
+      text-align: center;
+    }
+    .social-share h3 {
+      font-family: 'Orbitron', sans-serif;
+      color: var(--secondary);
+      font-size: 1.8em;
+      margin-bottom: 15px;
+    }
+    .social-share a {
+      margin: 0 12px;
+      padding: 12px 24px;
+      background: var(--primary);
+      color: var(--accent);
+      border-radius: 4px;
+      text-decoration: none;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .social-share a:hover {
+      background: var(--secondary);
+      color: #000;
+    }
+
+    /* Terminal Content */
+    .terminal-content {
+      background: #1a1a1a;
+      padding: 25px;
+      border: 1px solid var(--secondary);
+      border-radius: 4px;
+      margin: 30px 0;
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--secondary);
+      font-size: 1.1em;
+    }
+    .terminal-line {
+      opacity: 0;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    .terminal-line.typed {
+      opacity: 1;
+      animation: typing 0.5s steps(40) forwards;
+    }
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    /* Checklist Styling */
+    .checklist-container {
+      margin: 30px 0;
+      padding: 20px;
+      background: #1C1C1C;
+      border: 2px solid var(--secondary);
+      border-radius: 4px;
+    }
+    .checklist-container h3 {
+      font-family: 'Orbitron', sans-serif;
+      color: var(--secondary);
+      font-size: 1.8em;
+      margin-bottom: 15px;
+    }
+    .checklist-item {
+      display: flex;
+      align-items: center;
+      padding: 10px 0;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1.2em;
+    }
+    .checklist-item input[type="checkbox"] {
+      margin-right: 15px;
+      accent-color: var(--secondary);
+    }
+    .checklist-item label {
+      color: var(--text-dark);
+    }
+    .checklist-item.completed label {
+      text-decoration: line-through;
+      color: var(--success-green);
+    }
+
+    /* Resource Box */
+    .resource-box {
+      margin: 30px 0;
+      padding: 20px;
+      background: #1C1C1C;
+      border: 2px solid var(--secondary);
+      border-radius: 4px;
+    }
+    .resource-box h3 {
+      font-family: 'Orbitron', sans-serif;
+      color: var(--secondary);
+      font-size: 1.8em;
+      margin-bottom: 15px;
+    }
+    .resource-box ul {
+      list-style: disc;
+      padding-left: 20px;
+    }
+    .resource-box li {
+      background: none;
+      border: none;
+      padding: 10px 0;
+      font-size: 1.2em;
+    }
+    .resource-box a {
+      color: var(--secondary);
+      text-decoration: underline;
+    }
+    .resource-box a:hover {
+      color: var(--primary);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 50px 20px;
+      border-top: 1px solid #1E1E2E;
+    }
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      margin-top: 15px;
+    }
+    .social-links img {
+      width: 28px;
+      height: 28px;
+    }
+    .signature {
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--secondary);
+      font-size: 1.4em;
+      margin-top: 25px;
+      text-align: center;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 3.5em; }
+      .matrix-animation { font-size: 1.4em; }
+      .blog-container { padding: 50px 15px; }
+      .hero { padding: 80px 15px; }
+      .newsletter-container input[type="email"] { width: 90%; }
+      .blog-container h1 { font-size: 2.5em; }
+      .blog-container h2 { font-size: 1.8em; }
+      .blog-container p { font-size: 1.2em; }
+    }
+    @media (max-width: 480px) {
+      .hero h1 { font-size: 2.5em; }
+      .matrix-animation { font-size: 1.2em; }
+      .hero h2 { font-size: 1.5em; }
+      .btn-cta { font-size: 1.2em; padding: 12px 24px; }
+      .blog-container h1 { font-size: 2em; }
+      .blog-container h2 { font-size: 1.6em; }
+      .terminal-content { font-size: 0.9em; }
+      .checklist-item { font-size: 1em; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; transition: none !important; }
+    }
+    @media print {
+      body { background: white; color: black; }
+      .blog-container { background: white; border: none; }
+      a { color: var(--primary); text-decoration: underline; }
+      .btn-cta, .cta-button { background: white; color: var(--primary); border: 1px solid var(--primary); }
+      #galaxy-bg, #matrix-bg, #particles, #cursor-trail, .holo-element, .matrix-animation { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Background Effects -->
+  <div id="galaxy-bg"></div>
+  <div id="matrix-bg"></div>
+  <div id="particles"></div>
+  <div id="cursor-trail"></div>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <h1>TZEPTOSOFT</h1>
+    <div class="matrix-animation">TRAIN LIKE A WARRIOR</div>
+    <h2>The Silent Power: Why Every Programmer Should Train Like a Warrior</h2>
+    <a href="mailto:clintonmiruka100@gmail.com" class="btn-cta" aria-label="Contact Tzeptosoft">Unleash Your Power</a>
+    <div class="holo-element" style="top: 15%; left: 10%;"></div>
+    <div class="holo-element" style="top: 25%; right: 12%;"></div>
+    <div class="holo-element" style="bottom: 20%; left: 15%;"></div>
+    <div class="holo-element" style="bottom: 10%; right: 10%;"></div>
+    <div class="holo-element" style="top: 10%; left: 20%;"></div>
+    <div class="holo-element" style="bottom: 15%; right: 18%;"></div>
+    <div class="holo-element" style="top: 20%; left: 25%;"></div>
+    <div class="holo-element" style="bottom: 25%; right: 20%;"></div>
+  </div>
+
+  <!-- Blog Content -->
+  <div class="blog-container">
+    <header>
+      <h1>The Silent Power: Why Every Programmer Should Train Like a Warrior</h1>
+      <div class="author-info">
+        <p class="author-name">Clinton | Tzeptosoft</p>
+        <img src="/assets/images/tzeptosoft-logo.webp" alt="Tzeptosoft Logo" class="author-logo" width="150" height="150" loading="lazy">
+        <p class="author-title">Architect of Digital and Physical Empires</p>
+      </div>
+      <hr>
+    </header>
+
+    <!-- CTA Container -->
+    <div class="cta-container">
+      <h3 class="cta-title">Ready to Forge Your Warrior Coder Spirit?</h3>
+      <a href="#contact" class="cta-button">Join the CodeForge</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+      <p>Brother, you’re not just a programmer. You’re a fucking warrior in a digital battlefield, wielding code like a blade. But too many coders are soft—slumped over keyboards, fueled by energy drinks, and crumbling under pressure. That’s not you. You’re here to dominate, to forge a mind and body as sharp as your syntax. Training like a warrior isn’t a hobby—it’s the silent power that elevates your coding, your focus, and your life to god-tier levels.</p>
+      <p>This isn’t about six-pack abs or Instagram flexing. It’s about the raw discipline of physical training mirroring the grind of coding. It’s about the warrior mindset that turns setbacks into fuel and doubt into defiance. This blueprint, twice as long as my last, is your war manual. We’ll dive into why fitness and coding are one, how a warrior’s mindset sharpens your craft, the physical regimen every coder needs, and how to integrate it all into your tech life. No fluff, no excuses—just the path to becoming an unstoppable force.</p>
+      <p>The tech world bows to those who master both mind and body. You’re not here to debug code in a haze—you’re here to conquer empires. Let’s fucking roll.</p>
+
+      <!-- Section 1: Fitness and Coding Parallels -->
+      <h2>1. The Code of Iron: Why Fitness and Coding Are One</h2>
+      <p>Coding and fitness aren’t separate—they’re the same beast. Both demand discipline, resilience, and a relentless drive to improve. The gym is your IDE, the barbell your keyboard, and every rep a line of code. Here’s why physical training is the ultimate hack for programmers.</p>
+
+      <h3>1.1 Discipline Forges Mastery</h3>
+      <p>Writing clean code takes discipline—showing up daily, refactoring relentlessly, and mastering new frameworks. Fitness is the same. You don’t build strength by lifting once; you grind through weeks of pain. This shared discipline spills over: a coder who sticks to a workout plan writes tighter loops and ships faster.</p>
+      <h4>Action Step</h4>
+      <p>Commit to 3 workouts a week for 30 days. Log each session in a notebook. Compare your consistency to your coding habits.</p>
+      <h4>Case Study</h4>
+      <p>GitLab’s CEO Sid Sijbrandij credits his marathon training for the discipline to scale a $10B company. Consistent training, consistent coding.</p>
+      <blockquote>“Discipline in the gym is discipline in the code. Master one, master both.”—Tzeptosoft</blockquote>
+
+      <h3>1.2 Pain Breeds Growth</h3>
+      <p>In coding, bugs and crashes hurt. They force you to debug, learn, and level up. In fitness, pain is the signal you’re growing—muscles tear to rebuild stronger. Embracing pain in the gym trains you to tackle complex algorithms with the same grit.</p>
+      <h4>Action Step</h4>
+      <p>Next time you hit a coding bug, treat it like a heavy deadlift. Break it down, attack it, and celebrate the win. Write a “Bug Conquest” log.</p>
+      <h4>Power Move</h4>
+      <p>Push through one extra set in your next workout. Feel the burn, then apply that intensity to a coding sprint.</p>
+      <blockquote>“Pain is your teacher. Let it sculpt you.”—Tzeptosoft</blockquote>
+
+      <h3>1.3 Focus Is Your Superpower</h3>
+      <p>A distracted coder writes sloppy code. A distracted lifter gets injured. Fitness hones your focus—every rep demands presence. That mental clarity carries into your coding sessions, letting you crush deep work and ship flawless features.</p>
+      <h4>Action Step</h4>
+      <p>Try a 5-minute plank hold. Focus on your breath and form. Apply that same focus to a 90-minute coding block.</p>
+      <h4>Case Study</h4>
+      <p>Stripe’s Patrick Collison lifts weights to stay sharp. His focus built a $95B payment empire. Clarity in the gym, clarity in code.</p>
+      <blockquote>“Focus turns coders into legends. Train it like a muscle.”—Tzeptosoft</blockquote>
+
+      <h3>1.4 Resilience Crushes Setbacks</h3>
+      <p>Failed builds, client rejections, and burnout test your resolve. Fitness builds resilience—pushing through a brutal workout teaches you to keep going when life hits hard. A coder who lifts heavy doesn’t flinch at a 500-error.</p>
+      <h4>Action Step</h4>
+      <p>Track a tough workout where you wanted to quit but didn’t. Reflect on how that resilience applies to a recent coding challenge.</p>
+      <h4>Power Move</h4>
+      <p>Sign up for a 5K run. Train through discomfort, then tackle a complex coding project with the same tenacity.</p>
+      <blockquote>“Resilience is forged in sweat and steel. Build it, wield it.”—Tzeptosoft</blockquote>
+
+      <h3>1.5 Energy Fuels Output</h3>
+      <p>Sedentary coders crash by noon, sluggish and foggy. Fitness boosts energy—cardio pumps oxygen, strength training spikes testosterone. A jacked coder outworks the competition, grinding through late-night sprints with razor-sharp focus.</p>
+      <h4>Action Step</h4>
+      <p>Do 20 burpees before a coding session. Notice how your energy and output soar.</p>
+      <h4>Power Move</h4>
+      <p>Track your coding productivity on days you exercise vs. days you don’t. The data will shock you.</p>
+      <blockquote>“Energy is your currency. Train to be rich.”—Tzeptosoft</blockquote>
+
+      <div class="checklist-container">
+        <h3>Fitness-Coding Parallels Checklist</h3>
+        <div class="checklist-item">
+          <input type="checkbox" id="parallel1">
+          <label for="parallel1">Log 3 workouts and compare to coding consistency.</label>
+        </div>
+        <div class="checklist-item">
+          <input type="checkbox" id="parallel2">
+          <label for="parallel2">Write a “Bug Conquest” log after a tough bug.</label>
+        </div>
+        <div class="checklist-item">
+          <input type="checkbox" id="parallel3">
+          <label for="parallel3">Hold a 5-minute plank to train focus.</label>
+        </div>
+        <div class="checklist-item">
+          <input type="checkbox" id="parallel4">
+          <label for="parallel4">Reflect on resilience in a workout and coding.</label>
+        </div>
+        <div class="checklist-item">
+          <input type="checkbox" id="parallel5">
+          <label for="parallel5">Do 20 burpees before coding and track energy.</label>
+        </div>
+      </div>
+
+      <!-- Section 2: Warrior Mindset -->
+      <h2>2. The Warrior’s Code: Mindset to Dominate</h2>
+      <p>A warrior doesn’t just train—they live with purpose, grit, and honor. This mindset isn’t about aggression; it’s about mastering yourself to conquer any challenge. Here’s how to forge a warrior’s mind as a coder.</p>
+
+      <h3>2.1 Embrace the Grind</h3>
+      <p>Warriors love the struggle. It’s where they grow. Coding’s grind—debugging, learning new stacks, meeting deadlines—is your forge. Embrace it like a warrior embraces battle, knowing every struggle makes you stronger.</p>
+      <h4>Action Step</h4>
+      <p>Pick a tough coding project (e.g., a full-stack app). Commit to 2 hours daily, no matter how hard. Celebrate small wins to stay motivated.</p>
+      <h4>Power Move</h4>
+      <p>Write a “Grind Manifesto.” List why you love the struggle and read it before tough coding sessions.</p>
+      <blockquote>“The grind is your anvil. Let it shape you.”—Tzeptosoft</blockquote>
+
+      <h3>2.2 Conquer Fear</h3>
+      <p>Fear—of failure, rejection, or looking stupid—holds coders back. Warriors face fear head-on, whether it’s a battlefield or a blank IDE. Reframe fear as a signal to act. Pitch that client, tackle that complex algo, lift that heavier weight.</p>
+      <h4>Action Step</h4>
+      <p>Identify one coding fear (e.g., contributing to open source). Take one small step: fork a repo, submit a PR, or ask a question on Discord.</p>
+      <h4>Case Study</h4>
+      <p>Linus Torvalds faced fear launching Linux. He shared his code anyway, building a $10T ecosystem. Courage changes the world.</p>
+      <blockquote>“Fear is a liar. Crush it with action.”—Tzeptosoft</blockquote>
+
+      <h3>2.3 Cultivate Relentless Consistency</h3>
+      <p>Warriors don’t skip training, and coders shouldn’t skip commits. Consistency compounds—daily workouts and daily coding build unstoppable momentum. Miss a day? Get back up. The war is won through persistence.</p>
+      <h4>Action Step</h4>
+      <p>Create a daily habit: 30 minutes of coding and 30 minutes of exercise. Track it in a tool like Habitica for 30 days.</p>
+      <h4>Power Move</h4>
+      <p>Join a 100-day coding challenge on GitHub. Pair it with a 100-day fitness streak. Share progress on X for accountability.</p>
+      <blockquote>“Consistency is your sword. Wield it daily.”—Tzeptosoft</blockquote>
+
+      <h3>2.4 Honor Your Craft</h3>
+      <p>A warrior respects their blade; a coder respects their code. Write clean, efficient, and purposeful code. Train with intention—every lift, every run, every stretch has a purpose. This respect elevates your work to art.</p>
+      <h4>Action Step</h4>
+      <p>Refactor a messy code project. Make it clean and documented. Compare it to perfecting a workout form.</p>
+      <h4>Power Move</h4>
+      <p>Learn proper lifting form from a YouTube channel like Athlean-X. Apply that precision to your next coding project.</p>
+      <blockquote>“Honor your craft, and it honors you.”—Tzeptosoft</blockquote>
+
+      <h3>2.5 Live with Purpose</h3>
+      <p>Warriors fight for something bigger—a cause, a legacy. As a coder, your purpose might be building life-changing apps or mentoring others. Fitness fuels that purpose, giving you the stamina to chase it. Define your “why” and let it drive you.</p>
+      <h4>Action Step</h4>
+      <p>Write a one-sentence purpose statement: “I code to [your why].” Tape it to your monitor and gym bag.</p>
+      <h4>Case Study</h4>
+      <p>Elon Musk’s purpose—advancing humanity—drives his coding and fitness. He built SpaceX while staying physically sharp.</p>
+      <blockquote>“Purpose is your fire. Let it burn bright.”—Tzeptosoft</blockquote>
+
+      <div class="checklist-container">
+        <h3>Warrior Mindset Checklist</h3>
+        <div class="checklist-item">
+          <input type="checkbox" id="mindset1">
+          <label for="mindset1">Commit to a tough coding project for 30 days.</label>
+        </div>
+        <div class="checklist-item">
+          <input type="checkbox" id="mindset2">
+          <label for="mindset2">Take one step to conquer a coding fear.</label>
+        </div>
+        <div class="checklist-item">
+          <input type="checkbox" id="mindset3">
+          <label for="mindset3">Track daily coding and exercise for 30 days.</label>
+        </div>
+        <div class="checklist-item">
+          <input type="checkbox" id="mindset4">
+          <label for="mindset4">Refactor a code project with precision.</label>
+        </div>
+        <div class="checklist-item">
+          <input type="checkbox" id="mindset5">
+          <label for="mindset5">Write a purpose statement and display it.</label>
+        </div>
+      </div>
+
+      <!-- Section 3: Physical Training for Coders -->
+      <h2>3. The Warrior’s Regimen: Physical Training for Coders</h2>
+      <p>Your body is your weapon. A weak body breeds a weak mind, and a weak mind writes weak code. This regimen is built for coders—minimal gear, maximum impact, designed to fit a tech lifestyle. Train like a warrior, code like a god.</p>
+
+      <h3>3.1 Strength Training: Build Your Foundation</h3>
+      <p>Strength training builds power and confidence. Focus on compound lifts: squats, deadlifts, bench press, pull-ups. No gym? Use bodyweight exercises like push-ups, squats, and dips. Aim for 3-4 sessions a week, 45 minutes each.</p>
+      <h4>Action Step</h4>
+      <p>Start with a bodyweight circuit: 3 sets of 10 push-ups, 10 squats, 10 pull-ups (or inverted rows). Rest 60 seconds between sets.</p>
+      <h4>Power Move</h4>
+      <p>Follow a beginner program like StrongLifts 5x5. Log progress in an app like FitNotes.</p>
+      <h4>Case Study</h4>
+      <p>GitHub’s Nat Friedman lifts weights to stay sharp. His strength fuels 80-hour coding weeks.</p>
+      <blockquote>“Strength is your base. Build it, and everything rises.”—Tzeptosoft</blockquote>
+
+      <h3>3.2 Cardio: Boost Your Engine</h3>
+      <p>Cardio improves stamina and mental clarity. Run, cycle, or do HIIT (high-intensity interval training) 2-3 times a week. HIIT is perfect for coders—20 minutes of sprints or burpees torches fat and spikes energy.</p>
+      <h4>Action Step</h4>
+      <p>Do a 15-minute HIIT session: 30 seconds sprint, 30 seconds walk, repeat. Track heart rate with a free app like Strava.</p>
+      <h4>Power Move</h4>
+      <p>Sign up for a local 5K. Train 8 weeks, then run it. Feel the rush of crossing the finish line.</p>
+      <blockquote>“Cardio is your fuel. Rev your engine.”—Tzeptosoft</blockquote>
+
+      <h3>3.3 Mobility and Recovery: Stay Battle-Ready</h3>
+      <p>Coders hunch over desks, wrecking posture. Mobility work—stretching, yoga, foam rolling—keeps you limber. Recovery (sleep, hydration, rest days) prevents burnout. Aim for 10 minutes of mobility daily and 7-8 hours of sleep.</p>
+      <h4>Action Step</h4>
+      <p>Do a 10-minute yoga flow from YouTube (e.g., Yoga with Adriene). Focus on hip and shoulder openers.</p>
+      <h4>Power Move</h4>
+      <p>Create a bedtime routine: no screens 1 hour before bed, drink water, stretch. Track sleep with an app like Sleep Cycle.</p>
+      <blockquote>“A stiff body codes stiff apps. Stay fluid.”—Tzeptosoft</blockquote>
+
+      <h3>3.4 Nutrition: Fuel Your Machine</h3>
+      <p>You can’t code on junk. Eat lean protein (chicken, eggs), complex carbs (rice, oats), and healthy fats (avocado, nuts). Aim for 1g protein per pound of body weight. Hydrate—2-3 liters of water daily. No dogma; find what works.</p>
+      <h4>Action Step</h4>
+      <p>Plan a high-protein meal: grilled chicken, brown rice, broccoli. Eat it post-workout for 7 days.</p>
+      <h4>Power Move</h4>
+      <p>Track macros for a week using MyFitnessPal. Adjust to hit protein and calorie goals.</p>
+      <blockquote>“Food is code for your body. Write it clean.”—Tzeptosoft</blockquote>
+
+      <h3.5 Mental Training: Sharpen Your Edge>
+      <p>Warriors meditate to stay calm under pressure. Coders need this to handle deadlines and bugs. Practice mindfulness or breathwork 5-10 minutes daily. It’s not woo-woo—it’s mental armor.</p>
+      <h4>Action Step</h4>
+      <p>Try a 5-minute box breathing session: inhale 4s, hold 4s, exhale 4s, hold 4s. Do it before coding.</p>
+      <h4>Power Move</h4>
+      <p>Use an app like Headspace for guided meditation. Do a 10-minute session daily for 14 days.</p>
+      <blockquote>“A calm mind codes through chaos. Train it.”—Tzeptosoft</blockquote>
+
+      <div class="checklist-container">
+        <h3>Physical Training Checklist</h3>
+        <div class="checklist-item">
+          <input type="checkbox" id="training1">
+          <label for="training1">Do a bodyweight circuit 3x this week.</label>
+        </div>
+        <div class="checklist-item">
+          <input type="checkbox" id="training2">
+          <label for="training2">Complete a 15-minute HIIT session.</label>
+        </div>
+        <div class="checklist-item">
+          <input type="checkbox" id="training3">
+          <label for="training3">Do a 10-minute yoga flow daily.</label>
+        </div>
+        <div class="checklist-item">
+          <input type="checkbox" id="training4">
+          <label for="training4">Eat a high-protein meal post-workout.</label>
+        </div>
+        <div class="checklist-item">
+          <input type="checkbox" id="training5">
+          <label for="training5">Try 5-minute box breathing before coding.</label>
+        </div>
+      </div>
+
+      <div class="resource-box">
+        <h3>Training Resources</h3>
+        <ul>
+          <li><a href="https://stronglifts.com">StrongLifts</a> - Free 5x5 strength program.</li>
+          <li><a href="https://www.strava.com">Strava</a> - Track runs and cardio workouts.</li>
+          <li><a href="https://www.yogawithadriene.com">Yoga with Adriene</a> - Free yoga videos.</li>
+          <li><a href="https://www.myfitnesspal.com">MyFitnessPal</a> - Track nutrition and macros.</li>
+          <li><a href="https://www.headspace.com">Headspace</a> - Guided meditation for coders.</li>
+        </ul>
+      </div>
+
+      <!-- Section 4: Integration Strategies -->
+      <h2>4. Code and Conquer: Integrating Fitness into Your Tech Life</h2>
+      <p>You’re a coder, not a full-time athlete. These strategies weave fitness into your tech lifestyle without derailing your projects. Train smart, code hard, and dominate.</p>
+
+      <h3>4.1 Schedule Like a Machine</h3>
+      <p>Time is your currency. Block workouts like you block coding sprints. Morning workouts (6-7 AM) boost energy for the day. Evening sessions (6-7 PM) relieve coding stress. Stick to 3-4 hours a week, max.</p>
+      <h4>Action Step</h4>
+      <p>Add 3 weekly workouts to your Google Calendar: 45 minutes each. Treat them as non-negotiable client meetings.</p>
+      <h4>Power Move</h4>
+      <p>Pair workouts with coding breaks. After a 90-minute Pomodoro, do 10 push-ups. Link habits for consistency.</p>
+      <blockquote>“Your schedule is your battle plan. Execute it.”—Tzeptosoft</blockquote>
+
+      <h3>4.2 Optimize Your Environment</h3>
+      <p>Your space shapes your habits. Set up a home workout corner—dumbbells, yoga mat, pull-up bar. Keep your coding desk clean and inspiring. A warrior’s lair fuels action.</p>
+      <h4>Action Step</h4>
+      <p>Buy a $20 resistance band set on Amazon. Create a 5x5 ft workout space in your room.</p>
+      <h4>Power Move</h4>
+      <p>Declutter your desk. Add a motivational quote or warrior figurine to inspire coding and training.</p>
+      <blockquote>“Your environment is your dojo. Make it sacred.”—Tzeptosoft</blockquote>
+
+      <h3>4.3 Track and Iterate</h3>
+      <p>Coders love data. Track workouts (reps, weights) and coding (commits, bugs fixed). Review weekly to spot patterns. Struggling to lift more? Adjust nutrition. Code quality dipping? Check sleep.</p>
+      <h4>Action Step</h4>
+      <p>Use a spreadsheet to log workouts and coding hours for a week. Look for correlations between training and productivity.</p>
+      <h4>Power Move</h4>
+      <p>Create a Notion dashboard for fitness and coding metrics. Update it weekly to optimize performance.</p>
+      <h4>Case Study</h4>
+      <p>Atlassian’s Scott Farquhar tracks fitness and work data to stay peak. His discipline drives a $10B company.</p>
+      <blockquote>“Data is your compass. Use it to navigate.”—Tzeptosoft</blockquote>
+
+      <h3>4.4 Build a Tribe</h3>
+      <p>Warriors don’t fight alone. Join fitness and coding communities—local gyms, X groups, Discord servers. Share progress, get feedback, and stay accountable. A tribe pushes you to greatness.</p>
+      <h4>Action Step</h4>
+      <p>Join a fitness Discord or X group. Post your weekly workout and coding goals.</p>
+      <h4>Power Move</h4>
+      <p>Find a workout buddy or coding partner. Train together, code together, and hold each other accountable.</p>
+      <blockquote>“A lone warrior falls. A tribe conquers.”—Tzeptosoft</blockquote>
+
+      <h3>4.5 Celebrate Wins</h3>
+      <p>Warriors honor victories, big and small. Hit a new PR in the gym? Ship a feature? Celebrate with a fist pump, a cheat meal, or a proud X post. Wins fuel momentum.</p>
+      <h4>Action Step</h4>
+      <p>After a workout or coding milestone, write a “Win Log.” List what you achieved and how it feels.</p>
+      <h4>Power Move</h4>
+      <p>Reward a big win (e.g., a 10% strength gain or a project launch) with a new book or gym gear.</p>
+      <blockquote>“Celebrate wins to fuel the war.”—Tzeptosoft</blockquote>
+
+      <div class="checklist-container">
+        <h3>Integration Checklist</h3>
+        <div class="checklist-item">
+          <input type="checkbox" id="integration1">
+          <label for="integration1">Schedule 3 weekly workouts in calendar.</label>
+        </div>
+        <div class="checklist-item">
+          <input type="checkbox" id="integration2">
+          <label for="integration2">Set up a home workout space.</label>
+        </div>
+        <div class="checklist-item">
+          <input type="checkbox" id="integration3">
+          <label for="integration3">Track workouts and coding in a spreadsheet.</label>
+        </div>
+        <div class="checklist-item">
+          <input type="checkbox" id="integration4">
+          <label for="integration4">Join a fitness or coding community.</label>
+        </div>
+        <div class="checklist-item">
+          <input type="checkbox" id="integration5">
+          <label for="integration5">Start a “Win Log” for milestones.</label>
+        </div>
+      </div>
+
+      <div class="resource-box">
+        <h3>Integration Resources</h3>
+        <ul>
+          <li><a href="https://www.google.com/calendar">Google Calendar</a> - Schedule workouts and coding.</li>
+          <li><a href="https://www.amazon.com">Amazon</a> - Affordable resistance bands and gym gear.</li>
+          <li><a href="https://www.notion.so">Notion</a> - Build a fitness and coding dashboard.</li>
+          <li><a href="https://discord.com">Discord</a> - Join fitness and coding communities.</li>
+          <li><a href="https://habitica.com">Habitica</a> - Gamify your fitness and coding habits.</li>
+        </ul>
+      </div>
+
+      <!-- Final Call to Action -->
+      <h2>Your Mission: Become the Warrior Coder</h2>
+      <p>This isn’t a blog—it’s a fucking battle cry. You’ve got the philosophy, mindset, regimen, and strategies to train like a warrior and code like a god. The silent power of fitness will amplify your focus, resilience, and output, making you a force in tech. Warriors don’t wait—they act. Start today, and build a legacy that echoes.</p>
+      <h3>Immediate Action Plan</h3>
+      <ul>
+        <li><strong>Day 1:</strong> Write your purpose statement and do a bodyweight circuit.</li>
+        <li><strong>Week 1:</strong> Schedule 3 workouts, track coding and fitness, join a community.</li>
+        <li><strong>Month 1:</strong> Complete a 30-day coding and fitness streak. Share progress on X.</li>
+        <li><strong>90 Days:</strong> Hit a strength PR and ship a major coding project.</li>
+      </ul>
+      <h3>Reflection CTA</h3>
+      <p>Tonight, ask: *What’s stopping me from training like a warrior?* Write the excuse, then burn it. Do 10 push-ups, code for 30 minutes, and start your journey now.</p>
+      <h3>Vision for You</h3>
+      <p>Picture this: You’re jacked, focused, and shipping world-class code. Your apps power millions, your body radiates strength, and your name is feared and respected. You didn’t just code—you conquered.</p>
+      <blockquote>“Train like a warrior, code like a god. The world is yours.”—Tzeptosoft’s CodeForge</blockquote>
+      <p><strong>Train. Code. Dominate. – TZEPTOSOFT</strong></p>
+      <p class="signature">With love, Your man, Clinton</p>
+    </div>
+
+    <!-- Newsletter Signup -->
+    <div class="newsletter-container">
+      <h3>Join the CodeForge Newsletter</h3>
+      <p>Get weekly tactics to train like a warrior, code like a god, and dominate tech. No noise, only signal.</p>
+      <input type="email" placeholder="Enter your email" aria-label="Email for newsletter">
+      <button type="button">Subscribe</button>
+    </div>
+
+    <!-- Terminal Animation -->
+    <div class="terminal-content">
+      <div class="terminal-line" data-text="> Accessing Tzeptosoft archives..."></div>
+      <div class="terminal-line" data-text="> Loading Warrior Coder Blueprint..."></div>
+      <div class="terminal-line" data-text="> Signal transfer: SUCCESS ✅"></div>
+    </div>
+
+    <!-- Social Sharing -->
+    <div class="social-share">
+      <h3>Share This War Cry</h3>
+      <a href="https://twitter.com/intent/tweet?url=https://tzeptosoft.com/blog/warrior-coder&text=Train like a warrior, code like a god with Tzeptosoft’s blueprint!" aria-label="Share on Twitter">Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://tzeptosoft.com/blog/warrior-coder" aria-label="Share on LinkedIn">LinkedIn</a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https://tzeptosoft.com/blog/warrior-coder" aria-label="Share on Facebook">Facebook</a>
+      <a href="https://www.reddit.com/submit?url=https://tzeptosoft.com/blog/warrior-coder&title=The Silent Power: Warrior Coder" aria-label="Share on Reddit">Reddit</a>
+      <a href="https://api.whatsapp.com/send?text=Train like a warrior, code like a god with Tzeptosoft’s blueprint! https://tzeptosoft.com/blog/warrior-coder" aria-label="Share on WhatsApp">WhatsApp</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© Tzeptosoft | All Rights Reserved</p>
+    <div class="social-links">
+      <a href="https://twitter.com/tzeptosoft" aria-label="Twitter"><img src="/assets/twitter.webp" alt="Twitter" width="28" height="28" loading="lazy"></a>
+      <a href="https://linkedin.com/company/tzeptosoft" aria-label="LinkedIn"><img src="/assets/linkedin.webp" alt="LinkedIn" width="28" height="28" loading="lazy"></a>
+      <a href="https://github.com/tzeptosoft" aria-label="GitHub"><img src="/assets/github.webp" alt="GitHub" width="28" height="28" loading="lazy"></a>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Matrix Animation
+      const matrixAnimation = document.querySelector('.matrix-animation');
+      function startMatrixAnimation() {
+        matrixAnimation.textContent = '';
+        matrixAnimation.classList.remove('typing');
+        void matrixAnimation.offsetWidth;
+        matrixAnimation.textContent = 'TRAIN LIKE A WARRIOR';
+        matrixAnimation.classList.add('typing');
+      }
+      startMatrixAnimation();
+      setInterval(startMatrixAnimation, 4000);
+
+      // Scroll Reveal
+      const sections = document.querySelectorAll('.blog-container, .terminal-content, .checklist-container, .resource-box');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            if (entry.target.classList.contains('terminal-content') && !entry.target.dataset.animated) {
+              startTerminalSequence();
+              entry.target.dataset.animated = 'true';
+            }
+          }
+        });
+      }, { threshold: 0.1 });
+      sections.forEach(section => observer.observe(section));
+
+      // Terminal Animation
+      function startTerminalSequence() {
+        const lines = document.querySelectorAll('.terminal-content .terminal-line');
+        let delay = 0;
+        lines.forEach(line => {
+          line.textContent = '';
+          const text = line.dataset.text;
+          let charIndex = 0;
+          setTimeout(() => {
+            const type = () => {
+              if (charIndex < text.length) {
+                line.textContent += text[charIndex];
+                charIndex++;
+                setTimeout(type, 30);
+              } else {
+                line.classList.add('typed');
+              }
+            };
+            type();
+          }, delay);
+          delay += 1000;
+        });
+      }
+
+      // Matrix Background
+      const matrixBg = document.getElementById('matrix-bg');
+      for (let i = 0; i < 60; i++) {
+        const char = document.createElement('div');
+        char.classList.add('matrix-char');
+        char.textContent = String.fromCharCode(33 + Math.random() * 94);
+        char.style.left = Math.random() * 100 + 'vw';
+        char.style.animationDelay = Math.random() * 5 + 's';
+        matrixBg.appendChild(char);
+      }
+
+      // Particles
+      const particleContainer = document.getElementById('particles');
+      for (let i = 0; i < 60; i++) {
+        const particle = document.createElement('div');
+        particle.classList.add('particle');
+        particle.style.left = Math.random() * 100 + 'vw';
+        particle.style.top = Math.random() * 100 + 'vh';
+        particle.style.animationDelay = Math.random() * 3 + 's';
+        particleContainer.appendChild(particle);
+      }
+
+      // Cursor Trail
+      const cursorTrail = document.getElementById('cursor-trail');
+      document.addEventListener('mousemove', (e) => {
+        cursorTrail.style.left = e.clientX - 15 + 'px';
+        cursorTrail.style.top = e.clientY - 15 + 'px';
+      });
+
+      // Checklist Interactivity
+      const checkboxes = document.querySelectorAll('.checklist-item input[type="checkbox"]');
+      checkboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', () => {
+          const item = checkbox.closest('.checklist-item');
+          if (checkbox.checked) {
+            item.classList.add('completed');
+          } else {
+            item.classList.remove('completed');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
