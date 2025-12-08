@@ -3,46 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Tzeptosoft - Escaping the Matrix. Raw, unfiltered wisdom for men and women to build empires, secure relationships, and dominate life. No bullshit, only fire! 🔥">
-    <meta name="keywords" content="Tzeptosoft, self-improvement, dating advice, relationship wisdom, career advice, masculine mindset, feminine value, escape the matrix">
+    <meta name="description" content="A brutal, data-backed manifesto on why motivation is a weak foundation and discipline is the unbreakable force that forges legends. Lone wolves don't wait to feel ready – they execute.">
+    <meta name="keywords" content="discipline vs motivation, self-discipline, lone wolf mindset, productivity, personal development, Tzeptosoft, stoicism">
     <meta name="author" content="Clinton | Tzeptosoft">
-    
-    <!-- Open Graph Tags -->
-    <meta property="og:title" content="Tzeptosoft - Escaping the Matrix | Raw Wisdom for Empire Builders">
-    <meta property="og:description" content="Raw, unfiltered wisdom for men and women to build empires, secure relationships, and dominate life. No bullshit, only fire! 🔥">
-    <meta property="og:image" content="https://tzeptosoft.com/assets/tzeptosoft-homepage.webp">
-    <meta property="og:url" content="https://tzeptosoft.com">
-    <meta property="og:type" content="website">
-    
-    <!-- Twitter Card Tags -->
+    <meta property="og:title" content="Why Discipline Beats Motivation Every Single Time | Tzeptosoft">
+    <meta property="og:description" content="Motivation is a drug. Discipline is a weapon. Learn why 98% fail because they chase feelings, and how the 2% who master discipline conquer everything.">
+    <meta property="og:image" content="https://tzeptosoft.com/assets/og-image-discipline.webp">
+    <meta property="og:url" content="https://tzeptosoft.com/blog/discipline-beats-motivation">
+    <meta property="og:type" content="article">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Tzeptosoft - Escaping the Matrix | Raw Wisdom for Empire Builders">
-    <meta name="twitter:description" content="Raw, unfiltered wisdom for men and women to build empires, secure relationships, and dominate life. No bullshit, only fire! 🔥">
-    <meta name="twitter:image" content="https://tzeptosoft.com/assets/tzeptosoft-homepage.webp">
-    
-    <title>Tzeptosoft - Escaping the Matrix | Raw Wisdom for Empire Builders</title>
+    <title>Why Discipline Beats Motivation Every Single Time | Tzeptosoft</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Mono:wght@700&family=Orbitron:wght@900&family=JetBrains+Mono:wght@400;700&display=swap">
     <link rel="icon" type="image/webp" href="/assets/favicon.webp">
-    
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "Tzeptosoft",
-        "description": "Raw, unfiltered wisdom for men and women to build empires, secure relationships, and dominate life.",
-        "url": "https://tzeptosoft.com",
-        "publisher": {
-            "@type": "Organization",
-            "name": "Tzeptosoft",
-            "logo": {
-                "@type": "ImageObject",
-                "url": "https://tzeptosoft.com/assets/logo.webp"
-            }
-        }
-    }
-    </script>
-    
     <style>
         :root {
             --primary: #0066CC;
@@ -51,10 +23,9 @@
             --bg-dark: #0B0F1A;
             --text-dark: #FFFFFF;
             --matrix-green: #00FF00;
-            --card-bg: rgba(28, 28, 28, 0.8);
         }
 
-        /* Header Styles */
+        /* ========== HEADER STYLES ========== */
         .main-header {
             position: sticky;
             top: 0;
@@ -504,7 +475,7 @@
             box-shadow: 0 8px 30px rgba(0, 102, 204, 0.4);
         }
 
-        /* Main Content */
+        /* ========== GENERAL BODY STYLES ========== */
         body {
             margin: 0;
             padding: 0;
@@ -519,6 +490,7 @@
             position: relative;
         }
 
+        /* ========== PRELOADER ========== */
         #preloader {
             position: fixed;
             top: 0;
@@ -543,7 +515,7 @@
             50% { border-color: transparent; }
         }
 
-        /* Background Elements */
+        /* ========== BACKGROUND EFFECTS ========== */
         #galaxy-bg {
             position: fixed;
             top: 0;
@@ -608,6 +580,7 @@
             100% { transform: translate(100px, 100px); opacity: 0.5; }
         }
 
+        /* ========== CURSOR TRAIL ========== */
         #cursor-trail {
             position: fixed;
             width: 30px;
@@ -619,26 +592,25 @@
             transition: all 0.1s ease;
         }
 
-        /* Hero Section */
+        /* ========== HERO SECTION ========== */
         .hero {
             text-align: center;
-            padding: 140px 20px 100px;
-            background: rgba(11, 15, 26, 0.9);
+            padding: 120px 20px 100px;
+            background: rgba(18, 18, 18, 0.9);
             position: relative;
             z-index: 1;
             margin-top: 0;
-            border-bottom: 1px solid rgba(0, 204, 255, 0.2);
         }
 
         .hero h1 {
-            font-size: 4.5em;
+            font-size: 5em;
             font-family: 'Orbitron', sans-serif;
             background: linear-gradient(90deg, var(--primary), var(--secondary));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             text-shadow: 0 0 10px var(--primary);
             animation: gradientShift 3s ease infinite;
-            margin-bottom: 10px;
+            margin-bottom: 0;
         }
 
         .matrix-animation {
@@ -646,7 +618,7 @@
             font-size: 1.5em;
             color: var(--matrix-green);
             text-shadow: 0 0 10px var(--matrix-green);
-            margin: 20px 0;
+            margin-top: 10px;
             overflow: hidden;
             white-space: nowrap;
             display: inline-block;
@@ -678,44 +650,29 @@
             color: var(--secondary);
             text-shadow: 0 0 10px var(--secondary);
             margin-top: 20px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .hero-subtitle {
-            font-size: 1.2em;
-            color: rgba(255, 255, 255, 0.8);
-            max-width: 600px;
-            margin: 20px auto 40px;
-            line-height: 1.6;
         }
 
         .btn-cta {
             background: linear-gradient(90deg, var(--primary), var(--secondary));
             color: var(--accent);
-            padding: 18px 40px;
+            padding: 15px 30px;
             text-decoration: none;
-            font-size: 1.3em;
-            border-radius: 8px;
+            font-size: 1.5em;
+            border-radius: 5px;
             box-shadow: 0 0 20px var(--primary);
             animation: pulse 2s infinite;
             margin-top: 20px;
             display: inline-block;
-            font-family: 'JetBrains Mono', monospace;
-            font-weight: 600;
-            transition: all 0.3s ease;
         }
 
         .btn-cta:hover {
             background: linear-gradient(90deg, var(--secondary), var(--primary));
-            transform: scale(1.05);
-            box-shadow: 0 0 30px var(--secondary);
+            transform: scale(1.1);
         }
 
         @keyframes pulse {
             0% { box-shadow: 0 0 0 0 rgba(0, 102, 204, 0.4); }
-            70% { box-shadow: 0 0 0 15px rgba(0, 102, 204, 0); }
+            70% { box-shadow: 0 0 0 10px rgba(0, 102, 204, 0); }
             100% { box-shadow: 0 0 0 0 rgba(0, 102, 204, 0); }
         }
 
@@ -734,331 +691,240 @@
             100% { transform: translateY(0); opacity: 0.5; }
         }
 
-        /* Sections */
-        .section {
+        /* ========== BLOG CONTENT ========== */
+        .blog-container {
             padding: 80px 20px;
-            max-width: 1200px;
+            max-width: 900px;
             margin: 0 auto;
-        }
-
-        .section-title {
-            font-size: 2.5em;
-            font-family: 'Orbitron', sans-serif;
-            color: var(--secondary);
-            text-align: center;
-            margin-bottom: 50px;
-            text-shadow: 0 0 15px var(--secondary);
-        }
-
-        /* Mission Section */
-        .mission-section {
             background: rgba(18, 18, 18, 0.9);
-            border-radius: 16px;
-            padding: 60px 40px;
-            margin-bottom: 80px;
-            border: 2px solid var(--secondary);
-            box-shadow: 0 0 40px rgba(0, 204, 255, 0.2);
+            border: 3px solid var(--secondary);
+            animation: borderGlow 2s infinite;
         }
 
-        .mission-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
+        @keyframes borderGlow {
+            0% { border-color: var(--primary); }
+            50% { border-color: var(--secondary); }
+            100% { border-color: var(--primary); }
         }
 
-        .mission-card {
-            background: var(--card-bg);
-            padding: 30px;
-            border-radius: 12px;
-            border: 1px solid rgba(0, 204, 255, 0.3);
-            transition: all 0.3s ease;
+        .blog-container h1 {
+            font-size: 2.5em;
+            color: var(--secondary);
+            text-shadow: 0 0 15px var(--secondary);
+            font-family: 'Orbitron', sans-serif;
+            text-align: center;
         }
 
-        .mission-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--secondary);
-            box-shadow: 0 10px 30px rgba(0, 204, 255, 0.3);
-        }
-
-        .mission-card h3 {
+        .blog-container h2 {
+            font-size: 1.8em;
             color: var(--secondary);
             font-family: 'Orbitron', sans-serif;
-            font-size: 1.5em;
-            margin-bottom: 15px;
+            margin-top: 2em;
         }
 
-        .mission-card p {
-            color: rgba(255, 255, 255, 0.8);
-            line-height: 1.6;
-        }
-
-        /* Featured Articles */
-        .articles-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .article-card {
-            background: var(--card-bg);
-            border-radius: 12px;
-            overflow: hidden;
-            border: 1px solid rgba(0, 204, 255, 0.3);
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-
-        .article-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--secondary);
-            box-shadow: 0 15px 40px rgba(0, 204, 255, 0.3);
-        }
-
-        .article-content {
-            padding: 25px;
-        }
-
-        .article-category {
-            display: inline-block;
-            background: rgba(0, 204, 255, 0.1);
-            color: var(--secondary);
-            padding: 6px 12px;
-            border-radius: 20px;
-            font-size: 0.8em;
-            font-family: 'JetBrains Mono', monospace;
-            margin-bottom: 15px;
-        }
-
-        .article-title {
-            font-family: 'Orbitron', sans-serif;
+        .blog-container h3 {
             font-size: 1.4em;
             color: var(--secondary);
-            margin-bottom: 10px;
-            line-height: 1.3;
-        }
-
-        .article-excerpt {
-            color: rgba(255, 255, 255, 0.7);
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-
-        .article-meta {
-            display: flex;
-            justify-content: space-between;
-            color: rgba(255, 255, 255, 0.5);
-            font-size: 0.9em;
-            font-family: 'JetBrains Mono', monospace;
-        }
-
-        /* Testimonials */
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .testimonial-card {
-            background: var(--card-bg);
-            padding: 30px;
-            border-radius: 12px;
-            border: 1px solid rgba(0, 204, 255, 0.3);
-            transition: all 0.3s ease;
-        }
-
-        .testimonial-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--secondary);
-            box-shadow: 0 10px 30px rgba(0, 204, 255, 0.2);
-        }
-
-        .testimonial-text {
-            color: rgba(255, 255, 255, 0.9);
-            font-style: italic;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .author-avatar {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            font-family: 'JetBrains Mono', monospace;
-        }
-
-        .author-info h4 {
-            margin: 0;
-            color: var(--secondary);
             font-family: 'Orbitron', sans-serif;
+            margin-top: 1.5em;
         }
 
-        .author-info p {
-            margin: 5px 0 0;
-            color: rgba(255, 255, 255, 0.6);
-            font-size: 0.9em;
-        }
-
-        /* Newsletter */
-        .newsletter-section {
-            background: var(--card-bg);
-            border-radius: 16px;
-            padding: 60px 40px;
-            text-align: center;
-            border: 2px solid var(--secondary);
-            margin-top: 80px;
-            box-shadow: 0 0 40px rgba(0, 204, 255, 0.1);
-        }
-
-        .newsletter-title {
-            font-size: 2em;
-            font-family: 'Orbitron', sans-serif;
-            color: var(--secondary);
-            margin-bottom: 20px;
-        }
-
-        .newsletter-description {
-            color: rgba(255, 255, 255, 0.8);
-            max-width: 600px;
-            margin: 0 auto 30px;
-            line-height: 1.6;
-        }
-
-        .newsletter-form {
-            display: flex;
-            gap: 15px;
-            max-width: 500px;
-            margin: 0 auto;
-        }
-
-        .newsletter-input {
-            flex: 1;
-            padding: 15px 20px;
-            background: rgba(11, 15, 26, 0.8);
-            border: 2px solid rgba(0, 204, 255, 0.3);
-            border-radius: 8px;
+        .blog-container p {
             color: var(--text-dark);
-            font-family: 'Inter', sans-serif;
+            font-size: 1.2em;
+        }
+
+        .highlight {
+            color: var(--secondary);
+            font-weight: 600;
+        }
+
+        .blog-container ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .blog-container li {
+            background: #1C1C1C;
+            padding: 15px;
+            border: 2px solid var(--secondary);
+            margin-bottom: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .blog-container li:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 40px var(--secondary);
+        }
+
+        .blog-container blockquote {
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--secondary);
+            border-left: 4px solid var(--secondary);
+            padding-left: 15px;
+            margin: 20px 0;
+            font-style: italic;
+        }
+
+        /* ========== AUTHOR INFO ========== */
+        .author-info {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .author-name {
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--secondary);
+            font-size: 1.2em;
+        }
+
+        .author-title {
+            color: var(--text-dark);
             font-size: 1em;
         }
 
-        .newsletter-input:focus {
-            outline: none;
-            border-color: var(--secondary);
-            box-shadow: 0 0 0 3px rgba(0, 204, 255, 0.2);
+        .author-logo {
+            max-width: 100px;
+            height: auto;
         }
 
-        .newsletter-button {
-            padding: 15px 30px;
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
-            color: var(--accent);
-            border: none;
-            border-radius: 8px;
-            font-family: 'JetBrains Mono', monospace;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
+        hr {
+            border: 1px solid var(--secondary);
+            margin: 20px 0;
         }
 
-        .newsletter-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0, 102, 204, 0.4);
+        /* ========== CTA CONTAINER ========== */
+        .cta-container {
+            text-align: center;
+            margin: 20px 0;
         }
 
-        /* Footer */
-        footer {
-            background: rgba(11, 15, 26, 0.95);
-            padding: 60px 20px 30px;
-            margin-top: 80px;
-            border-top: 1px solid rgba(0, 204, 255, 0.2);
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-        }
-
-        .footer-section h3 {
-            color: var(--secondary);
+        .cta-title {
             font-family: 'Orbitron', sans-serif;
-            font-size: 1.3em;
-            margin-bottom: 20px;
+            color: var(--secondary);
+            font-size: 1.8em;
         }
 
-        .footer-links {
-            list-style: none;
-            padding: 0;
-            margin: 0;
+        /* ========== NEWSLETTER ========== */
+        .newsletter-container {
+            text-align: center;
+            margin: 40px 0;
+            padding: 20px;
+            background: #1C1C1C;
+            border: 2px solid var(--secondary);
+            border-radius: 4px;
         }
 
-        .footer-links li {
+        .newsletter-container h3 {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--secondary);
+            font-size: 1.8em;
             margin-bottom: 10px;
         }
 
-        .footer-links a {
-            color: rgba(255, 255, 255, 0.7);
-            text-decoration: none;
-            transition: all 0.3s ease;
+        .newsletter-container p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
         }
 
-        .footer-links a:hover {
-            color: var(--secondary);
-            padding-left: 5px;
-        }
-
-        .footer-bottom {
-            text-align: center;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: rgba(255, 255, 255, 0.5);
-        }
-
-        .social-links {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .social-link {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-        }
-
-        .social-link:hover {
-            background: var(--secondary);
-            transform: translateY(-3px);
-        }
-
-        .social-link svg {
-            width: 20px;
-            height: 20px;
+        .newsletter-container input[type="email"] {
+            padding: 10px;
+            width: 70%;
+            max-width: 300px;
+            border: 2px solid var(--secondary);
+            background: #1a1a1a;
             color: var(--text-dark);
+            font-family: 'JetBrains Mono', monospace;
+            border-radius: 4px;
         }
 
-        /* Responsive Design */
+        .newsletter-container button {
+            padding: 10px 20px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            color: var(--accent);
+            border: none;
+            border-radius: 4px;
+            font-family: 'JetBrains Mono', monospace;
+            cursor: pointer;
+        }
+
+        .newsletter-container button:hover {
+            background: linear-gradient(90deg, var(--secondary), var(--primary));
+            transform: scale(1.05);
+        }
+
+        /* ========== SOCIAL SHARE ========== */
+        .social-share {
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .social-share h3 {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--secondary);
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        .social-share a {
+            margin: 0 10px;
+            padding: 10px 20px;
+            background: var(--primary);
+            color: var(--accent);
+            border-radius: 4px;
+            text-decoration: none;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .social-share a:hover {
+            background: var(--secondary);
+            color: #000;
+        }
+
+        /* ========== TERMINAL CONTENT ========== */
+        .terminal-content {
+            background: #1a1a1a;
+            padding: 20px;
+            border: 1px solid var(--secondary);
+            border-radius: 4px;
+            margin: 20px 0;
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--secondary);
+            font-size: 1em;
+        }
+
+        .terminal-line {
+            opacity: 0;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .terminal-line.typed {
+            opacity: 1;
+            animation: typing 0.5s steps(40) forwards;
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        /* ========== FOOTER ========== */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid #1E1E2E;
+        }
+
+        .signature {
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--secondary);
+            font-size: 1.2em;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        /* ========== RESPONSIVE DESIGN ========== */
         @media (max-width: 1024px) {
             .nav-list {
                 gap: 20px;
@@ -1067,10 +933,6 @@
             .nav-link {
                 padding: 6px 12px;
                 font-size: 0.9em;
-            }
-
-            .hero h1 {
-                font-size: 3.5em;
             }
         }
 
@@ -1098,36 +960,19 @@
             }
 
             .hero {
-                padding: 100px 20px 60px;
+                padding: 100px 10px 80px;
             }
 
             .hero h1 { 
-                font-size: 2.8em; 
+                font-size: 3em; 
             }
 
             .matrix-animation { 
                 font-size: 1.2em; 
             }
 
-            .hero h2 {
-                font-size: 1.4em;
-            }
-
-            .section {
-                padding: 60px 20px;
-            }
-
-            .section-title {
-                font-size: 2em;
-            }
-
-            .newsletter-form {
-                flex-direction: column;
-            }
-
-            .mission-section,
-            .newsletter-section {
-                padding: 40px 20px;
+            .blog-container { 
+                padding: 40px 10px; 
             }
         }
 
@@ -1154,7 +999,7 @@
             }
 
             .hero h1 { 
-                font-size: 2.2em; 
+                font-size: 2em; 
             }
 
             .matrix-animation { 
@@ -1166,14 +1011,20 @@
             }
 
             .btn-cta { 
-                font-size: 1.1em; 
-                padding: 15px 30px; 
+                font-size: 1em; 
+                padding: 10px 20px; 
             }
 
-            .articles-grid,
-            .mission-grid,
-            .testimonials-grid {
-                grid-template-columns: 1fr;
+            .blog-container h1 { 
+                font-size: 1.8em; 
+            }
+
+            .terminal-content { 
+                font-size: 0.9em; 
+            }
+
+            .newsletter-container input[type="email"] { 
+                width: 90%; 
             }
         }
 
@@ -1185,10 +1036,8 @@
         }
     </style>
 </head>
-<body data-page="home">
-    <div id="preloader">
-        <div class="loader">Initializing Tzeptosoft... 🚀</div>
-    </div>
+<body data-page="discipline-beats-motivation">
+    <div id="preloader"><div class="loader">Initializing Tzeptosoft... 🚀</div></div>
 
     <!-- Professional Header -->
     <header class="main-header">
@@ -1208,7 +1057,7 @@
             <nav class="nav-section" role="navigation" aria-label="Main navigation">
                 <ul class="nav-list">
                     <li class="nav-item">
-                        <a href="/" class="nav-link active" data-page="home">Home</a>
+                        <a href="/" class="nav-link" data-page="home">New? Start Here</a>
                     </li>
                     <li class="nav-item">
                         <a href="/blog" class="nav-link" data-page="blog">Blog Archives</a>
@@ -1217,7 +1066,7 @@
                         <a href="/lessons" class="nav-link" data-page="lessons">Tzeptosoft Products</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/contact" class="nav-link" data-page="contact">Contact Us</a>
+                        <a href="/Tzeptosoft" class="nav-link active" data-page="Tzeptosoft">Contact Us</a>
                     </li>
                     <li class="nav-item">
                         <a href="/about" class="nav-link" data-page="about">About</a>
@@ -1236,7 +1085,7 @@
                         </svg>
                     </button>
                     <div class="search-box" id="searchBox">
-                        <input type="search" placeholder="Search wisdom, tactics, blueprints..." class="search-input" aria-label="Search content">
+                        <input type="search" placeholder="Search lessons, tactics, blueprints..." class="search-input" aria-label="Search content">
                         <button class="search-submit" aria-label="Search">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <circle cx="11" cy="11" r="8"></circle>
@@ -1279,10 +1128,10 @@
                     </button>
                 </div>
                 <nav class="mobile-nav">
-                    <a href="/" class="mobile-nav-link active">Home</a>
+                    <a href="/" class="mobile-nav-link">New? Start Here</a>
                     <a href="/blog" class="mobile-nav-link">Blog Archives</a>
                     <a href="/lessons" class="mobile-nav-link">Tzeptosoft Products</a>
-                    <a href="/contact" class="mobile-nav-link">Contact Us</a>
+                    <a href="/Tzeptosoft" class="mobile-nav-link active">Contact Us</a>
                     <a href="/about" class="mobile-nav-link">About</a>
                 </nav>
                 <div class="mobile-actions">
@@ -1293,227 +1142,121 @@
     </header>
 
     <div class="main-content">
-        <!-- Background Elements -->
         <div id="galaxy-bg"></div>
         <div id="matrix-bg"></div>
         <div id="particles"></div>
         <div id="cursor-trail"></div>
 
-        <!-- Hero Section -->
-        <section class="hero">
+        <div class="hero">
             <h1>TZEPTOSOFT</h1>
-            <div class="matrix-animation">ESCAPING THE MATRIX</div>
-            <h2>Raw, Unfiltered Wisdom for Men & Women to Build Empires and Dominate Life</h2>
-            <p class="hero-subtitle">No bullshit, no filter, no apologies. Just straight fire for those ready to escape the matrix and build their legacy.</p>
-            <a href="#mission" class="btn-cta" aria-label="Start Your Journey">Start Your Journey ⚔️</a>
+            <div class="matrix-animation">DISCIPLINE = UNBREAKABLE</div>
+            <h2>Why Discipline Beats Motivation Every Single Time ⚔️</h2>
+            <a href="mailto:tzeptosoft@gmail.com" class="btn-cta">Join the WarForge 💪</a>
             <div class="holo-element" style="top: 20%; left: 10%;"></div>
             <div class="holo-element" style="top: 30%; right: 15%;"></div>
             <div class="holo-element" style="bottom: 25%; left: 20%;"></div>
             <div class="holo-element" style="bottom: 15%; right: 10%;"></div>
-        </section>
+        </div>
 
-        <!-- Mission Section -->
-        <section class="section" id="mission">
-            <h2 class="section-title">Our Mission: Burn the Bullshit</h2>
-            <div class="mission-section">
-                <p style="text-align: center; font-size: 1.2em; margin-bottom: 40px; color: rgba(255, 255, 255, 0.9);">
-                    Tzeptosoft isn't another self-help blog. It's a digital fortress for warriors ready to escape the matrix, build empires, and live life on their own terms.
-                </p>
-                <div class="mission-grid">
-                    <div class="mission-card">
-                        <h3>For Men</h3>
-                        <p>Master dating, build wealth, develop unbreakable mindset. Become the man women chase and men respect.</p>
-                    </div>
-                    <div class="mission-card">
-                        <h3>For Women</h3>
-                        <p>Ditch feminist lies, secure high-value men, build legendary families. Be the queen kings fight for.</p>
-                    </div>
-                    <div class="mission-card">
-                        <h3>For Everyone</h3>
-                        <p>Escape the 9-5 matrix, build digital empires, achieve financial freedom. Live life on your terms.</p>
-                    </div>
+        <div class="blog-container">
+            <header>
+                <h1>Why Discipline Beats Motivation Every Single Time</h1>
+                <div class="author-info">
+                    <p class="author-name">Clinton | Tzeptosoft 😎</p>
+                    <img src="/assets/images/tzeptosoft-logo.webp" alt="Tzeptosoft Logo" class="author-logo" width="100" height="100" loading="lazy">
+                    <p class="author-title">Warlord of Solitude and Fire 🛠️</p>
                 </div>
+                <hr>
+            </header>
+
+            <div class="cta-container">
+                <h3 class="cta-title">Ready to Become Unbreakable? 💪</h3>
+                <a href="mailto:tzeptosoft@gmail.com" class="cta-button">Join the WarForge 🚀</a>
             </div>
-        </section>
 
-        <!-- Featured Articles -->
-        <section class="section">
-            <h2 class="section-title">Featured Wisdom</h2>
-            <div class="articles-grid">
-                <div class="article-card" onclick="window.location.href='/blog/women-nice-guys'">
-                    <div class="article-content">
-                        <span class="article-category">For Men</span>
-                        <h3 class="article-title">Women Don't Want Nice Guys</h3>
-                        <p class="article-excerpt">The brutal truth about attraction, biology, and what high-value men actually offer. No sugar-coating, just reality.</p>
-                        <div class="article-meta">
-                            <span>Read Time: 8 min</span>
-                            <span>🔥 25k+ Views</span>
-                        </div>
-                    </div>
-                </div>
+            <div class="content">
+                <article>
+                    <p><strong>Motivation is a liar.</strong></p>
+                    <p>It shows up when you feel good, vanishes when life hits hard, and leaves 98% of men as slaves to their feelings. Discipline doesn't care how you feel. It executes. Every. Single. Day.</p>
 
-                <div class="article-card" onclick="window.location.href='/blog/why-you-should-date-many-women-before-you-marry'">
-                    <div class="article-content">
-                        <span class="article-category">For Men</span>
-                        <h3 class="article-title">Date Many Women Before Marriage</h3>
-                        <p class="article-excerpt">15,000-word guide on why dating multiple women before marriage is essential for choosing the right wife.</p>
-                        <div class="article-meta">
-                            <span>Read Time: 30 min</span>
-                            <span>⚔️ 18k+ Views</span>
-                        </div>
-                    </div>
-                </div>
+                    <p>Data doesn't lie: studies from the American Psychological Association (2023) show that self-discipline is the #1 predictor of success — more than IQ, talent, or motivation. People who rely on discipline are 80% more likely to achieve long-term goals than those chasing motivation.</p>
 
-                <div class="article-card" onclick="window.location.href='/blog/womens-lessons'">
-                    <div class="article-content">
-                        <span class="article-category">For Women</span>
-                        <h3 class="article-title">10 Savage Lessons for Women</h3>
-                        <p class="article-excerpt">Ditch feminist lies, secure high-value men, build legendary families. Raw wisdom for queens.</p>
-                        <div class="article-meta">
-                            <span>Read Time: 10 min</span>
-                            <span>👑 12k+ Views</span>
-                        </div>
-                    </div>
-                </div>
+                    <p><strong>Image:</strong> A lone blue wolf standing on a mountain of shattered alarm clocks and empty energy-drink cans, chains broken at its feet, howling at a blood-red moon.</p>
 
-                <div class="article-card" onclick="window.location.href='/blog/school-sucks'">
-                    <div class="article-content">
-                        <span class="article-category">Breaking Free</span>
-                        <h3 class="article-title">School Sucks - Break the Chains</h3>
-                        <p class="article-excerpt">11,500-word manifesto exposing the education system and teaching how to forge your own path.</p>
-                        <div class="article-meta">
-                            <span>Read Time: 45 min</span>
-                            <span>💥 22k+ Views</span>
-                        </div>
-                    </div>
-                </div>
+                    <h2>The Brutal Truth: Motivation Is for Sheep</h2>
+                    <p>Motivation is dopamine. It's fleeting. It's weak. It dies the moment the gym feels cold, the code gets hard, or the bank account looks ugly.</p>
+                    <ul>
+                        <li>Only 8% of New Year's resolutions survive past February (University of Scranton).</li>
+                        <li>92% of people fail their goals because they rely on motivation (Inc. Magazine, 2024).</li>
+                        <li>Discipline-based individuals earn 40–60% more over their lifetime (Journal of Personality, 2023).</li>
+                    </ul>
+
+                    <h2>Discipline Is the Lone Wolf's Blade</h2>
+                    <p>The lone wolf does not wait to "feel like it." He rises at 5 a.m. He trains when he's tired. He codes when he's broken. He builds his empire one unbreakable action at a time.</p>
+
+                    <p>Discipline compounds. One cold shower becomes 1,000. One hour of deep work becomes 10,000. One rejected advance becomes an unbreakable will.</p>
+
+                    <h3>The 5 Disciplines of the Unbreakable</h3>
+                    <ol>
+                        <li><strong>5 a.m. War Rise</strong> – The world belongs to those who wake before it. Rising early increases productivity by 61% (Sleep Research, 2024).</li>
+                        <li><strong>Single-Task Execution</strong> – Multitasking reduces IQ by 10 points. One task. One kill.</li>
+                        <li><strong>Ritual Over Feeling</strong> – Tie action to trigger, not emotion. Brush teeth → cold shower → deep work.</li>
+                        <li><strong>Weakness Execution</strong> – Every night: name one weakness, behead it tomorrow.</li>
+                        <li><strong>Night Audit</strong> – Did you conquer today? Plan tomorrow's war.</li>
+                    </ol>
+
+                    <h2>The Cost of Motivation Dependency</h2>
+                    <p>Men who wait to feel motivated live mediocre lives. They start diets on Monday. They "start coding" next month. They die forgotten.</p>
+                    <p>Disciplined men build empires while the motivated scroll X looking for another hit of inspiration.</p>
+
+                    <h2>The Final War: Choose Your Weapon</h2>
+                    <p>Motivation is a spark.<br>Discipline is the forge.</p>
+                    <p>One burns out.<br>The other creates gods.</p>
+
+                    <blockquote>"I don't wait to feel like winning. I force the day to obey." — Tzeptosoft WarForge</blockquote>
+
+                    <p><strong>Your mission:</strong><br>
+                    1. Tomorrow, rise at 5 a.m. No excuses.<br>
+                    2. Execute one hard task before checking your phone.<br>
+                    3. Post on X: "Discipline > Motivation. Day 1 executed." Tag @tzeptosoft<br>
+                    4. Repeat for 66 days. Legends are not born. They are forged.</p>
+
+                    <p class="signature"><strong>With blood and fire,<br>Clinton – Warlord of Tzeptosoft</strong></p>
+
+                    <p><strong>#TZEPTOSOFTElite #WarForge #DisciplineOverMotivation #LoneWolfMindset #Unbreakable #SelfMastery #Stoicism</strong></p>
+                </article>
             </div>
-        </section>
 
-        <!-- Testimonials -->
-        <section class="section">
-            <h2 class="section-title">Warriors Who Escaped</h2>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"Tzeptosoft changed my life. Went from nice guy beta to commanding respect in 6 months. My dating life transformed completely."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">MJ</div>
-                        <div class="author-info">
-                            <h4>Mark, 29</h4>
-                            <p>Software Engineer</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"The women's guide saved my relationship. Dated a high-value man, now building our empire together. Thank you Tzeptosoft!"</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">SL</div>
-                        <div class="author-info">
-                            <h4>Sarah, 26</h4>
-                            <p>Digital Entrepreneur</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"Escaped the 9-5 matrix after reading 'School Sucks'. Now running my own business, living free. This is the real education."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">TJ</div>
-                        <div class="author-info">
-                            <h4>Tom, 31</h4>
-                            <p>Business Owner</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="terminal-content">
+                <div class="terminal-line" data-text="> Accessing Tzeptosoft archives... 🚀"></div>
+                <div class="terminal-line" data-text="> Loading Discipline Protocol... ⚔️"></div>
+                <div class="terminal-line" data-text="> Forge activated: FUCKING EXECUTED 💪"></div>
             </div>
-        </section>
 
-        <!-- Newsletter -->
-        <section class="section">
-            <div class="newsletter-section">
-                <h3 class="newsletter-title">Join the Tzeptosoft Newsletter</h3>
-                <p class="newsletter-description">Get weekly unfiltered wisdom, exclusive tactics, and raw insights to escape the matrix and build your empire. No bullshit, only fire.</p>
-                <form class="newsletter-form" id="newsletterForm">
-                    <input type="email" class="newsletter-input" placeholder="Enter your email" aria-label="Email for newsletter" required>
-                    <button type="submit" class="newsletter-button">Subscribe 🔥</button>
-                </form>
-                <p style="margin-top: 20px; color: rgba(255, 255, 255, 0.6); font-size: 0.9em;">
-                    Join 50,000+ warriors escaping the matrix. No spam, ever.
-                </p>
+            <div class="newsletter-container">
+                <h3>Join the Tzeptosoft Newsletter 🔥</h3>
+                <p>Weekly warplans, rituals, and fire to annihilate weakness and forge unbreakable power.</p>
+                <input type="email" placeholder="Enter your email" aria-label="Email for newsletter">
+                <button type="button">Subscribe 🚀</button>
             </div>
-        </section>
 
-        <!-- Footer -->
+            <div class="social-share">
+                <h3>Spread the War Cry 🗣️</h3>
+                <a href="https://twitter.com/intent/tweet?url=https://tzeptosoft.com/blog/discipline-beats-motivation&text=Discipline Beats Motivation Every Time – Forge Your Throne with Tzeptosoft" aria-label="Share on Twitter">Twitter</a>
+                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://tzeptosoft.com/blog/discipline-beats-motivation" aria-label="Share on LinkedIn">LinkedIn</a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://tzeptosoft.com/blog/discipline-beats-motivation" aria-label="Share on Facebook">Facebook</a>
+                <a href="https://www.reddit.com/submit?url=https://tzeptosoft.com/blog/discipline-beats-motivation&title=Why Discipline Beats Motivation Every Single Time" aria-label="Share on Reddit">Reddit</a>
+                <a href="https://api.whatsapp.com/send?text=Discipline Beats Motivation Every Time – Forge Your Throne with Tzeptosoft! https://tzeptosoft.com/blog/discipline-beats-motivation" aria-label="Share on WhatsApp">WhatsApp</a>
+            </div>
+        </div>
+
         <footer>
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>TZEPTOSOFT</h3>
-                    <p style="color: rgba(255, 255, 255, 0.7); line-height: 1.6; margin-bottom: 20px;">
-                        Raw, unfiltered wisdom for warriors ready to escape the matrix and build their legacy.
-                    </p>
-                    <div class="social-links">
-                        <a href="https://twitter.com/tzeptosoft" class="social-link" aria-label="Twitter">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                            </svg>
-                        </a>
-                        <a href="https://linkedin.com/company/tzeptosoft" class="social-link" aria-label="LinkedIn">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                            </svg>
-                        </a>
-                        <a href="mailto:tzeptosoft@gmail.com" class="social-link" aria-label="Email">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="footer-section">
-                    <h3>For Men</h3>
-                    <ul class="footer-links">
-                        <li><a href="/blog/women-nice-guys">Women Don't Want Nice Guys</a></li>
-                        <li><a href="/blog/why-you-should-date-many-women-before-you-marry">Date Many Women Guide</a></li>
-                        <li><a href="/blog/masculine-mindset">Masculine Mindset</a></li>
-                        <li><a href="/blog/career-domination">Career Domination</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h3>For Women</h3>
-                    <ul class="footer-links">
-                        <li><a href="/blog/womens-lessons">10 Savage Lessons</a></li>
-                        <li><a href="/blog/feminine-value">Feminine Value</a></li>
-                        <li><a href="/blog/family-building">Family Building</a></li>
-                        <li><a href="/blog/relationship-wisdom">Relationship Wisdom</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h3>Resources</h3>
-                    <ul class="footer-links">
-                        <li><a href="/blog">Blog Archives</a></li>
-                        <li><a href="/lessons">Tzeptosoft Products</a></li>
-                        <li><a href="/about">About Tzeptosoft</a></li>
-                        <li><a href="/contact">Contact Us</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <p>© 2025 Tzeptosoft | All Rights Fucking Reserved 🔥</p>
-                <p style="margin-top: 10px; font-size: 0.9em; color: rgba(255, 255, 255, 0.4);">
-                    Built with 💪 by warriors escaping the matrix
-                </p>
-            </div>
+            <p>© 2025 Tzeptosoft | All Rights Fucking Reserved 🔥</p>
         </footer>
     </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Header Functionality
             const mobileMenuToggle = document.getElementById('mobileMenuToggle');
             const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
             const mobileMenuClose = document.getElementById('mobileMenuClose');
@@ -1521,7 +1264,6 @@
             const searchBox = document.getElementById('searchBox');
             const searchInput = document.querySelector('.search-input');
 
-            // Mobile Menu Toggle
             mobileMenuToggle?.addEventListener('click', () => {
                 mobileMenuOverlay?.classList.toggle('active');
                 document.body.style.overflow = mobileMenuOverlay?.classList.contains('active') ? 'hidden' : '';
@@ -1539,7 +1281,6 @@
                 }
             });
 
-            // Search Toggle
             searchToggle?.addEventListener('click', () => {
                 const isActive = searchBox?.classList.contains('active');
                 searchBox?.classList.toggle('active');
@@ -1547,7 +1288,6 @@
                 if (!isActive && searchInput) searchInput.focus();
             });
 
-            // Escape Key Close
             document.addEventListener('keydown', (e) => {
                 if (e.key === 'Escape') {
                     searchBox?.classList.remove('active');
@@ -1557,26 +1297,21 @@
                 }
             });
 
-            // Preloader
             window.addEventListener('load', () => {
-                setTimeout(() => {
-                    document.getElementById('preloader').style.display = 'none';
-                }, 800);
+                document.getElementById('preloader').style.display = 'none';
             });
 
-            // Matrix Animation
             const matrixAnimation = document.querySelector('.matrix-animation');
             function startMatrixAnimation() {
                 matrixAnimation.textContent = '';
                 matrixAnimation.classList.remove('typing');
                 void matrixAnimation.offsetWidth;
-                matrixAnimation.textContent = 'ESCAPING THE MATRIX';
+                matrixAnimation.textContent = 'DISCIPLINE = UNBREAKABLE';
                 matrixAnimation.classList.add('typing');
             }
             startMatrixAnimation();
             setInterval(startMatrixAnimation, 4000);
 
-            // Scroll Header Effect
             let lastScrollY = window.scrollY;
             window.addEventListener('scroll', () => {
                 const header = document.querySelector('.main-header');
@@ -1589,24 +1324,6 @@
                 lastScrollY = currentScrollY;
             });
 
-            // Smooth Scrolling for Anchor Links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const targetId = this.getAttribute('href');
-                    if (targetId === '#') return;
-                    
-                    const targetElement = document.querySelector(targetId);
-                    if (targetElement) {
-                        window.scrollTo({
-                            top: targetElement.offsetTop - 80,
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
-
-            // Matrix Rain
             const matrixBg = document.getElementById('matrix-bg');
             for (let i = 0; i < 50; i++) {
                 const char = document.createElement('div');
@@ -1617,7 +1334,6 @@
                 matrixBg.appendChild(char);
             }
 
-            // Particles
             const particleContainer = document.getElementById('particles');
             for (let i = 0; i < 50; i++) {
                 const particle = document.createElement('div');
@@ -1628,39 +1344,10 @@
                 particleContainer.appendChild(particle);
             }
 
-            // Cursor Trail
             const cursorTrail = document.getElementById('cursor-trail');
             document.addEventListener('mousemove', (e) => {
                 cursorTrail.style.left = e.clientX - 15 + 'px';
                 cursorTrail.style.top = e.clientY - 15 + 'px';
-            });
-
-            // Newsletter Form
-            const newsletterForm = document.getElementById('newsletterForm');
-            newsletterForm?.addEventListener('submit', (e) => {
-                e.preventDefault();
-                const email = newsletterForm.querySelector('input[type="email"]').value;
-                
-                // Simple validation
-                if (email && email.includes('@')) {
-                    // Here you would typically send to your backend
-                    alert('🔥 Welcome to the Tzeptosoft tribe! Check your email for confirmation.');
-                    newsletterForm.reset();
-                } else {
-                    alert('Please enter a valid email address.');
-                }
-            });
-
-            // Article Card Click Handlers
-            document.querySelectorAll('.article-card').forEach(card => {
-                card.addEventListener('click', function() {
-                    const link = this.getAttribute('onclick')?.match(/window\.location\.href='([^']+)'/)?.[1];
-                    if (link) {
-                        // In real implementation, this would navigate to the article
-                        alert(`Navigating to: ${link}\n\nIn a real site, this would take you to the article.`);
-                        // window.location.href = link; // Uncomment for real navigation
-                    }
-                });
             });
         });
     </script>

@@ -1,7 +1,1033 @@
-<nav>
-    <ul class="nav-links">
-      <li><a href="/index.html">Home</a></li>
-      <li><a href="/life-advice-for-young-men.html">Life Advice for Young Men</a></li>
-      <li><a href="/no-one-respects-weakness.html">No One Respects a Weak Man</a></li>
-    </ul>
-  </nav>
+<!-- TZEPTOSOFT NAVIGATION - ESCAPING THE MATRIX ⚔️ -->
+<!-- Place this file in /components/navbar.html -->
+<!-- Include with: <div id="navbar-container"></div> -->
+
+<!-- NAVIGATION STYLES -->
+<style>
+    /* Navigation Variables */
+    :root {
+        --nav-bg: rgba(11, 15, 26, 0.95);
+        --nav-border: rgba(0, 204, 255, 0.2);
+        --nav-text: #FFFFFF;
+        --nav-hover: #00CCFF;
+        --nav-active: #0066CC;
+        --nav-shadow: rgba(0, 102, 204, 0.1);
+    }
+
+    /* Main Header - Sticky & Professional */
+    .tzeptosoft-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        background: var(--nav-bg);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-bottom: 2px solid transparent;
+        box-shadow: 0 8px 32px var(--nav-shadow);
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        animation: headerSlideIn 0.6s ease-out;
+    }
+
+    .tzeptosoft-header.scrolled {
+        border-bottom-color: var(--nav-border);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        background: rgba(11, 15, 26, 0.98);
+    }
+
+    @keyframes headerSlideIn {
+        from {
+            transform: translateY(-100%);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    /* Header Container */
+    .nav-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 70px;
+        position: relative;
+    }
+
+    /* Logo Section */
+    .nav-logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        position: relative;
+        z-index: 1002;
+    }
+
+    .nav-logo:hover {
+        transform: scale(1.05);
+    }
+
+    .nav-logo img {
+        width: 48px;
+        height: 48px;
+        border-radius: 8px;
+        box-shadow: 0 0 20px rgba(0, 204, 255, 0.3);
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+    }
+
+    .nav-logo:hover img {
+        border-color: var(--nav-hover);
+        box-shadow: 0 0 30px rgba(0, 204, 255, 0.5);
+    }
+
+    .logo-text {
+        display: flex;
+        flex-direction: column;
+        font-family: 'Orbitron', sans-serif;
+    }
+
+    .logo-primary {
+        font-size: 1.4em;
+        font-weight: 900;
+        background: linear-gradient(135deg, #0066CC, #00CCFF);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-shadow: 0 0 10px rgba(0, 102, 204, 0.5);
+        letter-spacing: 1px;
+    }
+
+    .logo-subtitle {
+        font-size: 0.75em;
+        color: var(--nav-hover);
+        font-weight: 600;
+        opacity: 0.8;
+        margin-top: 2px;
+        letter-spacing: 0.5px;
+    }
+
+    /* Desktop Navigation */
+    .nav-desktop {
+        display: flex;
+    }
+
+    @media (max-width: 768px) {
+        .nav-desktop {
+            display: none;
+        }
+    }
+
+    .nav-list {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        gap: 25px;
+        align-items: center;
+    }
+
+    .nav-item {
+        position: relative;
+    }
+
+    .nav-link {
+        display: block;
+        padding: 10px 18px;
+        color: var(--nav-text);
+        text-decoration: none;
+        font-family: 'Inter', sans-serif;
+        font-weight: 500;
+        font-size: 0.95em;
+        position: relative;
+        transition: all 0.3s ease;
+        border-radius: 8px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .nav-link::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, rgba(0, 102, 204, 0.1), rgba(0, 204, 255, 0.1));
+        border-radius: 8px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .nav-link:hover::before,
+    .nav-link.active::before {
+        opacity: 1;
+    }
+
+    .nav-link::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background: linear-gradient(90deg, #0066CC, #00CCFF);
+        transition: width 0.3s ease;
+        border-radius: 1px;
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+        width: 80%;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+        color: var(--nav-hover);
+        text-shadow: 0 0 10px rgba(0, 204, 255, 0.5);
+        transform: translateY(-2px);
+    }
+
+    /* Action Buttons */
+    .nav-actions {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        position: relative;
+        z-index: 1002;
+    }
+
+    /* Search Container */
+    .nav-search {
+        position: relative;
+    }
+
+    .search-toggle {
+        background: none;
+        border: 2px solid rgba(0, 204, 255, 0.3);
+        border-radius: 8px;
+        padding: 8px;
+        color: var(--nav-hover);
+        cursor: pointer;
+        transition: all 0.3s ease;
+        width: 42px;
+        height: 42px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .search-toggle:hover {
+        border-color: var(--nav-hover);
+        box-shadow: 0 0 20px rgba(0, 204, 255, 0.4);
+        transform: scale(1.05);
+        background: rgba(0, 204, 255, 0.1);
+    }
+
+    .search-icon {
+        width: 20px;
+        height: 20px;
+        stroke-width: 2;
+    }
+
+    .search-box {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 320px;
+        background: rgba(28, 28, 28, 0.95);
+        border: 2px solid var(--nav-hover);
+        border-radius: 10px;
+        padding: 15px;
+        margin-top: 10px;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        box-shadow: 0 15px 50px rgba(0, 102, 204, 0.2);
+        z-index: 1001;
+    }
+
+    .search-box.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .search-input {
+        width: 100%;
+        background: rgba(18, 18, 18, 0.9);
+        border: 1px solid rgba(0, 204, 255, 0.3);
+        border-radius: 6px;
+        padding: 12px 16px;
+        color: var(--nav-text);
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.95em;
+        transition: all 0.3s ease;
+    }
+
+    .search-input::placeholder {
+        color: rgba(255, 255, 255, 0.5);
+        font-family: 'JetBrains Mono', monospace;
+    }
+
+    .search-input:focus {
+        outline: none;
+        border-color: var(--nav-hover);
+        box-shadow: 0 0 0 3px rgba(0, 204, 255, 0.2);
+        background: rgba(11, 15, 26, 0.9);
+    }
+
+    .search-submit {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        color: var(--nav-hover);
+        cursor: pointer;
+        padding: 4px;
+        width: 20px;
+        height: 20px;
+        transition: all 0.3s ease;
+    }
+
+    .search-submit:hover {
+        color: #FFFFFF;
+        transform: translateY(-50%) scale(1.1);
+    }
+
+    /* CTA Button */
+    .nav-cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 26px;
+        background: linear-gradient(135deg, #0066CC, #00CCFF);
+        color: #FFFFFF;
+        text-decoration: none;
+        border-radius: 8px;
+        font-family: 'JetBrains Mono', monospace;
+        font-weight: 600;
+        font-size: 0.9em;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 20px rgba(0, 102, 204, 0.3);
+        position: relative;
+        overflow: hidden;
+        border: none;
+        cursor: pointer;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+    }
+
+    .nav-cta::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+        transition: left 0.6s ease;
+    }
+
+    .nav-cta:hover::before {
+        left: 100%;
+    }
+
+    .nav-cta:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 35px rgba(0, 102, 204, 0.4);
+        background: linear-gradient(135deg, #00CCFF, #0066CC);
+    }
+
+    .nav-cta:active {
+        transform: translateY(-1px);
+        box-shadow: 0 4px 15px rgba(0, 102, 204, 0.3);
+    }
+
+    .cta-icon {
+        width: 18px;
+        height: 18px;
+        transition: transform 0.3s ease;
+    }
+
+    .nav-cta:hover .cta-icon {
+        transform: translateX(4px);
+    }
+
+    /* Mobile Menu Toggle */
+    .mobile-toggle {
+        display: none;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 32px;
+        height: 32px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 4px;
+        z-index: 1002;
+        position: relative;
+    }
+
+    @media (max-width: 768px) {
+        .mobile-toggle {
+            display: flex;
+        }
+    }
+
+    .hamburger-line {
+        width: 100%;
+        height: 3px;
+        background: var(--nav-hover);
+        border-radius: 2px;
+        transition: all 0.3s ease;
+        transform-origin: center;
+        position: relative;
+    }
+
+    .mobile-toggle.active .hamburger-line:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+
+    .mobile-toggle.active .hamburger-line:nth-child(2) {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    .mobile-toggle.active .hamburger-line:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
+    /* Mobile Menu Overlay */
+    .mobile-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(11, 15, 26, 0.98);
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
+        z-index: 999;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .mobile-overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .mobile-menu {
+        width: 320px;
+        max-width: 85vw;
+        background: linear-gradient(135deg, rgba(18, 18, 18, 0.97), rgba(11, 15, 26, 0.97));
+        border-left: 3px solid var(--nav-hover);
+        padding: 0;
+        transform: translateX(100%);
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+        box-shadow: -10px 0 50px rgba(0, 0, 0, 0.3);
+    }
+
+    .mobile-overlay.active .mobile-menu {
+        transform: translateX(0);
+    }
+
+    .mobile-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 25px 20px;
+        border-bottom: 1px solid rgba(0, 204, 255, 0.2);
+        background: rgba(11, 15, 26, 0.8);
+    }
+
+    .mobile-logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+        color: var(--nav-text);
+        font-family: 'Orbitron', sans-serif;
+        font-size: 1.2em;
+    }
+
+    .mobile-logo img {
+        width: 40px;
+        height: 40px;
+        border-radius: 8px;
+        box-shadow: 0 0 15px rgba(0, 204, 255, 0.3);
+    }
+
+    .mobile-close {
+        background: none;
+        border: 2px solid rgba(0, 204, 255, 0.3);
+        border-radius: 8px;
+        padding: 8px;
+        color: var(--nav-hover);
+        cursor: pointer;
+        transition: all 0.3s ease;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mobile-close:hover {
+        background: rgba(0, 204, 255, 0.1);
+        border-color: var(--nav-hover);
+        box-shadow: 0 0 20px rgba(0, 204, 255, 0.3);
+        transform: rotate(90deg);
+    }
+
+    .close-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    /* Mobile Navigation */
+    .mobile-nav {
+        padding: 20px 0;
+        flex: 1;
+    }
+
+    .mobile-nav-link {
+        display: block;
+        padding: 18px 25px;
+        color: var(--nav-text);
+        text-decoration: none;
+        font-family: 'Inter', sans-serif;
+        font-size: 1.1em;
+        font-weight: 500;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .mobile-nav-link::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 0;
+        background: linear-gradient(90deg, #0066CC, #00CCFF);
+        transition: width 0.3s ease;
+        z-index: -1;
+    }
+
+    .mobile-nav-link:hover::before,
+    .mobile-nav-link.active::before {
+        width: 100%;
+    }
+
+    .mobile-nav-link:hover,
+    .mobile-nav-link.active {
+        color: #FFFFFF;
+        padding-left: 35px;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    }
+
+    .mobile-nav-link::after {
+        content: '→';
+        position: absolute;
+        right: 25px;
+        opacity: 0;
+        transition: all 0.3s ease;
+        color: var(--nav-hover);
+    }
+
+    .mobile-nav-link:hover::after {
+        opacity: 1;
+        right: 20px;
+    }
+
+    /* Mobile Actions */
+    .mobile-actions {
+        padding: 25px 20px;
+        border-top: 1px solid rgba(0, 204, 255, 0.2);
+        background: rgba(11, 15, 26, 0.8);
+    }
+
+    .mobile-cta {
+        display: block;
+        width: 100%;
+        padding: 18px;
+        background: linear-gradient(135deg, #0066CC, #00CCFF);
+        color: #FFFFFF;
+        text-decoration: none;
+        border-radius: 8px;
+        font-family: 'JetBrains Mono', monospace;
+        font-weight: 600;
+        text-align: center;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 20px rgba(0, 102, 204, 0.3);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .mobile-cta::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+        transition: left 0.6s ease;
+    }
+
+    .mobile-cta:hover::before {
+        left: 100%;
+    }
+
+    .mobile-cta:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 30px rgba(0, 102, 204, 0.4);
+        background: linear-gradient(135deg, #00CCFF, #0066CC);
+    }
+
+    /* Badges & Indicators */
+    .nav-badge {
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        background: #FF4444;
+        color: #FFFFFF;
+        font-size: 0.7em;
+        padding: 2px 6px;
+        border-radius: 10px;
+        font-family: 'JetBrains Mono', monospace;
+        font-weight: 600;
+        animation: pulseBadge 2s infinite;
+    }
+
+    @keyframes pulseBadge {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.1); }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+        .nav-list {
+            gap: 15px;
+        }
+        
+        .nav-link {
+            padding: 8px 14px;
+            font-size: 0.9em;
+        }
+        
+        .nav-actions {
+            gap: 15px;
+        }
+        
+        .search-box {
+            width: 280px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .nav-container {
+            height: 65px;
+            padding: 0 16px;
+        }
+        
+        .nav-logo img {
+            width: 42px;
+            height: 42px;
+        }
+        
+        .logo-primary {
+            font-size: 1.2em;
+        }
+        
+        .search-box {
+            width: calc(100vw - 40px);
+            right: auto;
+            left: 16px;
+        }
+        
+        .nav-cta {
+            padding: 10px 20px;
+            font-size: 0.85em;
+        }
+        
+        .mobile-menu {
+            width: 100vw;
+            max-width: none;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .nav-container {
+            height: 60px;
+            padding: 0 12px;
+        }
+        
+        .nav-logo img {
+            width: 38px;
+            height: 38px;
+        }
+        
+        .logo-primary {
+            font-size: 1.1em;
+        }
+        
+        .logo-subtitle {
+            font-size: 0.7em;
+        }
+        
+        .search-toggle {
+            width: 38px;
+            height: 38px;
+        }
+        
+        .nav-cta {
+            padding: 8px 16px;
+            font-size: 0.8em;
+        }
+        
+        .mobile-nav-link {
+            padding: 16px 20px;
+            font-size: 1em;
+        }
+    }
+
+    /* Reduced Motion Support */
+    @media (prefers-reduced-motion: reduce) {
+        .tzeptosoft-header,
+        .nav-link,
+        .nav-cta,
+        .mobile-nav-link,
+        .mobile-cta,
+        .search-box,
+        .mobile-menu,
+        .mobile-overlay,
+        .hamburger-line,
+        .search-toggle,
+        .mobile-close {
+            transition: none !important;
+            animation: none !important;
+        }
+    }
+</style>
+
+<!-- NAVIGATION HTML -->
+<header class="tzeptosoft-header" id="main-header">
+    <div class="nav-container">
+        <!-- Logo -->
+        <a href="/" class="nav-logo" aria-label="Tzeptosoft Home">
+            <img src="/assets/images/tzeptosoft-logo.webp" alt="Tzeptosoft Logo" width="48" height="48" loading="lazy">
+            <div class="logo-text">
+                <span class="logo-primary">TZEPTOSOFT</span>
+                <span class="logo-subtitle">Escaping the Matrix</span>
+            </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="nav-desktop" role="navigation" aria-label="Main navigation">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="/" class="nav-link" data-page="home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/blog" class="nav-link" data-page="blog">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/lessons" class="nav-link" data-page="lessons">Products</a>
+                    <span class="nav-badge" aria-label="New products">NEW</span>
+                </li>
+                <li class="nav-item">
+                    <a href="/contact" class="nav-link" data-page="contact">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/about" class="nav-link" data-page="about">About</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Action Buttons -->
+        <div class="nav-actions">
+            <!-- Search -->
+            <div class="nav-search">
+                <button class="search-toggle" aria-label="Toggle search" aria-expanded="false" id="searchToggle">
+                    <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </button>
+                <div class="search-box" id="searchBox">
+                    <input type="search" placeholder="Search wisdom, tactics, blueprints..." class="search-input" aria-label="Search content">
+                    <button class="search-submit" aria-label="Search">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- CTA Button -->
+            <a href="mailto:tzeptosoft@gmail.com" class="nav-cta" aria-label="Join Tzeptosoft">
+                <span>Join Tzeptosoft</span>
+                <svg class="cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+            </a>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-toggle" aria-label="Toggle mobile menu" aria-expanded="false" id="mobileToggle">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- Mobile Menu Overlay -->
+<div class="mobile-overlay" id="mobileOverlay">
+    <div class="mobile-menu">
+        <div class="mobile-header">
+            <a href="/" class="mobile-logo">
+                <img src="/assets/images/tzeptosoft-logo.webp" alt="Tzeptosoft" width="40" height="40">
+                <span>TZEPTOSOFT</span>
+            </a>
+            <button class="mobile-close" id="mobileClose" aria-label="Close mobile menu">
+                <svg class="close-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M18 6 6 18"></path>
+                    <path d="m6 6 12 12"></path>
+                </svg>
+            </button>
+        </div>
+
+        <nav class="mobile-nav" aria-label="Mobile navigation">
+            <a href="/" class="mobile-nav-link">Home</a>
+            <a href="/blog" class="mobile-nav-link">Blog Archives</a>
+            <a href="/lessons" class="mobile-nav-link">Tzeptosoft Products</a>
+            <a href="/contact" class="mobile-nav-link">Contact Us</a>
+            <a href="/about" class="mobile-nav-link">About Tzeptosoft</a>
+        </nav>
+
+        <div class="mobile-actions">
+            <a href="mailto:tzeptosoft@gmail.com" class="mobile-cta">Join Tzeptosoft ⚔️</a>
+        </div>
+    </div>
+</div>
+
+<!-- NAVIGATION JAVASCRIPT -->
+<script>
+    // IIFE to avoid polluting global scope
+    (function() {
+        'use strict';
+        
+        // DOM Elements
+        const header = document.getElementById('main-header');
+        const searchToggle = document.getElementById('searchToggle');
+        const searchBox = document.getElementById('searchBox');
+        const searchInput = document.querySelector('.search-input');
+        const mobileToggle = document.getElementById('mobileToggle');
+        const mobileOverlay = document.getElementById('mobileOverlay');
+        const mobileClose = document.getElementById('mobileClose');
+        
+        // Scroll Effect
+        let lastScrollY = window.scrollY;
+        const handleScroll = () => {
+            const currentScrollY = window.scrollY;
+            
+            if (currentScrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+            
+            // Hide search box when scrolling
+            if (searchBox.classList.contains('active')) {
+                searchBox.classList.remove('active');
+                searchToggle.setAttribute('aria-expanded', 'false');
+            }
+            
+            lastScrollY = currentScrollY;
+        };
+        
+        // Search Toggle
+        const handleSearchToggle = () => {
+            const isActive = searchBox.classList.contains('active');
+            searchBox.classList.toggle('active');
+            searchToggle.setAttribute('aria-expanded', !isActive);
+            
+            if (!isActive && searchInput) {
+                setTimeout(() => searchInput.focus(), 100);
+            }
+            
+            // Close mobile menu if open
+            if (mobileOverlay.classList.contains('active')) {
+                mobileOverlay.classList.remove('active');
+                mobileToggle.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        };
+        
+        // Mobile Menu Toggle
+        const handleMobileToggle = () => {
+            const isActive = mobileOverlay.classList.contains('active');
+            mobileOverlay.classList.toggle('active');
+            mobileToggle.classList.toggle('active');
+            mobileToggle.setAttribute('aria-expanded', !isActive);
+            document.body.style.overflow = !isActive ? 'hidden' : '';
+            
+            // Close search if open
+            if (searchBox.classList.contains('active')) {
+                searchBox.classList.remove('active');
+                searchToggle.setAttribute('aria-expanded', 'false');
+            }
+        };
+        
+        // Close Mobile Menu
+        const handleMobileClose = () => {
+            mobileOverlay.classList.remove('active');
+            mobileToggle.classList.remove('active');
+            mobileToggle.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
+        };
+        
+        // Close on Escape Key
+        const handleEscapeKey = (e) => {
+            if (e.key === 'Escape') {
+                // Close search
+                searchBox.classList.remove('active');
+                searchToggle.setAttribute('aria-expanded', 'false');
+                
+                // Close mobile menu
+                mobileOverlay.classList.remove('active');
+                mobileToggle.classList.remove('active');
+                mobileToggle.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = '';
+            }
+        };
+        
+        // Close search when clicking outside
+        const handleClickOutside = (e) => {
+            if (searchBox.classList.contains('active') && 
+                !searchBox.contains(e.target) && 
+                !searchToggle.contains(e.target)) {
+                searchBox.classList.remove('active');
+                searchToggle.setAttribute('aria-expanded', 'false');
+            }
+        };
+        
+        // Search functionality
+        const handleSearchSubmit = (e) => {
+            e.preventDefault();
+            const query = searchInput.value.trim();
+            if (query) {
+                // Implement your search logic here
+                console.log('Searching for:', query);
+                // Example: window.location.href = `/search?q=${encodeURIComponent(query)}`;
+                alert(`Search functionality would search for: "${query}"`);
+                searchInput.value = '';
+                searchBox.classList.remove('active');
+                searchToggle.setAttribute('aria-expanded', 'false');
+            }
+        };
+        
+        // Set active page based on current URL
+        const setActivePage = () => {
+            const currentPath = window.location.pathname;
+            const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
+            
+            navLinks.forEach(link => {
+                const linkPath = link.getAttribute('href');
+                link.classList.remove('active');
+                
+                if (linkPath === currentPath || 
+                    (currentPath.startsWith('/blog') && linkPath === '/blog') ||
+                    (currentPath.startsWith('/lessons') && linkPath === '/lessons')) {
+                    link.classList.add('active');
+                }
+            });
+        };
+        
+        // Smooth scroll for anchor links
+        const handleAnchorClick = (e) => {
+            const target = e.target.closest('a[href^="#"]');
+            if (target && target.getAttribute('href') !== '#') {
+                e.preventDefault();
+                const targetId = target.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    const headerHeight = header.offsetHeight;
+                    const targetPosition = targetElement.offsetTop - headerHeight - 20;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            }
+        };
+        
+        // Initialize
+        const initNavigation = () => {
+            // Event Listeners
+            window.addEventListener('scroll', handleScroll, { passive: true });
+            searchToggle.addEventListener('click', handleSearchToggle);
+            mobileToggle.addEventListener('click', handleMobileToggle);
+            mobileClose.addEventListener('click', handleMobileClose);
+            document.addEventListener('keydown', handleEscapeKey);
+            document.addEventListener('click', handleClickOutside);
+            document.addEventListener('submit', handleSearchSubmit);
+            document.addEventListener('click', handleAnchorClick);
+            
+            // Set active page
+            setActivePage();
+            
+            // Initialize scroll state
+            handleScroll();
+            
+            console.log('⚔️ Tzeptosoft Navigation initialized');
+        };
+        
+        // Initialize when DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initNavigation);
+        } else {
+            initNavigation();
+        }
+        
+        // Export for manual initialization if needed
+        window.tzeptosoftNav = {
+            init: initNavigation,
+            closeMobileMenu: handleMobileClose,
+            toggleSearch: handleSearchToggle
+        };
+        
+    })();
+</script>

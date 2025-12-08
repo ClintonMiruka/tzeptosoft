@@ -1,11 +1,766 @@
-<header>
-    <h1 class="hero-title" id="blog-title">No One Respects a Weak Man</h1>
-    <div class="author-info">
-      <img src="tzeptosoft-logo.webp" alt="Clinton | Tzeptosoft" width="60" height="60" loading="lazy">
-      <div class="author-bio">
-        <p class="author-name">Clinton | Tzeptosoft</p>
-        <p class="author-title">Empowering the Next Generation</p>
-      </div>
-    </div>
-    <hr>
-  </header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tzeptosoft Header | Escaping the Matrix</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Mono:wght@700&family=Orbitron:wght@900&family=JetBrains+Mono:wght@400;700&display=swap">
+    <style>
+        :root {
+            --primary: #0066CC;
+            --secondary: #00CCFF;
+            --accent: #FFFFFF;
+            --bg-dark: #0B0F1A;
+            --text-dark: #FFFFFF;
+            --matrix-green: #00FF00;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--bg-dark);
+            color: var(--text-dark);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header Styles */
+        .main-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(11, 15, 26, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 2px solid transparent;
+            animation: headerSlideIn 0.6s ease-out;
+            box-shadow: 0 8px 32px rgba(0, 102, 204, 0.1);
+        }
+
+        @keyframes headerSlideIn {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .main-header.scrolled {
+            border-bottom-color: rgba(0, 204, 255, 0.2);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 70px;
+            position: relative;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .logo-wrapper:hover {
+            transform: scale(1.05);
+        }
+
+        .logo-image {
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 204, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        .logo-primary {
+            font-size: 1.4em;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 10px rgba(0, 102, 204, 0.5);
+        }
+
+        .logo-subtitle {
+            font-size: 0.75em;
+            color: var(--secondary);
+            font-weight: 600;
+            opacity: 0.8;
+            margin-top: 2px;
+        }
+
+        .nav-section {
+            display: flex;
+        }
+
+        .nav-list {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-link {
+            display: block;
+            padding: 8px 16px;
+            color: var(--text-dark);
+            text-decoration: none;
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            font-size: 0.95em;
+            position: relative;
+            transition: all 0.3s ease;
+            border-radius: 6px;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--secondary);
+            background: rgba(0, 204, 255, 0.1);
+            box-shadow: 0 0 20px rgba(0, 204, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 80%;
+        }
+
+        .actions-section {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .search-container {
+            position: relative;
+        }
+
+        .search-toggle {
+            background: none;
+            border: 2px solid rgba(0, 204, 255, 0.3);
+            border-radius: 8px;
+            padding: 8px;
+            color: var(--secondary);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .search-toggle:hover {
+            border-color: var(--secondary);
+            box-shadow: 0 0 20px rgba(0, 204, 255, 0.4);
+            transform: scale(1.05);
+        }
+
+        .search-icon {
+            width: 20px;
+            height: 20px;
+        }
+
+        .search-box {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            width: 300px;
+            background: rgba(28, 28, 28, 0.95);
+            border: 2px solid var(--secondary);
+            border-radius: 8px;
+            padding: 12px;
+            margin-top: 8px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 40px rgba(0, 102, 204, 0.2);
+            z-index: 1001;
+        }
+
+        .search-box.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .search-input {
+            width: 100%;
+            background: rgba(18, 18, 18, 0.8);
+            border: 1px solid rgba(0, 204, 255, 0.3);
+            border-radius: 6px;
+            padding: 10px 12px;
+            color: var(--text-dark);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9em;
+        }
+
+        .search-input::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: var(--secondary);
+            box-shadow: 0 0 0 3px rgba(0, 204, 255, 0.2);
+        }
+
+        .search-submit {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: var(--secondary);
+            cursor: pointer;
+            padding: 4px;
+            width: 20px;
+            height: 20px;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: var(--accent);
+            text-decoration: none;
+            border-radius: 8px;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 600;
+            font-size: 0.9em;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0, 102, 204, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(0, 102, 204, 0.4);
+        }
+
+        .button-icon {
+            width: 16px;
+            height: 16px;
+            transition: transform 0.3s ease;
+        }
+
+        .cta-button:hover .button-icon {
+            transform: translateX(4px);
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 30px;
+            height: 30px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 4px;
+            z-index: 1001;
+        }
+
+        .hamburger-line {
+            width: 100%;
+            height: 3px;
+            background: var(--secondary);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+            transform-origin: center;
+        }
+
+        .mobile-menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(11, 15, 26, 0.98);
+            backdrop-filter: blur(20px);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s ease;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .mobile-menu-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mobile-menu {
+            width: 320px;
+            max-width: 90vw;
+            background: linear-gradient(135deg, rgba(18, 18, 18, 0.95), rgba(11, 15, 26, 0.95));
+            border-left: 3px solid var(--secondary);
+            padding: 0;
+            transform: translateX(100%);
+            transition: transform 0.4s ease;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+        }
+
+        .mobile-menu-overlay.active .mobile-menu {
+            transform: translateX(0);
+        }
+
+        .mobile-menu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px 20px;
+            border-bottom: 1px solid rgba(0, 204, 255, 0.2);
+        }
+
+        .mobile-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--text-dark);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2em;
+        }
+
+        .mobile-menu-close {
+            background: none;
+            border: none;
+            color: var(--secondary);
+            cursor: pointer;
+            padding: 8px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mobile-menu-close:hover {
+            background: rgba(0, 204, 255, 0.1);
+            box-shadow: 0 0 20px rgba(0, 204, 255, 0.2);
+        }
+
+        .mobile-nav {
+            padding: 20px 0;
+            flex: 1;
+        }
+
+        .mobile-nav-link {
+            display: block;
+            padding: 16px 24px;
+            color: var(--text-dark);
+            text-decoration: none;
+            font-family: 'Inter', sans-serif;
+            font-size: 1.1em;
+            font-weight: 500;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mobile-nav-link::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 0;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            transition: width 0.3s ease;
+            z-index: -1;
+        }
+
+        .mobile-nav-link:hover::before,
+        .mobile-nav-link.active::before {
+            width: 100%;
+        }
+
+        .mobile-nav-link:hover,
+        .mobile-nav-link.active {
+            color: var(--accent);
+            padding-left: 32px;
+        }
+
+        .mobile-actions {
+            padding: 20px 24px;
+            border-top: 1px solid rgba(0, 204, 255, 0.2);
+        }
+
+        .mobile-cta-button {
+            display: inline-block;
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: var(--accent);
+            text-decoration: none;
+            border-radius: 8px;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 600;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0, 102, 204, 0.3);
+        }
+
+        .mobile-cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(0, 102, 204, 0.4);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .nav-list {
+                gap: 20px;
+            }
+            
+            .nav-link {
+                padding: 6px 12px;
+                font-size: 0.9em;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                height: 60px;
+                padding: 0 16px;
+            }
+            
+            .nav-section {
+                display: none;
+            }
+            
+            .mobile-menu-toggle {
+                display: flex;
+            }
+            
+            .search-box {
+                width: 280px;
+                right: -20px;
+            }
+            
+            .logo-primary {
+                font-size: 1.2em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-container {
+                height: 56px;
+                padding: 0 12px;
+            }
+            
+            .search-box {
+                width: calc(100vw - 40px);
+                right: auto;
+                left: 12px;
+            }
+            
+            .cta-button {
+                padding: 10px 20px;
+                font-size: 0.85em;
+            }
+            
+            .mobile-menu {
+                width: 100vw;
+                max-width: none;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            * { 
+                animation: none !important; 
+                transition: none !important; 
+            }
+        }
+
+        @media print {
+            .main-header { 
+                display: none; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Professional Header -->
+    <header class="main-header">
+        <div class="header-container">
+            <!-- Logo Section -->
+            <div class="logo-section">
+                <a href="/" class="logo-wrapper" aria-label="Tzeptosoft Home">
+                    <img src="/assets/images/tzeptosoft-logo.webp" alt="Tzeptosoft Logo" class="logo-image" width="48" height="48" loading="lazy">
+                    <div class="logo-text">
+                        <span class="logo-primary">TZEPTOSOFT</span>
+                        <span class="logo-subtitle">Escaping the Matrix</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="nav-section" role="navigation" aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="/" class="nav-link active" data-page="home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/blog" class="nav-link" data-page="blog">Blog Archives</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/lessons" class="nav-link" data-page="lessons">Tzeptosoft Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/contact" class="nav-link" data-page="contact">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/about" class="nav-link" data-page="about">About</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Action Buttons & Search -->
+            <div class="actions-section">
+                <!-- Search -->
+                <div class="search-container">
+                    <button class="search-toggle" aria-label="Toggle search" aria-expanded="false" id="searchToggle">
+                        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                    <div class="search-box" id="searchBox">
+                        <input type="search" placeholder="Search wisdom, tactics, blueprints..." class="search-input" aria-label="Search content">
+                        <button class="search-submit" aria-label="Search">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- CTA Button -->
+                <a href="mailto:tzeptosoft@gmail.com" class="cta-button" aria-label="Join Tzeptosoft">
+                    <span class="button-text">Join Tzeptosoft</span>
+                    <svg class="button-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false" id="mobileMenuToggle">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+            <div class="mobile-menu">
+                <div class="mobile-menu-header">
+                    <a href="/" class="mobile-logo">
+                        <img src="/assets/images/tzeptosoft-logo.webp" alt="Tzeptosoft" width="40" height="40">
+                        <span>TZEPTOSOFT</span>
+                    </a>
+                    <button class="mobile-menu-close" id="mobileMenuClose">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 6 6 18"></path>
+                            <path d="m6 6 12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <nav class="mobile-nav">
+                    <a href="/" class="mobile-nav-link active">Home</a>
+                    <a href="/blog" class="mobile-nav-link">Blog Archives</a>
+                    <a href="/lessons" class="mobile-nav-link">Tzeptosoft Products</a>
+                    <a href="/contact" class="mobile-nav-link">Contact Us</a>
+                    <a href="/about" class="mobile-nav-link">About</a>
+                </nav>
+                <div class="mobile-actions">
+                    <a href="mailto:tzeptosoft@gmail.com" class="mobile-cta-button">Join Tzeptosoft 🚀</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Header Functionality
+            const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+            const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+            const mobileMenuClose = document.getElementById('mobileMenuClose');
+            const searchToggle = document.getElementById('searchToggle');
+            const searchBox = document.getElementById('searchBox');
+            const searchInput = document.querySelector('.search-input');
+
+            // Mobile Menu Toggle
+            mobileMenuToggle?.addEventListener('click', () => {
+                mobileMenuOverlay?.classList.toggle('active');
+                document.body.style.overflow = mobileMenuOverlay?.classList.contains('active') ? 'hidden' : '';
+            });
+
+            mobileMenuClose?.addEventListener('click', () => {
+                mobileMenuOverlay?.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+
+            mobileMenuOverlay?.addEventListener('click', (e) => {
+                if (e.target === mobileMenuOverlay) {
+                    mobileMenuOverlay.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+
+            // Search Toggle
+            searchToggle?.addEventListener('click', () => {
+                const isActive = searchBox?.classList.contains('active');
+                searchBox?.classList.toggle('active');
+                searchToggle?.setAttribute('aria-expanded', !isActive);
+                if (!isActive && searchInput) {
+                    searchInput.focus();
+                }
+            });
+
+            // Close search and mobile menu on escape
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    searchBox?.classList.remove('active');
+                    searchToggle?.setAttribute('aria-expanded', 'false');
+                    mobileMenuOverlay?.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+
+            // Search functionality
+            const searchForm = document.querySelector('.search-box');
+            searchForm?.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const query = searchInput?.value.trim();
+                if (query) {
+                    console.log('Searching for:', query);
+                    // Implement your search logic here
+                }
+            });
+
+            // Header scroll effect
+            let lastScrollY = window.scrollY;
+            window.addEventListener('scroll', () => {
+                const header = document.querySelector('.main-header');
+                const currentScrollY = window.scrollY;
+
+                if (currentScrollY > 100) {
+                    header?.classList.add('scrolled');
+                } else {
+                    header?.classList.remove('scrolled');
+                }
+
+                lastScrollY = currentScrollY;
+            });
+
+            // Set active navigation link based on current page
+            function setActiveNavLink() {
+                const currentPage = window.location.pathname;
+                const navLinks = document.querySelectorAll('.nav-link');
+                const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+                
+                navLinks.forEach(link => {
+                    const linkPage = link.getAttribute('data-page');
+                    if (currentPage.includes(linkPage) || 
+                        (currentPage === '/' && linkPage === 'home')) {
+                        link.classList.add('active');
+                    } else {
+                        link.classList.remove('active');
+                    }
+                });
+
+                mobileNavLinks.forEach(link => {
+                    const linkPage = link.getAttribute('href');
+                    if (currentPage === linkPage || 
+                        (currentPage === '/' && linkPage === '/')) {
+                        link.classList.add('active');
+                    } else {
+                        link.classList.remove('active');
+                    }
+                });
+            }
+
+            // Initialize active link
+            setActiveNavLink();
+        });
+    </script>
+</body>
+</html>

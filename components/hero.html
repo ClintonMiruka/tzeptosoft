@@ -1,10 +1,668 @@
-<div class="hero">
-    <h1>TZEPTOSOFT</h1>
-    <h2>Empowering the Future</h2>
-    <div class="auto-typing">Code. Innovate. Thrive.</div>
-    <a href="mailto:clintonmiruka@gmail.com" class="btn-cta" aria-label="Contact Tzeptosoft">Get in Touch</a>
-    <div class="holo-element" style="top: 20%; left: 10%;"></div>
-    <div class="holo-element" style="top: 30%; right: 15%;"></div>
-    <div class="holo-element" style="bottom: 25%; left: 20%;"></div>
-    <div class="holo-element" style="bottom: 15%; right: 10%;"></div>
-  </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tzeptosoft Hero | Escaping the Matrix</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Mono:wght@700&family=Orbitron:wght@900&family=JetBrains+Mono:wght@400;700&display=swap">
+    <style>
+        :root {
+            --primary: #0066CC;
+            --secondary: #00CCFF;
+            --accent: #FFFFFF;
+            --bg-dark: #0B0F1A;
+            --text-dark: #FFFFFF;
+            --matrix-green: #00FF00;
+        }
+
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--bg-dark);
+            color: var(--text-dark);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        /* Background Elements */
+        #galaxy-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(0, 204, 255, 0.2), transparent);
+            z-index: -3;
+            animation: rotateGalaxy 60s infinite linear;
+        }
+
+        @keyframes rotateGalaxy {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        #matrix-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            opacity: 0.7;
+        }
+
+        .matrix-char {
+            position: absolute;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 16px;
+            color: var(--matrix-green);
+            opacity: 0.8;
+            animation: matrix-fall 5s linear infinite;
+        }
+
+        @keyframes matrix-fall {
+            0% { transform: translateY(-100vh); opacity: 0.8; }
+            100% { transform: translateY(100vh); opacity: 0; }
+        }
+
+        #particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .particle {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background: var(--secondary);
+            border-radius: 50%;
+            animation: drift 10s infinite linear;
+        }
+
+        @keyframes drift {
+            0% { transform: translate(0, 0); opacity: 0.5; }
+            50% { opacity: 1; }
+            100% { transform: translate(100px, 100px); opacity: 0.5; }
+        }
+
+        #cursor-trail {
+            position: fixed;
+            width: 30px;
+            height: 30px;
+            background: radial-gradient(circle, var(--secondary), transparent);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 100;
+            transition: all 0.1s ease;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 60px 40px;
+            background: rgba(11, 15, 26, 0.9);
+            position: relative;
+            z-index: 1;
+            width: 90%;
+            max-width: 1200px;
+            border-radius: 16px;
+            border: 2px solid rgba(0, 204, 255, 0.2);
+            box-shadow: 0 0 60px rgba(0, 204, 255, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5em, 8vw, 4.5em);
+            font-family: 'Orbitron', sans-serif;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 10px var(--primary);
+            animation: gradientShift 3s ease infinite;
+            margin-bottom: 10px;
+            line-height: 1.1;
+        }
+
+        .matrix-animation {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: clamp(1em, 3vw, 1.5em);
+            color: var(--matrix-green);
+            text-shadow: 0 0 10px var(--matrix-green);
+            margin: 20px 0;
+            overflow: hidden;
+            white-space: nowrap;
+            display: inline-block;
+            letter-spacing: 2px;
+        }
+
+        .matrix-animation.typing {
+            animation: typeMatrix 2s steps(20) forwards, glitch 0.1s infinite alternate;
+        }
+
+        @keyframes typeMatrix {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes glitch {
+            0% { transform: translate(0); opacity: 1; }
+            50% { transform: translate(2px, -2px); opacity: 0.8; }
+            100% { transform: translate(-2px, 2px); opacity: 0.9; }
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0%; }
+            50% { background-position: 100%; }
+            100% { background-position: 0%; }
+        }
+
+        .hero h2 {
+            font-size: clamp(1.2em, 4vw, 1.8em);
+            color: var(--secondary);
+            text-shadow: 0 0 10px var(--secondary);
+            margin: 20px auto;
+            max-width: 800px;
+            line-height: 1.4;
+            font-weight: 400;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(0.9em, 2.5vw, 1.2em);
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 600px;
+            margin: 20px auto 40px;
+            line-height: 1.6;
+        }
+
+        .btn-cta {
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            color: var(--accent);
+            padding: clamp(12px, 3vw, 18px) clamp(25px, 6vw, 40px);
+            text-decoration: none;
+            font-size: clamp(1em, 2.5vw, 1.3em);
+            border-radius: 8px;
+            box-shadow: 0 0 20px var(--primary);
+            animation: pulse 2s infinite;
+            margin-top: 20px;
+            display: inline-block;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-cta:hover {
+            background: linear-gradient(90deg, var(--secondary), var(--primary));
+            transform: scale(1.05);
+            box-shadow: 0 0 30px var(--secondary);
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(0, 102, 204, 0.4); }
+            70% { box-shadow: 0 0 0 15px rgba(0, 102, 204, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(0, 102, 204, 0); }
+        }
+
+        .holo-element {
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            background: radial-gradient(circle, var(--primary), transparent);
+            border-radius: 50%;
+            animation: float 4s infinite ease-in-out;
+            z-index: -1;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0) rotate(0deg); opacity: 0.5; }
+            50% { transform: translateY(-30px) rotate(180deg); opacity: 1; }
+            100% { transform: translateY(0) rotate(360deg); opacity: 0.5; }
+        }
+
+        /* Stats/Features Section */
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 15px;
+            min-width: 150px;
+        }
+
+        .stat-number {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2em;
+            color: var(--secondary);
+            margin-bottom: 5px;
+            text-shadow: 0 0 10px var(--secondary);
+        }
+
+        .stat-label {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9em;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* Loading Bar */
+        .loading-bar {
+            width: 200px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 2px;
+            margin: 20px auto;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .loading-bar::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, var(--secondary), transparent);
+            animation: loading 2s infinite;
+        }
+
+        @keyframes loading {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 40px 20px;
+                margin: 10px;
+                border-width: 1px;
+            }
+
+            .hero h1 {
+                font-size: 2.2em;
+            }
+
+            .matrix-animation {
+                font-size: 1em;
+            }
+
+            .hero h2 {
+                font-size: 1.2em;
+            }
+
+            .hero-subtitle {
+                font-size: 1em;
+                margin: 15px auto 30px;
+            }
+
+            .btn-cta {
+                padding: 12px 30px;
+                font-size: 1.1em;
+            }
+
+            .hero-stats {
+                gap: 20px;
+                margin-top: 30px;
+            }
+
+            .stat-item {
+                min-width: 120px;
+                padding: 10px;
+            }
+
+            .stat-number {
+                font-size: 1.5em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 30px 15px;
+            }
+
+            .hero h1 {
+                font-size: 1.8em;
+            }
+
+            .matrix-animation {
+                font-size: 0.9em;
+                letter-spacing: 1px;
+            }
+
+            .hero h2 {
+                font-size: 1em;
+            }
+
+            .hero-subtitle {
+                font-size: 0.9em;
+            }
+
+            .btn-cta {
+                padding: 10px 25px;
+                font-size: 1em;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+
+            .stat-item {
+                width: 100%;
+                max-width: 200px;
+            }
+        }
+
+        /* Accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+
+            #galaxy-bg,
+            .holo-element,
+            .matrix-char,
+            .particle,
+            .matrix-animation.typing {
+                animation: none !important;
+            }
+
+            .btn-cta {
+                animation: none;
+            }
+        }
+
+        /* Ripple Animation */
+        @keyframes ripple-animation {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Elements -->
+    <div id="galaxy-bg"></div>
+    <div id="matrix-bg"></div>
+    <div id="particles"></div>
+    <div id="cursor-trail"></div>
+
+    <!-- Main Hero Section -->
+    <section class="hero">
+        <!-- Holographic Elements -->
+        <div class="holo-element" style="top: 10%; left: 5%;"></div>
+        <div class="holo-element" style="top: 20%; right: 8%;"></div>
+        <div class="holo-element" style="bottom: 15%; left: 10%;"></div>
+        <div class="holo-element" style="bottom: 5%; right: 5%;"></div>
+
+        <!-- Main Content -->
+        <h1>TZEPTOSOFT</h1>
+        <div class="matrix-animation">ESCAPING THE MATRIX</div>
+        
+        <h2>Raw, Unfiltered Wisdom for Warriors to Build Empires and Dominate Life</h2>
+        
+        <p class="hero-subtitle">
+            No bullshit, no filter, no apologies. Just straight fire for those ready to escape the matrix 
+            and build their legacy. For men and women who refuse to settle for mediocrity.
+        </p>
+
+        <!-- Loading Bar for Dynamic Effect -->
+        <div class="loading-bar"></div>
+
+        <!-- Call to Action -->
+        <button class="btn-cta" id="startJourney" aria-label="Start Your Journey">
+            Start Your Journey ⚔️
+        </button>
+
+        <!-- Stats/Features -->
+        <div class="hero-stats">
+            <div class="stat-item">
+                <div class="stat-number">50K+</div>
+                <div class="stat-label">Warriors Escaped</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">100+</div>
+                <div class="stat-label">Raw Articles</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">24/7</div>
+                <div class="stat-label">Unfiltered Truth</div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Matrix Animation
+            const matrixAnimation = document.querySelector('.matrix-animation');
+            function startMatrixAnimation() {
+                matrixAnimation.textContent = '';
+                matrixAnimation.classList.remove('typing');
+                void matrixAnimation.offsetWidth; // Trigger reflow
+                matrixAnimation.textContent = 'ESCAPING THE MATRIX';
+                matrixAnimation.classList.add('typing');
+            }
+            
+            startMatrixAnimation();
+            setInterval(startMatrixAnimation, 4000);
+
+            // Matrix Rain Effect
+            const matrixBg = document.getElementById('matrix-bg');
+            function createMatrixRain() {
+                for (let i = 0; i < 50; i++) {
+                    const char = document.createElement('div');
+                    char.classList.add('matrix-char');
+                    char.textContent = String.fromCharCode(33 + Math.random() * 94);
+                    char.style.left = Math.random() * 100 + 'vw';
+                    char.style.animationDelay = Math.random() * 5 + 's';
+                    char.style.fontSize = (12 + Math.random() * 8) + 'px';
+                    matrixBg.appendChild(char);
+                    
+                    // Remove old characters after animation
+                    setTimeout(() => {
+                        if (char.parentNode === matrixBg) {
+                            matrixBg.removeChild(char);
+                        }
+                    }, 5000);
+                }
+            }
+            
+            createMatrixRain();
+            setInterval(createMatrixRain, 200);
+
+            // Particles Effect
+            const particleContainer = document.getElementById('particles');
+            function createParticles() {
+                for (let i = 0; i < 50; i++) {
+                    const particle = document.createElement('div');
+                    particle.classList.add('particle');
+                    particle.style.left = Math.random() * 100 + 'vw';
+                    particle.style.top = Math.random() * 100 + 'vh';
+                    particle.style.animationDelay = Math.random() * 3 + 's';
+                    particle.style.width = (3 + Math.random() * 4) + 'px';
+                    particle.style.height = particle.style.width;
+                    particleContainer.appendChild(particle);
+                    
+                    setTimeout(() => {
+                        if (particle.parentNode === particleContainer) {
+                            particleContainer.removeChild(particle);
+                        }
+                    }, 10000);
+                }
+            }
+            
+            createParticles();
+            setInterval(createParticles, 500);
+
+            // Cursor Trail Effect
+            const cursorTrail = document.getElementById('cursor-trail');
+            let mouseX = 0;
+            let mouseY = 0;
+            let trailX = 0;
+            let trailY = 0;
+            
+            document.addEventListener('mousemove', (e) => {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+            });
+            
+            function animateCursor() {
+                // Smooth follow effect
+                trailX += (mouseX - trailX) * 0.1;
+                trailY += (mouseY - trailY) * 0.1;
+                
+                cursorTrail.style.left = trailX - 15 + 'px';
+                cursorTrail.style.top = trailY - 15 + 'px';
+                
+                // Size based on speed
+                const speed = Math.sqrt(Math.pow(mouseX - trailX, 2) + Math.pow(mouseY - trailY, 2));
+                const size = Math.min(30, Math.max(15, speed / 2));
+                cursorTrail.style.width = size + 'px';
+                cursorTrail.style.height = size + 'px';
+                
+                requestAnimationFrame(animateCursor);
+            }
+            
+            animateCursor();
+
+            // CTA Button Interaction
+            const ctaButton = document.getElementById('startJourney');
+            ctaButton.addEventListener('click', (event) => {
+                // Create ripple effect
+                const ripple = document.createElement('span');
+                const rect = ctaButton.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+                const x = event.clientX - rect.left - size / 2;
+                const y = event.clientY - rect.top - size / 2;
+                
+                ripple.style.cssText = `
+                    position: absolute;
+                    border-radius: 50%;
+                    background: rgba(255, 255, 255, 0.4);
+                    transform: scale(0);
+                    animation: ripple-animation 0.6s linear;
+                    width: ${size}px;
+                    height: ${size}px;
+                    top: ${y}px;
+                    left: ${x}px;
+                `;
+                
+                ctaButton.appendChild(ripple);
+                
+                // Remove ripple after animation
+                setTimeout(() => {
+                    ripple.remove();
+                }, 600);
+                
+                // Action
+                console.log('Starting journey...');
+                alert('🚀 Welcome to Tzeptosoft! Ready to escape the matrix?');
+                
+                // Optional: Add loading state
+                const originalText = ctaButton.textContent;
+                ctaButton.textContent = 'Loading...';
+                ctaButton.disabled = true;
+                
+                setTimeout(() => {
+                    ctaButton.textContent = originalText;
+                    ctaButton.disabled = false;
+                }, 1500);
+            });
+
+            // Holographic elements interaction
+            document.querySelectorAll('.holo-element').forEach(element => {
+                element.addEventListener('mouseenter', () => {
+                    element.style.animationDuration = '2s';
+                    element.style.opacity = '1';
+                });
+                
+                element.addEventListener('mouseleave', () => {
+                    element.style.animationDuration = '4s';
+                    element.style.opacity = '0.7';
+                });
+            });
+
+            // Dynamic text effect (optional)
+            const subtitles = [
+                "Raw, Unfiltered Wisdom for Warriors to Build Empires and Dominate Life",
+                "For Men & Women Ready to Escape the Matrix",
+                "No Bullshit. No Filter. No Apologies.",
+                "Build Your Legacy. Dominate Your Life."
+            ];
+            
+            let subtitleIndex = 0;
+            const heroSubtitle = document.querySelector('.hero-subtitle');
+            
+            function rotateSubtitle() {
+                subtitleIndex = (subtitleIndex + 1) % subtitles.length;
+                heroSubtitle.style.opacity = '0';
+                
+                setTimeout(() => {
+                    heroSubtitle.textContent = subtitles[subtitleIndex];
+                    heroSubtitle.style.opacity = '1';
+                }, 500);
+            }
+            
+            // Uncomment to enable rotating subtitles
+            // setInterval(rotateSubtitle, 5000);
+
+            // Stats counter animation
+            const statNumbers = document.querySelectorAll('.stat-number');
+            statNumbers.forEach(stat => {
+                const target = parseInt(stat.textContent);
+                let current = 0;
+                const increment = target / 30;
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        current = target;
+                        clearInterval(timer);
+                    }
+                    stat.textContent = Math.floor(current) + (stat.textContent.includes('+') ? '+' : '');
+                }, 50);
+            });
+
+            // Responsive adjustments
+            function handleResize() {
+                const holoElements = document.querySelectorAll('.holo-element');
+                const isMobile = window.innerWidth < 768;
+                
+                holoElements.forEach(el => {
+                    el.style.display = isMobile ? 'none' : 'block';
+                });
+            }
+            
+            window.addEventListener('resize', handleResize);
+            handleResize(); // Initial check
+        });
+    </script>
+</body>
+</html>
