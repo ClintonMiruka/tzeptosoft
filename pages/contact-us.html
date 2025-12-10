@@ -144,7 +144,7 @@
       transition: all 0.1s ease;
     }
 
-    /* HEADER NAVIGATION - From Your Programming Languages Article */
+    /* HEADER NAVIGATION - Updated Header */
     .main-header {
       position: sticky;
       top: 0;
@@ -152,7 +152,24 @@
       background: rgba(11, 15, 26, 0.95);
       backdrop-filter: blur(20px);
       border-bottom: 2px solid transparent;
+      animation: headerSlideIn 0.6s ease-out;
       box-shadow: 0 8px 32px rgba(0, 102, 204, 0.1);
+    }
+
+    @keyframes headerSlideIn {
+      from {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .main-header.scrolled {
+      border-bottom-color: rgba(0, 204, 255, 0.2);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     }
 
     .header-container {
@@ -163,9 +180,9 @@
       align-items: center;
       justify-content: space-between;
       height: 70px;
+      position: relative;
     }
 
-    /* Logo Section */
     .logo-section {
       display: flex;
       align-items: center;
@@ -213,7 +230,6 @@
       margin-top: 2px;
     }
 
-    /* Navigation Section */
     .nav-section {
       display: flex;
     }
@@ -269,7 +285,6 @@
       width: 80%;
     }
 
-    /* Actions Section */
     .actions-section {
       display: flex;
       align-items: center;
@@ -352,7 +367,20 @@
       box-shadow: 0 0 0 3px rgba(0, 204, 255, 0.2);
     }
 
-    /* CTA Button */
+    .search-submit {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: var(--secondary);
+      cursor: pointer;
+      padding: 4px;
+      width: 20px;
+      height: 20px;
+    }
+
     .cta-button {
       display: inline-flex;
       align-items: center;
@@ -401,7 +429,6 @@
       transform: translateX(4px);
     }
 
-    /* Mobile Menu Toggle */
     .mobile-menu-toggle {
       display: none;
       flex-direction: column;
@@ -424,7 +451,6 @@
       transform-origin: center;
     }
 
-    /* Mobile Menu Overlay */
     .mobile-menu-overlay {
       position: fixed;
       top: 0;
@@ -1268,6 +1294,12 @@
         transition: none !important; 
       }
     }
+
+    @media print {
+      .main-header { 
+        display: none; 
+      }
+    }
   </style>
 </head>
 <body>
@@ -1277,9 +1309,10 @@
   <div id="particles"></div>
   <div id="cursor-trail"></div>
 
-  <!-- HEADER WITH YOUR NAVIGATION STYLING -->
+  <!-- UPDATED HEADER -->
   <header class="main-header">
     <div class="header-container">
+      <!-- Logo Section -->
       <div class="logo-section">
         <a href="../index.html" class="logo-wrapper" aria-label="Tzeptosoft Home">
           <img src="/assets/images/tzeptosoft-logo.webp" alt="Tzeptosoft Logo" class="logo-image" width="48" height="48" loading="lazy">
@@ -1290,27 +1323,30 @@
         </a>
       </div>
 
+      <!-- Navigation -->
       <nav class="nav-section" role="navigation" aria-label="Main navigation">
         <ul class="nav-list">
           <li class="nav-item">
             <a href="../index.html" class="nav-link" data-page="home">Home</a>
           </li>
           <li class="nav-item">
-            <a href="/pages/blog" class="nav-link" data-page="blog">War Archives</a>
+            <a href="pages/blog.html" class="nav-link" data-page="blog">Blog Archives</a>
           </li>
           <li class="nav-item">
-            <a href="/pages/lessons" class="nav-link" data-page="lessons">Weaponry</a>
+            <a href="/lessons" class="nav-link" data-page="lessons">Tzeptosoft Products</a>
           </li>
           <li class="nav-item">
-            <a href="/pagespages/contact-us.html" class="nav-link active" data-page="contact">Command Center</a>
+            <a href="/pages/contact-us.html" class="nav-link active" data-page="contact">Contact Us</a>
           </li>
           <li class="nav-item">
-            <a href="/pages/about" class="nav-link" data-page="about">Genesis Protocol</a>
+            <a href="/about" class="nav-link" data-page="about">About</a>
           </li>
         </ul>
       </nav>
 
+      <!-- Action Buttons & Search -->
       <div class="actions-section">
+        <!-- Search -->
         <div class="search-container">
           <button class="search-toggle" aria-label="Toggle search" aria-expanded="false" id="searchToggle">
             <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1319,7 +1355,7 @@
             </svg>
           </button>
           <div class="search-box" id="searchBox">
-            <input type="search" placeholder="Search blueprints..." class="search-input" aria-label="Search content">
+            <input type="search" placeholder="Search wisdom, tactics, blueprints..." class="search-input" aria-label="Search content">
             <button class="search-submit" aria-label="Search">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <circle cx="11" cy="11" r="8"></circle>
@@ -1329,13 +1365,15 @@
           </div>
         </div>
 
-        <a href="mailto:tzeptosoft@gmail.com" class="cta-button" aria-label="Direct Comms">
-          <span class="button-text">Direct Comms</span>
+        <!-- CTA Button -->
+        <a href="mailto:tzeptosoft@gmail.com" class="cta-button" aria-label="Join Tzeptosoft">
+          <span class="button-text">Join Tzeptosoft</span>
           <svg class="button-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M5 12h14M12 5l7 7-7 7"></path>
           </svg>
         </a>
 
+        <!-- Mobile Menu Toggle -->
         <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false" id="mobileMenuToggle">
           <span class="hamburger-line"></span>
           <span class="hamburger-line"></span>
@@ -1344,7 +1382,7 @@
       </div>
     </div>
 
-    <!-- Mobile Menu -->
+    <!-- Mobile Menu Overlay -->
     <div class="mobile-menu-overlay" id="mobileMenuOverlay">
       <div class="mobile-menu">
         <div class="mobile-menu-header">
@@ -1361,13 +1399,13 @@
         </div>
         <nav class="mobile-nav">
           <a href="../index.html" class="mobile-nav-link">Home</a>
-          <a href="/pages/blog" class="mobile-nav-link">War Archives</a>
-          <a href="/pages/lessons" class="mobile-nav-link">Weaponry</a>
-          <a href="/pagespages/contact-us.html" class="mobile-nav-link active">Command Center</a>
-          <a href="/pages/about" class="mobile-nav-link">Genesis Protocol</a>
+          <a href="pages/blog.html" class="mobile-nav-link">Blog Archives</a>
+          <a href="/lessons" class="mobile-nav-link">Tzeptosoft Products</a>
+          <a href="pages/contact-us.html" class="mobile-nav-link active">Contact Us</a>
+          <a href="/about" class="mobile-nav-link">About</a>
         </nav>
         <div class="mobile-actions">
-          <a href="mailto:tzeptosoft@gmail.com" class="mobile-cta-button">Direct Comms ⚔️</a>
+          <a href="mailto:tzeptosoft@gmail.com" class="mobile-cta-button">Join Tzeptosoft 🚀</a>
         </div>
       </div>
     </div>
@@ -2077,21 +2115,25 @@
         });
       }
 
-      // Mobile Menu Functionality
+      // Header Functionality
       const mobileMenuToggle = document.getElementById('mobileMenuToggle');
       const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
       const mobileMenuClose = document.getElementById('mobileMenuClose');
-      
+      const searchToggle = document.getElementById('searchToggle');
+      const searchBox = document.getElementById('searchBox');
+      const searchInput = document.querySelector('.search-input');
+
+      // Mobile Menu Toggle
       mobileMenuToggle?.addEventListener('click', () => {
         mobileMenuOverlay?.classList.toggle('active');
         document.body.style.overflow = mobileMenuOverlay?.classList.contains('active') ? 'hidden' : '';
       });
-      
+
       mobileMenuClose?.addEventListener('click', () => {
         mobileMenuOverlay?.classList.remove('active');
         document.body.style.overflow = '';
       });
-      
+
       mobileMenuOverlay?.addEventListener('click', (e) => {
         if (e.target === mobileMenuOverlay) {
           mobileMenuOverlay.classList.remove('active');
@@ -2099,22 +2141,17 @@
         }
       });
 
-      // Search Functionality
-      const searchToggle = document.getElementById('searchToggle');
-      const searchBox = document.getElementById('searchBox');
-      const searchInput = document.querySelector('.search-input');
-      
+      // Search Toggle
       searchToggle?.addEventListener('click', () => {
         const isActive = searchBox?.classList.contains('active');
         searchBox?.classList.toggle('active');
         searchToggle?.setAttribute('aria-expanded', !isActive);
         if (!isActive && searchInput) {
           searchInput.focus();
-          searchInput.value = '';
         }
       });
 
-      // Close search on escape
+      // Close search and mobile menu on escape
       document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
           searchBox?.classList.remove('active');
@@ -2123,6 +2160,62 @@
           document.body.style.overflow = '';
         }
       });
+
+      // Search functionality
+      const searchForm = document.querySelector('.search-box');
+      searchForm?.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const query = searchInput?.value.trim();
+        if (query) {
+          console.log('Searching for:', query);
+          // Implement your search logic here
+        }
+      });
+
+      // Header scroll effect
+      let lastScrollY = window.scrollY;
+      window.addEventListener('scroll', () => {
+        const header = document.querySelector('.main-header');
+        const currentScrollY = window.scrollY;
+
+        if (currentScrollY > 100) {
+          header?.classList.add('scrolled');
+        } else {
+          header?.classList.remove('scrolled');
+        }
+
+        lastScrollY = currentScrollY;
+      });
+
+      // Set active navigation link based on current page
+      function setActiveNavLink() {
+        const currentPage = window.location.pathname;
+        const navLinks = document.querySelectorAll('.nav-link');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+        
+        navLinks.forEach(link => {
+          const linkPage = link.getAttribute('data-page');
+          if (currentPage.includes(linkPage) || 
+              (currentPage === '/' && linkPage === 'home')) {
+            link.classList.add('active');
+          } else {
+            link.classList.remove('active');
+          }
+        });
+
+        mobileNavLinks.forEach(link => {
+          const linkPage = link.getAttribute('href');
+          if (currentPage === linkPage || 
+              (currentPage === '/' && linkPage === '/')) {
+            link.classList.add('active');
+          } else {
+            link.classList.remove('active');
+          }
+        });
+      }
+
+      // Initialize active link
+      setActiveNavLink();
 
       // Tab Functionality
       const tabs = document.querySelectorAll('.comms-tab');
@@ -2273,22 +2366,6 @@
           });
         });
       });
-
-      // Scroll Header Effect
-      window.addEventListener('scroll', () => {
-        const header = document.querySelector('.main-header');
-        const currentScrollY = window.scrollY;
-        if (currentScrollY > 100) {
-          header?.classList.add('scrolled');
-        } else {
-          header?.classList.remove('scrolled');
-        }
-      });
-
-      // Initialize header with scrolled class if needed
-      if (window.scrollY > 100) {
-        document.querySelector('.main-header')?.classList.add('scrolled');
-      }
 
       // Strategic Console Message
       console.log(`
