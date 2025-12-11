@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-/**
+/ 
  * TZEPTOSOFT BUILD SCRIPT
  * ⚔️ No bullshit, just building empires
  * 
@@ -432,7 +432,7 @@ const generateReadme = () => {
     
     const readme = `# TZEPTOSOFT — ESCAPE THE MATRIX ⚔️🔥
 
-> **No bullshit. No sugar-coating. No apologies.**  
+>  No bullshit. No sugar-coating. No apologies.   
 > Built with the Tzeptosoft Build System - Raw HTML/CSS/JS that fucking works.
 
 ## 🚀 QUICK START
@@ -486,10 +486,10 @@ node scripts/build.js --help
 
 ## 📊 STATS
 
-- **Articles**: ${articles.length}
-- **Categories**: men, women, freedom, wisdom, dating, career
-- **Last Build**: ${utils.formatDate()}
-- **Deployment**: ${CONFIG.deployToNetlify ? 'Netlify' : CONFIG.deployToVercel ? 'Vercel' : 'Manual'}
+-  Articles : ${articles.length}
+-  Categories : men, women, freedom, wisdom, dating, career
+-  Last Build : ${utils.formatDate()}
+-  Deployment : ${CONFIG.deployToNetlify ? 'Netlify' : CONFIG.deployToVercel ? 'Vercel' : 'Manual'}
 
 ## ⚡ PERFORMANCE
 
@@ -502,17 +502,17 @@ node scripts/build.js --help
 
 ## 🚨 NO BULLSHIT RULES
 
-1. **No frameworks** - Vanilla JS only
-2. **No external dependencies** - Everything inline
-3. **No trackers** - Respect your visitors
-4. **No bloat** - Keep it fast
-5. **No apologies** - Speak truth
+1.  No frameworks  - Vanilla JS only
+2.  No external dependencies  - Everything inline
+3.  No trackers  - Respect your visitors
+4.  No bloat  - Keep it fast
+5.  No apologies  - Speak truth
 
 ---
 
-**Built with the Tzeptosoft Build System**  
-**Last updated: ${utils.formatDate()}**  
-**No bullshit, just results.** 🔥
+ Built with the Tzeptosoft Build System   
+ Last updated: ${utils.formatDate()}   
+ No bullshit, just results.  🔥
 `;
 
     utils.writeFile('README.md', readme);
