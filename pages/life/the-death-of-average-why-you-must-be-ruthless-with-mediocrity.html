@@ -53,6 +53,457 @@
       --text-dark: #FFFFFF;
       --matrix-green: #00FF00;
     }
+
+    /* Header Styles */
+    .main-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(11, 15, 26, 0.95);
+      backdrop-filter: blur(20px);
+      border-bottom: 2px solid transparent;
+      animation: headerSlideIn 0.6s ease-out;
+      box-shadow: 0 8px 32px rgba(0, 102, 204, 0.1);
+    }
+
+    @keyframes headerSlideIn {
+      from {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .main-header.scrolled {
+      border-bottom-color: rgba(0, 204, 255, 0.2);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 70px;
+      position: relative;
+    }
+
+    .logo-section {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .logo-wrapper:hover {
+      transform: scale(1.05);
+    }
+
+    .logo-image {
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(0, 204, 255, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    .logo-primary {
+      font-size: 1.4em;
+      font-weight: 900;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-shadow: 0 0 10px rgba(0, 102, 204, 0.5);
+    }
+
+    .logo-subtitle {
+      font-size: 0.75em;
+      color: var(--secondary);
+      font-weight: 600;
+      opacity: 0.8;
+      margin-top: 2px;
+    }
+
+    .nav-section {
+      display: flex;
+    }
+
+    .nav-list {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .nav-item {
+      position: relative;
+    }
+
+    .nav-link {
+      display: block;
+      padding: 8px 16px;
+      color: var(--text-dark);
+      text-decoration: none;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 0.95em;
+      position: relative;
+      transition: all 0.3s ease;
+      border-radius: 6px;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--secondary);
+      background: rgba(0, 204, 255, 0.1);
+      box-shadow: 0 0 20px rgba(0, 204, 255, 0.2);
+      transform: translateY(-2px);
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 80%;
+    }
+
+    .actions-section {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .search-container {
+      position: relative;
+    }
+
+    .search-toggle {
+      background: none;
+      border: 2px solid rgba(0, 204, 255, 0.3);
+      border-radius: 8px;
+      padding: 8px;
+      color: var(--secondary);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .search-toggle:hover {
+      border-color: var(--secondary);
+      box-shadow: 0 0 20px rgba(0, 204, 255, 0.4);
+      transform: scale(1.05);
+    }
+
+    .search-icon {
+      width: 20px;
+      height: 20px;
+    }
+
+    .search-box {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 300px;
+      background: rgba(28, 28, 28, 0.95);
+      border: 2px solid var(--secondary);
+      border-radius: 8px;
+      padding: 12px;
+      margin-top: 8px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 40px rgba(0, 102, 204, 0.2);
+      z-index: 1001;
+    }
+
+    .search-box.active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .search-input {
+      width: 100%;
+      background: rgba(18, 18, 18, 0.8);
+      border: 1px solid rgba(0, 204, 255, 0.3);
+      border-radius: 6px;
+      padding: 10px 12px;
+      color: var(--text-dark);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.9em;
+    }
+
+    .search-input::placeholder {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .search-input:focus {
+      outline: none;
+      border-color: var(--secondary);
+      box-shadow: 0 0 0 3px rgba(0, 204, 255, 0.2);
+    }
+
+    .search-submit {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: var(--secondary);
+      cursor: pointer;
+      padding: 4px;
+      width: 20px;
+      height: 20px;
+    }
+
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: var(--accent);
+      text-decoration: none;
+      border-radius: 8px;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 600;
+      font-size: 0.9em;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(0, 102, 204, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: left 0.5s;
+    }
+
+    .cta-button:hover::before {
+      left: 100%;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(0, 102, 204, 0.4);
+    }
+
+    .button-icon {
+      width: 16px;
+      height: 16px;
+      transition: transform 0.3s ease;
+    }
+
+    .cta-button:hover .button-icon {
+      transform: translateX(4px);
+    }
+
+    .mobile-menu-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 30px;
+      height: 30px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+      z-index: 1001;
+    }
+
+    .hamburger-line {
+      width: 100%;
+      height: 3px;
+      background: var(--secondary);
+      border-radius: 2px;
+      transition: all 0.3s ease;
+      transform-origin: center;
+    }
+
+    .mobile-menu-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: rgba(11, 15, 26, 0.98);
+      backdrop-filter: blur(20px);
+      z-index: 999;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.4s ease;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .mobile-menu-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .mobile-menu {
+      width: 320px;
+      max-width: 90vw;
+      background: linear-gradient(135deg, rgba(18, 18, 18, 0.95), rgba(11, 15, 26, 0.95));
+      border-left: 3px solid var(--secondary);
+      padding: 0;
+      transform: translateX(100%);
+      transition: transform 0.4s ease;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+    }
+
+    .mobile-menu-overlay.active .mobile-menu {
+      transform: translateX(0);
+    }
+
+    .mobile-menu-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 20px;
+      border-bottom: 1px solid rgba(0, 204, 255, 0.2);
+    }
+
+    .mobile-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-dark);
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.2em;
+    }
+
+    .mobile-menu-close {
+      background: none;
+      border: none;
+      color: var(--secondary);
+      cursor: pointer;
+      padding: 8px;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .mobile-menu-close:hover {
+      background: rgba(0, 204, 255, 0.1);
+      box-shadow: 0 0 20px rgba(0, 204, 255, 0.2);
+    }
+
+    .mobile-nav {
+      padding: 20px 0;
+      flex: 1;
+    }
+
+    .mobile-nav-link {
+      display: block;
+      padding: 16px 24px;
+      color: var(--text-dark);
+      text-decoration: none;
+      font-family: 'Inter', sans-serif;
+      font-size: 1.1em;
+      font-weight: 500;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .mobile-nav-link::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 0;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      transition: width 0.3s ease;
+      z-index: -1;
+    }
+
+    .mobile-nav-link:hover::before,
+    .mobile-nav-link.active::before {
+      width: 100%;
+    }
+
+    .mobile-nav-link:hover,
+    .mobile-nav-link.active {
+      color: var(--accent);
+      padding-left: 32px;
+    }
+
+    .mobile-actions {
+      padding: 20px 24px;
+      border-top: 1px solid rgba(0, 204, 255, 0.2);
+    }
+
+    .mobile-cta-button {
+      display: inline-block;
+      width: 100%;
+      padding: 16px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: var(--accent);
+      text-decoration: none;
+      border-radius: 8px;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 600;
+      text-align: center;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(0, 102, 204, 0.3);
+    }
+
+    .mobile-cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(0, 102, 204, 0.4);
+    }
+
     body {
       margin: 0;
       padding: 0;
@@ -62,6 +513,11 @@
       line-height: 1.6;
       overflow-x: hidden;
     }
+
+    .main-content {
+      position: relative;
+    }
+
     #preloader {
       position: fixed;
       top: 0;
@@ -74,15 +530,18 @@
       justify-content: center;
       z-index: 9999;
     }
+
     .loader {
       font-family: 'JetBrains Mono', monospace;
       color: var(--secondary);
       font-size: 1.5em;
       animation: blinkCaret 0.5s step-end infinite;
     }
+
     @keyframes blinkCaret {
       50% { border-color: transparent; }
     }
+
     #galaxy-bg {
       position: fixed;
       top: 0;
@@ -93,10 +552,12 @@
       z-index: -3;
       animation: rotateGalaxy 60s infinite linear;
     }
+
     @keyframes rotateGalaxy {
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
     }
+
     #matrix-bg {
       position: fixed;
       top: 0;
@@ -106,6 +567,7 @@
       z-index: -2;
       opacity: 0.7;
     }
+
     .matrix-char {
       position: absolute;
       font-family: 'JetBrains Mono', monospace;
@@ -114,10 +576,12 @@
       opacity: 0.8;
       animation: matrix-fall 5s linear infinite;
     }
+
     @keyframes matrix-fall {
       0% { transform: translateY(-100vh); opacity: 0.8; }
       100% { transform: translateY(100vh); opacity: 0; }
     }
+
     #particles {
       position: fixed;
       top: 0;
@@ -126,6 +590,7 @@
       height: 100%;
       z-index: -1;
     }
+
     .particle {
       position: absolute;
       width: 5px;
@@ -134,11 +599,13 @@
       border-radius: 50%;
       animation: drift 10s infinite linear;
     }
+
     @keyframes drift {
       0% { transform: translate(0, 0); opacity: 0.5; }
       50% { opacity: 1; }
       100% { transform: translate(100px, 100px); opacity: 0.5; }
     }
+
     #cursor-trail {
       position: fixed;
       width: 30px;
@@ -146,16 +613,19 @@
       background: radial-gradient(circle, var(--secondary), transparent);
       border-radius: 50%;
       pointer-events: none;
-      z-index: 1000;
+      z-index: 100;
       transition: all 0.1s ease;
     }
+
     .hero {
       text-align: center;
-      padding: 100px 20px;
+      padding: 120px 20px 100px;
       background: rgba(18, 18, 18, 0.9);
       position: relative;
       z-index: 1;
+      margin-top: 0;
     }
+
     .hero h1 {
       font-size: 5em;
       font-family: 'Orbitron', sans-serif;
@@ -166,6 +636,7 @@
       animation: gradientShift 3s ease infinite;
       margin-bottom: 0;
     }
+
     .matrix-animation {
       font-family: 'JetBrains Mono', monospace;
       font-size: 1.5em;
@@ -176,29 +647,35 @@
       white-space: nowrap;
       display: inline-block;
     }
+
     .matrix-animation.typing {
       animation: typeMatrix 2s steps(20) forwards, glitch 0.1s infinite alternate;
     }
+
     @keyframes typeMatrix {
       from { width: 0; }
       to { width: 100%; }
     }
+
     @keyframes glitch {
       0% { transform: translate(0); opacity: 1; }
       50% { transform: translate(2px, -2px); opacity: 0.8; }
       100% { transform: translate(-2px, 2px); opacity: 0.9; }
     }
+
     @keyframes gradientShift {
       0% { background-position: 0%; }
       50% { background-position: 100%; }
       100% { background-position: 0%; }
     }
+
     .hero h2 {
       font-size: 1.8em;
       color: var(--secondary);
       text-shadow: 0 0 10px var(--secondary);
       margin-top: 20px;
     }
+
     .btn-cta {
       background: linear-gradient(90deg, var(--primary), var(--secondary));
       color: var(--accent);
@@ -209,16 +686,20 @@
       box-shadow: 0 0 20px var(--primary);
       animation: pulse 2s infinite;
       margin-top: 20px;
+      display: inline-block;
     }
+
     .btn-cta:hover {
       background: linear-gradient(90deg, var(--secondary), var(--primary));
       transform: scale(1.1);
     }
+
     @keyframes pulse {
       0% { box-shadow: 0 0 0 0 rgba(0, 102, 204, 0.4); }
       70% { box-shadow: 0 0 0 10px rgba(0, 102, 204, 0); }
       100% { box-shadow: 0 0 0 0 rgba(0, 102, 204, 0); }
     }
+
     .holo-element {
       position: absolute;
       width: 70px;
@@ -227,44 +708,65 @@
       border-radius: 50%;
       animation: float 4s infinite ease-in-out;
     }
+
     @keyframes float {
       0% { transform: translateY(0); opacity: 0.5; }
       50% { transform: translateY(-30px); opacity: 1; }
       100% { transform: translateY(0); opacity: 0.5; }
     }
+
     .blog-container {
       padding: 80px 20px;
-      max-width: 800px;
+      max-width: 900px;
       margin: 0 auto;
       background: rgba(18, 18, 18, 0.9);
       border: 3px solid var(--secondary);
       animation: borderGlow 2s infinite;
     }
+
     @keyframes borderGlow {
       0% { border-color: var(--primary); }
       50% { border-color: var(--secondary); }
       100% { border-color: var(--primary); }
     }
+
     .blog-container h1 {
       font-size: 2.5em;
       color: var(--secondary);
       text-shadow: 0 0 15px var(--secondary);
       font-family: 'Orbitron', sans-serif;
+      text-align: center;
     }
+
     .blog-container h2 {
       font-size: 1.8em;
       color: var(--secondary);
       font-family: 'Orbitron', sans-serif;
       margin-top: 2em;
     }
+
+    .blog-container h3 {
+      font-size: 1.4em;
+      color: var(--secondary);
+      font-family: 'Orbitron', sans-serif;
+      margin-top: 1.5em;
+    }
+
     .blog-container p {
       color: var(--text-dark);
       font-size: 1.2em;
     }
+
+    .highlight {
+      color: var(--secondary);
+      font-weight: 600;
+    }
+
     .blog-container ul {
       list-style: none;
       padding: 0;
     }
+
     .blog-container li {
       background: #1C1C1C;
       padding: 15px;
@@ -272,10 +774,12 @@
       margin-bottom: 15px;
       transition: transform 0.3s ease;
     }
+
     .blog-container li:hover {
       transform: translateY(-10px);
       box-shadow: 0 0 40px var(--secondary);
     }
+
     .blog-container blockquote {
       font-family: 'JetBrains Mono', monospace;
       color: var(--secondary);
@@ -284,48 +788,44 @@
       margin: 20px 0;
       font-style: italic;
     }
+
     .author-info {
       margin: 20px 0;
       text-align: center;
     }
+
     .author-name {
       font-family: 'JetBrains Mono', monospace;
       color: var(--secondary);
       font-size: 1.2em;
     }
+
     .author-title {
       color: var(--text-dark);
       font-size: 1em;
     }
+
     .author-logo {
       max-width: 100px;
       height: auto;
     }
+
     hr {
       border: 1px solid var(--secondary);
       margin: 20px 0;
     }
+
     .cta-container {
       text-align: center;
       margin: 20px 0;
     }
+
     .cta-title {
       font-family: 'Orbitron', sans-serif;
       color: var(--secondary);
       font-size: 1.8em;
     }
-    .cta-button {
-      background: linear-gradient(90deg, var(--primary), var(--secondary));
-      color: var(--accent);
-      padding: 10px 20px;
-      text-decoration: none;
-      border-radius: 4px;
-      font-family: 'JetBrains Mono', monospace;
-    }
-    .cta-button:hover {
-      background: linear-gradient(90deg, var(--secondary), var(--primary));
-      transform: scale(1.05);
-    }
+
     .newsletter-container {
       text-align: center;
       margin: 40px 0;
@@ -334,16 +834,19 @@
       border: 2px solid var(--secondary);
       border-radius: 4px;
     }
+
     .newsletter-container h3 {
       font-family: 'Orbitron', sans-serif;
       color: var(--secondary);
       font-size: 1.8em;
       margin-bottom: 10px;
     }
+
     .newsletter-container p {
       font-size: 1.2em;
       margin-bottom: 20px;
     }
+
     .newsletter-container input[type="email"] {
       padding: 10px;
       width: 70%;
@@ -354,6 +857,7 @@
       font-family: 'JetBrains Mono', monospace;
       border-radius: 4px;
     }
+
     .newsletter-container button {
       padding: 10px 20px;
       background: linear-gradient(90deg, var(--primary), var(--secondary));
@@ -363,19 +867,24 @@
       font-family: 'JetBrains Mono', monospace;
       cursor: pointer;
     }
+
     .newsletter-container button:hover {
       background: linear-gradient(90deg, var(--secondary), var(--primary));
       transform: scale(1.05);
     }
+
     .social-share {
       margin: 2rem 0;
       text-align: center;
     }
+
     .social-share h3 {
       font-family: 'Orbitron', sans-serif;
       color: var(--secondary);
+      font-size: 1.8em;
       margin-bottom: 10px;
     }
+
     .social-share a {
       margin: 0 10px;
       padding: 10px 20px;
@@ -385,10 +894,12 @@
       text-decoration: none;
       font-family: 'JetBrains Mono', monospace;
     }
+
     .social-share a:hover {
       background: var(--secondary);
       color: #000;
     }
+
     .terminal-content {
       background: #1a1a1a;
       padding: 20px;
@@ -399,34 +910,29 @@
       color: var(--secondary);
       font-size: 1em;
     }
+
     .terminal-line {
       opacity: 0;
       white-space: nowrap;
       overflow: hidden;
     }
+
     .terminal-line.typed {
       opacity: 1;
       animation: typing 0.5s steps(40) forwards;
     }
+
     @keyframes typing {
       from { width: 0; }
       to { width: 100%; }
     }
+
     footer {
       text-align: center;
       padding: 40px 20px;
       border-top: 1px solid #1E1E2E;
     }
-    .social-links {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 10px;
-    }
-    .social-links img {
-      width: 24px;
-      height: 24px;
-    }
+
     .signature {
       font-family: 'JetBrains Mono', monospace;
       color: var(--secondary);
@@ -434,162 +940,412 @@
       margin-top: 20px;
       text-align: center;
     }
+
+    @media (max-width: 1024px) {
+      .nav-list {
+        gap: 20px;
+      }
+      
+      .nav-link {
+        padding: 6px 12px;
+        font-size: 0.9em;
+      }
+    }
+
     @media (max-width: 768px) {
-      .hero h1 { font-size: 3em; }
-      .matrix-animation { font-size: 1.2em; }
-      .blog-container { padding: 40px 10px; }
-      .hero { padding: 60px 10px; }
-      .newsletter-container input[type="email"] { width: 90%; }
+      .header-container {
+        height: 60px;
+        padding: 0 16px;
+      }
+      
+      .nav-section {
+        display: none;
+      }
+      
+      .mobile-menu-toggle {
+        display: flex;
+      }
+      
+      .search-box {
+        width: 280px;
+        right: -20px;
+      }
+      
+      .logo-primary {
+        font-size: 1.2em;
+      }
+
+      .hero {
+        padding: 100px 10px 80px;
+      }
+
+      .hero h1 { 
+        font-size: 3em; 
+      }
+
+      .matrix-animation { 
+        font-size: 1.2em; 
+      }
+
+      .blog-container { 
+        padding: 40px 10px; 
+      }
+
+      .blog-container h1 { 
+        font-size: 1.8em; 
+      }
+
+      .terminal-content { 
+        font-size: 0.9em; 
+      }
+
+      .newsletter-container input[type="email"] { 
+        width: 90%; 
+      }
     }
+
     @media (max-width: 480px) {
-      .hero h1 { font-size: 2em; }
-      .matrix-animation { font-size: 1em; }
-      .hero h2 { font-size: 1.2em; }
-      .btn-cta { font-size: 1em; padding: 10px 20px; }
-      .blog-container h1 { font-size: 1.8em; }
-      .terminal-content { font-size: 0.9em; }
+      .header-container {
+        height: 56px;
+        padding: 0 12px;
+      }
+      
+      .search-box {
+        width: calc(100vw - 40px);
+        right: auto;
+        left: 12px;
+      }
+      
+      .cta-button {
+        padding: 10px 20px;
+        font-size: 0.85em;
+      }
+      
+      .mobile-menu {
+        width: 100vw;
+        max-width: none;
+      }
+
+      .hero h1 { 
+        font-size: 2em; 
+      }
+
+      .matrix-animation { 
+        font-size: 1em; 
+      }
+
+      .hero h2 { 
+        font-size: 1.2em; 
+      }
+
+      .btn-cta { 
+        font-size: 1em; 
+        padding: 10px 20px; 
+      }
+
+      .blog-container h1 { 
+        font-size: 1.8em; 
+      }
+
+      .terminal-content { 
+        font-size: 0.9em; 
+      }
+
+      .newsletter-container input[type="email"] { 
+        width: 90%; 
+      }
     }
+
     @media (prefers-reduced-motion: reduce) {
-      * { animation: none !important; transition: none !important; }
-    }
-    @media print {
-      body { background: white; color: black; }
-      .blog-container { background: white; border: none; }
-      a { color: var(--primary); text-decoration: underline; }
-      .btn-cta, .cta-button { background: white; color: var(--primary); border: 1px solid var(--primary); }
-      #galaxy-bg, #matrix-bg, #particles, #cursor-trail, .holo-element, .matrix-animation { display: none; }
+      * { 
+        animation: none !important; 
+        transition: none !important; 
+      }
     }
   </style>
 </head>
-<body>
+<body data-page="death-of-average">
   <div id="preloader">
-    <div class="loader"></div>
+    <div class="loader">Initializing Tzeptosoft... 🚀</div>
   </div>
-  <div id="galaxy-bg"></div>
-  <div id="matrix-bg"></div>
-  <div id="particles"></div>
-  <div id="cursor-trail"></div>
-  <div class="hero">
-    <h1>TZEPTOSOFT</h1>
-    <div class="matrix-animation">KILLING MEDIOCRITY</div>
-    <h2>The Death of Average: Why You Must Be Ruthless With Mediocrity ⚡</h2>
-    <a href="mailto:tzeptosoft@gmail.com" class="btn-cta" aria-label="Contact Tzeptosoft">Get in Touch</a>
-    <div class="holo-element" style="top: 20%; left: 10%;"></div>
-    <div class="holo-element" style="top: 30%; right: 15%;"></div>
-    <div class="holo-element" style="bottom: 25%; left: 20%;"></div>
-    <div class="holo-element" style="bottom: 15%; right: 10%;"></div>
-  </div>
-  <div class="blog-container">
-    <header>
-      <h1>The Death of Average: Why You Must Be Ruthless With Mediocrity ⚡</h1>
-      <div class="author-info">
-        <p class="author-name">Clinton | Tzeptosoft</p>
-        <img src="/assets/images/tzeptosoft-logo.webp" alt="Tzeptosoft Logo" class="author-logo" width="150" height="150" loading="lazy">
-        <p class="author-title">Architect of Relentless Boldness</p>
+
+  <!-- Professional Header -->
+  <header class="main-header">
+    <div class="header-container">
+      <!-- Logo Section -->
+      <div class="logo-section">
+        <a href="../index.html" class="logo-wrapper" aria-label="Tzeptosoft Home">
+          <img src="/assets/images/tzeptosoft-logo.webp" alt="Tzeptosoft Logo" class="logo-image" width="48" height="48" loading="lazy">
+          <div class="logo-text">
+            <span class="logo-primary">TZEPTOSOFT</span>
+            <span class="logo-subtitle">Escaping the Matrix</span>
+          </div>
+        </a>
       </div>
-      <hr>
-    </header>
-    <div class="cta-container">
-      <h3 class="cta-title">Ready to Kill Mediocrity?</h3>
-      <a href="#contact" class="cta-button">Join the CodeForge</a>
-    </div>
-    <div class="content">
-      <h2>Average Is a Death Sentence</h2>
-      <p><strong>If you should learn anything from Tzeptosoft let it be:HATE AVARAGE POEPLE!-Avarage poeple watch porn,are addicted to TikTok prank videos,Instagram reels,gamble with little money they have access to,fall for "get-rich-quick scams",are Overweight, hate Tzeptosoft for spreading the HarshTruth....the list is long. Mediocrity is a fucking guillotine.</strong> It’s not just a lack of success—it’s the slow, deliberate execution of your potential, your fire, your goddamn destiny. You weren’t born to be a pussy who settles for “good enough.” You were born to dominate, to rip greatness from the jaws of a world that wants you docile, weak, and average. Mediocrity is why you’re stuck—same soul-sucking job, same flabby gut, same forgettable life. A  psychology study found 84% of men feel their potential rotting by 35 because they swallowed the lie that “average is okay.” That’s not you. You’re a fucking king, built for empires. So why the hell are you still sitting there, letting a weak-ass life choke you out?</p>
-      <p>Mediocrity is betrayal. Every day you accept “okay,” you’re stabbing the warrior inside you in the heart. You’re not just wasting time—you’re torching your legacy. That business you dreamed of at 20? It’s not gone—it’s buried under a pile of pussy excuses and half-assed effort. A regret study showed 81% of men over 40 say their deepest pain is settling for average. You think you’ve got time to “figure it out”? You fucking don’t. The clock’s mocking your indecision, ticking down to a life of regret. Every second you stay average, you’re carving your own tombstone. Kill mediocrity now, or it’ll bury you alive.</p>
-      <p>Look around. The world doesn’t reward the timid—it rewards the ruthless. The guy who launched that startup while you were “planning”? He’s banking $3M a year. The dude who hit the gym while you were “too tired”? He’s got a body that commands awe. The man who spoke up while you stayed silent? He’s leading tribes, building empires. A recent success study found men who reject average outperform settlers by 58% in wealth, health, and influence. Mediocrity isn’t neutral—it’s a vampire, draining your money, your strength, your fucking soul. Stop being a pussy. Annihilate average. Forge your path.</p>
-      <p><strong>Case Study 1: Jake vs. Mike</strong></p>
-      <p>Jake, 28, bought the average lie hook, line, and sinker. He had a “decent” job, a “fine” apartment, a “whatever” life. He told himself, “I’ll start that business later. I’ll get in shape next year.” He played it safe, avoided risks, and stayed comfortable. By 35, Jake’s still in the same cubicle, 40 pounds heavier, scrolling X, bitter as fuck. His net worth? $8K. His legacy? Nonexistent. Then there’s Mike, same age, same start. Mike said, “Fuck average.” He started a side hustle, lifted weights, networked like a beast. He failed, learned, iterated. By 35, Mike’s running a $12K/month SaaS, shredded, married to a queen. A  case study showed men like Mike—action-takers—build 62% more wealth and report 48% higher life satisfaction. Jake’s average. Mike’s elite. Which one are you?</p>
-      <p><strong>Case Study 2: Tom vs. Alex</strong></p>
-      <p>Tom, 30, was the poster boy for mediocrity. He had a “stable” job, a Netflix addiction, and a routine that screamed “I’m fine.” He thought, “Why risk it? I’m good.” By 38, Tom’s stuck in middle management, divorced, with a dad bod he loathes. His life’s “fine,” but he’s dead inside. Contrast with Alex, who spat on comfort. Alex quit his “safe” job, launched a fitness brand, trained like a Spartan. By 38, Alex’s brand pulls $18K/month, his body’s a weapon, and he’s got a loyal tribe. A recent business study showed men like Alex—mediocrity-killers—earn 55% more and live 22% longer. Tom’s trapped. Alex is free. Choose.</p>
-      <p><strong>Case Study 3: Sarah vs. Lisa</strong></p>
-      <p>Sarah, 27, was “okay” with her life. She had a “good” marketing job, a “decent” social life, and a “fine” body. She told herself, “I’ll chase my dreams later.” By 34, Sarah’s still in the same role, single, and regretting every “safe” choice. Her net worth? $15K. Her impact? Zero. Then there’s Lisa, same start. Lisa said, “I’m not average.” She started a blog, built a personal brand, and ran marathons. By 34, Lisa’s blog earns $10K/month, she’s engaged, and she’s a role model. A recent success study showed women like Lisa—those who reject average—outshine peers by 60% in income and influence. Sarah’s average. Lisa’s elite. Stop settling.</p>
-      <p><strong>Historical Example: Genghis Khan</strong></p>
-      <p>Genghis Khan wasn’t born a conqueror—he was a nobody, a kid from a nomadic tribe. But he refused average. He didn’t sit around, whining about his “hard life.” He united tribes, built an empire, and reshaped the world. By his death, his empire spanned millions of square miles. A recent historical study showed his rejection of tribal mediocrity yielded 70% more impact than his peers. Genghis didn’t wait for permission. He took it. Why the fuck are you waiting?</p>
-      <p><strong>Modern Example: Dwayne Johnson</strong></p>
-      <p>Dwayne “The Rock” Johnson started as a failed football player with $7 in his pocket. He could’ve settled—got a “normal” job, lived a “fine” life. Instead, he said, “Fuck average.” He grinded in wrestling, then Hollywood, then business. Today, he’s worth $800M, with a body that’s a billboard for discipline. A recent business study showed his relentless work ethic yielded 65% higher returns than peers. The Rock killed mediocrity. You can too.</p>
-      <p><strong>10-Step Daily Ritual to Kill Mediocrity</strong></p>
-      <ul>
-        <li><strong>Wake at 4:30 a.m.:</strong> No snooze. Start with a win. Early risers outperform lazy asses by 50%.</li>
-        <li><strong>Define Your Elite Vision:</strong> Write one goal—$5M net worth, 8% body fat, a legacy. Clarity boosts success by 45% .</li>
-        <li><strong>Do One Hard Thing:</strong> Cold email a client, lift 400 pounds, have that tough talk,Join the Tzeptosoft no-bullshit Newsletter. Hard tasks spark 40% more momentum.</li>
-        <li><strong>Read 10 Pages:</strong> Study winners—biographies, tactics, mindset. A learning study showed readers achieve 35% more.</li>
-        <li><strong>Train Like a Beast:</strong> Lift, run, fight. A fitness study showed consistent training cuts mortality by 25%.</li>
-        <li><strong>Network Daily:</strong> Message one high-value contact. Bold outreach raises opportunities by 50%.</li>
-        <li><strong>Track Progress:</strong> Log your wins—money, reps, deals. A 25 habit study showed tracking boosts results by 40%.</li>
-        <li><strong>Cut One Excuse:</strong> Identify your bullshit—“I’m too busy”—and kill it. xcuse-cutting raises drive by 38%.</li>
-        <li><strong>Visualize Greatness:</strong> See yourself at 40—rich, ripped, revered. A recent psychology study showed visualization boosts confidence by 35%.</li>
-        <li><strong>End with Gratitude:</strong> Write three wins daily. Gratitude cuts stress by 30%.</li>
-      </ul>
-      <p><strong>Challenge:</strong> Write down five ways you’re being a pussy right now. That job you hate but won’t quit? That gut you ignore? That dream you’ve buried? Be brutally honest. Then ask: *Why the fuck am I letting mediocrity own me?* Take one action today—resign, lift, pitch. A recent behavior study showed single bold moves spark 45% more momentum. No more bullshit. Kill average now.</p>
-      <p>Mediocrity is a death sentence. You’re not here to rot in a cubicle, fade into obscurity, or die with regrets. You’re here to build empires, forge a body that inspires, and leave a name that echoes. Stop being a pussy. Annihilate average. Dominate your fucking life.</p>
 
-      <h2>The Comfort Trap</h2>
-      <p>Comfort is a pussy’s wet dream. It’s the soft, seductive lie that whispers, “Stay here. Don’t push. You’re fine.” But “fine” is a fucking death spiral. Comfort is why you’re soft, broke, and invisible. A recent lifestyle study found men who prioritize comfort over growth earn 44% less, weigh 28% more, and report 38% lower confidence by 40. That “okay” job? It’s a $700K pay cut over a decade. That “decent” body? It’s a heart attack by 50. That “fine” life? It’s a cage for your soul. Comfort isn’t your ally—it’s your executioner.</p>
-      <p>Society peddles comfort like it’s the holy grail. “Take it easy,” they coo. “Don’t stress.” But ease is weakness. Men raised in comfort-driven cultures achieve 40% less than those in high-pressure environments. Look at history. Spartans didn’t forge legends by lounging. Elon didn’t build Tesla by “chilling.” Comfort breeds pussies who beg for scraps. Greatness demands pain, sweat, and balls. You don’t become elite by staying cozy—you become elite by burning the fucking couch.</p>
-      <p><strong>Case Study: Brian vs. Derek</strong></p>
-      <p>Brian, 32, fell deep into the comfort trap. He had a “stable” job, a Netflix subscription, and a routine that screamed “I’m safe.” He thought, “Why risk it? I’m good.” By 40, Brian’s still in the same role, divorced, with a body he hates. His life’s “fine,” but he’s a ghost. Contrast with Derek, who rejected comfort like it was poison. Derek quit his “safe” job, started a tech startup, and trained like a warrior. By 40, Derek’s company pulls $20K/month, his body’s chiseled, and he’s got a tribe that reveres him. A recent business study showed men like Derek—comfort-killers—earn 58% more and live 25% longer. Brian’s trapped. Derek’s free. Choose.</p>
-      <p><strong>Historical Example: Leonidas</strong></p>
-      <p>Leonidas, king of Sparta, didn’t choose comfort. At Thermopylae, he faced a Persian army of millions with 300 men. He could’ve surrendered, lived a “fine” life. Instead, he fought, died, and became a legend. A recent historical study showed his defiance of comfort inspired 70% more cultural impact than peers. Leonidas didn’t chill. He burned. Why are you chilling?</p>
-      <p><strong>Modern Example: J.K. Rowling</strong></p>
-      <p>J.K. Rowling was a broke single mom, rejected by 12 publishers. She could’ve stayed comfortable, taken a “normal” job. Instead, she grinded, wrote Harry Potter, and became a billionaire. A recent success study showed her rejection of comfort yielded 60% higher returns than peers. Rowling didn’t settle. Neither should you.</p>
-      <p><strong>12-Step Discomfort Blueprint</strong></p>
-      <ul>
-        <li><strong>Wake at 4 am.Early risers outperform by 48%.</li>
-        <li><strong>Take Cold Showers:</strong> Embrace the sting. A health study showed cold exposure boosts immunity by 30%.</li>
-        <li><strong>Do One Scary Thing:</strong> Call a CEO, ask for a raise, approach a 10. Fear-facing cuts anxiety by 42%.</li>
-        <li><strong>Lift Heavy:</strong> Push your limits. A  fitness study showed heavy lifting builds 35% more strength.</li>
-        <li><strong>Say No:</strong> Reject one time-waster—drinks, TV, toxic friends.Boundaries boost focus by 40%.</li>
-        <li><strong>Learn a Hard Skill:</strong> Code, speak, fight. Skill-building raises income by 38%.</li>
-        <li><strong>Fast 24 Hours:</strong> Hunger sharpens you. Fasting boosts clarity by 35%.</li>
-        <li><strong>Public Speaking:</strong> Join Toastmasters, speak weekly. A  confidence study showed public speaking boosts influence by 45%.</li>
-        <li><strong>Cut Social Media:</strong> Limit to 30 min/day. A productivity study showed reduced scrolling raises output by 40%.</li>
-        <li><strong>Travel Alone:</strong> Go somewhere new, solo. Solo travel builds 38% more resilience.</li>
-        <li><strong>Volunteer Hard:</strong> Build houses, mentor kids. Tough volunteering raises purpose by 35%.</li>
-        <li><strong>Track Discomfort:</strong> Log every hard thing daily. racking boosts consistency by 40%.</li>
-      </ul>
-      <p><strong>Challenge:</strong> Pick three comfortable habits—binge-watching, sleeping in, avoiding conflict. Kill one today. Cutting comfort sparks 48% more momentum. Stop being a pussy. Break the trap. Conquer complacency.</p>
-      <p>Comfort is for pussies. Elite men thrive in the fire. Burn your excuses. Build your empire.</p>
+      <!-- Navigation -->
+      <nav class="nav-section" role="navigation" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="../index.html" class="nav-link" data-page="home">New? Start Here</a>
+          </li>
+          <li class="nav-item">
+            <a href="blog.html" class="nav-link" data-page="blog">Blog Archives</a>
+          </li>
+          <li class="nav-item">
+            <a href="lessons" class="nav-link" data-page="lessons">Tzeptosoft Products</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact-us.html" class="nav-link" data-page="Tzeptosoft">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link" data-page="about">About</a>
+          </li>
+        </ul>
+      </nav>
 
-     
-      <h2>Kill Average, Live Elite 🔥</h2>
-      <p>You’re at a fucking crossroads. Be a pussy who settles for a weak-ass, forgettable life, or be a goddamn legend who takes what’s his. The world doesn’t give a shit—it rewards the ruthless, buries the meek. Men who annihilate mediocrity live 28% longer, earn 68% more, and leave legacies that echo through time. Mediocrity is death by a thousand cuts. Action is life by a thousand victories. Choose.</p>
-      <p><strong>Your mission:</strong> Join Tzeptosoft’s CodeForge, where warriors destroy average. Download our “Elite Execution Blueprint” PDF—tactics, systems, rituals to make you a fucking juggernaut. No pussy behavior. Only fire.</p>
-      <p><strong>Reflection CTA:</strong> Write down seven ways you’re being a pussy. Right now. That job you hate? That fear you dodge? That dream you’ve buried? Then ask: *Why the fuck am I letting mediocrity own my soul?* Take one action today—quit, lift, pitch. Bold moves spark 50% more momentum.</p>
-      <p><strong>Vision for you:</strong> At 40, you’re a fucking titan—$25M empire, body of a god, tribe of warriors. You didn’t settle. You conquered. Start now, or stay a pussy forever.</p>
-      <blockquote>“Kill average. Live elite. The world bows to the ruthless.”—Tzeptosoft’s CodeForge</blockquote>
-      <p><strong>Define. Execute. Dominate. – TZEPTOSOFT</strong></p>
-      <p class="signature">with love, Your man, Clinton</p>
+      <!-- Action Buttons & Search -->
+      <div class="actions-section">
+        <!-- Search -->
+        <div class="search-container">
+          <button class="search-toggle" aria-label="Toggle search" aria-expanded="false" id="searchToggle">
+            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.35-4.35"></path>
+            </svg>
+          </button>
+          <div class="search-box" id="searchBox">
+            <input type="search" placeholder="Search lessons, tactics, blueprints..." class="search-input" aria-label="Search content">
+            <button class="search-submit" aria-label="Search">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.35-4.35"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- CTA Button -->
+        <a href="mailto:tzeptosoft@gmail.com" class="cta-button" aria-label="Join Tzeptosoft">
+          <span class="button-text">Join Tzeptosoft</span>
+          <svg class="button-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false" id="mobileMenuToggle">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
     </div>
-    <div class="newsletter-container">
-      <h3>Join the CodeForge Newsletter</h3>
-      <p>Receive weekly tactics to crush pussy behavior, annihilate mediocrity, and dominate your path. No noise, only signal. Get our “Elite Execution Blueprint” PDF—your roadmap to a relentless, unstoppable life.</p>
-      <input type="email" placeholder="Enter your email" aria-label="Email for newsletter">
-      <button type="button">Subscribe</button>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+      <div class="mobile-menu">
+        <div class="mobile-menu-header">
+          <a href="../index.html" class="mobile-logo">
+            <img src="/assets/images/tzeptosoft-logo.webp" alt="Tzeptosoft" width="40" height="40">
+            <span>TZEPTOSOFT</span>
+          </a>
+          <button class="mobile-menu-close" id="mobileMenuClose">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 6 6 18"></path>
+              <path d="m6 6 12 12"></path>
+            </svg>
+          </button>
+        </div>
+        <nav class="mobile-nav">
+          <a href="../index.html" class="mobile-nav-link">New? Start Here</a>
+          <a href="blog.html" class="mobile-nav-link">Blog Archives</a>
+          <a href="lessons" class="mobile-nav-link">Tzeptosoft Products</a>
+          <a href="contact-us.html" class="mobile-nav-link">Contact Us</a>
+          <a href="about.html" class="mobile-nav-link">About</a>
+        </nav>
+        <div class="mobile-actions">
+          <a href="mailto:tzeptosoft@gmail.com" class="mobile-cta-button">Join Tzeptosoft 🚀</a>
+        </div>
+      </div>
     </div>
-    <div class="terminal-content">
-      <div class="terminal-line" data-text="> Accessing Tzeptosoft archives..."></div>
-      <div class="terminal-line" data-text="> Loading Elite Execution blueprint..."></div>
-      <div class="terminal-line" data-text="> Signal transfer: SUCCESS ✅"></div>
+  </header>
+
+  <div class="main-content">
+    <div id="galaxy-bg"></div>
+    <div id="matrix-bg"></div>
+    <div id="particles"></div>
+    <div id="cursor-trail"></div>
+
+    <div class="hero">
+      <h1>TZEPTOSOFT</h1>
+      <div class="matrix-animation">KILLING MEDIOCRITY</div>
+      <h2>The Death of Average: Why You Must Be Ruthless With Mediocrity ⚡</h2>
+      <a href="mailto:tzeptosoft@gmail.com" class="btn-cta" aria-label="Contact Tzeptosoft">Get in Touch</a>
+      <div class="holo-element" style="top: 20%; left: 10%;"></div>
+      <div class="holo-element" style="top: 30%; right: 15%;"></div>
+      <div class="holo-element" style="bottom: 25%; left: 20%;"></div>
+      <div class="holo-element" style="bottom: 15%; right: 10%;"></div>
     </div>
-    <div class="social-share">
-      <h3>Share This Command</h3>
-      <a href="https://twitter.com/intent/tweet?url=https://tzeptosoft.com/blog/death-of-average&text=The Death of Average – Why You Must Be Ruthless With Mediocrity with Tzeptosoft’s CodeForge!" aria-label="Share on Twitter">Twitter</a>
-      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://tzeptosoft.com/blog/death-of-average" aria-label="Share on LinkedIn">LinkedIn</a>
-      <a href="https://www.facebook.com/sharer/sharer.php?u=https://tzeptosoft.com/blog/death-of-average" aria-label="Share on Facebook">Facebook</a>
-      <a href="https://www.reddit.com/submit?url=https://tzeptosoft.com/blog/death-of-average&title=The Death of Average – Why You Must Be Ruthless" aria-label="Share on Reddit">Reddit</a>
-      <a href="https://api.whatsapp.com/send?text=The Death of Average – Why You Must Be Ruthless With Mediocrity with Tzeptosoft’s CodeForge! https://tzeptosoft.com/blog/death-of-average" aria-label="Share on WhatsApp">WhatsApp</a>
+
+    <div class="blog-container">
+      <header>
+        <h1>The Death of Average: Why You Must Be Ruthless With Mediocrity ⚡</h1>
+        <div class="author-info">
+          <p class="author-name">Clinton | Tzeptosoft</p>
+          <img src="/assets/images/tzeptosoft-logo.webp" alt="Tzeptosoft Logo" class="author-logo" width="150" height="150" loading="lazy">
+          <p class="author-title">Architect of Relentless Boldness</p>
+        </div>
+        <hr>
+      </header>
+
+      <div class="cta-container">
+        <h3 class="cta-title">Ready to Kill Mediocrity?</h3>
+        <a href="mailto:tzeptosoft@gmail.com" class="cta-button">Join the CodeForge</a>
+      </div>
+
+      <div class="content">
+        <h2>Average Is a Death Sentence</h2>
+        <p><strong>If you should learn anything from Tzeptosoft let it be:HATE AVERAGE PEOPLE!-Average people watch porn,are addicted to TikTok prank videos,Instagram reels,gamble with little money they have access to,fall for "get-rich-quick scams",are Overweight, hate Tzeptosoft for spreading the HarshTruth....the list is long. Mediocrity is a fucking guillotine.</strong> It’s not just a lack of success_it’s the slow, deliberate execution of your potential, your fire, your goddamn destiny. You weren’t born to be a pussy who settles for “good enough.” You were born to dominate, to rip greatness from the jaws of a world that wants you docile, weak, and average. Mediocrity is why you’re stuck_same soul-sucking job, same flabby gut, same forgettable life. A  psychology study found 84% of men feel their potential rotting by 35 because they swallowed the lie that “average is okay.” That’s not you. You’re a fucking king, built for empires. So why the hell are you still sitting there, letting a weak-ass life choke you out?</p>
+        <p>Mediocrity is betrayal. Every day you accept “okay,” you’re stabbing the warrior inside you in the heart. You’re not just wasting time_you’re torching your legacy. That business you dreamed of at 20? It’s not gone_it’s buried under a pile of pussy excuses and half-assed effort. A regret study showed 81% of men over 40 say their deepest pain is settling for average. You think you’ve got time to “figure it out”? You fucking don’t. The clock’s mocking your indecision, ticking down to a life of regret. Every second you stay average, you’re carving your own tombstone. Kill mediocrity now, or it’ll bury you alive.</p>
+        <p>Look around. The world doesn’t reward the timid_it rewards the ruthless. The guy who launched that startup while you were “planning”? He’s banking $3M a year. The dude who hit the gym while you were “too tired”? He’s got a body that commands awe. The man who spoke up while you stayed silent? He’s leading tribes, building empires. A recent success study found men who reject average outperform settlers by 58% in wealth, health, and influence. Mediocrity isn’t neutral_it’s a vampire, draining your money, your strength, your fucking soul. Stop being a pussy. Annihilate average. Forge your path.</p>
+        <p><strong>Case Study 1: Jake vs. Mike</strong></p>
+        <p>Jake, 28, bought the average lie hook, line, and sinker. He had a “decent” job, a “fine” apartment, a “whatever” life. He told himself, “I’ll start that business later. I’ll get in shape next year.” He played it safe, avoided risks, and stayed comfortable. By 35, Jake’s still in the same cubicle, 40 pounds heavier, scrolling X, bitter as fuck. His net worth? $8K. His legacy? Nonexistent. Then there’s Mike, same age, same start. Mike said, “Fuck average.” He started a side hustle, lifted weights, networked like a beast. He failed, learned, iterated. By 35, Mike’s running a $12K/month SaaS, shredded, married to a queen. A  case study showed men like Mike_action-takers_build 62% more wealth and report 48% higher life satisfaction. Jake’s average. Mike’s elite. Which one are you?</p>
+        <p><strong>Case Study 2: Tom vs. Alex</strong></p>
+        <p>Tom, 30, was the poster boy for mediocrity. He had a “stable” job, a Netflix addiction, and a routine that screamed “I’m fine.” He thought, “Why risk it? I’m good.” By 38, Tom’s stuck in middle management, divorced, with a dad bod he loathes. His life’s “fine,” but he’s dead inside. Contrast with Alex, who spat on comfort. Alex quit his “safe” job, launched a fitness brand, trained like a Spartan. By 38, Alex’s brand pulls $18K/month, his body’s a weapon, and he’s got a loyal tribe. A recent business study showed men like Alex_mediocrity-killers_earn 55% more and live 22% longer. Tom’s trapped. Alex is free. Choose.</p>
+        <p><strong>Case Study 3: Sarah vs. Lisa</strong></p>
+        <p>Sarah, 27, was “okay” with her life. She had a “good” marketing job, a “decent” social life, and a “fine” body. She told herself, “I’ll chase my dreams later.” By 34, Sarah’s still in the same role, single, and regretting every “safe” choice. Her net worth? $15K. Her impact? Zero. Then there’s Lisa, same start. Lisa said, “I’m not average.” She started a blog, built a personal brand, and ran marathons. By 34, Lisa’s blog earns $10K/month, she’s engaged, and she’s a role model. A recent success study showed women like Lisa_those who reject average_outshine peers by 60% in income and influence. Sarah’s average. Lisa’s elite. Stop settling.</p>
+        <p><strong>Historical Example: Genghis Khan</strong></p>
+        <p>Genghis Khan wasn’t born a conqueror_he was a nobody, a kid from a nomadic tribe. But he refused average. He didn’t sit around, whining about his “hard life.” He united tribes, built an empire, and reshaped the world. By his death, his empire spanned millions of square miles. A recent historical study showed his rejection of tribal mediocrity yielded 70% more impact than his peers. Genghis didn’t wait for permission. He took it. Why the fuck are you waiting?</p>
+        <p><strong>Modern Example: Dwayne Johnson</strong></p>
+        <p>Dwayne “The Rock” Johnson started as a failed football player with $7 in his pocket. He could’ve settled_got a “normal” job, lived a “fine” life. Instead, he said, “Fuck average.” He grinded in wrestling, then Hollywood, then business. Today, he’s worth $800M, with a body that’s a billboard for discipline. A recent business study showed his relentless work ethic yielded 65% higher returns than peers. The Rock killed mediocrity. You can too.</p>
+        <p><strong>10-Step Daily Ritual to Kill Mediocrity</strong></p>
+        <ul>
+          <li><strong>Wake at 4:30 a.m.:</strong> No snooze. Start with a win. Early risers outperform lazy asses by 50%.</li>
+          <li><strong>Define Your Elite Vision:</strong> Write one goal_$5M net worth, 8% body fat, a legacy. Clarity boosts success by 45% .</li>
+          <li><strong>Do One Hard Thing:</strong> Cold email a client, lift 400 pounds, have that tough talk,Join the Tzeptosoft no-bullshit Newsletter. Hard tasks spark 40% more momentum.</li>
+          <li><strong>Read 10 Pages:</strong> Study winners_biographies, tactics, mindset. A learning study showed readers achieve 35% more.</li>
+          <li><strong>Train Like a Beast:</strong> Lift, run, fight. A fitness study showed consistent training cuts mortality by 25%.</li>
+          <li><strong>Network Daily:</strong> Message one high-value contact. Bold outreach raises opportunities by 50%.</li>
+          <li><strong>Track Progress:</strong> Log your wins_money, reps, deals. A 25 habit study showed tracking boosts results by 40%.</li>
+          <li><strong>Cut One Excuse:</strong> Identify your bullshit_“I’m too busy”_and kill it. xcuse-cutting raises drive by 38%.</li>
+          <li><strong>Visualize Greatness:</strong> See yourself at 40_rich, ripped, revered. A recent psychology study showed visualization boosts confidence by 35%.</li>
+          <li><strong>End with Gratitude:</strong> Write three wins daily. Gratitude cuts stress by 30%.</li>
+        </ul>
+        <p><strong>Challenge:</strong> Write down five ways you’re being a pussy right now. That job you hate but won’t quit? That gut you ignore? That dream you’ve buried? Be brutally honest. Then ask: *Why the fuck am I letting mediocrity own me?* Take one action today_resign, lift, pitch. A recent behavior study showed single bold moves spark 45% more momentum. No more bullshit. Kill average now.</p>
+        <p>Mediocrity is a death sentence. You’re not here to rot in a cubicle, fade into obscurity, or die with regrets. You’re here to build empires, forge a body that inspires, and leave a name that echoes. Stop being a pussy. Annihilate average. Dominate your fucking life.</p>
+
+        <h2>The Comfort Trap</h2>
+        <p>Comfort is a pussy’s wet dream. It’s the soft, seductive lie that whispers, “Stay here. Don’t push. You’re fine.” But “fine” is a fucking death spiral. Comfort is why you’re soft, broke, and invisible. A recent lifestyle study found men who prioritize comfort over growth earn 44% less, weigh 28% more, and report 38% lower confidence by 40. That “okay” job? It’s a $700K pay cut over a decade. That “decent” body? It’s a heart attack by 50. That “fine” life? It’s a cage for your soul. Comfort isn’t your ally_it’s your executioner.</p>
+        <p>Society peddles comfort like it’s the holy grail. “Take it easy,” they coo. “Don’t stress.” But ease is weakness. Men raised in comfort-driven cultures achieve 40% less than those in high-pressure environments. Look at history. Spartans didn’t forge legends by lounging. Elon didn’t build Tesla by “chilling.” Comfort breeds pussies who beg for scraps. Greatness demands pain, sweat, and balls. You don’t become elite by staying cozy_you become elite by burning the fucking couch.</p>
+        <p><strong>Case Study: Brian vs. Derek</strong></p>
+        <p>Brian, 32, fell deep into the comfort trap. He had a “stable” job, a Netflix subscription, and a routine that screamed “I’m safe.” He thought, “Why risk it? I’m good.” By 40, Brian’s still in the same role, divorced, with a body he hates. His life’s “fine,” but he’s a ghost. Contrast with Derek, who rejected comfort like it was poison. Derek quit his “safe” job, started a tech startup, and trained like a warrior. By 40, Derek’s company pulls $20K/month, his body’s chiseled, and he’s got a tribe that reveres him. A recent business study showed men like Derek_comfort-killers_earn 58% more and live 25% longer. Brian’s trapped. Derek’s free. Choose.</p>
+        <p><strong>Historical Example: Leonidas</strong></p>
+        <p>Leonidas, king of Sparta, didn’t choose comfort. At Thermopylae, he faced a Persian army of millions with 300 men. He could’ve surrendered, lived a “fine” life. Instead, he fought, died, and became a legend. A recent historical study showed his defiance of comfort inspired 70% more cultural impact than peers. Leonidas didn’t chill. He burned. Why are you chilling?</p>
+        <p><strong>Modern Example: J.K. Rowling</strong></p>
+        <p>J.K. Rowling was a broke single mom, rejected by 12 publishers. She could’ve stayed comfortable, taken a “normal” job. Instead, she grinded, wrote Harry Potter, and became a billionaire. A recent success study showed her rejection of comfort yielded 60% higher returns than peers. Rowling didn’t settle. Neither should you.</p>
+        <p><strong>12-Step Discomfort Blueprint</strong></p>
+        <ul>
+          <li><strong>Wake at 4 am.Early risers outperform by 48%.</li>
+          <li><strong>Take Cold Showers:</strong> Embrace the sting. A health study showed cold exposure boosts immunity by 30%.</li>
+          <li><strong>Do One Scary Thing:</strong> Call a CEO, ask for a raise, approach a 10. Fear-facing cuts anxiety by 42%.</li>
+          <li><strong>Lift Heavy:</strong> Push your limits. A  fitness study showed heavy lifting builds 35% more strength.</li>
+          <li><strong>Say No:</strong> Reject one time-waster_drinks, TV, toxic friends.Boundaries boost focus by 40%.</li>
+          <li><strong>Learn a Hard Skill:</strong> Code, speak, fight. Skill-building raises income by 38%.</li>
+          <li><strong>Fast 24 Hours:</strong> Hunger sharpens you. Fasting boosts clarity by 35%.</li>
+          <li><strong>Public Speaking:</strong> Join Toastmasters, speak weekly. A  confidence study showed public speaking boosts influence by 45%.</li>
+          <li><strong>Cut Social Media:</strong> Limit to 30 min/day. A productivity study showed reduced scrolling raises output by 40%.</li>
+          <li><strong>Travel Alone:</strong> Go somewhere new, solo. Solo travel builds 38% more resilience.</li>
+          <li><strong>Volunteer Hard:</strong> Build houses, mentor kids. Tough volunteering raises purpose by 35%.</li>
+          <li><strong>Track Discomfort:</strong> Log every hard thing daily. racking boosts consistency by 40%.</li>
+        </ul>
+        <p><strong>Challenge:</strong> Pick three comfortable habits_binge-watching, sleeping in, avoiding conflict. Kill one today. Cutting comfort sparks 48% more momentum. Stop being a pussy. Break the trap. Conquer complacency.</p>
+        <p>Comfort is for pussies. Elite men thrive in the fire. Burn your excuses. Build your empire.</p>
+
+        <h2>Kill Average, Live Elite 🔥</h2>
+        <p>You’re at a fucking crossroads. Be a pussy who settles for a weak-ass, forgettable life, or be a goddamn legend who takes what’s his. The world doesn’t give a shit_it rewards the ruthless, buries the meek. Men who annihilate mediocrity live 28% longer, earn 68% more, and leave legacies that echo through time. Mediocrity is death by a thousand cuts. Action is life by a thousand victories. Choose.</p>
+        <p><strong>Your mission:</strong> Join Tzeptosoft’s CodeForge, where warriors destroy average. Download our “Elite Execution Blueprint” PDF_tactics, systems, rituals to make you a fucking juggernaut. No pussy behavior. Only fire.</p>
+        <p><strong>Reflection CTA:</strong> Write down seven ways you’re being a pussy. Right now. That job you hate? That fear you dodge? That dream you’ve buried? Then ask: *Why the fuck am I letting mediocrity own my soul?* Take one action today_quit, lift, pitch. Bold moves spark 50% more momentum.</p>
+        <p><strong>Vision for you:</strong> At 40, you’re a fucking titan_$25M empire, body of a god, tribe of warriors. You didn’t settle. You conquered. Start now, or stay a pussy forever.</p>
+        <blockquote>“Kill average. Live elite. The world bows to the ruthless.”_Tzeptosoft’s CodeForge</blockquote>
+        <p><strong>Define. Execute. Dominate. – TZEPTOSOFT</strong></p>
+        <p class="signature">with love, Your man, Clinton</p>
+      </div>
+
+      <div class="terminal-content">
+        <div class="terminal-line" data-text="> Accessing Tzeptosoft archives..."></div>
+        <div class="terminal-line" data-text="> Loading Elite Execution blueprint..."></div>
+        <div class="terminal-line" data-text="> Signal transfer: SUCCESS ✅"></div>
+      </div>
+
+      <div class="newsletter-container">
+        <h3>Join the CodeForge Newsletter</h3>
+        <p>Receive weekly tactics to crush pussy behavior, annihilate mediocrity, and dominate your path. No noise, only signal. Get our “Elite Execution Blueprint” PDF_your roadmap to a relentless, unstoppable life.</p>
+        <input type="email" placeholder="Enter your email" aria-label="Email for newsletter">
+        <button type="button">Subscribe</button>
+      </div>
+
+      <div class="social-share">
+        <h3>Share This Command</h3>
+        <a href="https://twitter.com/intent/tweet?url=https://tzeptosoft.com/blog/death-of-average&text=The Death of Average – Why You Must Be Ruthless With Mediocrity with Tzeptosoft’s CodeForge!" aria-label="Share on Twitter">Twitter</a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://tzeptosoft.com/blog/death-of-average" aria-label="Share on LinkedIn">LinkedIn</a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://tzeptosoft.com/blog/death-of-average" aria-label="Share on Facebook">Facebook</a>
+        <a href="https://www.reddit.com/submit?url=https://tzeptosoft.com/blog/death-of-average&title=The Death of Average – Why You Must Be Ruthless" aria-label="Share on Reddit">Reddit</a>
+        <a href="https://api.whatsapp.com/send?text=The Death of Average – Why You Must Be Ruthless With Mediocrity with Tzeptosoft’s CodeForge! https://tzeptosoft.com/blog/death-of-average" aria-label="Share on WhatsApp">WhatsApp</a>
+      </div>
     </div>
-  </div>
-  <footer>
+
+    <footer>
       <p>© 2025 Tzeptosoft | All Rights Fucking Reserved 🔥</p>
-     
-  </footer>
+    </footer>
+  </div>
+
   <script>
     document.addEventListener('DOMContentLoaded', () => {
+      const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+      const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+      const mobileMenuClose = document.getElementById('mobileMenuClose');
+      const searchToggle = document.getElementById('searchToggle');
+      const searchBox = document.getElementById('searchBox');
+      const searchInput = document.querySelector('.search-input');
+
+      mobileMenuToggle?.addEventListener('click', () => {
+        mobileMenuOverlay?.classList.toggle('active');
+        document.body.style.overflow = mobileMenuOverlay?.classList.contains('active') ? 'hidden' : '';
+      });
+
+      mobileMenuClose?.addEventListener('click', () => {
+        mobileMenuOverlay?.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+
+      mobileMenuOverlay?.addEventListener('click', (e) => {
+        if (e.target === mobileMenuOverlay) {
+          mobileMenuOverlay.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      });
+
+      searchToggle?.addEventListener('click', () => {
+        const isActive = searchBox?.classList.contains('active');
+        searchBox?.classList.toggle('active');
+        searchToggle?.setAttribute('aria-expanded', !isActive);
+        if (!isActive && searchInput) searchInput.focus();
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          searchBox?.classList.remove('active');
+          searchToggle?.setAttribute('aria-expanded', 'false');
+          mobileMenuOverlay?.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      });
+
       window.addEventListener('load', () => {
         document.getElementById('preloader').style.display = 'none';
       });
+
       const matrixAnimation = document.querySelector('.matrix-animation');
       function startMatrixAnimation() {
         matrixAnimation.textContent = '';
@@ -600,41 +1356,19 @@
       }
       startMatrixAnimation();
       setInterval(startMatrixAnimation, 4000);
-      const sections = document.querySelectorAll('.blog-container, .terminal-content');
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            if (entry.target.classList.contains('terminal-content') && !entry.target.dataset.animated) {
-              startTerminalSequence();
-              entry.target.dataset.animated = 'true';
-            }
-          }
-        });
-      }, { threshold: 0.1 });
-      sections.forEach(section => observer.observe(section));
-      function startTerminalSequence() {
-        const lines = document.querySelectorAll('.terminal-content .terminal-line');
-        let delay = 0;
-        lines.forEach(line => {
-          line.textContent = '';
-          const text = line.dataset.text;
-          let charIndex = 0;
-          setTimeout(() => {
-            const type = () => {
-              if (charIndex < text.length) {
-                line.textContent += text[charIndex];
-                charIndex++;
-                setTimeout(type, 30);
-              } else {
-                line.classList.add('typed');
-              }
-            };
-            type();
-          }, delay);
-          delay += 1000;
-        });
-      }
+
+      let lastScrollY = window.scrollY;
+      window.addEventListener('scroll', () => {
+        const header = document.querySelector('.main-header');
+        const currentScrollY = window.scrollY;
+        if (currentScrollY > 100) {
+          header?.classList.add('scrolled');
+        } else {
+          header?.classList.remove('scrolled');
+        }
+        lastScrollY = currentScrollY;
+      });
+
       const matrixBg = document.getElementById('matrix-bg');
       for (let i = 0; i < 50; i++) {
         const char = document.createElement('div');
@@ -644,6 +1378,7 @@
         char.style.animationDelay = Math.random() * 5 + 's';
         matrixBg.appendChild(char);
       }
+
       const particleContainer = document.getElementById('particles');
       for (let i = 0; i < 50; i++) {
         const particle = document.createElement('div');
@@ -653,10 +1388,50 @@
         particle.style.animationDelay = Math.random() * 3 + 's';
         particleContainer.appendChild(particle);
       }
+
       const cursorTrail = document.getElementById('cursor-trail');
       document.addEventListener('mousemove', (e) => {
         cursorTrail.style.left = e.clientX - 15 + 'px';
         cursorTrail.style.top = e.clientY - 15 + 'px';
+      });
+
+      // Terminal animation
+      const terminalLines = document.querySelectorAll('.terminal-line');
+      let delay = 0;
+      terminalLines.forEach(line => {
+        line.textContent = '';
+        const text = line.dataset.text;
+        let charIndex = 0;
+        setTimeout(() => {
+          const type = () => {
+            if (charIndex < text.length) {
+              line.textContent += text[charIndex];
+              charIndex++;
+              setTimeout(type, 35);
+            } else {
+              line.classList.add('typed');
+            }
+          };
+          type();
+        }, delay);
+        delay += 1000;
+      });
+
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href');
+          if (targetId === '#') return;
+          
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 100,
+              behavior: 'smooth'
+            });
+          }
+        });
       });
     });
   </script>

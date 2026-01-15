@@ -3,21 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="💥 Tzeptosoft’s raw, no-bullshit take on Miyamoto Musashi’s Dokkōdō—21 savage precepts for self-discipline and a legendary life. Written by a master swordsman in 1645, these rules are your blueprint to conquer weakness and walk the path of aloneness. 🔥">
+  <meta name="description" content="💥 Tzeptosoft's raw, no-bullshit take on Miyamoto Musashi's Dokkōdō_21 savage precepts for self-discipline and a legendary life. Written by a master swordsman in 1645, these rules are your blueprint to conquer weakness and walk the path of aloneness. 🔥">
   <meta name="keywords" content="Miyamoto Musashi, Dokkodo, self-discipline, samurai philosophy, life lessons, Tzeptosoft">
   <meta name="author" content="Clinton | Tzeptosoft">
   <!-- Open Graph Tags -->
-  <meta property="og:title" content="Musashi’s Dokkodo: 21 Precepts for Self-Discipline | Tzeptosoft">
-  <meta property="og:description" content="💥 Tzeptosoft’s raw, no-bullshit take on Miyamoto Musashi’s Dokkōdō—21 savage precepts for self-discipline and a legendary life. Written by a master swordsman in 1645, these rules are your blueprint to conquer weakness and walk the path of aloneness. 🔥">
+  <meta property="og:title" content="Musashi's Dokkodo: 21 Precepts for Self-Discipline | Tzeptosoft">
+  <meta property="og:description" content="💥 Tzeptosoft's raw, no-bullshit take on Miyamoto Musashi's Dokkōdō_21 savage precepts for self-discipline and a legendary life. Written by a master swordsman in 1645, these rules are your blueprint to conquer weakness and walk the path of aloneness. 🔥">
   <meta property="og:image" content="https://tzeptosoft.com/assets/dokkodo.webp">
   <meta property="og:url" content="https://tzeptosoft.com/blog/dokkodo">
   <meta property="og:type" content="article">
   <!-- Twitter Card Tags -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Musashi’s Dokkodo: 21 Precepts for Self-Discipline | Tzeptosoft">
-  <meta name="twitter:description" content="💥 Tzeptosoft’s raw, no-bullshit take on Miyamoto Musashi’s Dokkōdō—21 savage precepts for self-discipline and a legendary life. Written by a master swordsman in 1645, these rules are your blueprint to conquer weakness and walk the path of aloneness. 🔥">
+  <meta name="twitter:title" content="Musashi's Dokkodo: 21 Precepts for Self-Discipline | Tzeptosoft">
+  <meta name="twitter:description" content="💥 Tzeptosoft's raw, no-bullshit take on Miyamoto Musashi's Dokkōdō_21 savage precepts for self-discipline and a legendary life. Written by a master swordsman in 1645, these rules are your blueprint to conquer weakness and walk the path of aloneness. 🔥">
   <meta name="twitter:image" content="https://tzeptosoft.com/assets/dokkodo.webp">
-  <title>Musashi’s Dokkodo: 21 Precepts for Self-Discipline | Tzeptosoft</title>
+  <title>Musashi's Dokkodo: 21 Precepts for Self-Discipline | Tzeptosoft</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Mono:wght@700&family=Orbitron:wght@900&family=JetBrains+Mono:wght@400;700&display=swap">
   <link rel="icon" type="image/webp" href="/assets/favicon.webp">
   <!-- Structured Data -->
@@ -25,8 +25,8 @@
   {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "headline": "Musashi’s Dokkodo: 21 Precepts for Self-Discipline",
-    "description": "💥 Tzeptosoft’s raw, no-bullshit take on Miyamoto Musashi’s Dokkōdō—21 savage precepts for self-discipline and a legendary life. Written by a master swordsman in 1645, these rules are your blueprint to conquer weakness and walk the path of aloneness. 🔥",
+    "headline": "Musashi's Dokkodo: 21 Precepts for Self-Discipline",
+    "description": "💥 Tzeptosoft's raw, no-bullshit take on Miyamoto Musashi's Dokkōdō_21 savage precepts for self-discipline and a legendary life. Written by a master swordsman in 1645, these rules are your blueprint to conquer weakness and walk the path of aloneness. 🔥",
     "author": {
       "@type": "Person",
       "name": "Clinton"
@@ -53,6 +53,458 @@
       --text-dark: #FFFFFF;
       --matrix-green: #00FF00;
     }
+
+    /* Header Styles */
+    .main-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(11, 15, 26, 0.95);
+      backdrop-filter: blur(20px);
+      border-bottom: 2px solid transparent;
+      animation: headerSlideIn 0.6s ease-out;
+      box-shadow: 0 8px 32px rgba(0, 102, 204, 0.1);
+    }
+
+    @keyframes headerSlideIn {
+      from {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .main-header.scrolled {
+      border-bottom-color: rgba(0, 204, 255, 0.2);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 70px;
+      position: relative;
+    }
+
+    .logo-section {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .logo-wrapper:hover {
+      transform: scale(1.05);
+    }
+
+    .logo-image {
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(0, 204, 255, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    .logo-primary {
+      font-size: 1.4em;
+      font-weight: 900;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-shadow: 0 0 10px rgba(0, 102, 204, 0.5);
+    }
+
+    .logo-subtitle {
+      font-size: 0.75em;
+      color: var(--secondary);
+      font-weight: 600;
+      opacity: 0.8;
+      margin-top: 2px;
+    }
+
+    .nav-section {
+      display: flex;
+    }
+
+    .nav-list {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .nav-item {
+      position: relative;
+    }
+
+    .nav-link {
+      display: block;
+      padding: 8px 16px;
+      color: var(--text-dark);
+      text-decoration: none;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 0.95em;
+      position: relative;
+      transition: all 0.3s ease;
+      border-radius: 6px;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--secondary);
+      background: rgba(0, 204, 255, 0.1);
+      box-shadow: 0 0 20px rgba(0, 204, 255, 0.2);
+      transform: translateY(-2px);
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 80%;
+    }
+
+    .actions-section {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .search-container {
+      position: relative;
+    }
+
+    .search-toggle {
+      background: none;
+      border: 2px solid rgba(0, 204, 255, 0.3);
+      border-radius: 8px;
+      padding: 8px;
+      color: var(--secondary);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .search-toggle:hover {
+      border-color: var(--secondary);
+      box-shadow: 0 0 20px rgba(0, 204, 255, 0.4);
+      transform: scale(1.05);
+    }
+
+    .search-icon {
+      width: 20px;
+      height: 20px;
+    }
+
+    .search-box {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 300px;
+      background: rgba(28, 28, 28, 0.95);
+      border: 2px solid var(--secondary);
+      border-radius: 8px;
+      padding: 12px;
+      margin-top: 8px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 40px rgba(0, 102, 204, 0.2);
+      z-index: 1001;
+    }
+
+    .search-box.active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .search-input {
+      width: 100%;
+      background: rgba(18, 18, 18, 0.8);
+      border: 1px solid rgba(0, 204, 255, 0.3);
+      border-radius: 6px;
+      padding: 10px 12px;
+      color: var(--text-dark);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.9em;
+    }
+
+    .search-input::placeholder {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .search-input:focus {
+      outline: none;
+      border-color: var(--secondary);
+      box-shadow: 0 0 0 3px rgba(0, 204, 255, 0.2);
+    }
+
+    .search-submit {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: var(--secondary);
+      cursor: pointer;
+      padding: 4px;
+      width: 20px;
+      height: 20px;
+    }
+
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: var(--accent);
+      text-decoration: none;
+      border-radius: 8px;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 600;
+      font-size: 0.9em;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(0, 102, 204, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: left 0.5s;
+    }
+
+    .cta-button:hover::before {
+      left: 100%;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(0, 102, 204, 0.4);
+    }
+
+    .button-icon {
+      width: 16px;
+      height: 16px;
+      transition: transform 0.3s ease;
+    }
+
+    .cta-button:hover .button-icon {
+      transform: translateX(4px);
+    }
+
+    .mobile-menu-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 30px;
+      height: 30px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+      z-index: 1001;
+    }
+
+    .hamburger-line {
+      width: 100%;
+      height: 3px;
+      background: var(--secondary);
+      border-radius: 2px;
+      transition: all 0.3s ease;
+      transform-origin: center;
+    }
+
+    .mobile-menu-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: rgba(11, 15, 26, 0.98);
+      backdrop-filter: blur(20px);
+      z-index: 999;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.4s ease;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .mobile-menu-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .mobile-menu {
+      width: 320px;
+      max-width: 90vw;
+      background: linear-gradient(135deg, rgba(18, 18, 18, 0.95), rgba(11, 15, 26, 0.95));
+      border-left: 3px solid var(--secondary);
+      padding: 0;
+      transform: translateX(100%);
+      transition: transform 0.4s ease;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+    }
+
+    .mobile-menu-overlay.active .mobile-menu {
+      transform: translateX(0);
+    }
+
+    .mobile-menu-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 20px;
+      border-bottom: 1px solid rgba(0, 204, 255, 0.2);
+    }
+
+    .mobile-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-dark);
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.2em;
+    }
+
+    .mobile-menu-close {
+      background: none;
+      border: none;
+      color: var(--secondary);
+      cursor: pointer;
+      padding: 8px;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .mobile-menu-close:hover {
+      background: rgba(0, 204, 255, 0.1);
+      box-shadow: 0 0 20px rgba(0, 204, 255, 0.2);
+    }
+
+    .mobile-nav {
+      padding: 20px 0;
+      flex: 1;
+    }
+
+    .mobile-nav-link {
+      display: block;
+      padding: 16px 24px;
+      color: var(--text-dark);
+      text-decoration: none;
+      font-family: 'Inter', sans-serif;
+      font-size: 1.1em;
+      font-weight: 500;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .mobile-nav-link::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 0;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      transition: width 0.3s ease;
+      z-index: -1;
+    }
+
+    .mobile-nav-link:hover::before,
+    .mobile-nav-link.active::before {
+      width: 100%;
+    }
+
+    .mobile-nav-link:hover,
+    .mobile-nav-link.active {
+      color: var(--accent);
+      padding-left: 32px;
+    }
+
+    .mobile-actions {
+      padding: 20px 24px;
+      border-top: 1px solid rgba(0, 204, 255, 0.2);
+    }
+
+    .mobile-cta-button {
+      display: inline-block;
+      width: 100%;
+      padding: 16px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: var(--accent);
+      text-decoration: none;
+      border-radius: 8px;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 600;
+      text-align: center;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(0, 102, 204, 0.3);
+    }
+
+    .mobile-cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(0, 102, 204, 0.4);
+    }
+
+    /* Main Content */
     body {
       margin: 0;
       padding: 0;
@@ -62,6 +514,11 @@
       line-height: 1.6;
       overflow-x: hidden;
     }
+
+    .main-content {
+      position: relative;
+    }
+
     #preloader {
       position: fixed;
       top: 0;
@@ -74,15 +531,18 @@
       justify-content: center;
       z-index: 9999;
     }
+
     .loader {
       font-family: 'JetBrains Mono', monospace;
       color: var(--secondary);
       font-size: 1.5em;
       animation: blinkCaret 0.5s step-end infinite;
     }
+
     @keyframes blinkCaret {
       50% { border-color: transparent; }
     }
+
     #galaxy-bg {
       position: fixed;
       top: 0;
@@ -93,10 +553,12 @@
       z-index: -3;
       animation: rotateGalaxy 60s infinite linear;
     }
+
     @keyframes rotateGalaxy {
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
     }
+
     #matrix-bg {
       position: fixed;
       top: 0;
@@ -106,6 +568,7 @@
       z-index: -2;
       opacity: 0.7;
     }
+
     .matrix-char {
       position: absolute;
       font-family: 'JetBrains Mono', monospace;
@@ -114,10 +577,12 @@
       opacity: 0.8;
       animation: matrix-fall 5s linear infinite;
     }
+
     @keyframes matrix-fall {
       0% { transform: translateY(-100vh); opacity: 0.8; }
       100% { transform: translateY(100vh); opacity: 0; }
     }
+
     #particles {
       position: fixed;
       top: 0;
@@ -126,6 +591,7 @@
       height: 100%;
       z-index: -1;
     }
+
     .particle {
       position: absolute;
       width: 5px;
@@ -134,11 +600,13 @@
       border-radius: 50%;
       animation: drift 10s infinite linear;
     }
+
     @keyframes drift {
       0% { transform: translate(0, 0); opacity: 0.5; }
       50% { opacity: 1; }
       100% { transform: translate(100px, 100px); opacity: 0.5; }
     }
+
     #cursor-trail {
       position: fixed;
       width: 30px;
@@ -146,16 +614,20 @@
       background: radial-gradient(circle, var(--secondary), transparent);
       border-radius: 50%;
       pointer-events: none;
-      z-index: 1000;
+      z-index: 100;
       transition: all 0.1s ease;
     }
+
+    /* Hero Section - Updated for Header */
     .hero {
       text-align: center;
-      padding: 100px 20px;
+      padding: 120px 20px 100px;
       background: rgba(18, 18, 18, 0.9);
       position: relative;
       z-index: 1;
+      margin-top: 0;
     }
+
     .hero h1 {
       font-size: 5em;
       font-family: 'Orbitron', sans-serif;
@@ -166,6 +638,7 @@
       animation: gradientShift 3s ease infinite;
       margin-bottom: 0;
     }
+
     .matrix-animation {
       font-family: 'JetBrains Mono', monospace;
       font-size: 1.5em;
@@ -176,29 +649,35 @@
       white-space: nowrap;
       display: inline-block;
     }
+
     .matrix-animation.typing {
       animation: typeMatrix 2s steps(20) forwards, glitch 0.1s infinite alternate;
     }
+
     @keyframes typeMatrix {
       from { width: 0; }
       to { width: 100%; }
     }
+
     @keyframes glitch {
       0% { transform: translate(0); opacity: 1; }
       50% { transform: translate(2px, -2px); opacity: 0.8; }
       100% { transform: translate(-2px, 2px); opacity: 0.9; }
     }
+
     @keyframes gradientShift {
       0% { background-position: 0%; }
       50% { background-position: 100%; }
       100% { background-position: 0%; }
     }
+
     .hero h2 {
       font-size: 1.8em;
       color: var(--secondary);
       text-shadow: 0 0 10px var(--secondary);
       margin-top: 20px;
     }
+
     .btn-cta {
       background: linear-gradient(90deg, var(--primary), var(--secondary));
       color: var(--accent);
@@ -211,15 +690,18 @@
       margin-top: 20px;
       display: inline-block;
     }
+
     .btn-cta:hover {
       background: linear-gradient(90deg, var(--secondary), var(--primary));
       transform: scale(1.1);
     }
+
     @keyframes pulse {
       0% { box-shadow: 0 0 0 0 rgba(0, 102, 204, 0.4); }
       70% { box-shadow: 0 0 0 10px rgba(0, 102, 204, 0); }
       100% { box-shadow: 0 0 0 0 rgba(0, 102, 204, 0); }
     }
+
     .holo-element {
       position: absolute;
       width: 70px;
@@ -228,11 +710,14 @@
       border-radius: 50%;
       animation: float 4s infinite ease-in-out;
     }
+
     @keyframes float {
       0% { transform: translateY(0); opacity: 0.5; }
       50% { transform: translateY(-30px); opacity: 1; }
       100% { transform: translateY(0); opacity: 0.5; }
     }
+
+    /* Blog Container */
     .blog-container {
       padding: 80px 20px;
       max-width: 900px;
@@ -241,11 +726,13 @@
       border: 3px solid var(--secondary);
       animation: borderGlow 2s infinite;
     }
+
     @keyframes borderGlow {
       0% { border-color: var(--primary); }
       50% { border-color: var(--secondary); }
       100% { border-color: var(--primary); }
     }
+
     .blog-container h1 {
       font-size: 2.5em;
       color: var(--secondary);
@@ -253,20 +740,29 @@
       font-family: 'Orbitron', sans-serif;
       text-align: center;
     }
+
     .blog-container h2 {
       font-size: 1.8em;
       color: var(--secondary);
       font-family: 'Orbitron', sans-serif;
       margin-top: 2em;
     }
+
     .blog-container p {
       color: var(--text-dark);
       font-size: 1.2em;
     }
+
+    .highlight {
+      color: var(--secondary);
+      font-weight: 600;
+    }
+
     .blog-container ul {
       list-style: none;
       padding: 0;
     }
+
     .blog-container li {
       background: #1C1C1C;
       padding: 15px;
@@ -274,10 +770,12 @@
       margin-bottom: 15px;
       transition: transform 0.3s ease;
     }
+
     .blog-container li:hover {
       transform: translateY(-10px);
       box-shadow: 0 0 40px var(--secondary);
     }
+
     .blog-container blockquote {
       font-family: 'JetBrains Mono', monospace;
       color: var(--secondary);
@@ -286,36 +784,44 @@
       margin: 20px 0;
       font-style: italic;
     }
+
     .author-info {
       margin: 20px 0;
       text-align: center;
     }
+
     .author-name {
       font-family: 'JetBrains Mono', monospace;
       color: var(--secondary);
       font-size: 1.2em;
     }
+
     .author-title {
       color: var(--text-dark);
       font-size: 1em;
     }
+
     .author-logo {
       max-width: 100px;
       height: auto;
     }
+
     hr {
       border: 1px solid var(--secondary);
       margin: 20px 0;
     }
+
     .cta-container {
       text-align: center;
       margin: 20px 0;
     }
+
     .cta-title {
       font-family: 'Orbitron', sans-serif;
       color: var(--secondary);
       font-size: 1.8em;
     }
+
     .cta-button {
       background: linear-gradient(90deg, var(--primary), var(--secondary));
       color: var(--accent);
@@ -324,10 +830,12 @@
       border-radius: 4px;
       font-family: 'JetBrains Mono', monospace;
     }
+
     .cta-button:hover {
       background: linear-gradient(90deg, var(--secondary), var(--primary));
       transform: scale(1.05);
     }
+
     .newsletter-container {
       text-align: center;
       margin: 40px 0;
@@ -336,16 +844,19 @@
       border: 2px solid var(--secondary);
       border-radius: 4px;
     }
+
     .newsletter-container h3 {
       font-family: 'Orbitron', sans-serif;
       color: var(--secondary);
       font-size: 1.8em;
       margin-bottom: 10px;
     }
+
     .newsletter-container p {
       font-size: 1.2em;
       margin-bottom: 20px;
     }
+
     .newsletter-container input[type="email"] {
       padding: 10px;
       width: 70%;
@@ -356,6 +867,7 @@
       font-family: 'JetBrains Mono', monospace;
       border-radius: 4px;
     }
+
     .newsletter-container button {
       padding: 10px 20px;
       background: linear-gradient(90deg, var(--primary), var(--secondary));
@@ -365,20 +877,24 @@
       font-family: 'JetBrains Mono', monospace;
       cursor: pointer;
     }
+
     .newsletter-container button:hover {
       background: linear-gradient(90deg, var(--secondary), var(--primary));
       transform: scale(1.05);
     }
+
     .social-share {
       margin: 2rem 0;
       text-align: center;
     }
+
     .social-share h3 {
       font-family: 'Orbitron', sans-serif;
       color: var(--secondary);
       font-size: 1.8em;
       margin-bottom: 10px;
     }
+
     .social-share a {
       margin: 0 10px;
       padding: 10px 20px;
@@ -388,10 +904,12 @@
       text-decoration: none;
       font-family: 'JetBrains Mono', monospace;
     }
+
     .social-share a:hover {
       background: var(--secondary);
       color: #000;
     }
+
     .terminal-content {
       background: #1a1a1a;
       padding: 20px;
@@ -402,38 +920,46 @@
       color: var(--secondary);
       font-size: 1em;
     }
+
     .terminal-line {
       opacity: 0;
       white-space: nowrap;
       overflow: hidden;
     }
+
     .terminal-line.typed {
       opacity: 1;
       animation: typing 0.5s steps(40) forwards;
     }
+
     @keyframes typing {
       from { width: 0; }
       to { width: 100%; }
     }
+
     footer {
       text-align: center;
       padding: 40px 20px;
       border-top: 1px solid #1E1E2E;
     }
+
     .social-links {
       display: flex;
       justify-content: center;
       gap: 20px;
       margin-top: 10px;
     }
+
     .social-links img {
       width: 24px;
       height: 24px;
       transition: transform 0.2s ease;
     }
+
     .social-links img:hover {
       transform: scale(1.2);
     }
+
     .signature {
       font-family: 'JetBrains Mono', monospace;
       color: var(--secondary);
@@ -441,146 +967,453 @@
       margin-top: 20px;
       text-align: center;
     }
+
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+      .nav-list {
+        gap: 20px;
+      }
+      
+      .nav-link {
+        padding: 6px 12px;
+        font-size: 0.9em;
+      }
+    }
+
     @media (max-width: 768px) {
-      .hero h1 { font-size: 3em; }
-      .matrix-animation { font-size: 1.2em; }
-      .blog-container { padding: 40px 10px; }
-      .hero { padding: 60px 10px; }
-      .newsletter-container input[type="email"] { width: 90%; }
+      .header-container {
+        height: 60px;
+        padding: 0 16px;
+      }
+      
+      .nav-section {
+        display: none;
+      }
+      
+      .mobile-menu-toggle {
+        display: flex;
+      }
+      
+      .search-box {
+        width: 280px;
+        right: -20px;
+      }
+      
+      .logo-primary {
+        font-size: 1.2em;
+      }
+
+      .hero {
+        padding: 100px 10px 80px;
+      }
+
+      .hero h1 { 
+        font-size: 3em; 
+      }
+
+      .matrix-animation { 
+        font-size: 1.2em; 
+      }
+
+      .blog-container { 
+        padding: 40px 10px; 
+      }
     }
+
     @media (max-width: 480px) {
-      .hero h1 { font-size: 2em; }
-      .matrix-animation { font-size: 1em; }
-      .hero h2 { font-size: 1.2em; }
-      .btn-cta { font-size: 1em; padding: 10px 20px; }
-      .blog-container h1 { font-size: 1.8em; }
-      .terminal-content { font-size: 0.9em; }
+      .header-container {
+        height: 56px;
+        padding: 0 12px;
+      }
+      
+      .search-box {
+        width: calc(100vw - 40px);
+        right: auto;
+        left: 12px;
+      }
+      
+      .cta-button {
+        padding: 10px 20px;
+        font-size: 0.85em;
+      }
+      
+      .mobile-menu {
+        width: 100vw;
+        max-width: none;
+      }
+
+      .hero h1 { 
+        font-size: 2em; 
+      }
+
+      .matrix-animation { 
+        font-size: 1em; 
+      }
+
+      .hero h2 { 
+        font-size: 1.2em; 
+      }
+
+      .btn-cta { 
+        font-size: 1em; 
+        padding: 10px 20px; 
+      }
+
+      .blog-container h1 { 
+        font-size: 1.8em; 
+      }
+
+      .terminal-content { 
+        font-size: 0.9em; 
+      }
+
+      .newsletter-container input[type="email"] { 
+        width: 90%; 
+      }
     }
+
     @media (prefers-reduced-motion: reduce) {
-      * { animation: none !important; transition: none !important; }
+      * { 
+        animation: none !important; 
+        transition: none !important; 
+      }
     }
+
     @media print {
-      body { background: white; color: black; }
-      .blog-container { background: white; border: none; }
-      a { color: var(--primary); text-decoration: underline; }
-      .btn-cta, .cta-button { background: white; color: var(--primary); border: 1px solid var(--primary); }
-      #galaxy-bg, #matrix-bg, #particles, #cursor-trail, .holo-element, .matrix-animation { display: none; }
+      body { 
+        background: white; 
+        color: black; 
+      }
+      
+      .blog-container { 
+        background: white; 
+        border: none; 
+      }
+      
+      a { 
+        color: var(--primary); 
+        text-decoration: underline; 
+      }
+      
+      .btn-cta, 
+      .cta-button { 
+        background: white; 
+        color: var(--primary); 
+        border: 1px solid var(--primary); 
+      }
+      
+      #galaxy-bg, 
+      #matrix-bg, 
+      #particles, 
+      #cursor-trail, 
+      .holo-element, 
+      .matrix-animation,
+      .main-header { 
+        display: none; 
+      }
     }
   </style>
 </head>
-<body>
+<body data-page="dokkodo">
   <div id="preloader">
     <div class="loader">Initializing Tzeptosoft... 🚀</div>
   </div>
-  <div id="galaxy-bg"></div>
-  <div id="matrix-bg"></div>
-  <div id="particles"></div>
-  <div id="cursor-trail"></div>
-  <div class="hero">
-    <h1>TZEPTOSOFT</h1>
-    <div class="matrix-animation">DOKKODO: 21 PRECEPTS</div>
-    <h2>Master Self-Discipline, Walk the Lone Path, Be a Fucking Legend 🔥</h2>
-    <a href="mailto:tzeptosoft@gmail.com" class="btn-cta" aria-label="Contact Tzeptosoft">Join the SamuraiForge 💪</a>
-    <div class="holo-element" style="top: 20%; left: 10%;"></div>
-    <div class="holo-element" style="top: 30%; right: 15%;"></div>
-    <div class="holo-element" style="bottom: 25%; left: 20%;"></div>
-    <div class="holo-element" style="bottom: 15%; right: 10%;"></div>
-  </div>
-  <div class="blog-container">
-    <header>
-      <h1>Musashi’s Dokkōdō: 21 Precepts for Self-Discipline 💥</h1>
-      <div class="author-info">
-        <p class="author-name">Clinton | Tzeptosoft 😎</p>
-        <img src="/assets/images/tzeptosoft-logo.webp" alt="Tzeptosoft Logo" class="author-logo" width="100" height="100" loading="lazy">
-        <p class="author-title">Master of SamuraiForge 🛠️</p>
+
+  <!-- Professional Header -->
+  <header class="main-header">
+    <div class="header-container">
+      <!-- Logo Section -->
+      <div class="logo-section">
+        <a href="../index.html" class="logo-wrapper" aria-label="Tzeptosoft Home">
+          <img src="/assets/images/tzeptosoft-logo.webp" alt="Tzeptosoft Logo" class="logo-image" width="48" height="48" loading="lazy">
+          <div class="logo-text">
+            <span class="logo-primary">TZEPTOSOFT</span>
+            <span class="logo-subtitle">Escaping the Matrix</span>
+          </div>
+        </a>
       </div>
-      <hr>
-    </header>
-    <div class="cta-container">
-      <h3 class="cta-title">Ready to Fucking Master Your Path? 🗡️</h3>
-      <a href="mailto:tzeptosoft@gmail.com" class="cta-button">Join the SamuraiForge 🚀</a>
-    </div>
-    <div class="content">
-      <p><strong>Yo, warriors—Miyamoto Musashi, the baddest samurai to ever swing a blade, dropped the Dokkōdō in 1645, a week before he kicked it. 💪</strong> This ain’t no fluffy self-help book—it’s 21 raw, no-bullshit rules for self-discipline, written for his top disciple. Called “The Path of Aloneness,” it’s your blueprint to crush weakness, stay sharp, and walk the lone road like a fucking legend. Let’s slice into this samurai wisdom and forge your empire! Alternatively you can remain an asshole😈</p>
 
-      <h2>The 21 Precepts of Dokkōdō 🔥</h2>
-      <ul>
-        <li><strong>1. Accept Every Shit as It Is:</strong> Stop whining about what you can’t change—past, present, or reality. Rigid worldviews make you dumb.You don't have control—over your past nor present but you can fully control your future. Bend your mind to truth, don’t twist truth to fit your ego.Fighting againast reality is weakening one self 🧠 <span class="highlight">Tactic:</span> Journal one unchangeable fact you’ve been dodging today.</li>
-        <li><strong>2. Don’t Chase Cheap Pleasure for pleasure sake:</strong> Pursue of pleasure will distract you from the path of real discipline. Pleasure for pleasure’s sake turns you into a junkie—drugs, booze, or dopamine hits(Avarage poeple watch/masterbate to porn,gamble with little money they have, play video games,party for no reason taking drugs-I mean weed is also bad!,they will hate me for pointing out the unconvertable truth,watch tv,scroll Tiktok prank videos and wont even Subscribe to Tzeptosoft). Real joy comes from purpose, not unearned highs. Look at Buddha: prince, had it all, still empty. 🕉️ Seek joy from the process not distractions!<span class="highlight">Tactic:</span> Skip one guilty pleasure today.</li>
-        <li><strong>3. Never Trust Half-Assed Feelings:</strong> This is the enemy of progress.“Kinda” believing in something is a trap. Go all-in or step back to rethink. Half-hearted moves get you wrecked. ⚔️Everyone has been through that road and you all know where it leads "I wish I knew! - Fuck,now you know: partial feeling will get you cooked" <span class="highlight">Tactic:</span> Pause one shaky decision and reassess tonight.</li>
-        <li><strong>4.Think lightly for yourself and deeply for this fucking world:</strong> Self-obsession blinds you.I think deply for the world for poeple like you, Yes! You- Tzeptosoftis here to save you! Build a mental map of reality and keep upgrading it. A light ego adapts faster, thrives harder. 🌍 <span class="highlight">Tactic:</span> Read one new article or book chapter today.(Tzeptosoft is an exellent starting point!)</li>
-        <li><strong>5. Detach from Desires your whole life:</strong> Gents this is the trap that has killed men and I mean fucking kings like Solomon! Detatch yourself from everthing and you will have everthing.The same reason God cares but still detaches from us physicaly.All great religions support this for a reason. Craving sex, validation, or status makes you a puppet. Stay clear-headed, don’t let wants own you. 🧘 <span class="highlight">Tactic:</span> Name one desire you’re too attached to and cut its hold this week.</li>
-        <li><strong>6. Regret is a wasted emotion!-Fuck Regret:</strong> Regret’s a sunk cost—wasted energy.I have been through hell than most of you,fuck it I left it in hell and am here stacking wins!. Learn from mistakes, move on. You can’t rewrite the past, so don’t cry over it. 🚫 <span class="highlight">Tactic:</span> Write one lesson from a past fuck-up and let it go.If you can't let go you are chained to the past a victim of your own prison!</li>
-        <li><strong>7. Jealousy’s for Losers:</strong> Envy just fucks you up, not them. Get inspired by others’ wins, don’t sulk. Wants are endless—focus on your own shit. 😎 <span class="highlight">Tactic:</span> Compliment someone’s success today.</li>
-        <li><strong>8. Don’t Cling to People:</strong> Separation’s life—people come, people go. Love without attachment, like a crow leaving a pond. Only God’s constant. 🦅 <span class="highlight">Tactic:</span> Let go of one clingy relationship thought today.</li>
-        <li><strong>9. Drop Resentmentat all costs and you will save a generation:</strong> Bitching and moaning—about yourself or others—drains your soul. Stay calm, keep moving. No one’s got time for your grudges. 🛡️ <span class="highlight">Tactic:</span> Forgive one grudge this week.</li>
-        <li><strong>10. Lust and Love Cloud Judgment:</strong> Both weaken the spirit! Both make you dumb—men have lost empires over a quick fuck. Stay sharp, don’t let feelings steer. 💔 <span class="highlight">Tactic:</span> Avoid one impulsive romantic move today.</li>
-        <li><strong>11. Ditch Preferences:</strong> No expectations, no disappointments. An open mind eats life’s variety for breakfast. Stay flexible, win more. 🌊 <span class="highlight">Tactic:</span> Try one new experience this week.</li>
-        <li><strong>12. Live Anywhere:</strong> Happy? A jungle or a palace is the same. Sad? No mansion fixes it. Internet’s your home—grind from anywhere. 🏕️ <span class="highlight">Tactic:</span> Work from a new spot today.</li>
-        <li><strong>13. Food’s Fuel, Not Fun:</strong> Obsessing over taste is for materialistic suckers. Eat for energy, not indulgence. Warriors don’t chase “comfort food.” 🍲 <span class="highlight">Tactic:</span> Cook a simple, healthy meal tonight.</li>
-        <li><strong>14. Drop Dead Weight:</strong> Possessions you don’t need slow you down—physically and mentally. Travel light, like a ronin. 🧳 <span class="highlight">Tactic:</span> Declutter one item today.</li>
-        <li><strong>15. Think for Yourself:</strong> Blindly following trends makes you an NPC. Question everything—popular doesn’t mean smart. 🧠 <span class="highlight">Tactic:</span> Challenge one common belief today.</li>
-        <li><strong>16. Master One Skill:</strong> Musashi said focus, but today’s world rewards polymaths.Have a good knowledge landscape and it will save your ass. Still, nail one core skill before branching out. ⚒️ <span class="highlight">Tactic:</span> Practice one skill for 30 minutes today.</li>
-        <li><strong>17. Death Ain’t Shit:</strong> Fear of dying weakens you. Treat life like a sparring match—calm, bold, ready. We’re all dust eventually. 💀 <span class="highlight">Tactic:</span> Meditate on mortality for 5 minutes tonight.</li>
-        <li><strong>18. Don’t Hoard for Old Age:</strong> Musashi wandered, but you’re no ronin. Save smart, hit financial independence, then focus on family and health. 💸 <span class="highlight">Tactic:</span> Save $10 or research investments today.</li>
-        <li><strong>19. Respect Gods, Don’t Beg:</strong> Honor the divine, but don’t lean on luck. Grind hard, make your own breaks. God helps those who help themselves. 🙏 <span class="highlight">Tactic:</span> Plan one bold move without expecting miracles.</li>
-        <li><strong>20. Honor Over Body:</strong> Don’t do slimy shit, even if it saves your ass. Honor’s recoverable; death’s game over. Live by your code. ⚖️ <span class="highlight">Tactic:</span> Define one core ethical rule today.</li>
-        <li><strong>21. Never Stray from Your Path:</strong> Believe in something? Go all-in. Discipline beats motivation always. Be  disciplined like a monk. Time’s short, energy fades—don’t waste a second on half-assed shit. 🛤️ <span class="highlight">Tactic:</span> Commit to one goal with full focus this week.</li>
-      </ul>
+      <!-- Navigation -->
+      <nav class="nav-section" role="navigation" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="../index.html" class="nav-link" data-page="home">New? Start Here</a>
+          </li>
+          <li class="nav-item">
+            <a href="blog.html" class="nav-link" data-page="blog">Blog Archives</a>
+          </li>
+          <li class="nav-item">
+            <a href="lessons" class="nav-link" data-page="lessons">Tzeptosoft Products</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact-us.html" class="nav-link" data-page="Tzeptosoft">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link active" data-page="about">About</a>
+          </li>
+        </ul>
+      </nav>
 
-      <h2>Why This Shit Hits Hard 🌍</h2>
-      <p>Musashi wasn’t some armchair philosopher—he was a battle-hardened ronin who lived and died by his code. The Dokkōdō’s 21 precepts cut through modern bullshit like a katana. They’re about mastering your mind, shedding weakness, and walking the lone path with unbreakable discipline. This ain’t theory—it’s a warrior’s life distilled into raw truth. 🦁</p>
-      <p><strong>Badass Moment:</strong> Jiro in Tokyo lives by precept #1—accepting reality. Lost his job, didn’t cry, pivoted to freelancing, now stacks cash. Vibe: Samurai. Legacy: Fucking built. 🗡️</p>
+      <!-- Action Buttons & Search -->
+      <div class="actions-section">
+        <!-- Search -->
+        <div class="search-container">
+          <button class="search-toggle" aria-label="Toggle search" aria-expanded="false" id="searchToggle">
+            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.35-4.35"></path>
+            </svg>
+          </button>
+          <div class="search-box" id="searchBox">
+            <input type="search" placeholder="Search lessons, tactics, blueprints..." class="search-input" aria-label="Search content">
+            <button class="search-submit" aria-label="Search">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.35-4.35"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
 
-      <h2>How to Live the Dokkōdō Every Damn Day 🛠️</h2>
-      <ul>
-        <li><strong>Embrace Reality:</strong> Journal daily—what’s true, not what you wish. Stay grounded. 🧠</li>
-        <li><strong>Kill Weakness:</strong> Cut one pleasure trap (social media, junk food) this week. 🚫</li>
-        <li><strong>Stay Sharp:</strong> Question one belief or habit daily—don’t be an NPC. 🤔</li>
-        <li><strong>Act Bold:</strong> Take one risk this week, no regrets, no hesitation. ⚡</li>
-        <li><strong>Walk Alone:</strong> Define your path, commit to it, ignore the crowd. 🛤️</li>
-      </ul>
+        <!-- CTA Button -->
+        <a href="mailto:tzeptosoft@gmail.com" class="cta-button" aria-label="Join Tzeptosoft">
+          <span class="button-text">Join Tzeptosoft</span>
+          <svg class="button-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
 
-      <h2>Conclusion: Forge Your Fucking Samurai Soul! 🔥</h2>
-      <p>This is your goddamn war cry, warriors! Musashi’s Dokkōdō is your map to crush distractions, master discipline, and carve a legendary life. The world wants you soft and scattered. Tzeptosoft wants you a fucking samurai! 😈</p>
-      <p><strong>Your Mission:</strong></p>
-      <ul>
-        <li><span class="highlight">Start Tonight:</span> Pick one precept, act on it now. No excuses. ⚡</li>
-        <li><span class="highlight">Declare War:</span> Post on X: “I’m forging my samurai soul with Tzeptosoft’s Dokkōdō! 💪” Tag @tzeptosoft. 🗣️</li>
-        <li><span class="highlight">Strike Hard:</span> Cut one distraction (app, habit, person) this week. 🚪</li>
-        <li><span class="highlight">Stack Wins:</span> Master one skill or save $50 this month. 📈</li>
-        <li><span class="highlight">Burn Weakness:</span> Write “I’m a fucking samurai” 10 times. Share on X. 🔥</li>
-      </ul>
-      <p>Join Tzeptosoft’s SamuraiForge! Grab our “Dokkōdō Blueprint” PDF—tactics to master <strong>self-discipline</strong> and fucking dominate. No bullshit. Only fire. <span class="highlight">Break free.</span> Be a goddamn legend! 🌟</p>
-      <blockquote>“Stray from the path, lose your soul. Walk alone, win forever.” —Tzeptosoft’s SamuraiForge 🔥</blockquote>
-      <p class="signature">Your brother, Clinton 😎</p>
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false" id="mobileMenuToggle">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
     </div>
-    <div class="terminal-content">
-      <div class="terminal-line" data-text="> Accessing Tzeptosoft archives... 🚀"></div>
-      <div class="terminal-line" data-text="> Loading Dokkodo Blueprint... 💪"></div>
-      <div class="terminal-line" data-text="> Signal transfer: FUCKING SUCCESS ✅"></div>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+      <div class="mobile-menu">
+        <div class="mobile-menu-header">
+          <a href="../index.html" class="mobile-logo">
+            <img src="/assets/images/tzeptosoft-logo.webp" alt="Tzeptosoft" width="40" height="40">
+            <span>TZEPTOSOFT</span>
+          </a>
+          <button class="mobile-menu-close" id="mobileMenuClose">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 6 6 18"></path>
+              <path d="m6 6 12 12"></path>
+            </svg>
+          </button>
+        </div>
+        <nav class="mobile-nav">
+          <a href="../index.html" class="mobile-nav-link">New? Start Here</a>
+          <a href="blog.html" class="mobile-nav-link">Blog Archives</a>
+          <a href="lessons" class="mobile-nav-link">Tzeptosoft Products</a>
+          <a href="contact-us.html" class="mobile-nav-link">Contact Us</a>
+          <a href="about.html" class="mobile-nav-link active">About</a>
+        </nav>
+        <div class="mobile-actions">
+          <a href="mailto:tzeptosoft@gmail.com" class="mobile-cta-button">Join Tzeptosoft 🚀</a>
+        </div>
+      </div>
     </div>
-    <div class="newsletter-container">
-      <h3>Join the SamuraiForge Newsletter 🔥</h3>
-      <p>Get weekly <strong>self-discipline</strong> hacks, <strong>samurai wisdom</strong>, and tactics to fucking dominate life. No bullshit, only fire! 💥</p>
-      <input type="email" placeholder="Enter your email" aria-label="Email for newsletter">
-      <button type="button">Subscribe 🚀</button>
+  </header>
+
+  <div class="main-content">
+    <div id="galaxy-bg"></div>
+    <div id="matrix-bg"></div>
+    <div id="particles"></div>
+    <div id="cursor-trail"></div>
+
+    <div class="hero">
+      <h1>TZEPTOSOFT</h1>
+      <div class="matrix-animation">DOKKODO: 21 PRECEPTS</div>
+      <h2>Master Self-Discipline, Walk the Lone Path, Be a Fucking Legend 🔥</h2>
+      <a href="mailto:tzeptosoft@gmail.com" class="btn-cta" aria-label="Contact Tzeptosoft">Join the SamuraiForge 💪</a>
+      <div class="holo-element" style="top: 20%; left: 10%;"></div>
+      <div class="holo-element" style="top: 30%; right: 15%;"></div>
+      <div class="holo-element" style="bottom: 25%; left: 20%;"></div>
+      <div class="holo-element" style="bottom: 15%; right: 10%;"></div>
     </div>
-    <div class="social-share">
-      <h3>Share This Badass Blueprint 🗣️</h3>
-      <a href="https://twitter.com/intent/tweet?url=https://tzeptosoft.com/blog/dokkodo&text=Musashi’s Dokkodo: 21 Precepts to fucking dominate with Tzeptosoft’s SamuraiForge! 🔥" aria-label="Share on Twitter">Twitter</a>
-      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://tzeptosoft.com/blog/dokkodo" aria-label="Share on LinkedIn">LinkedIn</a>
-      <a href="https://www.facebook.com/sharer/sharer.php?u=https://tzeptosoft.com/blog/dokkodo" aria-label="Share on Facebook">Facebook</a>
-      <a href="https://www.reddit.com/submit?url=https://tzeptosoft.com/blog/dokkodo&title=Musashi’s Dokkodo: 21 Precepts for Self-Discipline" aria-label="Share on Reddit">Reddit</a>
-      <a href="https://api.whatsapp.com/send?text=Musashi’s Dokkodo: 21 Precepts to fucking dominate with Tzeptosoft’s SamuraiForge! 🔥 https://tzeptosoft.com/blog/dokkodo" aria-label="Share on WhatsApp">WhatsApp</a>
+
+    <div class="blog-container">
+      <header>
+        <h1>Musashi's Dokkōdō: 21 Precepts for Self-Discipline 💥</h1>
+        <div class="author-info">
+          <p class="author-name">Clinton | Tzeptosoft 😎</p>
+          <img src="/assets/images/tzeptosoft-logo.webp" alt="Tzeptosoft Logo" class="author-logo" width="100" height="100" loading="lazy">
+          <p class="author-title">Master of SamuraiForge 🛠️</p>
+        </div>
+        <hr>
+      </header>
+
+      <div class="cta-container">
+        <h3 class="cta-title">Ready to Fucking Master Your Path? 🗡️</h3>
+        <a href="mailto:tzeptosoft@gmail.com" class="cta-button">Join the SamuraiForge 🚀</a>
+      </div>
+
+      <div class="content">
+        <p><strong>Yo, warriors_Miyamoto Musashi, the baddest samurai to ever swing a blade, dropped the Dokkōdō in 1645, a week before he kicked it. 💪</strong> This ain't no fluffy self-help book_it's 21 raw, no-bullshit rules for self-discipline, written for his top disciple. Called "The Path of Aloneness," it's your blueprint to crush weakness, stay sharp, and walk the lone road like a fucking legend. Let's slice into this samurai wisdom and forge your empire! Alternatively you can remain an asshole😈</p>
+
+        <h2>The 21 Precepts of Dokkōdō 🔥</h2>
+        <ul>
+          <li><strong>1. Accept Every Shit as It Is:</strong> Stop whining about what you can't change_past, present, or reality. Rigid worldviews make you dumb.You don't have control_over your past nor present but you can fully control your future. Bend your mind to truth, don't twist truth to fit your ego.Fighting againast reality is weakening one self 🧠 <span class="highlight">Tactic:</span> Journal one unchangeable fact you've been dodging today.</li>
+          <li><strong>2. Don't Chase Cheap Pleasure for pleasure sake:</strong> Pursue of pleasure will distract you from the path of real discipline. Pleasure for pleasure's sake turns you into a junkie_drugs, booze, or dopamine hits(Avarage poeple watch/masterbate to porn,gamble with little money they have, play video games,party for no reason taking drugs-I mean weed is also bad!,they will hate me for pointing out the unconvertable truth,watch tv,scroll Tiktok prank videos and wont even Subscribe to Tzeptosoft). Real joy comes from purpose, not unearned highs. Look at Buddha: prince, had it all, still empty. 🕉️ Seek joy from the process not distractions!<span class="highlight">Tactic:</span> Skip one guilty pleasure today.</li>
+          <li><strong>3. Never Trust Half-Assed Feelings:</strong> This is the enemy of progress."Kinda" believing in something is a trap. Go all-in or step back to rethink. Half-hearted moves get you wrecked. ⚔️Everyone has been through that road and you all know where it leads "I wish I knew! - Fuck,now you know: partial feeling will get you cooked" <span class="highlight">Tactic:</span> Pause one shaky decision and reassess tonight.</li>
+          <li><strong>4.Think lightly for yourself and deeply for this fucking world:</strong> Self-obsession blinds you.I think deply for the world for poeple like you, Yes! You- Tzeptosoftis here to save you! Build a mental map of reality and keep upgrading it. A light ego adapts faster, thrives harder. 🌍 <span class="highlight">Tactic:</span> Read one new article or book chapter today.(Tzeptosoft is an exellent starting point!)</li>
+          <li><strong>5. Detach from Desires your whole life:</strong> Gents this is the trap that has killed men and I mean fucking kings like Solomon! Detatch yourself from everthing and you will have everthing.The same reason God cares but still detaches from us physicaly.All great religions support this for a reason. Craving sex, validation, or status makes you a puppet. Stay clear-headed, don't let wants own you. 🧘 <span class="highlight">Tactic:</span> Name one desire you're too attached to and cut its hold this week.</li>
+          <li><strong>6. Regret is a wasted emotion!-Fuck Regret:</strong> Regret's a sunk cost_wasted energy.I have been through hell than most of you,fuck it I left it in hell and am here stacking wins!. Learn from mistakes, move on. You can't rewrite the past, so don't cry over it. 🚫 <span class="highlight">Tactic:</span> Write one lesson from a past fuck-up and let it go.If you can't let go you are chained to the past a victim of your own prison!</li>
+          <li><strong>7. Jealousy's for Losers:</strong> Envy just fucks you up, not them. Get inspired by others' wins, don't sulk. Wants are endless_focus on your own shit. 😎 <span class="highlight">Tactic:</span> Compliment someone's success today.</li>
+          <li><strong>8. Don't Cling to People:</strong> Separation's life_people come, people go. Love without attachment, like a crow leaving a pond. Only God's constant. 🦅 <span class="highlight">Tactic:</span> Let go of one clingy relationship thought today.</li>
+          <li><strong>9. Drop Resentmentat all costs and you will save a generation:</strong> Bitching and moaning_about yourself or others_drains your soul. Stay calm, keep moving. No one's got time for your grudges. 🛡️ <span class="highlight">Tactic:</span> Forgive one grudge this week.</li>
+          <li><strong>10. Lust and Love Cloud Judgment:</strong> Both weaken the spirit! Both make you dumb_men have lost empires over a quick fuck. Stay sharp, don't let feelings steer. 💔 <span class="highlight">Tactic:</span> Avoid one impulsive romantic move today.</li>
+          <li><strong>11. Ditch Preferences:</strong> No expectations, no disappointments. An open mind eats life's variety for breakfast. Stay flexible, win more. 🌊 <span class="highlight">Tactic:</span> Try one new experience this week.</li>
+          <li><strong>12. Live Anywhere:</strong> Happy? A jungle or a palace is the same. Sad? No mansion fixes it. Internet's your home_grind from anywhere. 🏕️ <span class="highlight">Tactic:</span> Work from a new spot today.</li>
+          <li><strong>13. Food's Fuel, Not Fun:</strong> Obsessing over taste is for materialistic suckers. Eat for energy, not indulgence. Warriors don't chase "comfort food." 🍲 <span class="highlight">Tactic:</span> Cook a simple, healthy meal tonight.</li>
+          <li><strong>14. Drop Dead Weight:</strong> Possessions you don't need slow you down_physically and mentally. Travel light, like a ronin. 🧳 <span class="highlight">Tactic:</span> Declutter one item today.</li>
+          <li><strong>15. Think for Yourself:</strong> Blindly following trends makes you an NPC. Question everything_popular doesn't mean smart. 🧠 <span class="highlight">Tactic:</span> Challenge one common belief today.</li>
+          <li><strong>16. Master One Skill:</strong> Musashi said focus, but today's world rewards polymaths.Have a good knowledge landscape and it will save your ass. Still, nail one core skill before branching out. ⚒️ <span class="highlight">Tactic:</span> Practice one skill for 30 minutes today.</li>
+          <li><strong>17. Death Ain't Shit:</strong> Fear of dying weakens you. Treat life like a sparring match_calm, bold, ready. We're all dust eventually. 💀 <span class="highlight">Tactic:</span> Meditate on mortality for 5 minutes tonight.</li>
+          <li><strong>18. Don't Hoard for Old Age:</strong> Musashi wandered, but you're no ronin. Save smart, hit financial independence, then focus on family and health. 💸 <span class="highlight">Tactic:</span> Save $10 or research investments today.</li>
+          <li><strong>19. Respect Gods, Don't Beg:</strong> Honor the divine, but don't lean on luck. Grind hard, make your own breaks. God helps those who help themselves. 🙏 <span class="highlight">Tactic:</span> Plan one bold move without expecting miracles.</li>
+          <li><strong>20. Honor Over Body:</strong> Don't do slimy shit, even if it saves your ass. Honor's recoverable; death's game over. Live by your code. ⚖️ <span class="highlight">Tactic:</span> Define one core ethical rule today.</li>
+          <li><strong>21. Never Stray from Your Path:</strong> Believe in something? Go all-in. Discipline beats motivation always. Be  disciplined like a monk. Time's short, energy fades_don't waste a second on half-assed shit. 🛤️ <span class="highlight">Tactic:</span> Commit to one goal with full focus this week.</li>
+        </ul>
+
+        <h2>Why This Shit Hits Hard 🌍</h2>
+        <p>Musashi wasn't some armchair philosopher_he was a battle-hardened ronin who lived and died by his code. The Dokkōdō's 21 precepts cut through modern bullshit like a katana. They're about mastering your mind, shedding weakness, and walking the lone path with unbreakable discipline. This ain't theory_it's a warrior's life distilled into raw truth. 🦁</p>
+        <p><strong>Badass Moment:</strong> Jiro in Tokyo lives by precept #1_accepting reality. Lost his job, didn't cry, pivoted to freelancing, now stacks cash. Vibe: Samurai. Legacy: Fucking built. 🗡️</p>
+
+        <h2>How to Live the Dokkōdō Every Damn Day 🛠️</h2>
+        <ul>
+          <li><strong>Embrace Reality:</strong> Journal daily_what's true, not what you wish. Stay grounded. 🧠</li>
+          <li><strong>Kill Weakness:</strong> Cut one pleasure trap (social media, junk food) this week. 🚫</li>
+          <li><strong>Stay Sharp:</strong> Question one belief or habit daily_don't be an NPC. 🤔</li>
+          <li><strong>Act Bold:</strong> Take one risk this week, no regrets, no hesitation. ⚡</li>
+          <li><strong>Walk Alone:</strong> Define your path, commit to it, ignore the crowd. 🛤️</li>
+        </ul>
+
+        <h2>Conclusion: Forge Your Fucking Samurai Soul! 🔥</h2>
+        <p>This is your goddamn war cry, warriors! Musashi's Dokkōdō is your map to crush distractions, master discipline, and carve a legendary life. The world wants you soft and scattered. Tzeptosoft wants you a fucking samurai! 😈</p>
+        <p><strong>Your Mission:</strong></p>
+        <ul>
+          <li><span class="highlight">Start Tonight:</span> Pick one precept, act on it now. No excuses. ⚡</li>
+          <li><span class="highlight">Declare War:</span> Post on X: "I'm forging my samurai soul with Tzeptosoft's Dokkōdō! 💪" Tag @tzeptosoft. 🗣️</li>
+          <li><span class="highlight">Strike Hard:</span> Cut one distraction (app, habit, person) this week. 🚪</li>
+          <li><span class="highlight">Stack Wins:</span> Master one skill or save $50 this month. 📈</li>
+          <li><span class="highlight">Burn Weakness:</span> Write "I'm a fucking samurai" 10 times. Share on X. 🔥</li>
+        </ul>
+        <p>Join Tzeptosoft's SamuraiForge! Grab our "Dokkōdō Blueprint" PDF_tactics to master <strong>self-discipline</strong> and fucking dominate. No bullshit. Only fire. <span class="highlight">Break free.</span> Be a goddamn legend! 🌟</p>
+        <blockquote>"Stray from the path, lose your soul. Walk alone, win forever." _Tzeptosoft's SamuraiForge 🔥</blockquote>
+        <p class="signature">Your brother, Clinton 😎</p>
+      </div>
+
+      <div class="terminal-content">
+        <div class="terminal-line" data-text="> Accessing Tzeptosoft archives... 🚀"></div>
+        <div class="terminal-line" data-text="> Loading Dokkodo Blueprint... 💪"></div>
+        <div class="terminal-line" data-text="> Signal transfer: FUCKING SUCCESS ✅"></div>
+      </div>
+
+      <div class="newsletter-container">
+        <h3>Join the SamuraiForge Newsletter 🔥</h3>
+        <p>Get weekly <strong>self-discipline</strong> hacks, <strong>samurai wisdom</strong>, and tactics to fucking dominate life. No bullshit, only fire! 💥</p>
+        <input type="email" placeholder="Enter your email" aria-label="Email for newsletter">
+        <button type="button">Subscribe 🚀</button>
+      </div>
+
+      <div class="social-share">
+        <h3>Share This Badass Blueprint 🗣️</h3>
+        <a href="https://twitter.com/intent/tweet?url=https://tzeptosoft.com/blog/dokkodo&text=Musashi's Dokkodo: 21 Precepts to fucking dominate with Tzeptosoft's SamuraiForge! 🔥" aria-label="Share on Twitter">Twitter</a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://tzeptosoft.com/blog/dokkodo" aria-label="Share on LinkedIn">LinkedIn</a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://tzeptosoft.com/blog/dokkodo" aria-label="Share on Facebook">Facebook</a>
+        <a href="https://www.reddit.com/submit?url=https://tzeptosoft.com/blog/dokkodo&title=Musashi's Dokkodo: 21 Precepts for Self-Discipline" aria-label="Share on Reddit">Reddit</a>
+        <a href="https://api.whatsapp.com/send?text=Musashi's Dokkodo: 21 Precepts to fucking dominate with Tzeptosoft's SamuraiForge! 🔥 https://tzeptosoft.com/blog/dokkodo" aria-label="Share on WhatsApp">WhatsApp</a>
+      </div>
     </div>
+
+    <footer>
+      <p>© 2025 Tzeptosoft | All Rights Fucking Reserved 🔥</p>
+      
+    </footer>
   </div>
-  <footer>
-    <p>© 2025 Tzeptosoft | All Rights Fucking Reserved 🔥</p>
-     
-  </footer>
+
   <script>
     document.addEventListener('DOMContentLoaded', () => {
+      // Header Functionality
+      const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+      const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+      const mobileMenuClose = document.getElementById('mobileMenuClose');
+      const searchToggle = document.getElementById('searchToggle');
+      const searchBox = document.getElementById('searchBox');
+      const searchInput = document.querySelector('.search-input');
+
+      // Mobile Menu Toggle
+      mobileMenuToggle?.addEventListener('click', () => {
+        mobileMenuOverlay?.classList.toggle('active');
+        document.body.style.overflow = mobileMenuOverlay?.classList.contains('active') ? 'hidden' : '';
+      });
+
+      mobileMenuClose?.addEventListener('click', () => {
+        mobileMenuOverlay?.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+
+      mobileMenuOverlay?.addEventListener('click', (e) => {
+        if (e.target === mobileMenuOverlay) {
+          mobileMenuOverlay.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      });
+
+      // Search Toggle
+      searchToggle?.addEventListener('click', () => {
+        const isActive = searchBox?.classList.contains('active');
+        searchBox?.classList.toggle('active');
+        searchToggle?.setAttribute('aria-expanded', !isActive);
+        
+        if (!isActive && searchInput) {
+          searchInput.focus();
+        }
+      });
+
+      // Close search and mobile menu on escape
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          searchBox?.classList.remove('active');
+          searchToggle?.setAttribute('aria-expanded', 'false');
+          mobileMenuOverlay?.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      });
+
+      // Search functionality
+      const searchForm = document.querySelector('.search-box');
+      searchForm?.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const query = searchInput?.value.trim();
+        if (query) {
+          console.log('Searching for:', query);
+          // Implement your search logic here
+        }
+      });
+
+      // Header scroll effect
+      let lastScrollY = window.scrollY;
+      window.addEventListener('scroll', () => {
+        const header = document.querySelector('.main-header');
+        const currentScrollY = window.scrollY;
+
+        if (currentScrollY > 100) {
+          header?.classList.add('scrolled');
+        } else {
+          header?.classList.remove('scrolled');
+        }
+
+        lastScrollY = currentScrollY;
+      });
+
       // Preloader
       window.addEventListener('load', () => {
         document.getElementById('preloader').style.display = 'none';

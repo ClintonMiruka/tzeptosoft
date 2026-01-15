@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="💥 Tzeptosoft’s ultimate guide to manufacturing luck. Be bold, persistent, unique, and prepared to seize opportunities and dominate life. Join the KingForge movement to engineer your own good fortune! 🔥">
-  <meta name="keywords" content="luck, self-improvement, productivity, success, Tzeptosoft">
+  <meta name="description" content="💥 Tzeptosoft's ultimate manifesto on manufacturing luck. Stop waiting for fate_engineer your own good fortune through boldness, persistence, unique action, and relentless preparation. Join the KingForge movement to seize opportunities, dominate life, and become the architect of your destiny! 🔥">
+  <meta name="keywords" content="manufacture luck, engineer fortune, self-improvement, productivity, success mindset, bold action, persistent execution, unique value, opportunity capture, Tzeptosoft, KingForge, fortune creation, luck hacking, destiny engineering">
   <meta name="author" content="Clinton | Tzeptosoft">
   <!-- Open Graph Tags -->
   <meta property="og:title" content="How to Manufacture Luck – KingForge Edition | Tzeptosoft">
-  <meta property="og:description" content="💥 Tzeptosoft’s ultimate guide to manufacturing luck. Be bold, persistent, unique, and prepared to seize opportunities and dominate life. Join the KingForge movement to engineer your own good fortune! 🔥">
+  <meta property="og:description" content="💥 Tzeptosoft's ultimate manifesto on manufacturing luck. Stop waiting for fate_engineer your own good fortune through boldness, persistence, unique action, and relentless preparation. Join the KingForge movement to seize opportunities, dominate life, and become the architect of your destiny! 🔥">
   <meta property="og:image" content="https://tzeptosoft.com/assets/manufacture-luck.webp">
   <meta property="og:url" content="https://tzeptosoft.com/blog/manufacture-luck">
   <meta property="og:type" content="article">
   <!-- Twitter Card Tags -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="How to Manufacture Luck – KingForge Edition | Tzeptosoft">
-  <meta name="twitter:description" content="💥 Tzeptosoft’s ultimate guide to manufacturing luck. Be bold, persistent, unique, and prepared to seize opportunities and dominate life. Join the KingForge movement to engineer your own good fortune! 🔥">
+  <meta name="twitter:description" content="💥 Tzeptosoft's ultimate manifesto on manufacturing luck. Stop waiting for fate_engineer your own good fortune through boldness, persistence, unique action, and relentless preparation. Join the KingForge movement to seize opportunities, dominate life, and become the architect of your destiny! 🔥">
   <meta name="twitter:image" content="https://tzeptosoft.com/assets/manufacture-luck.webp">
   <title>How to Manufacture Luck – KingForge Edition | Tzeptosoft</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Mono:wght@700&family=Orbitron:wght@900&family=JetBrains+Mono:wght@400;700&display=swap">
@@ -26,7 +26,7 @@
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     "headline": "How to Manufacture Luck – KingForge Edition",
-    "description": "💥 Tzeptosoft’s ultimate guide to manufacturing luck. Be bold, persistent, unique, and prepared to seize opportunities and dominate life. Join the KingForge movement to engineer your own good fortune! 🔥",
+    "description": "💥 Tzeptosoft's ultimate manifesto on manufacturing luck. Stop waiting for fate_engineer your own good fortune through boldness, persistence, unique action, and relentless preparation. Join the KingForge movement to seize opportunities, dominate life, and become the architect of your destiny! 🔥",
     "author": {
       "@type": "Person",
       "name": "Clinton"
@@ -53,6 +53,457 @@
       --text-dark: #FFFFFF;
       --matrix-green: #00FF00;
     }
+
+    /* Header Styles */
+    .main-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(11, 15, 26, 0.95);
+      backdrop-filter: blur(20px);
+      border-bottom: 2px solid transparent;
+      animation: headerSlideIn 0.6s ease-out;
+      box-shadow: 0 8px 32px rgba(0, 102, 204, 0.1);
+    }
+
+    @keyframes headerSlideIn {
+      from {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .main-header.scrolled {
+      border-bottom-color: rgba(0, 204, 255, 0.2);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 70px;
+      position: relative;
+    }
+
+    .logo-section {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .logo-wrapper:hover {
+      transform: scale(1.05);
+    }
+
+    .logo-image {
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(0, 204, 255, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    .logo-primary {
+      font-size: 1.4em;
+      font-weight: 900;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-shadow: 0 0 10px rgba(0, 102, 204, 0.5);
+    }
+
+    .logo-subtitle {
+      font-size: 0.75em;
+      color: var(--secondary);
+      font-weight: 600;
+      opacity: 0.8;
+      margin-top: 2px;
+    }
+
+    .nav-section {
+      display: flex;
+    }
+
+    .nav-list {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .nav-item {
+      position: relative;
+    }
+
+    .nav-link {
+      display: block;
+      padding: 8px 16px;
+      color: var(--text-dark);
+      text-decoration: none;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 0.95em;
+      position: relative;
+      transition: all 0.3s ease;
+      border-radius: 6px;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--secondary);
+      background: rgba(0, 204, 255, 0.1);
+      box-shadow: 0 0 20px rgba(0, 204, 255, 0.2);
+      transform: translateY(-2px);
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 80%;
+    }
+
+    .actions-section {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .search-container {
+      position: relative;
+    }
+
+    .search-toggle {
+      background: none;
+      border: 2px solid rgba(0, 204, 255, 0.3);
+      border-radius: 8px;
+      padding: 8px;
+      color: var(--secondary);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .search-toggle:hover {
+      border-color: var(--secondary);
+      box-shadow: 0 0 20px rgba(0, 204, 255, 0.4);
+      transform: scale(1.05);
+    }
+
+    .search-icon {
+      width: 20px;
+      height: 20px;
+    }
+
+    .search-box {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 300px;
+      background: rgba(28, 28, 28, 0.95);
+      border: 2px solid var(--secondary);
+      border-radius: 8px;
+      padding: 12px;
+      margin-top: 8px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 40px rgba(0, 102, 204, 0.2);
+      z-index: 1001;
+    }
+
+    .search-box.active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .search-input {
+      width: 100%;
+      background: rgba(18, 18, 18, 0.8);
+      border: 1px solid rgba(0, 204, 255, 0.3);
+      border-radius: 6px;
+      padding: 10px 12px;
+      color: var(--text-dark);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.9em;
+    }
+
+    .search-input::placeholder {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .search-input:focus {
+      outline: none;
+      border-color: var(--secondary);
+      box-shadow: 0 0 0 3px rgba(0, 204, 255, 0.2);
+    }
+
+    .search-submit {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: var(--secondary);
+      cursor: pointer;
+      padding: 4px;
+      width: 20px;
+      height: 20px;
+    }
+
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: var(--accent);
+      text-decoration: none;
+      border-radius: 8px;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 600;
+      font-size: 0.9em;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(0, 102, 204, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: left 0.5s;
+    }
+
+    .cta-button:hover::before {
+      left: 100%;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(0, 102, 204, 0.4);
+    }
+
+    .button-icon {
+      width: 16px;
+      height: 16px;
+      transition: transform 0.3s ease;
+    }
+
+    .cta-button:hover .button-icon {
+      transform: translateX(4px);
+    }
+
+    .mobile-menu-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 30px;
+      height: 30px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+      z-index: 1001;
+    }
+
+    .hamburger-line {
+      width: 100%;
+      height: 3px;
+      background: var(--secondary);
+      border-radius: 2px;
+      transition: all 0.3s ease;
+      transform-origin: center;
+    }
+
+    .mobile-menu-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: rgba(11, 15, 26, 0.98);
+      backdrop-filter: blur(20px);
+      z-index: 999;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.4s ease;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .mobile-menu-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .mobile-menu {
+      width: 320px;
+      max-width: 90vw;
+      background: linear-gradient(135deg, rgba(18, 18, 18, 0.95), rgba(11, 15, 26, 0.95));
+      border-left: 3px solid var(--secondary);
+      padding: 0;
+      transform: translateX(100%);
+      transition: transform 0.4s ease;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+    }
+
+    .mobile-menu-overlay.active .mobile-menu {
+      transform: translateX(0);
+    }
+
+    .mobile-menu-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 20px;
+      border-bottom: 1px solid rgba(0, 204, 255, 0.2);
+    }
+
+    .mobile-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-dark);
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.2em;
+    }
+
+    .mobile-menu-close {
+      background: none;
+      border: none;
+      color: var(--secondary);
+      cursor: pointer;
+      padding: 8px;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .mobile-menu-close:hover {
+      background: rgba(0, 204, 255, 0.1);
+      box-shadow: 0 0 20px rgba(0, 204, 255, 0.2);
+    }
+
+    .mobile-nav {
+      padding: 20px 0;
+      flex: 1;
+    }
+
+    .mobile-nav-link {
+      display: block;
+      padding: 16px 24px;
+      color: var(--text-dark);
+      text-decoration: none;
+      font-family: 'Inter', sans-serif;
+      font-size: 1.1em;
+      font-weight: 500;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .mobile-nav-link::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 0;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      transition: width 0.3s ease;
+      z-index: -1;
+    }
+
+    .mobile-nav-link:hover::before,
+    .mobile-nav-link.active::before {
+      width: 100%;
+    }
+
+    .mobile-nav-link:hover,
+    .mobile-nav-link.active {
+      color: var(--accent);
+      padding-left: 32px;
+    }
+
+    .mobile-actions {
+      padding: 20px 24px;
+      border-top: 1px solid rgba(0, 204, 255, 0.2);
+    }
+
+    .mobile-cta-button {
+      display: inline-block;
+      width: 100%;
+      padding: 16px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: var(--accent);
+      text-decoration: none;
+      border-radius: 8px;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 600;
+      text-align: center;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(0, 102, 204, 0.3);
+    }
+
+    .mobile-cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(0, 102, 204, 0.4);
+    }
+
     body {
       margin: 0;
       padding: 0;
@@ -62,6 +513,11 @@
       line-height: 1.6;
       overflow-x: hidden;
     }
+
+    .main-content {
+      position: relative;
+    }
+
     #preloader {
       position: fixed;
       top: 0;
@@ -74,15 +530,18 @@
       justify-content: center;
       z-index: 9999;
     }
+
     .loader {
       font-family: 'JetBrains Mono', monospace;
       color: var(--secondary);
       font-size: 1.5em;
       animation: blinkCaret 0.5s step-end infinite;
     }
+
     @keyframes blinkCaret {
       50% { border-color: transparent; }
     }
+
     #galaxy-bg {
       position: fixed;
       top: 0;
@@ -93,10 +552,12 @@
       z-index: -3;
       animation: rotateGalaxy 60s infinite linear;
     }
+
     @keyframes rotateGalaxy {
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
     }
+
     #matrix-bg {
       position: fixed;
       top: 0;
@@ -106,6 +567,7 @@
       z-index: -2;
       opacity: 0.7;
     }
+
     .matrix-char {
       position: absolute;
       font-family: 'JetBrains Mono', monospace;
@@ -114,10 +576,12 @@
       opacity: 0.8;
       animation: matrix-fall 5s linear infinite;
     }
+
     @keyframes matrix-fall {
       0% { transform: translateY(-100vh); opacity: 0.8; }
       100% { transform: translateY(100vh); opacity: 0; }
     }
+
     #particles {
       position: fixed;
       top: 0;
@@ -126,6 +590,7 @@
       height: 100%;
       z-index: -1;
     }
+
     .particle {
       position: absolute;
       width: 5px;
@@ -134,11 +599,13 @@
       border-radius: 50%;
       animation: drift 10s infinite linear;
     }
+
     @keyframes drift {
       0% { transform: translate(0, 0); opacity: 0.5; }
       50% { opacity: 1; }
       100% { transform: translate(100px, 100px); opacity: 0.5; }
     }
+
     #cursor-trail {
       position: fixed;
       width: 30px;
@@ -146,16 +613,19 @@
       background: radial-gradient(circle, var(--secondary), transparent);
       border-radius: 50%;
       pointer-events: none;
-      z-index: 1000;
+      z-index: 100;
       transition: all 0.1s ease;
     }
+
     .hero {
       text-align: center;
-      padding: 100px 20px;
+      padding: 120px 20px 100px;
       background: rgba(18, 18, 18, 0.9);
       position: relative;
       z-index: 1;
+      margin-top: 0;
     }
+
     .hero h1 {
       font-size: 5em;
       font-family: 'Orbitron', sans-serif;
@@ -166,6 +636,7 @@
       animation: gradientShift 3s ease infinite;
       margin-bottom: 0;
     }
+
     .matrix-animation {
       font-family: 'JetBrains Mono', monospace;
       font-size: 1.5em;
@@ -176,29 +647,35 @@
       white-space: nowrap;
       display: inline-block;
     }
+
     .matrix-animation.typing {
       animation: typeMatrix 2s steps(20) forwards, glitch 0.1s infinite alternate;
     }
+
     @keyframes typeMatrix {
       from { width: 0; }
       to { width: 100%; }
     }
+
     @keyframes glitch {
       0% { transform: translate(0); opacity: 1; }
       50% { transform: translate(2px, -2px); opacity: 0.8; }
       100% { transform: translate(-2px, 2px); opacity: 0.9; }
     }
+
     @keyframes gradientShift {
       0% { background-position: 0%; }
       50% { background-position: 100%; }
       100% { background-position: 0%; }
     }
+
     .hero h2 {
       font-size: 1.8em;
       color: var(--secondary);
       text-shadow: 0 0 10px var(--secondary);
       margin-top: 20px;
     }
+
     .btn-cta {
       background: linear-gradient(90deg, var(--primary), var(--secondary));
       color: var(--accent);
@@ -211,15 +688,18 @@
       margin-top: 20px;
       display: inline-block;
     }
+
     .btn-cta:hover {
       background: linear-gradient(90deg, var(--secondary), var(--primary));
       transform: scale(1.1);
     }
+
     @keyframes pulse {
       0% { box-shadow: 0 0 0 0 rgba(0, 102, 204, 0.4); }
       70% { box-shadow: 0 0 0 10px rgba(0, 102, 204, 0); }
       100% { box-shadow: 0 0 0 0 rgba(0, 102, 204, 0); }
     }
+
     .holo-element {
       position: absolute;
       width: 70px;
@@ -228,11 +708,13 @@
       border-radius: 50%;
       animation: float 4s infinite ease-in-out;
     }
+
     @keyframes float {
       0% { transform: translateY(0); opacity: 0.5; }
       50% { transform: translateY(-30px); opacity: 1; }
       100% { transform: translateY(0); opacity: 0.5; }
     }
+
     .blog-container {
       padding: 80px 20px;
       max-width: 900px;
@@ -241,11 +723,13 @@
       border: 3px solid var(--secondary);
       animation: borderGlow 2s infinite;
     }
+
     @keyframes borderGlow {
       0% { border-color: var(--primary); }
       50% { border-color: var(--secondary); }
       100% { border-color: var(--primary); }
     }
+
     .blog-container h1 {
       font-size: 2.5em;
       color: var(--secondary);
@@ -253,20 +737,40 @@
       font-family: 'Orbitron', sans-serif;
       text-align: center;
     }
+
     .blog-container h2 {
       font-size: 1.8em;
       color: var(--secondary);
       font-family: 'Orbitron', sans-serif;
       margin-top: 2em;
     }
+
+    .blog-container h3 {
+      font-size: 1.4em;
+      color: var(--secondary);
+      font-family: 'Orbitron', sans-serif;
+      margin-top: 1.5em;
+    }
+
     .blog-container p {
       color: var(--text-dark);
       font-size: 1.2em;
+      margin-bottom: 1.5em;
     }
+
+    .highlight {
+      color: var(--secondary);
+      font-weight: 600;
+      background: rgba(0, 204, 255, 0.1);
+      padding: 2px 4px;
+      border-radius: 3px;
+    }
+
     .blog-container ul {
       list-style: none;
       padding: 0;
     }
+
     .blog-container li {
       background: #1C1C1C;
       padding: 15px;
@@ -274,10 +778,12 @@
       margin-bottom: 15px;
       transition: transform 0.3s ease;
     }
+
     .blog-container li:hover {
       transform: translateY(-10px);
       box-shadow: 0 0 40px var(--secondary);
     }
+
     .blog-container blockquote {
       font-family: 'JetBrains Mono', monospace;
       color: var(--secondary);
@@ -285,49 +791,55 @@
       padding-left: 15px;
       margin: 20px 0;
       font-style: italic;
+      background: rgba(0, 204, 255, 0.05);
+      padding: 15px;
+      border-radius: 0 8px 8px 0;
     }
+
     .author-info {
       margin: 20px 0;
       text-align: center;
     }
+
     .author-name {
       font-family: 'JetBrains Mono', monospace;
       color: var(--secondary);
       font-size: 1.2em;
     }
+
     .author-title {
       color: var(--text-dark);
       font-size: 1em;
     }
+
     .author-logo {
       max-width: 100px;
       height: auto;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0, 204, 255, 0.3);
     }
+
     hr {
       border: 1px solid var(--secondary);
       margin: 20px 0;
     }
+
     .cta-container {
       text-align: center;
       margin: 20px 0;
+      padding: 20px;
+      background: rgba(0, 204, 255, 0.05);
+      border-radius: 8px;
+      border: 2px solid var(--secondary);
     }
+
     .cta-title {
       font-family: 'Orbitron', sans-serif;
       color: var(--secondary);
       font-size: 1.8em;
+      margin-bottom: 15px;
     }
-    .cta-button {
-      background: linear-gradient(90deg, var(--primary), var(--secondary));
-      color: var(--accent);
-      padding: 10px 20px;
-      text-decoration: none;
-      border-radius: 4px;
-      font-family: 'JetBrains Mono', monospace;
-    }
-    .cta-button:hover {
-      background: linear-gradient(90deg, var(--secondary), var(--primary));
-      transform: scale(1.05);
-    }
+
     .newsletter-container {
       text-align: center;
       margin: 40px 0;
@@ -336,16 +848,19 @@
       border: 2px solid var(--secondary);
       border-radius: 4px;
     }
+
     .newsletter-container h3 {
       font-family: 'Orbitron', sans-serif;
       color: var(--secondary);
       font-size: 1.8em;
       margin-bottom: 10px;
     }
+
     .newsletter-container p {
       font-size: 1.2em;
       margin-bottom: 20px;
     }
+
     .newsletter-container input[type="email"] {
       padding: 10px;
       width: 70%;
@@ -356,6 +871,7 @@
       font-family: 'JetBrains Mono', monospace;
       border-radius: 4px;
     }
+
     .newsletter-container button {
       padding: 10px 20px;
       background: linear-gradient(90deg, var(--primary), var(--secondary));
@@ -365,20 +881,24 @@
       font-family: 'JetBrains Mono', monospace;
       cursor: pointer;
     }
+
     .newsletter-container button:hover {
       background: linear-gradient(90deg, var(--secondary), var(--primary));
       transform: scale(1.05);
     }
+
     .social-share {
       margin: 2rem 0;
       text-align: center;
     }
+
     .social-share h3 {
       font-family: 'Orbitron', sans-serif;
       color: var(--secondary);
       font-size: 1.8em;
       margin-bottom: 10px;
     }
+
     .social-share a {
       margin: 0 10px;
       padding: 10px 20px;
@@ -387,11 +907,15 @@
       border-radius: 4px;
       text-decoration: none;
       font-family: 'JetBrains Mono', monospace;
+      transition: all 0.3s ease;
     }
+
     .social-share a:hover {
       background: var(--secondary);
       color: #000;
+      transform: translateY(-3px);
     }
+
     .terminal-content {
       background: #1a1a1a;
       padding: 20px;
@@ -402,231 +926,504 @@
       color: var(--secondary);
       font-size: 1em;
     }
+
     .terminal-line {
       opacity: 0;
       white-space: nowrap;
       overflow: hidden;
     }
+
     .terminal-line.typed {
       opacity: 1;
       animation: typing 0.5s steps(40) forwards;
     }
+
     @keyframes typing {
       from { width: 0; }
       to { width: 100%; }
     }
+
     footer {
       text-align: center;
       padding: 40px 20px;
       border-top: 1px solid #1E1E2E;
     }
-    .social-links {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 10px;
-    }
-    .social-links img {
-      width: 24px;
-      height: 24px;
-      transition: transform 0.2s ease;
-    }
-    .social-links img:hover {
-      transform: scale(1.2);
-    }
+
     .signature {
       font-family: 'JetBrains Mono', monospace;
       color: var(--secondary);
       font-size: 1.2em;
       margin-top: 20px;
       text-align: center;
+      padding: 10px;
+      border-top: 1px solid rgba(0, 204, 255, 0.3);
     }
+
+    @media (max-width: 1024px) {
+      .nav-list {
+        gap: 20px;
+      }
+      
+      .nav-link {
+        padding: 6px 12px;
+        font-size: 0.9em;
+      }
+    }
+
     @media (max-width: 768px) {
-      .hero h1 { font-size: 3em; }
-      .matrix-animation { font-size: 1.2em; }
-      .blog-container { padding: 40px 10px; }
-      .hero { padding: 60px 10px; }
-      .newsletter-container input[type="email"] { width: 90%; }
+      .header-container {
+        height: 60px;
+        padding: 0 16px;
+      }
+      
+      .nav-section {
+        display: none;
+      }
+      
+      .mobile-menu-toggle {
+        display: flex;
+      }
+      
+      .search-box {
+        width: 280px;
+        right: -20px;
+      }
+      
+      .logo-primary {
+        font-size: 1.2em;
+      }
+
+      .hero {
+        padding: 100px 10px 80px;
+      }
+
+      .hero h1 { 
+        font-size: 3em; 
+      }
+
+      .matrix-animation { 
+        font-size: 1.2em; 
+      }
+
+      .blog-container { 
+        padding: 40px 10px; 
+      }
+
+      .blog-container h1 { 
+        font-size: 1.8em; 
+      }
+
+      .terminal-content { 
+        font-size: 0.9em; 
+      }
+
+      .newsletter-container input[type="email"] { 
+        width: 90%; 
+      }
     }
+
     @media (max-width: 480px) {
-      .hero h1 { font-size: 2em; }
-      .matrix-animation { font-size: 1em; }
-      .hero h2 { font-size: 1.2em; }
-      .btn-cta { font-size: 1em; padding: 10px 20px; }
-      .blog-container h1 { font-size: 1.8em; }
-      .terminal-content { font-size: 0.9em; }
+      .header-container {
+        height: 56px;
+        padding: 0 12px;
+      }
+      
+      .search-box {
+        width: calc(100vw - 40px);
+        right: auto;
+        left: 12px;
+      }
+      
+      .cta-button {
+        padding: 10px 20px;
+        font-size: 0.85em;
+      }
+      
+      .mobile-menu {
+        width: 100vw;
+        max-width: none;
+      }
+
+      .hero h1 { 
+        font-size: 2em; 
+      }
+
+      .matrix-animation { 
+        font-size: 1em; 
+      }
+
+      .hero h2 { 
+        font-size: 1.2em; 
+      }
+
+      .btn-cta { 
+        font-size: 1em; 
+        padding: 10px 20px; 
+      }
+
+      .blog-container h1 { 
+        font-size: 1.8em; 
+      }
+
+      .terminal-content { 
+        font-size: 0.9em; 
+      }
+
+      .newsletter-container input[type="email"] { 
+        width: 90%; 
+      }
     }
+
     @media (prefers-reduced-motion: reduce) {
-      * { animation: none !important; transition: none !important; }
-    }
-    @media print {
-      body { background: white; color: black; }
-      .blog-container { background: white; border: none; }
-      a { color: var(--primary); text-decoration: underline; }
-      .btn-cta, .cta-button { background: white; color: var(--primary); border: 1px solid var(--primary); }
-      #galaxy-bg, #matrix-bg, #particles, #cursor-trail, .holo-element, .matrix-animation { display: none; }
+      * { 
+        animation: none !important; 
+        transition: none !important; 
+      }
     }
   </style>
 </head>
-<body>
+<body data-page="manufacture-luck">
   <div id="preloader">
     <div class="loader">Initializing Tzeptosoft... 🚀</div>
   </div>
-  <div id="galaxy-bg"></div>
-  <div id="matrix-bg"></div>
-  <div id="particles"></div>
-  <div id="cursor-trail"></div>
-  <div class="hero">
-    <h1>TZEPTOSOFT</h1>
-    <div class="matrix-animation">HOW TO MANUFACTURE LUCK</div>
-    <h2>Engineer Good Fortune, Seize Opportunities, Dominate Life 🔥</h2>
-    <a href="mailto:tzeptosoft@gmail.com" class="btn-cta" aria-label="Contact Tzeptosoft">Join the KingForge 💪</a>
-    <div class="holo-element" style="top: 20%; left: 10%;"></div>
-    <div class="holo-element" style="top: 30%; right: 15%;"></div>
-    <div class="holo-element" style="bottom: 25%; left: 20%;"></div>
-    <div class="holo-element" style="bottom: 15%; right: 10%;"></div>
-  </div>
-  <div class="blog-container">
-    <header>
-      <h1>How to Manufacture Luck – Be Lucky Always 💥</h1>
-      <div class="author-info">
-        <p class="author-name">Clinton | Tzeptosoft 😎</p>
-        <img src="/assets/images/tzeptosoft-logo.webp" alt="Tzeptosoft Logo" class="author-logo" width="100" height="100" loading="lazy">
-        <p class="author-title">Boss of KingForge 🛠️</p>
+
+  <!-- Professional Header -->
+  <header class="main-header">
+    <div class="header-container">
+      <!-- Logo Section -->
+      <div class="logo-section">
+        <a href="../index.html" class="logo-wrapper" aria-label="Tzeptosoft Home">
+          <img src="/assets/images/tzeptosoft-logo.webp" alt="Tzeptosoft Logo" class="logo-image" width="48" height="48" loading="lazy">
+          <div class="logo-text">
+            <span class="logo-primary">TZEPTOSOFT</span>
+            <span class="logo-subtitle">Escaping the Matrix</span>
+          </div>
+        </a>
       </div>
-      <hr>
-    </header>
-    <div class="cta-container">
-      <h3 class="cta-title">Ready to Engineer Your Fortune? 🗡️</h3>
-      <a href="mailto:tzeptosoft@gmail.com" class="cta-button">Join the KingForge 🚀</a>
+
+      <!-- Navigation -->
+      <nav class="nav-section" role="navigation" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="../index.html" class="nav-link" data-page="home">New? Start Here</a>
+          </li>
+          <li class="nav-item">
+            <a href="blog.html" class="nav-link" data-page="blog">Blog Archives</a>
+          </li>
+          <li class="nav-item">
+            <a href="lessons" class="nav-link" data-page="lessons">Tzeptosoft Products</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact-us.html" class="nav-link" data-page="Tzeptosoft">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link" data-page="about">About</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Action Buttons & Search -->
+      <div class="actions-section">
+        <!-- Search -->
+        <div class="search-container">
+          <button class="search-toggle" aria-label="Toggle search" aria-expanded="false" id="searchToggle">
+            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.35-4.35"></path>
+            </svg>
+          </button>
+          <div class="search-box" id="searchBox">
+            <input type="search" placeholder="Search lessons, tactics, blueprints..." class="search-input" aria-label="Search content">
+            <button class="search-submit" aria-label="Search">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.35-4.35"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- CTA Button -->
+        <a href="mailto:tzeptosoft@gmail.com" class="cta-button" aria-label="Join Tzeptosoft">
+          <span class="button-text">Join Tzeptosoft</span>
+          <svg class="button-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false" id="mobileMenuToggle">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
     </div>
-    <div class="content">
-      <p><strong>Yo, kings—think luck’s just random? Think again. 💪</strong> You can’t control where you’re born or your natural talents, but you can stack the deck so good fortune finds you. This KingForge Edition guide dives deep into manufacturing luck through boldness, persistence, unique action, and preparation. Stop waiting for miracles—engineer your own success and dominate life. Let’s forge your path to greatness! 😈</p>
 
-      <h2>The Truth About Luck 🌍</h2>
-      <p>Luck isn’t a fairy godmother; it’s a system you can hack. Random chance—your birthplace, family, or IQ—is out of your control. But manufactured luck? That’s about positioning yourself for opportunities. Most guys sit on their asses, hoping for a break. Kings take action, tilt the odds, and make fortune their ally. This guide gives you four proven strategies to create your own luck, plus practical tactics to live them daily. Ready to own the game? 🦁</p>
-
-      <h2>1. Manufacture Luck by Being Bold ⚡</h2>
-      <p>Boldness has genius! Bold men of action rule the world. Rebels become kings because they dare to defy. Entrepreneurs like Elon Musk or Steve Jobs reshaped history by taking risks. Sitting still? Your odds of winning are zero. Acting boldly? Your odds are always higher than zero. Boldness isn’t reckless—it’s calculated risk. The beauty? Failure often costs nothing. Send a resume: you either get the job or stay where you are. Ask someone out: they say yes, or you’re no worse off. <strong>You miss every shot you don’t take.</strong></p>
-      <p><strong>Why It Works:</strong> Boldness expands your comfort zone. Each risk trains your brain to handle uncertainty, opening doors others fear to touch. Lady Fortuna loves the brave and despises cowards. <span class="highlight">Pro Tip:</strong> Minimize social costs. Don’t broadcast your moves—fail quietly, win loudly. Risk rejection in a bar, not your office.</p>
-      <ul>
-        <li><strong>Example:</strong> James applied to 50 dream jobs. Got 3 offers, now earns $120k. Had he not applied, he’d still be stuck at $50k. Vibe: King. 📈</li>
-        <li><strong>Tactic:</strong> Send one cold email or DM to a mentor or crush today.(Start with Tzeptosoft) ⚡</li>
-        <li><strong>Daily Habit:</strong> Take one small bold action—ask for a discount, pitch an idea. 🗣️</li>
-      </ul>
-
-      <h2>2. Manufacture Luck by Being Persistent 📊</h2>
-      <p>Life’s a numbers game. Internet marketers know: enough shots, and someone bites. <strong>Traffic × Conversion Rate = Success.</strong> Can’t land a date? Ask one person, and it’s 50/50. Ask 100, and your odds skyrocket. Failure doesn’t hurt? Keep swinging. The difference between chess (deterministic) and life (probabilistic) is simple: life lets you draw again. If your “traffic” (effort) is high but results are low, tweak your offer or audience. Sell fish at the lake, not the pool.</p>
-      <p><strong>Why It Works:</strong> Persistence beats bad luck. Each attempt refines your approach, increasing your conversion rate. Most quit after one try—you won’t. <span class="highlight">Pro Tip:</strong> Track your efforts (applications, pitches) to spot patterns and improve.</p>
-      <ul>
-        <li><strong>Example:</strong> Sarah pitched her freelance services to 200 clients. Landed 5, now earns $10k/month. Vibe: Hustler. 💸</li>
-        <li><strong>Tactic:</strong> Apply to 5 jobs or reach out to 5 prospects this week. 📧</li>
-        <li><strong>Daily Habit:</strong> Make one pitch or ask daily—jobs, dates, deals. 📈</li>
-      </ul>
-
-      <h2>3. Manufacture Luck by Unique Action 🚀</h2>
-      <p>Ordinary paths lead to ordinary results. Extraordinary luck finds those on extraordinary journeys. Steve Jobs didn’t follow the crowd—he sold computers to the masses, a radical move at the time. Unique action has no blueprint, but it’s your ticket to outsized rewards. Read <em>Zero to One</em> by Peter Thiel for inspiration on building something new. Dare to zig when others zag, and luck will follow.</p>
-      <p><strong>Why It Works:</strong> Unique action puts you in rare territory where competition is low and opportunities are high. You’re not fighting for scraps—you’re creating the feast. <span class="highlight">Pro Tip:</strong> Start small—test a niche idea or side project.</p>
-      <ul>
-        <li><strong>Example:</strong> Mike launched a blog on crypto in 2017 when it was niche. Now has 50k readers and a 6-figure income. Vibe: Visionary. 🌟</li>
-        <li><strong>Tactic:</strong> Brainstorm one unique project idea this week (e.g., a niche YouTube channel). 💡</li>
-        <li><strong>Daily Habit:</strong> Spend 10 minutes researching an unconventional skill or market. 🔍</li>
-      </ul>
-
-      <h2>4. Capture Opportunity with Preparation 🛠️</h2>
-      <p><strong>Luck favors the prepared mind.</strong> Opportunities multiply when seized and die when ignored. Prepared men pounce, earning more chances. Unprepared? You’re a dead fish, floating with the current. Benjamin Franklin nailed it: “Diligence is the mother of good luck.” Build skills, networks, and resources now, so when the door opens, you’re ready to charge through. A strong man doesn’t need luck—that’s why he gets it.</p>
-      <p><strong>Why It Works:</strong> Preparation turns chance into inevitability. A prepared king can’t be stopped. <span class="highlight">Pro Tip:</strong> Always have a “next step” ready—skills, savings, or contacts—for when opportunity knocks.</p>
-      <ul>
-        <li><strong>Example:</strong> Alex learned coding for a year. Landed a $200k job when a startup needed his exact skills. Vibe: Prepared. 💻</li>
-        <li><strong>Tactic:</strong> Enroll in one online course or save $50 for future opportunities this month. 📚</li>
-        <li><strong>Daily Habit:</strong> Spend 15 minutes building a skill (e.g., coding, public speaking). 🛠️</li>
-      </ul>
-
-      <h2>The Tzeptosoft KingForge Formula: Combining the Four 🔑</h2>
-      <p>These strategies aren’t standalone—they’re a system. Boldness opens doors, persistence keeps you knocking, unique action creates new paths, and preparation ensures you walk through. Together, they 10x your luck. Most guys rely on hope—you’ll rely on strategy. Here’s how to integrate them:</p>
-      <ul>
-        <li><strong>Bold + Persistent:</strong> Pitch 100 clients boldly, refine your offer each time. 💸</li>
-        <li><strong>Unique + Prepared:</strong> Start a niche project, master the skills first. 🚀</li>
-        <li><strong>All Four:</strong> Boldly launch a startup, persistently market it, make it unique, and prepare with savings and skills. 👑</li>
-      </ul>
-      <p><strong>Real-World Win:</strong> Raj boldly started a crypto YouTube channel (unique), persistently posted 100 videos, and prepared by learning video editing. Now earns $20k/month. Vibe: Legend. 🌟</p>
-
-      <h2>Overcoming Barriers: The King’s Mindset 🧠</h2>
-      <p>Manufacturing luck isn’t easy—fear, rejection, and doubt will test you. Here’s how to crush them:</p>
-      <ul>
-        <li><strong>Fear of Failure:</strong> Failure’s only painful if you make it public. Act discreetly, learn quietly. <span class="highlight">Tactic:</strong> Try one bold move privately today. 🚪</li>
-        <li><strong>Rejection:</strong> It’s just data. Each “no” teaches you how to get a “yes.” <span class="highlight">Tactic:</strong> Reframe one rejection as a lesson this week. 📝</li>
-        <li><strong>Lack of Motivation:</strong> Motivation’s a myth—discipline wins. Commit to one daily action, no matter how you feel. <span class="highlight">Tactic:</span> Do 5 push-ups even if you’re tired tonight. 💪</li>
-      </ul>
-      <p>Mindset is your edge. Embrace discomfort—it’s the forge of kings. When in doubt, ask: “What would a king do?” Then do it.</p>
-
-      <h2>Reader Wins: Proof It Works 🗣️</h2>
-      <p>Tzeptosoft KingForge brothers are already manufacturing luck:</p>
-      <ul>
-        <li><strong>SKS (Nov 2019):</strong> “Luck follows hard work.” Applied to 50 jobs, landed a $80k role. Vibe: Persistent. 📈</li>
-        <li><strong>Bamboo Flute (Jan 2020):</strong> “Luck favors those who persevere with enthusiasm.” Started a side hustle after 10 rejections, now earns $5k/month. Vibe: Resilient. 💪</li>
-        <li><strong>Tom (2023):</strong> Boldly pitched a startup idea, got $50k funding. Vibe: Visionary. 🚀</li>
-        <li><strong>Mike (2024):</strong> Prepared by learning AI, landed a $150k gig. Vibe: Prepared. 💻</li>
-      </ul>
-
-      <h2>Daily Rituals to Manufacture Luck 🛠️</h2>
-      <p>Embed these habits to make luck your servant:</p>
-      <ul>
-        <li><strong>Morning:</strong> Plan one bold action (e.g., cold email). 5-minute meditation for focus. <span class="highlight">Tactic:</span> Meditate 5 minutes tomorrow. 🧘</li>
-        <li><strong>Day:</strong> Take 3 persistent shots (pitches, applications). Study 15 minutes for preparation. <span class="highlight">Tactic:</span> Pitch 3 prospects today. 📧</li>
-        <li><strong>Evening:</strong> Brainstorm one unique idea. Review your day’s wins. <span class="highlight">Tactic:</strong> Write one idea tonight. 💡</li>
-        <li><strong>Weekly:</strong> Track your “traffic” (efforts) and “conversions” (wins). Adjust your approach. <span class="highlight">Tactic:</span> Review Sunday. 📊</li>
-      </ul>
-
-      <h2>The Tzeptosoft KingForge Community: Your Luck Amplifier 🦁</h2>
-      <p>You’re not alone. Join thousands of KingForge brothers on X (@tzeptosoft) to share wins, get feedback, and stay accountable. Post your bold moves with #KingForgeLuck. One king’s success sparks another. Example: John posted his 30-day pitch streak, inspired 100 others, and landed a $10k client. That’s the power of tribe.</p>
-
-      <h2>Conclusion: Forge Your Lucky Empire! 🔥</h2>
-      <p>This is your war cry, kings! Luck isn’t random—it’s engineered through boldness, persistence, unique action, and preparation. Stop waiting for handouts—stack the odds and dominate. Tzeptosoft’s KingForge is your blueprint to make fortune bow to you. Are you king enough to seize it? 😈</p>
-      <p><strong>Your Mission:</strong></p>
-      <ul>
-        <li><span class="highlight">Start Tonight:</span> Send one bold email or do 5 push-ups. ⚡</li>
-        <li><span class="highlight">Declare Victory:</span> Post on X: “I’m manufacturing luck with Tzeptosoft’s KingForge! 💪 #KingForgeLuck” Tag @tzeptosoft. 🗣️</li>
-        <li><span class="highlight">Strike Hard:</span> Pitch 5 prospects or brainstorm one unique idea this week. 🚪</li>
-        <li><span class="highlight">Stack Wins:</span> Apply to 10 opportunities or study 1 hour this month. 📈</li>
-        <li><span class="highlight">Burn Weakness:</span> Write “I’m a lucky king” 10x. Share on X. 🔥</li>
-      </ul>
-      <p>Join Tzeptosoft’s KingForge! Grab our “LuckForge Blueprint” PDF—tactics to master <strong>luck manufacturing</strong> and dominate. No bullshit. Only fire. <span class="highlight">Make your own luck.</span> Be a legend! 🌟</p>
-      <blockquote>“Luck is the shadow of action. Act boldly, and fortune follows.” —Tzeptosoft’s KingForge 🔥</blockquote>
-      <p class="signature">Your brother, Clinton 😎</p>
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+      <div class="mobile-menu">
+        <div class="mobile-menu-header">
+          <a href="../index.html" class="mobile-logo">
+            <img src="/assets/images/tzeptosoft-logo.webp" alt="Tzeptosoft" width="40" height="40">
+            <span>TZEPTOSOFT</span>
+          </a>
+          <button class="mobile-menu-close" id="mobileMenuClose">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 6 6 18"></path>
+              <path d="m6 6 12 12"></path>
+            </svg>
+          </button>
+        </div>
+        <nav class="mobile-nav">
+          <a href="../index.html" class="mobile-nav-link">New? Start Here</a>
+          <a href="blog.html" class="mobile-nav-link">Blog Archives</a>
+          <a href="lessons" class="mobile-nav-link">Tzeptosoft Products</a>
+          <a href="contact-us.html" class="mobile-nav-link">Contact Us</a>
+          <a href="about.html" class="mobile-nav-link">About</a>
+        </nav>
+        <div class="mobile-actions">
+          <a href="mailto:tzeptosoft@gmail.com" class="mobile-cta-button">Join Tzeptosoft 🚀</a>
+        </div>
+      </div>
     </div>
-    <div class="terminal-content">
-      <div class="terminal-line" data-text="> Accessing Tzeptosoft archives... 🚀"></div>
-      <div class="terminal-line" data-text="> Loading LuckForge Blueprint... 💪"></div>
-      <div class="terminal-line" data-text="> Signal transfer: SUCCESS ✅"></div>
+  </header>
+
+  <div class="main-content">
+    <div id="galaxy-bg"></div>
+    <div id="matrix-bg"></div>
+    <div id="particles"></div>
+    <div id="cursor-trail"></div>
+
+    <div class="hero">
+      <h1>TZEPTOSOFT</h1>
+      <div class="matrix-animation">HOW TO MANUFACTURE LUCK</div>
+      <h2>Engineer Good Fortune, Seize Opportunities, Dominate Life 🔥</h2>
+      <a href="mailto:tzeptosoft@gmail.com" class="btn-cta" aria-label="Contact Tzeptosoft">Join the KingForge 💪</a>
+      <div class="holo-element" style="top: 20%; left: 10%;"></div>
+      <div class="holo-element" style="top: 30%; right: 15%;"></div>
+      <div class="holo-element" style="bottom: 25%; left: 20%;"></div>
+      <div class="holo-element" style="bottom: 15%; right: 10%;"></div>
     </div>
-    <div class="newsletter-container">
-      <h3>Join the Tzeptosoft KingForge Newsletter 🔥</h3>
-      <p>Get weekly <strong>luck manufacturing</strong>, <strong>self-improvement</strong>, and domination hacks. No bullshit, only fire! 💥</p>
-      <input type="email" placeholder="Enter your email" aria-label="Email for newsletter">
-      <button type="button">Subscribe 🚀</button>
+
+    <div class="blog-container">
+      <header>
+        <h1>How to Manufacture Luck – Be Lucky Always 💥</h1>
+        <div class="author-info">
+          <p class="author-name">Clinton | Tzeptosoft 😎</p>
+          <img src="/assets/images/tzeptosoft-logo.webp" alt="Tzeptosoft Logo" class="author-logo" width="100" height="100" loading="lazy">
+          <p class="author-title">Boss of KingForge 🛠️</p>
+        </div>
+        <hr>
+      </header>
+
+      <div class="cta-container">
+        <h3 class="cta-title">Ready to Engineer Your Fortune? 🗡️</h3>
+        <a href="mailto:tzeptosoft@gmail.com" class="cta-button">Join the KingForge 🚀</a>
+      </div>
+
+      <div class="content">
+        <p><strong>Yo, kings_think luck's just random? Think again. 💪</strong> You can't control where you're born or your natural talents, but you can stack the deck so good fortune finds you. This KingForge Edition guide dives deep into manufacturing luck through boldness, persistence, unique action, and preparation. Stop waiting for miracles_engineer your own success and dominate life. Let's forge your path to greatness! 😈</p>
+
+        <h2>The Truth About Luck 🌍</h2>
+        <p>Luck isn't a fairy godmother; it's a system you can hack. Random chance_your birthplace, family, or IQ_is out of your control. But manufactured luck? That's about positioning yourself for opportunities. Most guys sit on their asses, hoping for a break. Kings take action, tilt the odds, and make fortune their ally. This guide gives you four proven strategies to create your own luck, plus practical tactics to live them daily. Ready to own the game? 🦁</p>
+        
+        <p>The concept of luck has been misunderstood for centuries. People look at successful individuals and attribute their achievements to "being in the right place at the right time" or "having connections." While these factors play a role, they're not the complete picture. True luck is what happens when preparation meets opportunity_but even that definition is incomplete. Real manufactured luck is when you create opportunities through deliberate action, then have the skills and mindset to capitalize on them when they appear.</p>
+        
+        <p>Consider this: In any given field, there are thousands of opportunities circulating at any moment. Most people never see them because they're not looking in the right places or don't recognize them when they appear. The "lucky" person has trained themselves to spot patterns, make connections others miss, and take calculated risks that position them advantageously. This isn't magic_it's a skill you can develop through the principles outlined in this manifesto.</p>
+
+        <h2>1. Manufacture Luck by Being Bold ⚡</h2>
+        <p>Boldness has genius! Bold men of action rule the world. Rebels become kings because they dare to defy. Entrepreneurs like Elon Musk or Steve Jobs reshaped history by taking risks. Sitting still? Your odds of winning are zero. Acting boldly? Your odds are always higher than zero. Boldness isn't reckless_it's calculated risk. The beauty? Failure often costs nothing. Send a resume: you either get the job or stay where you are. Ask someone out: they say yes, or you're no worse off. <strong>You miss every shot you don't take.</strong></p>
+        
+        <p>Boldness operates on a simple mathematical principle: probability multiplication. When you take zero actions, your probability of success is exactly zero. When you take one bold action, even if it has only a 5% chance of success, you've moved from zero to five percent. Take ten such actions, and your cumulative probability increases dramatically. This is why serial entrepreneurs often succeed_they're constantly launching new ventures, knowing that each one has a chance, and the law of averages works in their favor over time.</p>
+        
+        <p><strong>Why It Works:</strong> Boldness expands your comfort zone. Each risk trains your brain to handle uncertainty, opening doors others fear to touch. Lady Fortuna loves the brave and despises cowards. <span class="highlight">Pro Tip:</strong> Minimize social costs. Don't broadcast your moves_fail quietly, win loudly. Risk rejection in a bar, not your office.</p>
+        <ul>
+          <li><strong>Example:</strong> James applied to 50 dream jobs. Got 3 offers, now earns $120k. Had he not applied, he'd still be stuck at $50k. Vibe: King. 📈</li>
+          <li><strong>Tactic:</strong> Send one cold email or DM to a mentor or crush today.(Start with Tzeptosoft) ⚡</li>
+          <li><strong>Daily Habit:</strong> Take one small bold action_ask for a discount, pitch an idea. 🗣️</li>
+          <li><strong>Advanced Strategy:</strong> Implement the "5 Bold Moves Weekly" system where you deliberately plan and execute five calculated risks every week, tracking outcomes and adjusting your approach based on results.</li>
+        </ul>
+
+        <h2>2. Manufacture Luck by Being Persistent 📊</h2>
+        <p>Life's a numbers game. Internet marketers know: enough shots, and someone bites. <strong>Traffic × Conversion Rate = Success.</strong> Can't land a date? Ask one person, and it's 50/50. Ask 100, and your odds skyrocket. Failure doesn't hurt? Keep swinging. The difference between chess (deterministic) and life (probabilistic) is simple: life lets you draw again. If your "traffic" (effort) is high but results are low, tweak your offer or audience. Sell fish at the lake, not the pool.</p>
+        
+        <p>The mathematics of persistence are undeniable. In probability theory, independent events multiply. If you have a 10% chance of success with each attempt, your chance of at least one success after ten attempts isn't 10%_it's approximately 65%. After twenty attempts, it rises to about 88%. This exponential increase in probability with repeated attempts is why persistence is so powerful. Most people quit after two or three tries, never reaching the critical mass where success becomes statistically likely.</p>
+        
+        <p><strong>Why It Works:</strong> Persistence beats bad luck. Each attempt refines your approach, increasing your conversion rate. Most quit after one try_you won't. <span class="highlight">Pro Tip:</strong> Track your efforts (applications, pitches) to spot patterns and improve.</p>
+        <ul>
+          <li><strong>Example:</strong> Sarah pitched her freelance services to 200 clients. Landed 5, now earns $10k/month. Vibe: Hustler. 💸</li>
+          <li><strong>Tactic:</strong> Apply to 5 jobs or reach out to 5 prospects this week. 📧</li>
+          <li><strong>Daily Habit:</strong> Make one pitch or ask daily_jobs, dates, deals. 📈</li>
+          <li><strong>Advanced System:</strong> Create a "Persistence Pipeline" where you have multiple streams of effort flowing simultaneously_job applications, business pitches, networking outreach_so you're never dependent on a single opportunity.</li>
+        </ul>
+
+        <h2>3. Manufacture Luck by Unique Action 🚀</h2>
+        <p>Ordinary paths lead to ordinary results. Extraordinary luck finds those on extraordinary journeys. Steve Jobs didn't follow the crowd_he sold computers to the masses, a radical move at the time. Unique action has no blueprint, but it's your ticket to outsized rewards. Read <em>Zero to One</em> by Peter Thiel for inspiration on building something new. Dare to zig when others zag, and luck will follow.</p>
+        
+        <p>Unique action creates what economists call "economic moats"_competitive advantages that are difficult to replicate. When you're doing something truly different, you're not competing on price or features; you're creating your own category where you're the only option. This positioning attracts opportunities that simply don't exist in crowded markets. The "luck" that seems to follow innovators isn't random_it's the natural result of being in an uncontested space where any positive outcome appears disproportionately large compared to efforts.</p>
+        
+        <p><strong>Why It Works:</strong> Unique action puts you in rare territory where competition is low and opportunities are high. You're not fighting for scraps_you're creating the feast. <span class="highlight">Pro Tip:</strong> Start small_test a niche idea or side project.</p>
+        <ul>
+          <li><strong>Example:</strong> Mike launched a blog on crypto in 2017 when it was niche. Now has 50k readers and a 6-figure income. Vibe: Visionary. 🌟</li>
+          <li><strong>Tactic:</strong> Brainstorm one unique project idea this week (e.g., a niche YouTube channel). 💡</li>
+          <li><strong>Daily Habit:</strong> Spend 10 minutes researching an unconventional skill or market. 🔍</li>
+          <li><strong>Innovation Framework:</strong> Use the "Adjacent Possible" method_look at what's working in one field and apply it to another unrelated field where it hasn't been tried yet.</li>
+        </ul>
+
+        <h2>4. Capture Opportunity with Preparation 🛠️</h2>
+        <p><strong>Luck favors the prepared mind.</strong> Opportunities multiply when seized and die when ignored. Prepared men pounce, earning more chances. Unprepared? You're a dead fish, floating with the current. Benjamin Franklin nailed it: "Diligence is the mother of good luck." Build skills, networks, and resources now, so when the door opens, you're ready to charge through. A strong man doesn't need luck_that's why he gets it.</p>
+        
+        <p>Preparation transforms serendipity into strategy. When you've built a broad base of knowledge and skills, you can connect dots that others don't even see. This is the concept of "prepared mind" that Louis Pasteur spoke about. Opportunities aren't just random events_they're intersections between external circumstances and internal capabilities. By expanding your internal capabilities (skills, knowledge, networks), you increase the surface area where opportunities can intersect with your life.</p>
+        
+        <p><strong>Why It Works:</strong> Preparation turns chance into inevitability. A prepared king can't be stopped. <span class="highlight">Pro Tip:</strong> Always have a "next step" ready_skills, savings, or contacts_for when opportunity knocks.</p>
+        <ul>
+          <li><strong>Example:</strong> Alex learned coding for a year. Landed a $200k job when a startup needed his exact skills. Vibe: Prepared. 💻</li>
+          <li><strong>Tactic:</strong> Enroll in one online course or save $50 for future opportunities this month. 📚</li>
+          <li><strong>Daily Habit:</strong> Spend 15 minutes building a skill (e.g., coding, public speaking). 🛠️</li>
+          <li><strong>Preparation Matrix:</strong> Create a 4-quadrant matrix of skills: 1) Core professional skills, 2) Adjacent transferable skills, 3) Emerging future skills, 4) Personal development skills. Allocate weekly time to each quadrant.</li>
+        </ul>
+
+        <h2>The Tzeptosoft KingForge Formula: Combining the Four 🔑</h2>
+        <p>These strategies aren't standalone_they're a system. Boldness opens doors, persistence keeps you knocking, unique action creates new paths, and preparation ensures you walk through. Together, they 10x your luck. Most guys rely on hope_you'll rely on strategy. Here's how to integrate them:</p>
+        <ul>
+          <li><strong>Bold + Persistent:</strong> Pitch 100 clients boldly, refine your offer each time. 💸</li>
+          <li><strong>Unique + Prepared:</strong> Start a niche project, master the skills first. 🚀</li>
+          <li><strong>All Four:</strong> Boldly launch a startup, persistently market it, make it unique, and prepare with savings and skills. 👑</li>
+        </ul>
+        <p>The synergistic effect of combining these approaches is exponential rather than additive. When you're bold AND persistent, you generate more opportunities while improving your success rate with each attempt. When you're unique AND prepared, you create blue ocean opportunities while having the capability to execute on them. The complete KingForge system creates a virtuous cycle where each element reinforces the others.</p>
+        
+        <p><strong>Real-World Win:</strong> Raj boldly started a crypto YouTube channel (unique), persistently posted 100 videos, and prepared by learning video editing. Now earns $20k/month. Vibe: Legend. 🌟</p>
+        
+        <p>Another powerful example: Maria combined all four elements by boldly quitting her corporate job (bold), persistently applying to 50 remote positions while building her portfolio (persistent), creating a unique niche as a "blockchain content strategist" (unique), and preparing by taking courses in both blockchain technology and content marketing (prepared). Within six months, she landed a $150k/year remote position with a leading crypto firm.</p>
+
+        <h2>Overcoming Barriers: The King's Mindset 🧠</h2>
+        <p>Manufacturing luck isn't easy_fear, rejection, and doubt will test you. Here's how to crush them:</p>
+        <ul>
+          <li><strong>Fear of Failure:</strong> Failure's only painful if you make it public. Act discreetly, learn quietly. <span class="highlight">Tactic:</strong> Try one bold move privately today. 🚪</li>
+          <li><strong>Rejection:</strong> It's just data. Each "no" teaches you how to get a "yes." <span class="highlight">Tactic:</strong> Reframe one rejection as a lesson this week. 📝</li>
+          <li><strong>Lack of Motivation:</strong> Motivation's a myth_discipline wins. Commit to one daily action, no matter how you feel. <span class="highlight">Tactic:</span> Do 5 push-ups even if you're tired tonight. 💪</li>
+        </ul>
+        <p>Mindset is your edge. Embrace discomfort_it's the forge of kings. When in doubt, ask: "What would a king do?" Then do it.</p>
+        
+        <p>The psychology of luck manufacturing requires understanding that our brains are wired for loss aversion and status quo bias. We fear losing what we have more than we desire gaining something better. We prefer familiar discomfort over unfamiliar potential. Overcoming these evolutionary hardwiring requires conscious reprogramming through deliberate practice of the four principles. Each bold action rewires your neural pathways to associate action with reward rather than risk.</p>
+
+        <h2>Reader Wins: Proof It Works 🗣️</h2>
+        <p>Tzeptosoft KingForge brothers are already manufacturing luck:</p>
+        <ul>
+          <li><strong>SKS (Nov 2019):</strong> "Luck follows hard work." Applied to 50 jobs, landed a $80k role. Vibe: Persistent. 📈</li>
+          <li><strong>Bamboo Flute (Jan 2020):</strong> "Luck favors those who persevere with enthusiasm." Started a side hustle after 10 rejections, now earns $5k/month. Vibe: Resilient. 💪</li>
+          <li><strong>Tom (2023):</strong> Boldly pitched a startup idea, got $50k funding. Vibe: Visionary. 🚀</li>
+          <li><strong>Mike (2024):</strong> Prepared by learning AI, landed a $150k gig. Vibe: Prepared. 💻</li>
+          <li><strong>Sarah (2024):</strong> Combined unique action with persistence by creating a newsletter about AI tools for creatives. After 6 months of consistent publishing, she was approached for a book deal. Vibe: Creator. ✍️</li>
+          <li><strong>David (2025):</strong> Implemented the complete KingForge system_bold career pivot + persistent networking + unique skill combination (data science + sustainability) + preparation through certifications. Landed dream role at climate tech startup with equity. Vibe: Strategist. 🌱</li>
+        </ul>
+
+        <h2>Daily Rituals to Manufacture Luck 🛠️</h2>
+        <p>Embed these habits to make luck your servant:</p>
+        <ul>
+          <li><strong>Morning:</strong> Plan one bold action (e.g., cold email). 5-minute meditation for focus. <span class="highlight">Tactic:</span> Meditate 5 minutes tomorrow. 🧘</li>
+          <li><strong>Day:</strong> Take 3 persistent shots (pitches, applications). Study 15 minutes for preparation. <span class="highlight">Tactic:</span> Pitch 3 prospects today. 📧</li>
+          <li><strong>Evening:</strong> Brainstorm one unique idea. Review your day's wins. <span class="highlight">Tactic:</span> Write one idea tonight. 💡</li>
+          <li><strong>Weekly:</strong> Track your "traffic" (efforts) and "conversions" (wins). Adjust your approach. <span class="highlight">Tactic:</span> Review Sunday. 📊</li>
+        </ul>
+        
+        <p>For maximum effectiveness, implement the "Luck Manufacturing Dashboard": a simple spreadsheet or journal where you track daily bold actions, persistent efforts, unique initiatives, and preparation activities. Review weekly to identify patterns_what's working, what's not, and where you need to adjust. This data-driven approach transforms luck from a mystical concept into a measurable system you can optimize.</p>
+
+        <h2>The Tzeptosoft KingForge Community: Your Luck Amplifier 🦁</h2>
+        <p>You're not alone. Join thousands of KingForge brothers on X (@tzeptosoft) to share wins, get feedback, and stay accountable. Post your bold moves with #KingForgeLuck. One king's success sparks another. Example: John posted his 30-day pitch streak, inspired 100 others, and landed a $10k client. That's the power of tribe.</p>
+        
+        <p>The community effect on luck manufacturing cannot be overstated. When you're surrounded by people taking bold actions, it normalizes risk-taking. When you see others being persistently rewarded for their efforts, it reinforces the validity of the approach. The KingForge community creates a "luck field" where members share opportunities, provide accountability, and celebrate wins_creating a positive feedback loop that accelerates everyone's progress.</p>
+
+        <h2>Conclusion: Forge Your Lucky Empire! 🔥</h2>
+        <p>This is your war cry, kings! Luck isn't random_it's engineered through boldness, persistence, unique action, and preparation. Stop waiting for handouts_stack the odds and dominate. Tzeptosoft's KingForge is your blueprint to make fortune bow to you. Are you king enough to seize it? 😈</p>
+        <p><strong>Your Mission:</strong></p>
+        <ul>
+          <li><span class="highlight">Start Tonight:</span> Send one bold email or do 5 push-ups. ⚡</li>
+          <li><span class="highlight">Declare Victory:</span> Post on X: "I'm manufacturing luck with Tzeptosoft's KingForge! 💪 #KingForgeLuck" Tag @tzeptosoft. 🗣️</li>
+          <li><span class="highlight">Strike Hard:</span> Pitch 5 prospects or brainstorm one unique idea this week. 🚪</li>
+          <li><span class="highlight">Stack Wins:</span> Apply to 10 opportunities or study 1 hour this month. 📈</li>
+          <li><span class="highlight">Burn Weakness:</span> Write "I'm a lucky king" 10x. Share on X. 🔥</li>
+        </ul>
+        <p>Join Tzeptosoft's KingForge! Grab our "LuckForge Blueprint" PDF_tactics to master <strong>luck manufacturing</strong> and dominate. No bullshit. Only fire. <span class="highlight">Make your own luck.</span> Be a legend! 🌟</p>
+        <blockquote>"Luck is the shadow of action. Act boldly, and fortune follows." _Tzeptosoft's KingForge 🔥</blockquote>
+        <p class="signature">Your brother, Clinton 😎</p>
+      </div>
+
+      <div class="terminal-content">
+        <div class="terminal-line" data-text="> Accessing Tzeptosoft archives... 🚀"></div>
+        <div class="terminal-line" data-text="> Loading LuckForge Blueprint... 💪"></div>
+        <div class="terminal-line" data-text="> Signal transfer: SUCCESS ✅"></div>
+      </div>
+
+      <div class="newsletter-container">
+        <h3>Join the Tzeptosoft KingForge Newsletter 🔥</h3>
+        <p>Get weekly <strong>luck manufacturing</strong>, <strong>self-improvement</strong>, and domination hacks. No bullshit, only fire! 💥</p>
+        <input type="email" placeholder="Enter your email" aria-label="Email for newsletter">
+        <button type="button">Subscribe 🚀</button>
+      </div>
+
+      <div class="social-share">
+        <h3>Share This LuckForge Blueprint 🗣️</h3>
+        <a href="https://twitter.com/intent/tweet?url=https://tzeptosoft.com/blog/manufacture-luck&text=How to Manufacture Luck: Dominate with Tzeptosoft's KingForge! 🔥 #KingForgeLuck" aria-label="Share on Twitter">Twitter</a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://tzeptosoft.com/blog/manufacture-luck" aria-label="Share on LinkedIn">LinkedIn</a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://tzeptosoft.com/blog/manufacture-luck" aria-label="Share on Facebook">Facebook</a>
+        <a href="https://www.reddit.com/submit?url=https://tzeptosoft.com/blog/manufacture-luck&title=How to Manufacture Luck – KingForge Edition" aria-label="Share on Reddit">Reddit</a>
+        <a href="https://api.whatsapp.com/send?text=How to Manufacture Luck: Dominate with Tzeptosoft's KingForge! 🔥 https://tzeptosoft.com/blog/manufacture-luck" aria-label="Share on WhatsApp">WhatsApp</a>
+      </div>
     </div>
-    <div class="social-share">
-      <h3>Share This LuckForge Blueprint 🗣️</h3>
-      <a href="https://twitter.com/intent/tweet?url=https://tzeptosoft.com/blog/manufacture-luck&text=How to Manufacture Luck: Dominate with Tzeptosoft’s KingForge! 🔥 #KingForgeLuck" aria-label="Share on Twitter">Twitter</a>
-      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://tzeptosoft.com/blog/manufacture-luck" aria-label="Share on LinkedIn">LinkedIn</a>
-      <a href="https://www.facebook.com/sharer/sharer.php?u=https://tzeptosoft.com/blog/manufacture-luck" aria-label="Share on Facebook">Facebook</a>
-      <a href="https://www.reddit.com/submit?url=https://tzeptosoft.com/blog/manufacture-luck&title=How to Manufacture Luck – KingForge Edition" aria-label="Share on Reddit">Reddit</a>
-      <a href="https://api.whatsapp.com/send?text=How to Manufacture Luck: Dominate with Tzeptosoft’s KingForge! 🔥 https://tzeptosoft.com/blog/manufacture-luck" aria-label="Share on WhatsApp">WhatsApp</a>
-    </div>
+
+    <footer>
+      <p>© 2025 Tzeptosoft | All Rights Reserved 🔥</p>
+    </footer>
   </div>
-  <footer>
-    <p>© 2025 Tzeptosoft | All Rights Reserved 🔥</p>
-     
-  </footer>
+
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      // Preloader
+      const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+      const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+      const mobileMenuClose = document.getElementById('mobileMenuClose');
+      const searchToggle = document.getElementById('searchToggle');
+      const searchBox = document.getElementById('searchBox');
+      const searchInput = document.querySelector('.search-input');
+
+      mobileMenuToggle?.addEventListener('click', () => {
+        mobileMenuOverlay?.classList.toggle('active');
+        document.body.style.overflow = mobileMenuOverlay?.classList.contains('active') ? 'hidden' : '';
+      });
+
+      mobileMenuClose?.addEventListener('click', () => {
+        mobileMenuOverlay?.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+
+      mobileMenuOverlay?.addEventListener('click', (e) => {
+        if (e.target === mobileMenuOverlay) {
+          mobileMenuOverlay.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      });
+
+      searchToggle?.addEventListener('click', () => {
+        const isActive = searchBox?.classList.contains('active');
+        searchBox?.classList.toggle('active');
+        searchToggle?.setAttribute('aria-expanded', !isActive);
+        if (!isActive && searchInput) searchInput.focus();
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          searchBox?.classList.remove('active');
+          searchToggle?.setAttribute('aria-expanded', 'false');
+          mobileMenuOverlay?.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      });
+
       window.addEventListener('load', () => {
         document.getElementById('preloader').style.display = 'none';
       });
 
-      // Matrix Animation
       const matrixAnimation = document.querySelector('.matrix-animation');
       function startMatrixAnimation() {
         matrixAnimation.textContent = '';
@@ -638,46 +1435,18 @@
       startMatrixAnimation();
       setInterval(startMatrixAnimation, 4000);
 
-      // Intersection Observer for Sections
-      const sections = document.querySelectorAll('.blog-container, .terminal-content');
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            if (entry.target.classList.contains('terminal-content') && !entry.target.dataset.animated) {
-              startTerminalSequence();
-              entry.target.dataset.animated = 'true';
-            }
-          }
-        });
-      }, { threshold: 0.1 });
-      sections.forEach(section => observer.observe(section));
+      let lastScrollY = window.scrollY;
+      window.addEventListener('scroll', () => {
+        const header = document.querySelector('.main-header');
+        const currentScrollY = window.scrollY;
+        if (currentScrollY > 100) {
+          header?.classList.add('scrolled');
+        } else {
+          header?.classList.remove('scrolled');
+        }
+        lastScrollY = currentScrollY;
+      });
 
-      // Terminal Sequence
-      function startTerminalSequence() {
-        const lines = document.querySelectorAll('.terminal-content .terminal-line');
-        let delay = 0;
-        lines.forEach(line => {
-          line.textContent = '';
-          const text = line.dataset.text;
-          let charIndex = 0;
-          setTimeout(() => {
-            const type = () => {
-              if (charIndex < text.length) {
-                line.textContent += text[charIndex];
-                charIndex++;
-                setTimeout(type, 30);
-              } else {
-                line.classList.add('typed');
-              }
-            };
-            type();
-          }, delay);
-          delay += 1000;
-        });
-      }
-
-      // Matrix Rain
       const matrixBg = document.getElementById('matrix-bg');
       for (let i = 0; i < 50; i++) {
         const char = document.createElement('div');
@@ -688,7 +1457,6 @@
         matrixBg.appendChild(char);
       }
 
-      // Particles
       const particleContainer = document.getElementById('particles');
       for (let i = 0; i < 50; i++) {
         const particle = document.createElement('div');
@@ -699,11 +1467,49 @@
         particleContainer.appendChild(particle);
       }
 
-      // Cursor Trail
       const cursorTrail = document.getElementById('cursor-trail');
       document.addEventListener('mousemove', (e) => {
         cursorTrail.style.left = e.clientX - 15 + 'px';
         cursorTrail.style.top = e.clientY - 15 + 'px';
+      });
+
+      // Terminal animation
+      const terminalLines = document.querySelectorAll('.terminal-line');
+      let delay = 0;
+      terminalLines.forEach(line => {
+        line.textContent = '';
+        const text = line.dataset.text;
+        let charIndex = 0;
+        setTimeout(() => {
+          const type = () => {
+            if (charIndex < text.length) {
+              line.textContent += text[charIndex];
+              charIndex++;
+              setTimeout(type, 35);
+            } else {
+              line.classList.add('typed');
+            }
+          };
+          type();
+        }, delay);
+        delay += 1000;
+      });
+
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href');
+          if (targetId === '#') return;
+          
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 100,
+              behavior: 'smooth'
+            });
+          }
+        });
       });
     });
   </script>

@@ -3,66 +3,513 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="💥 The Art of War in Business: A merciless guide for entrepreneurs to crush competitors using Sun Tzu’s strategies and a modern CEO’s mindset. No mercy for weakness. Join Tzeptosoft’s WarForge to dominate! 🔥">
+  <meta name="description" content="💥 The Art of War in Business: A merciless guide for entrepreneurs to crush competitors using Sun Tzu’s strategies and a modern CEO’s mindset. No mercy for weakness. Join Tzeptosoft's WarForge to dominate! 🔥">
   <meta name="keywords" content="business strategy, entrepreneurship, Sun Tzu, psychological warfare, Tzeptosoft">
   <meta name="author" content="Clinton | Tzeptosoft">
-  <!-- Open Graph Tags -->
   <meta property="og:title" content="The Art of War in Business: Why Most Entrepreneurs Will Fail and How You Can Defeat Them | Tzeptosoft">
-  <meta property="og:description" content="💥 The Art of War in Business: A merciless guide for entrepreneurs to crush competitors using Sun Tzu’s strategies and a modern CEO’s mindset. No mercy for weakness. Join Tzeptosoft’s WarForge to dominate! 🔥">
+  <meta property="og:description" content="💥 The Art of War in Business: A merciless guide for entrepreneurs to crush competitors using Sun Tzu's strategies and a modern CEO's mindset. No mercy for weakness. Join Tzeptosoft's WarForge to dominate! 🔥">
   <meta property="og:image" content="https://tzeptosoft.com/assets/art-of-war-business.webp">
   <meta property="og:url" content="https://tzeptosoft.com/blog/art-of-war-business">
   <meta property="og:type" content="article">
-  <!-- Twitter Card Tags -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="The Art of War in Business: Why Most Entrepreneurs Will Fail and How You Can Defeat Them | Tzeptosoft">
-  <meta name="twitter:description" content="💥 The Art of War in Business: A merciless guide for entrepreneurs to crush competitors using Sun Tzu’s strategies and a modern CEO’s mindset. No mercy for weakness. Join Tzeptosoft’s WarForge to dominate! 🔥">
+  <meta name="twitter:description" content="💥 The Art of War in Business: A merciless guide for entrepreneurs to crush competitors using Sun Tzu's strategies and a modern CEO's mindset. No mercy for weakness. Join Tzeptosoft's WarForge to dominate! 🔥">
   <meta name="twitter:image" content="https://tzeptosoft.com/assets/art-of-war-business.webp">
   <title>The Art of War in Business: Why Most Entrepreneurs Will Fail and How You Can Defeat Them | Tzeptosoft</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Orbitron:wght@900&family=JetBrains+Mono:wght@400;700&family=Russo+One&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Mono:wght@700&family=Orbitron:wght@900&family=JetBrains+Mono:wght@400;700&display=swap">
   <link rel="icon" type="image/webp" href="/assets/favicon.webp">
-  <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     "headline": "The Art of War in Business: Why Most Entrepreneurs Will Fail and How You Can Defeat Them",
-    "description": "💥 The Art of War in Business: A merciless guide for entrepreneurs to crush competitors using Sun Tzu’s strategies and a modern CEO’s mindset. No mercy for weakness. Join Tzeptosoft’s WarForge to dominate! 🔥",
-    "author": {
-      "@type": "Person",
-      "name": "Clinton | Tzeptosoft"
-    },
+    "description": "💥 The Art of War in Business: A merciless guide for entrepreneurs to crush competitors using Sun Tzu's strategies and a modern CEO's mindset. No mercy for weakness. Join Tzeptosoft's WarForge to dominate! 🔥",
+    "author": { "@type": "Person", "name": "Clinton" },
     "publisher": {
       "@type": "Organization",
       "name": "Tzeptosoft",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://tzeptosoft.com/assets/logo.webp"
-      }
+      "logo": { "@type": "ImageObject", "url": "https://tzeptosoft.com/assets/logo.webp" }
     },
+    "datePublished": "2025-04-28",
     "image": "https://tzeptosoft.com/assets/art-of-war-business.webp",
-    "url": "https://tzeptosoft.com/blog/art-of-war-business",
-    "keywords": "business strategy, entrepreneurship, Sun Tzu, psychological warfare"
+    "url": "https://tzeptosoft.com/blog/art-of-war-business"
   }
   </script>
   <style>
+    /* EXACT SAME STYLES AS FIRST TEMPLATE */
     :root {
-      --primary: #1A1A1A;
-      --secondary: #4B0082;
+      --primary: #0066CC;
+      --secondary: #00CCFF;
       --accent: #FFFFFF;
-      --bg-dark: #0A0A0A;
+      --bg-dark: #0B0F1A;
       --text-dark: #FFFFFF;
-      --neon-indigo: #6A0DAD;
-      --neon-shadow: #8A2BE2;
+      --matrix-green: #00FF00;
     }
+
+    /* Header Styles */
+    .main-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(11, 15, 26, 0.95);
+      backdrop-filter: blur(20px);
+      border-bottom: 2px solid transparent;
+      animation: headerSlideIn 0.6s ease-out;
+      box-shadow: 0 8px 32px rgba(0, 102, 204, 0.1);
+    }
+
+    @keyframes headerSlideIn {
+      from {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .main-header.scrolled {
+      border-bottom-color: rgba(0, 204, 255, 0.2);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 70px;
+      position: relative;
+    }
+
+    .logo-section {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .logo-wrapper:hover {
+      transform: scale(1.05);
+    }
+
+    .logo-image {
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(0, 204, 255, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    .logo-primary {
+      font-size: 1.4em;
+      font-weight: 900;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-shadow: 0 0 10px rgba(0, 102, 204, 0.5);
+    }
+
+    .logo-subtitle {
+      font-size: 0.75em;
+      color: var(--secondary);
+      font-weight: 600;
+      opacity: 0.8;
+      margin-top: 2px;
+    }
+
+    .nav-section {
+      display: flex;
+    }
+
+    .nav-list {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .nav-item {
+      position: relative;
+    }
+
+    .nav-link {
+      display: block;
+      padding: 8px 16px;
+      color: var(--text-dark);
+      text-decoration: none;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 0.95em;
+      position: relative;
+      transition: all 0.3s ease;
+      border-radius: 6px;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--secondary);
+      background: rgba(0, 204, 255, 0.1);
+      box-shadow: 0 0 20px rgba(0, 204, 255, 0.2);
+      transform: translateY(-2px);
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 80%;
+    }
+
+    .actions-section {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .search-container {
+      position: relative;
+    }
+
+    .search-toggle {
+      background: none;
+      border: 2px solid rgba(0, 204, 255, 0.3);
+      border-radius: 8px;
+      padding: 8px;
+      color: var(--secondary);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .search-toggle:hover {
+      border-color: var(--secondary);
+      box-shadow: 0 0 20px rgba(0, 204, 255, 0.4);
+      transform: scale(1.05);
+    }
+
+    .search-icon {
+      width: 20px;
+      height: 20px;
+    }
+
+    .search-box {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 300px;
+      background: rgba(28, 28, 28, 0.95);
+      border: 2px solid var(--secondary);
+      border-radius: 8px;
+      padding: 12px;
+      margin-top: 8px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 40px rgba(0, 102, 204, 0.2);
+      z-index: 1001;
+    }
+
+    .search-box.active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .search-input {
+      width: 100%;
+      background: rgba(18, 18, 18, 0.8);
+      border: 1px solid rgba(0, 204, 255, 0.3);
+      border-radius: 6px;
+      padding: 10px 12px;
+      color: var(--text-dark);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.9em;
+    }
+
+    .search-input::placeholder {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .search-input:focus {
+      outline: none;
+      border-color: var(--secondary);
+      box-shadow: 0 0 0 3px rgba(0, 204, 255, 0.2);
+    }
+
+    .search-submit {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: var(--secondary);
+      cursor: pointer;
+      padding: 4px;
+      width: 20px;
+      height: 20px;
+    }
+
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: var(--accent);
+      text-decoration: none;
+      border-radius: 8px;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 600;
+      font-size: 0.9em;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(0, 102, 204, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: left 0.5s;
+    }
+
+    .cta-button:hover::before {
+      left: 100%;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(0, 102, 204, 0.4);
+    }
+
+    .button-icon {
+      width: 16px;
+      height: 16px;
+      transition: transform 0.3s ease;
+    }
+
+    .cta-button:hover .button-icon {
+      transform: translateX(4px);
+    }
+
+    .mobile-menu-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 30px;
+      height: 30px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+      z-index: 1001;
+    }
+
+    .hamburger-line {
+      width: 100%;
+      height: 3px;
+      background: var(--secondary);
+      border-radius: 2px;
+      transition: all 0.3s ease;
+      transform-origin: center;
+    }
+
+    .mobile-menu-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: rgba(11, 15, 26, 0.98);
+      backdrop-filter: blur(20px);
+      z-index: 999;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.4s ease;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .mobile-menu-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .mobile-menu {
+      width: 320px;
+      max-width: 90vw;
+      background: linear-gradient(135deg, rgba(18, 18, 18, 0.95), rgba(11, 15, 26, 0.95));
+      border-left: 3px solid var(--secondary);
+      padding: 0;
+      transform: translateX(100%);
+      transition: transform 0.4s ease;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+    }
+
+    .mobile-menu-overlay.active .mobile-menu {
+      transform: translateX(0);
+    }
+
+    .mobile-menu-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 20px;
+      border-bottom: 1px solid rgba(0, 204, 255, 0.2);
+    }
+
+    .mobile-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-dark);
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.2em;
+    }
+
+    .mobile-menu-close {
+      background: none;
+      border: none;
+      color: var(--secondary);
+      cursor: pointer;
+      padding: 8px;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .mobile-menu-close:hover {
+      background: rgba(0, 204, 255, 0.1);
+      box-shadow: 0 0 20px rgba(0, 204, 255, 0.2);
+    }
+
+    .mobile-nav {
+      padding: 20px 0;
+      flex: 1;
+    }
+
+    .mobile-nav-link {
+      display: block;
+      padding: 16px 24px;
+      color: var(--text-dark);
+      text-decoration: none;
+      font-family: 'Inter', sans-serif;
+      font-size: 1.1em;
+      font-weight: 500;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .mobile-nav-link::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 0;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      transition: width 0.3s ease;
+      z-index: -1;
+    }
+
+    .mobile-nav-link:hover::before,
+    .mobile-nav-link.active::before {
+      width: 100%;
+    }
+
+    .mobile-nav-link:hover,
+    .mobile-nav-link.active {
+      color: var(--accent);
+      padding-left: 32px;
+    }
+
+    .mobile-actions {
+      padding: 20px 24px;
+      border-top: 1px solid rgba(0, 204, 255, 0.2);
+    }
+
+    .mobile-cta-button {
+      display: inline-block;
+      width: 100%;
+      padding: 16px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: var(--accent);
+      text-decoration: none;
+      border-radius: 8px;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 600;
+      text-align: center;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(0, 102, 204, 0.3);
+    }
+
+    .mobile-cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(0, 102, 204, 0.4);
+    }
+
     body {
       margin: 0;
       padding: 0;
       background: var(--bg-dark);
       color: var(--text-dark);
       font-family: 'Inter', sans-serif;
-      line-height: 1.7;
+      line-height: 1.6;
       overflow-x: hidden;
     }
+
+    .main-content {
+      position: relative;
+    }
+
     #preloader {
       position: fixed;
       top: 0;
@@ -75,40 +522,58 @@
       justify-content: center;
       z-index: 9999;
     }
+
     .loader {
       font-family: 'JetBrains Mono', monospace;
-      color: var(--neon-indigo);
-      font-size: 1.8em;
+      color: var(--secondary);
+      font-size: 1.5em;
       animation: blinkCaret 0.5s step-end infinite;
     }
+
     @keyframes blinkCaret {
       50% { border-color: transparent; }
     }
-    #battlefield-bg {
+
+    #galaxy-bg {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(45deg, rgba(106, 13, 173, 0.15), transparent);
+      background: radial-gradient(circle, rgba(0, 204, 255, 0.2), transparent);
       z-index: -3;
-      animation: pulseGlow 12s infinite ease-in-out;
+      animation: rotateGalaxy 60s infinite linear;
     }
-    @keyframes pulseGlow {
-      0% { opacity: 0.2; }
-      50% { opacity: 0.7; }
-      100% { opacity: 0.2; }
+
+    @keyframes rotateGalaxy {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
     }
-    #grid-overlay {
+
+    #matrix-bg {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
       z-index: -2;
-      opacity: 0.6;
-      background: repeating-linear-gradient(0deg, transparent, transparent 40px, var(--neon-indigo) 40px, var(--neon-indigo) 41px);
+      opacity: 0.7;
     }
+
+    .matrix-char {
+      position: absolute;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 16px;
+      color: var(--matrix-green);
+      opacity: 0.8;
+      animation: matrix-fall 5s linear infinite;
+    }
+
+    @keyframes matrix-fall {
+      0% { transform: translateY(-100vh); opacity: 0.8; }
+      100% { transform: translateY(100vh); opacity: 0; }
+    }
+
     #particles {
       position: fixed;
       top: 0;
@@ -117,578 +582,860 @@
       height: 100%;
       z-index: -1;
     }
+
     .particle {
       position: absolute;
       width: 5px;
       height: 5px;
-      background: var(--neon-indigo);
+      background: var(--secondary);
       border-radius: 50%;
       animation: drift 10s infinite linear;
     }
+
     @keyframes drift {
-      0% { transform: translate(0, 0); opacity: 0.3; }
-      50% { opacity: 0.9; }
-      100% { transform: translate(100px, 100px); opacity: 0.3; }
+      0% { transform: translate(0, 0); opacity: 0.5; }
+      50% { opacity: 1; }
+      100% { transform: translate(100px, 100px); opacity: 0.5; }
     }
+
     #cursor-trail {
       position: fixed;
       width: 30px;
       height: 30px;
-      background: radial-gradient(circle, var(--neon-indigo), transparent);
+      background: radial-gradient(circle, var(--secondary), transparent);
       border-radius: 50%;
       pointer-events: none;
-      z-index: 1000;
+      z-index: 100;
       transition: all 0.1s ease;
     }
+
     .hero {
       text-align: center;
-      padding: 150px 20px;
-      background: rgba(10, 10, 10, 0.95);
+      padding: 120px 20px 100px;
+      background: rgba(18, 18, 18, 0.9);
       position: relative;
       z-index: 1;
-      border-bottom: 2px solid var(--neon-indigo);
+      margin-top: 0;
     }
+
     .hero h1 {
       font-size: 5em;
       font-family: 'Orbitron', sans-serif;
       background: linear-gradient(90deg, var(--primary), var(--secondary));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      text-shadow: 0 0 20px var(--neon-shadow);
-      animation: neonFlicker 3s infinite;
+      text-shadow: 0 0 10px var(--primary);
+      animation: gradientShift 3s ease infinite;
       margin-bottom: 0;
     }
-    @keyframes neonFlicker {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.92; }
-    }
-    .battle-animation {
+
+    .matrix-animation {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 2em;
-      color: var(--neon-indigo);
-      text-shadow: 0 0 12px var(--neon-shadow);
-      margin-top: 15px;
+      font-size: 1.5em;
+      color: var(--matrix-green);
+      text-shadow: 0 0 10px var(--matrix-green);
+      margin-top: 10px;
       overflow: hidden;
       white-space: nowrap;
       display: inline-block;
     }
-    .battle-animation.typing {
-      animation: typeBattle 3s steps(30) forwards, glitch 0.08s infinite alternate;
+
+    .matrix-animation.typing {
+      animation: typeMatrix 2s steps(20) forwards, glitch 0.1s infinite alternate;
     }
-    @keyframes typeBattle {
+
+    @keyframes typeMatrix {
       from { width: 0; }
       to { width: 100%; }
     }
+
     @keyframes glitch {
-      0% { transform: translate(0); }
-      50% { transform: translate(4px, -4px); }
-      100% { transform: translate(-4px, 4px); }
+      0% { transform: translate(0); opacity: 1; }
+      50% { transform: translate(2px, -2px); opacity: 0.8; }
+      100% { transform: translate(-2px, 2px); opacity: 0.9; }
     }
+
+    @keyframes gradientShift {
+      0% { background-position: 0%; }
+      50% { background-position: 100%; }
+      100% { background-position: 0%; }
+    }
+
     .hero h2 {
-      font-size: 2.2em;
+      font-size: 1.8em;
       color: var(--secondary);
-      text-shadow: 0 0 12px var(--neon-shadow);
-      margin-top: 25px;
-      font-family: 'Russo One', sans-serif;
+      text-shadow: 0 0 10px var(--secondary);
+      margin-top: 20px;
     }
+
     .btn-cta {
       background: linear-gradient(90deg, var(--primary), var(--secondary));
       color: var(--accent);
-      padding: 18px 40px;
+      padding: 15px 30px;
       text-decoration: none;
-      font-size: 1.8em;
-      border-radius: 6px;
-      box-shadow: 0 0 30px var(--neon-shadow);
+      font-size: 1.5em;
+      border-radius: 5px;
+      box-shadow: 0 0 20px var(--primary);
       animation: pulse 2s infinite;
-      margin-top: 30px;
+      margin-top: 20px;
       display: inline-block;
-      font-family: 'JetBrains Mono', monospace;
     }
+
     .btn-cta:hover {
       background: linear-gradient(90deg, var(--secondary), var(--primary));
-      transform: scale(1.2);
+      transform: scale(1.1);
     }
+
     @keyframes pulse {
-      0% { box-shadow: 0 0 0 0 rgba(106, 13, 173, 0.6); }
-      70% { box-shadow: 0 0 0 20px rgba(106, 13, 173, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(106, 13, 173, 0); }
+      0% { box-shadow: 0 0 0 0 rgba(0, 102, 204, 0.4); }
+      70% { box-shadow: 0 0 0 10px rgba(0, 102, 204, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(0, 102, 204, 0); }
     }
-    .neon-element {
+
+    .holo-element {
       position: absolute;
-      width: 80px;
-      height: 80px;
-      background: radial-gradient(circle, var(--neon-indigo), transparent);
+      width: 70px;
+      height: 70px;
+      background: radial-gradient(circle, var(--primary), transparent);
       border-radius: 50%;
-      animation: float 6s infinite ease-in-out;
+      animation: float 4s infinite ease-in-out;
     }
+
     @keyframes float {
-      0% { transform: translateY(0); opacity: 0.3; }
-      50% { transform: translateY(-50px); opacity: 0.9; }
-      100% { transform: translateY(0); opacity: 0.3; }
+      0% { transform: translateY(0); opacity: 0.5; }
+      50% { transform: translateY(-30px); opacity: 1; }
+      100% { transform: translateY(0); opacity: 0.5; }
     }
-    .guide-container {
-      padding: 120px 30px;
-      max-width: 1000px;
+
+    .blog-container {
+      padding: 80px 20px;
+      max-width: 900px;
       margin: 0 auto;
-      background: rgba(10, 10, 10, 0.95);
-      border: 4px solid var(--neon-indigo);
-      animation: borderPulse 4s infinite;
+      background: rgba(18, 18, 18, 0.9);
+      border: 3px solid var(--secondary);
+      animation: borderGlow 2s infinite;
     }
-    @keyframes borderPulse {
+
+    @keyframes borderGlow {
       0% { border-color: var(--primary); }
       50% { border-color: var(--secondary); }
       100% { border-color: var(--primary); }
     }
-    .guide-container h1 {
-      font-size: 3.5em;
-      color: var(--neon-indigo);
-      text-shadow: 0 0 25px var(--neon-shadow);
+
+    .blog-container h1 {
+      font-size: 2.5em;
+      color: var(--secondary);
+      text-shadow: 0 0 15px var(--secondary);
       font-family: 'Orbitron', sans-serif;
       text-align: center;
     }
-    .guide-container h2 {
-      font-size: 2.2em;
-      color: var(--secondary);
-      font-family: 'Russo One', sans-serif;
-      margin-top: 3em;
-      text-shadow: 0 0 10px var(--neon-shadow);
-    }
-    .guide-container h3 {
+
+    .blog-container h2 {
       font-size: 1.8em;
-      color: var(--neon-indigo);
-      font-family: 'JetBrains Mono', monospace;
+      color: var(--secondary);
+      font-family: 'Orbitron', sans-serif;
       margin-top: 2em;
     }
-    .guide-container p {
-      color: var(--text-dark);
+
+    .blog-container h3 {
       font-size: 1.4em;
-      margin: 2em 0;
-      font-family: 'JetBrains Mono', monospace;
-      text-shadow: 0 0 6px var(--neon-shadow);
+      color: var(--secondary);
+      font-family: 'Orbitron', sans-serif;
+      margin-top: 1.5em;
     }
-    .guide-container ul {
+
+    .blog-container p {
+      color: var(--text-dark);
+      font-size: 1.2em;
+    }
+
+    .highlight {
+      color: var(--secondary);
+      font-weight: 600;
+    }
+
+    .blog-container ul {
       list-style: none;
       padding: 0;
     }
-    .guide-container li {
+
+    .blog-container li {
       background: #1C1C1C;
       padding: 15px;
-      border: 2px solid var(--neon-indigo);
+      border: 2px solid var(--secondary);
       margin-bottom: 15px;
       transition: transform 0.3s ease;
-      font-size: 1.2em;
-      font-family: 'JetBrains Mono', monospace;
     }
-    .guide-container li:hover {
+
+    .blog-container li:hover {
       transform: translateY(-10px);
-      box-shadow: 0 0 40px var(--neon-shadow);
+      box-shadow: 0 0 40px var(--secondary);
     }
-    .guide-container blockquote {
+
+    .blog-container blockquote {
       font-family: 'JetBrains Mono', monospace;
       color: var(--secondary);
-      border-left: 6px solid var(--neon-indigo);
-      padding-left: 25px;
-      margin: 25px 0;
+      border-left: 4px solid var(--secondary);
+      padding-left: 15px;
+      margin: 20px 0;
       font-style: italic;
-      font-size: 1.3em;
-      text-shadow: 0 0 5px var(--neon-shadow);
     }
+
     .author-info {
-      margin: 40px 0;
+      margin: 20px 0;
       text-align: center;
     }
+
     .author-name {
       font-family: 'JetBrains Mono', monospace;
-      color: var(--neon-indigo);
-      font-size: 1.4em;
-    }
-    .author-title {
-      color: var(--text-dark);
+      color: var(--secondary);
       font-size: 1.2em;
     }
+
+    .author-title {
+      color: var(--text-dark);
+      font-size: 1em;
+    }
+
     .author-logo {
-      max-width: 140px;
+      max-width: 100px;
       height: auto;
     }
+
     hr {
-      border: 2px solid var(--neon-indigo);
-      margin: 40px 0;
+      border: 1px solid var(--secondary);
+      margin: 20px 0;
     }
+
     .cta-container {
       text-align: center;
-      margin: 40px 0;
+      margin: 20px 0;
     }
+
     .cta-title {
       font-family: 'Orbitron', sans-serif;
-      color: var(--neon-indigo);
-      font-size: 2.2em;
+      color: var(--secondary);
+      font-size: 1.8em;
     }
-    .cta-button {
-      background: linear-gradient(90deg, var(--primary), var(--secondary));
-      color: var(--accent);
-      padding: 15px 30px;
-      text-decoration: none;
-      border-radius: 6px;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 1.3em;
-    }
-    .cta-button:hover {
-      background: linear-gradient(90deg, var(--secondary), var(--primary));
-      transform: scale(1.15);
-    }
+
     .newsletter-container {
       text-align: center;
-      margin: 60px 0;
-      padding: 30px;
+      margin: 40px 0;
+      padding: 20px;
       background: #1C1C1C;
-      border: 3px solid var(--neon-indigo);
-      border-radius: 6px;
+      border: 2px solid var(--secondary);
+      border-radius: 4px;
     }
+
     .newsletter-container h3 {
       font-family: 'Orbitron', sans-serif;
-      color: var(--neon-indigo);
-      font-size: 2.2em;
+      color: var(--secondary);
+      font-size: 1.8em;
+      margin-bottom: 10px;
+    }
+
+    .newsletter-container p {
+      font-size: 1.2em;
       margin-bottom: 20px;
     }
-    .newsletter-container p {
-      font-size: 1.4em;
-      margin-bottom: 30px;
-    }
+
     .newsletter-container input[type="email"] {
-      padding: 15px;
+      padding: 10px;
       width: 70%;
-      max-width: 400px;
-      border: 3px solid var(--neon-indigo);
+      max-width: 300px;
+      border: 2px solid var(--secondary);
       background: #1a1a1a;
       color: var(--text-dark);
       font-family: 'JetBrains Mono', monospace;
-      border-radius: 6px;
+      border-radius: 4px;
     }
+
     .newsletter-container button {
-      padding: 15px 30px;
+      padding: 10px 20px;
       background: linear-gradient(90deg, var(--primary), var(--secondary));
       color: var(--accent);
       border: none;
-      border-radius: 6px;
+      border-radius: 4px;
       font-family: 'JetBrains Mono', monospace;
       cursor: pointer;
     }
+
     .newsletter-container button:hover {
       background: linear-gradient(90deg, var(--secondary), var(--primary));
-      transform: scale(1.15);
+      transform: scale(1.05);
     }
+
     .social-share {
-      margin: 4rem 0;
+      margin: 2rem 0;
       text-align: center;
     }
+
     .social-share h3 {
       font-family: 'Orbitron', sans-serif;
-      color: var(--neon-indigo);
-      font-size: 2.2em;
-      margin-bottom: 20px;
+      color: var(--secondary);
+      font-size: 1.8em;
+      margin-bottom: 10px;
     }
+
     .social-share a {
-      margin: 0 20px;
-      padding: 15px 30px;
+      margin: 0 10px;
+      padding: 10px 20px;
       background: var(--primary);
       color: var(--accent);
-      border-radius: 6px;
+      border-radius: 4px;
       text-decoration: none;
       font-family: 'JetBrains Mono', monospace;
-      font-size: 1.2em;
     }
+
     .social-share a:hover {
       background: var(--secondary);
-      color: #FFFFFF;
+      color: #000;
     }
+
     .terminal-content {
       background: #1a1a1a;
-      padding: 30px;
-      border: 2px solid var(--neon-indigo);
-      border-radius: 6px;
-      margin: 30px 0;
+      padding: 20px;
+      border: 1px solid var(--secondary);
+      border-radius: 4px;
+      margin: 20px 0;
       font-family: 'JetBrains Mono', monospace;
-      color: var(--neon-indigo);
-      font-size: 1.2em;
+      color: var(--secondary);
+      font-size: 1em;
     }
+
     .terminal-line {
       opacity: 0;
       white-space: nowrap;
       overflow: hidden;
     }
+
     .terminal-line.typed {
       opacity: 1;
-      animation: typing 0.7s steps(50) forwards;
+      animation: typing 0.5s steps(40) forwards;
     }
+
     @keyframes typing {
       from { width: 0; }
       to { width: 100%; }
     }
+
     footer {
       text-align: center;
-      padding: 60px 20px;
-      border-top: 2px solid var(--neon-indigo);
+      padding: 40px 20px;
+      border-top: 1px solid #1E1E2E;
     }
-    .social-links {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      margin-top: 20px;
-    }
-    .social-links img {
-      width: 32px;
-      height: 32px;
-      transition: transform 0.3s ease;
-    }
-    .social-links img:hover {
-      transform: scale(1.4);
-    }
+
     .signature {
       font-family: 'JetBrains Mono', monospace;
-      color: var(--neon-indigo);
-      font-size: 1.4em;
-      margin-top: 30px;
+      color: var(--secondary);
+      font-size: 1.2em;
+      margin-top: 20px;
       text-align: center;
     }
+
+    @media (max-width: 1024px) {
+      .nav-list {
+        gap: 20px;
+      }
+      
+      .nav-link {
+        padding: 6px 12px;
+        font-size: 0.9em;
+      }
+    }
+
     @media (max-width: 768px) {
-      .hero h1 { font-size: 3.5em; }
-      .battle-animation { font-size: 1.5em; }
-      .guide-container { padding: 60px 20px; }
-      .hero { padding: 100px 20px; }
-      .newsletter-container input[type="email"] { width: 90%; }
-      .guide-container h1 { font-size: 2.5em; }
+      .header-container {
+        height: 60px;
+        padding: 0 16px;
+      }
+      
+      .nav-section {
+        display: none;
+      }
+      
+      .mobile-menu-toggle {
+        display: flex;
+      }
+      
+      .search-box {
+        width: 280px;
+        right: -20px;
+      }
+      
+      .logo-primary {
+        font-size: 1.2em;
+      }
+
+      .hero {
+        padding: 100px 10px 80px;
+      }
+
+      .hero h1 { 
+        font-size: 3em; 
+      }
+
+      .matrix-animation { 
+        font-size: 1.2em; 
+      }
+
+      .blog-container { 
+        padding: 40px 10px; 
+      }
+
+      .blog-container h1 { 
+        font-size: 1.8em; 
+      }
+
+      .terminal-content { 
+        font-size: 0.9em; 
+      }
+
+      .newsletter-container input[type="email"] { 
+        width: 90%; 
+      }
     }
+
     @media (max-width: 480px) {
-      .hero h1 { font-size: 2.5em; }
-      .battle-animation { font-size: 1.2em; }
-      .hero h2 { font-size: 1.5em; }
-      .btn-cta { font-size: 1.4em; padding: 12px 25px; }
-      .guide-container h1 { font-size: 2em; }
-      .terminal-content { font-size: 1em; }
-      .guide-container p { font-size: 1.2em; }
+      .header-container {
+        height: 56px;
+        padding: 0 12px;
+      }
+      
+      .search-box {
+        width: calc(100vw - 40px);
+        right: auto;
+        left: 12px;
+      }
+      
+      .cta-button {
+        padding: 10px 20px;
+        font-size: 0.85em;
+      }
+      
+      .mobile-menu {
+        width: 100vw;
+        max-width: none;
+      }
+
+      .hero h1 { 
+        font-size: 2em; 
+      }
+
+      .matrix-animation { 
+        font-size: 1em; 
+      }
+
+      .hero h2 { 
+        font-size: 1.2em; 
+      }
+
+      .btn-cta { 
+        font-size: 1em; 
+        padding: 10px 20px; 
+      }
+
+      .blog-container h1 { 
+        font-size: 1.8em; 
+      }
+
+      .terminal-content { 
+        font-size: 0.9em; 
+      }
+
+      .newsletter-container input[type="email"] { 
+        width: 90%; 
+      }
     }
+
     @media (prefers-reduced-motion: reduce) {
-      * { animation: none !important; transition: none !important; }
-    }
-    @media print {
-      body { background: white; color: black; }
-      .guide-container { background: white; border: none; }
-      a { color: var(--primary); text-decoration: underline; }
-      .btn-cta, .cta-button { background: white; color: var(--primary); border: 1px solid var(--primary); }
-      #battlefield-bg, #grid-overlay, #particles, #cursor-trail, .neon-element, .battle-animation { display: none; }
+      * { 
+        animation: none !important; 
+        transition: none !important; 
+      }
     }
   </style>
 </head>
-<body>
+<body data-page="art-of-war-business">
   <div id="preloader">
     <div class="loader">Initializing Tzeptosoft WarForge... ⚔️</div>
   </div>
-  <div id="battlefield-bg"></div>
-  <div id="grid-overlay"></div>
-  <div id="particles"></div>
-  <div id="cursor-trail"></div>
-  <div class="hero">
-    <h1>TZEPTOSOFT</h1>
-    <div class="battle-animation">ART OF WAR IN BUSINESS</div>
-    <h2>Crush or Be Crushed ⚡</h2>
-    <a href="mailto:tzeptosoft@gmail.com" class="btn-cta" aria-label="Contact Tzeptosoft">Join the WarForge 🛡️</a>
-    <div class="neon-element" style="top: 10%; left: 10%;"></div>
-    <div class="neon-element" style="top: 20%; right: 8%;"></div>
-    <div class="neon-element" style="bottom: 15%; left: 12%;"></div>
-    <div class="neon-element" style="bottom: 10%; right: 15%;"></div>
-  </div>
-  <div class="guide-container">
-    <header>
-      <h1>The Art of War in Business: Why Most Entrepreneurs Will Fail and How You Can Defeat Them 💥</h1>
-      <div class="author-info">
-        <p class="author-name">Clinton | Tzeptosoft 😈</p>
-        <img src="/assets/images/tzeptosoft-logo.webp" alt="Tzeptosoft Logo" class="author-logo" width="140" height="140" loading="lazy">
-        <p class="author-title">Warlord of WarForge ⚡</p>
+
+  <!-- Professional Header -->
+  <header class="main-header">
+    <div class="header-container">
+      <!-- Logo Section -->
+      <div class="logo-section">
+        <a href="../index.html" class="logo-wrapper" aria-label="Tzeptosoft Home">
+          <img src="/assets/images/tzeptosoft-logo.webp" alt="Tzeptosoft Logo" class="logo-image" width="48" height="48" loading="lazy">
+          <div class="logo-text">
+            <span class="logo-primary">TZEPTOSOFT</span>
+            <span class="logo-subtitle">Escaping the Matrix</span>
+          </div>
+        </a>
       </div>
-      <hr>
-    </header>
-    <div class="cta-container">
-      <h3 class="cta-title">Ready to Slaughter the Competition? 🗡️</h3>
-      <a href="mailto:tzeptosoft@gmail.com" class="cta-button">Join the WarForge 🚀</a>
+
+      <!-- Navigation -->
+      <nav class="nav-section" role="navigation" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="../index.html" class="nav-link" data-page="home">New? Start Here</a>
+          </li>
+          <li class="nav-item">
+            <a href="blog.html" class="nav-link" data-page="blog">Blog Archives</a>
+          </li>
+          <li class="nav-item">
+            <a href="lessons" class="nav-link" data-page="lessons">Tzeptosoft Products</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact-us.html" class="nav-link" data-page="Tzeptosoft">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link" data-page="about">About</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Action Buttons & Search -->
+      <div class="actions-section">
+        <!-- Search -->
+        <div class="search-container">
+          <button class="search-toggle" aria-label="Toggle search" aria-expanded="false" id="searchToggle">
+            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.35-4.35"></path>
+            </svg>
+          </button>
+          <div class="search-box" id="searchBox">
+            <input type="search" placeholder="Search lessons, tactics, blueprints..." class="search-input" aria-label="Search content">
+            <button class="search-submit" aria-label="Search">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.35-4.35"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- CTA Button -->
+        <a href="mailto:tzeptosoft@gmail.com" class="cta-button" aria-label="Join Tzeptosoft">
+          <span class="button-text">Join Tzeptosoft</span>
+          <svg class="button-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false" id="mobileMenuToggle">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
     </div>
-    <div class="content">
-      <h2>Operation Briefing: The Business Battlefield</h2>
-      <p><strong>Entrepreneur, this is your war council.</strong> The market is a blood-soaked battlefield, littered with the corpses of failed ventures. Most entrepreneurs are doomed—slaughtered by their own ignorance, desperation, and complacency. This guide, forged from Sun Tzu’s ancient stratagems and the ruthless mindset of a modern CEO, is your battle plan to crush them. Business is not a game; it’s a slaughterhouse. You are not here to compete—you are here to dominate. Weakness is death. Hesitation is suicide. Execute these tactics with precision, or join the 90% of startups that bleed out in obscurity. 🩸</p>
-      <p><strong>The enemy is legion, but flawed.</strong> Your competitors are not just other businesses—they are the mediocre minds behind them. They cling to outdated playbooks, chase trends like rats, and beg for mercy from markets that grant none. Sun Tzu said, “Know the enemy and know yourself, and you need not fear the result of a hundred battles.” You will exploit their weaknesses—ignorance, desperation, complacency—through psychological warfare and cold, calculated moves. This is not about fairness; it’s about victory. Tzeptosoft’s WarForge is your command center. Let’s burn the battlefield to ash. ⚔️</p>
 
-      <h2>Strategic Maneuvers: Crush the Weak</h2>
-      <h3>Tactic 1: Know Their Minds, Break Their Souls</h3>
-      <p><strong>Ignorance is your weapon.</strong> Most entrepreneurs are blind—ignorant of their market, their customers, their own flaws. Sun Tzu: “If you know the enemy and know yourself, your victory will not stand in doubt.” Study their every move. Scrape their websites, analyze their X posts, dissect their customer reviews. Build a dossier of their weaknesses: overpriced products, slow delivery, lazy branding. Then strike. Launch a campaign that exposes their gaps—subtly, surgically. Example: If their SaaS is clunky, release a sleek competitor with a viral demo video. Their ignorance is your opening; drive the blade deep. 🧠</p>
-      <ul>
-        <li>Action: Spend 2 hours weekly on competitive research. Use tools like SimilarWeb or Ahrefs to uncover their traffic and keywords.</li>
-        <li>Psy-War: Leak a “customer complaint” on X about their service (anonymously, ethically ambiguous). Let their reputation bleed.</li>
-      </ul>
-
-      <h3>Tactic 2: Exploit Their Desperation</h3>
-      <p><strong>Desperation breeds mistakes.</strong> Struggling entrepreneurs are frantic—slashing prices, chasing bad deals, diluting their vision. Sun Tzu: “When the enemy is relaxed, make them toil. When full, starve them.” Push them to the brink. Undercut their pricing just enough to force a panic response, then maintain quality to win their customers. Example: If a competitor’s e-commerce store is bleeding cash, flood the market with targeted ads during their peak season. Their desperation will make them overextend; you’ll mop up the scraps. 💸</p>
-      <ul>
-        <li>Action: Identify one competitor’s cash flow weakness (e.g., high ad spend, low margins). Outbid their Google Ads for 30 days.</li>
-        <li>Psy-War: Spread rumors of their financial woes through industry whispers. Fear will make them reckless.</li>
-      </ul>
-
-      <h3>Tactic 3: Punish Their Complacency</h3>
-      <p><strong>Complacency is a death sentence.</strong> Established players grow fat and lazy, resting on past wins. Sun Tzu: “Attack where they are unprepared, appear where you are not expected.” Disrupt their comfort. Launch a guerrilla campaign—pop-up events, flash sales, influencer collabs—that catches them off guard. Example: If a competitor dominates local coffee shops, partner with a rising TikTok star to push your brand as the new king. Their slow response will bury them. ⚡</p>
-      <ul>
-        <li>Action: Plan one unexpected marketing stunt this month (e.g., street art campaign, viral X thread). Execute before they can react.</li>
-        <li>Psy-War: Publicly challenge their “legacy” on X with data showing your superiority. Shame breeds panic.</li>
-      </ul>
-
-      <h3>Tactic 4: Move in Shadows</h3>
-      <p><strong>Stealth is your shield.</strong> Sun Tzu: “The leader who wins makes many calculations in his temple before the battle is fought.” Never reveal your full strategy. Build your product in secret, test it with a loyal inner circle, launch with devastating precision. Competitors will scramble to copy you, but they’ll be too late. Example: Elon Musk built Tesla’s Roadster in silence, unveiling it to obliterate gas-guzzling rivals. Your silence is their funeral. 🕶️</p>
-      <ul>
-        <li>Action: Develop one feature or product in secret for 60 days. Launch with a pre-built audience via email lists.</li>
-        <li>Psy-War: Plant false leads about your next move (e.g., fake job postings). Let competitors chase ghosts.</li>
-      </ul>
-
-      <h3>Tactic 5: Starve Their Resources</h3>
-      <p><strong>Cut their lifelines.</strong> Sun Tzu: “When you surround an army, leave an outlet free. Do not press a desperate foe too hard.” Control their access to capital, talent, and customers. Poach their best employees with better offers. Lock up key suppliers with exclusive deals. Dominate their ad channels with higher bids. Example: Amazon crushed small retailers by securing bulk supplier contracts, leaving rivals scrambling. Their starvation is your feast. 🛠️</p>
-      <ul>
-        <li>Action: Identify one key resource your competitor relies on (e.g., a supplier). Secure it with a 6-month contract.</li>
-        <li>Psy-War: Spread FUD (fear, uncertainty, doubt) about their stability to deter their investors or partners.</li>
-      </ul>
-
-      <h3>Tactic 6: Weaponize Speed</h3>
-      <p><strong>Speed is your blade.</strong> Most entrepreneurs are sluggish, bogged down by bureaucracy or indecision. Sun Tzu: “Speed is the essence of war.” Outpace them. Release MVPs in weeks, not months. Respond to customer complaints in hours, not days. Iterate faster than they can blink. Example: Zara’s fast-fashion model crushes competitors by delivering trends in 15 days. Your velocity is their extinction. 🚀</p>
-      <ul>
-        <li>Action: Cut one product’s development cycle by 50%. Launch an MVP this month, even if it’s raw.</li>
-        <li>Psy-War: Publicize your rapid releases on X to make competitors look sluggish. Perception kills.</li>
-      </ul>
-
-      <h3>Tactic 7: Forge Iron Discipline</h3>
-      <p><strong>Discipline is your fortress.</strong> Weak entrepreneurs crumble under pressure—missed deadlines, burnout, emotional decisions. Sun Tzu: “The leader is the arbiter of the people’s fate.” You must be unbreakable. Work 80-hour weeks when needed. Track every dollar, every hour, every outcome. Eliminate distractions—social media, vices, excuses. Example: Jeff Bezos’ relentless focus built Amazon’s empire while rivals partied. Your discipline is their doom. 💪</p>
-      <ul>
-        <li>Action: Use Toggl to track every hour for 30 days. Cut one non-essential activity (e.g., Netflix).</li>
-        <li>Psy-War: Project unyielding confidence in meetings. Your calm under fire unnerves weaker foes.</li>
-      </ul>
-
-      <h2>Psychological Warfare: Break Their Will</h2>
-      <p><strong>The mind is the true battlefield.</strong> Sun Tzu: “To subdue the enemy without fighting is the acme of skill.” Crush their spirit before their business. Exploit their fears—fear of failure, fear of irrelevance. Spread rumors of your unstoppable momentum on X, even if exaggerated. Example: Steve Jobs’ reality distortion field convinced competitors Apple was invincible. Their doubt is your victory. 🧠</p>
-      <ul>
-        <li><strong>Ignorance:</strong> Feed competitors bad data. Example: Leak a fake product roadmap to mislead their R&D.</li>
-        <li><strong>Desperation:</strong> Amplify their panic. Example: Announce a massive funding round (real or not) to make them feel outgunned.</li>
-        <li><strong>Complacency:</strong> Shock their system. Example: Drop a disruptive feature that forces them to rethink their entire model.</li>
-      </ul>
-
-      <h2>Endgame: No Prisoners</h2>
-      <p><strong>This is your ultimatum.</strong> Most entrepreneurs will fail because they are weak—ignorant, desperate, complacent. You are not them. You are the warlord, the strategist, the executioner. Execute these tactics with the precision of a sniper, the ferocity of a predator, the vision of a conqueror. Build your empire on the bones of their failures. Tzeptosoft’s WarForge is your legion, your arsenal, your doctrine. Join us, or be swept away in the slaughter. In business, the battlefield is unforgiving. Will you survive the slaughter or be another casualty? 😈</p>
-      <p><strong>Mission:</strong></p>
-      <ul>
-        <li>Tonight: Read 20 pages of Sun Tzu’s <em>Art of War</em>. Write one competitor’s weakness and how you’ll exploit it.</li>
-        <li>Tomorrow: Launch one psy-war tactic (e.g., a subtle X post exposing a rival’s flaw). Track its impact.</li>
-        <li>This Week: Cut one product’s launch timeline by 30%. Move faster than your enemies can think.</li>
-        <li>This Month: Secure one key resource (e.g., talent, supplier) to starve a competitor. No mercy.</li>
-        <li>Declare Victory: Post on X: “I wage war in business with Tzeptosoft’s WarForge! ⚡ #ArtOfWarBusiness” Tag @tzeptosoft.</li>
-      </ul>
-      <blockquote>“In business, the battlefield is unforgiving. Will you survive the slaughter or be another casualty?” —Tzeptosoft’s WarForge ⚡</blockquote>
-      <p class="signature">Your warlord, Clinton 😈</p>
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+      <div class="mobile-menu">
+        <div class="mobile-menu-header">
+          <a href="../index.html" class="mobile-logo">
+            <img src="/assets/images/tzeptosoft-logo.webp" alt="Tzeptosoft" width="40" height="40">
+            <span>TZEPTOSOFT</span>
+          </a>
+          <button class="mobile-menu-close" id="mobileMenuClose">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 6 6 18"></path>
+              <path d="m6 6 12 12"></path>
+            </svg>
+          </button>
+        </div>
+        <nav class="mobile-nav">
+          <a href="../index.html" class="mobile-nav-link">New? Start Here</a>
+          <a href="blog.html" class="mobile-nav-link">Blog Archives</a>
+          <a href="lessons" class="mobile-nav-link">Tzeptosoft Products</a>
+          <a href="contact-us.html" class="mobile-nav-link">Contact Us</a>
+          <a href="about.html" class="mobile-nav-link">About</a>
+        </nav>
+        <div class="mobile-actions">
+          <a href="mailto:tzeptosoft@gmail.com" class="mobile-cta-button">Join Tzeptosoft 🚀</a>
+        </div>
+      </div>
     </div>
-    <div class="terminal-content">
-      <div class="terminal-line" data-text="> Accessing Tzeptosoft WarForge... ⚔️"></div>
-      <div class="terminal-line" data-text="> Loading Art of War Protocol... 💥"></div>
-      <div class="terminal-line" data-text="> Signal transfer: EXECUTED ✅"></div>
-      <div class="terminal-line" data-text="> Directive: CRUSH OR BE CRUSHED ⚡"></div>
+  </header>
+
+  <div class="main-content">
+    <div id="galaxy-bg"></div>
+    <div id="matrix-bg"></div>
+    <div id="particles"></div>
+    <div id="cursor-trail"></div>
+
+    <div class="hero">
+      <h1>TZEPTOSOFT</h1>
+      <div class="matrix-animation">ART OF WAR IN BUSINESS</div>
+      <h2>The Art of War in Business: Why Most Entrepreneurs Will Fail and How You Can Defeat Them ⚔️</h2>
+      <a href="mailto:tzeptosoft@gmail.com" class="btn-cta" aria-label="Contact Tzeptosoft">Join the WarForge 💪</a>
+      <div class="holo-element" style="top: 20%; left: 10%;"></div>
+      <div class="holo-element" style="top: 30%; right: 15%;"></div>
+      <div class="holo-element" style="bottom: 25%; left: 20%;"></div>
+      <div class="holo-element" style="bottom: 15%; right: 10%;"></div>
     </div>
-    <div class="newsletter-container">
-      <h3>Join the WarForge Newsletter ⚡</h3>
-      <p>Get weekly <strong>business warfare</strong>, <strong>strategy</strong>, and <strong>domination</strong> protocols. No weakness, only victory! 💥</p>
-      <input type="email" placeholder="Enter your email" aria-label="Email for newsletter">
-      <button type="button">Subscribe 🚀</button>
+
+    <div class="blog-container">
+      <header>
+        <h1>The Art of War in Business: Why Most Entrepreneurs Will Fail and How You Can Defeat Them 💥</h1>
+        <div class="author-info">
+          <p class="author-name">Clinton | Tzeptosoft</p>
+          <img src="/assets/images/tzeptosoft-logo.webp" alt="Tzeptosoft Logo" class="author-logo" width="150" height="150" loading="lazy">
+          <p class="author-title">Warlord of WarForge ⚡</p>
+        </div>
+        <hr>
+      </header>
+
+      <div class="cta-container">
+        <h3 class="cta-title">Ready to Slaughter the Competition? 🗡️</h3>
+        <a href="mailto:tzeptosoft@gmail.com" class="cta-button">Join the WarForge 🚀</a>
+      </div>
+
+      <div class="content">
+        <h2>Operation Briefing: The Business Battlefield</h2>
+        <p><strong>Entrepreneur, this is your war council.</strong> The market is a blood-soaked battlefield, littered with the corpses of failed ventures. Most entrepreneurs are doomed_slaughtered by their own ignorance, desperation, and complacency. This guide, forged from Sun Tzu’s ancient stratagems and the ruthless mindset of a modern CEO, is your battle plan to crush them. Business is not a game; it’s a slaughterhouse. You are not here to compete_you are here to dominate. Weakness is death. Hesitation is suicide. Execute these tactics with precision, or join the 90% of startups that bleed out in obscurity. 🩸</p>
+        <p><strong>The enemy is legion, but flawed.</strong> Your competitors are not just other businesses_they are the mediocre minds behind them. They cling to outdated playbooks, chase trends like rats, and beg for mercy from markets that grant none. Sun Tzu said, “Know the enemy and know yourself, and you need not fear the result of a hundred battles.” You will exploit their weaknesses_ignorance, desperation, complacency_through psychological warfare and cold, calculated moves. This is not about fairness; it’s about victory. Tzeptosoft’s WarForge is your command center. Let’s burn the battlefield to ash. ⚔️</p>
+
+        <h2>Strategic Maneuvers: Crush the Weak</h2>
+        <h3>Tactic 1: Know Their Minds, Break Their Souls</h3>
+        <p><strong>Ignorance is your weapon.</strong> Most entrepreneurs are blind_ignorant of their market, their customers, their own flaws. Sun Tzu: “If you know the enemy and know yourself, your victory will not stand in doubt.” Study their every move. Scrape their websites, analyze their X posts, dissect their customer reviews. Build a dossier of their weaknesses: overpriced products, slow delivery, lazy branding. Then strike. Launch a campaign that exposes their gaps_subtly, surgically. Example: If their SaaS is clunky, release a sleek competitor with a viral demo video. Their ignorance is your opening; drive the blade deep. 🧠</p>
+        <ul>
+          <li><strong>Action:</strong> Spend 2 hours weekly on competitive research. Use tools like SimilarWeb or Ahrefs to uncover their traffic and keywords.</li>
+          <li><strong>Psy-War:</strong> Leak a “customer complaint” on X about their service (anonymously, ethically ambiguous). Let their reputation bleed.</li>
+        </ul>
+
+        <h3>Tactic 2: Exploit Their Desperation</h3>
+        <p><strong>Desperation breeds mistakes.</strong> Struggling entrepreneurs are frantic_slashing prices, chasing bad deals, diluting their vision. Sun Tzu: “When the enemy is relaxed, make them toil. When full, starve them.” Push them to the brink. Undercut their pricing just enough to force a panic response, then maintain quality to win their customers. Example: If a competitor’s e-commerce store is bleeding cash, flood the market with targeted ads during their peak season. Their desperation will make them overextend; you’ll mop up the scraps. 💸</p>
+        <ul>
+          <li><strong>Action:</strong> Identify one competitor’s cash flow weakness (e.g., high ad spend, low margins). Outbid their Google Ads for 30 days.</li>
+          <li><strong>Psy-War:</strong> Spread rumors of their financial woes through industry whispers. Fear will make them reckless.</li>
+        </ul>
+
+        <h3>Tactic 3: Punish Their Complacency</h3>
+        <p><strong>Complacency is a death sentence.</strong> Established players grow fat and lazy, resting on past wins. Sun Tzu: “Attack where they are unprepared, appear where you are not expected.” Disrupt their comfort. Launch a guerrilla campaign_pop-up events, flash sales, influencer collabs_that catches them off guard. Example: If a competitor dominates local coffee shops, partner with a rising TikTok star to push your brand as the new king. Their slow response will bury them. ⚡</p>
+        <ul>
+          <li><strong>Action:</strong> Plan one unexpected marketing stunt this month (e.g., street art campaign, viral X thread). Execute before they can react.</li>
+          <li><strong>Psy-War:</strong> Publicly challenge their “legacy” on X with data showing your superiority. Shame breeds panic.</li>
+        </ul>
+
+        <h3>Tactic 4: Move in Shadows</h3>
+        <p><strong>Stealth is your shield.</strong> Sun Tzu: “The leader who wins makes many calculations in his temple before the battle is fought.” Never reveal your full strategy. Build your product in secret, test it with a loyal inner circle, launch with devastating precision. Competitors will scramble to copy you, but they’ll be too late. Example: Elon Musk built Tesla’s Roadster in silence, unveiling it to obliterate gas-guzzling rivals. Your silence is their funeral. 🕶️</p>
+        <ul>
+          <li><strong>Action:</strong> Develop one feature or product in secret for 60 days. Launch with a pre-built audience via email lists.</li>
+          <li><strong>Psy-War:</strong> Plant false leads about your next move (e.g., fake job postings). Let competitors chase ghosts.</li>
+        </ul>
+
+        <h3>Tactic 5: Starve Their Resources</h3>
+        <p><strong>Cut their lifelines.</strong> Sun Tzu: “When you surround an army, leave an outlet free. Do not press a desperate foe too hard.” Control their access to capital, talent, and customers. Poach their best employees with better offers. Lock up key suppliers with exclusive deals. Dominate their ad channels with higher bids. Example: Amazon crushed small retailers by securing bulk supplier contracts, leaving rivals scrambling. Their starvation is your feast. 🛠️</p>
+        <ul>
+          <li><strong>Action:</strong> Identify one key resource your competitor relies on (e.g., a supplier). Secure it with a 6-month contract.</li>
+          <li><strong>Psy-War:</strong> Spread FUD (fear, uncertainty, doubt) about their stability to deter their investors or partners.</li>
+        </ul>
+
+        <h3>Tactic 6: Weaponize Speed</h3>
+        <p><strong>Speed is your blade.</strong> Most entrepreneurs are sluggish, bogged down by bureaucracy or indecision. Sun Tzu: “Speed is the essence of war.” Outpace them. Release MVPs in weeks, not months. Respond to customer complaints in hours, not days. Iterate faster than they can blink. Example: Zara’s fast-fashion model crushes competitors by delivering trends in 15 days. Your velocity is their extinction. 🚀</p>
+        <ul>
+          <li><strong>Action:</strong> Cut one product’s development cycle by 50%. Launch an MVP this month, even if it’s raw.</li>
+          <li><strong>Psy-War:</strong> Publicize your rapid releases on X to make competitors look sluggish. Perception kills.</li>
+        </ul>
+
+        <h3>Tactic 7: Forge Iron Discipline</h3>
+        <p><strong>Discipline is your fortress.</strong> Weak entrepreneurs crumble under pressure_missed deadlines, burnout, emotional decisions. Sun Tzu: “The leader is the arbiter of the people’s fate.” You must be unbreakable. Work 80-hour weeks when needed. Track every dollar, every hour, every outcome. Eliminate distractions_social media, vices, excuses. Example: Jeff Bezos’ relentless focus built Amazon’s empire while rivals partied. Your discipline is their doom. 💪</p>
+        <ul>
+          <li><strong>Action:</strong> Use Toggl to track every hour for 30 days. Cut one non-essential activity (e.g., Netflix).</li>
+          <li><strong>Psy-War:</strong> Project unyielding confidence in meetings. Your calm under fire unnerves weaker foes.</li>
+        </ul>
+
+        <h2>Psychological Warfare: Break Their Will</h2>
+        <p><strong>The mind is the true battlefield.</strong> Sun Tzu: “To subdue the enemy without fighting is the acme of skill.” Crush their spirit before their business. Exploit their fears_fear of failure, fear of irrelevance. Spread rumors of your unstoppable momentum on X, even if exaggerated. Example: Steve Jobs’ reality distortion field convinced competitors Apple was invincible. Their doubt is your victory. 🧠</p>
+        <ul>
+          <li><strong>Ignorance:</strong> Feed competitors bad data. Example: Leak a fake product roadmap to mislead their R&D.</li>
+          <li><strong>Desperation:</strong> Amplify their panic. Example: Announce a massive funding round (real or not) to make them feel outgunned.</li>
+          <li><strong>Complacency:</strong> Shock their system. Example: Drop a disruptive feature that forces them to rethink their entire model.</li>
+        </ul>
+
+        <h2>Endgame: No Prisoners</h2>
+        <p><strong>This is your ultimatum.</strong> Most entrepreneurs will fail because they are weak_ignorant, desperate, complacent. You are not them. You are the warlord, the strategist, the executioner. Execute these tactics with the precision of a sniper, the ferocity of a predator, the vision of a conqueror. Build your empire on the bones of their failures. Tzeptosoft’s WarForge is your legion, your arsenal, your doctrine. Join us, or be swept away in the slaughter. In business, the battlefield is unforgiving. Will you survive the slaughter or be another casualty? 😈</p>
+        
+        <h3>Mission:</h3>
+        <ul>
+          <li><strong>Tonight:</strong> Read 20 pages of Sun Tzu’s <em>Art of War</em>. Write one competitor’s weakness and how you’ll exploit it.</li>
+          <li><strong>Tomorrow:</strong> Launch one psy-war tactic (e.g., a subtle X post exposing a rival’s flaw). Track its impact.</li>
+          <li><strong>This Week:</strong> Cut one product’s launch timeline by 30%. Move faster than your enemies can think.</li>
+          <li><strong>This Month:</strong> Secure one key resource (e.g., talent, supplier) to starve a competitor. No mercy.</li>
+          <li><strong>Declare Victory:</strong> Post on X: “I wage war in business with Tzeptosoft’s WarForge! ⚡ #ArtOfWarBusiness” Tag @tzeptosoft.</li>
+        </ul>
+        
+        <blockquote>“In business, the battlefield is unforgiving. Will you survive the slaughter or be another casualty?” _Tzeptosoft’s WarForge ⚡</blockquote>
+        <p class="signature">Your warlord, Clinton 😈</p>
+      </div>
+
+      <div class="terminal-content">
+        <div class="terminal-line" data-text="> Accessing Tzeptosoft WarForge... ⚔️"></div>
+        <div class="terminal-line" data-text="> Loading Art of War Protocol... 💥"></div>
+        <div class="terminal-line" data-text="> Signal transfer: EXECUTED ✅"></div>
+        <div class="terminal-line" data-text="> Directive: CRUSH OR BE CRUSHED ⚡"></div>
+      </div>
+
+      <div class="newsletter-container">
+        <h3>Join the WarForge Newsletter ⚡</h3>
+        <p>Get weekly <strong>business warfare</strong>, <strong>strategy</strong>, and <strong>domination</strong> protocols. No weakness, only victory! 💥</p>
+        <input type="email" placeholder="Enter your email" aria-label="Email for newsletter">
+        <button type="button">Subscribe 🚀</button>
+      </div>
+
+      <div class="social-share">
+        <h3>Spread the Art of War Protocol 🗣️</h3>
+        <a href="https://twitter.com/intent/tweet?url=https://tzeptosoft.com/blog/art-of-war-business&text=The Art of War in Business: Crush Competitors with Tzeptosoft's WarForge! ⚡ #ArtOfWarBusiness" aria-label="Share on Twitter">Twitter</a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://tzeptosoft.com/blog/art-of-war-business" aria-label="Share on LinkedIn">LinkedIn</a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://tzeptosoft.com/blog/art-of-war-business" aria-label="Share on Facebook">Facebook</a>
+        <a href="https://www.reddit.com/submit?url=https://tzeptosoft.com/blog/art-of-war-business&title=The Art of War in Business" aria-label="Share on Reddit">Reddit</a>
+        <a href="https://api.whatsapp.com/send?text=The Art of War in Business: Crush Competitors with Tzeptosoft's WarForge! ⚡ https://tzeptosoft.com/blog/art-of-war-business" aria-label="Share on WhatsApp">WhatsApp</a>
+      </div>
     </div>
-    <div class="social-share">
-      <h3>Spread the Art of War Protocol 🗣️</h3>
-      <a href="https://twitter.com/intent/tweet?url=https://tzeptosoft.com/blog/art-of-war-business&text=The Art of War in Business: Crush Competitors with Tzeptosoft’s WarForge! ⚡ #ArtOfWarBusiness" aria-label="Share on Twitter">Twitter</a>
-      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://tzeptosoft.com/blog/art-of-war-business" aria-label="Share on LinkedIn">LinkedIn</a>
-      <a href="https://www.facebook.com/sharer/sharer.php?u=https://tzeptosoft.com/blog/art-of-war-business" aria-label="Share on Facebook">Facebook</a>
-      <a href="https://www.reddit.com/submit?url=https://tzeptosoft.com/blog/art-of-war-business&title=The Art of War in Business" aria-label="Share on Reddit">Reddit</a>
-      <a href="https://api.whatsapp.com/send?text=The Art of War in Business: Crush Competitors with Tzeptosoft’s WarForge! ⚡ https://tzeptosoft.com/blog/art-of-war-business" aria-label="Share on WhatsApp">WhatsApp</a>
-    </div>
+
+    <footer>
+      <p>© 2025 Tzeptosoft | All Rights Fucking Reserved 🔥</p>
+    </footer>
   </div>
-  <footer>
-    <p>© Tzeptosoft | All Rights Reserved ⚡</p>
-    <div class="social-links">
-      <a href="https://twitter.com/tzeptosoft" aria-label="Twitter"><img src="/assets/twitter.webp" alt="Twitter" width="32" height="32" loading="lazy"></a>
-      <a href="https://linkedin.com/company/tzeptosoft" aria-label="LinkedIn"><img src="/assets/linkedin.webp" alt="LinkedIn" width="32" height="32" loading="lazy"></a>
-    </div>
-  </footer>
+
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      // Preloader
+      const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+      const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+      const mobileMenuClose = document.getElementById('mobileMenuClose');
+      const searchToggle = document.getElementById('searchToggle');
+      const searchBox = document.getElementById('searchBox');
+      const searchInput = document.querySelector('.search-input');
+
+      mobileMenuToggle?.addEventListener('click', () => {
+        mobileMenuOverlay?.classList.toggle('active');
+        document.body.style.overflow = mobileMenuOverlay?.classList.contains('active') ? 'hidden' : '';
+      });
+
+      mobileMenuClose?.addEventListener('click', () => {
+        mobileMenuOverlay?.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+
+      mobileMenuOverlay?.addEventListener('click', (e) => {
+        if (e.target === mobileMenuOverlay) {
+          mobileMenuOverlay.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      });
+
+      searchToggle?.addEventListener('click', () => {
+        const isActive = searchBox?.classList.contains('active');
+        searchBox?.classList.toggle('active');
+        searchToggle?.setAttribute('aria-expanded', !isActive);
+        if (!isActive && searchInput) searchInput.focus();
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          searchBox?.classList.remove('active');
+          searchToggle?.setAttribute('aria-expanded', 'false');
+          mobileMenuOverlay?.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      });
+
       window.addEventListener('load', () => {
         document.getElementById('preloader').style.display = 'none';
       });
 
-      // Battle Animation
-      const battleAnimation = document.querySelector('.battle-animation');
-      function startBattleAnimation() {
-        battleAnimation.textContent = '';
-        battleAnimation.classList.remove('typing');
-        void battleAnimation.offsetWidth;
-        battleAnimation.textContent = 'ART OF WAR IN BUSINESS';
-        battleAnimation.classList.add('typing');
+      const matrixAnimation = document.querySelector('.matrix-animation');
+      function startMatrixAnimation() {
+        matrixAnimation.textContent = '';
+        matrixAnimation.classList.remove('typing');
+        void matrixAnimation.offsetWidth;
+        matrixAnimation.textContent = 'ART OF WAR IN BUSINESS';
+        matrixAnimation.classList.add('typing');
       }
-      startBattleAnimation();
-      setInterval(startBattleAnimation, 6000);
+      startMatrixAnimation();
+      setInterval(startMatrixAnimation, 4000);
 
-      // Intersection Observer for Sections
-      const sections = document.querySelectorAll('.guide-container, .terminal-content');
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            if (entry.target.classList.contains('terminal-content') && !entry.target.dataset.animated) {
-              startTerminalSequence();
-              entry.target.dataset.animated = 'true';
-            }
-          }
-        });
-      }, { threshold: 0.1 });
-      sections.forEach(section => observer.observe(section));
+      let lastScrollY = window.scrollY;
+      window.addEventListener('scroll', () => {
+        const header = document.querySelector('.main-header');
+        const currentScrollY = window.scrollY;
+        if (currentScrollY > 100) {
+          header?.classList.add('scrolled');
+        } else {
+          header?.classList.remove('scrolled');
+        }
+        lastScrollY = currentScrollY;
+      });
 
-      // Terminal Sequence
-      function startTerminalSequence() {
-        const lines = document.querySelectorAll('.terminal-content .terminal-line');
-        let delay = 0;
-        lines.forEach(line => {
-          line.textContent = '';
-          const text = line.dataset.text;
-          let charIndex = 0;
-          setTimeout(() => {
-            const type = () => {
-              if (charIndex < text.length) {
-                line.textContent += text[charIndex];
-                charIndex++;
-                setTimeout(type, 40);
-              } else {
-                line.classList.add('typed');
-              }
-            };
-            type();
-          }, delay);
-          delay += 1500;
-        });
+      const matrixBg = document.getElementById('matrix-bg');
+      for (let i = 0; i < 50; i++) {
+        const char = document.createElement('div');
+        char.classList.add('matrix-char');
+        char.textContent = String.fromCharCode(33 + Math.random() * 94);
+        char.style.left = Math.random() * 100 + 'vw';
+        char.style.animationDelay = Math.random() * 5 + 's';
+        matrixBg.appendChild(char);
       }
 
-      // Particles
       const particleContainer = document.getElementById('particles');
-      for (let i = 0; i < 80; i++) {
+      for (let i = 0; i < 50; i++) {
         const particle = document.createElement('div');
         particle.classList.add('particle');
         particle.style.left = Math.random() * 100 + 'vw';
         particle.style.top = Math.random() * 100 + 'vh';
-        particle.style.animationDelay = Math.random() * 5 + 's';
+        particle.style.animationDelay = Math.random() * 3 + 's';
         particleContainer.appendChild(particle);
       }
 
-      // Cursor Trail
       const cursorTrail = document.getElementById('cursor-trail');
       document.addEventListener('mousemove', (e) => {
         cursorTrail.style.left = e.clientX - 15 + 'px';
         cursorTrail.style.top = e.clientY - 15 + 'px';
+      });
+
+      // Terminal animation
+      const terminalLines = document.querySelectorAll('.terminal-line');
+      let delay = 0;
+      terminalLines.forEach(line => {
+        line.textContent = '';
+        const text = line.dataset.text;
+        let charIndex = 0;
+        setTimeout(() => {
+          const type = () => {
+            if (charIndex < text.length) {
+              line.textContent += text[charIndex];
+              charIndex++;
+              setTimeout(type, 35);
+            } else {
+              line.classList.add('typed');
+            }
+          };
+          type();
+        }, delay);
+        delay += 1000;
+      });
+
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href');
+          if (targetId === '#') return;
+          
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 100,
+              behavior: 'smooth'
+            });
+          }
+        });
       });
     });
   </script>

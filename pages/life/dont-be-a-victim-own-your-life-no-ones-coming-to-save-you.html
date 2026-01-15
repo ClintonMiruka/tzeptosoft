@@ -3,41 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Don’t Be a Victim: Own Your Life. No One’s Coming to Save You. Tzeptosoft’s guide for coders, rebels, and warriors to reject victimhood, seize control, and forge personal sovereignty.">
+  <meta name="description" content="Don't Be a Victim: Own Your Life. No One's Coming to Save You. Tzeptosoft's guide for coders, rebels, and warriors to reject victimhood, seize control, and forge personal sovereignty.">
   <meta name="keywords" content="victim mindset, personal sovereignty, take responsibility, own your life, Tzeptosoft, escape the matrix, mental strength, rebel mindset, self-reliance, warrior mentality">
   <meta name="author" content="Clinton | Tzeptosoft">
-  <!-- Open Graph Tags -->
-  <meta property="og:title" content="Don’t Be a Victim — Own Your Life. No One’s Coming to Save You | Tzeptosoft">
-  <meta property="og:description" content="Tzeptosoft’s guide for coders, rebels, and warriors to reject victimhood, seize control, and forge personal sovereignty.">
-  <meta property="og:image" content="https://tzeptosoft.com/assets/no-victim.webp">
+  <meta property="og:title" content="Don't Be a Victim _ Own Your Life. No One's Coming to Save You | Tzeptosoft">
+  <meta property="og:description" content="Tzeptosoft's guide for coders, rebels, and warriors to reject victimhood, seize control, and forge personal sovereignty.">
+  <meta property="og:image" content="https://tzeptosoft.com/assets/og-image-lone-wolf.webp">
   <meta property="og:url" content="https://tzeptosoft.com/blog/no-victim">
   <meta property="og:type" content="article">
-  <!-- Twitter Card Tags -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Don’t Be a Victim — Own Your Life. No One’s Coming to Save You | Tzeptosoft">
-  <meta name="twitter:description" content="Tzeptosoft’s guide for coders, rebels, and warriors to reject victimhood, seize control, and forge personal sovereignty.">
-  <meta name="twitter:image" content="https://tzeptosoft.com/assets/no-victim.webp">
-  <title>Don’t Be a Victim — Own Your Life. No One’s Coming to Save You | Tzeptosoft</title>
+  <meta name="twitter:title" content="Don't Be a Victim _ Own Your Life. No One's Coming to Save You | Tzeptosoft">
+  <meta name="twitter:description" content="Tzeptosoft's guide for coders, rebels, and warriors to reject victimhood, seize control, and forge personal sovereignty.">
+  <meta name="twitter:image" content="https://tzeptosoft.com/assets/og-image-lone-wolf.webp">
+  <title>Don't Be a Victim _ Own Your Life. No One's Coming to Save You | Tzeptosoft</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Mono:wght@700&family=Orbitron:wght@900&family=JetBrains+Mono:wght@400;700&display=swap">
   <link rel="icon" type="image/webp" href="/assets/favicon.webp">
-  <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "headline": "Don’t Be a Victim — Own Your Life. No One’s Coming to Save You",
-    "description": "Tzeptosoft’s guide for coders, rebels, and warriors to reject victimhood, seize control, and forge personal sovereignty.",
-    "author": {
-      "@type": "Person",
-      "name": "Clinton"
-    },
+    "headline": "Don't Be a Victim _ Own Your Life. No One's Coming to Save You",
+    "description": "Tzeptosoft's guide for coders, rebels, and warriors to reject victimhood, seize control, and forge personal sovereignty.",
+    "author": { "@type": "Person", "name": "Clinton" },
     "publisher": {
       "@type": "Organization",
       "name": "Tzeptosoft",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://tzeptosoft.com/assets/logo.webp"
-      }
+      "logo": { "@type": "ImageObject", "url": "https://tzeptosoft.com/assets/logo.webp" }
     },
     "datePublished": "2025-04-27",
     "image": "https://tzeptosoft.com/assets/no-victim.webp",
@@ -53,6 +44,457 @@
       --text-dark: #FFFFFF;
       --matrix-green: #00FF00;
     }
+
+    /* Header Styles */
+    .main-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(11, 15, 26, 0.95);
+      backdrop-filter: blur(20px);
+      border-bottom: 2px solid transparent;
+      animation: headerSlideIn 0.6s ease-out;
+      box-shadow: 0 8px 32px rgba(0, 102, 204, 0.1);
+    }
+
+    @keyframes headerSlideIn {
+      from {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .main-header.scrolled {
+      border-bottom-color: rgba(0, 204, 255, 0.2);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 70px;
+      position: relative;
+    }
+
+    .logo-section {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .logo-wrapper:hover {
+      transform: scale(1.05);
+    }
+
+    .logo-image {
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(0, 204, 255, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    .logo-primary {
+      font-size: 1.4em;
+      font-weight: 900;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-shadow: 0 0 10px rgba(0, 102, 204, 0.5);
+    }
+
+    .logo-subtitle {
+      font-size: 0.75em;
+      color: var(--secondary);
+      font-weight: 600;
+      opacity: 0.8;
+      margin-top: 2px;
+    }
+
+    .nav-section {
+      display: flex;
+    }
+
+    .nav-list {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .nav-item {
+      position: relative;
+    }
+
+    .nav-link {
+      display: block;
+      padding: 8px 16px;
+      color: var(--text-dark);
+      text-decoration: none;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 0.95em;
+      position: relative;
+      transition: all 0.3s ease;
+      border-radius: 6px;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--secondary);
+      background: rgba(0, 204, 255, 0.1);
+      box-shadow: 0 0 20px rgba(0, 204, 255, 0.2);
+      transform: translateY(-2px);
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 80%;
+    }
+
+    .actions-section {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .search-container {
+      position: relative;
+    }
+
+    .search-toggle {
+      background: none;
+      border: 2px solid rgba(0, 204, 255, 0.3);
+      border-radius: 8px;
+      padding: 8px;
+      color: var(--secondary);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .search-toggle:hover {
+      border-color: var(--secondary);
+      box-shadow: 0 0 20px rgba(0, 204, 255, 0.4);
+      transform: scale(1.05);
+    }
+
+    .search-icon {
+      width: 20px;
+      height: 20px;
+    }
+
+    .search-box {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 300px;
+      background: rgba(28, 28, 28, 0.95);
+      border: 2px solid var(--secondary);
+      border-radius: 8px;
+      padding: 12px;
+      margin-top: 8px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 40px rgba(0, 102, 204, 0.2);
+      z-index: 1001;
+    }
+
+    .search-box.active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .search-input {
+      width: 100%;
+      background: rgba(18, 18, 18, 0.8);
+      border: 1px solid rgba(0, 204, 255, 0.3);
+      border-radius: 6px;
+      padding: 10px 12px;
+      color: var(--text-dark);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.9em;
+    }
+
+    .search-input::placeholder {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .search-input:focus {
+      outline: none;
+      border-color: var(--secondary);
+      box-shadow: 0 0 0 3px rgba(0, 204, 255, 0.2);
+    }
+
+    .search-submit {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: var(--secondary);
+      cursor: pointer;
+      padding: 4px;
+      width: 20px;
+      height: 20px;
+    }
+
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: var(--accent);
+      text-decoration: none;
+      border-radius: 8px;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 600;
+      font-size: 0.9em;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(0, 102, 204, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: left 0.5s;
+    }
+
+    .cta-button:hover::before {
+      left: 100%;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(0, 102, 204, 0.4);
+    }
+
+    .button-icon {
+      width: 16px;
+      height: 16px;
+      transition: transform 0.3s ease;
+    }
+
+    .cta-button:hover .button-icon {
+      transform: translateX(4px);
+    }
+
+    .mobile-menu-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 30px;
+      height: 30px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+      z-index: 1001;
+    }
+
+    .hamburger-line {
+      width: 100%;
+      height: 3px;
+      background: var(--secondary);
+      border-radius: 2px;
+      transition: all 0.3s ease;
+      transform-origin: center;
+    }
+
+    .mobile-menu-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: rgba(11, 15, 26, 0.98);
+      backdrop-filter: blur(20px);
+      z-index: 999;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.4s ease;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .mobile-menu-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .mobile-menu {
+      width: 320px;
+      max-width: 90vw;
+      background: linear-gradient(135deg, rgba(18, 18, 18, 0.95), rgba(11, 15, 26, 0.95));
+      border-left: 3px solid var(--secondary);
+      padding: 0;
+      transform: translateX(100%);
+      transition: transform 0.4s ease;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+    }
+
+    .mobile-menu-overlay.active .mobile-menu {
+      transform: translateX(0);
+    }
+
+    .mobile-menu-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 20px;
+      border-bottom: 1px solid rgba(0, 204, 255, 0.2);
+    }
+
+    .mobile-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-dark);
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.2em;
+    }
+
+    .mobile-menu-close {
+      background: none;
+      border: none;
+      color: var(--secondary);
+      cursor: pointer;
+      padding: 8px;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .mobile-menu-close:hover {
+      background: rgba(0, 204, 255, 0.1);
+      box-shadow: 0 0 20px rgba(0, 204, 255, 0.2);
+    }
+
+    .mobile-nav {
+      padding: 20px 0;
+      flex: 1;
+    }
+
+    .mobile-nav-link {
+      display: block;
+      padding: 16px 24px;
+      color: var(--text-dark);
+      text-decoration: none;
+      font-family: 'Inter', sans-serif;
+      font-size: 1.1em;
+      font-weight: 500;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .mobile-nav-link::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 0;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      transition: width 0.3s ease;
+      z-index: -1;
+    }
+
+    .mobile-nav-link:hover::before,
+    .mobile-nav-link.active::before {
+      width: 100%;
+    }
+
+    .mobile-nav-link:hover,
+    .mobile-nav-link.active {
+      color: var(--accent);
+      padding-left: 32px;
+    }
+
+    .mobile-actions {
+      padding: 20px 24px;
+      border-top: 1px solid rgba(0, 204, 255, 0.2);
+    }
+
+    .mobile-cta-button {
+      display: inline-block;
+      width: 100%;
+      padding: 16px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: var(--accent);
+      text-decoration: none;
+      border-radius: 8px;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 600;
+      text-align: center;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(0, 102, 204, 0.3);
+    }
+
+    .mobile-cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(0, 102, 204, 0.4);
+    }
+
     body {
       margin: 0;
       padding: 0;
@@ -62,6 +504,11 @@
       line-height: 1.6;
       overflow-x: hidden;
     }
+
+    .main-content {
+      position: relative;
+    }
+
     #preloader {
       position: fixed;
       top: 0;
@@ -74,15 +521,18 @@
       justify-content: center;
       z-index: 9999;
     }
+
     .loader {
       font-family: 'JetBrains Mono', monospace;
       color: var(--secondary);
       font-size: 1.5em;
       animation: blinkCaret 0.5s step-end infinite;
     }
+
     @keyframes blinkCaret {
       50% { border-color: transparent; }
     }
+
     #galaxy-bg {
       position: fixed;
       top: 0;
@@ -93,10 +543,12 @@
       z-index: -3;
       animation: rotateGalaxy 60s infinite linear;
     }
+
     @keyframes rotateGalaxy {
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
     }
+
     #matrix-bg {
       position: fixed;
       top: 0;
@@ -106,6 +558,7 @@
       z-index: -2;
       opacity: 0.7;
     }
+
     .matrix-char {
       position: absolute;
       font-family: 'JetBrains Mono', monospace;
@@ -114,10 +567,12 @@
       opacity: 0.8;
       animation: matrix-fall 5s linear infinite;
     }
+
     @keyframes matrix-fall {
       0% { transform: translateY(-100vh); opacity: 0.8; }
       100% { transform: translateY(100vh); opacity: 0; }
     }
+
     #particles {
       position: fixed;
       top: 0;
@@ -126,6 +581,7 @@
       height: 100%;
       z-index: -1;
     }
+
     .particle {
       position: absolute;
       width: 5px;
@@ -134,11 +590,13 @@
       border-radius: 50%;
       animation: drift 10s infinite linear;
     }
+
     @keyframes drift {
       0% { transform: translate(0, 0); opacity: 0.5; }
       50% { opacity: 1; }
       100% { transform: translate(100px, 100px); opacity: 0.5; }
     }
+
     #cursor-trail {
       position: fixed;
       width: 30px;
@@ -146,659 +604,785 @@
       background: radial-gradient(circle, var(--secondary), transparent);
       border-radius: 50%;
       pointer-events: none;
-      z-index: 1000;
+      z-index: 100;
       transition: all 0.1s ease;
     }
+
     .hero {
       text-align: center;
-      padding: 120px 20px;
-      background: rgba(18, 18, 18, 0.95);
+      padding: 120px 20px 100px;
+      background: rgba(18, 18, 18, 0.9);
       position: relative;
       z-index: 1;
-      border-bottom: 3px solid var(--secondary);
-      animation: borderGlow 2s infinite;
+      margin-top: 0;
     }
+
     .hero h1 {
-      font-size: 6em;
+      font-size: 5em;
       font-family: 'Orbitron', sans-serif;
       background: linear-gradient(90deg, var(--primary), var(--secondary));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      text-shadow: 0 0 15px var(--primary), 0 0 30px var(--secondary);
-      animation: gradientShift 2.5s ease infinite;
+      text-shadow: 0 0 10px var(--primary);
+      animation: gradientShift 3s ease infinite;
       margin-bottom: 0;
     }
+
     .matrix-animation {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 1.8em;
+      font-size: 1.5em;
       color: var(--matrix-green);
-      text-shadow: 0 0 12px var(--matrix-green), 0 0 24px var(--matrix-green);
-      margin-top: 15px;
+      text-shadow: 0 0 10px var(--matrix-green);
+      margin-top: 10px;
       overflow: hidden;
       white-space: nowrap;
       display: inline-block;
-      animation: typeMatrix 1.8s steps(20) forwards, glitch 0.08s infinite alternate;
     }
+
     .matrix-animation.typing {
-      animation: typeMatrix 1.8s steps(20) forwards, glitch 0.08s infinite alternate;
+      animation: typeMatrix 2s steps(20) forwards, glitch 0.1s infinite alternate;
     }
+
     @keyframes typeMatrix {
       from { width: 0; }
       to { width: 100%; }
     }
+
     @keyframes glitch {
       0% { transform: translate(0); opacity: 1; }
-      50% { transform: translate(3px, -3px); opacity: 0.7; }
-      100% { transform: translate(-3px, 3px); opacity: 0.9; }
+      50% { transform: translate(2px, -2px); opacity: 0.8; }
+      100% { transform: translate(-2px, 2px); opacity: 0.9; }
     }
+
     @keyframes gradientShift {
       0% { background-position: 0%; }
       50% { background-position: 100%; }
       100% { background-position: 0%; }
     }
+
     .hero h2 {
-      font-size: 2em;
+      font-size: 1.8em;
       color: var(--secondary);
-      text-shadow: 0 0 12px var(--secondary);
-      margin-top: 25px;
-      font-family: 'Orbitron', sans-serif;
+      text-shadow: 0 0 10px var(--secondary);
+      margin-top: 20px;
     }
+
     .btn-cta {
       background: linear-gradient(90deg, var(--primary), var(--secondary));
       color: var(--accent);
-      padding: 18px 36px;
+      padding: 15px 30px;
       text-decoration: none;
-      font-size: 1.6em;
-      border-radius: 6px;
-      box-shadow: 0 0 25px var(--primary), 0 0 50px var(--secondary);
-      animation: pulse 1.8s infinite;
-      margin-top: 25px;
+      font-size: 1.5em;
+      border-radius: 5px;
+      box-shadow: 0 0 20px var(--primary);
+      animation: pulse 2s infinite;
+      margin-top: 20px;
       display: inline-block;
-      transition: transform 0.2s ease;
     }
+
     .btn-cta:hover {
       background: linear-gradient(90deg, var(--secondary), var(--primary));
-      transform: scale(1.15);
-      box-shadow: 0 0 35px var(--secondary);
+      transform: scale(1.1);
     }
+
     @keyframes pulse {
-      0% { box-shadow: 0 0 0 0 rgba(0, 102, 204, 0.5); }
-      70% { box-shadow: 0 0 0 15px rgba(0, 102, 204, 0); }
+      0% { box-shadow: 0 0 0 0 rgba(0, 102, 204, 0.4); }
+      70% { box-shadow: 0 0 0 10px rgba(0, 102, 204, 0); }
       100% { box-shadow: 0 0 0 0 rgba(0, 102, 204, 0); }
     }
+
     .holo-element {
       position: absolute;
-      width: 80px;
-      height: 80px;
+      width: 70px;
+      height: 70px;
       background: radial-gradient(circle, var(--primary), transparent);
       border-radius: 50%;
-      animation: float 3.5s infinite ease-in-out;
-      opacity: 0.6;
+      animation: float 4s infinite ease-in-out;
     }
+
     @keyframes float {
-      0% { transform: translateY(0); opacity: 0.6; }
-      50% { transform: translateY(-40px); opacity: 1; }
-      100% { transform: translateY(0); opacity: 0.6; }
+      0% { transform: translateY(0); opacity: 0.5; }
+      50% { transform: translateY(-30px); opacity: 1; }
+      100% { transform: translateY(0); opacity: 0.5; }
     }
+
     .blog-container {
-      padding: 100px 20px;
-      max-width: 800px;
+      padding: 80px 20px;
+      max-width: 900px;
       margin: 0 auto;
-      background: rgba(18, 18, 18, 0.95);
-      border: 4px solid var(--secondary);
-      animation: borderGlow 1.8s infinite;
-      box-shadow: 0 0 30px var(--primary);
+      background: rgba(18, 18, 18, 0.9);
+      border: 3px solid var(--secondary);
+      animation: borderGlow 2s infinite;
     }
+
     @keyframes borderGlow {
-      0% { border-color: var(--primary); box-shadow: 0 0 20px var(--primary); }
-      50% { border-color: var(--secondary); box-shadow: 0 0 40px var(--secondary); }
-      100% { border-color: var(--primary); box-shadow: 0 0 20px var(--primary); }
+      0% { border-color: var(--primary); }
+      50% { border-color: var(--secondary); }
+      100% { border-color: var(--primary); }
     }
+
     .blog-container h1 {
-      font-size: 3em;
+      font-size: 2.5em;
       color: var(--secondary);
-      text-shadow: 0 0 20px var(--secondary), 0 0 40px var(--primary);
+      text-shadow: 0 0 15px var(--secondary);
       font-family: 'Orbitron', sans-serif;
       text-align: center;
     }
+
     .blog-container h2 {
-      font-size: 2em;
+      font-size: 1.8em;
       color: var(--secondary);
       font-family: 'Orbitron', sans-serif;
-      margin-top: 2.5em;
-      text-shadow: 0 0 15px var(--secondary);
-      transition: transform 0.3s ease;
+      margin-top: 2em;
     }
-    .blog-container h2:hover {
-      transform: scale(1.05);
+
+    .blog-container h3 {
+      font-size: 1.4em;
+      color: var(--secondary);
+      font-family: 'Orbitron', sans-serif;
+      margin-top: 1.5em;
     }
+
     .blog-container p {
       color: var(--text-dark);
-      font-size: 1.3em;
+      font-size: 1.2em;
     }
+
+    .highlight {
+      color: var(--secondary);
+      font-weight: 600;
+    }
+
     .blog-container ul {
       list-style: none;
       padding: 0;
     }
+
     .blog-container li {
       background: #1C1C1C;
-      padding: 20px;
-      border: 3px solid var(--secondary);
-      margin-bottom: 20px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      padding: 15px;
+      border: 2px solid var(--secondary);
+      margin-bottom: 15px;
+      transition: transform 0.3s ease;
     }
+
     .blog-container li:hover {
-      transform: translateY(-15px);
-      box-shadow: 0 0 50px var(--secondary);
+      transform: translateY(-10px);
+      box-shadow: 0 0 40px var(--secondary);
     }
+
     .blog-container blockquote {
       font-family: 'JetBrains Mono', monospace;
       color: var(--secondary);
-      border-left: 5px solid var(--secondary);
-      padding-left: 20px;
-      margin: 25px 0;
+      border-left: 4px solid var(--secondary);
+      padding-left: 15px;
+      margin: 20px 0;
       font-style: italic;
-      text-shadow: 0 0 10px var(--secondary);
     }
+
     .author-info {
-      margin: 25px 0;
+      margin: 20px 0;
       text-align: center;
     }
+
     .author-name {
       font-family: 'JetBrains Mono', monospace;
       color: var(--secondary);
-      font-size: 1.3em;
-      text-shadow: 0 0 10px var(--secondary);
+      font-size: 1.2em;
     }
+
     .author-title {
       color: var(--text-dark);
-      font-size: 1.1em;
+      font-size: 1em;
     }
+
     .author-logo {
       max-width: 100px;
       height: auto;
     }
+
     hr {
-      border: 2px solid var(--secondary);
-      margin: 25px 0;
-      box-shadow: 0 0 15px var(--secondary);
+      border: 1px solid var(--secondary);
+      margin: 20px 0;
     }
+
     .cta-container {
       text-align: center;
-      margin: 25px 0;
+      margin: 20px 0;
     }
+
     .cta-title {
       font-family: 'Orbitron', sans-serif;
       color: var(--secondary);
-      font-size: 2em;
-      text-shadow: 0 0 15px var(--secondary);
+      font-size: 1.8em;
     }
-    .cta-button {
-      background: linear-gradient(90deg, var(--primary), var(--secondary));
-      color: var(--accent);
-      padding: 12px 24px;
-      text-decoration: none;
-      border-radius: 5px;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 1.2em;
-      box-shadow: 0 0 20px var(--primary);
-      transition: transform 0.2s ease;
-    }
-    .cta-button:hover {
-      background: linear-gradient(90deg, var(--secondary), var(--primary));
-      transform: scale(1.1);
-      box-shadow: 0 0 30px var(--secondary);
-    }
+
     .newsletter-container {
       text-align: center;
-      margin: 50px 0;
-      padding: 25px;
+      margin: 40px 0;
+      padding: 20px;
       background: #1C1C1C;
-      border: 3px solid var(--secondary);
-      border-radius: 5px;
-      box-shadow: 0 0 25px var(--primary);
+      border: 2px solid var(--secondary);
+      border-radius: 4px;
     }
+
     .newsletter-container h3 {
       font-family: 'Orbitron', sans-serif;
       color: var(--secondary);
-      font-size: 2em;
-      margin-bottom: 15px;
-      text-shadow: 0 0 15px var(--secondary);
+      font-size: 1.8em;
+      margin-bottom: 10px;
     }
+
     .newsletter-container p {
-      font-size: 1.3em;
-      margin-bottom: 25px;
+      font-size: 1.2em;
+      margin-bottom: 20px;
     }
+
     .newsletter-container input[type="email"] {
-      padding: 12px;
+      padding: 10px;
       width: 70%;
-      max-width: 320px;
-      border: 3px solid var(--secondary);
+      max-width: 300px;
+      border: 2px solid var(--secondary);
       background: #1a1a1a;
       color: var(--text-dark);
       font-family: 'JetBrains Mono', monospace;
-      border-radius: 5px;
-      font-size: 1.1em;
+      border-radius: 4px;
     }
+
     .newsletter-container button {
-      padding: 12px 24px;
+      padding: 10px 20px;
       background: linear-gradient(90deg, var(--primary), var(--secondary));
       color: var(--accent);
       border: none;
-      border-radius: 5px;
+      border-radius: 4px;
       font-family: 'JetBrains Mono', monospace;
       cursor: pointer;
-      font-size: 1.2em;
-      box-shadow: 0 0 20px var(--primary);
     }
+
     .newsletter-container button:hover {
       background: linear-gradient(90deg, var(--secondary), var(--primary));
-      transform: scale(1.1);
-      box-shadow: 0 0 30px var(--secondary);
+      transform: scale(1.05);
     }
+
     .social-share {
-      margin: 2.5rem 0;
+      margin: 2rem 0;
       text-align: center;
     }
+
     .social-share h3 {
       font-family: 'Orbitron', sans-serif;
       color: var(--secondary);
-      margin-bottom: 15px;
-      text-shadow: 0 0 15px var(--secondary);
       font-size: 1.8em;
+      margin-bottom: 10px;
     }
+
     .social-share a {
-      margin: 0 12px;
-      padding: 12px 24px;
+      margin: 0 10px;
+      padding: 10px 20px;
       background: var(--primary);
       color: var(--accent);
-      border-radius: 5px;
+      border-radius: 4px;
       text-decoration: none;
       font-family: 'JetBrains Mono', monospace;
-      font-size: 1.1em;
-      transition: transform 0.2s ease;
     }
+
     .social-share a:hover {
       background: var(--secondary);
       color: #000;
-      transform: scale(1.05);
     }
-    .terminal-section {
-      padding: 50px 20px;
+
+    .terminal-content {
       background: #1a1a1a;
-      border: 2px solid var(--secondary);
-      border-radius: 5px;
-      margin: 25px 0;
-      box-shadow: 0 0 25px var(--primary);
-    }
-    .terminal-section h2 {
-      font-size: 2.8em;
-      text-align: center;
-      color: var(--secondary);
-      font-family: 'Orbitron', sans-serif;
-      text-shadow: 0 0 15px var(--secondary);
-    }
-    .terminal-content, .hack-output {
-      background: #1a1a1a;
-      padding: 25px;
-      border: 2px solid var(--secondary);
-      border-radius: 5px;
-      margin: 25px 0;
+      padding: 20px;
+      border: 1px solid var(--secondary);
+      border-radius: 4px;
+      margin: 20px 0;
       font-family: 'JetBrains Mono', monospace;
       color: var(--secondary);
-      font-size: 1.1em;
-      box-shadow: 0 0 15px var(--primary);
+      font-size: 1em;
     }
-    .hack-output {
-      display: none;
-    }
-    .hack-output.active {
-      display: block;
-      animation: fadeIn 0.5s ease-out;
-    }
+
     .terminal-line {
       opacity: 0;
       white-space: nowrap;
       overflow: hidden;
     }
+
     .terminal-line.typed {
       opacity: 1;
       animation: typing 0.5s steps(40) forwards;
     }
-    .hack-btn {
-      background: linear-gradient(90deg, var(--primary), var(--secondary));
-      color: var(--accent);
-      padding: 12px 24px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 1.2em;
-      transition: transform 0.2s ease;
-      display: block;
-      margin: 25px auto;
-      box-shadow: 0 0 20px var(--primary);
-    }
-    .hack-btn:hover {
-      transform: scale(1.1);
-      box-shadow: 0 0 30px var(--secondary);
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+
     @keyframes typing {
       from { width: 0; }
       to { width: 100%; }
     }
+
     footer {
       text-align: center;
-      padding: 50px 20px;
-      border-top: 2px solid #1E1E2E;
-      box-shadow: 0 -10px 20px rgba(0, 204, 255, 0.2);
+      padding: 40px 20px;
+      border-top: 1px solid #1E1E2E;
     }
-    .social-links {
-      display: flex;
-      justify-content: center;
-      gap: 25px;
-      margin-top: 15px;
-    }
-    .social-links img {
-      width: 28px;
-      height: 28px;
-      transition: transform 0.2s ease;
-    }
-    .social-links img:hover {
-      transform: scale(1.2);
-    }
+
     .signature {
       font-family: 'JetBrains Mono', monospace;
       color: var(--secondary);
-      font-size: 1.3em;
-      margin-top: 25px;
+      font-size: 1.2em;
+      margin-top: 20px;
       text-align: center;
-      text-shadow: 0 0 10px var(--secondary);
     }
+
+    @media (max-width: 1024px) {
+      .nav-list {
+        gap: 20px;
+      }
+      
+      .nav-link {
+        padding: 6px 12px;
+        font-size: 0.9em;
+      }
+    }
+
     @media (max-width: 768px) {
-      .hero h1 { font-size: 3.5em; }
-      .matrix-animation { font-size: 1.3em; }
-      .blog-container { padding: 50px 15px; }
-      .hero { padding: 80px 15px; }
-      .newsletter-container input[type="email"] { width: 90%; }
-      .terminal-section h2 { font-size: 2.2em; }
-      .btn-cta { font-size: 1.3em; padding: 12px 24px; }
+      .header-container {
+        height: 60px;
+        padding: 0 16px;
+      }
+      
+      .nav-section {
+        display: none;
+      }
+      
+      .mobile-menu-toggle {
+        display: flex;
+      }
+      
+      .search-box {
+        width: 280px;
+        right: -20px;
+      }
+      
+      .logo-primary {
+        font-size: 1.2em;
+      }
+
+      .hero {
+        padding: 100px 10px 80px;
+      }
+
+      .hero h1 { 
+        font-size: 3em; 
+      }
+
+      .matrix-animation { 
+        font-size: 1.2em; 
+      }
+
+      .blog-container { 
+        padding: 40px 10px; 
+      }
+
+      .blog-container h1 { 
+        font-size: 1.8em; 
+      }
+
+      .terminal-content { 
+        font-size: 0.9em; 
+      }
+
+      .newsletter-container input[type="email"] { 
+        width: 90%; 
+      }
     }
+
     @media (max-width: 480px) {
-      .hero h1 { font-size: 2.5em; }
-      .matrix-animation { font-size: 1em; }
-      .hero h2 { font-size: 1.4em; }
-      .btn-cta { font-size: 1em; padding: 10px 20px; }
-      .blog-container h1 { font-size: 2em; }
-      .terminal-content { font-size: 0.9em; }
-      .terminal-section h2 { font-size: 1.8em; }
-      .cta-title { font-size: 1.5em; }
+      .header-container {
+        height: 56px;
+        padding: 0 12px;
+      }
+      
+      .search-box {
+        width: calc(100vw - 40px);
+        right: auto;
+        left: 12px;
+      }
+      
+      .cta-button {
+        padding: 10px 20px;
+        font-size: 0.85em;
+      }
+      
+      .mobile-menu {
+        width: 100vw;
+        max-width: none;
+      }
+
+      .hero h1 { 
+        font-size: 2em; 
+      }
+
+      .matrix-animation { 
+        font-size: 1em; 
+      }
+
+      .hero h2 { 
+        font-size: 1.2em; 
+      }
+
+      .btn-cta { 
+        font-size: 1em; 
+        padding: 10px 20px; 
+      }
+
+      .blog-container h1 { 
+        font-size: 1.8em; 
+      }
+
+      .terminal-content { 
+        font-size: 0.9em; 
+      }
+
+      .newsletter-container input[type="email"] { 
+        width: 90%; 
+      }
     }
+
     @media (prefers-reduced-motion: reduce) {
-      * { animation: none !important; transition: none !important; }
-    }
-    @media print {
-      body { background: white; color: black; }
-      .blog-container { background: white; border: none; }
-      a { color: var(--primary); text-decoration: underline; }
-      .btn-cta, .cta-button { background: white; color: var(--primary); border: 1px solid var(--primary); }
-      #galaxy-bg, #matrix-bg, #particles, #cursor-trail, .holo-element, .matrix-animation { display: none; }
+      * { 
+        animation: none !important; 
+        transition: none !important; 
+      }
     }
   </style>
 </head>
-<body>
+<body data-page="no-victim">
   <div id="preloader">
-    <div class="loader">Initializing Tzeptosoft...</div>
+    <div class="loader">Initializing Tzeptosoft... 🚀</div>
   </div>
-  <div id="galaxy-bg"></div>
-  <div id="matrix-bg"></div>
-  <div id="particles"></div>
-  <div id="cursor-trail"></div>
-  <div class="hero">
-    <h1>TZEPTOSOFT</h1>
-    <div class="matrix-animation">ESCAPING THE MATRIX</div>
-    <h2>Don’t Be a Victim</h2>
-    <a href="mailto:tzeptosoft@gmail.com" class="btn-cta" aria-label="Contact Tzeptosoft">Break the Chains</a>
-    <div class="holo-element" style="top: 15%; left: 8%;"></div>
-    <div class="holo-element" style="top: 35%; right: 12%;"></div>
-    <div class="holo-element" style="bottom: 20%; left: 15%;"></div>
-    <div class="holo-element" style="bottom: 10%; right: 8%;"></div>
-  </div>
-  <div class="blog-container">
-    <header>
-      <h1>Don’t Be a Victim — Own Your Life. No One’s Coming to Save You</h1>
-      <div class="author-info">
-        <p class="author-name">Clinton | Tzeptosoft</p>
-        <img src="/assets/images/tzeptosoft-logo.webp" alt="Tzeptosoft Logo" class="author-logo" width="100" height="100" loading="lazy">
-        <p class="author-title">Forger of Sovereign Warriors</p>
+
+  <!-- Professional Header -->
+  <header class="main-header">
+    <div class="header-container">
+      <!-- Logo Section -->
+      <div class="logo-section">
+        <a href="../index.html" class="logo-wrapper" aria-label="Tzeptosoft Home">
+          <img src="/assets/images/tzeptosoft-logo.webp" alt="Tzeptosoft Logo" class="logo-image" width="48" height="48" loading="lazy">
+          <div class="logo-text">
+            <span class="logo-primary">TZEPTOSOFT</span>
+            <span class="logo-subtitle">Escaping the Matrix</span>
+          </div>
+        </a>
       </div>
-      <hr>
-    </header>
-    <div class="cta-container">
-      <h3 class="cta-title">Ready to Forge Your Throne?</h3>
-      <a href="mailto:tzeptosoft@gmail.com" class="cta-button">Join the Rebellion</a>
+
+      <!-- Navigation -->
+      <nav class="nav-section" role="navigation" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="../index.html" class="nav-link" data-page="home">New? Start Here</a>
+          </li>
+          <li class="nav-item">
+            <a href="blog.html" class="nav-link" data-page="blog">Blog Archives</a>
+          </li>
+          <li class="nav-item">
+            <a href="lessons" class="nav-link" data-page="lessons">Tzeptosoft Products</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact-us.html" class="nav-link" data-page="Tzeptosoft">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link" data-page="about">About</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Action Buttons & Search -->
+      <div class="actions-section">
+        <!-- Search -->
+        <div class="search-container">
+          <button class="search-toggle" aria-label="Toggle search" aria-expanded="false" id="searchToggle">
+            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.35-4.35"></path>
+            </svg>
+          </button>
+          <div class="search-box" id="searchBox">
+            <input type="search" placeholder="Search lessons, tactics, blueprints..." class="search-input" aria-label="Search content">
+            <button class="search-submit" aria-label="Search">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.35-4.35"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- CTA Button -->
+        <a href="mailto:tzeptosoft@gmail.com" class="cta-button" aria-label="Join Tzeptosoft">
+          <span class="button-text">Join Tzeptosoft</span>
+          <svg class="button-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false" id="mobileMenuToggle">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
     </div>
-    <div class="content">
-      <p>Wake the fuck up. You’re not a victim. Stop acting like one. The world’s a battlefield, and you’re sitting there whining, waiting for a savior who’ll never show. Nobody’s coming. Not your mom, not the government, not some influencer on X promising you a shortcut to freedom. The system wants you weak, broken, and begging—scrolling through bullshit, blaming everyone else for your failures. This isn’t a pep talk; it’s a goddamn war cry. You’re a coder, a rebel, a warrior. Act like it. <span class="highlight">Own your life.</span> Break the chains. Forge your throne. Or die a slave in the matrix you chose. The clock’s ticking. Choose now.</p>
 
-      <h2>The Victim Mindset: A Fucking Trap</h2>
-      <p>The victim mindset is a prison, and you’re the one locking the door. “It’s my boss’s fault.” “The economy’s rigged.” “I wasn’t born rich.” Shut the fuck up. Every excuse you make is a chain you forge. The system loves victims—they’re easy to control. They don’t fight. They don’t build. They just complain, scrolling X, waiting for a bailout that’ll never come. A recent psychology study showed 65% of people adopt a victim mentality under stress, and it cuts their problem-solving ability by 40%. That’s not a stat—it’s your life bleeding out.</p>
-      <p>You’re not special. Life’s not fair. The world owes you nothing. That coder in Silicon Valley pulling $200k? He wasn’t “lucky.” He grinded algorithms while you binged Netflix. That entrepreneur with a seven-figure brand? She didn’t cry about “circumstances.” She hustled through rejections. Victims blame. Warriors own. The system’s designed to keep you soft—feeding you lies about “privilege” or “bad breaks” to justify your inaction. It’s a trap. Step out, or stay caged.</p>
-      <p>Look around. X is a swamp of victims—endless threads of people whining about jobs, rent, life. They’re not fighting; they’re drowning. Meanwhile, the silent ones—the coders, the fighters, the builders—are owning their shit. They don’t tweet about their pain. They turn it into power. Victimhood is a choice. Stop choosing it. <span class="highlight">Own your life.</span> Or someone else will.</p>
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+      <div class="mobile-menu">
+        <div class="mobile-menu-header">
+          <a href="../index.html" class="mobile-logo">
+            <img src="/assets/images/tzeptosoft-logo.webp" alt="Tzeptosoft" width="40" height="40">
+            <span>TZEPTOSOFT</span>
+          </a>
+          <button class="mobile-menu-close" id="mobileMenuClose">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 6 6 18"></path>
+              <path d="m6 6 12 12"></path>
+            </svg>
+          </button>
+        </div>
+        <nav class="mobile-nav">
+          <a href="../index.html" class="mobile-nav-link">New? Start Here</a>
+          <a href="blog.html" class="mobile-nav-link">Blog Archives</a>
+          <a href="lessons" class="mobile-nav-link">Tzeptosoft Products</a>
+          <a href="contact-us.html" class="mobile-nav-link">Contact Us</a>
+          <a href="about.html" class="mobile-nav-link">About</a>
+        </nav>
+        <div class="mobile-actions">
+          <a href="mailto:tzeptosoft@gmail.com" class="mobile-cta-button">Join Tzeptosoft 🚀</a>
+        </div>
+      </div>
+    </div>
+  </header>
 
-      <h2>The Cost of Playing the Victim</h2>
-      <p>Victimhood isn’t free. It costs you everything—your freedom, your power, your soul. Every time you blame someone else, you hand them your life. A recent mental health study found victim mindsets increase anxiety by 50% and cut motivation by 35%. You’re not just sad—you’re paralyzed. That project you didn’t start? That gym you didn’t hit? That code you didn’t write? All because you’re too busy crying, “It’s not my fault.”</p>
-      <p>Numbers don’t lie. The average self-identified “victim” earns 25% less than those who take responsibility, per a 2023 economic study. Why? Victims wait for handouts. Owners build systems. The coder who owns his failures debugs faster, ships better, earns more. The fighter who owns his losses trains harder, wins bigger. The entrepreneur who owns her mistakes pivots smarter, scales faster. Victimhood is a death spiral. It’s why you’re stuck—broke, weak, and scrolling while the world passes you by.</p>
-      <p>Real cost? Time. You’re not 18 forever. At 25, you’ve got hunger, no baggage. At 35, life’s heavier—bills, kids, regrets. Every day you play victim is a day you’ll never get back. A recent time study showed people waste 20 hours a week on “avoidable” complaints. That’s 1,040 hours a year—enough to learn Python, build a side hustle, or get jacked. Stop bleeding time. <span class="highlight">Own your life.</span> Or watch it burn.</p>
+  <div class="main-content">
+    <div id="galaxy-bg"></div>
+    <div id="matrix-bg"></div>
+    <div id="particles"></div>
+    <div id="cursor-trail"></div>
 
-      <h2>Why Most Men Are Victims</h2>
-      <p>Most men are victims because they’re weak. Not physically—mentally. They’re trained to be soft, to crave comfort, to dodge blame. The system’s their nanny, and they’re happy suckling. A recent sociology study found 70% of men under 30 externalize their failures, blaming “society” or “luck.” They’re not men—they’re boys, addicted to excuses and X likes. Here’s the brutal breakdown:</p>
-      <ul>
-        <li><strong>Conditioning:</strong> Schools, media, X—they teach you to whine. A 2023 education study showed 60% of curriculums emphasize “systemic” barriers over personal agency. You’re programmed to fail.</li>
-        <li><strong>Comfort:</strong> A cozy job, a warm bed, a full fridge—they dull your edge. A recent psychology study found comfort reduces risk-taking by 45%. Victims love safety. Warriors love war.</li>
-        <li><strong>Fear:</strong> Fear of failure, judgment, or effort. A 2023 mindset study showed 80% of men avoid challenges to “protect” their ego. Fuck your ego. Fail. Learn. Win.</li>
-        <li><strong>Tribalism:</strong> Victims flock together, circle-jerking on X about “injustice.” A recent social study found victim groups reinforce helplessness 50% more than action-oriented ones. Cut them off.</li>
-      </ul>
-      <p>These men aren’t your brothers. They’re anchors. They’ll drag you down with their sob stories and “it’s not fair” bullshit. You’re not them. You’re a rebel, a warrior, a fucking king. Stop whining. <span class="highlight">Own your life.</span> No excuses. No mercy.</p>
+    <div class="hero">
+      <h1>TZEPTOSOFT</h1>
+      <div class="matrix-animation">BREAK THE CHAINS. OWN YOUR LIFE.</div>
+      <h2>Don't Be a Victim</h2>
+      <a href="mailto:tzeptosoft@gmail.com" class="btn-cta" aria-label="Contact Tzeptosoft">Break the Chains</a>
+      <div class="holo-element" style="top: 20%; left: 10%;"></div>
+      <div class="holo-element" style="top: 30%; right: 15%;"></div>
+      <div class="holo-element" style="bottom: 25%; left: 20%;"></div>
+      <div class="holo-element" style="bottom: 15%; right: 10%;"></div>
+    </div>
 
-      <h2>Radical Responsibility: The Key to Sovereignty</h2>
-      <p>Radical responsibility is your sword. It’s owning every choice, every failure, every outcome. Lost your job? Your fault—you didn’t skill up. Broke? Your fault—you didn’t hustle. Weak? Your fault—you skipped the gym. No one’s coming to save you. A recent resilience study showed people who take full responsibility recover from setbacks 60% faster. That’s not a hack—it’s power.</p>
-      <p><strong>Stoic truth:</strong> Epictetus wrote, “There is only one way to happiness: cease worrying about things beyond your control.” You can’t control the economy, your boss, or X’s algorithm. You can control you. A coder who owns his bugs fixes them faster. A fighter who owns his losses trains harder. Radical responsibility isn’t blame—it’s freedom. When you own your life, no one can take it.</p>
-      <p><strong>Real story:</strong> Jake, 27, was a victim. Fired from his tech job, he blamed “corporate greed.” Spent months on X, whining, gaming, broke. Then he snapped. Took responsibility. Learned AWS, built a portfolio, cold-emailed 50 startups. Six months later, he’s a cloud engineer at $130k, remote, living in Portugal. Skill: Cloud computing. Mindset: Ownership. Freedom: His life, his terms.</p>
-      <p>Another: Maria, 30, was a single mom, waitressing, “stuck.” Blamed her ex, her boss, “the system.” Then she owned it. Learned UX design on YouTube, grinded nights after her kid slept. Now she freelances at $80/hour, works from home, owns her time. Skill: Design. Mindset: No excuses. Freedom: Her throne.</p>
-      <p>Radical responsibility is a choice. Make it, and you’re unstoppable. Dodge it, and you’re a slave. <span class="highlight">Own your life.</span> Break the matrix. Now.</p>
+    <div class="blog-container">
+      <header>
+        <h1>Don't Be a Victim _ Own Your Life. No One's Coming to Save You</h1>
+        <div class="author-info">
+          <p class="author-name">Clinton | Tzeptosoft</p>
+          <img src="/assets/images/tzeptosoft-logo.webp" alt="Tzeptosoft Logo" class="author-logo" width="150" height="150" loading="lazy">
+          <p class="author-title">Forger of Sovereign Warriors</p>
+        </div>
+        <hr>
+      </header>
 
-      <h2>The System Wants You Weak</h2>
-      <p>The system thrives on victims. It’s a fucking vampire, sucking your power through lies. “You’re oppressed.” “You need help.” “Wait for change.” Bullshit. A recent political study showed 75% of social programs incentivize dependency, not independence. X amplifies it—threads preaching “systemic” excuses, keeping you angry, not active. The system doesn’t want you coding apps, lifting 500 pounds, or building empires. It wants you scrolling, consuming, helpless.</p>
-      <p>Look at the data. In a recent research, 80% of jobs will require advanced skills—AI, blockchain, data science. Victims wait for “fairness.” Owners learn Python, ship code, get paid. A 2023 economic study showed self-reliant workers earn 30% more than those reliant on “support.” The system’s not your friend. It’s your jailer. Break out. <span class="highlight">Own your life.</span> Or it owns you.</p>
-      <p><strong>Tactic:</strong> Audit your inputs. Unfollow X accounts that push victimhood. Block news that fuels outrage. A recent media study found negative content cuts productivity by 25%. Surround yourself with builders—coders, fighters, rebels. Their fire will light yours. The system’s a trap. Don’t fall. Rise.</p>
+      <div class="cta-container">
+        <h3 class="cta-title">Ready to Forge Your Throne?</h3>
+        <a href="mailto:tzeptosoft@gmail.com" class="cta-button">Join the Rebellion</a>
+      </div>
 
-      <h2>Real Examples of Ownership</h2>
-      <p>Ownership isn’t theory—it’s action. These men and women rejected victimhood, owned their lives, and forged empires. They’re you, minus the excuses.</p>
-      <p><strong>The Coder:</strong> Sam, 26, grew up poor, no degree. Could’ve blamed “the system.” Instead, he owned it. Learned JavaScript via freeCodeCamp, built apps, failed 100 times. Now he’s a frontend dev at $110k, remote, saving for his own startup. Skill: Coding. Mindset: No victim. Freedom: His rules.</p>
-      <p><strong>The Fighter:</strong> Aisha, 29, was abused, broke, “doomed.” Refused to be a victim. Trained Muay Thai, turned pain into power. Now she’s a pro fighter, sponsored, teaching women to fight. Skill: Fighting. Mindset: Ownership. Freedom: Her legacy.</p>
-      <p><strong>The Entrepreneur:</strong> Carlos, 32, was a delivery driver, “stuck.” Stopped blaming “capitalism.” Learned e-commerce, started a fitness brand. First year: $60k profit. Now: $400k, team of 10. Skill: Business. Mindset: No excuses. Freedom: His empire.</p>
-      <p><strong>The Creator:</strong> Lena, 25, was a barista, “talentless.” Owned her path. Learned video editing, built a YouTube channel. Now she’s got 100k subs, $10k/month in ads. Skill: Content. Mindset: Radical responsibility. Freedom: Her voice.</p>
-      <p><strong>The Strategist:</strong> Omar, 35, was laid off, “unlucky.” Took ownership. Studied negotiation, became a deal-closer for startups. Now charges $15k/deal, works 15 hours/week. Skill: Negotiation. Mindset: No victim. Freedom: His time.</p>
-      <p>These aren’t “lucky” people. They’re warriors who owned their lives. No one saved them. They saved themselves. You can too. <span class="highlight">Break the chains.</span> Start now.</p>
+      <div class="content">
+        <p>Wake the fuck up. You're not a victim. Stop acting like one. The world's a battlefield, and you're sitting there whining, waiting for a savior who'll never show. Nobody's coming. Not your mom, not the government, not some influencer on X promising you a shortcut to freedom. The system wants you weak, broken, and begging_scrolling through bullshit, blaming everyone else for your failures. This isn't a pep talk; it's a goddamn war cry. You're a coder, a rebel, a warrior. Act like it. <span class="highlight">Own your life.</span> Break the chains. Forge your throne. Or die a slave in the matrix you chose. The clock's ticking. Choose now.</p>
 
-      <h2>The Enemies of Ownership</h2>
-      <p>Ownership isn’t easy. Enemies lurk, waiting to drag you back to victimhood. Know them. Crush them. Or they’ll crush you.</p>
-      <ul>
-        <li><strong>Excuses:</strong> “I don’t have time.” “It’s too hard.” Lies. A recent time study showed people waste 15 hours/week on X, gaming, porn. Cut the bullshit. Own your hours.</li>
-        <li><strong>Fear:</strong> Fear of failure, ridicule, effort. A 2023 mindset study found 70% of men avoid risks to “stay safe.” Safety’s a cage. Fail fast. Win big.</li>
-        <li><strong>People:</strong> Toxic friends, jealous family, X trolls—they love your victimhood. A recent social study showed negative peers cut ambition by 40%. Ghost them.</li>
-        <li><strong>Comfort:</strong> A “good enough” job, a soft routine. A recent psychology study found comfort kills drive by 50%. Burn “good enough” to the ground.</li>
-        <li><strong>You:</strong> Your own weakness, doubt, laziness. You’re the biggest enemy. A 2023 self-reflection study showed self-doubt cuts action by 60%. Kill the weak voice. Act now.</li>
-      </ul>
-      <p><strong>Example:</strong> Tina, 28, was a victim. Blamed her “toxic” job for her misery. Then she owned it. Quit, learned data analysis, grinded nights. Now she’s a data scientist at $100k, remote, free. She slayed her enemies—excuses, fear, comfort. You must too. <span class="highlight">Own your life.</span> No mercy.</p>
+        <h2>The Victim Mindset: A Fucking Trap</h2>
+        <p>The victim mindset is a prison, and you're the one locking the door. "It's my boss's fault." "The economy's rigged." "I wasn't born rich." Shut the fuck up. Every excuse you make is a chain you forge. The system loves victims_they're easy to control. They don't fight. They don't build. They just complain, scrolling X, waiting for a bailout that'll never come. A recent psychology study showed 65% of people adopt a victim mentality under stress, and it cuts their problem-solving ability by 40%. That's not a stat_it's your life bleeding out.</p>
+        <p>You're not special. Life's not fair. The world owes you nothing. That coder in Silicon Valley pulling $200k? He wasn't "lucky." He grinded algorithms while you binged Netflix. That entrepreneur with a seven-figure brand? She didn't cry about "circumstances." She hustled through rejections. Victims blame. Warriors own. The system's designed to keep you soft_feeding you lies about "privilege" or "bad breaks" to justify your inaction. It's a trap. Step out, or stay caged.</p>
+        <p>Look around. X is a swamp of victims_endless threads of people whining about jobs, rent, life. They're not fighting; they're drowning. Meanwhile, the silent ones_the coders, the fighters, the builders_are owning their shit. They don't tweet about their pain. They turn it into power. Victimhood is a choice. Stop choosing it. <span class="highlight">Own your life.</span> Or someone else will.</p>
 
-      <h2>The Ownership Blueprint</h2>
-      <p>Enough talk. This is your Ownership Blueprint. Execute it daily. No excuses. Forge your throne or rot in the matrix.</p>
-      <ul>
-        <li><strong>Audit Your Life (1 hour):</strong> Write down every area you’re a victim—job, money, body. Own it. A recent reflection study showed audits boost clarity by 35%. Face the truth.</li>
-        <li><strong>Cut Excuses:</strong> Ban “I can’t” from your vocab. Replace with “I’ll figure it out.” A 2023 mindset study found positive reframing boosts action by 40%. Act now.</li>
-        <li><strong>Pick One Battle:</strong> Choose one area to own—coding, fitness, business. Start small. A recent productivity study showed focused goals raise success by 50%. Win first, then scale.</li>
-        <li><strong>Learn Ruthlessly:</strong> Study 2 hours/day. Free resources—YouTube, Coursera, X threads from builders. A 2023 learning study showed consistent study boosts skills by 60%. Grind hard.</li>
-        <li><strong>Build Daily:</strong> Code a feature, lift a weight, pitch a client. Small wins stack. A recent habit study showed daily actions raise momentum by 45%. No days off.</li>
-        <li><strong>Track Progress:</strong> Log your wins weekly. A 2023 tracking study showed logging boosts accountability by 50%. Data’s your mirror. Use it.</li>
-        <li><strong>Ghost Victims:</strong> Cut whiners from your life. Follow builders on X, join masterminds. A recent social study showed positive networks raise success by 55%. Choose your tribe.</li>
-      </ul>
-      <p><strong>Example:</strong> Alex, 24, followed this blueprint. Was a victim, blaming “no opportunities.” Audited his life, picked coding, learned React, built apps. Six months later, he’s freelancing at $3k/month, moving to Bali. He owned his life. You can too. <span class="highlight">Break the chains.</span> Start tonight.</p>
+        <h2>The Cost of Playing the Victim</h2>
+        <p>Victimhood isn't free. It costs you everything_your freedom, your power, your soul. Every time you blame someone else, you hand them your life. A recent mental health study found victim mindsets increase anxiety by 50% and cut motivation by 35%. You're not just sad_you're paralyzed. That project you didn't start? That gym you didn't hit? That code you didn't write? All because you're too busy crying, "It's not my fault."</p>
+        <p>Numbers don't lie. The average self-identified "victim" earns 25% less than those who take responsibility, per a 2023 economic study. Why? Victims wait for handouts. Owners build systems. The coder who owns his failures debugs faster, ships better, earns more. The fighter who owns his losses trains harder, wins bigger. The entrepreneur who owns her mistakes pivots smarter, scales faster. Victimhood is a death spiral. It's why you're stuck_broke, weak, and scrolling while the world passes you by.</p>
+        <p>Real cost? Time. You're not 18 forever. At 25, you've got hunger, no baggage. At 35, life's heavier_bills, kids, regrets. Every day you play victim is a day you'll never get back. A recent time study showed people waste 20 hours a week on "avoidable" complaints. That's 1,040 hours a year_enough to learn Python, build a side hustle, or get jacked. Stop bleeding time. <span class="highlight">Own your life.</span> Or watch it burn.</p>
 
-      <h2>The Long Game: Ownership as a Lifestyle</h2>
-      <p>Ownership isn’t a one-off. It’s a lifestyle. You don’t “arrive.” You keep forging. The world’s a treadmill—stop, and you’re thrown off. A recent resilience study showed consistent responsibility boosts long-term success by 65%. Coders update their skills. Fighters refine their craft. Entrepreneurs adapt to markets. Rest, and you’re dead.</p>
-      <p><strong>Example:</strong> Priya, 38, owned her life for 15 years. Was a broke teacher, could’ve blamed “low pay.” Instead, learned marketing, built an agency, now pulls $250k/year. She audits monthly, learns daily, cuts victims. Ownership’s her religion. Make it yours.</p>
-      <p><strong>Tactics:</strong> Read daily—Stoics, biographies, X threads from winners. Experiment weekly—new skills, new risks. Network monthly—meet players who push you. A 2023 growth study showed lifelong learners outperform peers by 70%. Never stop. The system bets you’ll quit. Prove it wrong. <span class="highlight">Own your life.</span> Forever.</p>
+        <h2>Why Most Men Are Victims</h2>
+        <p>Most men are victims because they're weak. Not physically_mentally. They're trained to be soft, to crave comfort, to dodge blame. The system's their nanny, and they're happy suckling. A recent sociology study found 70% of men under 30 externalize their failures, blaming "society" or "luck." They're not men_they're boys, addicted to excuses and X likes. Here's the brutal breakdown:</p>
+        <ul>
+          <li><strong>Conditioning:</strong> Schools, media, X_they teach you to whine. A 2023 education study showed 60% of curriculums emphasize "systemic" barriers over personal agency. You're programmed to fail.</li>
+          <li><strong>Comfort:</strong> A cozy job, a warm bed, a full fridge_they dull your edge. A recent psychology study found comfort reduces risk-taking by 45%. Victims love safety. Warriors love war.</li>
+          <li><strong>Fear:</strong> Fear of failure, judgment, or effort. A 2023 mindset study showed 80% of men avoid challenges to "protect" their ego. Fuck your ego. Fail. Learn. Win.</li>
+          <li><strong>Tribalism:</strong> Victims flock together, circle-jerking on X about "injustice." A recent social study found victim groups reinforce helplessness 50% more than action-oriented ones. Cut them off.</li>
+        </ul>
+        <p>These men aren't your brothers. They're anchors. They'll drag you down with their sob stories and "it's not fair" bullshit. You're not them. You're a rebel, a warrior, a fucking king. Stop whining. <span class="highlight">Own your life.</span> No excuses. No mercy.</p>
 
-      <div class="terminal-section" id="terminal">
-        <h2>>>> INITIATE SEQUENCE</h2>
+        <h2>Radical Responsibility: The Key to Sovereignty</h2>
+        <p>Radical responsibility is your sword. It's owning every choice, every failure, every outcome. Lost your job? Your fault_you didn't skill up. Broke? Your fault_you didn't hustle. Weak? Your fault_you skipped the gym. No one's coming to save you. A recent resilience study showed people who take full responsibility recover from setbacks 60% faster. That's not a hack_it's power.</p>
+        <p><strong>Stoic truth:</strong> Epictetus wrote, "There is only one way to happiness: cease worrying about things beyond your control." You can't control the economy, your boss, or X's algorithm. You can control you. A coder who owns his bugs fixes them faster. A fighter who owns his losses trains harder. Radical responsibility isn't blame_it's freedom. When you own your life, no one can take it.</p>
+        <p><strong>Real story:</strong> Jake, 27, was a victim. Fired from his tech job, he blamed "corporate greed." Spent months on X, whining, gaming, broke. Then he snapped. Took responsibility. Learned AWS, built a portfolio, cold-emailed 50 startups. Six months later, he's a cloud engineer at $130k, remote, living in Portugal. Skill: Cloud computing. Mindset: Ownership. Freedom: His life, his terms.</p>
+        <p>Another: Maria, 30, was a single mom, waitressing, "stuck." Blamed her ex, her boss, "the system." Then she owned it. Learned UX design on YouTube, grinded nights after her kid slept. Now she freelances at $80/hour, works from home, owns her time. Skill: Design. Mindset: No excuses. Freedom: Her throne.</p>
+        <p>Radical responsibility is a choice. Make it, and you're unstoppable. Dodge it, and you're a slave. <span class="highlight">Own your life.</span> Break the matrix. Now.</p>
+
+        <h2>The System Wants You Weak</h2>
+        <p>The system thrives on victims. It's a fucking vampire, sucking your power through lies. "You're oppressed." "You need help." "Wait for change." Bullshit. A recent political study showed 75% of social programs incentivize dependency, not independence. X amplifies it_threads preaching "systemic" excuses, keeping you angry, not active. The system doesn't want you coding apps, lifting 500 pounds, or building empires. It wants you scrolling, consuming, helpless.</p>
+        <p>Look at the data. In a recent research, 80% of jobs will require advanced skills_AI, blockchain, data science. Victims wait for "fairness." Owners learn Python, ship code, get paid. A 2023 economic study showed self-reliant workers earn 30% more than those reliant on "support." The system's not your friend. It's your jailer. Break out. <span class="highlight">Own your life.</span> Or it owns you.</p>
+        <p><strong>Tactic:</strong> Audit your inputs. Unfollow X accounts that push victimhood. Block news that fuels outrage. A recent media study found negative content cuts productivity by 25%. Surround yourself with builders_coders, fighters, rebels. Their fire will light yours. The system's a trap. Don't fall. Rise.</p>
+
+        <h2>Real Examples of Ownership</h2>
+        <p>Ownership isn't theory_it's action. These men and women rejected victimhood, owned their lives, and forged empires. They're you, minus the excuses.</p>
+        <p><strong>The Coder:</strong> Sam, 26, grew up poor, no degree. Could've blamed "the system." Instead, he owned it. Learned JavaScript via freeCodeCamp, built apps, failed 100 times. Now he's a frontend dev at $110k, remote, saving for his own startup. Skill: Coding. Mindset: No victim. Freedom: His rules.</p>
+        <p><strong>The Fighter:</strong> Aisha, 29, was abused, broke, "doomed." Refused to be a victim. Trained Muay Thai, turned pain into power. Now she's a pro fighter, sponsored, teaching women to fight. Skill: Fighting. Mindset: Ownership. Freedom: Her legacy.</p>
+        <p><strong>The Entrepreneur:</strong> Carlos, 32, was a delivery driver, "stuck." Stopped blaming "capitalism." Learned e-commerce, started a fitness brand. First year: $60k profit. Now: $400k, team of 10. Skill: Business. Mindset: No excuses. Freedom: His empire.</p>
+        <p><strong>The Creator:</strong> Lena, 25, was a barista, "talentless." Owned her path. Learned video editing, built a YouTube channel. Now she's got 100k subs, $10k/month in ads. Skill: Content. Mindset: Radical responsibility. Freedom: Her voice.</p>
+        <p><strong>The Strategist:</strong> Omar, 35, was laid off, "unlucky." Took ownership. Studied negotiation, became a deal-closer for startups. Now charges $15k/deal, works 15 hours/week. Skill: Negotiation. Mindset: No victim. Freedom: His time.</p>
+        <p>These aren't "lucky" people. They're warriors who owned their lives. No one saved them. They saved themselves. You can too. <span class="highlight">Break the chains.</span> Start now.</p>
+
+        <h2>The Enemies of Ownership</h2>
+        <p>Ownership isn't easy. Enemies lurk, waiting to drag you back to victimhood. Know them. Crush them. Or they'll crush you.</p>
+        <ul>
+          <li><strong>Excuses:</strong> "I don't have time." "It's too hard." Lies. A recent time study showed people waste 15 hours/week on X, gaming, porn. Cut the bullshit. Own your hours.</li>
+          <li><strong>Fear:</strong> Fear of failure, ridicule, effort. A 2023 mindset study found 70% of men avoid risks to "stay safe." Safety's a cage. Fail fast. Win big.</li>
+          <li><strong>People:</strong> Toxic friends, jealous family, X trolls_they love your victimhood. A recent social study showed negative peers cut ambition by 40%. Ghost them.</li>
+          <li><strong>Comfort:</strong> A "good enough" job, a soft routine. A recent psychology study found comfort kills drive by 50%. Burn "good enough" to the ground.</li>
+          <li><strong>You:</strong> Your own weakness, doubt, laziness. You're the biggest enemy. A 2023 self-reflection study showed self-doubt cuts action by 60%. Kill the weak voice. Act now.</li>
+        </ul>
+        <p><strong>Example:</strong> Tina, 28, was a victim. Blamed her "toxic" job for her misery. Then she owned it. Quit, learned data analysis, grinded nights. Now she's a data scientist at $100k, remote, free. She slayed her enemies_excuses, fear, comfort. You must too. <span class="highlight">Own your life.</span> No mercy.</p>
+
+        <h2>The Ownership Blueprint</h2>
+        <p>Enough talk. This is your Ownership Blueprint. Execute it daily. No excuses. Forge your throne or rot in the matrix.</p>
+        <ul>
+          <li><strong>Audit Your Life (1 hour):</strong> Write down every area you're a victim_job, money, body. Own it. A recent reflection study showed audits boost clarity by 35%. Face the truth.</li>
+          <li><strong>Cut Excuses:</strong> Ban "I can't" from your vocab. Replace with "I'll figure it out." A 2023 mindset study found positive reframing boosts action by 40%. Act now.</li>
+          <li><strong>Pick One Battle:</strong> Choose one area to own_coding, fitness, business. Start small. A recent productivity study showed focused goals raise success by 50%. Win first, then scale.</li>
+          <li><strong>Learn Ruthlessly:</strong> Study 2 hours/day. Free resources_YouTube, Coursera, X threads from builders. A 2023 learning study showed consistent study boosts skills by 60%. Grind hard.</li>
+          <li><strong>Build Daily:</strong> Code a feature, lift a weight, pitch a client. Small wins stack. A recent habit study showed daily actions raise momentum by 45%. No days off.</li>
+          <li><strong>Track Progress:</strong> Log your wins weekly. A 2023 tracking study showed logging boosts accountability by 50%. Data's your mirror. Use it.</li>
+          <li><strong>Ghost Victims:</strong> Cut whiners from your life. Follow builders on X, join masterminds. A recent social study showed positive networks raise success by 55%. Choose your tribe.</li>
+        </ul>
+        <p><strong>Example:</strong> Alex, 24, followed this blueprint. Was a victim, blaming "no opportunities." Audited his life, picked coding, learned React, built apps. Six months later, he's freelancing at $3k/month, moving to Bali. He owned his life. You can too. <span class="highlight">Break the chains.</span> Start tonight.</p>
+
+        <h2>The Long Game: Ownership as a Lifestyle</h2>
+        <p>Ownership isn't a one-off. It's a lifestyle. You don't "arrive." You keep forging. The world's a treadmill_stop, and you're thrown off. A recent resilience study showed consistent responsibility boosts long-term success by 65%. Coders update their skills. Fighters refine their craft. Entrepreneurs adapt to markets. Rest, and you're dead.</p>
+        <p><strong>Example:</strong> Priya, 38, owned her life for 15 years. Was a broke teacher, could've blamed "low pay." Instead, learned marketing, built an agency, now pulls $250k/year. She audits monthly, learns daily, cuts victims. Ownership's her religion. Make it yours.</p>
+        <p><strong>Tactics:</strong> Read daily_Stoics, biographies, X threads from winners. Experiment weekly_new skills, new risks. Network monthly_meet players who push you. A 2023 growth study showed lifelong learners outperform peers by 70%. Never stop. The system bets you'll quit. Prove it wrong. <span class="highlight">Own your life.</span> Forever.</p>
+
         <div class="terminal-content">
-          <div class="terminal-line" data-text="> Initializing Tzeptosoft..."></div>
-          <div class="terminal-line" data-text="> Accessing Rebellion Core..."></div>
-          <div class="terminal-line" data-text="> Connection status: SECURE ✅"></div>
-          <div class="terminal-line" data-text="> Welcome to your sovereignty."></div>
+          <div class="terminal-line" data-text="> Accessing Tzeptosoft archives... 🚀"></div>
+          <div class="terminal-line" data-text="> Loading Rebellion Protocol... 💪"></div>
+          <div class="terminal-line" data-text="> VICTIM MATRIX: DISABLED ✅"></div>
+          <div class="terminal-line" data-text="> Welcome to #TzeptosoftElite - OWN YOUR LIFE."></div>
         </div>
-        <button class="hack-btn" aria-label="Start victim matrix hack simulation">Break the Victim Matrix</button>
-        <div class="hack-output">
-          <div class="terminal-line" data-text="> Cracking victim protocols..."></div>
-          <div class="terminal-line" data-text="> Sovereignty: ACTIVATED."></div>
-        </div>
+
+        <h2>The Call to Arms</h2>
+        <p>This is war. You're either a victim or a warrior. There's no middle ground. The system wants you weak, whining, waiting. Fuck that. You're a coder, a rebel, a king. Own your life. No one's coming to save you. Build your empire. Forge your throne. Or die a slave in the matrix you chose.</p>
+        <p>Start tonight. Audit your life. Pick one battle_coding, fitness, business. Learn ruthlessly. Build daily. Cut excuses, fear, victims. Every step forward is a middle finger to the system. Every win stacks your power. You're not here to survive. You're here to dominate.</p>
+        <p><strong>Your mission:</strong></p>
+        <ul>
+          <li><span class="highlight">Face the Truth:</span> Write down one area you're a victim. Own it. Commit to change tonight.</li>
+          <li><span class="highlight">Declare War:</span> Block X whiners. Set a daily grind block_7-9 PM, no excuses. Tell one builder your goal.</li>
+          <li><span class="highlight">Strike First:</span> Do one thing before sleep_code 10 lines, do 10 push-ups, pitch one client. Momentum is power.</li>
+          <li><span class="highlight">Stack Wins:</span> Deliver one result weekly_a script, a workout, a deal. Track it. Grind harder.</li>
+          <li><span class="highlight">Raise the Stakes:</span> In 30 days, monetize your battle. Earn $100, $500, anything. Prove you're not a victim.</li>
+        </ul>
+        <p>Join Tzeptosoft's Rebellion Forge. Download our "Ownership Blueprint" PDF_tactics, mindsets, and codes to break the matrix. No noise. Only fire. <span class="highlight">Own your life.</span> Become untouchable. The world's waiting to bow_or crush you. Choose.</p>
+        <blockquote>"The man who owns his life fears no chains." _Tzeptosoft's Rebellion Forge</blockquote>
+        <p class="signature">with iron, Your warlord, Clinton</p>
+        <p><strong>Final Takeaway:</strong> Face one truth tonight. Act on it. Post on X: "I own my life." Tag @tzeptosoft. Join the Rebellion Forge: tzeptosoft@gmail.com.</p>
       </div>
 
-      <h2>The Call to Arms</h2>
-      <p>This is war. You’re either a victim or a warrior. There’s no middle ground. The system wants you weak, whining, waiting. Fuck that. You’re a coder, a rebel, a king. Own your life. No one’s coming to save you. Build your empire. Forge your throne. Or die a slave in the matrix you chose.</p>
-      <p>Start tonight. Audit your life. Pick one battle—coding, fitness, business. Learn ruthlessly. Build daily. Cut excuses, fear, victims. Every step forward is a middle finger to the system. Every win stacks your power. You’re not here to survive. You’re here to dominate.</p>
-      <p><strong>Your mission:</strong></p>
-      <ul>
-        <li><span class="highlight">Face the Truth:</span> Write down one area you’re a victim. Own it. Commit to change tonight.</li>
-        <li><span class="highlight">Declare War:</span> Block X whiners. Set a daily grind block—7-9 PM, no excuses. Tell one builder your goal.</li>
-        <li><span class="highlight">Strike First:</span> Do one thing before sleep—code 10 lines, do 10 push-ups, pitch one client. Momentum is power.</li>
-        <li><span class="highlight">Stack Wins:</span> Deliver one result weekly—a script, a workout, a deal. Track it. Grind harder.</li>
-        <li><span class="highlight">Raise the Stakes:</span> In 30 days, monetize your battle. Earn $100, $500, anything. Prove you’re not a victim.</li>
-      </ul>
-      <p>Join Tzeptosoft’s Rebellion Forge. Download our “Ownership Blueprint” PDF—tactics, mindsets, and codes to break the matrix. No noise. Only fire. <span class="highlight">Own your life.</span> Become untouchable. The world’s waiting to bow—or crush you. Choose.</p>
-      <blockquote>“The man who owns his life fears no chains.” —Tzeptosoft’s Rebellion Forge</blockquote>
-      <p class="signature">— CLINTON | TZEPTOSOFT<br>ESCAPING THE FUCKING MATRIX.</p>
+      <div class="newsletter-container">
+        <h3>Join the Tzeptosoft Newsletter 🔥</h3>
+        <p>Get weekly <strong>warplans</strong>, <strong>strategies</strong>, and fire to outthink, outfight, and annihilate the herd. No mercy, only fire! 💥</p>
+        <input type="email" placeholder="Enter your email" aria-label="Email for newsletter">
+        <button type="button">Subscribe 🚀</button>
+      </div>
+
+      <div class="social-share">
+        <h3>Spread the War Cry 🗣️</h3>
+        <a href="https://twitter.com/intent/tweet?url=https://tzeptosoft.com/blog/no-victim&text=Don't Be a Victim: Own Your Life. No One's Coming to Save You! – Break the chains with Tzeptosoft's Rebellion Forge!" aria-label="Share on Twitter">Twitter</a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://tzeptosoft.com/blog/no-victim" aria-label="Share on LinkedIn">LinkedIn</a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://tzeptosoft.com/blog/no-victim" aria-label="Share on Facebook">Facebook</a>
+        <a href="https://www.reddit.com/submit?url=https://tzeptosoft.com/blog/no-victim&title=Don't Be a Victim: Own Your Life. No One's Coming to Save You" aria-label="Share on Reddit">Reddit</a>
+        <a href="https://api.whatsapp.com/send?text=Don't Be a Victim: Own Your Life. No One's Coming to Save You! https://tzeptosoft.com/blog/no-victim" aria-label="Share on WhatsApp">WhatsApp</a>
+      </div>
     </div>
-    <div class="newsletter-container">
-      <h3>Join the Rebellion Forge</h3>
-      <p>Receive weekly tactics to reject victimhood, own your life, and forge your empire. No noise, only signal.</p>
-      <input type="email" placeholder="Enter your email" aria-label="Email for newsletter">
-      <button type="button">Subscribe</button>
-    </div>
-    <div class="social-share">
-      <h3>Spread the War Cry</h3>
-      <a href="https://twitter.com/intent/tweet?url=https://tzeptosoft.com/blog/no-victim&text=Don’t Be a Victim: Own Your Life. No One’s Coming to Save You!" aria-label="Share on Twitter">Twitter</a>
-      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://tzeptosoft.com/blog/no-victim" aria-label="Share on LinkedIn">LinkedIn</a>
-      <a href="https://www.facebook.com/sharer/sharer.php?u=https://tzeptosoft.com/blog/no-victim" aria-label="Share on Facebook">Facebook</a>
-      <a href="https://www.reddit.com/submit?url=https://tzeptosoft.com/blog/no-victim&title=Don’t Be a Victim" aria-label="Share on Reddit">Reddit</a>
-      <a href="https://api.whatsapp.com/send?text=Don’t Be a Victim: Own Your Life! https://tzeptosoft.com/blog/no-victim" aria-label="Share on WhatsApp">WhatsApp</a>
-    </div>
-  </div>
-  <footer>
+
+    <footer>
       <p>© 2025 Tzeptosoft | All Rights Fucking Reserved 🔥</p>
-    <div class="social-links">
-      <a href="https://twitter.com/tzeptosoft" aria-label="Twitter"><img src="/assets/twitter.webp" alt="Twitter" width="28" height="28" loading="lazy"></a>
-      <a href="https://linkedin.com/company/tzeptosoft" aria-label="LinkedIn"><img src="/assets/linkedin.webp" alt="LinkedIn" width="28" height="28" loading="lazy"></a>
-    </div>
-  </footer>
+    </footer>
+  </div>
+
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      // Preloader
+      const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+      const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+      const mobileMenuClose = document.getElementById('mobileMenuClose');
+      const searchToggle = document.getElementById('searchToggle');
+      const searchBox = document.getElementById('searchBox');
+      const searchInput = document.querySelector('.search-input');
+
+      mobileMenuToggle?.addEventListener('click', () => {
+        mobileMenuOverlay?.classList.toggle('active');
+        document.body.style.overflow = mobileMenuOverlay?.classList.contains('active') ? 'hidden' : '';
+      });
+
+      mobileMenuClose?.addEventListener('click', () => {
+        mobileMenuOverlay?.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+
+      mobileMenuOverlay?.addEventListener('click', (e) => {
+        if (e.target === mobileMenuOverlay) {
+          mobileMenuOverlay.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      });
+
+      searchToggle?.addEventListener('click', () => {
+        const isActive = searchBox?.classList.contains('active');
+        searchBox?.classList.toggle('active');
+        searchToggle?.setAttribute('aria-expanded', !isActive);
+        if (!isActive && searchInput) searchInput.focus();
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          searchBox?.classList.remove('active');
+          searchToggle?.setAttribute('aria-expanded', 'false');
+          mobileMenuOverlay?.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      });
+
       window.addEventListener('load', () => {
         document.getElementById('preloader').style.display = 'none';
       });
 
-      // Matrix Animation
       const matrixAnimation = document.querySelector('.matrix-animation');
       function startMatrixAnimation() {
         matrixAnimation.textContent = '';
         matrixAnimation.classList.remove('typing');
         void matrixAnimation.offsetWidth;
-        matrixAnimation.textContent = 'ESCAPING THE MATRIX';
+        matrixAnimation.textContent = 'BREAK THE CHAINS. OWN YOUR LIFE.';
         matrixAnimation.classList.add('typing');
       }
       startMatrixAnimation();
       setInterval(startMatrixAnimation, 4000);
 
-      // Intersection Observer for Sections
-      const sections = document.querySelectorAll('.blog-container, .terminal-content');
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            if (entry.target.classList.contains('terminal-content') && !entry.target.dataset.animated) {
-              startTerminalSequence();
-              entry.target.dataset.animated = 'true';
-            }
-          }
-        });
-      }, { threshold: 0.1 });
-      sections.forEach(section => observer.observe(section));
+      let lastScrollY = window.scrollY;
+      window.addEventListener('scroll', () => {
+        const header = document.querySelector('.main-header');
+        const currentScrollY = window.scrollY;
+        if (currentScrollY > 100) {
+          header?.classList.add('scrolled');
+        } else {
+          header?.classList.remove('scrolled');
+        }
+        lastScrollY = currentScrollY;
+      });
 
-      // Terminal Sequence
-      function startTerminalSequence() {
-        const lines = document.querySelectorAll('.terminal-content .terminal-line');
-        let delay = 0;
-        lines.forEach(line => {
-          line.textContent = '';
-          const text = line.dataset.text;
-          let charIndex = 0;
-          setTimeout(() => {
-            const type = () => {
-              if (charIndex < text.length) {
-                line.textContent += text[charIndex];
-                charIndex++;
-                setTimeout(type, 30);
-              } else {
-                line.classList.add('typed');
-              }
-            };
-            type();
-          }, delay);
-          delay += 1000;
-        });
-      }
-
-      // Hack Simulation
-      const hackBtn = document.querySelector('.hack-btn');
-      const hackOutput = document.querySelector('.hack-output');
-      let isHacking = false;
-      if (hackBtn) {
-        hackBtn.addEventListener('click', () => {
-          if (isHacking) return;
-          isHacking = true;
-          hackOutput.classList.add('active');
-          const hackLines = hackOutput.querySelectorAll('.terminal-line');
-          let delay = 0;
-          hackLines.forEach(line => {
-            line.textContent = '';
-            const text = line.dataset.text;
-            let charIndex = 0;
-            setTimeout(() => {
-              const type = () => {
-                if (charIndex < text.length) {
-                  line.textContent += text[charIndex];
-                  charIndex++;
-                  setTimeout(type, 30);
-                } else {
-                  line.classList.add('typed');
-                }
-              };
-              type();
-            }, delay);
-            delay += 1000;
-          });
-          setTimeout(() => { isHacking = false; }, delay + 1000);
-        });
-      }
-
-      // Matrix Rain
       const matrixBg = document.getElementById('matrix-bg');
       for (let i = 0; i < 50; i++) {
         const char = document.createElement('div');
@@ -809,7 +1393,6 @@
         matrixBg.appendChild(char);
       }
 
-      // Particles
       const particleContainer = document.getElementById('particles');
       for (let i = 0; i < 50; i++) {
         const particle = document.createElement('div');
@@ -820,34 +1403,50 @@
         particleContainer.appendChild(particle);
       }
 
-      // Cursor Trail
       const cursorTrail = document.getElementById('cursor-trail');
       document.addEventListener('mousemove', (e) => {
         cursorTrail.style.left = e.clientX - 15 + 'px';
         cursorTrail.style.top = e.clientY - 15 + 'px';
       });
 
-      // Newsletter Form Submission
-      const newsletterForm = document.querySelector('.newsletter-container');
-      if (newsletterForm) {
-        newsletterForm.addEventListener('submit', (e) => {
-          e.preventDefault();
-          fetch('https://formspree.io/f/your-form-id', {
-            method: 'POST',
-            body: new FormData(newsletterForm),
-            headers: {
-              'Accept': 'application/json'
-            }
-          }).then(response => {
-            if (response.ok) {
-              alert('Subscribed successfully!');
-              newsletterForm.reset();
+      // Terminal animation
+      const terminalLines = document.querySelectorAll('.terminal-line');
+      let delay = 0;
+      terminalLines.forEach(line => {
+        line.textContent = '';
+        const text = line.dataset.text;
+        let charIndex = 0;
+        setTimeout(() => {
+          const type = () => {
+            if (charIndex < text.length) {
+              line.textContent += text[charIndex];
+              charIndex++;
+              setTimeout(type, 35);
             } else {
-              alert('Error subscribing. Try again.');
+              line.classList.add('typed');
             }
-          });
+          };
+          type();
+        }, delay);
+        delay += 1000;
+      });
+
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href');
+          if (targetId === '#') return;
+          
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 100,
+              behavior: 'smooth'
+            });
+          }
         });
-      }
+      });
     });
   </script>
 </body>

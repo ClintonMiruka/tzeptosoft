@@ -18,7 +18,7 @@
   <meta name="twitter:description" content="Discover the millionaire habits and daily routine of successful men through elite morning routines and mental discipline for wealth.">
   <meta name="twitter:image" content="https://tzeptosoft.com/assets/millionaire-routine.webp">
   <title>The Millionaire Routine: Daily Habits of Men Who Print Money While the World Sleeps | Tzeptosoft</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Orbitron:wght@900&family=JetBrains+Mono:wght@400;700&family=Russo+One&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Mono:wght@700&family=Orbitron:wght@900&family=JetBrains+Mono:wght@400;700&display=swap">
   <link rel="icon" type="image/webp" href="/assets/favicon.webp">
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -39,9 +39,9 @@
         "url": "https://tzeptosoft.com/assets/logo.webp"
       }
     },
+    "datePublished": "2025-04-30",
     "image": "https://tzeptosoft.com/assets/millionaire-routine.webp",
-    "url": "https://tzeptosoft.com/blog/millionaire-routine",
-    "keywords": ["millionaire habits", "daily routine of successful men", "productivity habits for high income", "elite morning routine", "habits of rich men", "daily routine for young entrepreneurs", "mental discipline for wealth"]
+    "url": "https://tzeptosoft.com/blog/millionaire-routine"
   }
   </script>
   <style>
@@ -52,17 +52,473 @@
       --bg-dark: #0B0F1A;
       --text-dark: #FFFFFF;
       --matrix-green: #00FF00;
-      --neon-pink: #2b00ff;
     }
+
+    /* Header Styles */
+    .main-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(11, 15, 26, 0.95);
+      backdrop-filter: blur(20px);
+      border-bottom: 2px solid transparent;
+      animation: headerSlideIn 0.6s ease-out;
+      box-shadow: 0 8px 32px rgba(0, 102, 204, 0.1);
+    }
+
+    @keyframes headerSlideIn {
+      from {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .main-header.scrolled {
+      border-bottom-color: rgba(0, 204, 255, 0.2);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 70px;
+      position: relative;
+    }
+
+    .logo-section {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .logo-wrapper:hover {
+      transform: scale(1.05);
+    }
+
+    .logo-image {
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(0, 204, 255, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    .logo-primary {
+      font-size: 1.4em;
+      font-weight: 900;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-shadow: 0 0 10px rgba(0, 102, 204, 0.5);
+    }
+
+    .logo-subtitle {
+      font-size: 0.75em;
+      color: var(--secondary);
+      font-weight: 600;
+      opacity: 0.8;
+      margin-top: 2px;
+    }
+
+    .nav-section {
+      display: flex;
+    }
+
+    .nav-list {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .nav-item {
+      position: relative;
+    }
+
+    .nav-link {
+      display: block;
+      padding: 8px 16px;
+      color: var(--text-dark);
+      text-decoration: none;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 0.95em;
+      position: relative;
+      transition: all 0.3s ease;
+      border-radius: 6px;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--secondary);
+      background: rgba(0, 204, 255, 0.1);
+      box-shadow: 0 0 20px rgba(0, 204, 255, 0.2);
+      transform: translateY(-2px);
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 80%;
+    }
+
+    .actions-section {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .search-container {
+      position: relative;
+    }
+
+    .search-toggle {
+      background: none;
+      border: 2px solid rgba(0, 204, 255, 0.3);
+      border-radius: 8px;
+      padding: 8px;
+      color: var(--secondary);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .search-toggle:hover {
+      border-color: var(--secondary);
+      box-shadow: 0 0 20px rgba(0, 204, 255, 0.4);
+      transform: scale(1.05);
+    }
+
+    .search-icon {
+      width: 20px;
+      height: 20px;
+    }
+
+    .search-box {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 300px;
+      background: rgba(28, 28, 28, 0.95);
+      border: 2px solid var(--secondary);
+      border-radius: 8px;
+      padding: 12px;
+      margin-top: 8px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 40px rgba(0, 102, 204, 0.2);
+      z-index: 1001;
+    }
+
+    .search-box.active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .search-input {
+      width: 100%;
+      background: rgba(18, 18, 18, 0.8);
+      border: 1px solid rgba(0, 204, 255, 0.3);
+      border-radius: 6px;
+      padding: 10px 12px;
+      color: var(--text-dark);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.9em;
+    }
+
+    .search-input::placeholder {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .search-input:focus {
+      outline: none;
+      border-color: var(--secondary);
+      box-shadow: 0 0 0 3px rgba(0, 204, 255, 0.2);
+    }
+
+    .search-submit {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: var(--secondary);
+      cursor: pointer;
+      padding: 4px;
+      width: 20px;
+      height: 20px;
+    }
+
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: var(--accent);
+      text-decoration: none;
+      border-radius: 8px;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 600;
+      font-size: 0.9em;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(0, 102, 204, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: left 0.5s;
+    }
+
+    .cta-button:hover::before {
+      left: 100%;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(0, 102, 204, 0.4);
+    }
+
+    .button-icon {
+      width: 16px;
+      height: 16px;
+      transition: transform 0.3s ease;
+    }
+
+    .cta-button:hover .button-icon {
+      transform: translateX(4px);
+    }
+
+    .mobile-menu-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 30px;
+      height: 30px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+      z-index: 1001;
+    }
+
+    .hamburger-line {
+      width: 100%;
+      height: 3px;
+      background: var(--secondary);
+      border-radius: 2px;
+      transition: all 0.3s ease;
+      transform-origin: center;
+    }
+
+    .mobile-menu-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: rgba(11, 15, 26, 0.98);
+      backdrop-filter: blur(20px);
+      z-index: 999;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.4s ease;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .mobile-menu-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .mobile-menu {
+      width: 320px;
+      max-width: 90vw;
+      background: linear-gradient(135deg, rgba(18, 18, 18, 0.95), rgba(11, 15, 26, 0.95));
+      border-left: 3px solid var(--secondary);
+      padding: 0;
+      transform: translateX(100%);
+      transition: transform 0.4s ease;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+    }
+
+    .mobile-menu-overlay.active .mobile-menu {
+      transform: translateX(0);
+    }
+
+    .mobile-menu-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 20px;
+      border-bottom: 1px solid rgba(0, 204, 255, 0.2);
+    }
+
+    .mobile-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-dark);
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.2em;
+    }
+
+    .mobile-menu-close {
+      background: none;
+      border: none;
+      color: var(--secondary);
+      cursor: pointer;
+      padding: 8px;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .mobile-menu-close:hover {
+      background: rgba(0, 204, 255, 0.1);
+      box-shadow: 0 0 20px rgba(0, 204, 255, 0.2);
+    }
+
+    .mobile-nav {
+      padding: 20px 0;
+      flex: 1;
+    }
+
+    .mobile-nav-link {
+      display: block;
+      padding: 16px 24px;
+      color: var(--text-dark);
+      text-decoration: none;
+      font-family: 'Inter', sans-serif;
+      font-size: 1.1em;
+      font-weight: 500;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .mobile-nav-link::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 0;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      transition: width 0.3s ease;
+      z-index: -1;
+    }
+
+    .mobile-nav-link:hover::before,
+    .mobile-nav-link.active::before {
+      width: 100%;
+    }
+
+    .mobile-nav-link:hover,
+    .mobile-nav-link.active {
+      color: var(--accent);
+      padding-left: 32px;
+    }
+
+    .mobile-actions {
+      padding: 20px 24px;
+      border-top: 1px solid rgba(0, 204, 255, 0.2);
+    }
+
+    .mobile-cta-button {
+      display: inline-block;
+      width: 100%;
+      padding: 16px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: var(--accent);
+      text-decoration: none;
+      border-radius: 8px;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 600;
+      text-align: center;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(0, 102, 204, 0.3);
+    }
+
+    .mobile-cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(0, 102, 204, 0.4);
+    }
+
+    /* Main Content */
     body {
       margin: 0;
       padding: 0;
       background: var(--bg-dark);
       color: var(--text-dark);
       font-family: 'Inter', sans-serif;
-      line-height: 1.8;
+      line-height: 1.6;
       overflow-x: hidden;
     }
+
+    .main-content {
+      position: relative;
+    }
+
     #preloader {
       position: fixed;
       top: 0;
@@ -75,16 +531,18 @@
       justify-content: center;
       z-index: 9999;
     }
+
     .loader {
       font-family: 'JetBrains Mono', monospace;
-      color: var(--neon-pink);
-      font-size: 1.8em;
-      text-shadow: 0 0 10px var(--neon-pink);
+      color: var(--secondary);
+      font-size: 1.5em;
       animation: blinkCaret 0.5s step-end infinite;
     }
+
     @keyframes blinkCaret {
       50% { border-color: transparent; }
     }
+
     #galaxy-bg {
       position: fixed;
       top: 0;
@@ -93,12 +551,14 @@
       height: 100%;
       background: radial-gradient(circle, rgba(0, 204, 255, 0.2), transparent);
       z-index: -3;
-      animation: rotateGalaxy 80s infinite linear;
+      animation: rotateGalaxy 60s infinite linear;
     }
+
     @keyframes rotateGalaxy {
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
     }
+
     #matrix-bg {
       position: fixed;
       top: 0;
@@ -108,6 +568,7 @@
       z-index: -2;
       opacity: 0.7;
     }
+
     .matrix-char {
       position: absolute;
       font-family: 'JetBrains Mono', monospace;
@@ -116,10 +577,12 @@
       opacity: 0.8;
       animation: matrix-fall 5s linear infinite;
     }
+
     @keyframes matrix-fall {
       0% { transform: translateY(-100vh); opacity: 0.8; }
       100% { transform: translateY(100vh); opacity: 0; }
     }
+
     #particles {
       position: fixed;
       top: 0;
@@ -128,6 +591,7 @@
       height: 100%;
       z-index: -1;
     }
+
     .particle {
       position: absolute;
       width: 5px;
@@ -136,41 +600,48 @@
       border-radius: 50%;
       animation: drift 10s infinite linear;
     }
+
     @keyframes drift {
       0% { transform: translate(0, 0); opacity: 0.5; }
       50% { opacity: 1; }
       100% { transform: translate(100px, 100px); opacity: 0.5; }
     }
+
     #cursor-trail {
       position: fixed;
       width: 30px;
       height: 30px;
-      background: radial-gradient(circle, var(--neon-pink), transparent);
+      background: radial-gradient(circle, var(--secondary), transparent);
       border-radius: 50%;
       pointer-events: none;
-      z-index: 1000;
+      z-index: 100;
       transition: all 0.1s ease;
     }
+
+    /* Hero Section - Updated for Header */
     .hero {
       text-align: center;
-      padding: 120px 20px;
+      padding: 120px 20px 100px;
       background: rgba(18, 18, 18, 0.9);
       position: relative;
       z-index: 1;
-      border-bottom: 3px solid var(--neon-pink);
+      margin-top: 0;
     }
+
     .hero h1 {
       font-size: 5em;
       font-family: 'Orbitron', sans-serif;
-      background: linear-gradient(90deg, var(--primary), var(--neon-pink), var(--secondary));
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      text-shadow: 0 0 15px var(--neon-pink);
+      text-shadow: 0 0 10px var(--primary);
+      animation: gradientShift 3s ease infinite;
       margin-bottom: 0;
     }
+
     .matrix-animation {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 1.8em;
+      font-size: 1.5em;
       color: var(--matrix-green);
       text-shadow: 0 0 10px var(--matrix-green);
       margin-top: 10px;
@@ -178,465 +649,866 @@
       white-space: nowrap;
       display: inline-block;
     }
+
     .matrix-animation.typing {
-      animation: typeMatrix 2s steps(20) forwards;
+      animation: typeMatrix 2s steps(20) forwards, glitch 0.1s infinite alternate;
     }
+
     @keyframes typeMatrix {
       from { width: 0; }
       to { width: 100%; }
     }
+
+    @keyframes glitch {
+      0% { transform: translate(0); opacity: 1; }
+      50% { transform: translate(2px, -2px); opacity: 0.8; }
+      100% { transform: translate(-2px, 2px); opacity: 0.9; }
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0%; }
+      50% { background-position: 100%; }
+      100% { background-position: 0%; }
+    }
+
     .hero h2 {
-      font-size: 2em;
+      font-size: 1.8em;
       color: var(--secondary);
       text-shadow: 0 0 10px var(--secondary);
       margin-top: 20px;
-      font-family: 'Russo One', sans-serif;
     }
+
     .btn-cta {
-      background: linear-gradient(90deg, var(--primary), var(--neon-pink));
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
       color: var(--accent);
       padding: 15px 30px;
       text-decoration: none;
       font-size: 1.5em;
       border-radius: 5px;
-      box-shadow: 0 0 20px var(--neon-pink);
+      box-shadow: 0 0 20px var(--primary);
+      animation: pulse 2s infinite;
       margin-top: 20px;
       display: inline-block;
-      font-family: 'JetBrains Mono', monospace;
     }
+
     .btn-cta:hover {
-      background: linear-gradient(90deg, var(--neon-pink), var(--primary));
+      background: linear-gradient(90deg, var(--secondary), var(--primary));
       transform: scale(1.1);
     }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(0, 102, 204, 0.4); }
+      70% { box-shadow: 0 0 0 10px rgba(0, 102, 204, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(0, 102, 204, 0); }
+    }
+
     .holo-element {
       position: absolute;
-      width: 80px;
-      height: 80px;
-      background: radial-gradient(circle, var(--neon-pink), transparent);
+      width: 70px;
+      height: 70px;
+      background: radial-gradient(circle, var(--primary), transparent);
       border-radius: 50%;
       animation: float 4s infinite ease-in-out;
     }
+
     @keyframes float {
       0% { transform: translateY(0); opacity: 0.5; }
-      50% { transform: translateY(-40px); opacity: 1; }
+      50% { transform: translateY(-30px); opacity: 1; }
       100% { transform: translateY(0); opacity: 0.5; }
     }
+
+    /* Blog Container */
     .blog-container {
       padding: 80px 20px;
-      max-width: 1000px;
+      max-width: 900px;
       margin: 0 auto;
       background: rgba(18, 18, 18, 0.9);
-      border: 3px solid var(--neon-pink);
+      border: 3px solid var(--secondary);
+      animation: borderGlow 2s infinite;
     }
+
+    @keyframes borderGlow {
+      0% { border-color: var(--primary); }
+      50% { border-color: var(--secondary); }
+      100% { border-color: var(--primary); }
+    }
+
     .blog-container h1 {
-      font-size: 3.5em;
+      font-size: 2.5em;
       color: var(--secondary);
       text-shadow: 0 0 15px var(--secondary);
       font-family: 'Orbitron', sans-serif;
       text-align: center;
     }
+
     .blog-container h2 {
-      font-size: 2.5em;
-      color: var(--neon-pink);
-      font-family: 'Russo One', sans-serif;
-      margin-top: 3em;
-      text-shadow: 0 0 10px var(--neon-pink);
-    }
-    .blog-container h3 {
       font-size: 1.8em;
       color: var(--secondary);
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'Orbitron', sans-serif;
       margin-top: 2em;
     }
+
+    .blog-container h3 {
+      font-size: 1.4em;
+      color: var(--secondary);
+      font-family: 'JetBrains Mono', monospace;
+      margin-top: 1.5em;
+    }
+
     .blog-container p {
       color: var(--text-dark);
       font-size: 1.2em;
       margin-bottom: 1.5em;
-      line-height: 1.9;
     }
+
+    .highlight {
+      color: var(--secondary);
+      font-weight: 600;
+    }
+
     .blog-container ul {
       list-style: none;
       padding: 0;
     }
+
     .blog-container li {
       background: #1C1C1C;
-      padding: 20px;
-      border: 2px solid var(--neon-pink);
-      margin-bottom: 20px;
+      padding: 15px;
+      border: 2px solid var(--secondary);
+      margin-bottom: 15px;
       transition: transform 0.3s ease;
     }
+
     .blog-container li:hover {
       transform: translateY(-10px);
-      box-shadow: 0 0 30px var(--neon-pink);
+      box-shadow: 0 0 40px var(--secondary);
     }
+
     .blog-container blockquote {
       font-family: 'JetBrains Mono', monospace;
       color: var(--secondary);
-      border-left: 4px solid var(--neon-pink);
-      padding-left: 20px;
-      margin: 30px 0;
+      border-left: 4px solid var(--secondary);
+      padding-left: 15px;
+      margin: 20px 0;
       font-style: italic;
-      font-size: 1.3em;
     }
-    .highlight {
-      color: var(--neon-pink);
-      font-weight: bold;
-    }
+
     .author-info {
-      margin: 30px 0;
+      margin: 20px 0;
       text-align: center;
     }
+
     .author-name {
       font-family: 'JetBrains Mono', monospace;
-      color: var(--neon-pink);
-      font-size: 1.5em;
+      color: var(--secondary);
+      font-size: 1.2em;
     }
+
     .author-title {
       color: var(--text-dark);
-      font-size: 1.1em;
+      font-size: 1em;
     }
+
     .author-logo {
-      max-width: 120px;
+      max-width: 100px;
       height: auto;
     }
+
     hr {
-      border: 1px solid var(--neon-pink);
-      margin: 30px 0;
+      border: 1px solid var(--secondary);
+      margin: 20px 0;
     }
+
     .cta-container {
       text-align: center;
-      margin: 30px 0;
-      padding: 30px;
-      background: #1C1C1C;
-      border: 2px solid var(--neon-pink);
+      margin: 20px 0;
     }
+
     .cta-title {
       font-family: 'Orbitron', sans-serif;
       color: var(--secondary);
-      font-size: 2.5em;
+      font-size: 1.8em;
     }
+
     .cta-button {
-      background: linear-gradient(90deg, var(--primary), var(--neon-pink));
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
       color: var(--accent);
-      padding: 15px 30px;
+      padding: 10px 20px;
       text-decoration: none;
-      border-radius: 5px;
+      border-radius: 4px;
       font-family: 'JetBrains Mono', monospace;
-      font-size: 1.3em;
     }
+
     .cta-button:hover {
-      background: linear-gradient(90deg, var(--neon-pink), var(--primary));
+      background: linear-gradient(90deg, var(--secondary), var(--primary));
       transform: scale(1.05);
     }
+
     .newsletter-container {
       text-align: center;
-      margin: 50px 0;
-      padding: 30px;
+      margin: 40px 0;
+      padding: 20px;
       background: #1C1C1C;
-      border: 2px solid var(--neon-pink);
-      border-radius: 5px;
+      border: 2px solid var(--secondary);
+      border-radius: 4px;
     }
+
     .newsletter-container h3 {
       font-family: 'Orbitron', sans-serif;
       color: var(--secondary);
-      font-size: 2em;
-      margin-bottom: 15px;
+      font-size: 1.8em;
+      margin-bottom: 10px;
     }
+
     .newsletter-container p {
-      font-size: 1.3em;
-      margin-bottom: 25px;
+      font-size: 1.2em;
+      margin-bottom: 20px;
     }
+
     .newsletter-container input[type="email"] {
-      padding: 12px;
-      width: 80%;
-      max-width: 350px;
-      border: 2px solid var(--neon-pink);
+      padding: 10px;
+      width: 70%;
+      max-width: 300px;
+      border: 2px solid var(--secondary);
       background: #1a1a1a;
       color: var(--text-dark);
       font-family: 'JetBrains Mono', monospace;
-      border-radius: 5px;
+      border-radius: 4px;
     }
+
     .newsletter-container button {
-      padding: 12px 25px;
-      background: linear-gradient(90deg, var(--primary), var(--neon-pink));
+      padding: 10px 20px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
       color: var(--accent);
       border: none;
-      border-radius: 5px;
+      border-radius: 4px;
       font-family: 'JetBrains Mono', monospace;
       cursor: pointer;
     }
+
     .newsletter-container button:hover {
-      background: linear-gradient(90deg, var(--neon-pink), var(--primary));
+      background: linear-gradient(90deg, var(--secondary), var(--primary));
       transform: scale(1.05);
     }
+
     .social-share {
-      margin: 3rem 0;
+      margin: 2rem 0;
       text-align: center;
     }
+
     .social-share h3 {
       font-family: 'Orbitron', sans-serif;
       color: var(--secondary);
-      font-size: 2em;
-      margin-bottom: 15px;
+      font-size: 1.8em;
+      margin-bottom: 10px;
     }
+
     .social-share a {
-      margin: 0 15px;
-      padding: 12px 25px;
+      margin: 0 10px;
+      padding: 10px 20px;
       background: var(--primary);
       color: var(--accent);
-      border-radius: 5px;
+      border-radius: 4px;
       text-decoration: none;
       font-family: 'JetBrains Mono', monospace;
     }
+
     .social-share a:hover {
-      background: var(--neon-pink);
+      background: var(--secondary);
       color: #000;
     }
-    .terminal-content {
+
+    .terminal-content, .hack-output {
       background: #1a1a1a;
-      padding: 25px;
-      border: 1px solid var(--neon-pink);
-      border-radius: 5px;
-      margin: 30px 0;
+      padding: 20px;
+      border: 1px solid var(--secondary);
+      border-radius: 4px;
+      margin: 20px 0;
       font-family: 'JetBrains Mono', monospace;
-      color: var(--matrix-green);
-      font-size: 1.1em;
+      color: var(--secondary);
+      font-size: 1em;
     }
+
+    .hack-output {
+      display: none;
+    }
+
+    .hack-output.active {
+      display: block;
+      animation: fadeIn 0.5s ease-out;
+    }
+
     .terminal-line {
       opacity: 0;
       white-space: nowrap;
       overflow: hidden;
     }
+
     .terminal-line.typed {
       opacity: 1;
       animation: typing 0.5s steps(40) forwards;
     }
+
+    .hack-btn {
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      color: var(--accent);
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1em;
+      transition: transform 0.3s ease;
+      display: block;
+      margin: 20px auto;
+    }
+
+    .hack-btn:hover {
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
     @keyframes typing {
       from { width: 0; }
       to { width: 100%; }
     }
+
     footer {
       text-align: center;
-      padding: 50px 20px;
-      border-top: 1px solid var(--neon-pink);
-      background: rgba(18, 18, 18, 0.9);
+      padding: 40px 20px;
+      border-top: 1px solid #1E1E2E;
     }
+
     .social-links {
       display: flex;
       justify-content: center;
-      gap: 25px;
-      margin-top: 15px;
+      gap: 20px;
+      margin-top: 10px;
     }
+
     .social-links img {
-      width: 28px;
-      height: 28px;
+      width: 24px;
+      height: 24px;
       transition: transform 0.2s ease;
     }
+
     .social-links img:hover {
       transform: scale(1.2);
     }
+
     .signature {
       font-family: 'JetBrains Mono', monospace;
-      color: var(--neon-pink);
-      font-size: 1.3em;
-      margin-top: 25px;
+      color: var(--secondary);
+      font-size: 1.2em;
+      margin-top: 20px;
+      text-align: center;
     }
+
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+      .nav-list {
+        gap: 20px;
+      }
+      
+      .nav-link {
+        padding: 6px 12px;
+        font-size: 0.9em;
+      }
+    }
+
     @media (max-width: 768px) {
-      .hero h1 { font-size: 4em; }
-      .matrix-animation { font-size: 1.5em; }
-      .blog-container { padding: 50px 15px; }
-      .hero { padding: 80px 15px; }
-      .newsletter-container input[type="email"] { width: 90%; }
-      .blog-container h1 { font-size: 3em; }
-      .blog-container h2 { font-size: 2em; }
+      .header-container {
+        height: 60px;
+        padding: 0 16px;
+      }
+      
+      .nav-section {
+        display: none;
+      }
+      
+      .mobile-menu-toggle {
+        display: flex;
+      }
+      
+      .search-box {
+        width: 280px;
+        right: -20px;
+      }
+      
+      .logo-primary {
+        font-size: 1.2em;
+      }
+
+      .hero {
+        padding: 100px 10px 80px;
+      }
+
+      .hero h1 { 
+        font-size: 3em; 
+      }
+
+      .matrix-animation { 
+        font-size: 1.2em; 
+      }
+
+      .blog-container { 
+        padding: 40px 10px; 
+      }
     }
+
     @media (max-width: 480px) {
-      .hero h1 { font-size: 3em; }
-      .matrix-animation { font-size: 1.2em; }
-      .hero h2 { font-size: 1.5em; }
-      .btn-cta { font-size: 1.2em; padding: 10px 20px; }
-      .blog-container h1 { font-size: 2.5em; }
-      .blog-container p { font-size: 1.1em; }
-      .blog-container h2 { font-size: 1.8em; }
+      .header-container {
+        height: 56px;
+        padding: 0 12px;
+      }
+      
+      .search-box {
+        width: calc(100vw - 40px);
+        right: auto;
+        left: 12px;
+      }
+      
+      .cta-button {
+        padding: 10px 20px;
+        font-size: 0.85em;
+      }
+      
+      .mobile-menu {
+        width: 100vw;
+        max-width: none;
+      }
+
+      .hero h1 { 
+        font-size: 2em; 
+      }
+
+      .matrix-animation { 
+        font-size: 1em; 
+      }
+
+      .hero h2 { 
+        font-size: 1.2em; 
+      }
+
+      .btn-cta { 
+        font-size: 1em; 
+        padding: 10px 20px; 
+      }
+
+      .blog-container h1 { 
+        font-size: 1.8em; 
+      }
+
+      .terminal-content { 
+        font-size: 0.9em; 
+      }
+
+      .newsletter-container input[type="email"] { 
+        width: 90%; 
+      }
     }
+
     @media (prefers-reduced-motion: reduce) {
-      * { animation: none !important; transition: none !important; }
+      * { 
+        animation: none !important; 
+        transition: none !important; 
+      }
     }
+
     @media print {
-      body { background: white; color: black; }
-      .blog-container { background: white; border: none; }
-      a { color: var(--primary); text-decoration: underline; }
-      .btn-cta, .cta-button { background: white; color: var(--primary); border: 1px solid var(--primary); }
-      #galaxy-bg, #matrix-bg, #particles, #cursor-trail, .holo-element, .matrix-animation { display: none; }
+      body { 
+        background: white; 
+        color: black; 
+      }
+      
+      .blog-container { 
+        background: white; 
+        border: none; 
+      }
+      
+      a { 
+        color: var(--primary); 
+        text-decoration: underline; 
+      }
+      
+      .btn-cta, 
+      .cta-button { 
+        background: white; 
+        color: var(--primary); 
+        border: 1px solid var(--primary); 
+      }
+      
+      #galaxy-bg, 
+      #matrix-bg, 
+      #particles, 
+      #cursor-trail, 
+      .holo-element, 
+      .matrix-animation,
+      .main-header { 
+        display: none; 
+      }
     }
   </style>
 </head>
-<body>
+<body data-page="millionaire-routine">
   <div id="preloader">
-    <div class="loader">Initializing Tzeptosoft’s WealthForge...</div>
+    <div class="loader">Initializing Tzeptosoft... 🚀</div>
   </div>
-  <div id="galaxy-bg"></div>
-  <div id="matrix-bg"></div>
-  <div id="particles"></div>
-  <div id="cursor-trail"></div>
-  <div class="hero">
-    <h1>TZEPTOSOFT</h1>
-    <div class="matrix-animation">FORGE YOUR WEALTH</div>
-    <h2>The Millionaire Routine</h2>
-    <a href="mailto:tzeptosoft@gmail.com" class="btn-cta" aria-label="Contact Tzeptosoft">Begin Your Ascent</a>
-    <div class="holo-element" style="top: 20%; left: 10%;"></div>
-    <div class="holo-element" style="top: 30%; right: 15%;"></div>
-    <div class="holo-element" style="bottom: 25%; left: 20%;"></div>
-    <div class="holo-element" style="bottom: 15%; right: 10%;"></div>
-  </div>
-  <div class="blog-container">
-    <header>
-      <h1>The Millionaire Routine: Daily Habits of Men Who Print Money While the World Sleeps</h1>
-      <div class="author-info">
-        <p class="author-name">Clinton | Tzeptosoft</p>
-        <img src="/assets/images/tzeptosoft-logo.webp" alt="Tzeptosoft Logo" class="author-logo" width="120" height="120" loading="lazy">
-        <p class="author-title">Architect of Sovereign Men</p>
+
+  <!-- Professional Header -->
+  <header class="main-header">
+    <div class="header-container">
+      <!-- Logo Section -->
+      <div class="logo-section">
+        <a href="../index.html" class="logo-wrapper" aria-label="Tzeptosoft Home">
+          <img src="/assets/images/tzeptosoft-logo.webp" alt="Tzeptosoft Logo" class="logo-image" width="48" height="48" loading="lazy">
+          <div class="logo-text">
+            <span class="logo-primary">TZEPTOSOFT</span>
+            <span class="logo-subtitle">Escaping the Matrix</span>
+          </div>
+        </a>
       </div>
-      <hr>
-    </header>
-    <div class="cta-container">
-      <h3 class="cta-title">Ready to Forge Your Wealth?</h3>
-      <a href="mailto:tzeptosoft@gmail.com" class="cta-button">Join the WealthForge</a>
+
+      <!-- Navigation -->
+      <nav class="nav-section" role="navigation" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="../index.html" class="nav-link" data-page="home">New? Start Here</a>
+          </li>
+          <li class="nav-item">
+            <a href="blog.html" class="nav-link" data-page="blog">Blog Archives</a>
+          </li>
+          <li class="nav-item">
+            <a href="lessons" class="nav-link" data-page="lessons">Tzeptosoft Products</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact-us.html" class="nav-link active" data-page="Tzeptosoft">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link" data-page="about">About</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Action Buttons & Search -->
+      <div class="actions-section">
+        <!-- Search -->
+        <div class="search-container">
+          <button class="search-toggle" aria-label="Toggle search" aria-expanded="false" id="searchToggle">
+            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.35-4.35"></path>
+            </svg>
+          </button>
+          <div class="search-box" id="searchBox">
+            <input type="search" placeholder="Search lessons, tactics, blueprints..." class="search-input" aria-label="Search content">
+            <button class="search-submit" aria-label="Search">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.35-4.35"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- CTA Button -->
+        <a href="mailto:tzeptosoft@gmail.com" class="cta-button" aria-label="Join Tzeptosoft">
+          <span class="button-text">Join Tzeptosoft</span>
+          <svg class="button-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false" id="mobileMenuToggle">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
     </div>
-    <div class="content">
-      <h2>The War Is Daily</h2>
-      <p>You don’t rise to your dreams. You fall to your habits. The world’s elite—men who print money while others sleep—aren’t gifted with superhuman talent or secret handshakes. They’re forged in the crucible of routine, where every day is a deliberate act of war against mediocrity. This isn’t about productivity hacks or motivational highs. It’s about <strong>millionaire habits</strong>—non-negotiable rituals that weaponize your time, mind, and body into a machine of wealth, peace, and power.</p>
-      <p>You’re not average. You’re a visionary—coder, trader, creator, or dropout—who’s cut the noise and burns for sovereignty. From Nairobi’s cyber cafes to Mumbai’s cramped flats, men like you are rising, building empires in silence. This 5,000-word war journal isn’t for the lazy or the loud. It’s for you: the man who reads Marcus Aurelius, Alex Hormozi, Dan Koe, and David Goggins, who knows his destiny is elite but needs a <strong>daily routine for young entrepreneurs</strong> to unleash it. The rich don’t chase; they build systems. This is your blueprint to join them.</p>
-      <p>Millionaires don’t stumble into wealth. They sculpt it through <strong>productivity habits for high income</strong>, repeated daily until they’re automatic. In Kenya, a 27-year-old coder earns $5,000/month freelancing because he wakes at 4:30 AM and works without distraction. In Brazil, a trader built a $50,000 portfolio by auditing his day like a general. These men don’t hope; they execute. This <strong>daily routine of successful men</strong> is your path to mental discipline, financial dominance, and unbreakable focus. The war is daily. Arm yourself.</p>
-      <blockquote>“Your habits are your army. Discipline them, or they’ll betray you.” —Tzeptosoft’s WealthForge</blockquote>
 
-      <h2>Mindset First: Morning Before Money</h2>
-      <p>The morning is your fortress, where you forge <strong>mental discipline for wealth</strong> before the world’s noise invades. Millionaires don’t start their day reacting—they command it. Your <strong>elite morning routine</strong> is a sacred ritual, a Stoic war cry that sets the tone for dominance. Here’s how to own your dawn:</p>
-      <ul>
-        <li><strong>Wake Before 6 AM:</strong> Rise at 4:30 or 5:00 AM, when the world is silent. Early hours are your edge—your mind is sharp, distractions are dead. In Nairobi, a coder wakes at 4:30 AM, coding $2,000/month apps before sunrise. Steps: Set an alarm across the room. No snooze. Splash cold water on your face.</li>
-        <li><strong>No Phone for 2 Hours:</strong> Your phone is a dopamine slot machine. Avoid it until your mind is fortified. Studies show morning screen time cuts focus by 30%. In Mumbai, a trader bans his phone until 7 AM, doubling his clarity. Steps: Lock your phone in a drawer. Use a physical clock.</li>
-        <li><strong>Meditation/Visualization/Stoic Journaling:</strong> Spend 15 minutes meditating (focus on breath, use Headspace if new). Visualize your empire—$10,000/month, a lean physique, a free life. Journal one page: What’s your mission? What’s in your control? Read a Stoic quote (Marcus Aurelius’ <em>Meditations</em>). A Brazilian agency owner journals, earning $7,000/month with focus. Steps: Sit in silence, write in a notebook, keep <em>Meditations</em> nearby.</li>
-        <li><strong>Hydration + Sunlight + Movement:</strong> Drink 500ml water (add lemon for alkalinity). Get 10 minutes of sunlight (balcony, street). Move—20 push-ups, 5-minute yoga, or a brisk walk. Sunlight boosts serotonin by 20%; movement primes your brain. In Manila, a creator walks at dawn, sparking $3,000/month ideas. Steps: Keep a water bottle bedside, step outside, do bodyweight exercises.</li>
-        <li><strong>Strategy for the Day:</strong> Write three high-ROI tasks (e.g., code a feature, pitch a client) in Notion or a notebook. Plan with military precision: time blocks, outcomes, contingencies. A Kenyan freelancer plans daily, scaling to $4,000/month. Steps: Use Notion’s daily template, prioritize income-generating tasks, review at 8 AM.</li>
-      </ul>
-      <p><strong>Psychological Framework:</strong> Mornings leverage “ego depletion theory”—your willpower is strongest early. By front-loading discipline, you avoid decision fatigue. Studies show morning routines increase productivity by 40%. From Lagos to London, men who own their dawn outthink their peers.</p>
-      <p><strong>Global Case Studies:</strong></p>
-      <ul>
-        <li><strong>Kenya:</strong> A 27-year-old coder wakes at 4:30 AM, meditates, and plans, earning $5,000/month on Upwork.</li>
-        <li><strong>India:</strong> A Mumbai trader bans his phone, journals Stoic principles, and earns $3,000/month trading.</li>
-        <li><strong>Brazil:</strong> A São Paulo agency owner visualizes goals, hitting $7,000/month with clarity.</li>
-        <li><strong>Philippines:</strong> A Manila creator walks at dawn, generating $3,000/month in content ideas.</li>
-      </ul>
-      <p><strong>Truth:</strong> Your morning is your throne. Rule it, or the day will rule you.</p>
-
-      <h2>Builder Mode: 4–6 Hours of Deep Work</h2>
-      <p>Deep work is your war room, where you build empires while others scroll. It’s not multitasking or busywork—it’s unbroken focus on high-ROI tasks that print money: coding, writing, pitching, or system-building. Millionaires don’t dabble; they dominate. Here’s how to execute <strong>productivity habits for high income</strong> in Builder Mode:</p>
-      <ul>
-        <li><strong>What Is Deep Work?</strong> Deep work is 90-minute sprints of distraction-free creation—no tabs, no phone, no music. It’s coding a SaaS feature, writing a $1,000 sales page, or pitching 10 clients. In Nairobi, a coder’s deep work earns $3,000/month on Upwork. Steps: Close all apps, use a single monitor, lock your phone.</li>
-        <li><strong>90-Minute Sprints:</strong> Work in 3–4 sprints daily (4–6 hours total). Use Pomodoro (25 minutes work, 5 minutes rest) or 90-minute blocks. A Mumbai agency owner uses sprints, scaling to $5,000/month. Steps: Set a timer (Focus@Will), work in a quiet room, take 10-minute breaks (walk, stretch).</li>
-        <li><strong>Tools for Focus:</strong> Use Notion for task tracking, Obsidian for notes, Emacs for coding, or Linux (Ubuntu) for distraction-free setups. Block sites with Freedom or Cold Turkey. A Brazilian coder uses Emacs, earning $4,000/month. Steps: Install Notion/Obsidian, block X/YouTube during sprints, use a minimal OS.</li>
-        <li><strong>High-ROI Tasks:</strong> Focus on what moves the needle—building systems (SaaS, funnels), coding (apps, sites), writing (blogs, copy), or pitching (clients, investors). A Manila creator writes one blog daily, earning $2,000/month. Steps: List three tasks nightly, prioritize income-generating work, review output.</li>
-      </ul>
-      <p><strong>Psychological Framework:</strong> Deep work leverages “flow state,” where focus maximizes output. Studies show 4 hours of deep work equals 8 hours of shallow work. Cal Newport’s <em>Deep Work</em> proves focused men outearn distracted peers by 300%. From Delhi to Rio, deep work builds empires.</p>
-      <p><strong>Global Case Studies:</strong></p>
-      <ul>
-        <li><strong>Kenya:</strong> A Nairobi coder uses 4-hour sprints, earning $3,000/month on Upwork.</li>
-        <li><strong>India:</strong> A Mumbai agency owner sprints, scaling to $5,000/month with client pitches.</li>
-        <li><strong>Brazil:</strong> A São Paulo coder uses Emacs, building a $4,000/month SaaS.</li>
-        <li><strong>Philippines:</strong> A Manila creator writes daily, earning $2,000/month from blogs.</li>
-      </ul>
-      <p><strong>Truth:</strong> Deep work is your forge. Build in silence, or perish in noise.</p>
-
-      <h2>Body Protocol: Training Like a Mercenary</h2>
-      <p>Your body is your weapon, a machine that fuels your mind and commands respect. Millionaires don’t neglect it—they sharpen it like a blade. This isn’t about vanity; it’s about power. Here’s your <strong>habits of rich men</strong> body protocol:</p>
-      <ul>
-        <li><strong>Train 5–6 Days/Week:</strong> Lift weights (squats, deadlifts, bench press) 4x/week. Add martial arts (jiu-jitsu, boxing), cycling, or sprinting 1–2x/week. Training boosts testosterone by 20%, enhancing focus. In Nairobi, a trader lifts, earning $3,000/month with clarity. Steps: Join a gym or use bodyweight (Athlean-X YouTube), train 45–60 minutes, track lifts in Strong app.</li>
-        <li><strong>Nutrition:</strong> Eat minimal sugar (under 20g/day), high protein (1g/lb bodyweight), and warrior fasting (16:8, 3x/week). Prioritize eggs, chicken, rice, greens. A Mumbai coder fasts, coding $4,000/month apps with energy. Steps: Meal prep weekly, use MyFitnessPal, fast 16 hours 3x/week.</li>
-        <li><strong>Sleep Like a Weapon:</strong> Get 7.5–8 hours in a dark room (blackout curtains). Use magnesium (200mg) and no screens 1 hour before bed. Sleep boosts productivity by 25%. A Brazilian agency owner sleeps 8 hours, scaling to $6,000/month. Steps: Set a 10 PM bedtime, use blue-light glasses, keep your room at 18°C.</li>
-      </ul>
-      <p><strong>Psychological Framework:</strong> Physical training leverages “embodied cognition”—a strong body sharpens your mind. Studies show exercise increases cognitive performance by 30%. From Lagos to Manila, men who train dominate their fields.</p>
-      <p><strong>Global Case Studies:</strong></p>
-      <ul>
-        <li><strong>Kenya:</strong> A Nairobi trader lifts 5x/week, earning $3,000/month with focus.</li>
-        <li><strong>India:</strong> A Mumbai coder fasts, coding $4,000/month apps with energy.</li>
-        <li><strong>Brazil:</strong> A São Paulo agency owner sleeps 8 hours, scaling to $6,000/month.</li>
-        <li><strong>Philippines:</strong> A Manila creator trains jiu-jitsu, earning $2,500/month with discipline.</li>
-      </ul>
-      <p><strong>Truth:</strong> A weak body breeds a weak mind. Train like a mercenary, or fade like a civilian.</p>
-
-      <h2>Night Routine: Reflection & Shutdown</h2>
-      <p>The night is your council, where you audit the day and prepare for tomorrow’s war. Millionaires don’t collapse into Netflix or X—they reflect, refine, and reload. Here’s your night routine for <strong>mental discipline for wealth</strong>:</p>
-      <ul>
-        <li><strong>Audit the Day:</strong> Spend 10 minutes in Notion: What earned money? What wasted time? Quantify output (e.g., lines coded, clients pitched). A Nairobi coder audits nightly, scaling to $5,000/month. Steps: Use Notion’s daily log, score your day 1–10, identify one improvement.</li>
-        <li><strong>Journal Wins/Losses:</strong> Write one page: What went right? What failed? How will you adjust? Read a Stoic passage (<em>Letters from a Stoic</em>). A Mumbai trader journals, earning $3,000/month with clarity. Steps: Keep a notebook, write 300 words, end with a Stoic quote.</li>
-        <li><strong>Read Books, Not Feeds:</strong> Read 20 pages of high-ROI books: <em>The 48 Laws of Power</em>, <em>Atomic Habits</em>, <em>Principles</em>. No X or news—they steal focus. A Brazilian creator reads, sparking $4,000/month ideas. Steps: Buy one book, read 20 pages at 8 PM, highlight key insights.</li>
-        <li><strong>No Screens After 9 PM:</strong> Blue light cuts melatonin by 50%, ruining sleep. Shut off devices. Use candles or dim lights. A Manila coder bans screens, coding $3,000/month with focus. Steps: Set a 9 PM phone lock, use Flux on devices, read physical books.</li>
-        <li><strong>Bed by 10–10:30 PM:</strong> Plan tomorrow’s three tasks before bed. Visualize success. Sleep by 10:30 PM to align with circadian rhythms. A Kenyan agency owner plans nightly, hitting $6,000/month. Steps: Write tasks in Notion, visualize for 5 minutes, sleep by 10:30 PM.</li>
-      </ul>
-      <p><strong>Psychological Framework:</strong> Night routines leverage “retrospective coherence”—reflecting to improve future actions. Studies show daily audits boost performance by 20%. From Delhi to São Paulo, men who reflect dominate.</p>
-      <p><strong>Global Case Studies:</strong></p>
-      <ul>
-        <li><strong>Kenya:</strong> A Nairobi coder audits nightly, scaling to $5,000/month on Upwork.</li>
-        <li><strong>India:</strong> A Mumbai trader journals, earning $3,000/month with clarity.</li>
-        <li><strong>Brazil:</strong> A São Paulo creator reads, sparking $4,000/month ideas.</li>
-        <li><strong>Philippines:</strong> A Manila coder bans screens, coding $3,000/month with focus.</li>
-      </ul>
-      <p><strong>Truth:</strong> The night is your mirror. Reflect, or repeat your failures.</p>
-
-      <h2>Long-Term Game: Wealth Systems, Not Hype</h2>
-      <p>Wealth isn’t built in bursts—it’s forged in systems that compound over years. Millionaires don’t chase hype; they build machines. Here’s how to play the long game with <strong>daily routine of successful men</strong>:</p>
-      <ul>
-        <li><strong>Weekly Themes:</strong> Set one focus weekly: build assets (SaaS, blogs), automate (Zapier), delegate (Fiverr). A Nairobi coder themes weeks, earning $5,000/month. Steps: Plan Sundays in Notion, execute one theme, review results.</li>
-        <li><strong>Track Net Worth + Income:</strong> Log net worth and daily income weekly in Google Sheets. Track cashflow (Upwork, Gumroad). A Mumbai trader tracks, building a $50,000 portfolio. Steps: Create a Sheets template, log Sundays, aim for 5% monthly growth.</li>
-        <li><strong>Master High-ROI Skills:</strong> Learn copywriting (HubSpot), coding (freeCodeCamp), deal-making (<em>Never Split the Difference</em>), or AI (PromptHero). A Brazilian agency owner masters copywriting, hitting $7,000/month. Steps: Study 1 hour daily, apply skills weekly, track income impact.</li>
-        <li><strong>Embrace Monk Mode:</strong> Go monk mode for 90 days yearly—delete X, minimize socializing, focus on one goal (e.g., launch a SaaS). A Manila creator used monk mode, earning $4,000/month. Steps: Delete apps, journal daily, work 6 hours/day on one project.</li>
-      </ul>
-      <p><strong>Psychological Framework:</strong> Systems leverage “compound interest” in habits—small actions multiply over time. Studies show consistent systems increase wealth by 200% over a decade. From Lagos to Delhi, systems build empires.</p>
-      <p><strong>Global Case Studies:</strong></p>
-      <ul>
-        <li><strong>Kenya:</strong> A Nairobi coder themes weeks, earning $5,000/month on Upwork.</li>
-        <li><strong>India:</strong> A Mumbai trader tracks net worth, building a $50,000 portfolio.</li>
-        <li><strong>Brazil:</strong> A São Paulo agency owner masters copywriting, hitting $7,000/month.</li>
-        <li><strong>Philippines:</strong> A Manila creator used monk mode, earning $4,000/month.</li>
-      </ul>
-      <p><strong>Truth:</strong> Systems are your empire’s foundation. Build them, or chase hype forever.</p>
-
-      <h2>Your Routine Is Your Sword</h2>
-      <p>Your routine is either a sword or a leash. The rich sharpen theirs. The broke hold theirs like toys. You’ve read 5,000 words of a <strong>daily routine for young entrepreneurs</strong>, a blueprint for <strong>millionaire habits</strong> that forge wealth, peace, and power. This isn’t a suggestion—it’s a command. You’re not here to scroll or dream. You’re here to build an empire, to print money while the world sleeps.</p>
-      <p>From Nairobi’s slums to São Paulo’s favelas, men are rising, wielding <strong>productivity habits for high income</strong> like blades. They wake at 4:30 AM, work without distraction, train like mercenaries, and reflect like Stoics. You’re one of them—a visionary destined for greatness. But destiny demands structure. Build your daily operating system: morning mindset, deep work, body protocol, night reflection, and long-term systems. Start tonight.</p>
-      <p><strong>Your Orders:</strong> Wake at 5 AM tomorrow. Journal one page. Work one 90-minute sprint. Lift weights. Audit your day. Choose one high-ROI skill to master. Bookmark this. Live this. Share it with a brother ready to rise. The war is daily. Sharpen your sword, and the world will bend.</p>
-      <blockquote>“Your routine is your sword. Sharpen it daily, or it will dull your destiny.” —Tzeptosoft’s WealthForge</blockquote>
-      <p class="signature">With fire, Your architect, Clinton</p>
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+      <div class="mobile-menu">
+        <div class="mobile-menu-header">
+          <a href="../index.html" class="mobile-logo">
+            <img src="/assets/images/tzeptosoft-logo.webp" alt="Tzeptosoft" width="40" height="40">
+            <span>TZEPTOSOFT</span>
+          </a>
+          <button class="mobile-menu-close" id="mobileMenuClose">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 6 6 18"></path>
+              <path d="m6 6 12 12"></path>
+            </svg>
+          </button>
+        </div>
+        <nav class="mobile-nav">
+          <a href="../index.html" class="mobile-nav-link">New? Start Here</a>
+          <a href="blog.html" class="mobile-nav-link">Blog Archives</a>
+          <a href="lessons" class="mobile-nav-link">Tzeptosoft Products</a>
+          <a href="contact-us.html" class="mobile-nav-link active">Contact Us</a>
+          <a href="about.html" class="mobile-nav-link">About</a>
+        </nav>
+        <div class="mobile-actions">
+          <a href="mailto:tzeptosoft@gmail.com" class="mobile-cta-button">Join Tzeptosoft 🚀</a>
+        </div>
+      </div>
     </div>
-    <div class="terminal-content">
-      <div class="terminal-line" data-text="> Accessing Tzeptosoft’s WealthForge System..."></div>
-      <div class="terminal-line" data-text="> Loading Millionaire Routine Protocols..."></div>
-      <div class="terminal-line" data-text="> Signal Transfer: WEALTH FORGED ✅"></div>
+  </header>
+
+  <div class="main-content">
+    <div id="galaxy-bg"></div>
+    <div id="matrix-bg"></div>
+    <div id="particles"></div>
+    <div id="cursor-trail"></div>
+
+    <div class="hero">
+      <h1>TZEPTOSOFT</h1>
+      <div class="matrix-animation">FORGE YOUR WEALTH</div>
+      <h2>The Millionaire Routine</h2>
+      <a href="mailto:tzeptosoft@gmail.com" class="btn-cta" aria-label="Contact Tzeptosoft">Begin Your Ascent</a>
+      <div class="holo-element" style="top: 20%; left: 10%;"></div>
+      <div class="holo-element" style="top: 30%; right: 15%;"></div>
+      <div class="holo-element" style="bottom: 25%; left: 20%;"></div>
+      <div class="holo-element" style="bottom: 15%; right: 10%;"></div>
     </div>
-    <div class="newsletter-container">
-      <h3>Join the WealthForge Legion</h3>
-      <p>Get weekly tactics to master <strong>millionaire habits</strong> and build <strong>mental discipline for wealth</strong>. No noise, only fire for your empire.</p>
-      <input type="email" placeholder="Enter your email" aria-label="Email for newsletter">
-      <button type="button">Join Now</button>
+
+    <div class="blog-container">
+      <header>
+        <h1>The Millionaire Routine: Daily Habits of Men Who Print Money While the World Sleeps</h1>
+        <div class="author-info">
+          <p class="author-name">Clinton | Tzeptosoft</p>
+          <img src="/assets/images/tzeptosoft-logo.webp" alt="Tzeptosoft Logo" class="author-logo" width="100" height="100" loading="lazy">
+          <p class="author-title">Architect of Sovereign Men</p>
+        </div>
+        <hr>
+      </header>
+
+      <div class="cta-container">
+        <h3 class="cta-title">Ready to Forge Your Wealth?</h3>
+        <a href="mailto:tzeptosoft@gmail.com" class="cta-button">Join the WealthForge</a>
+      </div>
+
+      <div class="content">
+        <h2>The War Is Daily</h2>
+        <p>You don't rise to your dreams. You fall to your habits. The world's elite_men who print money while others sleep_aren't gifted with superhuman talent or secret handshakes. They're forged in the crucible of routine, where every day is a deliberate act of war against mediocrity. This isn't about productivity hacks or motivational highs. It's about <span class="highlight">millionaire habits</span>_non-negotiable rituals that weaponize your time, mind, and body into a machine of wealth, peace, and power.</p>
+        <p>You're not average. You're a visionary_coder, trader, creator, or dropout_who's cut the noise and burns for sovereignty. From Nairobi's cyber cafes to Mumbai's cramped flats, men like you are rising, building empires in silence. This 5,000-word war journal isn't for the lazy or the loud. It's for you: the man who reads Marcus Aurelius, Alex Hormozi, Dan Koe, and David Goggins, who knows his destiny is elite but needs a <span class="highlight">daily routine for young entrepreneurs</span> to unleash it. The rich don't chase; they build systems. This is your blueprint to join them.</p>
+        <p>Millionaires don't stumble into wealth. They sculpt it through <span class="highlight">productivity habits for high income</span>, repeated daily until they're automatic. In Kenya, a 27-year-old coder earns $5,000/month freelancing because he wakes at 4:30 AM and works without distraction. In Brazil, a trader built a $50,000 portfolio by auditing his day like a general. These men don't hope; they execute. This <span class="highlight">daily routine of successful men</span> is your path to mental discipline, financial dominance, and unbreakable focus. The war is daily. Arm yourself.</p>
+        <blockquote>"Your habits are your army. Discipline them, or they'll betray you." _Tzeptosoft's WealthForge</blockquote>
+
+        <h2>Mindset First: Morning Before Money</h2>
+        <p>The morning is your fortress, where you forge <span class="highlight">mental discipline for wealth</span> before the world's noise invades. Millionaires don't start their day reacting_they command it. Your <span class="highlight">elite morning routine</span> is a sacred ritual, a Stoic war cry that sets the tone for dominance. Here's how to own your dawn:</p>
+        <ul>
+          <li><strong>Wake Before 6 AM:</strong> Rise at 4:30 or 5:00 AM, when the world is silent. Early hours are your edge_your mind is sharp, distractions are dead. In Nairobi, a coder wakes at 4:30 AM, coding $2,000/month apps before sunrise. Steps: Set an alarm across the room. No snooze. Splash cold water on your face.</li>
+          <li><strong>No Phone for 2 Hours:</strong> Your phone is a dopamine slot machine. Avoid it until your mind is fortified. Studies show morning screen time cuts focus by 30%. In Mumbai, a trader bans his phone until 7 AM, doubling his clarity. Steps: Lock your phone in a drawer. Use a physical clock.</li>
+          <li><strong>Meditation/Visualization/Stoic Journaling:</strong> Spend 15 minutes meditating (focus on breath, use Headspace if new). Visualize your empire_$10,000/month, a lean physique, a free life. Journal one page: What's your mission? What's in your control? Read a Stoic quote (Marcus Aurelius' <em>Meditations</em>). A Brazilian agency owner journals, earning $7,000/month with focus. Steps: Sit in silence, write in a notebook, keep <em>Meditations</em> nearby.</li>
+          <li><strong>Hydration + Sunlight + Movement:</strong> Drink 500ml water (add lemon for alkalinity). Get 10 minutes of sunlight (balcony, street). Move_20 push-ups, 5-minute yoga, or a brisk walk. Sunlight boosts serotonin by 20%; movement primes your brain. In Manila, a creator walks at dawn, sparking $3,000/month ideas. Steps: Keep a water bottle bedside, step outside, do bodyweight exercises.</li>
+          <li><strong>Strategy for the Day:</strong> Write three high-ROI tasks (e.g., code a feature, pitch a client) in Notion or a notebook. Plan with military precision: time blocks, outcomes, contingencies. A Kenyan freelancer plans daily, scaling to $4,000/month. Steps: Use Notion's daily template, prioritize income-generating tasks, review at 8 AM.</li>
+        </ul>
+        <p><strong>Psychological Framework:</strong> Mornings leverage "ego depletion theory"_your willpower is strongest early. By front-loading discipline, you avoid decision fatigue. Studies show morning routines increase productivity by 40%. From Lagos to London, men who own their dawn outthink their peers.</p>
+        <p><strong>Global Case Studies:</strong></p>
+        <ul>
+          <li><strong>Kenya:</strong> A 27-year-old coder wakes at 4:30 AM, meditates, and plans, earning $5,000/month on Upwork.</li>
+          <li><strong>India:</strong> A Mumbai trader bans his phone, journals Stoic principles, and earns $3,000/month trading.</li>
+          <li><strong>Brazil:</strong> A São Paulo agency owner visualizes goals, hitting $7,000/month with clarity.</li>
+          <li><strong>Philippines:</strong> A Manila creator walks at dawn, generating $3,000/month in content ideas.</li>
+        </ul>
+        <p><strong>Truth:</strong> Your morning is your throne. Rule it, or the day will rule you.</p>
+
+        <h2>Builder Mode: 4–6 Hours of Deep Work</h2>
+        <p>Deep work is your war room, where you build empires while others scroll. It's not multitasking or busywork_it's unbroken focus on high-ROI tasks that print money: coding, writing, pitching, or system-building. Millionaires don't dabble; they dominate. Here's how to execute <span class="highlight">productivity habits for high income</span> in Builder Mode:</p>
+        <ul>
+          <li><strong>What Is Deep Work?</strong> Deep work is 90-minute sprints of distraction-free creation_no tabs, no phone, no music. It's coding a SaaS feature, writing a $1,000 sales page, or pitching 10 clients. In Nairobi, a coder's deep work earns $3,000/month on Upwork. Steps: Close all apps, use a single monitor, lock your phone.</li>
+          <li><strong>90-Minute Sprints:</strong> Work in 3–4 sprints daily (4–6 hours total). Use Pomodoro (25 minutes work, 5 minutes rest) or 90-minute blocks. A Mumbai agency owner uses sprints, scaling to $5,000/month. Steps: Set a timer (Focus@Will), work in a quiet room, take 10-minute breaks (walk, stretch).</li>
+          <li><strong>Tools for Focus:</strong> Use Notion for task tracking, Obsidian for notes, Emacs for coding, or Linux (Ubuntu) for distraction-free setups. Block sites with Freedom or Cold Turkey. A Brazilian coder uses Emacs, earning $4,000/month. Steps: Install Notion/Obsidian, block X/YouTube during sprints, use a minimal OS.</li>
+          <li><strong>High-ROI Tasks:</strong> Focus on what moves the needle_building systems (SaaS, funnels), coding (apps, sites), writing (blogs, copy), or pitching (clients, investors). A Manila creator writes one blog daily, earning $2,000/month. Steps: List three tasks nightly, prioritize income-generating work, review output.</li>
+        </ul>
+        <p><strong>Psychological Framework:</strong> Deep work leverages "flow state," where focus maximizes output. Studies show 4 hours of deep work equals 8 hours of shallow work. Cal Newport's <em>Deep Work</em> proves focused men outearn distracted peers by 300%. From Delhi to Rio, deep work builds empires.</p>
+        <p><strong>Global Case Studies:</strong></p>
+        <ul>
+          <li><strong>Kenya:</strong> A Nairobi coder uses 4-hour sprints, earning $3,000/month on Upwork.</li>
+          <li><strong>India:</strong> A Mumbai agency owner sprints, scaling to $5,000/month with client pitches.</li>
+          <li><strong>Brazil:</strong> A São Paulo coder uses Emacs, building a $4,000/month SaaS.</li>
+          <li><strong>Philippines:</strong> A Manila creator writes daily, earning $2,000/month from blogs.</li>
+        </ul>
+        <p><strong>Truth:</strong> Deep work is your forge. Build in silence, or perish in noise.</p>
+
+        <h2>Body Protocol: Training Like a Mercenary</h2>
+        <p>Your body is your weapon, a machine that fuels your mind and commands respect. Millionaires don't neglect it_they sharpen it like a blade. This isn't about vanity; it's about power. Here's your <span class="highlight">habits of rich men</span> body protocol:</p>
+        <ul>
+          <li><strong>Train 5–6 Days/Week:</strong> Lift weights (squats, deadlifts, bench press) 4x/week. Add martial arts (jiu-jitsu, boxing), cycling, or sprinting 1–2x/week. Training boosts testosterone by 20%, enhancing focus. In Nairobi, a trader lifts, earning $3,000/month with clarity. Steps: Join a gym or use bodyweight (Athlean-X YouTube), train 45–60 minutes, track lifts in Strong app.</li>
+          <li><strong>Nutrition:</strong> Eat minimal sugar (under 20g/day), high protein (1g/lb bodyweight), and warrior fasting (16:8, 3x/week). Prioritize eggs, chicken, rice, greens. A Mumbai coder fasts, coding $4,000/month apps with energy. Steps: Meal prep weekly, use MyFitnessPal, fast 16 hours 3x/week.</li>
+          <li><strong>Sleep Like a Weapon:</strong> Get 7.5–8 hours in a dark room (blackout curtains). Use magnesium (200mg) and no screens 1 hour before bed. Sleep boosts productivity by 25%. A Brazilian agency owner sleeps 8 hours, scaling to $6,000/month. Steps: Set a 10 PM bedtime, use blue-light glasses, keep your room at 18°C.</li>
+        </ul>
+        <p><strong>Psychological Framework:</strong> Physical training leverages "embodied cognition"_a strong body sharpens your mind. Studies show exercise increases cognitive performance by 30%. From Lagos to Manila, men who train dominate their fields.</p>
+        <p><strong>Global Case Studies:</strong></p>
+        <ul>
+          <li><strong>Kenya:</strong> A Nairobi trader lifts 5x/week, earning $3,000/month with focus.</li>
+          <li><strong>India:</strong> A Mumbai coder fasts, coding $4,000/month apps with energy.</li>
+          <li><strong>Brazil:</strong> A São Paulo agency owner sleeps 8 hours, scaling to $6,000/month.</li>
+          <li><strong>Philippines:</strong> A Manila creator trains jiu-jitsu, earning $2,500/month with discipline.</li>
+        </ul>
+        <p><strong>Truth:</strong> A weak body breeds a weak mind. Train like a mercenary, or fade like a civilian.</p>
+
+        <h2>Night Routine: Reflection & Shutdown</h2>
+        <p>The night is your council, where you audit the day and prepare for tomorrow's war. Millionaires don't collapse into Netflix or X_they reflect, refine, and reload. Here's your night routine for <span class="highlight">mental discipline for wealth</span>:</p>
+        <ul>
+          <li><strong>Audit the Day:</strong> Spend 10 minutes in Notion: What earned money? What wasted time? Quantify output (e.g., lines coded, clients pitched). A Nairobi coder audits nightly, scaling to $5,000/month. Steps: Use Notion's daily log, score your day 1–10, identify one improvement.</li>
+          <li><strong>Journal Wins/Losses:</strong> Write one page: What went right? What failed? How will you adjust? Read a Stoic passage (<em>Letters from a Stoic</em>). A Mumbai trader journals, earning $3,000/month with clarity. Steps: Keep a notebook, write 300 words, end with a Stoic quote.</li>
+          <li><strong>Read Books, Not Feeds:</strong> Read 20 pages of high-ROI books: <em>The 48 Laws of Power</em>, <em>Atomic Habits</em>, <em>Principles</em>. No X or news_they steal focus. A Brazilian creator reads, sparking $4,000/month ideas. Steps: Buy one book, read 20 pages at 8 PM, highlight key insights.</li>
+          <li><strong>No Screens After 9 PM:</strong> Blue light cuts melatonin by 50%, ruining sleep. Shut off devices. Use candles or dim lights. A Manila coder bans screens, coding $3,000/month with focus. Steps: Set a 9 PM phone lock, use Flux on devices, read physical books.</li>
+          <li><strong>Bed by 10–10:30 PM:</strong> Plan tomorrow's three tasks before bed. Visualize success. Sleep by 10:30 PM to align with circadian rhythms. A Kenyan agency owner plans nightly, hitting $6,000/month. Steps: Write tasks in Notion, visualize for 5 minutes, sleep by 10:30 PM.</li>
+        </ul>
+        <p><strong>Psychological Framework:</strong> Night routines leverage "retrospective coherence"_reflecting to improve future actions. Studies show daily audits boost performance by 20%. From Delhi to São Paulo, men who reflect dominate.</p>
+        <p><strong>Global Case Studies:</strong></p>
+        <ul>
+          <li><strong>Kenya:</strong> A Nairobi coder audits nightly, scaling to $5,000/month on Upwork.</li>
+          <li><strong>India:</strong> A Mumbai trader journals, earning $3,000/month with clarity.</li>
+          <li><strong>Brazil:</strong> A São Paulo creator reads, sparking $4,000/month ideas.</li>
+          <li><strong>Philippines:</strong> A Manila coder bans screens, coding $3,000/month with focus.</li>
+        </ul>
+        <p><strong>Truth:</strong> The night is your mirror. Reflect, or repeat your failures.</p>
+
+        <h2>Long-Term Game: Wealth Systems, Not Hype</h2>
+        <p>Wealth isn't built in bursts_it's forged in systems that compound over years. Millionaires don't chase hype; they build machines. Here's how to play the long game with <span class="highlight">daily routine of successful men</span>:</p>
+        <ul>
+          <li><strong>Weekly Themes:</strong> Set one focus weekly: build assets (SaaS, blogs), automate (Zapier), delegate (Fiverr). A Nairobi coder themes weeks, earning $5,000/month. Steps: Plan Sundays in Notion, execute one theme, review results.</li>
+          <li><strong>Track Net Worth + Income:</strong> Log net worth and daily income weekly in Google Sheets. Track cashflow (Upwork, Gumroad). A Mumbai trader tracks, building a $50,000 portfolio. Steps: Create a Sheets template, log Sundays, aim for 5% monthly growth.</li>
+          <li><strong>Master High-ROI Skills:</strong> Learn copywriting (HubSpot), coding (freeCodeCamp), deal-making (<em>Never Split the Difference</em>), or AI (PromptHero). A Brazilian agency owner masters copywriting, hitting $7,000/month. Steps: Study 1 hour daily, apply skills weekly, track income impact.</li>
+          <li><strong>Embrace Monk Mode:</strong> Go monk mode for 90 days yearly_delete X, minimize socializing, focus on one goal (e.g., launch a SaaS). A Manila creator used monk mode, earning $4,000/month. Steps: Delete apps, journal daily, work 6 hours/day on one project.</li>
+        </ul>
+        <p><strong>Psychological Framework:</strong> Systems leverage "compound interest" in habits_small actions multiply over time. Studies show consistent systems increase wealth by 200% over a decade. From Lagos to Delhi, systems build empires.</p>
+        <p><strong>Global Case Studies:</strong></p>
+        <ul>
+          <li><strong>Kenya:</strong> A Nairobi coder themes weeks, earning $5,000/month on Upwork.</li>
+          <li><strong>India:</strong> A Mumbai trader tracks net worth, building a $50,000 portfolio.</li>
+          <li><strong>Brazil:</strong> A São Paulo agency owner masters copywriting, hitting $7,000/month.</li>
+          <li><strong>Philippines:</strong> A Manila creator used monk mode, earning $4,000/month.</li>
+        </ul>
+        <p><strong>Truth:</strong> Systems are your empire's foundation. Build them, or chase hype forever.</p>
+
+        <h2>Your Routine Is Your Sword</h2>
+        <p>Your routine is either a sword or a leash. The rich sharpen theirs. The broke hold theirs like toys. You've read 5,000 words of a <span class="highlight">daily routine for young entrepreneurs</span>, a blueprint for <span class="highlight">millionaire habits</span> that forge wealth, peace, and power. This isn't a suggestion_it's a command. You're not here to scroll or dream. You're here to build an empire, to print money while the world sleeps.</p>
+        <p>From Nairobi's slums to São Paulo's favelas, men are rising, wielding <span class="highlight">productivity habits for high income</span> like blades. They wake at 4:30 AM, work without distraction, train like mercenaries, and reflect like Stoics. You're one of them_a visionary destined for greatness. But destiny demands structure. Build your daily operating system: morning mindset, deep work, body protocol, night reflection, and long-term systems. Start tonight.</p>
+        <p><strong>Your Orders:</strong> Wake at 5 AM tomorrow. Journal one page. Work one 90-minute sprint. Lift weights. Audit your day. Choose one high-ROI skill to master. Bookmark this. Live this. Share it with a brother ready to rise. The war is daily. Sharpen your sword, and the world will bend.</p>
+        <blockquote>"Your routine is your sword. Sharpen it daily, or it will dull your destiny." _Tzeptosoft's WealthForge</blockquote>
+        <p class="signature">_ CLINTON | TZEPTOSOFT<br>ESCAPING THE FUCKING MATRIX.</p>
+      </div>
+
+      <div class="terminal-content" id="terminal">
+        <div class="terminal-line" data-text="> Accessing Tzeptosoft's WealthForge System..."></div>
+        <div class="terminal-line" data-text="> Loading Millionaire Routine Protocols..."></div>
+        <div class="terminal-line" data-text="> Signal Transfer: WEALTH FORGED ✅"></div>
+        <div class="terminal-line" data-text="> Welcome to the WealthForge."></div>
+      </div>
+      <button class="hack-btn" aria-label="Start hack simulation">Initiate WealthForge Simulation</button>
+      <div class="hack-output">
+        <div class="terminal-line" data-text="> Bypassing poverty protocols..."></div>
+        <div class="terminal-line" data-text="> Access granted to elite routines..."></div>
+      </div>
+
+      <div class="newsletter-container">
+        <h3>Join the WealthForge Rebellion</h3>
+        <p>Receive weekly tactics to master <span class="highlight">millionaire habits</span> and build <span class="highlight">mental discipline for wealth</span>. No noise, only fire for your empire.</p>
+        <input type="email" placeholder="Enter your email" aria-label="Email for newsletter">
+        <button type="button">Subscribe</button>
+      </div>
+
+      <div class="social-share">
+        <h3>Share This Command</h3>
+        <a href="https://twitter.com/intent/tweet?url=https://tzeptosoft.com/blog/millionaire-routine&text=The Millionaire Routine: Daily habits of men who print money while the world sleeps. Forge your wealth with Tzeptosoft's WealthForge!" aria-label="Share on Twitter">Twitter</a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://tzeptosoft.com/blog/millionaire-routine" aria-label="Share on LinkedIn">LinkedIn</a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://tzeptosoft.com/blog/millionaire-routine" aria-label="Share on Facebook">Facebook</a>
+        <a href="https://www.reddit.com/submit?url=https://tzeptosoft.com/blog/millionaire-routine&title=The Millionaire Routine: Daily Habits of Men Who Print Money" aria-label="Share on Reddit">Reddit</a>
+        <a href="https://api.whatsapp.com/send?text=The Millionaire Routine: Daily habits of men who print money. Forge your wealth with Tzeptosoft's WealthForge! https://tzeptosoft.com/blog/millionaire-routine" aria-label="Share on WhatsApp">WhatsApp</a>
+      </div>
     </div>
-    <div class="social-share">
-      <h3>Spread the WealthForge</h3>
-      <a href="https://twitter.com/intent/tweet?url=https://tzeptosoft.com/blog/millionaire-routine&text=The Millionaire Routine: Daily habits of men who print money while the world sleeps. Forge your wealth with Tzeptosoft’s WealthForge. #BuildWealth" aria-label="Share on Twitter">Twitter</a>
-      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://tzeptosoft.com/blog/millionaire-routine" aria-label="Share on LinkedIn">LinkedIn</a>
-      <a href="https://www.facebook.com/sharer/sharer.php?u=https://tzeptosoft.com/blog/millionaire-routine" aria-label="Share on Facebook">Facebook</a>
-      <a href="https://www.reddit.com/submit?url=https://tzeptosoft.com/blog/millionaire-routine&title=The Millionaire Routine: Daily Habits of Men Who Print Money" aria-label="Share on Reddit">Reddit</a>
-      <a href="https://api.whatsapp.com/send?text=The Millionaire Routine: Daily habits of men who print money. Forge your wealth with Tzeptosoft’s WealthForge. https://tzeptosoft.com/blog/millionaire-routine" aria-label="Share on WhatsApp">WhatsApp</a>
-    </div>
+
+    <footer>
+      <p>© 2025 Tzeptosoft | All Rights Fucking Reserved 🔥</p>
+    </footer>
   </div>
-  <footer>
-    <p>© Tzeptosoft | All Rights Reserved</p>
-    <div class="social-links">
-      <a href="https://twitter.com/tzeptosoft" aria-label="Twitter"><img src="/assets/twitter.webp" alt="Twitter" width="28" height="28" loading="lazy"></a>
-      <a href="https://linkedin.com/company/tzeptosoft" aria-label="LinkedIn"><img src="/assets/linkedin.webp" alt="LinkedIn" width="28" height="28" loading="lazy"></a>
-    </div>
-  </footer>
+
   <script>
     document.addEventListener('DOMContentLoaded', () => {
+      // Header Functionality
+      const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+      const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+      const mobileMenuClose = document.getElementById('mobileMenuClose');
+      const searchToggle = document.getElementById('searchToggle');
+      const searchBox = document.getElementById('searchBox');
+      const searchInput = document.querySelector('.search-input');
+
+      // Mobile Menu Toggle
+      mobileMenuToggle?.addEventListener('click', () => {
+        mobileMenuOverlay?.classList.toggle('active');
+        document.body.style.overflow = mobileMenuOverlay?.classList.contains('active') ? 'hidden' : '';
+      });
+
+      mobileMenuClose?.addEventListener('click', () => {
+        mobileMenuOverlay?.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+
+      mobileMenuOverlay?.addEventListener('click', (e) => {
+        if (e.target === mobileMenuOverlay) {
+          mobileMenuOverlay.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      });
+
+      // Search Toggle
+      searchToggle?.addEventListener('click', () => {
+        const isActive = searchBox?.classList.contains('active');
+        searchBox?.classList.toggle('active');
+        searchToggle?.setAttribute('aria-expanded', !isActive);
+        
+        if (!isActive && searchInput) {
+          searchInput.focus();
+        }
+      });
+
+      // Close search and mobile menu on escape
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          searchBox?.classList.remove('active');
+          searchToggle?.setAttribute('aria-expanded', 'false');
+          mobileMenuOverlay?.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      });
+
+      // Search functionality
+      const searchForm = document.querySelector('.search-box');
+      searchForm?.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const query = searchInput?.value.trim();
+        if (query) {
+          console.log('Searching for:', query);
+          // Implement your search logic here
+        }
+      });
+
+      // Header scroll effect
+      let lastScrollY = window.scrollY;
+      window.addEventListener('scroll', () => {
+        const header = document.querySelector('.main-header');
+        const currentScrollY = window.scrollY;
+
+        if (currentScrollY > 100) {
+          header?.classList.add('scrolled');
+        } else {
+          header?.classList.remove('scrolled');
+        }
+
+        lastScrollY = currentScrollY;
+      });
+
       // Preloader
       window.addEventListener('load', () => {
         document.getElementById('preloader').style.display = 'none';
@@ -693,6 +1565,39 @@
         });
       }
 
+      // Hack Simulation
+      const hackBtn = document.querySelector('.hack-btn');
+      const hackOutput = document.querySelector('.hack-output');
+      let isHacking = false;
+      if (hackBtn) {
+        hackBtn.addEventListener('click', () => {
+          if (isHacking) return;
+          isHacking = true;
+          hackOutput.classList.add('active');
+          const hackLines = hackOutput.querySelectorAll('.terminal-line');
+          let delay = 0;
+          hackLines.forEach(line => {
+            line.textContent = '';
+            const text = line.dataset.text;
+            let charIndex = 0;
+            setTimeout(() => {
+              const type = () => {
+                if (charIndex < text.length) {
+                  line.textContent += text[charIndex];
+                  charIndex++;
+                  setTimeout(type, 30);
+                } else {
+                  line.classList.add('typed');
+                }
+              };
+              type();
+            }, delay);
+            delay += 1000;
+          });
+          setTimeout(() => { isHacking = false; }, delay + 1000);
+        });
+      }
+
       // Matrix Rain
       const matrixBg = document.getElementById('matrix-bg');
       for (let i = 0; i < 50; i++) {
@@ -721,6 +1626,28 @@
         cursorTrail.style.left = e.clientX - 15 + 'px';
         cursorTrail.style.top = e.clientY - 15 + 'px';
       });
+
+      // Newsletter Form Submission
+      const newsletterForm = document.querySelector('.newsletter-container');
+      if (newsletterForm) {
+        newsletterForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          fetch('https://formspree.io/f/your-form-id', {
+            method: 'POST',
+            body: new FormData(newsletterForm),
+            headers: {
+              'Accept': 'application/json'
+            }
+          }).then(response => {
+            if (response.ok) {
+              alert('Subscribed successfully!');
+              newsletterForm.reset();
+            } else {
+              alert('Error subscribing. Try again.');
+            }
+          });
+        });
+      }
     });
   </script>
 </body>

@@ -430,7 +430,7 @@ const generateReadme = () => {
         ? fs.readdirSync(CONFIG.articlesDir).filter(file => file.endsWith('.html'))
         : [];
     
-    const readme = `# TZEPTOSOFT — ESCAPE THE MATRIX ⚔️🔥
+    const readme = `# TZEPTOSOFT _ ESCAPE THE MATRIX ⚔️🔥
 
 >  No bullshit. No sugar-coating. No apologies.   
 > Built with the Tzeptosoft Build System - Raw HTML/CSS/JS that fucking works.

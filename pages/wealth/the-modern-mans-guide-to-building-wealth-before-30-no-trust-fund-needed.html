@@ -6,42 +6,33 @@
   <meta name="description" content="A no-nonsense male money guide to build wealth before 30 with no trust fund or connections. Learn 5 pillars for financial independence men crave, from digital skills to online income young men can master, and become rich early without a degree.">
   <meta name="keywords" content="build wealth before 30, male money guide, become rich with no connections, online income young men, financial independence men, digital success without degree, how to get rich early, Tzeptosoft">
   <meta name="author" content="Clinton | Tzeptosoft">
-  <!-- Open Graph Tags -->
-  <meta property="og:title" content="The Modern Man’s Guide to Building Wealth Before 30 (No Trust Fund Needed) | Tzeptosoft">
+  <meta property="og:title" content="The Modern Man's Guide to Building Wealth Before 30 (No Trust Fund Needed) | Tzeptosoft">
   <meta property="og:description" content="A no-nonsense male money guide to build wealth before 30 with no trust fund. Learn 5 pillars for financial independence men crave, from digital skills to online income.">
   <meta property="og:image" content="https://tzeptosoft.com/assets/wealth-guide.webp">
   <meta property="og:url" content="https://tzeptosoft.com/blog/build-wealth-before-30">
   <meta property="og:type" content="article">
-  <!-- Twitter Card Tags -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="The Modern Man’s Guide to Building Wealth Before 30 (No Trust Fund Needed) | Tzeptosoft">
+  <meta name="twitter:title" content="The Modern Man's Guide to Building Wealth Before 30 (No Trust Fund Needed) | Tzeptosoft">
   <meta name="twitter:description" content="A no-nonsense male money guide to build wealth before 30 with no trust fund. Learn 5 pillars for financial independence.">
   <meta name="twitter:image" content="https://tzeptosoft.com/assets/wealth-guide.webp">
-  <title>The Modern Man’s Guide to Building Wealth Before 30 (No Trust Fund Needed) | Tzeptosoft</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Orbitron:wght@900&family=JetBrains+Mono:wght@400;700&family=Russo+One&display=swap">
+  <title>The Modern Man's Guide to Building Wealth Before 30 (No Trust Fund Needed) | Tzeptosoft</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Mono:wght@700&family=Orbitron:wght@900&family=JetBrains+Mono:wght@400;700&display=swap">
   <link rel="icon" type="image/webp" href="/assets/favicon.webp">
-  <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "headline": "The Modern Man’s Guide to Building Wealth Before 30 (No Trust Fund Needed)",
-    "description": "A no-nonsense male money guide to build wealth before 30 with no trust fund or connections. Learn 5 pillars for financial independence men crave.",
-    "author": {
-      "@type": "Person",
-      "name": "Clinton"
-    },
+    "headline": "The Modern Man's Guide to Building Wealth Before 30 (No Trust Fund Needed)",
+    "description": "A no-nonsense male money guide to build wealth before 30 with no trust fund or connections. Learn 5 pillars for financial independence men crave, from digital skills to online income young men can master, and become rich early without a degree.",
+    "author": { "@type": "Person", "name": "Clinton" },
     "publisher": {
       "@type": "Organization",
       "name": "Tzeptosoft",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://tzeptosoft.com/assets/logo.webp"
-      }
+      "logo": { "@type": "ImageObject", "url": "https://tzeptosoft.com/assets/logo.webp" }
     },
+    "datePublished": "2025-04-28",
     "image": "https://tzeptosoft.com/assets/wealth-guide.webp",
-    "url": "https://tzeptosoft.com/blog/build-wealth-before-30",
-    "keywords": ["build wealth before 30", "male money guide", "become rich with no connections", "online income young men", "financial independence men", "digital success without degree", "how to get rich early"]
+    "url": "https://tzeptosoft.com/blog/build-wealth-before-30"
   }
   </script>
   <style>
@@ -52,17 +43,472 @@
       --bg-dark: #0B0F1A;
       --text-dark: #FFFFFF;
       --matrix-green: #00FF00;
-      --neon-pink: #2b00ff;
     }
+
+    /* Header Styles */
+    .main-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(11, 15, 26, 0.95);
+      backdrop-filter: blur(20px);
+      border-bottom: 2px solid transparent;
+      animation: headerSlideIn 0.6s ease-out;
+      box-shadow: 0 8px 32px rgba(0, 102, 204, 0.1);
+    }
+
+    @keyframes headerSlideIn {
+      from {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .main-header.scrolled {
+      border-bottom-color: rgba(0, 204, 255, 0.2);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 70px;
+      position: relative;
+    }
+
+    .logo-section {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .logo-wrapper:hover {
+      transform: scale(1.05);
+    }
+
+    .logo-image {
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(0, 204, 255, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    .logo-primary {
+      font-size: 1.4em;
+      font-weight: 900;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-shadow: 0 0 10px rgba(0, 102, 204, 0.5);
+    }
+
+    .logo-subtitle {
+      font-size: 0.75em;
+      color: var(--secondary);
+      font-weight: 600;
+      opacity: 0.8;
+      margin-top: 2px;
+    }
+
+    .nav-section {
+      display: flex;
+    }
+
+    .nav-list {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .nav-item {
+      position: relative;
+    }
+
+    .nav-link {
+      display: block;
+      padding: 8px 16px;
+      color: var(--text-dark);
+      text-decoration: none;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 0.95em;
+      position: relative;
+      transition: all 0.3s ease;
+      border-radius: 6px;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--secondary);
+      background: rgba(0, 204, 255, 0.1);
+      box-shadow: 0 0 20px rgba(0, 204, 255, 0.2);
+      transform: translateY(-2px);
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 80%;
+    }
+
+    .actions-section {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .search-container {
+      position: relative;
+    }
+
+    .search-toggle {
+      background: none;
+      border: 2px solid rgba(0, 204, 255, 0.3);
+      border-radius: 8px;
+      padding: 8px;
+      color: var(--secondary);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .search-toggle:hover {
+      border-color: var(--secondary);
+      box-shadow: 0 0 20px rgba(0, 204, 255, 0.4);
+      transform: scale(1.05);
+    }
+
+    .search-icon {
+      width: 20px;
+      height: 20px;
+    }
+
+    .search-box {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 300px;
+      background: rgba(28, 28, 28, 0.95);
+      border: 2px solid var(--secondary);
+      border-radius: 8px;
+      padding: 12px;
+      margin-top: 8px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 40px rgba(0, 102, 204, 0.2);
+      z-index: 1001;
+    }
+
+    .search-box.active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .search-input {
+      width: 100%;
+      background: rgba(18, 18, 18, 0.8);
+      border: 1px solid rgba(0, 204, 255, 0.3);
+      border-radius: 6px;
+      padding: 10px 12px;
+      color: var(--text-dark);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.9em;
+    }
+
+    .search-input::placeholder {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .search-input:focus {
+      outline: none;
+      border-color: var(--secondary);
+      box-shadow: 0 0 0 3px rgba(0, 204, 255, 0.2);
+    }
+
+    .search-submit {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: var(--secondary);
+      cursor: pointer;
+      padding: 4px;
+      width: 20px;
+      height: 20px;
+    }
+
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: var(--accent);
+      text-decoration: none;
+      border-radius: 8px;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 600;
+      font-size: 0.9em;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(0, 102, 204, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: left 0.5s;
+    }
+
+    .cta-button:hover::before {
+      left: 100%;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(0, 102, 204, 0.4);
+    }
+
+    .button-icon {
+      width: 16px;
+      height: 16px;
+      transition: transform 0.3s ease;
+    }
+
+    .cta-button:hover .button-icon {
+      transform: translateX(4px);
+    }
+
+    .mobile-menu-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 30px;
+      height: 30px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+      z-index: 1001;
+    }
+
+    .hamburger-line {
+      width: 100%;
+      height: 3px;
+      background: var(--secondary);
+      border-radius: 2px;
+      transition: all 0.3s ease;
+      transform-origin: center;
+    }
+
+    .mobile-menu-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: rgba(11, 15, 26, 0.98);
+      backdrop-filter: blur(20px);
+      z-index: 999;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.4s ease;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .mobile-menu-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .mobile-menu {
+      width: 320px;
+      max-width: 90vw;
+      background: linear-gradient(135deg, rgba(18, 18, 18, 0.95), rgba(11, 15, 26, 0.95));
+      border-left: 3px solid var(--secondary);
+      padding: 0;
+      transform: translateX(100%);
+      transition: transform 0.4s ease;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+    }
+
+    .mobile-menu-overlay.active .mobile-menu {
+      transform: translateX(0);
+    }
+
+    .mobile-menu-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 20px;
+      border-bottom: 1px solid rgba(0, 204, 255, 0.2);
+    }
+
+    .mobile-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-dark);
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.2em;
+    }
+
+    .mobile-menu-close {
+      background: none;
+      border: none;
+      color: var(--secondary);
+      cursor: pointer;
+      padding: 8px;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .mobile-menu-close:hover {
+      background: rgba(0, 204, 255, 0.1);
+      box-shadow: 0 0 20px rgba(0, 204, 255, 0.2);
+    }
+
+    .mobile-nav {
+      padding: 20px 0;
+      flex: 1;
+    }
+
+    .mobile-nav-link {
+      display: block;
+      padding: 16px 24px;
+      color: var(--text-dark);
+      text-decoration: none;
+      font-family: 'Inter', sans-serif;
+      font-size: 1.1em;
+      font-weight: 500;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .mobile-nav-link::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 0;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      transition: width 0.3s ease;
+      z-index: -1;
+    }
+
+    .mobile-nav-link:hover::before,
+    .mobile-nav-link.active::before {
+      width: 100%;
+    }
+
+    .mobile-nav-link:hover,
+    .mobile-nav-link.active {
+      color: var(--accent);
+      padding-left: 32px;
+    }
+
+    .mobile-actions {
+      padding: 20px 24px;
+      border-top: 1px solid rgba(0, 204, 255, 0.2);
+    }
+
+    .mobile-cta-button {
+      display: inline-block;
+      width: 100%;
+      padding: 16px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: var(--accent);
+      text-decoration: none;
+      border-radius: 8px;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 600;
+      text-align: center;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(0, 102, 204, 0.3);
+    }
+
+    .mobile-cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(0, 102, 204, 0.4);
+    }
+
     body {
       margin: 0;
       padding: 0;
       background: var(--bg-dark);
       color: var(--text-dark);
       font-family: 'Inter', sans-serif;
-      line-height: 1.8;
+      line-height: 1.6;
       overflow-x: hidden;
     }
+
+    .main-content {
+      position: relative;
+    }
+
     #preloader {
       position: fixed;
       top: 0;
@@ -75,16 +521,18 @@
       justify-content: center;
       z-index: 9999;
     }
+
     .loader {
       font-family: 'JetBrains Mono', monospace;
-      color: var(--neon-pink);
-      font-size: 1.8em;
-      text-shadow: 0 0 10px var(--neon-pink);
+      color: var(--secondary);
+      font-size: 1.5em;
       animation: blinkCaret 0.5s step-end infinite;
     }
+
     @keyframes blinkCaret {
       50% { border-color: transparent; }
     }
+
     #galaxy-bg {
       position: fixed;
       top: 0;
@@ -93,12 +541,14 @@
       height: 100%;
       background: radial-gradient(circle, rgba(0, 204, 255, 0.2), transparent);
       z-index: -3;
-      animation: rotateGalaxy 80s infinite linear;
+      animation: rotateGalaxy 60s infinite linear;
     }
+
     @keyframes rotateGalaxy {
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
     }
+
     #matrix-bg {
       position: fixed;
       top: 0;
@@ -108,6 +558,7 @@
       z-index: -2;
       opacity: 0.7;
     }
+
     .matrix-char {
       position: absolute;
       font-family: 'JetBrains Mono', monospace;
@@ -116,10 +567,12 @@
       opacity: 0.8;
       animation: matrix-fall 5s linear infinite;
     }
+
     @keyframes matrix-fall {
       0% { transform: translateY(-100vh); opacity: 0.8; }
       100% { transform: translateY(100vh); opacity: 0; }
     }
+
     #particles {
       position: fixed;
       top: 0;
@@ -128,6 +581,7 @@
       height: 100%;
       z-index: -1;
     }
+
     .particle {
       position: absolute;
       width: 5px;
@@ -136,41 +590,47 @@
       border-radius: 50%;
       animation: drift 10s infinite linear;
     }
+
     @keyframes drift {
       0% { transform: translate(0, 0); opacity: 0.5; }
       50% { opacity: 1; }
       100% { transform: translate(100px, 100px); opacity: 0.5; }
     }
+
     #cursor-trail {
       position: fixed;
       width: 30px;
       height: 30px;
-      background: radial-gradient(circle, var(--neon-pink), transparent);
+      background: radial-gradient(circle, var(--secondary), transparent);
       border-radius: 50%;
       pointer-events: none;
-      z-index: 1000;
+      z-index: 100;
       transition: all 0.1s ease;
     }
+
     .hero {
       text-align: center;
-      padding: 120px 20px;
+      padding: 120px 20px 100px;
       background: rgba(18, 18, 18, 0.9);
       position: relative;
       z-index: 1;
-      border-bottom: 3px solid var(--neon-pink);
+      margin-top: 0;
     }
+
     .hero h1 {
       font-size: 5em;
       font-family: 'Orbitron', sans-serif;
-      background: linear-gradient(90deg, var(--primary), var(--neon-pink), var(--secondary));
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      text-shadow: 0 0 15px var(--neon-pink);
+      text-shadow: 0 0 10px var(--primary);
+      animation: gradientShift 3s ease infinite;
       margin-bottom: 0;
     }
+
     .matrix-animation {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 1.8em;
+      font-size: 1.5em;
       color: var(--matrix-green);
       text-shadow: 0 0 10px var(--matrix-green);
       margin-top: 10px;
@@ -178,538 +638,811 @@
       white-space: nowrap;
       display: inline-block;
     }
+
     .matrix-animation.typing {
-      animation: typeMatrix 2s steps(20) forwards;
+      animation: typeMatrix 2s steps(20) forwards, glitch 0.1s infinite alternate;
     }
+
     @keyframes typeMatrix {
       from { width: 0; }
       to { width: 100%; }
     }
+
+    @keyframes glitch {
+      0% { transform: translate(0); opacity: 1; }
+      50% { transform: translate(2px, -2px); opacity: 0.8; }
+      100% { transform: translate(-2px, 2px); opacity: 0.9; }
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0%; }
+      50% { background-position: 100%; }
+      100% { background-position: 0%; }
+    }
+
     .hero h2 {
-      font-size: 2em;
+      font-size: 1.8em;
       color: var(--secondary);
       text-shadow: 0 0 10px var(--secondary);
       margin-top: 20px;
-      font-family: 'Russo+One', sans-serif;
     }
+
     .btn-cta {
-      background: linear-gradient(90deg, var(--primary), var(--neon-pink));
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
       color: var(--accent);
       padding: 15px 30px;
       text-decoration: none;
       font-size: 1.5em;
       border-radius: 5px;
-      box-shadow: 0 0 20px var(--neon-pink);
+      box-shadow: 0 0 20px var(--primary);
+      animation: pulse 2s infinite;
       margin-top: 20px;
       display: inline-block;
-      font-family: 'JetBrains Mono', monospace;
     }
+
     .btn-cta:hover {
-      background: linear-gradient(90deg, var(--neon-pink), var(--primary));
+      background: linear-gradient(90deg, var(--secondary), var(--primary));
       transform: scale(1.1);
     }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(0, 102, 204, 0.4); }
+      70% { box-shadow: 0 0 0 10px rgba(0, 102, 204, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(0, 102, 204, 0); }
+    }
+
     .holo-element {
       position: absolute;
-      width: 80px;
-      height: 80px;
-      background: radial-gradient(circle, var(--neon-pink), transparent);
+      width: 70px;
+      height: 70px;
+      background: radial-gradient(circle, var(--primary), transparent);
       border-radius: 50%;
       animation: float 4s infinite ease-in-out;
     }
+
     @keyframes float {
       0% { transform: translateY(0); opacity: 0.5; }
-      50% { transform: translateY(-40px); opacity: 1; }
+      50% { transform: translateY(-30px); opacity: 1; }
       100% { transform: translateY(0); opacity: 0.5; }
     }
+
     .blog-container {
       padding: 80px 20px;
-      max-width: 1000px;
+      max-width: 900px;
       margin: 0 auto;
       background: rgba(18, 18, 18, 0.9);
-      border: 3px solid var(--neon-pink);
+      border: 3px solid var(--secondary);
+      animation: borderGlow 2s infinite;
     }
+
+    @keyframes borderGlow {
+      0% { border-color: var(--primary); }
+      50% { border-color: var(--secondary); }
+      100% { border-color: var(--primary); }
+    }
+
     .blog-container h1 {
-      font-size: 3.5em;
+      font-size: 2.5em;
       color: var(--secondary);
       text-shadow: 0 0 15px var(--secondary);
       font-family: 'Orbitron', sans-serif;
       text-align: center;
     }
+
     .blog-container h2 {
-      font-size: 2.5em;
-      color: var(--neon-pink);
-      font-family: 'Russo One', sans-serif;
-      margin-top: 3em;
-      text-shadow: 0 0 10px var(--neon-pink);
-    }
-    .blog-container h3 {
       font-size: 1.8em;
       color: var(--secondary);
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'Orbitron', sans-serif;
       margin-top: 2em;
     }
+
+    .blog-container h3 {
+      font-size: 1.4em;
+      color: var(--secondary);
+      font-family: 'Orbitron', sans-serif;
+      margin-top: 1.5em;
+    }
+
     .blog-container p {
       color: var(--text-dark);
       font-size: 1.2em;
-      margin-bottom: 1.5em;
-      line-height: 1.9;
     }
+
+    .highlight {
+      color: var(--secondary);
+      font-weight: 600;
+    }
+
     .blog-container ul {
       list-style: none;
       padding: 0;
     }
+
     .blog-container li {
       background: #1C1C1C;
-      padding: 20px;
-      border: 2px solid var(--neon-pink);
-      margin-bottom: 20px;
+      padding: 15px;
+      border: 2px solid var(--secondary);
+      margin-bottom: 15px;
       transition: transform 0.3s ease;
     }
+
     .blog-container li:hover {
       transform: translateY(-10px);
-      box-shadow: 0 0 30px var(--neon-pink);
+      box-shadow: 0 0 40px var(--secondary);
     }
+
     .blog-container blockquote {
       font-family: 'JetBrains Mono', monospace;
       color: var(--secondary);
-      border-left: 4px solid var(--neon-pink);
-      padding-left: 20px;
-      margin: 30px 0;
+      border-left: 4px solid var(--secondary);
+      padding-left: 15px;
+      margin: 20px 0;
       font-style: italic;
-      font-size: 1.3em;
     }
-    .highlight {
-      color: var(--neon-pink);
-      font-weight: bold;
-    }
+
     .author-info {
-      margin: 30px 0;
+      margin: 20px 0;
       text-align: center;
     }
+
     .author-name {
       font-family: 'JetBrains Mono', monospace;
-      color: var(--neon-pink);
-      font-size: 1.5em;
+      color: var(--secondary);
+      font-size: 1.2em;
     }
+
     .author-title {
       color: var(--text-dark);
-      font-size: 1.1em;
+      font-size: 1em;
     }
+
     .author-logo {
-      max-width: 120px;
+      max-width: 100px;
       height: auto;
     }
+
     hr {
-      border: 1px solid var(--neon-pink);
-      margin: 30px 0;
+      border: 1px solid var(--secondary);
+      margin: 20px 0;
     }
+
     .cta-container {
       text-align: center;
-      margin: 30px 0;
-      padding: 30px;
-      background: #1C1C1C;
-      border: 2px solid var(--neon-pink);
+      margin: 20px 0;
     }
+
     .cta-title {
       font-family: 'Orbitron', sans-serif;
       color: var(--secondary);
-      font-size: 2.5em;
+      font-size: 1.8em;
     }
-    .cta-button {
-      background: linear-gradient(90deg, var(--primary), var(--neon-pink));
-      color: var(--accent);
-      padding: 15px 30px;
-      text-decoration: none;
-      border-radius: 5px;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 1.3em;
-    }
-    .cta-button:hover {
-      background: linear-gradient(90deg, var(--neon-pink), var(--primary));
-      transform: scale(1.05);
-    }
+
     .newsletter-container {
       text-align: center;
-      margin: 50px 0;
-      padding: 30px;
+      margin: 40px 0;
+      padding: 20px;
       background: #1C1C1C;
-      border: 2px solid var(--neon-pink);
-      border-radius: 5px;
+      border: 2px solid var(--secondary);
+      border-radius: 4px;
     }
+
     .newsletter-container h3 {
       font-family: 'Orbitron', sans-serif;
       color: var(--secondary);
-      font-size: 2em;
-      margin-bottom: 15px;
+      font-size: 1.8em;
+      margin-bottom: 10px;
     }
+
     .newsletter-container p {
-      font-size: 1.3em;
-      margin-bottom: 25px;
+      font-size: 1.2em;
+      margin-bottom: 20px;
     }
+
     .newsletter-container input[type="email"] {
-      padding: 12px;
-      width: 80%;
-      max-width: 350px;
-      border: 2px solid var(--neon-pink);
+      padding: 10px;
+      width: 70%;
+      max-width: 300px;
+      border: 2px solid var(--secondary);
       background: #1a1a1a;
       color: var(--text-dark);
       font-family: 'JetBrains Mono', monospace;
-      border-radius: 5px;
+      border-radius: 4px;
     }
+
     .newsletter-container button {
-      padding: 12px 25px;
-      background: linear-gradient(90deg, var(--primary), var(--neon-pink));
+      padding: 10px 20px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
       color: var(--accent);
       border: none;
-      border-radius: 5px;
+      border-radius: 4px;
       font-family: 'JetBrains Mono', monospace;
       cursor: pointer;
     }
+
     .newsletter-container button:hover {
-      background: linear-gradient(90deg, var(--neon-pink), var(--primary));
+      background: linear-gradient(90deg, var(--secondary), var(--primary));
       transform: scale(1.05);
     }
+
     .social-share {
-      margin: 3rem 0;
+      margin: 2rem 0;
       text-align: center;
     }
+
     .social-share h3 {
       font-family: 'Orbitron', sans-serif;
       color: var(--secondary);
-      font-size: 2em;
-      margin-bottom: 15px;
+      font-size: 1.8em;
+      margin-bottom: 10px;
     }
+
     .social-share a {
-      margin: 0 15px;
-      padding: 12px 25px;
+      margin: 0 10px;
+      padding: 10px 20px;
       background: var(--primary);
       color: var(--accent);
-      border-radius: 5px;
+      border-radius: 4px;
       text-decoration: none;
       font-family: 'JetBrains Mono', monospace;
     }
+
     .social-share a:hover {
-      background: var(--neon-pink);
+      background: var(--secondary);
       color: #000;
     }
+
     .terminal-content {
       background: #1a1a1a;
-      padding: 25px;
-      border: 1px solid var(--neon-pink);
-      border-radius: 5px;
-      margin: 30px 0;
+      padding: 20px;
+      border: 1px solid var(--secondary);
+      border-radius: 4px;
+      margin: 20px 0;
       font-family: 'JetBrains Mono', monospace;
-      color: var(--matrix-green);
-      font-size: 1.1em;
+      color: var(--secondary);
+      font-size: 1em;
     }
+
     .terminal-line {
       opacity: 0;
       white-space: nowrap;
       overflow: hidden;
     }
+
     .terminal-line.typed {
       opacity: 1;
       animation: typing 0.5s steps(40) forwards;
     }
+
     @keyframes typing {
       from { width: 0; }
       to { width: 100%; }
     }
+
     footer {
       text-align: center;
-      padding: 50px 20px;
-      border-top: 1px solid var(--neon-pink);
-      background: rgba(18, 18, 18, 0.9);
+      padding: 40px 20px;
+      border-top: 1px solid #1E1E2E;
     }
-    .social-links {
-      display: flex;
-      justify-content: center;
-      gap: 25px;
-      margin-top: 15px;
-    }
-    .social-links img {
-      width: 28px;
-      height: 28px;
-      transition: transform 0.2s ease;
-    }
-    .social-links img:hover {
-      transform: scale(1.2);
-    }
+
     .signature {
       font-family: 'JetBrains Mono', monospace;
-      color: var(--neon-pink);
-      font-size: 1.3em;
-      margin-top: 25px;
+      color: var(--secondary);
+      font-size: 1.2em;
+      margin-top: 20px;
+      text-align: center;
     }
+
+    @media (max-width: 1024px) {
+      .nav-list {
+        gap: 20px;
+      }
+      
+      .nav-link {
+        padding: 6px 12px;
+        font-size: 0.9em;
+      }
+    }
+
     @media (max-width: 768px) {
-      .hero h1 { font-size: 4em; }
-      .matrix-animation { font-size: 1.5em; }
-      .blog-container { padding: 50px 15px; }
-      .hero { padding: 80px 15px; }
-      .newsletter-container input[type="email"] { width: 90%; }
-      .blog-container h1 { font-size: 3em; }
-      .blog-container h2 { font-size: 2em; }
+      .header-container {
+        height: 60px;
+        padding: 0 16px;
+      }
+      
+      .nav-section {
+        display: none;
+      }
+      
+      .mobile-menu-toggle {
+        display: flex;
+      }
+      
+      .search-box {
+        width: 280px;
+        right: -20px;
+      }
+      
+      .logo-primary {
+        font-size: 1.2em;
+      }
+
+      .hero {
+        padding: 100px 10px 80px;
+      }
+
+      .hero h1 { 
+        font-size: 3em; 
+      }
+
+      .matrix-animation { 
+        font-size: 1.2em; 
+      }
+
+      .blog-container { 
+        padding: 40px 10px; 
+      }
+
+      .blog-container h1 { 
+        font-size: 1.8em; 
+      }
+
+      .terminal-content { 
+        font-size: 0.9em; 
+      }
+
+      .newsletter-container input[type="email"] { 
+        width: 90%; 
+      }
     }
+
     @media (max-width: 480px) {
-      .hero h1 { font-size: 3em; }
-      .matrix-animation { font-size: 1.2em; }
-      .hero h2 { font-size: 1.5em; }
-      .btn-cta { font-size: 1.2em; padding: 10px 20px; }
-      .blog-container h1 { font-size: 2.5em; }
-      .blog-container p { font-size: 1.1em; }
-      .blog-container h2 { font-size: 1.8em; }
+      .header-container {
+        height: 56px;
+        padding: 0 12px;
+      }
+      
+      .search-box {
+        width: calc(100vw - 40px);
+        right: auto;
+        left: 12px;
+      }
+      
+      .cta-button {
+        padding: 10px 20px;
+        font-size: 0.85em;
+      }
+      
+      .mobile-menu {
+        width: 100vw;
+        max-width: none;
+      }
+
+      .hero h1 { 
+        font-size: 2em; 
+      }
+
+      .matrix-animation { 
+        font-size: 1em; 
+      }
+
+      .hero h2 { 
+        font-size: 1.2em; 
+      }
+
+      .btn-cta { 
+        font-size: 1em; 
+        padding: 10px 20px; 
+      }
+
+      .blog-container h1 { 
+        font-size: 1.8em; 
+      }
+
+      .terminal-content { 
+        font-size: 0.9em; 
+      }
+
+      .newsletter-container input[type="email"] { 
+        width: 90%; 
+      }
     }
+
     @media (prefers-reduced-motion: reduce) {
-      * { animation: none !important; transition: none !important; }
-    }
-    @media print {
-      body { background: white; color: black; }
-      .blog-container { background: white; border: none; }
-      a { color: var(--primary); text-decoration: underline; }
-      .btn-cta, .cta-button { background: white; color: var(--primary); border: 1px solid var(--primary); }
-      #galaxy-bg, #matrix-bg, #particles, #cursor-trail, .holo-element, .matrix-animation { display: none; }
+      * { 
+        animation: none !important; 
+        transition: none !important; 
+      }
     }
   </style>
 </head>
-<body>
+<body data-page="build-wealth-before-30">
   <div id="preloader">
-    <div class="loader">Initializing Tzeptosoft’s WarForge...</div>
+    <div class="loader">Initializing Tzeptosoft... 🚀</div>
   </div>
-  <div id="galaxy-bg"></div>
-  <div id="matrix-bg"></div>
-  <div id="particles"></div>
-  <div id="cursor-trail"></div>
-  <div class="hero">
-    <h1>TZEPTOSOFT</h1>
-    <div class="matrix-animation">FORGE YOUR EMPIRE</div>
-    <h2>Build Wealth Before 30</h2>
-    <a href="mailto:tzeptosoft@gmail.com" class="btn-cta" aria-label="Contact Tzeptosoft">Start Your War Now</a>
-    <div class="holo-element" style="top: 20%; left: 10%;"></div>
-    <div class="holo-element" style="top: 30%; right: 15%;"></div>
-    <div class="holo-element" style="bottom: 25%; left: 20%;"></div>
-    <div class="holo-element" style="bottom: 15%; right: 10%;"></div>
-  </div>
-  <div class="blog-container">
-    <header>
-      <h1>The Modern Man’s Guide to Building Wealth Before 30 (No Trust Fund Needed)</h1>
-      <div class="author-info">
-        <p class="author-name">Clinton | Tzeptosoft</p>
-        <img src="/assets/images/tzeptosoft-logo.webp" alt="Tzeptosoft Logo" class="author-logo" width="120" height="120" loading="lazy">
-        <p class="author-title">General of Silent Victories</p>
+
+  <!-- Professional Header -->
+  <header class="main-header">
+    <div class="header-container">
+      <!-- Logo Section -->
+      <div class="logo-section">
+        <a href="../index.html" class="logo-wrapper" aria-label="Tzeptosoft Home">
+          <img src="/assets/images/tzeptosoft-logo.webp" alt="Tzeptosoft Logo" class="logo-image" width="48" height="48" loading="lazy">
+          <div class="logo-text">
+            <span class="logo-primary">TZEPTOSOFT</span>
+            <span class="logo-subtitle">Escaping the Matrix</span>
+          </div>
+        </a>
       </div>
-      <hr>
-    </header>
-    <div class="cta-container">
-      <h3 class="cta-title">Ready to Conquer Mediocrity?</h3>
-      <a href="mailto:tzeptosoft@gmail.com" class="cta-button">Join the WarForge</a>
+
+      <!-- Navigation -->
+      <nav class="nav-section" role="navigation" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="../index.html" class="nav-link" data-page="home">New? Start Here</a>
+          </li>
+          <li class="nav-item">
+            <a href="blog.html" class="nav-link" data-page="blog">Blog Archives</a>
+          </li>
+          <li class="nav-item">
+            <a href="lessons" class="nav-link" data-page="lessons">Tzeptosoft Products</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact-us.html" class="nav-link" data-page="Tzeptosoft">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link" data-page="about">About</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Action Buttons & Search -->
+      <div class="actions-section">
+        <!-- Search -->
+        <div class="search-container">
+          <button class="search-toggle" aria-label="Toggle search" aria-expanded="false" id="searchToggle">
+            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.35-4.35"></path>
+            </svg>
+          </button>
+          <div class="search-box" id="searchBox">
+            <input type="search" placeholder="Search lessons, tactics, blueprints..." class="search-input" aria-label="Search content">
+            <button class="search-submit" aria-label="Search">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.35-4.35"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- CTA Button -->
+        <a href="mailto:tzeptosoft@gmail.com" class="cta-button" aria-label="Join Tzeptosoft">
+          <span class="button-text">Join Tzeptosoft</span>
+          <svg class="button-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false" id="mobileMenuToggle">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
     </div>
-    <div class="content">
-      <h2>Stop Playing, Start Building</h2>
-      <p><strong>You’re wasting your 20s.</strong> Chasing girls, scrolling X, chasing likes, chasing highs—dopamine hits that leave you broke and hollow. Most men trade their prime for validation and quick thrills, waking up at 30 with nothing but regrets and a dead-end job. You’re not most men. You’re here because you’re done with excuses, hungry to <strong>build wealth before 30</strong>, and ready to <strong>become rich with no connections</strong>. This isn’t a pep talk. This is war on mediocrity.</p>
-      <p>From Nairobi’s cyber cafes to São Paulo’s favelas, men like you are forging empires with a laptop and a will. No trust funds. No silver spoons. Just raw strategy. This <strong>male money guide</strong> is your battle plan: a five-pillar blueprint to stack cash, master discipline, and wield power. You’ll learn to think like a producer, build skills that pay, create assets that work forever, control your money, and earn respect without speaking. No fluff. No lies. <strong>Let’s forge your empire.</strong></p>
 
-      <h2>You Can’t Win With a Consumer Brain</h2>
-      <p>The system wants you weak. Social media, porn, Netflix, cheap beer—it’s a trap called <strong>The Comfort Zone</strong>, designed to keep you scrolling, spending, and small. Every like, swipe, or buzz steals your focus, time, and power. A consumer brain buys sneakers and dreams; a producer brain builds systems and empires. To <strong>achieve financial independence men</strong> crave, you must kill the boy inside and become a man.</p>
-      <p>“You are the average of the five people you spend the most time with,” said Jim Rohn, a man who turned dirt into millions. Naval Ravikant, who started broke, said, “The modern struggle is choosing what to ignore.” Translation? Cut the noise. Build a fortress of discipline. From Lagos to Manila, men who master their minds outearn the distracted by 10x.</p>
-      <p><strong>Mindset Weapons:</strong></p>
-      <ul>
-        <li><strong>Solitude:</strong> Spend 30 minutes daily alone. No phone. Think. Plan. Dream.</li>
-        <li><strong>Books:</strong> Read 10 pages daily. Start with <em>The War of Art</em>. Knowledge is your sword.</li>
-        <li><strong>Routine:</strong> Wake at 5 AM. Cold shower. Work 90 minutes before the world stirs.</li>
-        <li><strong>Discipline:</strong> Delete one app today—Instagram, TikTok, whatever owns you.</li>
-        <li><strong>Cold Showers:</strong> Five minutes daily. Builds grit. Kills weakness.</li>
-      </ul>
-      <p><strong>Why It Matters:</strong> A weak mind builds a weak wallet. In Mumbai, disciplined coders earn $2,000/month while their peers scroll. In Nairobi, men who read daily close deals others beg for. Your brain is your first battlefield. Win it.</p>
-      <blockquote>“Comfort is the enemy of progress. Kill it daily.” —Tzeptosoft’s WarForge</blockquote>
-
-      <h2>Pillar 1: Skillset Acquisition—The Income Arsenal</h2>
-      <p><strong>What It Is:</strong> Skills are your currency. Degrees are paper; skills are power. Master timeless digital skills—coding, copywriting, marketing—and the world pays you forever. This is <strong>digital success without degree</strong>.</p>
-      <p><strong>Why It Matters:</strong> A man with skills eats; a man without begs. Globally, coders earn $50-$200/hour, copywriters pull $1,000/week, and marketers bank millions. In Nigeria, skilled freelancers outearn doctors. Skills are your arsenal to <strong>build wealth before 30</strong>.</p>
-      <p><strong>Timeless Skills:</strong></p>
-      <ul>
-        <li><strong>Coding (Frontend/Backend):</strong> Build websites or apps. Python, JavaScript, React.</li>
-        <li><strong>Copywriting:</strong> Write words that sell. Ads, emails, landing pages.</li>
-        <li><strong>Digital Marketing:</strong> Run ads on Google, Meta, or X. Drive traffic, earn commissions.</li>
-        <li><strong>Video Editing:</strong> Create YouTube or TikTok content. High demand, low supply.</li>
-        <li><strong>UX/UI Design:</strong> Design apps or websites. Tools like Figma are free.</li>
-        <li><strong>Sales/Closing:</strong> Persuade clients. Master cold calls or DMs.</li>
-      </ul>
-      <p><strong>3 Steps to Start:</strong></p>
-      <ul>
-        <li><strong>Pick One Skill:</strong> Choose coding (Python) or copywriting. Focus for 90 days.</li>
-        <li><strong>Learn Free:</strong> Use YouTube (Traversy Media), freeCodeCamp, or HubSpot Academy. Study 2 hours daily.</li>
-        <li><strong>Build a Portfolio:</strong> Code a website, write an ad, edit a video. Post on GitHub or Behance.</li>
-      </ul>
-      <p><strong>ROI Mindset:</strong> Invest 100 hours learning, earn $100,000 over a decade. A Kenyan student learned Python and now earns $500/month on Upwork. A Brazilian editor charges $50/hour for YouTube cuts. Skills pay forever.</p>
-      <p><strong>Truth:</strong> You don’t need a degree. You need action. Start tonight.</p>
-
-      <h2>Pillar 2: Monetization—Your First Digital Dollar</h2>
-      <p><strong>What It Is:</strong> Turning skills into cash through <strong>online income young men</strong> can master. Forget business plans or investors. You need a laptop, Wi-Fi, and a PayPal account.</p>
-      <p><strong>Why It Matters:</strong> Cashflow is oxygen. Over 60% of men under 30 in India and Nigeria earn online, from $200 to $10,000/month. Monetization is your bridge to freedom.</p>
-      <p><strong>Proven Paths:</strong></p>
-      <ul>
-        <li><strong>Freelancing:</strong> Offer coding, writing, or editing on Upwork, Fiverr, or PeoplePerHour.</li>
-        <li><strong>Affiliate Marketing:</strong> Promote products on a blog or X. Join Amazon Associates or ClickBank.</li>
-        <li><strong>Online Tutoring:</strong> Teach coding, English, or math on Preply or Italki.</li>
-        <li><strong>Selling Digital Goods:</strong> Create Notion templates, eBooks, or CV services on Gumroad.</li>
-      </ul>
-      <p><strong>How to Start:</strong></p>
-      <ul>
-        <li><strong>Join Platforms:</strong> Sign up on Upwork or Fiverr. Complete your profile. Add a photo.</li>
-        <li><strong>Bid Low, Win Fast:</strong> Offer $5-$10 gigs. Deliver like your life depends on it.</li>
-        <li><strong>Market Locally:</strong> Post services in WhatsApp groups or X with #Freelance.</li>
-        <li><strong>Scale Up:</strong> Raise rates after 5 reviews. Reinvest earnings into ads or tools.</li>
-      </ul>
-      <p><strong>Global Example:</strong> A Kenyan student offers CV writing on Fiverr, earning $300/month in three months. A Filipino coder lands $1,000/month Upwork gigs. Your skill is your ticket.</p>
-      <p><strong>Myth Busted:</strong> You don’t need a fancy plan. Open PayPal, pick a platform, start. For more, see our <a href="https://tzeptosoft.com/blog/side-hustle-guide">Ultimate Side Hustle Guide</a>.</p>
-
-      <h2>Pillar 3: Asset Creation—Digital > Physical</h2>
-      <p><strong>What It Is:</strong> Building digital assets—YouTube channels, blogs, apps—that earn while you sleep. Physical assets (cars, houses) drain cash; digital assets build wealth.</p>
-      <p><strong>Why It Matters:</strong> Assets are your army. A $10 eBook sold 100 times monthly nets $1,000 with no upkeep. In Brazil, YouTubers earn $5,000/month passively. Assets are how you <strong>become rich with no connections</strong>.</p>
-      <p><strong>Examples:</strong></p>
-      <ul>
-        <li><strong>YouTube Channel:</strong> Post coding tutorials or fitness tips. Monetize with ads.</li>
-        <li><strong>Gumroad Product:</strong> Sell eBooks, templates, or presets.</li>
-        <li><strong>Blog:</strong> Write on WordPress. Earn via affiliates or ads.</li>
-        <li><strong>Mobile App:</strong> Build a simple tool with Flutter. Charge $1/download.</li>
-        <li><strong>Newsletter:</strong> Grow an email list with Substack. Sell courses.</li>
-      </ul>
-      <p><strong>How to Start:</strong></p>
-      <ul>
-        <li><strong>Find a Gap:</strong> Solve local problems—job guides in Nigeria, tech tips in India.</li>
-        <li><strong>Create Fast:</strong> Write an eBook in Google Docs or record with your phone.</li>
-        <li><strong>Sell It:</strong> List on Gumroad or YouTube. Price at $5-$20.</li>
-        <li><strong>Promote Hard:</strong> Share on X, Discord, or local Facebook groups.</li>
-      </ul>
-      <p><strong>Silent Killers:</strong> Fear of judgment and perfectionism. Crush them. Post your first video, even if it’s shaky. A Nairobi YouTuber started with a $20 mic and now earns $2,000/month. Start ugly, scale clean.</p>
-
-      <h2>Pillar 4: Cashflow Discipline—Control the Bloodstream</h2>
-      <p><strong>What It Is:</strong> Controlling every dollar like a general controls troops. Discipline turns income into wealth. No gambling, no flexing—just systems.</p>
-      <p><strong>Why It Matters:</strong> Without discipline, you’re a slave. In the Philippines, disciplined savers build $10,000 portfolios by 30. Cashflow is your empire’s bloodstream.</p>
-      <p><strong>The 3-Bucket Rule:</strong></p>
-      <ul>
-        <li><strong>70% Survival:</strong> Rent, food, Wi-Fi. Keep it lean.</li>
-        <li><strong>20% Skills/Tools:</strong> Courses, software, ads. Reinvest in your brain.</li>
-        <li><strong>10% Investing:</strong> Stocks, index funds, or crypto (carefully).</li>
-      </ul>
-      <p><strong>Platforms:</strong></p>
-      <ul>
-        <li><strong>Binance:</strong> Crypto for the sharp. Start with $10, not your rent.</li>
-        <li><strong>Bamboo/Risevest:</strong> Nigerian apps for stocks and funds.</li>
-        <li><strong>Index Funds:</strong> Low-risk, global access via apps like Zerodha (India).</li>
-      </ul>
-      <p><strong>Crypto Note:</strong> Only for the disciplined. Study first. Avoid hype coins. A Mumbai trader turned $100 into $5,000 with Bitcoin, but most lose. Be sharp, not reckless.</p>
-      <p><strong>How to Start:</strong></p>
-      <ul>
-        <li><strong>Track Every Penny:</strong> Use Google Sheets or Notion. Log daily.</li>
-        <li><strong>Save First:</strong> Automate 10% to Payoneer or a local bank.</li>
-        <li><strong>Invest Small:</strong> Start with $5/month in an index fund.</li>
-      </ul>
-      <p><strong>Truth:</strong> A Nigerian freelancer saved $50/month and now owns $3,000 in stocks. Discipline is your dynasty.</p>
-
-      <h2>Pillar 5: Reputation, Network, and Silence</h2>
-      <p><strong>What It Is:</strong> Your name is your bank. Build a reputation for results, not noise. Network with wolves, not sheep. Work in silence, let success speak.</p>
-      <p><strong>Why It Matters:</strong> Reputation equals ROI. In India, freelancers with strong X profiles land $5,000 contracts. Networks open doors money can’t. Silence builds mystique.</p>
-      <p><strong>How to Build:</strong></p>
-      <ul>
-        <li><strong>Personal Brand:</strong> Post wins on X or a WordPress site. Share code, tips, or deals closed.</li>
-        <li><strong>Network Up:</strong> DM value to entrepreneurs on X or Discord. Offer a free website audit.</li>
-        <li><strong>Overdeliver:</strong> Every gig, every client. Reviews are your resume.</li>
-      </ul>
-      <p><strong>Cut Weakness:</strong> Drop friends who whine, scroll, or settle. Surround yourself with men who build. A Brazilian coder joined a Discord group and landed a $2,000 gig. Wolves win.</p>
-      <p><strong>Truth:</strong> Your name is your net worth. Build it quietly, cash it loudly.</p>
-
-      <h2>Tools, Books & Rituals—Build Like a Cyborg</h2>
-      <p>Your tools, knowledge, and habits are your armor. These are battle-tested to <strong>build wealth before 30</strong>.</p>
-      <p><strong>Books to Rewire You:</strong></p>
-      <ul>
-        <li><strong>The Millionaire Fastlane (MJ DeMarco):</strong> Reject slow wealth. Build systems.</li>
-        <li><strong>Rich Dad Poor Dad (Robert Kiyosaki):</strong> Assets over liabilities. Every man’s bible.</li>
-        <li><strong>The Almanack of Naval Ravikant:</strong> Wisdom on wealth and freedom.</li>
-        <li><strong>The War of Art (Steven Pressfield):</strong> Crush resistance. Create daily.</li>
-        <li><strong>Deep Work (Cal Newport):</strong> Master focus in a noisy world.</li>
-      </ul>
-      <p><strong>Tools to Stack Cash:</strong></p>
-      <ul>
-        <li><strong>Notion:</strong> Plan goals, track income, organize life.</li>
-        <li><strong>Obsidian:</strong> Take notes, connect ideas, learn faster.</li>
-        <li><strong>VS Code:</strong> Code apps or websites. Free and powerful.</li>
-        <li><strong>Payoneer:</strong> Withdraw global earnings to local banks.</li>
-        <li><strong>Brave Browser:</strong> Block ads, stay focused, earn crypto.</li>
-        <li><strong>Calendly:</strong> Schedule client calls like a pro.</li>
-      </ul>
-      <p><strong>Rituals for Power:</strong></p>
-      <ul>
-        <li><strong>Daily Goal Tracking:</strong> Write three tasks in Notion. Crush them.</li>
-        <li><strong>Dopamine Detox:</strong> No social media for 24 hours weekly.</li>
-        <li><strong>90-Minute Work Blocks:</strong> No distractions. Deep work only.</li>
-        <li><strong>Nightly Review:</strong> Journal wins and failures. Plan tomorrow.</li>
-        <li><strong>Weekly Digital Audit:</strong> Delete apps, unfollow noise, refocus.</li>
-      </ul>
-      <p><strong>Pro Tip:</strong> Master these habits with our <a href="https://tzeptosoft.com/blog/daily-routine-success">How to Build a Daily Routine for Online Success</a>.</p>
-
-      <h2>Common Traps—The Enemies of Wealth</h2>
-      <p>These seven traps kill potential. Dodge them to win.</p>
-      <p><strong>The 7 Deadly Distractions:</strong></p>
-      <ul>
-        <li><strong>Porn:</strong> Steals drive. <em>Hack:</em> Block sites with Cold Turkey. Replace with workouts.</li>
-        <li><strong>Social Media:</strong> Wastes hours. <em>Hack:</em> Limit to 20 minutes daily. Use Freedom app.</li>
-        <li><strong>Clubbing:</strong> Drains cash and energy. <em>Hack:</em> Network at startup events instead.</li>
-        <li><strong>Overthinking:</strong> Paralyzes action. <em>Hack:</em> Set a 5-minute timer. Decide. Move.</li>
-        <li><strong>Procrastination:</strong> Kills momentum. <em>Hack:</em> Use the 2-minute rule—start now.</li>
-        <li><strong>Validation-Seeking:</strong> Chasing likes weakens you. <em>Hack:</em> Work in silence. Post results.</li>
-        <li><strong>Excessive Gaming:</strong> Fake wins, real losses. <em>Hack:</em> Limit to 1 hour/week. Build real skills.</li>
-      </ul>
-      <p><strong>Truth:</strong> In Lagos, men who cut social media earn 3x more. In São Paulo, disciplined creators outpace gamers by millions. Choose power over pleasure.</p>
-
-      <h2>Conclusion: Be the Exception</h2>
-      <p>Most men will scroll past this, chasing the next high, the next girl, the next lie. Not you. You read this far because you’re different—a man hungry for <strong>financial independence men</strong> fight for, ready to <strong>become rich with no connections</strong>. This <strong>male money guide</strong> gave you the blueprint:</p>
-      <ul>
-        <li><strong>Skillset Acquisition:</strong> Master coding, copywriting, or marketing.</li>
-        <li><strong>Monetization:</strong> Earn your first dollar on Upwork or Gumroad.</li>
-        <li><strong>Asset Creation:</strong> Build YouTube channels or eBooks that pay forever.</li>
-        <li><strong>Cashflow Discipline:</strong> Control every penny with the 3-bucket rule.</li>
-        <li><strong>Reputation & Network:</strong> Build a name that opens doors, silently.</li>
-      </ul>
-      <p>The world wants you weak, broke, and average. Declare war. You don’t need luck—you need war mode. <strong>You already have the machine (laptop). Now become the weapon (you).</strong> Bookmark this. Print it. Live it. Share it with a brother who’s ready to rise. Your empire starts now.</p>
-      <blockquote>“The man who builds in silence outlives the man who begs for applause.” —Tzeptosoft’s WarForge</blockquote>
-      <p class="signature">With fire, Your general, Clinton</p>
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+      <div class="mobile-menu">
+        <div class="mobile-menu-header">
+          <a href="../index.html" class="mobile-logo">
+            <img src="/assets/images/tzeptosoft-logo.webp" alt="Tzeptosoft" width="40" height="40">
+            <span>TZEPTOSOFT</span>
+          </a>
+          <button class="mobile-menu-close" id="mobileMenuClose">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 6 6 18"></path>
+              <path d="m6 6 12 12"></path>
+            </svg>
+          </button>
+        </div>
+        <nav class="mobile-nav">
+          <a href="../index.html" class="mobile-nav-link">New? Start Here</a>
+          <a href="blog.html" class="mobile-nav-link">Blog Archives</a>
+          <a href="lessons" class="mobile-nav-link">Tzeptosoft Products</a>
+          <a href="contact-us.html" class="mobile-nav-link">Contact Us</a>
+          <a href="about.html" class="mobile-nav-link">About</a>
+        </nav>
+        <div class="mobile-actions">
+          <a href="mailto:tzeptosoft@gmail.com" class="mobile-cta-button">Join Tzeptosoft 🚀</a>
+        </div>
+      </div>
     </div>
-    <div class="terminal-content">
-      <div class="terminal-line" data-text="> Accessing Tzeptosoft’s WarForge Blueprint..."></div>
-      <div class="terminal-line" data-text="> Loading 5 Pillars of Power..."></div>
-      <div class="terminal-line" data-text="> Signal Transfer: VICTORY ✅"></div>
+  </header>
+
+  <div class="main-content">
+    <div id="galaxy-bg"></div>
+    <div id="matrix-bg"></div>
+    <div id="particles"></div>
+    <div id="cursor-trail"></div>
+
+    <div class="hero">
+      <h1>TZEPTOSOFT</h1>
+      <div class="matrix-animation">FORGE YOUR EMPIRE</div>
+      <h2>The Modern Man's Guide to Building Wealth Before 30 (No Trust Fund Needed) ⚔️</h2>
+      <a href="mailto:tzeptosoft@gmail.com" class="btn-cta" aria-label="Contact Tzeptosoft">Start Your War Now 💪</a>
+      <div class="holo-element" style="top: 20%; left: 10%;"></div>
+      <div class="holo-element" style="top: 30%; right: 15%;"></div>
+      <div class="holo-element" style="bottom: 25%; left: 20%;"></div>
+      <div class="holo-element" style="bottom: 15%; right: 10%;"></div>
     </div>
-    <div class="newsletter-container">
-      <h3>Join the WarForge Legion</h3>
-      <p>Get weekly tactics to <strong>build wealth before 30</strong> and master <strong>online income young men</strong> need. No noise, only fire.</p>
-      <input type="email" placeholder="Enter your email" aria-label="Email for newsletter">
-      <button type="button">Join Now</button>
+
+    <div class="blog-container">
+      <header>
+        <h1>The Modern Man's Guide to Building Wealth Before 30 (No Trust Fund Needed) ⚔️</h1>
+        <div class="author-info">
+          <p class="author-name">Clinton | Tzeptosoft</p>
+          <img src="/assets/images/tzeptosoft-logo.webp" alt="Tzeptosoft Logo" class="author-logo" width="150" height="150" loading="lazy">
+          <p class="author-title">General of Silent Victories</p>
+        </div>
+        <hr>
+      </header>
+
+      <div class="cta-container">
+        <h3 class="cta-title">Ready to Conquer Mediocrity? 💪</h3>
+        <a href="mailto:tzeptosoft@gmail.com" class="cta-button">Join the WarForge 🚀</a>
+      </div>
+
+      <div class="content">
+        <h2>Stop Playing, Start Building</h2>
+        <p><strong>You're wasting your 20s.</strong> Chasing girls, scrolling X, chasing likes, chasing highs_dopamine hits that leave you broke and hollow. Most men trade their prime for validation and quick thrills, waking up at 30 with nothing but regrets and a dead-end job. You're not most men. You're here because you're done with excuses, hungry to <strong>build wealth before 30</strong>, and ready to <strong>become rich with no connections</strong>. This isn't a pep talk. This is war on mediocrity.</p>
+        <p>From Nairobi's cyber cafes to São Paulo's favelas, men like you are forging empires with a laptop and a will. No trust funds. No silver spoons. Just raw strategy. This <strong>male money guide</strong> is your battle plan: a five-pillar blueprint to stack cash, master discipline, and wield power. You'll learn to think like a producer, build skills that pay, create assets that work forever, control your money, and earn respect without speaking. No fluff. No lies. <strong>Let's forge your empire.</strong></p>
+
+        <h2>You Can't Win With a Consumer Brain</h2>
+        <p>The system wants you weak. Social media, porn, Netflix, cheap beer_it's a trap called <strong>The Comfort Zone</strong>, designed to keep you scrolling, spending, and small. Every like, swipe, or buzz steals your focus, time, and power. A consumer brain buys sneakers and dreams; a producer brain builds systems and empires. To <strong>achieve financial independence men</strong> crave, you must kill the boy inside and become a man.</p>
+        <p>"You are the average of the five people you spend the most time with," said Jim Rohn, a man who turned dirt into millions. Naval Ravikant, who started broke, said, "The modern struggle is choosing what to ignore." Translation? Cut the noise. Build a fortress of discipline. From Lagos to Manila, men who master their minds outearn the distracted by 10x.</p>
+        <p><strong>Mindset Weapons:</strong></p>
+        <ul>
+          <li><strong>Solitude:</strong> Spend 30 minutes daily alone. No phone. Think. Plan. Dream.</li>
+          <li><strong>Books:</strong> Read 10 pages daily. Start with <em>The War of Art</em>. Knowledge is your sword.</li>
+          <li><strong>Routine:</strong> Wake at 5 AM. Cold shower. Work 90 minutes before the world stirs.</li>
+          <li><strong>Discipline:</strong> Delete one app today_Instagram, TikTok, whatever owns you.</li>
+          <li><strong>Cold Showers:</strong> Five minutes daily. Builds grit. Kills weakness.</li>
+        </ul>
+        <p><strong>Why It Matters:</strong> A weak mind builds a weak wallet. In Mumbai, disciplined coders earn $2,000/month while their peers scroll. In Nairobi, men who read daily close deals others beg for. Your brain is your first battlefield. Win it.</p>
+        <blockquote>"Comfort is the enemy of progress. Kill it daily." _Tzeptosoft's WarForge</blockquote>
+
+        <h2>Pillar 1: Skillset Acquisition_The Income Arsenal</h2>
+        <p><strong>What It Is:</strong> Skills are your currency. Degrees are paper; skills are power. Master timeless digital skills_coding, copywriting, marketing_and the world pays you forever. This is <strong>digital success without degree</strong>.</p>
+        <p><strong>Why It Matters:</strong> A man with skills eats; a man without begs. Globally, coders earn $50-$200/hour, copywriters pull $1,000/week, and marketers bank millions. In Nigeria, skilled freelancers outearn doctors. Skills are your arsenal to <strong>build wealth before 30</strong>.</p>
+        <p><strong>Timeless Skills:</strong></p>
+        <ul>
+          <li><strong>Coding (Frontend/Backend):</strong> Build websites or apps. Python, JavaScript, React.</li>
+          <li><strong>Copywriting:</strong> Write words that sell. Ads, emails, landing pages.</li>
+          <li><strong>Digital Marketing:</strong> Run ads on Google, Meta, or X. Drive traffic, earn commissions.</li>
+          <li><strong>Video Editing:</strong> Create YouTube or TikTok content. High demand, low supply.</li>
+          <li><strong>UX/UI Design:</strong> Design apps or websites. Tools like Figma are free.</li>
+          <li><strong>Sales/Closing:</strong> Persuade clients. Master cold calls or DMs.</li>
+        </ul>
+        <p><strong>3 Steps to Start:</strong></p>
+        <ul>
+          <li><strong>Pick One Skill:</strong> Choose coding (Python) or copywriting. Focus for 90 days.</li>
+          <li><strong>Learn Free:</strong> Use YouTube (Traversy Media), freeCodeCamp, or HubSpot Academy. Study 2 hours daily.</li>
+          <li><strong>Build a Portfolio:</strong> Code a website, write an ad, edit a video. Post on GitHub or Behance.</li>
+        </ul>
+        <p><strong>ROI Mindset:</strong> Invest 100 hours learning, earn $100,000 over a decade. A Kenyan student learned Python and now earns $500/month on Upwork. A Brazilian editor charges $50/hour for YouTube cuts. Skills pay forever.</p>
+        <p><strong>Truth:</strong> You don't need a degree. You need action. Start tonight.</p>
+
+        <h2>Pillar 2: Monetization_Your First Digital Dollar</h2>
+        <p><strong>What It Is:</strong> Turning skills into cash through <strong>online income young men</strong> can master. Forget business plans or investors. You need a laptop, Wi-Fi, and a PayPal account.</p>
+        <p><strong>Why It Matters:</strong> Cashflow is oxygen. Over 60% of men under 30 in India and Nigeria earn online, from $200 to $10,000/month. Monetization is your bridge to freedom.</p>
+        <p><strong>Proven Paths:</strong></p>
+        <ul>
+          <li><strong>Freelancing:</strong> Offer coding, writing, or editing on Upwork, Fiverr, or PeoplePerHour.</li>
+          <li><strong>Affiliate Marketing:</strong> Promote products on a blog or X. Join Amazon Associates or ClickBank.</li>
+          <li><strong>Online Tutoring:</strong> Teach coding, English, or math on Preply or Italki.</li>
+          <li><strong>Selling Digital Goods:</strong> Create Notion templates, eBooks, or CV services on Gumroad.</li>
+        </ul>
+        <p><strong>How to Start:</strong></p>
+        <ul>
+          <li><strong>Join Platforms:</strong> Sign up on Upwork or Fiverr. Complete your profile. Add a photo.</li>
+          <li><strong>Bid Low, Win Fast:</strong> Offer $5-$10 gigs. Deliver like your life depends on it.</li>
+          <li><strong>Market Locally:</strong> Post services in WhatsApp groups or X with #Freelance.</li>
+          <li><strong>Scale Up:</strong> Raise rates after 5 reviews. Reinvest earnings into ads or tools.</li>
+        </ul>
+        <p><strong>Global Example:</strong> A Kenyan student offers CV writing on Fiverr, earning $300/month in three months. A Filipino coder lands $1,000/month Upwork gigs. Your skill is your ticket.</p>
+        <p><strong>Myth Busted:</strong> You don't need a fancy plan. Open PayPal, pick a platform, start. For more, see our <a href="https://tzeptosoft.com/blog/side-hustle-guide">Ultimate Side Hustle Guide</a>.</p>
+
+        <h2>Pillar 3: Asset Creation_Digital > Physical</h2>
+        <p><strong>What It Is:</strong> Building digital assets_YouTube channels, blogs, apps_that earn while you sleep. Physical assets (cars, houses) drain cash; digital assets build wealth.</p>
+        <p><strong>Why It Matters:</strong> Assets are your army. A $10 eBook sold 100 times monthly nets $1,000 with no upkeep. In Brazil, YouTubers earn $5,000/month passively. Assets are how you <strong>become rich with no connections</strong>.</p>
+        <p><strong>Examples:</strong></p>
+        <ul>
+          <li><strong>YouTube Channel:</strong> Post coding tutorials or fitness tips. Monetize with ads.</li>
+          <li><strong>Gumroad Product:</strong> Sell eBooks, templates, or presets.</li>
+          <li><strong>Blog:</strong> Write on WordPress. Earn via affiliates or ads.</li>
+          <li><strong>Mobile App:</strong> Build a simple tool with Flutter. Charge $1/download.</li>
+          <li><strong>Newsletter:</strong> Grow an email list with Substack. Sell courses.</li>
+        </ul>
+        <p><strong>How to Start:</strong></p>
+        <ul>
+          <li><strong>Find a Gap:</strong> Solve local problems_job guides in Nigeria, tech tips in India.</li>
+          <li><strong>Create Fast:</strong> Write an eBook in Google Docs or record with your phone.</li>
+          <li><strong>Sell It:</strong> List on Gumroad or YouTube. Price at $5-$20.</li>
+          <li><strong>Promote Hard:</strong> Share on X, Discord, or local Facebook groups.</li>
+        </ul>
+        <p><strong>Silent Killers:</strong> Fear of judgment and perfectionism. Crush them. Post your first video, even if it's shaky. A Nairobi YouTuber started with a $20 mic and now earns $2,000/month. Start ugly, scale clean.</p>
+
+        <h2>Pillar 4: Cashflow Discipline_Control the Bloodstream</h2>
+        <p><strong>What It Is:</strong> Controlling every dollar like a general controls troops. Discipline turns income into wealth. No gambling, no flexing_just systems.</p>
+        <p><strong>Why It Matters:</strong> Without discipline, you're a slave. In the Philippines, disciplined savers build $10,000 portfolios by 30. Cashflow is your empire's bloodstream.</p>
+        <p><strong>The 3-Bucket Rule:</strong></p>
+        <ul>
+          <li><strong>70% Survival:</strong> Rent, food, Wi-Fi. Keep it lean.</li>
+          <li><strong>20% Skills/Tools:</strong> Courses, software, ads. Reinvest in your brain.</li>
+          <li><strong>10% Investing:</strong> Stocks, index funds, or crypto (carefully).</li>
+        </ul>
+        <p><strong>Platforms:</strong></p>
+        <ul>
+          <li><strong>Binance:</strong> Crypto for the sharp. Start with $10, not your rent.</li>
+          <li><strong>Bamboo/Risevest:</strong> Nigerian apps for stocks and funds.</li>
+          <li><strong>Index Funds:</strong> Low-risk, global access via apps like Zerodha (India).</li>
+        </ul>
+        <p><strong>Crypto Note:</strong> Only for the disciplined. Study first. Avoid hype coins. A Mumbai trader turned $100 into $5,000 with Bitcoin, but most lose. Be sharp, not reckless.</p>
+        <p><strong>How to Start:</strong></p>
+        <ul>
+          <li><strong>Track Every Penny:</strong> Use Google Sheets or Notion. Log daily.</li>
+          <li><strong>Save First:</strong> Automate 10% to Payoneer or a local bank.</li>
+          <li><strong>Invest Small:</strong> Start with $5/month in an index fund.</li>
+        </ul>
+        <p><strong>Truth:</strong> A Nigerian freelancer saved $50/month and now owns $3,000 in stocks. Discipline is your dynasty.</p>
+
+        <h2>Pillar 5: Reputation, Network, and Silence</h2>
+        <p><strong>What It Is:</strong> Your name is your bank. Build a reputation for results, not noise. Network with wolves, not sheep. Work in silence, let success speak.</p>
+        <p><strong>Why It Matters:</strong> Reputation equals ROI. In India, freelancers with strong X profiles land $5,000 contracts. Networks open doors money can't. Silence builds mystique.</p>
+        <p><strong>How to Build:</strong></p>
+        <ul>
+          <li><strong>Personal Brand:</strong> Post wins on X or a WordPress site. Share code, tips, or deals closed.</li>
+          <li><strong>Network Up:</strong> DM value to entrepreneurs on X or Discord. Offer a free website audit.</li>
+          <li><strong>Overdeliver:</strong> Every gig, every client. Reviews are your resume.</li>
+        </ul>
+        <p><strong>Cut Weakness:</strong> Drop friends who whine, scroll, or settle. Surround yourself with men who build. A Brazilian coder joined a Discord group and landed a $2,000 gig. Wolves win.</p>
+        <p><strong>Truth:</strong> Your name is your net worth. Build it quietly, cash it loudly.</p>
+
+        <h2>Tools, Books & Rituals_Build Like a Cyborg</h2>
+        <p>Your tools, knowledge, and habits are your armor. These are battle-tested to <strong>build wealth before 30</strong>.</p>
+        <p><strong>Books to Rewire You:</strong></p>
+        <ul>
+          <li><strong>The Millionaire Fastlane (MJ DeMarco):</strong> Reject slow wealth. Build systems.</li>
+          <li><strong>Rich Dad Poor Dad (Robert Kiyosaki):</strong> Assets over liabilities. Every man's bible.</li>
+          <li><strong>The Almanack of Naval Ravikant:</strong> Wisdom on wealth and freedom.</li>
+          <li><strong>The War of Art (Steven Pressfield):</strong> Crush resistance. Create daily.</li>
+          <li><strong>Deep Work (Cal Newport):</strong> Master focus in a noisy world.</li>
+        </ul>
+        <p><strong>Tools to Stack Cash:</strong></p>
+        <ul>
+          <li><strong>Notion:</strong> Plan goals, track income, organize life.</li>
+          <li><strong>Obsidian:</strong> Take notes, connect ideas, learn faster.</li>
+          <li><strong>VS Code:</strong> Code apps or websites. Free and powerful.</li>
+          <li><strong>Payoneer:</strong> Withdraw global earnings to local banks.</li>
+          <li><strong>Brave Browser:</strong> Block ads, stay focused, earn crypto.</li>
+          <li><strong>Calendly:</strong> Schedule client calls like a pro.</li>
+        </ul>
+        <p><strong>Rituals for Power:</strong></p>
+        <ul>
+          <li><strong>Daily Goal Tracking:</strong> Write three tasks in Notion. Crush them.</li>
+          <li><strong>Dopamine Detox:</strong> No social media for 24 hours weekly.</li>
+          <li><strong>90-Minute Work Blocks:</strong> No distractions. Deep work only.</li>
+          <li><strong>Nightly Review:</strong> Journal wins and failures. Plan tomorrow.</li>
+          <li><strong>Weekly Digital Audit:</strong> Delete apps, unfollow noise, refocus.</li>
+        </ul>
+        <p><strong>Pro Tip:</strong> Master these habits with our <a href="https://tzeptosoft.com/blog/daily-routine-success">How to Build a Daily Routine for Online Success</a>.</p>
+
+        <h2>Common Traps_The Enemies of Wealth</h2>
+        <p>These seven traps kill potential. Dodge them to win.</p>
+        <p><strong>The 7 Deadly Distractions:</strong></p>
+        <ul>
+          <li><strong>Porn:</strong> Steals drive. <em>Hack:</em> Block sites with Cold Turkey. Replace with workouts.</li>
+          <li><strong>Social Media:</strong> Wastes hours. <em>Hack:</em> Limit to 20 minutes daily. Use Freedom app.</li>
+          <li><strong>Clubbing:</strong> Drains cash and energy. <em>Hack:</em> Network at startup events instead.</li>
+          <li><strong>Overthinking:</strong> Paralyzes action. <em>Hack:</em> Set a 5-minute timer. Decide. Move.</li>
+          <li><strong>Procrastination:</strong> Kills momentum. <em>Hack:</em> Use the 2-minute rule_start now.</li>
+          <li><strong>Validation-Seeking:</strong> Chasing likes weakens you. <em>Hack:</em> Work in silence. Post results.</li>
+          <li><strong>Excessive Gaming:</strong> Fake wins, real losses. <em>Hack:</em> Limit to 1 hour/week. Build real skills.</li>
+        </ul>
+        <p><strong>Truth:</strong> In Lagos, men who cut social media earn 3x more. In São Paulo, disciplined creators outpace gamers by millions. Choose power over pleasure.</p>
+
+        <h2>Conclusion: Be the Exception</h2>
+        <p>Most men will scroll past this, chasing the next high, the next girl, the next lie. Not you. You read this far because you're different_a man hungry for <strong>financial independence men</strong> fight for, ready to <strong>become rich with no connections</strong>. This <strong>male money guide</strong> gave you the blueprint:</p>
+        <ul>
+          <li><strong>Skillset Acquisition:</strong> Master coding, copywriting, or marketing.</li>
+          <li><strong>Monetization:</strong> Earn your first dollar on Upwork or Gumroad.</li>
+          <li><strong>Asset Creation:</strong> Build YouTube channels or eBooks that pay forever.</li>
+          <li><strong>Cashflow Discipline:</strong> Control every penny with the 3-bucket rule.</li>
+          <li><strong>Reputation & Network:</strong> Build a name that opens doors, silently.</li>
+        </ul>
+        <p>The world wants you weak, broke, and average. Declare war. You don't need luck_you need war mode. <strong>You already have the machine (laptop). Now become the weapon (you).</strong> Bookmark this. Print it. Live it. Share it with a brother who's ready to rise. Your empire starts now.</p>
+        <blockquote>"The man who builds in silence outlives the man who begs for applause." _Tzeptosoft's WarForge</blockquote>
+        <p class="signature">with blood, Your warlord, Clinton</p>
+        <p><strong>Final Takeaway:</strong> Behead one herd habit today. Post on X: "I'm a lone wolf conquering." Tag @tzeptosoft. Join the WarForge: tzeptosoft@gmail.com.</p>
+      </div>
+
+      <div class="terminal-content">
+        <div class="terminal-line" data-text="> Accessing Tzeptosoft archives... 🚀"></div>
+        <div class="terminal-line" data-text="> Loading Wealth Blueprint... 💪"></div>
+        <div class="terminal-line" data-text="> Signal Transfer: VICTORY ✅"></div>
+      </div>
+
+      <div class="newsletter-container">
+        <h3>Join the Tzeptosoft Newsletter 🔥</h3>
+        <p>Get weekly <strong>warplans</strong>, <strong>strategies</strong>, and fire to outthink, outfight, and annihilate the herd. No mercy, only fire! 💥</p>
+        <input type="email" placeholder="Enter your email" aria-label="Email for newsletter">
+        <button type="button">Subscribe 🚀</button>
+      </div>
+
+      <div class="social-share">
+        <h3>Spread the WarForge 🗣️</h3>
+        <a href="https://twitter.com/intent/tweet?url=https://tzeptosoft.com/blog/build-wealth-before-30&text=The Modern Man's Guide to Building Wealth Before 30 – Conquer with Tzeptosoft's WarForge!" aria-label="Share on Twitter">Twitter</a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://tzeptosoft.com/blog/build-wealth-before-30" aria-label="Share on LinkedIn">LinkedIn</a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://tzeptosoft.com/blog/build-wealth-before-30" aria-label="Share on Facebook">Facebook</a>
+        <a href="https://www.reddit.com/submit?url=https://tzeptosoft.com/blog/build-wealth-before-30&title=The Modern Man's Guide to Building Wealth Before 30" aria-label="Share on Reddit">Reddit</a>
+        <a href="https://api.whatsapp.com/send?text=The Modern Man's Guide to Building Wealth Before 30 – Conquer with Tzeptosoft's WarForge! https://tzeptosoft.com/blog/build-wealth-before-30" aria-label="Share on WhatsApp">WhatsApp</a>
+      </div>
     </div>
-    <div class="social-share">
-      <h3>Spread the WarForge</h3>
-      <a href="https://twitter.com/intent/tweet?url=https://tzeptosoft.com/blog/build-wealth-before-30&text=The Modern Man’s Guide to Building Wealth Before 30! Forge your empire with Tzeptosoft’s WarForge. #BuildWealth" aria-label="Share on Twitter">Twitter</a>
-      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://tzeptosoft.com/blog/build-wealth-before-30" aria-label="Share on LinkedIn">LinkedIn</a>
-      <a href="https://www.facebook.com/sharer/sharer.php?u=https://tzeptosoft.com/blog/build-wealth-before-30" aria-label="Share on Facebook">Facebook</a>
-      <a href="https://www.reddit.com/submit?url=https://tzeptosoft.com/blog/build-wealth-before-30&title=The Modern Man’s Guide to Building Wealth Before 30" aria-label="Share on Reddit">Reddit</a>
-      <a href="https://api.whatsapp.com/send?text=The Modern Man’s Guide to Building Wealth Before 30! Forge your empire with Tzeptosoft’s WarForge. https://tzeptosoft.com/blog/build-wealth-before-30" aria-label="Share on WhatsApp">WhatsApp</a>
-    </div>
+
+    <footer>
+      <p>© 2025 Tzeptosoft | All Rights Fucking Reserved 🔥</p>
+    </footer>
   </div>
-  <footer>
-    <p>© Tzeptosoft | All Rights Reserved</p>
-    <div class="social-links">
-      <a href="https://twitter.com/tzeptosoft" aria-label="Twitter"><img src="/assets/twitter.webp" alt="Twitter" width="28" height="28" loading="lazy"></a>
-      <a href="https://linkedin.com/company/tzeptosoft" aria-label="LinkedIn"><img src="/assets/linkedin.webp" alt="LinkedIn" width="28" height="28" loading="lazy"></a>
-    </div>
-  </footer>
+
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      // Preloader
+      const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+      const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+      const mobileMenuClose = document.getElementById('mobileMenuClose');
+      const searchToggle = document.getElementById('searchToggle');
+      const searchBox = document.getElementById('searchBox');
+      const searchInput = document.querySelector('.search-input');
+
+      mobileMenuToggle?.addEventListener('click', () => {
+        mobileMenuOverlay?.classList.toggle('active');
+        document.body.style.overflow = mobileMenuOverlay?.classList.contains('active') ? 'hidden' : '';
+      });
+
+      mobileMenuClose?.addEventListener('click', () => {
+        mobileMenuOverlay?.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+
+      mobileMenuOverlay?.addEventListener('click', (e) => {
+        if (e.target === mobileMenuOverlay) {
+          mobileMenuOverlay.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      });
+
+      searchToggle?.addEventListener('click', () => {
+        const isActive = searchBox?.classList.contains('active');
+        searchBox?.classList.toggle('active');
+        searchToggle?.setAttribute('aria-expanded', !isActive);
+        if (!isActive && searchInput) searchInput.focus();
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          searchBox?.classList.remove('active');
+          searchToggle?.setAttribute('aria-expanded', 'false');
+          mobileMenuOverlay?.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      });
+
       window.addEventListener('load', () => {
         document.getElementById('preloader').style.display = 'none';
       });
 
-      // Matrix Animation
       const matrixAnimation = document.querySelector('.matrix-animation');
       function startMatrixAnimation() {
         matrixAnimation.textContent = '';
@@ -721,46 +1454,18 @@
       startMatrixAnimation();
       setInterval(startMatrixAnimation, 4000);
 
-      // Intersection Observer for Sections
-      const sections = document.querySelectorAll('.blog-container, .terminal-content');
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            if (entry.target.classList.contains('terminal-content') && !entry.target.dataset.animated) {
-              startTerminalSequence();
-              entry.target.dataset.animated = 'true';
-            }
-          }
-        });
-      }, { threshold: 0.1 });
-      sections.forEach(section => observer.observe(section));
+      let lastScrollY = window.scrollY;
+      window.addEventListener('scroll', () => {
+        const header = document.querySelector('.main-header');
+        const currentScrollY = window.scrollY;
+        if (currentScrollY > 100) {
+          header?.classList.add('scrolled');
+        } else {
+          header?.classList.remove('scrolled');
+        }
+        lastScrollY = currentScrollY;
+      });
 
-      // Terminal Sequence
-      function startTerminalSequence() {
-        const lines = document.querySelectorAll('.terminal-content .terminal-line');
-        let delay = 0;
-        lines.forEach(line => {
-          line.textContent = '';
-          const text = line.dataset.text;
-          let charIndex = 0;
-          setTimeout(() => {
-            const type = () => {
-              if (charIndex < text.length) {
-                line.textContent += text[charIndex];
-                charIndex++;
-                setTimeout(type, 30);
-              } else {
-                line.classList.add('typed');
-              }
-            };
-            type();
-          }, delay);
-          delay += 1000;
-        });
-      }
-
-      // Matrix Rain
       const matrixBg = document.getElementById('matrix-bg');
       for (let i = 0; i < 50; i++) {
         const char = document.createElement('div');
@@ -771,7 +1476,6 @@
         matrixBg.appendChild(char);
       }
 
-      // Particles
       const particleContainer = document.getElementById('particles');
       for (let i = 0; i < 50; i++) {
         const particle = document.createElement('div');
@@ -782,11 +1486,49 @@
         particleContainer.appendChild(particle);
       }
 
-      // Cursor Trail
       const cursorTrail = document.getElementById('cursor-trail');
       document.addEventListener('mousemove', (e) => {
         cursorTrail.style.left = e.clientX - 15 + 'px';
         cursorTrail.style.top = e.clientY - 15 + 'px';
+      });
+
+      // Terminal animation
+      const terminalLines = document.querySelectorAll('.terminal-line');
+      let delay = 0;
+      terminalLines.forEach(line => {
+        line.textContent = '';
+        const text = line.dataset.text;
+        let charIndex = 0;
+        setTimeout(() => {
+          const type = () => {
+            if (charIndex < text.length) {
+              line.textContent += text[charIndex];
+              charIndex++;
+              setTimeout(type, 35);
+            } else {
+              line.classList.add('typed');
+            }
+          };
+          type();
+        }, delay);
+        delay += 1000;
+      });
+
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href');
+          if (targetId === '#') return;
+          
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 100,
+              behavior: 'smooth'
+            });
+          }
+        });
       });
     });
   </script>

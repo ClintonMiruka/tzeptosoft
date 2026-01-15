@@ -1,4 +1,4 @@
-# TZEPTOSOFT — ESCAPE THE MATRIX ⚔️🔥
+# TZEPTOSOFT _ ESCAPE THE MATRIX ⚔️🔥
 
 >  No bullshit. No sugar-coating. No apologies.   
 > A digital war room for men and women who refuse to be caged. Built to dominate.
@@ -9,7 +9,7 @@
 
 ```
 tzeptosoft/
-├── index.html                     # Homepage — Your entry point
+├── index.html                     # Homepage _ Your entry point
 ├── blog/
 │   ├── women-dont-want-nice-guys.html
 │   ├── date-many-women-before-marriage.html
@@ -22,7 +22,7 @@ tzeptosoft/
 └── README.md                      # This file
 ```
 
-Each file is  standalone HTML  — no frameworks, no bloat, no dependencies.  
+Each file is  standalone HTML  _ no frameworks, no bloat, no dependencies.  
 Because complexity is for pussies.
 
 ---
@@ -30,23 +30,23 @@ Because complexity is for pussies.
 ## 🎯 WHAT THIS THING DOES
 
 ### ⚔️ For Men
--  Women Don't Want Nice Guys  — Brutal truth about attraction
--  Date Many Women Before Marriage  — 15,000-word master blueprint
--  Masculine Mindset Forge  — Build unshakeable confidence
+-  Women Don't Want Nice Guys  _ Brutal truth about attraction
+-  Date Many Women Before Marriage  _ 15,000-word master blueprint
+-  Masculine Mindset Forge  _ Build unshakeable confidence
 
 ### 👑 For Women
--  10 Savage Lessons for Women  — Ditch feminist lies, secure kings
--  Feminine Value Playbook  — Become the woman high-value men chase
--  Family Building Strategies  — Legacy over loneliness
+-  10 Savage Lessons for Women  _ Ditch feminist lies, secure kings
+-  Feminine Value Playbook  _ Become the woman high-value men chase
+-  Family Building Strategies  _ Legacy over loneliness
 
 ### ⚡ For Everyone Breaking Free
--  School Sucks  — 11,500-word manifesto on escaping the system
--  Digital Empire Blueprint  — Build wealth outside the matrix
--  Stoic Warrior Code  — Mental toughness in a soft world
+-  School Sucks  _ 11,500-word manifesto on escaping the system
+-  Digital Empire Blueprint  _ Build wealth outside the matrix
+-  Stoic Warrior Code  _ Mental toughness in a soft world
 
 ---
 
-## 🛠️ THE TECH — BUILT TO PERFORM
+## 🛠️ THE TECH _ BUILT TO PERFORM
 
 ### 🎨 Design System
 -  Colors : `#0066CC` (deep blue), `#00CCFF` (electric cyan), `#00FF00` (matrix green)
@@ -67,7 +67,7 @@ Because complexity is for pussies.
 
 ---
 
-## 🚀 GET STARTED — 5 MINUTES TO LIVE
+## 🚀 GET STARTED _ 5 MINUTES TO LIVE
 
 ### 1️⃣ Clone the Fortress
 ```bash
@@ -127,7 +127,7 @@ Just pure HTML/CSS/JS that works anywhere.
 
 ---
 
-## 📈 SEO & SOCIAL — BUILT TO DOMINATE
+## 📈 SEO & SOCIAL _ BUILT TO DOMINATE
 
 ✅  Meta tags optimized  for "dating advice", "self-improvement", "escape the matrix"  
 ✅  Open Graph tags  for rich social sharing  
@@ -169,10 +169,10 @@ Just pure HTML/CSS/JS that works anywhere.
 -  Rebels of All Ages : Escaping corporate slavery, building digital empires
 
 ### Content Principles
-1.  Brutally honest  — no political correctness
-2.  Data-backed  — stats, studies, real results
-3.  Actionable  — specific steps, not vague advice
-4.  Timeless  — principles that work In a recent research and 3025
+1.  Brutally honest  _ no political correctness
+2.  Data-backed  _ stats, studies, real results
+3.  Actionable  _ specific steps, not vague advice
+4.  Timeless  _ principles that work In a recent research and 3025
 
 ---
 
@@ -191,12 +191,12 @@ Just pure HTML/CSS/JS that works anywhere.
 
 ---
 
-## 📞 CONTACT — IF YOU'RE SERIOUS
+## 📞 CONTACT _ IF YOU'RE SERIOUS
 
 ### Need Help?
 -  Technical issues : Check browser console first
 -  Content suggestions : Email with "CONTENT IDEA" in subject
--  Partnerships : Must align with Tzeptosoft values — no woke bullshit
+-  Partnerships : Must align with Tzeptosoft values _ no woke bullshit
 
 ### Connect
 -  Email : `tzeptosoft@gmail.com` (Priority for subscribers)
@@ -221,7 +221,7 @@ You may  not :
 - Water it down with political correctness
 - Be a bitch about it
 
-Code in this repo is  MIT Licensed  — do whatever, just don't be lame.
+Code in this repo is  MIT Licensed  _ do whatever, just don't be lame.
 
 ---
 
@@ -234,5 +234,5 @@ A  blueprint for domination .
 
  Break free or die trying.   
 
- — TZEPTOSOFT   
+ _ TZEPTOSOFT   
 *Built with 💪, hosted with pride, designed for war.*
