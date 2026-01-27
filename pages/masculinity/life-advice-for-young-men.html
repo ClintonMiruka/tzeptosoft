@@ -19,159 +19,1635 @@
   <meta name="twitter:image" content="https://tzeptosoft.com/assets/blog-3.webp">
   <title>Life Advice for Young Men: 21 Commandments for the Future Kings | Tzeptosoft</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Mono:wght@700&family=Orbitron:wght@900&family=JetBrains+Mono:wght@400;700&display=swap">
-  <link rel="stylesheet" href="/assets/css/blog-style.css">
-  <link rel="icon" type="image/webp" href="/assets/images/favicon.webp">
-  <script type="application/ld+json" src="/assets/data/life-advice-for-young-men.json"></script>
+  <link rel="icon" type="image/webp" href="/assets/favicon.webp">
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Life Advice for Young Men: 21 Commandments for the Future Kings",
+    "description": "21 commandments to forge future kings with discipline, strategy, and power. Tzeptosoft's guide for young men on the elite path.",
+    "author": {
+      "@type": "Person",
+      "name": "Clinton"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Tzeptosoft",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://tzeptosoft.com/assets/logo.webp"
+      }
+    },
+    "datePublished": "2025-04-28",
+    "image": "https://tzeptosoft.com/assets/life-advice-for-young-men.webp",
+    "url": "https://tzeptosoft.com/blog/life-advice-for-young-men"
+  }
+  </script>
+  <style>
+    :root {
+      --primary: #0066CC;
+      --secondary: #00CCFF;
+      --accent: #FFFFFF;
+      --bg-dark: #0B0F1A;
+      --text-dark: #FFFFFF;
+      --matrix-green: #00FF00;
+    }
+
+    /* Header Styles - Consistent with all Tzeptosoft pages */
+    .main-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(11, 15, 26, 0.95);
+      backdrop-filter: blur(20px);
+      border-bottom: 2px solid transparent;
+      animation: headerSlideIn 0.6s ease-out;
+      box-shadow: 0 8px 32px rgba(0, 102, 204, 0.1);
+    }
+
+    @keyframes headerSlideIn {
+      from {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .main-header.scrolled {
+      border-bottom-color: rgba(0, 204, 255, 0.2);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 70px;
+      position: relative;
+    }
+
+    .logo-section {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .logo-wrapper:hover {
+      transform: scale(1.05);
+    }
+
+    .logo-image {
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(0, 204, 255, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    .logo-primary {
+      font-size: 1.4em;
+      font-weight: 900;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-shadow: 0 0 10px rgba(0, 102, 204, 0.5);
+    }
+
+    .logo-subtitle {
+      font-size: 0.75em;
+      color: var(--secondary);
+      font-weight: 600;
+      opacity: 0.8;
+      margin-top: 2px;
+    }
+
+    .nav-section {
+      display: flex;
+    }
+
+    .nav-list {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .nav-item {
+      position: relative;
+    }
+
+    .nav-link {
+      display: block;
+      padding: 8px 16px;
+      color: var(--text-dark);
+      text-decoration: none;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 0.95em;
+      position: relative;
+      transition: all 0.3s ease;
+      border-radius: 6px;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--secondary);
+      background: rgba(0, 204, 255, 0.1);
+      box-shadow: 0 0 20px rgba(0, 204, 255, 0.2);
+      transform: translateY(-2px);
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 80%;
+    }
+
+    .actions-section {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .search-container {
+      position: relative;
+    }
+
+    .search-toggle {
+      background: none;
+      border: 2px solid rgba(0, 204, 255, 0.3);
+      border-radius: 8px;
+      padding: 8px;
+      color: var(--secondary);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .search-toggle:hover {
+      border-color: var(--secondary);
+      box-shadow: 0 0 20px rgba(0, 204, 255, 0.4);
+      transform: scale(1.05);
+    }
+
+    .search-icon {
+      width: 20px;
+      height: 20px;
+    }
+
+    .search-box {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 300px;
+      background: rgba(28, 28, 28, 0.95);
+      border: 2px solid var(--secondary);
+      border-radius: 8px;
+      padding: 12px;
+      margin-top: 8px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 40px rgba(0, 102, 204, 0.2);
+      z-index: 1001;
+    }
+
+    .search-box.active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .search-input {
+      width: 100%;
+      background: rgba(18, 18, 18, 0.8);
+      border: 1px solid rgba(0, 204, 255, 0.3);
+      border-radius: 6px;
+      padding: 10px 12px;
+      color: var(--text-dark);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.9em;
+    }
+
+    .search-input::placeholder {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .search-input:focus {
+      outline: none;
+      border-color: var(--secondary);
+      box-shadow: 0 0 0 3px rgba(0, 204, 255, 0.2);
+    }
+
+    .search-submit {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: var(--secondary);
+      cursor: pointer;
+      padding: 4px;
+      width: 20px;
+      height: 20px;
+    }
+
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: var(--accent);
+      text-decoration: none;
+      border-radius: 8px;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 600;
+      font-size: 0.9em;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(0, 102, 204, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: left 0.5s;
+    }
+
+    .cta-button:hover::before {
+      left: 100%;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(0, 102, 204, 0.4);
+    }
+
+    .button-icon {
+      width: 16px;
+      height: 16px;
+      transition: transform 0.3s ease;
+    }
+
+    .cta-button:hover .button-icon {
+      transform: translateX(4px);
+    }
+
+    .mobile-menu-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 30px;
+      height: 30px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+      z-index: 1001;
+    }
+
+    .hamburger-line {
+      width: 100%;
+      height: 3px;
+      background: var(--secondary);
+      border-radius: 2px;
+      transition: all 0.3s ease;
+      transform-origin: center;
+    }
+
+    .mobile-menu-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: rgba(11, 15, 26, 0.98);
+      backdrop-filter: blur(20px);
+      z-index: 999;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.4s ease;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .mobile-menu-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .mobile-menu {
+      width: 320px;
+      max-width: 90vw;
+      background: linear-gradient(135deg, rgba(18, 18, 18, 0.95), rgba(11, 15, 26, 0.95));
+      border-left: 3px solid var(--secondary);
+      padding: 0;
+      transform: translateX(100%);
+      transition: transform 0.4s ease;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+    }
+
+    .mobile-menu-overlay.active .mobile-menu {
+      transform: translateX(0);
+    }
+
+    .mobile-menu-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 20px;
+      border-bottom: 1px solid rgba(0, 204, 255, 0.2);
+    }
+
+    .mobile-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-dark);
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.2em;
+    }
+
+    .mobile-menu-close {
+      background: none;
+      border: none;
+      color: var(--secondary);
+      cursor: pointer;
+      padding: 8px;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .mobile-menu-close:hover {
+      background: rgba(0, 204, 255, 0.1);
+      box-shadow: 0 0 20px rgba(0, 204, 255, 0.2);
+    }
+
+    .mobile-nav {
+      padding: 20px 0;
+      flex: 1;
+    }
+
+    .mobile-nav-link {
+      display: block;
+      padding: 16px 24px;
+      color: var(--text-dark);
+      text-decoration: none;
+      font-family: 'Inter', sans-serif;
+      font-size: 1.1em;
+      font-weight: 500;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .mobile-nav-link::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 0;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      transition: width 0.3s ease;
+      z-index: -1;
+    }
+
+    .mobile-nav-link:hover::before,
+    .mobile-nav-link.active::before {
+      width: 100%;
+    }
+
+    .mobile-nav-link:hover,
+    .mobile-nav-link.active {
+      color: var(--accent);
+      padding-left: 32px;
+    }
+
+    .mobile-actions {
+      padding: 20px 24px;
+      border-top: 1px solid rgba(0, 204, 255, 0.2);
+    }
+
+    .mobile-cta-button {
+      display: inline-block;
+      width: 100%;
+      padding: 16px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: var(--accent);
+      text-decoration: none;
+      border-radius: 8px;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 600;
+      text-align: center;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(0, 102, 204, 0.3);
+    }
+
+    .mobile-cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(0, 102, 204, 0.4);
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg-dark);
+      color: var(--text-dark);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .main-content {
+      position: relative;
+    }
+
+    /* Preloader */
+    #preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--bg-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+
+    .loader {
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--secondary);
+      font-size: 1.5em;
+      animation: blinkCaret 0.5s step-end infinite;
+    }
+
+    @keyframes blinkCaret {
+      50% { border-color: transparent; }
+    }
+
+    /* Background Effects */
+    #galaxy-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle, rgba(0, 204, 255, 0.2), transparent);
+      z-index: -3;
+      animation: rotateGalaxy 60s infinite linear;
+    }
+
+    @keyframes rotateGalaxy {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    #matrix-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+      opacity: 0.7;
+    }
+
+    .matrix-char {
+      position: absolute;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 16px;
+      color: var(--matrix-green);
+      opacity: 0.8;
+      animation: matrix-fall 5s linear infinite;
+    }
+
+    @keyframes matrix-fall {
+      0% { transform: translateY(-100vh); opacity: 0.8; }
+      100% { transform: translateY(100vh); opacity: 0; }
+    }
+
+    #particles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    .particle {
+      position: absolute;
+      width: 5px;
+      height: 5px;
+      background: var(--secondary);
+      border-radius: 50%;
+      animation: drift 10s infinite linear;
+    }
+
+    @keyframes drift {
+      0% { transform: translate(0, 0); opacity: 0.5; }
+      50% { opacity: 1; }
+      100% { transform: translate(100px, 100px); opacity: 0.5; }
+    }
+
+    #cursor-trail {
+      position: fixed;
+      width: 30px;
+      height: 30px;
+      background: radial-gradient(circle, var(--secondary), transparent);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 100;
+      transition: all 0.1s ease;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 120px 20px 100px;
+      background: rgba(18, 18, 18, 0.9);
+      position: relative;
+      z-index: 1;
+      margin-top: 0;
+    }
+
+    .hero h1 {
+      font-size: 5em;
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 10px var(--primary);
+      animation: gradientShift 3s ease infinite;
+      margin-bottom: 0;
+    }
+
+    .matrix-animation {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1.5em;
+      color: var(--matrix-green);
+      text-shadow: 0 0 10px var(--matrix-green);
+      margin-top: 10px;
+      overflow: hidden;
+      white-space: nowrap;
+      display: inline-block;
+    }
+
+    .matrix-animation.typing {
+      animation: typeMatrix 2s steps(20) forwards, glitch 0.1s infinite alternate;
+    }
+
+    @keyframes typeMatrix {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    @keyframes glitch {
+      0% { transform: translate(0); opacity: 1; }
+      50% { transform: translate(2px, -2px); opacity: 0.8; }
+      100% { transform: translate(-2px, 2px); opacity: 0.9; }
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0%; }
+      50% { background-position: 100%; }
+      100% { background-position: 0%; }
+    }
+
+    .hero h2 {
+      font-size: 1.8em;
+      color: var(--secondary);
+      text-shadow: 0 0 10px var(--secondary);
+      margin-top: 20px;
+    }
+
+    .btn-cta {
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      color: var(--accent);
+      padding: 15px 30px;
+      text-decoration: none;
+      font-size: 1.5em;
+      border-radius: 5px;
+      box-shadow: 0 0 20px var(--primary);
+      animation: pulse 2s infinite;
+      margin-top: 20px;
+      display: inline-block;
+    }
+
+    .btn-cta:hover {
+      background: linear-gradient(90deg, var(--secondary), var(--primary));
+      transform: scale(1.1);
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(0, 102, 204, 0.4); }
+      70% { box-shadow: 0 0 0 10px rgba(0, 102, 204, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(0, 102, 204, 0); }
+    }
+
+    .holo-element {
+      position: absolute;
+      width: 70px;
+      height: 70px;
+      background: radial-gradient(circle, var(--primary), transparent);
+      border-radius: 50%;
+      animation: float 4s infinite ease-in-out;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); opacity: 0.5; }
+      50% { transform: translateY(-30px); opacity: 1; }
+      100% { transform: translateY(0); opacity: 0.5; }
+    }
+
+    /* Blog Container */
+    .blog-container {
+      padding: 80px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+      background: rgba(18, 18, 18, 0.9);
+      border: 3px solid var(--secondary);
+      animation: borderGlow 2s infinite;
+    }
+
+    @keyframes borderGlow {
+      0% { border-color: var(--primary); }
+      50% { border-color: var(--secondary); }
+      100% { border-color: var(--primary); }
+    }
+
+    .blog-container h1 {
+      font-size: 2.5em;
+      color: var(--secondary);
+      text-shadow: 0 0 15px var(--secondary);
+      font-family: 'Orbitron', sans-serif;
+      text-align: center;
+    }
+
+    .blog-container h2 {
+      font-size: 1.8em;
+      color: var(--secondary);
+      font-family: 'Orbitron', sans-serif;
+      margin-top: 2em;
+    }
+
+    .blog-container h3 {
+      font-size: 1.5em;
+      color: var(--matrix-green);
+      font-family: 'JetBrains Mono', monospace;
+      margin-top: 1.5em;
+    }
+
+    .blog-container p {
+      color: var(--text-dark);
+      font-size: 1.2em;
+    }
+
+    .highlight {
+      color: var(--secondary);
+      font-weight: 600;
+    }
+
+    .blog-container ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .blog-container li {
+      background: #1C1C1C;
+      padding: 15px;
+      border: 2px solid var(--secondary);
+      margin-bottom: 15px;
+      transition: transform 0.3s ease;
+    }
+
+    .blog-container li:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 40px var(--secondary);
+    }
+
+    .blog-container blockquote {
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--secondary);
+      border-left: 4px solid var(--secondary);
+      padding-left: 15px;
+      margin: 20px 0;
+      font-style: italic;
+    }
+
+    .author-info {
+      margin: 20px 0;
+      text-align: center;
+      padding: 20px;
+      background: rgba(28, 28, 28, 0.5);
+      border-radius: 8px;
+      border: 1px solid rgba(0, 204, 255, 0.2);
+    }
+
+    .author-name {
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--secondary);
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+
+    .author-title {
+      color: var(--text-dark);
+      font-size: 1em;
+    }
+
+    .author-logo {
+      max-width: 100px;
+      height: auto;
+      border-radius: 50%;
+      border: 2px solid var(--secondary);
+      margin: 10px 0;
+      box-shadow: 0 0 20px rgba(0, 204, 255, 0.3);
+    }
+
+    hr {
+      border: 1px solid var(--secondary);
+      margin: 20px 0;
+    }
+
+    .cta-container {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .cta-title {
+      font-family: 'Orbitron', sans-serif;
+      color: var(--secondary);
+      font-size: 1.8em;
+    }
+
+    /* Newsletter */
+    .newsletter-container {
+      text-align: center;
+      margin: 40px 0;
+      padding: 20px;
+      background: #1C1C1C;
+      border: 2px solid var(--secondary);
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(0, 204, 255, 0.2);
+    }
+
+    .newsletter-container h3 {
+      font-family: 'Orbitron', sans-serif;
+      color: var(--secondary);
+      font-size: 1.8em;
+      margin-bottom: 10px;
+    }
+
+    .newsletter-container p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+
+    .newsletter-container input[type="email"] {
+      padding: 10px;
+      width: 70%;
+      max-width: 300px;
+      border: 2px solid var(--secondary);
+      background: #1a1a1a;
+      color: var(--text-dark);
+      font-family: 'JetBrains Mono', monospace;
+      border-radius: 4px;
+    }
+
+    .newsletter-container button {
+      padding: 10px 20px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      color: var(--accent);
+      border: none;
+      border-radius: 4px;
+      font-family: 'JetBrains Mono', monospace;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .newsletter-container button:hover {
+      background: linear-gradient(90deg, var(--secondary), var(--primary));
+      transform: scale(1.05);
+    }
+
+    /* Social Share */
+    .social-share {
+      margin: 2rem 0;
+      text-align: center;
+    }
+
+    .social-share h3 {
+      font-family: 'Orbitron', sans-serif;
+      color: var(--secondary);
+      font-size: 1.8em;
+      margin-bottom: 10px;
+    }
+
+    .social-share a {
+      margin: 0 10px;
+      padding: 10px 20px;
+      background: var(--primary);
+      color: var(--accent);
+      border-radius: 4px;
+      text-decoration: none;
+      font-family: 'JetBrains Mono', monospace;
+      transition: all 0.3s ease;
+    }
+
+    .social-share a:hover {
+      background: var(--secondary);
+      color: #000;
+      transform: scale(1.05);
+    }
+
+    /* Terminal Content */
+    .terminal-content {
+      background: #1a1a1a;
+      padding: 20px;
+      border: 1px solid var(--secondary);
+      border-radius: 4px;
+      margin: 20px 0;
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--secondary);
+      font-size: 1em;
+    }
+
+    .terminal-line {
+      opacity: 0;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    .terminal-line.typed {
+      opacity: 1;
+      animation: typing 0.5s steps(40) forwards;
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      border-top: 1px solid #1E1E2E;
+    }
+
+    .signature {
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--secondary);
+      font-size: 1.2em;
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    /* Featured Image */
+    .featured-image {
+      display: block;
+      margin: 0 auto 30px;
+      max-width: 100%;
+      border: 2px solid var(--secondary);
+      border-radius: 8px;
+      box-shadow: 0 0 30px rgba(0, 204, 255, 0.3);
+    }
+
+    /* Terminal Section */
+    .section {
+      margin: 40px 0;
+      padding: 30px;
+      background: rgba(28, 28, 28, 0.7);
+      border: 2px solid var(--secondary);
+      border-radius: 8px;
+    }
+
+    .section h2 {
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--matrix-green);
+      margin-bottom: 20px;
+    }
+
+    .hack-btn {
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      color: var(--accent);
+      border: none;
+      padding: 12px 24px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1em;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-top: 15px;
+    }
+
+    .hack-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(0, 204, 255, 0.4);
+    }
+
+    .hack-output {
+      margin-top: 20px;
+      display: none;
+    }
+
+    .hack-output.active {
+      display: block;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+      .nav-list {
+        gap: 20px;
+      }
+      
+      .nav-link {
+        padding: 6px 12px;
+        font-size: 0.9em;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .header-container {
+        height: 60px;
+        padding: 0 16px;
+      }
+      
+      .nav-section {
+        display: none;
+      }
+      
+      .mobile-menu-toggle {
+        display: flex;
+      }
+      
+      .search-box {
+        width: 280px;
+        right: -20px;
+      }
+      
+      .logo-primary {
+        font-size: 1.2em;
+      }
+
+      .hero {
+        padding: 100px 10px 80px;
+      }
+
+      .hero h1 { 
+        font-size: 3em; 
+      }
+
+      .matrix-animation { 
+        font-size: 1.2em; 
+      }
+
+      .blog-container { 
+        padding: 40px 10px; 
+      }
+
+      .blog-container h1 { 
+        font-size: 1.8em; 
+      }
+
+      .terminal-content { 
+        font-size: 0.9em; 
+      }
+
+      .newsletter-container input[type="email"] { 
+        width: 90%; 
+      }
+    }
+
+    @media (max-width: 480px) {
+      .header-container {
+        height: 56px;
+        padding: 0 12px;
+      }
+      
+      .search-box {
+        width: calc(100vw - 40px);
+        right: auto;
+        left: 12px;
+      }
+      
+      .cta-button {
+        padding: 10px 20px;
+        font-size: 0.85em;
+      }
+      
+      .mobile-menu {
+        width: 100vw;
+        max-width: none;
+      }
+
+      .hero h1 { 
+        font-size: 2em; 
+      }
+
+      .matrix-animation { 
+        font-size: 1em; 
+      }
+
+      .hero h2 { 
+        font-size: 1.2em; 
+      }
+
+      .btn-cta { 
+        font-size: 1em; 
+        padding: 10px 20px; 
+      }
+
+      .blog-container h1 { 
+        font-size: 1.8em; 
+      }
+
+      .terminal-content { 
+        font-size: 0.9em; 
+      }
+
+      .newsletter-container input[type="email"] { 
+        width: 90%; 
+      }
+
+      .social-share a {
+        display: block;
+        margin: 10px auto;
+        width: 80%;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { 
+        animation: none !important; 
+        transition: none !important; 
+      }
+    }
+  </style>
 </head>
-<body>
+<body data-page="life-advice-young-men">
   <!-- Preloader -->
   <div id="preloader">
-    <div class="loader">Initializing Tzeptosoft...</div>
+    <div class="loader">Initializing Tzeptosoft... 🚀</div>
   </div>
 
-  <!-- Background Effects -->
-  <div id="galaxy-bg"></div>
-  <div id="matrix-bg"></div>
-  <div id="particles"></div>
-  <div id="cursor-trail"></div>
+  <!-- Professional Header - Consistent with all pages -->
+  <header class="main-header">
+    <div class="header-container">
+      <!-- Logo Section -->
+      <div class="logo-section">
+        <a href="/index.html" class="logo-wrapper" aria-label="Tzeptosoft Home">
+          <img src="/assets/images/tzeptosoft-logo.webp" alt="Tzeptosoft Logo" class="logo-image" width="48" height="48" loading="lazy">
+          <div class="logo-text">
+            <span class="logo-primary">TZEPTOSOFT</span>
+            <span class="logo-subtitle">Forging Future Kings</span>
+          </div>
+        </a>
+      </div>
 
-  <!-- Hero Section -->
-  <div id="hero"></div>
+      <!-- Navigation -->
+      <nav class="nav-section" role="navigation" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="/index.html" class="nav-link" data-page="home">New? Start Here</a>
+          </li>
+          <li class="nav-item">
+            <a href="/pages/blog.html" class="nav-link" data-page="blog">Blog Archives</a>
+          </li>
+          <li class="nav-item">
+            <a href="/pages/lessons" class="nav-link" data-page="lessons">Tzeptosoft Products</a>
+          </li>
+          <li class="nav-item">
+            <a href="/pages/contact-us.html" class="nav-link" data-page="Tzeptosoft">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <a href="/pages/about.html" class="nav-link" data-page="about">About</a>
+          </li>
+        </ul>
+      </nav>
 
-  <!-- Navbar -->
-  <div id="navbar"></div>
-
-  <!-- Blog Post Content -->
-  <div class="blog-container">
-    <div id="blog-header"></div>
-    <main>
-      <article>
-        <img src="/assets/images/tzeptosofnt-logo.webp" alt="Life advice for young men" width="80" height="40" loading="lazy" class="featured-image">
-        <p><em>The world doesn't hand over power to the soft-hearted. It rewards the prepared, the ruthless, and the driven. If you're 18 or anywhere in your early youth, it's time to grow fangs, learn strategy, and lead with brutal precision.</em></p>
-        <p>Welcome to the elite path.</p>
-        <h2>1. Don’t Burn Bridges Without Strategic Reason</h2>
-        <p>In your youth, anger feels righteous. You want to explode, walk away, slam the door. But remember this: Every relationship you scorch might be one you’ll need later. Life isn’t linear, and power often flows through networks.</p>
-        <p>You don’t need to be everyone’s best friend. Just don’t make enemies you don’t need. Keep it cool, shake hands, and walk away with a nod_not a flamethrower. You’ll thank yourself in 10 years when that bridge becomes a lifeline.</p>
-        <h2>2. Live Life Like a King, Not a Pawn</h2>
-        <p>Most people are sheep. Your parents want you to be safe. Your friends secretly don’t want you to outshine them. Your girl wants stability. Society? It wants your obedience.</p>
-        <p>But you? You need to want freedom.</p>
-        <p>This is your life. Yours alone. If you live on someone else's terms, you’ll always be a character in their story, not the author of your own.</p>
-        <p>Take advice, but wear the crown. Make the call. Take the blame. Own the reward.</p>
-        <h2>3. Read Like Your Life Depends on It</h2>
-        <p>Because it does. Reading is mental steroids.</p>
-        <p>Books, blogs, forums_not the junk mainstream news but wisdom from people who’ve built empires, survived wars, and walked paths you’re about to tread.</p>
-        <p>Reading condenses decades into days. Skip it and you’ll learn everything the hard way. Read it and you’ll play chess while others play checkers.</p>
-        <h2>4. Don’t Backpack Through Your Prime Years</h2>
-        <p>Travel is fun. But turning your 20s into an endless travel vlog is a delusion.</p>
-        <p>Your empire needs a capital. You need roots to build, to network, to scale.</p>
-        <p>Take short trips. Soak in culture. But return to base. Your 20s are for war, not wanderlust. Build now, roam later_in style, not squalor.</p>
-        <h2>5. Sculpt Your Body Like a Machine</h2>
-        <p>Your body is your armor. Treat it with tactical precision.</p>
-        <p>Lift weights_properly. Stretch daily. Fix posture. Get sun. Take cod liver oil. Sleep like it’s your job. Burn fat. Do cardio. Get LASIK. Eliminate stress. Meditate.</p>
-        <p>People treat you based on how you look. Be the man who walks into a room and owns it with his presence before he speaks a word.</p>
-        <h2>6. Ask. Go. Strike.</h2>
-        <p>Want something? Go get it.</p>
-        <p>Ask her out. Launch the business. Apply for that thing. Speak up in the room.</p>
-        <p>The fear of judgment is a parasite. Nobody cares about you enough to remember your failures. Let that liberate you.</p>
-        <p>Fail fast. Adjust faster. No regrets_just redirection.</p>
-        <h2>7. Money Is a Tool, Not a Trophy</h2>
-        <p>Don’t blow your cash to flex for nobodies. Don’t fall for consumer debt traps.</p>
-        <p>Borrow for creation, not consumption. Save and invest before you spend. Build assets that earn while you sleep.</p>
-        <p>The trick isn’t working for money. It’s making money work for you.</p>
-        <h2>8. Choose Your Soundtrack Wisely</h2>
-        <p>Music is mental programming.</p>
-        <p>If you’re listening to sad, weak, self-pitying songs, you’re slowly killing your drive. Replace it with music that fuels you_warrior energy only.</p>
-        <p>Every time you press play, ask yourself: is this making me sharper or softer?</p>
-        <h2>9. Ditch Victimhood. Embrace Power.</h2>
-        <p>The world owes you nothing. And the sooner you realize that, the faster you’ll grow.</p>
-        <p>Leftist ideology wants you to blame. It seduces you into weakness. But no matter the system or excuse, strength wins.</p>
-        <p>You can cry, or you can conquer.</p>
-        <p>Lift. Lead. Think. Own your life. The universe doesn’t care about your feelings. It rewards action.</p>
-        <h2>10. Start Now_This Second</h2>
-        <p>Tomorrow is a scam. Motivation is a myth. All you have is this moment. If you're reading this with fire in your chest, act now.</p>
-        <p>Create the account. Hit the gym. Build the website. Cut the toxic people.</p>
-        <p>Action today is momentum tomorrow. Start now and stack wins.</p>
-        <h2>11. Build Ruthless Discipline</h2>
-        <p>Discipline is the kingmaker. The man who does what must be done, even when he doesn’t feel like it, wins.</p>
-        <p>Schedule your day. Prioritize your mission. Cut distractions. Set standards so high they scare your enemies and inspire your allies.</p>
-        <p>Don’t just do hard things_become the kind of man who thrives on them.</p>
-        <h2>12. Don’t Wait to Be Told What to Do</h2>
-        <p>Instructions are for followers. Initiative is for leaders.</p>
-        <p>Solve problems before they become visible. Move before others ask. Think five moves ahead.</p>
-        <p>The world bends to those who take control, not those who ask for permission.</p>
-        <h2>13. Train Your Mind Like a Warrior Monk</h2>
-        <p>Meditate. Reflect. Journal. Study strategy and stoicism.</p>
-        <p>Control your reactions. Analyze your patterns. Learn to delay gratification and deny emotional impulses.</p>
-        <p>Power belongs to the calm, not the chaotic.</p>
-        <h2>14. Choose Brotherhood Over Crowd Approval</h2>
-        <p>You need a solid inner circle. A wolf pack.</p>
-        <p>Ditch the fake friends, the gossips, the slackers. Find those who build, push, and grow. Men who train, read, invest, and dominate. That’s your tribe.</p>
-        <h2>15. Master a High-Income Skill</h2>
-        <p>Coding. Copywriting. Sales. Video editing. AI tools. Pick your weapon.</p>
-        <p>Refine it until it prints you money. Turn skill into leverage. Stack clients. Build your brand. Never be financially weak again.</p>
-        <h2>16. Control Your Digital World</h2>
-        <p>Social media is crack. Dopamine loops kill kings.</p>
-        <p>Delete what doesn't serve you. Block distractions. Follow no one. Be the man behind the curtain, not the clown dancing for likes.</p>
-        <h2>17. Women Are a Bonus, Not the Mission</h2>
-        <p>Purpose first. Purpose always.</p>
-        <p>The right women are drawn to gravity, not availability. Work on becoming the man they want, not chasing after validation like a dog.</p>
-        <p>She’s either on your team, or she’s in the way. Move accordingly.</p>
-        <h2>18. Learn the Art of War</h2>
-        <p>Read Machiavelli. Study Sun Tzu. Understand psychological warfare, power games, influence, and deception.</p>
-        <p>In a world where everyone is competing, ignorance of strategy is suicide.</p>
-        <h2>19. Dress Like a Man on a Mission</h2>
-        <p>Look sharp. Always.</p>
-        <p>No one needs to know your name_they should feel your presence. Style is your first line of offense. Be clean, fitted, and classic.</p>
-        <p>Suits, polos, tactical simplicity. Every thread should reflect intention.</p>
-        <h2>20. Respect Time Like a Scarce Resource</h2>
-        <p>Your time is the only currency you can’t get back.</p>
-        <p>Audit it. Cut leeches. Drop pointless hobbies. Spend it on creation, growth, and elevation.</p>
-        <p>Multiply your minutes. Outsource low-value tasks. Move fast.</p>
-        <h2>21. Die Empty</h2>
-        <p>When the game ends, make sure you left it all on the field.</p>
-        <p>Dreams chased. Risks taken. Power earned. Knowledge shared. Love given. Legacy built.</p>
-        <p>Don’t leave ideas in your mind. Turn them into empires.</p>
-        <hr>
-        <p>You were born alone. You’ll die alone. But in between, if you walk like a lion, fight like a god, and think like a general_you will live like a king.</p>
-        <p><strong>Stay lethal.</strong></p>
-        <p>With lots of love,<br>Clinton</p>
-      </article>
-
-      <!-- Terminal Section -->
-      <div class="section" id="terminal">
-        <h2>>>> INITIATE SEQUENCE</h2>
-        <div class="terminal-content">
-          <div class="terminal-line" data-text="> Initializing Tzeptosoft..."></div>
-          <div class="terminal-line" data-text="> Establishing secure connection..."></div>
-          <div class="terminal-line" data-text="> Connection status: SECURE ✅"></div>
-          <div class="terminal-line" data-text="> Welcome to the future."></div>
+      <!-- Action Buttons & Search -->
+      <div class="actions-section">
+        <!-- Search -->
+        <div class="search-container">
+          <button class="search-toggle" aria-label="Toggle search" aria-expanded="false" id="searchToggle">
+            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.35-4.35"></path>
+            </svg>
+          </button>
+          <div class="search-box" id="searchBox">
+            <input type="search" placeholder="Search commandments, tactics, wisdom..." class="search-input" aria-label="Search content">
+            <button class="search-submit" aria-label="Search">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.35-4.35"></path>
+              </svg>
+            </button>
+          </div>
         </div>
-        <button class="hack-btn" aria-label="Start hack simulation">Initiate Hack Simulation</button>
-        <div class="hack-output">
-          <div class="terminal-line" data-text="> Bypassing firewall..."></div>
-          <div class="terminal-line" data-text="> Access granted."></div>
+
+        <!-- CTA Button -->
+        <a href="mailto:tzeptosoft@gmail.com" class="cta-button" aria-label="Join Tzeptosoft">
+          <span class="button-text">Join the Elite</span>
+          <svg class="button-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false" id="mobileMenuToggle">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+      <div class="mobile-menu">
+        <div class="mobile-menu-header">
+          <a href="/index.html" class="mobile-logo">
+            <img src="/assets/images/tzeptosoft-logo.webp" alt="Tzeptosoft" width="40" height="40">
+            <span>TZEPTOSOFT</span>
+          </a>
+          <button class="mobile-menu-close" id="mobileMenuClose">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 6 6 18"></path>
+              <path d="m6 6 12 12"></path>
+            </svg>
+          </button>
+        </div>
+        <nav class="mobile-nav">
+          <a href="/index.html" class="mobile-nav-link">New? Start Here</a>
+          <a href="/pages/blog.html" class="mobile-nav-link">Blog Archives</a>
+          <a href="/pages/lessons" class="mobile-nav-link">Tzeptosoft Products</a>
+          <a href="/pages/contact-us.html" class="mobile-nav-link">Contact Us</a>
+          <a href="/pages/about.html" class="mobile-nav-link">About</a>
+        </nav>
+        <div class="mobile-actions">
+          <a href="mailto:tzeptosoft@gmail.com" class="mobile-cta-button">Join the Elite 🚀</a>
         </div>
       </div>
+    </div>
+  </header>
+
+  <div class="main-content">
+    <!-- Background Effects -->
+    <div id="galaxy-bg"></div>
+    <div id="matrix-bg"></div>
+    <div id="particles"></div>
+    <div id="cursor-trail"></div>
+
+    <!-- Hero Section -->
+    <div class="hero">
+      <h1>TZEPTOSOFT</h1>
+      <div class="matrix-animation typing">FORGING FUTURE KINGS</div>
+      <h2>21 Commandments for Young Men</h2>
+      <a href="mailto:tzeptosoft@gmail.com" class="btn-cta" aria-label="Contact Tzeptosoft">Join the Elite 💪</a>
+      
+      <!-- Holographic Elements -->
+      <div class="holo-element" style="top: 20%; left: 10%;"></div>
+      <div class="holo-element" style="top: 30%; right: 15%;"></div>
+      <div class="holo-element" style="bottom: 25%; left: 20%;"></div>
+      <div class="holo-element" style="bottom: 15%; right: 10%;"></div>
+    </div>
+
+    <!-- Blog Content -->
+    <div class="blog-container">
+      <header>
+        <h1>Life Advice for Young Men: 21 Commandments for the Future Kings</h1>
+        <div class="author-info">
+          <p class="author-name">Clinton | Tzeptosoft</p>
+          <img src="/assets/images/tzeptosoft-logo.webp" alt="Tzeptosoft Logo" class="author-logo" width="150" height="150" loading="lazy">
+          <p class="author-title">Architect of Elite Masculinity</p>
+        </div>
+        <hr>
+      </header>
 
       <div class="cta-container">
-        <h3 class="cta-title">Ready to Level Up?</h3>
-        <a href="/#contact" class="cta-button">Join the Elite</a>
+        <h3 class="cta-title">Ready to Become a King?</h3>
+        <a href="mailto:tzeptosoft@gmail.com" class="cta-button">Join the Elite Circle 🚀</a>
       </div>
 
-      <div class="social-share">
-        <h3>Share This Post</h3>
-        <a href="https://twitter.com/intent/tweet?url=https://tzeptosoft.com/blog/life-advice-for-young-men&text=21 Commandments for Young Men to become Future Kings! #TZEPTOSOFTElite" aria-label="Share on Twitter">Twitter</a>
-        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://tzeptosoft.com/blog/life-advice-for-young-men" aria-label="Share on LinkedIn">LinkedIn</a>
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https://tzeptosoft.com/blog/life-advice-for-young-men" aria-label="Share on Facebook">Facebook</a>
-        <a href="https://www.reddit.com/submit?url=https://tzeptosoft.com/blog/life-advice-for-young-men&title=Life Advice for Young Men: 21 Commandments for the Future Kings" aria-label="Share on Reddit">Reddit</a>
-        <a href="https://api.whatsapp.com/send?text=21 Commandments for Young Men to become Future Kings! https://tzeptosoft.com/blog/life-advice-for-young-men" aria-label="Share on WhatsApp">WhatsApp</a>
-      </div>
-    </main>
+      <main>
+        <article>
+          <img src="/assets/images/tzeptosoft-logo.webp" alt="Life advice for young men" width="80" height="40" loading="lazy" class="featured-image">
+          <p><em>The world doesn't hand over power to the soft-hearted. It rewards the prepared, the ruthless, and the driven. If you're 18 or anywhere in your early youth, it's time to grow fangs, learn strategy, and lead with brutal precision.</em></p>
+          <p>Welcome to the elite path.</p>
+          
+          <h2>1. Don't Burn Bridges Without Strategic Reason</h2>
+          <p>In your youth, anger feels righteous. You want to explode, walk away, slam the door. But remember this: Every relationship you scorch might be one you'll need later. Life isn't linear, and power often flows through networks.</p>
+          <p>You don't need to be everyone's best friend. Just don't make enemies you don't need. Keep it cool, shake hands, and walk away with a nod_not a flamethrower. You'll thank yourself in 10 years when that bridge becomes a lifeline.</p>
+          
+          <h2>2. Live Life Like a King, Not a Pawn</h2>
+          <p>Most people are sheep. Your parents want you to be safe. Your friends secretly don't want you to outshine them. Your girl wants stability. Society? It wants your obedience.</p>
+          <p>But you? You need to want freedom.</p>
+          <p>This is your life. Yours alone. If you live on someone else's terms, you'll always be a character in their story, not the author of your own.</p>
+          <p>Take advice, but wear the crown. Make the call. Take the blame. Own the reward.</p>
+          
+          <h2>3. Read Like Your Life Depends on It</h2>
+          <p>Because it does. Reading is mental steroids.</p>
+          <p>Books, blogs, forums_not the junk mainstream news but wisdom from people who've built empires, survived wars, and walked paths you're about to tread.</p>
+          <p>Reading condenses decades into days. Skip it and you'll learn everything the hard way. Read it and you'll play chess while others play checkers.</p>
+          
+          <h2>4. Don't Backpack Through Your Prime Years</h2>
+          <p>Travel is fun. But turning your 20s into an endless travel vlog is a delusion.</p>
+          <p>Your empire needs a capital. You need roots to build, to network, to scale.</p>
+          <p>Take short trips. Soak in culture. But return to base. Your 20s are for war, not wanderlust. Build now, roam later_in style, not squalor.</p>
+          
+          <h2>5. Sculpt Your Body Like a Machine</h2>
+          <p>Your body is your armor. Treat it with tactical precision.</p>
+          <p>Lift weights_properly. Stretch daily. Fix posture. Get sun. Take cod liver oil. Sleep like it's your job. Burn fat. Do cardio. Get LASIK. Eliminate stress. Meditate.</p>
+          <p>People treat you based on how you look. Be the man who walks into a room and owns it with his presence before he speaks a word.</p>
+          
+          <h2>6. Ask. Go. Strike.</h2>
+          <p>Want something? Go get it.</p>
+          <p>Ask her out. Launch the business. Apply for that thing. Speak up in the room.</p>
+          <p>The fear of judgment is a parasite. Nobody cares about you enough to remember your failures. Let that liberate you.</p>
+          <p>Fail fast. Adjust faster. No regrets_just redirection.</p>
+          
+          <h2>7. Money Is a Tool, Not a Trophy</h2>
+          <p>Don't blow your cash to flex for nobodies. Don't fall for consumer debt traps.</p>
+          <p>Borrow for creation, not consumption. Save and invest before you spend. Build assets that earn while you sleep.</p>
+          <p>The trick isn't working for money. It's making money work for you.</p>
+          
+          <h2>8. Choose Your Soundtrack Wisely</h2>
+          <p>Music is mental programming.</p>
+          <p>If you're listening to sad, weak, self-pitying songs, you're slowly killing your drive. Replace it with music that fuels you_warrior energy only.</p>
+          <p>Every time you press play, ask yourself: is this making me sharper or softer?</p>
+          
+          <h2>9. Ditch Victimhood. Embrace Power.</h2>
+          <p>The world owes you nothing. And the sooner you realize that, the faster you'll grow.</p>
+          <p>Leftist ideology wants you to blame. It seduces you into weakness. But no matter the system or excuse, strength wins.</p>
+          <p>You can cry, or you can conquer.</p>
+          <p>Lift. Lead. Think. Own your life. The universe doesn't care about your feelings. It rewards action.</p>
+          
+          <h2>10. Start Now_This Second</h2>
+          <p>Tomorrow is a scam. Motivation is a myth. All you have is this moment. If you're reading this with fire in your chest, act now.</p>
+          <p>Create the account. Hit the gym. Build the website. Cut the toxic people.</p>
+          <p>Action today is momentum tomorrow. Start now and stack wins.</p>
+          
+          <h2>11. Build Ruthless Discipline</h2>
+          <p>Discipline is the kingmaker. The man who does what must be done, even when he doesn't feel like it, wins.</p>
+          <p>Schedule your day. Prioritize your mission. Cut distractions. Set standards so high they scare your enemies and inspire your allies.</p>
+          <p>Don't just do hard things_become the kind of man who thrives on them.</p>
+          
+          <h2>12. Don't Wait to Be Told What to Do</h2>
+          <p>Instructions are for followers. Initiative is for leaders.</p>
+          <p>Solve problems before they become visible. Move before others ask. Think five moves ahead.</p>
+          <p>The world bends to those who take control, not those who ask for permission.</p>
+          
+          <h2>13. Train Your Mind Like a Warrior Monk</h2>
+          <p>Meditate. Reflect. Journal. Study strategy and stoicism.</p>
+          <p>Control your reactions. Analyze your patterns. Learn to delay gratification and deny emotional impulses.</p>
+          <p>Power belongs to the calm, not the chaotic.</p>
+          
+          <h2>14. Choose Brotherhood Over Crowd Approval</h2>
+          <p>You need a solid inner circle. A wolf pack.</p>
+          <p>Ditch the fake friends, the gossips, the slackers. Find those who build, push, and grow. Men who train, read, invest, and dominate. That's your tribe.</p>
+          
+          <h2>15. Master a High-Income Skill</h2>
+          <p>Coding. Copywriting. Sales. Video editing. AI tools. Pick your weapon.</p>
+          <p>Refine it until it prints you money. Turn skill into leverage. Stack clients. Build your brand. Never be financially weak again.</p>
+          
+          <h2>16. Control Your Digital World</h2>
+          <p>Social media is crack. Dopamine loops kill kings.</p>
+          <p>Delete what doesn't serve you. Block distractions. Follow no one. Be the man behind the curtain, not the clown dancing for likes.</p>
+          
+          <h2>17. Women Are a Bonus, Not the Mission</h2>
+          <p>Purpose first. Purpose always.</p>
+          <p>The right women are drawn to gravity, not availability. Work on becoming the man they want, not chasing after validation like a dog.</p>
+          <p>She's either on your team, or she's in the way. Move accordingly.</p>
+          
+          <h2>18. Learn the Art of War</h2>
+          <p>Read Machiavelli. Study Sun Tzu. Understand psychological warfare, power games, influence, and deception.</p>
+          <p>In a world where everyone is competing, ignorance of strategy is suicide.</p>
+          
+          <h2>19. Dress Like a Man on a Mission</h2>
+          <p>Look sharp. Always.</p>
+          <p>No one needs to know your name_they should feel your presence. Style is your first line of offense. Be clean, fitted, and classic.</p>
+          <p>Suits, polos, tactical simplicity. Every thread should reflect intention.</p>
+          
+          <h2>20. Respect Time Like a Scarce Resource</h2>
+          <p>Your time is the only currency you can't get back.</p>
+          <p>Audit it. Cut leeches. Drop pointless hobbies. Spend it on creation, growth, and elevation.</p>
+          <p>Multiply your minutes. Outsource low-value tasks. Move fast.</p>
+          
+          <h2>21. Die Empty</h2>
+          <p>When the game ends, make sure you left it all on the field.</p>
+          <p>Dreams chased. Risks taken. Power earned. Knowledge shared. Love given. Legacy built.</p>
+          <p>Don't leave ideas in your mind. Turn them into empires.</p>
+          
+          <hr>
+          <p>You were born alone. You'll die alone. But in between, if you walk like a lion, fight like a god, and think like a general_you will live like a king.</p>
+          <p><strong>Stay lethal.</strong></p>
+          <p class="signature">With lots of love,<br>Clinton</p>
+        </article>
+
+        <!-- Terminal Section -->
+        <div class="section" id="terminal">
+          <h2>>>> INITIATE SEQUENCE</h2>
+          <div class="terminal-content">
+            <div class="terminal-line" data-text="> Initializing Kingmaker Protocol..."></div>
+            <div class="terminal-line" data-text="> Loading 21 Commandments..."></div>
+            <div class="terminal-line" data-text="> Access granted: ELITE LEVEL"></div>
+            <div class="terminal-line" data-text="> Welcome to the brotherhood of kings."></div>
+          </div>
+          <button class="hack-btn" aria-label="Start elite initiation">Initiate Elite Protocol</button>
+          <div class="hack-output">
+            <div class="terminal-line" data-text="> Scanning for potential..."></div>
+            <div class="terminal-line" data-text="> Potential detected: EXTRAORDINARY"></div>
+            <div class="terminal-line" data-text="> Welcome, future king. The throne awaits."></div>
+          </div>
+        </div>
+
+        <!-- Newsletter -->
+        <div class="newsletter-container">
+          <h3>Join the Elite Newsletter 🔥</h3>
+          <p>Weekly wisdom to forge kings. No fluff, no weakness—only elite tactics for the path ahead.</p>
+          <input type="email" placeholder="Enter your royal email" aria-label="Email for newsletter">
+          <button type="button">Subscribe to Power 🚀</button>
+        </div>
+
+        <div class="social-share">
+          <h3>Share These Commandments 🗣️</h3>
+          <a href="https://twitter.com/intent/tweet?url=https://tzeptosoft.com/blog/life-advice-for-young-men&text=21 Commandments for Young Men to become Future Kings! #TZEPTOSOFTElite #FutureKings" aria-label="Share on Twitter">Twitter</a>
+          <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://tzeptosoft.com/blog/life-advice-for-young-men" aria-label="Share on LinkedIn">LinkedIn</a>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://tzeptosoft.com/blog/life-advice-for-young-men" aria-label="Share on Facebook">Facebook</a>
+          <a href="https://www.reddit.com/submit?url=https://tzeptosoft.com/blog/life-advice-for-young-men&title=Life Advice for Young Men: 21 Commandments for the Future Kings" aria-label="Share on Reddit">Reddit</a>
+          <a href="https://api.whatsapp.com/send?text=21 Commandments for Young Men to become Future Kings! https://tzeptosoft.com/blog/life-advice-for-young-men" aria-label="Share on WhatsApp">WhatsApp</a>
+        </div>
+      </main>
+    </div>
+
+    <footer>
+      <p>© 2025 Tzeptosoft | All Rights Fucking Reserved 🔥</p>
+      
+    </footer>
   </div>
 
-  <!-- Footer -->
-  <div id="footer"></div>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Mobile menu functionality
+      const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+      const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+      const mobileMenuClose = document.getElementById('mobileMenuClose');
+      const searchToggle = document.getElementById('searchToggle');
+      const searchBox = document.getElementById('searchBox');
+      const searchInput = document.querySelector('.search-input');
+      const hackBtn = document.querySelector('.hack-btn');
+      const hackOutput = document.querySelector('.hack-output');
 
-  <script src="/assets/js/blog-script.js"></script>
+      // Mobile menu toggle
+      mobileMenuToggle?.addEventListener('click', () => {
+        mobileMenuOverlay?.classList.toggle('active');
+        document.body.style.overflow = mobileMenuOverlay?.classList.contains('active') ? 'hidden' : '';
+      });
+
+      mobileMenuClose?.addEventListener('click', () => {
+        mobileMenuOverlay?.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+
+      mobileMenuOverlay?.addEventListener('click', (e) => {
+        if (e.target === mobileMenuOverlay) {
+          mobileMenuOverlay.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      });
+
+      // Search functionality
+      searchToggle?.addEventListener('click', () => {
+        const isActive = searchBox?.classList.contains('active');
+        searchBox?.classList.toggle('active');
+        searchToggle?.setAttribute('aria-expanded', !isActive);
+        if (!isActive && searchInput) searchInput.focus();
+      });
+
+      // Escape key to close menus
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          searchBox?.classList.remove('active');
+          searchToggle?.setAttribute('aria-expanded', 'false');
+          mobileMenuOverlay?.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      });
+
+      // Remove preloader
+      window.addEventListener('load', () => {
+        document.getElementById('preloader').style.display = 'none';
+      });
+
+      // Matrix animation
+      const matrixAnimation = document.querySelector('.matrix-animation');
+      function startMatrixAnimation() {
+        matrixAnimation.textContent = '';
+        matrixAnimation.classList.remove('typing');
+        void matrixAnimation.offsetWidth;
+        matrixAnimation.textContent = 'FORGING FUTURE KINGS';
+        matrixAnimation.classList.add('typing');
+      }
+      startMatrixAnimation();
+      setInterval(startMatrixAnimation, 4000);
+
+      // Header scroll effect
+      let lastScrollY = window.scrollY;
+      window.addEventListener('scroll', () => {
+        const header = document.querySelector('.main-header');
+        const currentScrollY = window.scrollY;
+        if (currentScrollY > 100) {
+          header?.classList.add('scrolled');
+        } else {
+          header?.classList.remove('scrolled');
+        }
+        lastScrollY = currentScrollY;
+      });
+
+      // Matrix background characters
+      const matrixBg = document.getElementById('matrix-bg');
+      for (let i = 0; i < 50; i++) {
+        const char = document.createElement('div');
+        char.classList.add('matrix-char');
+        char.textContent = String.fromCharCode(33 + Math.random() * 94);
+        char.style.left = Math.random() * 100 + 'vw';
+        char.style.animationDelay = Math.random() * 5 + 's';
+        matrixBg.appendChild(char);
+      }
+
+      // Particles
+      const particleContainer = document.getElementById('particles');
+      for (let i = 0; i < 50; i++) {
+        const particle = document.createElement('div');
+        particle.classList.add('particle');
+        particle.style.left = Math.random() * 100 + 'vw';
+        particle.style.top = Math.random() * 100 + 'vh';
+        particle.style.animationDelay = Math.random() * 3 + 's';
+        particleContainer.appendChild(particle);
+      }
+
+      // Cursor trail
+      const cursorTrail = document.getElementById('cursor-trail');
+      document.addEventListener('mousemove', (e) => {
+        cursorTrail.style.left = e.clientX - 15 + 'px';
+        cursorTrail.style.top = e.clientY - 15 + 'px';
+      });
+
+      // Terminal animation
+      const terminalLines = document.querySelectorAll('.terminal-line');
+      let delay = 0;
+      terminalLines.forEach(line => {
+        line.textContent = '';
+        const text = line.dataset.text;
+        let charIndex = 0;
+        setTimeout(() => {
+          const type = () => {
+            if (charIndex < text.length) {
+              line.textContent += text[charIndex];
+              charIndex++;
+              setTimeout(type, 35);
+            } else {
+              line.classList.add('typed');
+            }
+          };
+          type();
+        }, delay);
+        delay += 1000;
+      });
+
+      // Hack button functionality
+      hackBtn?.addEventListener('click', () => {
+        hackBtn.disabled = true;
+        hackBtn.textContent = 'Protocol Active...';
+        hackOutput.classList.add('active');
+        
+        const hackLines = hackOutput.querySelectorAll('.terminal-line');
+        let hackDelay = 0;
+        hackLines.forEach(line => {
+          line.textContent = '';
+          const text = line.dataset.text;
+          let charIndex = 0;
+          setTimeout(() => {
+            const type = () => {
+              if (charIndex < text.length) {
+                line.textContent += text[charIndex];
+                charIndex++;
+                setTimeout(type, 30);
+              } else {
+                line.classList.add('typed');
+              }
+            };
+            type();
+          }, hackDelay);
+          hackDelay += 1500;
+        });
+        
+        setTimeout(() => {
+          hackBtn.textContent = 'Protocol Complete ✅';
+          hackBtn.style.background = 'linear-gradient(90deg, #00CC00, #00FF00)';
+        }, 5000);
+      });
+
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href');
+          if (targetId === '#') return;
+          
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 100,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+
+      // Newsletter form
+      const newsletterBtn = document.querySelector('.newsletter-container button');
+      const newsletterInput = document.querySelector('.newsletter-container input');
+      
+      newsletterBtn?.addEventListener('click', () => {
+        if (newsletterInput.value && newsletterInput.value.includes('@')) {
+          newsletterBtn.innerHTML = '<i class="fas fa-check"></i> Royal Access Granted!';
+          newsletterBtn.style.background = 'linear-gradient(90deg, #00CC00, #00FF00)';
+          newsletterInput.value = '';
+          setTimeout(() => {
+            newsletterBtn.innerHTML = 'Subscribe to Power 🚀';
+            newsletterBtn.style.background = '';
+          }, 3000);
+        }
+      });
+      
+      newsletterInput?.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+          newsletterBtn.click();
+        }
+      });
+    });
+  </script>
 </body>
 </html>

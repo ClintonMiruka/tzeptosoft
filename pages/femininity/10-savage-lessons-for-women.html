@@ -3,41 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="💥 Tzeptosoft’s raw, no-bullshit guide for women. 10 savage lessons to ditch the feminist lies, secure a high-value man, and build a legendary life. From biology to family, this is your blueprint to fucking win! 🔥">
-  <meta name="keywords" content="women’s advice, self-improvement, marriage, family, feminine value, Tzeptosoft">
+  <meta name="description" content="💥 Tzeptosoft's raw, no-bullshit guide for women. 10 savage lessons to ditch the feminist lies, secure a high-value man, and build a legendary life. From biology to family, this is your blueprint to fucking win! 🔥">
+  <meta name="keywords" content="women's advice, self-improvement, marriage, family, feminine value, Tzeptosoft">
   <meta name="author" content="Clinton | Tzeptosoft">
-  <!-- Open Graph Tags -->
   <meta property="og:title" content="10 Savage Lessons for Women | Tzeptosoft">
-  <meta property="og:description" content="💥 Tzeptosoft’s raw, no-bullshit guide for women. 10 savage lessons to ditch feminist lies, secure a high-value man, and build a legendary life. Your blueprint to fucking win! 🔥">
+  <meta property="og:description" content="💥 Tzeptosoft's raw, no-bullshit guide for women. 10 savage lessons to ditch feminist lies, secure a high-value man, and build a legendary life. Your blueprint to fucking win! 🔥">
   <meta property="og:image" content="https://tzeptosoft.com/assets/womens-guide.webp">
   <meta property="og:url" content="https://tzeptosoft.com/blog/womens-lessons">
   <meta property="og:type" content="article">
-  <!-- Twitter Card Tags -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="10 Savage Lessons for Women | Tzeptosoft">
-  <meta name="twitter:description" content="💥 Tzeptosoft’s raw, no-bullshit guide for women. 10 savage lessons to ditch feminist lies, secure a high-value man, and build a legendary life. Your blueprint to fucking win! 🔥">
+  <meta name="twitter:description" content="💥 Tzeptosoft's raw, no-bullshit guide for women. 10 savage lessons to ditch feminist lies, secure a high-value man, and build a legendary life. Your blueprint to fucking win! 🔥">
   <meta name="twitter:image" content="https://tzeptosoft.com/assets/womens-guide.webp">
   <title>10 Savage Lessons for Women | Tzeptosoft</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Mono:wght@700&family=Orbitron:wght@900&family=JetBrains+Mono:wght@400;700&display=swap">
   <link rel="icon" type="image/webp" href="/assets/favicon.webp">
-  <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     "headline": "10 Savage Lessons for Women",
-    "description": "💥 Tzeptosoft’s raw, no-bullshit guide for women. 10 savage lessons to ditch the feminist lies, secure a high-value man, and build a legendary life. From biology to family, this is your blueprint to fucking win! 🔥",
-    "author": {
-      "@type": "Person",
-      "name": "Clinton"
-    },
+    "description": "💥 Tzeptosoft's raw, no-bullshit guide for women. 10 savage lessons to ditch the feminist lies, secure a high-value man, and build a legendary life. From biology to family, this is your blueprint to fucking win! 🔥",
+    "author": { "@type": "Person", "name": "Clinton" },
     "publisher": {
       "@type": "Organization",
       "name": "Tzeptosoft",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://tzeptosoft.com/assets/logo.webp"
-      }
+      "logo": { "@type": "ImageObject", "url": "https://tzeptosoft.com/assets/logo.webp" }
     },
     "datePublished": "2025-05-02",
     "image": "https://tzeptosoft.com/assets/womens-guide.webp",
@@ -53,6 +44,457 @@
       --text-dark: #FFFFFF;
       --matrix-green: #00FF00;
     }
+
+    /* Header Styles */
+    .main-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(11, 15, 26, 0.95);
+      backdrop-filter: blur(20px);
+      border-bottom: 2px solid transparent;
+      animation: headerSlideIn 0.6s ease-out;
+      box-shadow: 0 8px 32px rgba(0, 102, 204, 0.1);
+    }
+
+    @keyframes headerSlideIn {
+      from {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .main-header.scrolled {
+      border-bottom-color: rgba(0, 204, 255, 0.2);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 70px;
+      position: relative;
+    }
+
+    .logo-section {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .logo-wrapper:hover {
+      transform: scale(1.05);
+    }
+
+    .logo-image {
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(0, 204, 255, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    .logo-primary {
+      font-size: 1.4em;
+      font-weight: 900;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-shadow: 0 0 10px rgba(0, 102, 204, 0.5);
+    }
+
+    .logo-subtitle {
+      font-size: 0.75em;
+      color: var(--secondary);
+      font-weight: 600;
+      opacity: 0.8;
+      margin-top: 2px;
+    }
+
+    .nav-section {
+      display: flex;
+    }
+
+    .nav-list {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .nav-item {
+      position: relative;
+    }
+
+    .nav-link {
+      display: block;
+      padding: 8px 16px;
+      color: var(--text-dark);
+      text-decoration: none;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 0.95em;
+      position: relative;
+      transition: all 0.3s ease;
+      border-radius: 6px;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--secondary);
+      background: rgba(0, 204, 255, 0.1);
+      box-shadow: 0 0 20px rgba(0, 204, 255, 0.2);
+      transform: translateY(-2px);
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 80%;
+    }
+
+    .actions-section {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .search-container {
+      position: relative;
+    }
+
+    .search-toggle {
+      background: none;
+      border: 2px solid rgba(0, 204, 255, 0.3);
+      border-radius: 8px;
+      padding: 8px;
+      color: var(--secondary);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .search-toggle:hover {
+      border-color: var(--secondary);
+      box-shadow: 0 0 20px rgba(0, 204, 255, 0.4);
+      transform: scale(1.05);
+    }
+
+    .search-icon {
+      width: 20px;
+      height: 20px;
+    }
+
+    .search-box {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 300px;
+      background: rgba(28, 28, 28, 0.95);
+      border: 2px solid var(--secondary);
+      border-radius: 8px;
+      padding: 12px;
+      margin-top: 8px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 40px rgba(0, 102, 204, 0.2);
+      z-index: 1001;
+    }
+
+    .search-box.active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .search-input {
+      width: 100%;
+      background: rgba(18, 18, 18, 0.8);
+      border: 1px solid rgba(0, 204, 255, 0.3);
+      border-radius: 6px;
+      padding: 10px 12px;
+      color: var(--text-dark);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.9em;
+    }
+
+    .search-input::placeholder {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .search-input:focus {
+      outline: none;
+      border-color: var(--secondary);
+      box-shadow: 0 0 0 3px rgba(0, 204, 255, 0.2);
+    }
+
+    .search-submit {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: var(--secondary);
+      cursor: pointer;
+      padding: 4px;
+      width: 20px;
+      height: 20px;
+    }
+
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: var(--accent);
+      text-decoration: none;
+      border-radius: 8px;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 600;
+      font-size: 0.9em;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(0, 102, 204, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: left 0.5s;
+    }
+
+    .cta-button:hover::before {
+      left: 100%;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(0, 102, 204, 0.4);
+    }
+
+    .button-icon {
+      width: 16px;
+      height: 16px;
+      transition: transform 0.3s ease;
+    }
+
+    .cta-button:hover .button-icon {
+      transform: translateX(4px);
+    }
+
+    .mobile-menu-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 30px;
+      height: 30px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+      z-index: 1001;
+    }
+
+    .hamburger-line {
+      width: 100%;
+      height: 3px;
+      background: var(--secondary);
+      border-radius: 2px;
+      transition: all 0.3s ease;
+      transform-origin: center;
+    }
+
+    .mobile-menu-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: rgba(11, 15, 26, 0.98);
+      backdrop-filter: blur(20px);
+      z-index: 999;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.4s ease;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .mobile-menu-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .mobile-menu {
+      width: 320px;
+      max-width: 90vw;
+      background: linear-gradient(135deg, rgba(18, 18, 18, 0.95), rgba(11, 15, 26, 0.95));
+      border-left: 3px solid var(--secondary);
+      padding: 0;
+      transform: translateX(100%);
+      transition: transform 0.4s ease;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+    }
+
+    .mobile-menu-overlay.active .mobile-menu {
+      transform: translateX(0);
+    }
+
+    .mobile-menu-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 20px;
+      border-bottom: 1px solid rgba(0, 204, 255, 0.2);
+    }
+
+    .mobile-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-dark);
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.2em;
+    }
+
+    .mobile-menu-close {
+      background: none;
+      border: none;
+      color: var(--secondary);
+      cursor: pointer;
+      padding: 8px;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .mobile-menu-close:hover {
+      background: rgba(0, 204, 255, 0.1);
+      box-shadow: 0 0 20px rgba(0, 204, 255, 0.2);
+    }
+
+    .mobile-nav {
+      padding: 20px 0;
+      flex: 1;
+    }
+
+    .mobile-nav-link {
+      display: block;
+      padding: 16px 24px;
+      color: var(--text-dark);
+      text-decoration: none;
+      font-family: 'Inter', sans-serif;
+      font-size: 1.1em;
+      font-weight: 500;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .mobile-nav-link::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 0;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      transition: width 0.3s ease;
+      z-index: -1;
+    }
+
+    .mobile-nav-link:hover::before,
+    .mobile-nav-link.active::before {
+      width: 100%;
+    }
+
+    .mobile-nav-link:hover,
+    .mobile-nav-link.active {
+      color: var(--accent);
+      padding-left: 32px;
+    }
+
+    .mobile-actions {
+      padding: 20px 24px;
+      border-top: 1px solid rgba(0, 204, 255, 0.2);
+    }
+
+    .mobile-cta-button {
+      display: inline-block;
+      width: 100%;
+      padding: 16px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: var(--accent);
+      text-decoration: none;
+      border-radius: 8px;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 600;
+      text-align: center;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(0, 102, 204, 0.3);
+    }
+
+    .mobile-cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(0, 102, 204, 0.4);
+    }
+
     body {
       margin: 0;
       padding: 0;
@@ -62,6 +504,11 @@
       line-height: 1.6;
       overflow-x: hidden;
     }
+
+    .main-content {
+      position: relative;
+    }
+
     #preloader {
       position: fixed;
       top: 0;
@@ -74,15 +521,18 @@
       justify-content: center;
       z-index: 9999;
     }
+
     .loader {
       font-family: 'JetBrains Mono', monospace;
       color: var(--secondary);
       font-size: 1.5em;
       animation: blinkCaret 0.5s step-end infinite;
     }
+
     @keyframes blinkCaret {
       50% { border-color: transparent; }
     }
+
     #galaxy-bg {
       position: fixed;
       top: 0;
@@ -93,10 +543,12 @@
       z-index: -3;
       animation: rotateGalaxy 60s infinite linear;
     }
+
     @keyframes rotateGalaxy {
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
     }
+
     #matrix-bg {
       position: fixed;
       top: 0;
@@ -106,6 +558,7 @@
       z-index: -2;
       opacity: 0.7;
     }
+
     .matrix-char {
       position: absolute;
       font-family: 'JetBrains Mono', monospace;
@@ -114,10 +567,12 @@
       opacity: 0.8;
       animation: matrix-fall 5s linear infinite;
     }
+
     @keyframes matrix-fall {
       0% { transform: translateY(-100vh); opacity: 0.8; }
       100% { transform: translateY(100vh); opacity: 0; }
     }
+
     #particles {
       position: fixed;
       top: 0;
@@ -126,6 +581,7 @@
       height: 100%;
       z-index: -1;
     }
+
     .particle {
       position: absolute;
       width: 5px;
@@ -134,11 +590,13 @@
       border-radius: 50%;
       animation: drift 10s infinite linear;
     }
+
     @keyframes drift {
       0% { transform: translate(0, 0); opacity: 0.5; }
       50% { opacity: 1; }
       100% { transform: translate(100px, 100px); opacity: 0.5; }
     }
+
     #cursor-trail {
       position: fixed;
       width: 30px;
@@ -146,16 +604,19 @@
       background: radial-gradient(circle, var(--secondary), transparent);
       border-radius: 50%;
       pointer-events: none;
-      z-index: 1000;
+      z-index: 100;
       transition: all 0.1s ease;
     }
+
     .hero {
       text-align: center;
-      padding: 100px 20px;
+      padding: 120px 20px 100px;
       background: rgba(18, 18, 18, 0.9);
       position: relative;
       z-index: 1;
+      margin-top: 0;
     }
+
     .hero h1 {
       font-size: 5em;
       font-family: 'Orbitron', sans-serif;
@@ -166,6 +627,7 @@
       animation: gradientShift 3s ease infinite;
       margin-bottom: 0;
     }
+
     .matrix-animation {
       font-family: 'JetBrains Mono', monospace;
       font-size: 1.5em;
@@ -176,29 +638,35 @@
       white-space: nowrap;
       display: inline-block;
     }
+
     .matrix-animation.typing {
       animation: typeMatrix 2s steps(20) forwards, glitch 0.1s infinite alternate;
     }
+
     @keyframes typeMatrix {
       from { width: 0; }
       to { width: 100%; }
     }
+
     @keyframes glitch {
       0% { transform: translate(0); opacity: 1; }
       50% { transform: translate(2px, -2px); opacity: 0.8; }
       100% { transform: translate(-2px, 2px); opacity: 0.9; }
     }
+
     @keyframes gradientShift {
       0% { background-position: 0%; }
       50% { background-position: 100%; }
       100% { background-position: 0%; }
     }
+
     .hero h2 {
       font-size: 1.8em;
       color: var(--secondary);
       text-shadow: 0 0 10px var(--secondary);
       margin-top: 20px;
     }
+
     .btn-cta {
       background: linear-gradient(90deg, var(--primary), var(--secondary));
       color: var(--accent);
@@ -211,15 +679,18 @@
       margin-top: 20px;
       display: inline-block;
     }
+
     .btn-cta:hover {
       background: linear-gradient(90deg, var(--secondary), var(--primary));
       transform: scale(1.1);
     }
+
     @keyframes pulse {
       0% { box-shadow: 0 0 0 0 rgba(0, 102, 204, 0.4); }
       70% { box-shadow: 0 0 0 10px rgba(0, 102, 204, 0); }
       100% { box-shadow: 0 0 0 0 rgba(0, 102, 204, 0); }
     }
+
     .holo-element {
       position: absolute;
       width: 70px;
@@ -228,11 +699,13 @@
       border-radius: 50%;
       animation: float 4s infinite ease-in-out;
     }
+
     @keyframes float {
       0% { transform: translateY(0); opacity: 0.5; }
       50% { transform: translateY(-30px); opacity: 1; }
       100% { transform: translateY(0); opacity: 0.5; }
     }
+
     .blog-container {
       padding: 80px 20px;
       max-width: 900px;
@@ -241,11 +714,13 @@
       border: 3px solid var(--secondary);
       animation: borderGlow 2s infinite;
     }
+
     @keyframes borderGlow {
       0% { border-color: var(--primary); }
       50% { border-color: var(--secondary); }
       100% { border-color: var(--primary); }
     }
+
     .blog-container h1 {
       font-size: 2.5em;
       color: var(--secondary);
@@ -253,20 +728,36 @@
       font-family: 'Orbitron', sans-serif;
       text-align: center;
     }
+
     .blog-container h2 {
       font-size: 1.8em;
       color: var(--secondary);
       font-family: 'Orbitron', sans-serif;
       margin-top: 2em;
     }
+
+    .blog-container h3 {
+      font-size: 1.4em;
+      color: var(--secondary);
+      font-family: 'Orbitron', sans-serif;
+      margin-top: 1.5em;
+    }
+
     .blog-container p {
       color: var(--text-dark);
       font-size: 1.2em;
     }
+
+    .highlight {
+      color: var(--secondary);
+      font-weight: 600;
+    }
+
     .blog-container ul {
       list-style: none;
       padding: 0;
     }
+
     .blog-container li {
       background: #1C1C1C;
       padding: 15px;
@@ -274,10 +765,12 @@
       margin-bottom: 15px;
       transition: transform 0.3s ease;
     }
+
     .blog-container li:hover {
       transform: translateY(-10px);
       box-shadow: 0 0 40px var(--secondary);
     }
+
     .blog-container blockquote {
       font-family: 'JetBrains Mono', monospace;
       color: var(--secondary);
@@ -286,48 +779,44 @@
       margin: 20px 0;
       font-style: italic;
     }
+
     .author-info {
       margin: 20px 0;
       text-align: center;
     }
+
     .author-name {
       font-family: 'JetBrains Mono', monospace;
       color: var(--secondary);
       font-size: 1.2em;
     }
+
     .author-title {
       color: var(--text-dark);
       font-size: 1em;
     }
+
     .author-logo {
       max-width: 100px;
       height: auto;
     }
+
     hr {
       border: 1px solid var(--secondary);
       margin: 20px 0;
     }
+
     .cta-container {
       text-align: center;
       margin: 20px 0;
     }
+
     .cta-title {
       font-family: 'Orbitron', sans-serif;
       color: var(--secondary);
       font-size: 1.8em;
     }
-    .cta-button {
-      background: linear-gradient(90deg, var(--primary), var(--secondary));
-      color: var(--accent);
-      padding: 10px 20px;
-      text-decoration: none;
-      border-radius: 4px;
-      font-family: 'JetBrains Mono', monospace;
-    }
-    .cta-button:hover {
-      background: linear-gradient(90deg, var(--secondary), var(--primary));
-      transform: scale(1.05);
-    }
+
     .newsletter-container {
       text-align: center;
       margin: 40px 0;
@@ -336,16 +825,19 @@
       border: 2px solid var(--secondary);
       border-radius: 4px;
     }
+
     .newsletter-container h3 {
       font-family: 'Orbitron', sans-serif;
       color: var(--secondary);
       font-size: 1.8em;
       margin-bottom: 10px;
     }
+
     .newsletter-container p {
       font-size: 1.2em;
       margin-bottom: 20px;
     }
+
     .newsletter-container input[type="email"] {
       padding: 10px;
       width: 70%;
@@ -356,6 +848,7 @@
       font-family: 'JetBrains Mono', monospace;
       border-radius: 4px;
     }
+
     .newsletter-container button {
       padding: 10px 20px;
       background: linear-gradient(90deg, var(--primary), var(--secondary));
@@ -365,20 +858,24 @@
       font-family: 'JetBrains Mono', monospace;
       cursor: pointer;
     }
+
     .newsletter-container button:hover {
       background: linear-gradient(90deg, var(--secondary), var(--primary));
       transform: scale(1.05);
     }
+
     .social-share {
       margin: 2rem 0;
       text-align: center;
     }
+
     .social-share h3 {
       font-family: 'Orbitron', sans-serif;
       color: var(--secondary);
       font-size: 1.8em;
       margin-bottom: 10px;
     }
+
     .social-share a {
       margin: 0 10px;
       padding: 10px 20px;
@@ -388,10 +885,12 @@
       text-decoration: none;
       font-family: 'JetBrains Mono', monospace;
     }
+
     .social-share a:hover {
       background: var(--secondary);
       color: #000;
     }
+
     .terminal-content {
       background: #1a1a1a;
       padding: 20px;
@@ -402,38 +901,29 @@
       color: var(--secondary);
       font-size: 1em;
     }
+
     .terminal-line {
       opacity: 0;
       white-space: nowrap;
       overflow: hidden;
     }
+
     .terminal-line.typed {
       opacity: 1;
       animation: typing 0.5s steps(40) forwards;
     }
+
     @keyframes typing {
       from { width: 0; }
       to { width: 100%; }
     }
+
     footer {
       text-align: center;
       padding: 40px 20px;
       border-top: 1px solid #1E1E2E;
     }
-    .social-links {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 10px;
-    }
-    .social-links img {
-      width: 24px;
-      height: 24px;
-      transition: transform 0.2s ease;
-    }
-    .social-links img:hover {
-      transform: scale(1.2);
-    }
+
     .signature {
       font-family: 'JetBrains Mono', monospace;
       color: var(--secondary);
@@ -441,143 +931,391 @@
       margin-top: 20px;
       text-align: center;
     }
+
+    @media (max-width: 1024px) {
+      .nav-list {
+        gap: 20px;
+      }
+      
+      .nav-link {
+        padding: 6px 12px;
+        font-size: 0.9em;
+      }
+    }
+
     @media (max-width: 768px) {
-      .hero h1 { font-size: 3em; }
-      .matrix-animation { font-size: 1.2em; }
-      .blog-container { padding: 40px 10px; }
-      .hero { padding: 60px 10px; }
-      .newsletter-container input[type="email"] { width: 90%; }
+      .header-container {
+        height: 60px;
+        padding: 0 16px;
+      }
+      
+      .nav-section {
+        display: none;
+      }
+      
+      .mobile-menu-toggle {
+        display: flex;
+      }
+      
+      .search-box {
+        width: 280px;
+        right: -20px;
+      }
+      
+      .logo-primary {
+        font-size: 1.2em;
+      }
+
+      .hero {
+        padding: 100px 10px 80px;
+      }
+
+      .hero h1 { 
+        font-size: 3em; 
+      }
+
+      .matrix-animation { 
+        font-size: 1.2em; 
+      }
+
+      .blog-container { 
+        padding: 40px 10px; 
+      }
+
+      .blog-container h1 { 
+        font-size: 1.8em; 
+      }
+
+      .terminal-content { 
+        font-size: 0.9em; 
+      }
+
+      .newsletter-container input[type="email"] { 
+        width: 90%; 
+      }
     }
+
     @media (max-width: 480px) {
-      .hero h1 { font-size: 2em; }
-      .matrix-animation { font-size: 1em; }
-      .hero h2 { font-size: 1.2em; }
-      .btn-cta { font-size: 1em; padding: 10px 20px; }
-      .blog-container h1 { font-size: 1.8em; }
-      .terminal-content { font-size: 0.9em; }
+      .header-container {
+        height: 56px;
+        padding: 0 12px;
+      }
+      
+      .search-box {
+        width: calc(100vw - 40px);
+        right: auto;
+        left: 12px;
+      }
+      
+      .cta-button {
+        padding: 10px 20px;
+        font-size: 0.85em;
+      }
+      
+      .mobile-menu {
+        width: 100vw;
+        max-width: none;
+      }
+
+      .hero h1 { 
+        font-size: 2em; 
+      }
+
+      .matrix-animation { 
+        font-size: 1em; 
+      }
+
+      .hero h2 { 
+        font-size: 1.2em; 
+      }
+
+      .btn-cta { 
+        font-size: 1em; 
+        padding: 10px 20px; 
+      }
+
+      .blog-container h1 { 
+        font-size: 1.8em; 
+      }
+
+      .terminal-content { 
+        font-size: 0.9em; 
+      }
+
+      .newsletter-container input[type="email"] { 
+        width: 90%; 
+      }
     }
+
     @media (prefers-reduced-motion: reduce) {
-      * { animation: none !important; transition: none !important; }
-    }
-    @media print {
-      body { background: white; color: black; }
-      .blog-container { background: white; border: none; }
-      a { color: var(--primary); text-decoration: underline; }
-      .btn-cta, .cta-button { background: white; color: var(--primary); border: 1px solid var(--primary); }
-      #galaxy-bg, #matrix-bg, #particles, #cursor-trail, .holo-element, .matrix-animation { display: none; }
+      * { 
+        animation: none !important; 
+        transition: none !important; 
+      }
     }
   </style>
 </head>
-<body>
+<body data-page="womens-lessons">
   <div id="preloader">
     <div class="loader">Initializing Tzeptosoft... 🚀</div>
   </div>
-  <div id="galaxy-bg"></div>
-  <div id="matrix-bg"></div>
-  <div id="particles"></div>
-  <div id="cursor-trail"></div>
-  <div class="hero">
-    <h1>TZEPTOSOFT</h1>
-    <div class="matrix-animation">10 SAVAGE LESSONS FOR WOMEN</div>
-    <h2>Ditch the Lies, Secure Your Man, Be a Fucking Legend 🔥</h2>
-    <a href="mailto:tzeptosoft@gmail.com" class="btn-cta" aria-label="Contact Tzeptosoft">Join the QueenForge 💪</a>
-    <div class="holo-element" style="top: 20%; left: 10%;"></div>
-    <div class="holo-element" style="top: 30%; right: 15%;"></div>
-    <div class="holo-element" style="bottom: 25%; left: 20%;"></div>
-    <div class="holo-element" style="bottom: 15%; right: 10%;"></div>
-  </div>
-  <div class="blog-container">
-    <header>
-      <h1>10 Savage Lessons for Women 💥</h1>
-      <div class="author-info">
-        <p class="author-name">Clinton | Tzeptosoft 😎</p>
-        <img src="/assets/images/tzeptosoft-logo.webp" alt="Tzeptosoft Logo" class="author-logo" width="100" height="100" loading="lazy">
-        <p class="author-title">Boss of QueenForge 🛠️</p>
+
+  <!-- Professional Header -->
+  <header class="main-header">
+    <div class="header-container">
+      <!-- Logo Section -->
+      <div class="logo-section">
+        <a href="/index.html" class="logo-wrapper" aria-label="Tzeptosoft Home">
+          <img src="/assets/images/tzeptosoft-logo.webp" alt="Tzeptosoft Logo" class="logo-image" width="48" height="48" loading="lazy">
+          <div class="logo-text">
+            <span class="logo-primary">TZEPTOSOFT</span>
+            <span class="logo-subtitle">Escaping the Matrix</span>
+          </div>
+        </a>
       </div>
-      <hr>
-    </header>
-    <div class="cta-container">
-      <h3 class="cta-title">Ready to Fucking Own Your Life? 🗡️</h3>
-      <a href="mailto:tzeptosoft@gmail.com" class="cta-button">Join the QueenForge 🚀</a>
-    </div>
-    <div class="content">
-      <p><strong>Yo, ladies_surprise, 25% of Tzeptosoft followers are women! - riding with Tzeptosoft! 💪</strong> My shit’s built for dudes, but if you’re here, you’re welcome to steal the fire. Some of you hit me up asking, “What’s the play for women?” So here’s the deal: 10 savage lessons to dodge the feminist traps, lock in a high-value man, and build a life that slaps. No bullshit, no “girlboss” lies_let’s forge your fucking legacy! 😈</p>
 
-      <h2>The 10 Savage Lessons 🔥</h2>
-      <ul>
-        <li><strong>1. Your Biology’s Outdated:</strong> Your DNA screams “bad boy” ‘cause cavemen needed thugs to survive. Today? Bad boys are broke losers 99% of the time(Hint:Most men who follow Tzeptosoft are worth it-We only associate with the best!). Pick a nerd with ambition_you can make him exciting, but you can’t make a dumbass smart. 🧠 <span class="highlight">Tactic:</span> List traits of a high-value man tonight.</li>
-        <li><strong>2. Money Won’t Fill Your Soul:</strong> I’ve seen “high-power” chicks making $200k+_12-hour days, no man, no kids, fucking miserable. Cash buys diamonds, not happiness. You need family, not a corner office. 👨‍👩‍👧 <span class="highlight">Tactic:</span> Prioritize one family goal over work this week.</li>
-        <li><strong>3. Marry Early, Pop Kids Early:</strong> By 28-30, your fertility’s tanking, stress ages you, and high-value guys chase 22-year-olds. Wait too long, and you’re a wine aunt with regrets. Marry young, build a legacy. 💍 <span class="highlight">Tactic:</span> Reflect on your timeline for marriage today.</li>
-        <li><strong>4. Stay Pure for the Win:</strong> More premarital bangs = higher divorce risk and shittier bonding. Men want purity_it’s biology, not “sexism.” Be the woman high-value guys pick, not a “stud” who’s just easy. 🙅‍♀️ <span class="highlight">Tactic:</span> Commit to no hookups for a month.</li>
-        <li><strong>5. Hustle from Home:</strong> Corporate life’s a trap. Start a home-based gig_build an audience, learn web design, or master copywriting. Contribute cash without kissing a boss’s ass. 💻 <span class="highlight">Tactic:</span> Research one online hustle tonight.</li>
-        <li><strong>6. Back Your Man, Not Your Job:</strong> Your family’s your real team, not your employer. Cook hot meals, nudge him to the gym_support his grind like you mean it. Pick a man with big dreams, not a loser. 🤝 <span class="highlight">Tactic:</span> Do one supportive act for a man in your life today.</li>
-        <li><strong>7. Media’s Your Enemy:</strong> Mainstream media pushes “men are trash” to keep you single and spending. They want cheap labor and broken families. Ignore their lies, choose what works. 📰 <span class="highlight">Tactic:</span> Skip media for a day, think for yourself.</li>
-        <li><strong>8. Keep Him Happy:</strong> Fuck him and feed him often_it’s that simple. Read <em>The Male Brain</em> for the playbook. Wokes hate it, but it works. 🍽️ <span class="highlight">Tactic:</span> Plan a nice dinner for your man this week.</li>
-        <li><strong>9. Stay Fit for Your Kids:</strong> Fat moms birth kids wired for obesity_genes flip on based on your health. Lift weights, eat clean, don’t fuck up your legacy. 💪 <span class="highlight">Tactic:</span> Do 10 squats and eat veggies today.</li>
-        <li><strong>10. FOMO’s a Fucking Lie:</strong> Partying chicks on Insta look fun at 25, but by 30, they’re childless or stuck with low-value dudes. You’re not missing shit_your family’s the real win. 🚫 <span class="highlight">Tactic:</span> Unfollow one party influencer today.</li>
-      </ul>
+      <!-- Navigation -->
+      <nav class="nav-section" role="navigation" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="/index.html" class="nav-link" data-page="home">New? Start Here</a>
+          </li>
+          <li class="nav-item">
+            <a href="/pages/blog.html" class="nav-link" data-page="blog">Blog Archives</a>
+          </li>
+          <li class="nav-item">
+            <a href="/pages/lessons.html" class="nav-link" data-page="lessons">Tzeptosoft Products</a>
+          </li>
+          <li class="nav-item">
+            <a href="/pages/contact-us.html" class="nav-link" data-page="Tzeptosoft">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <a href="/pages/about.html" class="nav-link" data-page="about">About</a>
+          </li>
+        </ul>
+      </nav>
 
-      <h2>Why This Shit Works 🌍</h2>
-      <p>These lessons aren’t “sexist”_they’re reality. Your biology pushes you toward bad choices, society lies to keep you weak, and time’s ticking. But you’re smarter than that. You’re here to lock in a high-value man, build a family, and live a life that fucking slaps. This is about winning, not whining. 🦁</p>
-      <p><strong>Badass Moment:</strong> Mercy ditched the “career girl” grind at 24, married a driven guy, and started a freelance gig. Now she’s got a kid, a happy home, and zero regrets. Vibe: Queen. Legacy: Fucking built. 👑(One of the families I look up to.
-          
-          )</p>
+      <!-- Action Buttons & Search -->
+      <div class="actions-section">
+        <!-- Search -->
+        <div class="search-container">
+          <button class="search-toggle" aria-label="Toggle search" aria-expanded="false" id="searchToggle">
+            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.35-4.35"></path>
+            </svg>
+          </button>
+          <div class="search-box" id="searchBox">
+            <input type="search" placeholder="Search lessons, tactics, blueprints..." class="search-input" aria-label="Search content">
+            <button class="search-submit" aria-label="Search">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.35-4.35"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
 
-      <h2>How to Live This Shit Every Damn Day 🛠️</h2>
-      <ul>
-        <li><strong>Know Your Wiring:</strong> Journal your instincts for a week_why do you want that “bad boy”? Rewire for winners. 🧠</li>
-        <li><strong>Prioritize Family:</strong> Cut one work hour this week, spend it with family or a potential man. ❤️</li>
-        <li><strong>Build Your Value:</strong> Stay fit, stay pure, learn a skill_be the woman kings fight for. 💪</li>
-        <li><strong>Ignore the Noise:</strong> Unfollow feminist influencers, focus on what men actually want. 🚫</li>
-        <li><strong>Start Small:</strong> Pick one lesson, act on it today. No excuses. ⚡</li>
-      </ul>
+        <!-- CTA Button -->
+        <a href="mailto:tzeptosoft@gmail.com" class="cta-button" aria-label="Join Tzeptosoft">
+          <span class="button-text">Join Tzeptosoft</span>
+          <svg class="button-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
 
-      <h2>Conclusion: Forge Your Fucking Queen Empire! 🔥</h2>
-      <p>This is your goddamn war cry, queens! You’re not here to chase careers or hookups_you’re here to secure a high-value man, build a family, and own your life. The world wants you miserable. Tzeptosoft wants you a fucking legend! 😈</p>
-      <p><strong>Your Mission:</strong></p>
-      <ul>
-        <li><span class="highlight">Start Tonight:</span> Pick one lesson, act on it now. No bullshit. ⚡</li>
-        <li><span class="highlight">Declare War:</span> Post on X: “I’m forging my legacy with Tzeptosoft’s QueenForge! 💪” Tag @tzeptosoft. 🗣️</li>
-        <li><span class="highlight">Strike Hard:</span> Ditch one feminist influence (media, friend, app) this week. 🚪</li>
-        <li><span class="highlight">Stack Wins:</span> Start one home-based hustle or fitness routine this month. 📈</li>
-        <li><span class="highlight">Burn Weakness:</span> Write “I’m a fucking queen” 10 times. Share on X. 🔥</li>
-      </ul>
-      <p>Join Tzeptosoft’s QueenForge! Grab our “Savage Queen Blueprint” PDF_tactics to master <strong>feminine value</strong> and fucking dominate. No bullshit. Only fire. <span class="highlight">Break free.</span> Be a goddamn legend! 🌟</p>
-      <blockquote>“Chase feminist lies, lose your life. Build a family, win forever.” _Tzeptosoft’s QueenForge 🔥</blockquote>
-      <p class="signature">Your brother, Clinton 😎</p>
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false" id="mobileMenuToggle">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
     </div>
-    <div class="terminal-content">
-      <div class="terminal-line" data-text="> Accessing Tzeptosoft archives... 🚀"></div>
-      <div class="terminal-line" data-text="> Loading Savage Queen Blueprint... 💪"></div>
-      <div class="terminal-line" data-text="> Signal transfer: FUCKING SUCCESS ✅"></div>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+      <div class="mobile-menu">
+        <div class="mobile-menu-header">
+          <a href="/index.html" class="mobile-logo">
+            <img src="/assets/images/tzeptosoft-logo.webp" alt="Tzeptosoft" width="40" height="40">
+            <span>TZEPTOSOFT</span>
+          </a>
+          <button class="mobile-menu-close" id="mobileMenuClose">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 6 6 18"></path>
+              <path d="m6 6 12 12"></path>
+            </svg>
+          </button>
+        </div>
+        <nav class="mobile-nav">
+          <a href="/index.html" class="mobile-nav-link">New? Start Here</a>
+          <a href="/pages/blog.html" class="mobile-nav-link">Blog Archives</a>
+          <a href="/pages/lessons.html" class="mobile-nav-link">Tzeptosoft Products</a>
+          <a href="/pages/contact-us.html" class="mobile-nav-link">Contact Us</a>
+          <a href="/pages/about.html" class="mobile-nav-link">About</a>
+        </nav>
+        <div class="mobile-actions">
+          <a href="mailto:tzeptosoft@gmail.com" class="mobile-cta-button">Join Tzeptosoft 🚀</a>
+        </div>
+      </div>
     </div>
-    <div class="newsletter-container">
-      <h3>Join theTzeptosoft QueenForge Newsletter 🔥</h3>
-      <p>Get weekly <strong>feminine value</strong> hacks, <strong>self-improvement</strong>, and tactics to fucking dominate life. No bullshit, only fire! 💥</p>
-      <input type="email" placeholder="Enter your email" aria-label="Email for newsletter">
-      <button type="button">Subscribe 🚀</button>
+  </header>
+
+  <div class="main-content">
+    <div id="galaxy-bg"></div>
+    <div id="matrix-bg"></div>
+    <div id="particles"></div>
+    <div id="cursor-trail"></div>
+
+    <div class="hero">
+      <h1>TZEPTOSOFT</h1>
+      <div class="matrix-animation">10 SAVAGE LESSONS FOR WOMEN</div>
+      <h2>Ditch the Lies, Secure Your Man, Be a Fucking Legend 🔥</h2>
+      <a href="mailto:tzeptosoft@gmail.com" class="btn-cta" aria-label="Contact Tzeptosoft">Join the QueenForge 💪</a>
+      <div class="holo-element" style="top: 20%; left: 10%;"></div>
+      <div class="holo-element" style="top: 30%; right: 15%;"></div>
+      <div class="holo-element" style="bottom: 25%; left: 20%;"></div>
+      <div class="holo-element" style="bottom: 15%; right: 10%;"></div>
     </div>
-    <div class="social-share">
-      <h3>Share This Badass Blueprint 🗣️</h3>
-      <a href="https://twitter.com/intent/tweet?url=https://tzeptosoft.com/blog/womens-lessons&text=10 Savage Lessons for Women: Fucking dominate with Tzeptosoft’s QueenForge! 🔥" aria-label="Share on Twitter">Twitter</a>
-      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://tzeptosoft.com/blog/womens-lessons" aria-label="Share on LinkedIn">LinkedIn</a>
-      <a href="https://www.facebook.com/sharer/sharer.php?u=https://tzeptosoft.com/blog/womens-lessons" aria-label="Share on Facebook">Facebook</a>
-      <a href="https://www.reddit.com/submit?url=https://tzeptosoft.com/blog/womens-lessons&title=10 Savage Lessons for Women" aria-label="Share on Reddit">Reddit</a>
-      <a href="https://api.whatsapp.com/send?text=10 Savage Lessons for Women: Fucking dominate with Tzeptosoft’s QueenForge! 🔥 https://tzeptosoft.com/blog/womens-lessons" aria-label="Share on WhatsApp">WhatsApp</a>
+
+    <div class="blog-container">
+      <header>
+        <h1>10 Savage Lessons for Women 💥</h1>
+        <div class="author-info">
+          <p class="author-name">Clinton | Tzeptosoft 😎</p>
+          <img src="/assets/images/tzeptosoft-logo.webp" alt="Tzeptosoft Logo" class="author-logo" width="150" height="150" loading="lazy">
+          <p class="author-title">Boss of QueenForge 🛠️</p>
+        </div>
+        <hr>
+      </header>
+
+      <div class="cta-container">
+        <h3 class="cta-title">Ready to Fucking Own Your Life? 🗡️</h3>
+        <a href="mailto:tzeptosoft@gmail.com" class="cta-button">Join the QueenForge 🚀</a>
+      </div>
+
+      <div class="content">
+        <p><strong>Yo, ladies_surprise, 25% of Tzeptosoft followers are women! - riding with Tzeptosoft! 💪</strong> My shit's built for dudes, but if you're here, you're welcome to steal the fire. Some of you hit me up asking, "What's the play for women?" So here's the deal: 10 savage lessons to dodge the feminist traps, lock in a high-value man, and build a life that slaps. No bullshit, no "girlboss" lies_let's forge your fucking legacy! 😈</p>
+
+        <h2>The 10 Savage Lessons 🔥</h2>
+        <ul>
+          <li><strong>1. Your Biology's Outdated:</strong> Your DNA screams "bad boy" 'cause cavemen needed thugs to survive. Today? Bad boys are broke losers 99% of the time(Hint:Most men who follow Tzeptosoft are worth it-We only associate with the best!). Pick a nerd with ambition_you can make him exciting, but you can't make a dumbass smart. 🧠 <span class="highlight">Tactic:</span> List traits of a high-value man tonight.</li>
+          <li><strong>2. Money Won't Fill Your Soul:</strong> I've seen "high-power" chicks making $200k+_12-hour days, no man, no kids, fucking miserable. Cash buys diamonds, not happiness. You need family, not a corner office. 👨‍👩‍👧 <span class="highlight">Tactic:</span> Prioritize one family goal over work this week.</li>
+          <li><strong>3. Marry Early, Pop Kids Early:</strong> By 28-30, your fertility's tanking, stress ages you, and high-value guys chase 22-year-olds. Wait too long, and you're a wine aunt with regrets. Marry young, build a legacy. 💍 <span class="highlight">Tactic:</span> Reflect on your timeline for marriage today.</li>
+          <li><strong>4. Stay Pure for the Win:</strong> More premarital bangs = higher divorce risk and shittier bonding. Men want purity_it's biology, not "sexism." Be the woman high-value guys pick, not a "stud" who's just easy. 🙅‍♀️ <span class="highlight">Tactic:</span> Commit to no hookups for a month.</li>
+          <li><strong>5. Hustle from Home:</strong> Corporate life's a trap. Start a home-based gig_build an audience, learn web design, or master copywriting. Contribute cash without kissing a boss's ass. 💻 <span class="highlight">Tactic:</span> Research one online hustle tonight.</li>
+          <li><strong>6. Back Your Man, Not Your Job:</strong> Your family's your real team, not your employer. Cook hot meals, nudge him to the gym_support his grind like you mean it. Pick a man with big dreams, not a loser. 🤝 <span class="highlight">Tactic:</span> Do one supportive act for a man in your life today.</li>
+          <li><strong>7. Media's Your Enemy:</strong> Mainstream media pushes "men are trash" to keep you single and spending. They want cheap labor and broken families. Ignore their lies, choose what works. 📰 <span class="highlight">Tactic:</span> Skip media for a day, think for yourself.</li>
+          <li><strong>8. Keep Him Happy:</strong> Fuck him and feed him often_it's that simple. Read <em>The Male Brain</em> for the playbook. Wokes hate it, but it works. 🍽️ <span class="highlight">Tactic:</span> Plan a nice dinner for your man this week.</li>
+          <li><strong>9. Stay Fit for Your Kids:</strong> Fat moms birth kids wired for obesity_genes flip on based on your health. Lift weights, eat clean, don't fuck up your legacy. 💪 <span class="highlight">Tactic:</span> Do 10 squats and eat veggies today.</li>
+          <li><strong>10. FOMO's a Fucking Lie:</strong> Partying chicks on Insta look fun at 25, but by 30, they're childless or stuck with low-value dudes. You're not missing shit_your family's the real win. 🚫 <span class="highlight">Tactic:</span> Unfollow one party influencer today.</li>
+        </ul>
+
+        <h2>Why This Shit Works 🌍</h2>
+        <p>These lessons aren't "sexist"_they're reality. Your biology pushes you toward bad choices, society lies to keep you weak, and time's ticking. But you're smarter than that. You're here to lock in a high-value man, build a family, and live a life that fucking slaps. This is about winning, not whining. 🦁</p>
+        <p><strong>Badass Moment:</strong> Mercy ditched the "career girl" grind at 24, married a driven guy, and started a freelance gig. Now she's got a kid, a happy home, and zero regrets. Vibe: Queen. Legacy: Fucking built. 👑(One of the families I look up to.
+            
+            )</p>
+
+        <h2>How to Live This Shit Every Damn Day 🛠️</h2>
+        <ul>
+          <li><strong>Know Your Wiring:</strong> Journal your instincts for a week_why do you want that "bad boy"? Rewire for winners. 🧠</li>
+          <li><strong>Prioritize Family:</strong> Cut one work hour this week, spend it with family or a potential man. ❤️</li>
+          <li><strong>Build Your Value:</strong> Stay fit, stay pure, learn a skill_be the woman kings fight for. 💪</li>
+          <li><strong>Ignore the Noise:</strong> Unfollow feminist influencers, focus on what men actually want. 🚫</li>
+          <li><strong>Start Small:</strong> Pick one lesson, act on it today. No excuses. ⚡</li>
+        </ul>
+
+        <h2>Conclusion: Forge Your Fucking Queen Empire! 🔥</h2>
+        <p>This is your goddamn war cry, queens! You're not here to chase careers or hookups_you're here to secure a high-value man, build a family, and own your life. The world wants you miserable. Tzeptosoft wants you a fucking legend! 😈</p>
+        <p><strong>Your Mission:</strong></p>
+        <ul>
+          <li><span class="highlight">Start Tonight:</span> Pick one lesson, act on it now. No bullshit. ⚡</li>
+          <li><span class="highlight">Declare War:</span> Post on X: "I'm forging my legacy with Tzeptosoft's QueenForge! 💪" Tag @tzeptosoft. 🗣️</li>
+          <li><span class="highlight">Strike Hard:</span> Ditch one feminist influence (media, friend, app) this week. 🚪</li>
+          <li><span class="highlight">Stack Wins:</span> Start one home-based hustle or fitness routine this month. 📈</li>
+          <li><span class="highlight">Burn Weakness:</span> Write "I'm a fucking queen" 10 times. Share on X. 🔥</li>
+        </ul>
+        <p>Join Tzeptosoft's QueenForge! Grab our "Savage Queen Blueprint" PDF_tactics to master <strong>feminine value</strong> and fucking dominate. No bullshit. Only fire. <span class="highlight">Break free.</span> Be a goddamn legend! 🌟</p>
+        <blockquote>"Chase feminist lies, lose your life. Build a family, win forever." _Tzeptosoft's QueenForge 🔥</blockquote>
+        <p class="signature">Your brother, Clinton 😎</p>
+      </div>
+      
+      <div class="terminal-content">
+        <div class="terminal-line" data-text="> Accessing Tzeptosoft archives... 🚀"></div>
+        <div class="terminal-line" data-text="> Loading Savage Queen Blueprint... 💪"></div>
+        <div class="terminal-line" data-text="> Signal transfer: FUCKING SUCCESS ✅"></div>
+      </div>
+
+      <div class="newsletter-container">
+        <h3>Join the Tzeptosoft QueenForge Newsletter 🔥</h3>
+        <p>Get weekly <strong>feminine value</strong> hacks, <strong>self-improvement</strong>, and tactics to fucking dominate life. No bullshit, only fire! 💥</p>
+        <input type="email" placeholder="Enter your email" aria-label="Email for newsletter">
+        <button type="button">Subscribe 🚀</button>
+      </div>
+
+      <div class="social-share">
+        <h3>Share This Badass Blueprint 🗣️</h3>
+        <a href="https://twitter.com/intent/tweet?url=https://tzeptosoft.com/blog/womens-lessons&text=10 Savage Lessons for Women: Fucking dominate with Tzeptosoft's QueenForge! 🔥" aria-label="Share on Twitter">Twitter</a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://tzeptosoft.com/blog/womens-lessons" aria-label="Share on LinkedIn">LinkedIn</a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://tzeptosoft.com/blog/womens-lessons" aria-label="Share on Facebook">Facebook</a>
+        <a href="https://www.reddit.com/submit?url=https://tzeptosoft.com/blog/womens-lessons&title=10 Savage Lessons for Women" aria-label="Share on Reddit">Reddit</a>
+        <a href="https://api.whatsapp.com/send?text=10 Savage Lessons for Women: Fucking dominate with Tzeptosoft's QueenForge! 🔥 https://tzeptosoft.com/blog/womens-lessons" aria-label="Share on WhatsApp">WhatsApp</a>
+      </div>
     </div>
+
+    <footer>
+      <p>© 2025 Tzeptosoft | All Rights Fucking Reserved 🔥</p>
+    </footer>
   </div>
-  <footer>
-    <p>© 2025 Tzeptosoft | All Rights Fucking Reserved 🔥</p>
-     
-  </footer>
+
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      // Preloader
+      const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+      const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+      const mobileMenuClose = document.getElementById('mobileMenuClose');
+      const searchToggle = document.getElementById('searchToggle');
+      const searchBox = document.getElementById('searchBox');
+      const searchInput = document.querySelector('.search-input');
+
+      mobileMenuToggle?.addEventListener('click', () => {
+        mobileMenuOverlay?.classList.toggle('active');
+        document.body.style.overflow = mobileMenuOverlay?.classList.contains('active') ? 'hidden' : '';
+      });
+
+      mobileMenuClose?.addEventListener('click', () => {
+        mobileMenuOverlay?.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+
+      mobileMenuOverlay?.addEventListener('click', (e) => {
+        if (e.target === mobileMenuOverlay) {
+          mobileMenuOverlay.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      });
+
+      searchToggle?.addEventListener('click', () => {
+        const isActive = searchBox?.classList.contains('active');
+        searchBox?.classList.toggle('active');
+        searchToggle?.setAttribute('aria-expanded', !isActive);
+        if (!isActive && searchInput) searchInput.focus();
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          searchBox?.classList.remove('active');
+          searchToggle?.setAttribute('aria-expanded', 'false');
+          mobileMenuOverlay?.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      });
+
       window.addEventListener('load', () => {
         document.getElementById('preloader').style.display = 'none';
       });
 
-      // Matrix Animation
       const matrixAnimation = document.querySelector('.matrix-animation');
       function startMatrixAnimation() {
         matrixAnimation.textContent = '';
@@ -589,46 +1327,18 @@
       startMatrixAnimation();
       setInterval(startMatrixAnimation, 4000);
 
-      // Intersection Observer for Sections
-      const sections = document.querySelectorAll('.blog-container, .terminal-content');
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            if (entry.target.classList.contains('terminal-content') && !entry.target.dataset.animated) {
-              startTerminalSequence();
-              entry.target.dataset.animated = 'true';
-            }
-          }
-        });
-      }, { threshold: 0.1 });
-      sections.forEach(section => observer.observe(section));
+      let lastScrollY = window.scrollY;
+      window.addEventListener('scroll', () => {
+        const header = document.querySelector('.main-header');
+        const currentScrollY = window.scrollY;
+        if (currentScrollY > 100) {
+          header?.classList.add('scrolled');
+        } else {
+          header?.classList.remove('scrolled');
+        }
+        lastScrollY = currentScrollY;
+      });
 
-      // Terminal Sequence
-      function startTerminalSequence() {
-        const lines = document.querySelectorAll('.terminal-content .terminal-line');
-        let delay = 0;
-        lines.forEach(line => {
-          line.textContent = '';
-          const text = line.dataset.text;
-          let charIndex = 0;
-          setTimeout(() => {
-            const type = () => {
-              if (charIndex < text.length) {
-                line.textContent += text[charIndex];
-                charIndex++;
-                setTimeout(type, 30);
-              } else {
-                line.classList.add('typed');
-              }
-            };
-            type();
-          }, delay);
-          delay += 1000;
-        });
-      }
-
-      // Matrix Rain
       const matrixBg = document.getElementById('matrix-bg');
       for (let i = 0; i < 50; i++) {
         const char = document.createElement('div');
@@ -639,7 +1349,6 @@
         matrixBg.appendChild(char);
       }
 
-      // Particles
       const particleContainer = document.getElementById('particles');
       for (let i = 0; i < 50; i++) {
         const particle = document.createElement('div');
@@ -650,11 +1359,49 @@
         particleContainer.appendChild(particle);
       }
 
-      // Cursor Trail
       const cursorTrail = document.getElementById('cursor-trail');
       document.addEventListener('mousemove', (e) => {
         cursorTrail.style.left = e.clientX - 15 + 'px';
         cursorTrail.style.top = e.clientY - 15 + 'px';
+      });
+
+      // Terminal animation
+      const terminalLines = document.querySelectorAll('.terminal-line');
+      let delay = 0;
+      terminalLines.forEach(line => {
+        line.textContent = '';
+        const text = line.dataset.text;
+        let charIndex = 0;
+        setTimeout(() => {
+          const type = () => {
+            if (charIndex < text.length) {
+              line.textContent += text[charIndex];
+              charIndex++;
+              setTimeout(type, 35);
+            } else {
+              line.classList.add('typed');
+            }
+          };
+          type();
+        }, delay);
+        delay += 1000;
+      });
+
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href');
+          if (targetId === '#') return;
+          
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 100,
+              behavior: 'smooth'
+            });
+          }
+        });
       });
     });
   </script>
