@@ -3,23 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Master digital privacy with Tzeptosoft’s Digital Fortress. The ultimate guide to online security tactics, anonymous browsing, and encrypted communication tools for men to protect their data and achieve digital footprint erasure.">
+  <meta name="description" content="Master digital privacy with Tzeptosoft's Digital Fortress. The ultimate guide to online security tactics, anonymous browsing, and encrypted communication tools for men to protect their data and achieve digital footprint erasure.">
   <meta name="keywords" content="digital privacy guide, online security tactics, anonymous browsing, cybersecurity for men, protect your data, encrypted communication tools, digital footprint erasure, Tzeptosoft">
   <meta name="author" content="Clinton | Tzeptosoft">
   <!-- Open Graph Tags -->
   <meta property="og:title" content="Digital Fortress: The Ultimate Guide to Total Privacy, Online Security, and Digital Warfare for the Elite | Tzeptosoft">
-  <meta property="og:description" content="Master digital privacy with Tzeptosoft’s Digital Fortress. The ultimate guide to online security tactics, anonymous browsing, and encrypted communication tools for men to protect their data and achieve digital footprint erasure.">
+  <meta property="og:description" content="Master digital privacy with Tzeptosoft's Digital Fortress. The ultimate guide to online security tactics, anonymous browsing, and encrypted communication tools for men to protect their data and achieve digital footprint erasure.">
   <meta property="og:image" content="https://tzeptosoft.com/assets/blog-digital-fortress.webp">
   <meta property="og:url" content="https://tzeptosoft.com/blog/digital-fortress">
   <meta property="og:type" content="article">
   <!-- Twitter Card Tags -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Digital Fortress: The Ultimate Guide to Total Privacy, Online Security, and Digital Warfare for the Elite | Tzeptosoft">
-  <meta name="twitter:description" content="Master digital privacy with Tzeptosoft’s Digital Fortress. The ultimate guide to online security tactics, anonymous browsing, and encrypted communication tools for men to protect their data and achieve digital footprint erasure.">
+  <meta name="twitter:description" content="Master digital privacy with Tzeptosoft's Digital Fortress. The ultimate guide to online security tactics, anonymous browsing, and encrypted communication tools for men to protect their data and achieve digital footprint erasure.">
   <meta name="twitter:image" content="https://tzeptosoft.com/assets/blog-digital-fortress.webp">
   <title>Digital Fortress: The Ultimate Guide to Total Privacy, Online Security, and Digital Warfare for the Elite | Tzeptosoft</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Mono:wght@700&family=Orbitron:wght@900&family=JetBrains+Mono:wght@400;700&display=swap">
-  <link rel="stylesheet" href="/blog-style.css">
   <link rel="icon" type="image/webp" href="/assets/favicon.webp">
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -27,7 +26,7 @@
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     "headline": "Digital Fortress: The Ultimate Guide to Total Privacy, Online Security, and Digital Warfare for the Elite",
-    "description": "Master digital privacy with Tzeptosoft’s Digital Fortress. The ultimate guide to online security tactics, anonymous browsing, and encrypted communication tools for men to protect their data and achieve digital footprint erasure.",
+    "description": "Master digital privacy with Tzeptosoft's Digital Fortress. The ultimate guide to online security tactics, anonymous browsing, and encrypted communication tools for men to protect their data and achieve digital footprint erasure.",
     "author": {
       "@type": "Person",
       "name": "Clinton"
@@ -46,70 +45,1196 @@
     "keywords": "digital privacy guide, online security tactics, anonymous browsing, cybersecurity for men, protect your data, encrypted communication tools, digital footprint erasure, Tzeptosoft"
   }
   </script>
+  <style>
+    :root {
+      --primary: #0066CC;
+      --secondary: #00CCFF;
+      --accent: #FFFFFF;
+      --bg-dark: #0B0F1A;
+      --text-dark: #FFFFFF;
+      --matrix-green: #00FF00;
+    }
+
+    /* Header Styles */
+    .main-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(11, 15, 26, 0.95);
+      backdrop-filter: blur(20px);
+      border-bottom: 2px solid transparent;
+      animation: headerSlideIn 0.6s ease-out;
+      box-shadow: 0 8px 32px rgba(0, 102, 204, 0.1);
+    }
+
+    @keyframes headerSlideIn {
+      from {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .main-header.scrolled {
+      border-bottom-color: rgba(0, 204, 255, 0.2);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 70px;
+      position: relative;
+    }
+
+    .logo-section {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .logo-wrapper:hover {
+      transform: scale(1.05);
+    }
+
+    .logo-image {
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(0, 204, 255, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    .logo-primary {
+      font-size: 1.4em;
+      font-weight: 900;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-shadow: 0 0 10px rgba(0, 102, 204, 0.5);
+    }
+
+    .logo-subtitle {
+      font-size: 0.75em;
+      color: var(--secondary);
+      font-weight: 600;
+      opacity: 0.8;
+      margin-top: 2px;
+    }
+
+    .nav-section {
+      display: flex;
+    }
+
+    .nav-list {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .nav-item {
+      position: relative;
+    }
+
+    .nav-link {
+      display: block;
+      padding: 8px 16px;
+      color: var(--text-dark);
+      text-decoration: none;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 0.95em;
+      position: relative;
+      transition: all 0.3s ease;
+      border-radius: 6px;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--secondary);
+      background: rgba(0, 204, 255, 0.1);
+      box-shadow: 0 0 20px rgba(0, 204, 255, 0.2);
+      transform: translateY(-2px);
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 80%;
+    }
+
+    .actions-section {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .search-container {
+      position: relative;
+    }
+
+    .search-toggle {
+      background: none;
+      border: 2px solid rgba(0, 204, 255, 0.3);
+      border-radius: 8px;
+      padding: 8px;
+      color: var(--secondary);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .search-toggle:hover {
+      border-color: var(--secondary);
+      box-shadow: 0 0 20px rgba(0, 204, 255, 0.4);
+      transform: scale(1.05);
+    }
+
+    .search-icon {
+      width: 20px;
+      height: 20px;
+    }
+
+    .search-box {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 300px;
+      background: rgba(28, 28, 28, 0.95);
+      border: 2px solid var(--secondary);
+      border-radius: 8px;
+      padding: 12px;
+      margin-top: 8px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 40px rgba(0, 102, 204, 0.2);
+      z-index: 1001;
+    }
+
+    .search-box.active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .search-input {
+      width: 100%;
+      background: rgba(18, 18, 18, 0.8);
+      border: 1px solid rgba(0, 204, 255, 0.3);
+      border-radius: 6px;
+      padding: 10px 12px;
+      color: var(--text-dark);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.9em;
+    }
+
+    .search-input::placeholder {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .search-input:focus {
+      outline: none;
+      border-color: var(--secondary);
+      box-shadow: 0 0 0 3px rgba(0, 204, 255, 0.2);
+    }
+
+    .search-submit {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: var(--secondary);
+      cursor: pointer;
+      padding: 4px;
+      width: 20px;
+      height: 20px;
+    }
+
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: var(--accent);
+      text-decoration: none;
+      border-radius: 8px;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 600;
+      font-size: 0.9em;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(0, 102, 204, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: left 0.5s;
+    }
+
+    .cta-button:hover::before {
+      left: 100%;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(0, 102, 204, 0.4);
+    }
+
+    .button-icon {
+      width: 16px;
+      height: 16px;
+      transition: transform 0.3s ease;
+    }
+
+    .cta-button:hover .button-icon {
+      transform: translateX(4px);
+    }
+
+    .mobile-menu-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 30px;
+      height: 30px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+      z-index: 1001;
+    }
+
+    .hamburger-line {
+      width: 100%;
+      height: 3px;
+      background: var(--secondary);
+      border-radius: 2px;
+      transition: all 0.3s ease;
+      transform-origin: center;
+    }
+
+    .mobile-menu-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: rgba(11, 15, 26, 0.98);
+      backdrop-filter: blur(20px);
+      z-index: 999;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.4s ease;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .mobile-menu-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .mobile-menu {
+      width: 320px;
+      max-width: 90vw;
+      background: linear-gradient(135deg, rgba(18, 18, 18, 0.95), rgba(11, 15, 26, 0.95));
+      border-left: 3px solid var(--secondary);
+      padding: 0;
+      transform: translateX(100%);
+      transition: transform 0.4s ease;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+    }
+
+    .mobile-menu-overlay.active .mobile-menu {
+      transform: translateX(0);
+    }
+
+    .mobile-menu-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 20px;
+      border-bottom: 1px solid rgba(0, 204, 255, 0.2);
+    }
+
+    .mobile-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-dark);
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.2em;
+    }
+
+    .mobile-menu-close {
+      background: none;
+      border: none;
+      color: var(--secondary);
+      cursor: pointer;
+      padding: 8px;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .mobile-menu-close:hover {
+      background: rgba(0, 204, 255, 0.1);
+      box-shadow: 0 0 20px rgba(0, 204, 255, 0.2);
+    }
+
+    .mobile-nav {
+      padding: 20px 0;
+      flex: 1;
+    }
+
+    .mobile-nav-link {
+      display: block;
+      padding: 16px 24px;
+      color: var(--text-dark);
+      text-decoration: none;
+      font-family: 'Inter', sans-serif;
+      font-size: 1.1em;
+      font-weight: 500;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .mobile-nav-link::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 0;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      transition: width 0.3s ease;
+      z-index: -1;
+    }
+
+    .mobile-nav-link:hover::before,
+    .mobile-nav-link.active::before {
+      width: 100%;
+    }
+
+    .mobile-nav-link:hover,
+    .mobile-nav-link.active {
+      color: var(--accent);
+      padding-left: 32px;
+    }
+
+    .mobile-actions {
+      padding: 20px 24px;
+      border-top: 1px solid rgba(0, 204, 255, 0.2);
+    }
+
+    .mobile-cta-button {
+      display: inline-block;
+      width: 100%;
+      padding: 16px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: var(--accent);
+      text-decoration: none;
+      border-radius: 8px;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 600;
+      text-align: center;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(0, 102, 204, 0.3);
+    }
+
+    .mobile-cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(0, 102, 204, 0.4);
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg-dark);
+      color: var(--text-dark);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .main-content {
+      position: relative;
+    }
+
+    #preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--bg-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+
+    .loader {
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--secondary);
+      font-size: 1.5em;
+      animation: blinkCaret 0.5s step-end infinite;
+    }
+
+    @keyframes blinkCaret {
+      50% { border-color: transparent; }
+    }
+
+    #galaxy-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle, rgba(0, 204, 255, 0.2), transparent);
+      z-index: -3;
+      animation: rotateGalaxy 60s infinite linear;
+    }
+
+    @keyframes rotateGalaxy {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    #matrix-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+      opacity: 0.7;
+    }
+
+    .matrix-char {
+      position: absolute;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 16px;
+      color: var(--matrix-green);
+      opacity: 0.8;
+      animation: matrix-fall 5s linear infinite;
+    }
+
+    @keyframes matrix-fall {
+      0% { transform: translateY(-100vh); opacity: 0.8; }
+      100% { transform: translateY(100vh); opacity: 0; }
+    }
+
+    #particles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    .particle {
+      position: absolute;
+      width: 5px;
+      height: 5px;
+      background: var(--secondary);
+      border-radius: 50%;
+      animation: drift 10s infinite linear;
+    }
+
+    @keyframes drift {
+      0% { transform: translate(0, 0); opacity: 0.5; }
+      50% { opacity: 1; }
+      100% { transform: translate(100px, 100px); opacity: 0.5; }
+    }
+
+    #cursor-trail {
+      position: fixed;
+      width: 30px;
+      height: 30px;
+      background: radial-gradient(circle, var(--secondary), transparent);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 100;
+      transition: all 0.1s ease;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 120px 20px 100px;
+      background: rgba(18, 18, 18, 0.9);
+      position: relative;
+      z-index: 1;
+      margin-top: 0;
+    }
+
+    .hero h1 {
+      font-size: 5em;
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 10px var(--primary);
+      animation: gradientShift 3s ease infinite;
+      margin-bottom: 0;
+    }
+
+    .matrix-animation {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1.5em;
+      color: var(--matrix-green);
+      text-shadow: 0 0 10px var(--matrix-green);
+      margin-top: 10px;
+      overflow: hidden;
+      white-space: nowrap;
+      display: inline-block;
+    }
+
+    .matrix-animation.typing {
+      animation: typeMatrix 2s steps(20) forwards, glitch 0.1s infinite alternate;
+    }
+
+    @keyframes typeMatrix {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    @keyframes glitch {
+      0% { transform: translate(0); opacity: 1; }
+      50% { transform: translate(2px, -2px); opacity: 0.8; }
+      100% { transform: translate(-2px, 2px); opacity: 0.9; }
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0%; }
+      50% { background-position: 100%; }
+      100% { background-position: 0%; }
+    }
+
+    .hero h2 {
+      font-size: 1.8em;
+      color: var(--secondary);
+      text-shadow: 0 0 10px var(--secondary);
+      margin-top: 20px;
+    }
+
+    .btn-cta {
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      color: var(--accent);
+      padding: 15px 30px;
+      text-decoration: none;
+      font-size: 1.5em;
+      border-radius: 5px;
+      box-shadow: 0 0 20px var(--primary);
+      animation: pulse 2s infinite;
+      margin-top: 20px;
+      display: inline-block;
+    }
+
+    .btn-cta:hover {
+      background: linear-gradient(90deg, var(--secondary), var(--primary));
+      transform: scale(1.1);
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(0, 102, 204, 0.4); }
+      70% { box-shadow: 0 0 0 10px rgba(0, 102, 204, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(0, 102, 204, 0); }
+    }
+
+    .holo-element {
+      position: absolute;
+      width: 70px;
+      height: 70px;
+      background: radial-gradient(circle, var(--primary), transparent);
+      border-radius: 50%;
+      animation: float 4s infinite ease-in-out;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); opacity: 0.5; }
+      50% { transform: translateY(-30px); opacity: 1; }
+      100% { transform: translateY(0); opacity: 0.5; }
+    }
+
+    .blog-container {
+      padding: 80px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+      background: rgba(18, 18, 18, 0.9);
+      border: 3px solid var(--secondary);
+      animation: borderGlow 2s infinite;
+    }
+
+    @keyframes borderGlow {
+      0% { border-color: var(--primary); }
+      50% { border-color: var(--secondary); }
+      100% { border-color: var(--primary); }
+    }
+
+    .blog-container h1 {
+      font-size: 2.5em;
+      color: var(--secondary);
+      text-shadow: 0 0 15px var(--secondary);
+      font-family: 'Orbitron', sans-serif;
+      text-align: center;
+    }
+
+    .blog-container h2 {
+      font-size: 1.8em;
+      color: var(--secondary);
+      font-family: 'Orbitron', sans-serif;
+      margin-top: 2em;
+    }
+
+    .blog-container h3 {
+      font-size: 1.4em;
+      color: var(--secondary);
+      font-family: 'Orbitron', sans-serif;
+      margin-top: 1.5em;
+    }
+
+    .blog-container p {
+      color: var(--text-dark);
+      font-size: 1.2em;
+    }
+
+    .highlight {
+      color: var(--secondary);
+      font-weight: 600;
+    }
+
+    .blog-container ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .blog-container li {
+      background: #1C1C1C;
+      padding: 15px;
+      border: 2px solid var(--secondary);
+      margin-bottom: 15px;
+      transition: transform 0.3s ease;
+    }
+
+    .blog-container li:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 40px var(--secondary);
+    }
+
+    .blog-container blockquote {
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--secondary);
+      border-left: 4px solid var(--secondary);
+      padding-left: 15px;
+      margin: 20px 0;
+      font-style: italic;
+    }
+
+    .author-info {
+      margin: 20px 0;
+      text-align: center;
+    }
+
+    .author-name {
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--secondary);
+      font-size: 1.2em;
+    }
+
+    .author-title {
+      color: var(--text-dark);
+      font-size: 1em;
+    }
+
+    .author-logo {
+      max-width: 100px;
+      height: auto;
+    }
+
+    hr {
+      border: 1px solid var(--secondary);
+      margin: 20px 0;
+    }
+
+    .cta-container {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .cta-title {
+      font-family: 'Orbitron', sans-serif;
+      color: var(--secondary);
+      font-size: 1.8em;
+    }
+
+    .newsletter-container {
+      text-align: center;
+      margin: 40px 0;
+      padding: 20px;
+      background: #1C1C1C;
+      border: 2px solid var(--secondary);
+      border-radius: 4px;
+    }
+
+    .newsletter-container h3 {
+      font-family: 'Orbitron', sans-serif;
+      color: var(--secondary);
+      font-size: 1.8em;
+      margin-bottom: 10px;
+    }
+
+    .newsletter-container p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+
+    .newsletter-container input[type="email"] {
+      padding: 10px;
+      width: 70%;
+      max-width: 300px;
+      border: 2px solid var(--secondary);
+      background: #1a1a1a;
+      color: var(--text-dark);
+      font-family: 'JetBrains Mono', monospace;
+      border-radius: 4px;
+    }
+
+    .newsletter-container button {
+      padding: 10px 20px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      color: var(--accent);
+      border: none;
+      border-radius: 4px;
+      font-family: 'JetBrains Mono', monospace;
+      cursor: pointer;
+    }
+
+    .newsletter-container button:hover {
+      background: linear-gradient(90deg, var(--secondary), var(--primary));
+      transform: scale(1.05);
+    }
+
+    .social-share {
+      margin: 2rem 0;
+      text-align: center;
+    }
+
+    .social-share h3 {
+      font-family: 'Orbitron', sans-serif;
+      color: var(--secondary);
+      font-size: 1.8em;
+      margin-bottom: 10px;
+    }
+
+    .social-share a {
+      margin: 0 10px;
+      padding: 10px 20px;
+      background: var(--primary);
+      color: var(--accent);
+      border-radius: 4px;
+      text-decoration: none;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .social-share a:hover {
+      background: var(--secondary);
+      color: #000;
+    }
+
+    .terminal-content {
+      background: #1a1a1a;
+      padding: 20px;
+      border: 1px solid var(--secondary);
+      border-radius: 4px;
+      margin: 20px 0;
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--secondary);
+      font-size: 1em;
+    }
+
+    .terminal-line {
+      opacity: 0;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    .terminal-line.typed {
+      opacity: 1;
+      animation: typing 0.5s steps(40) forwards;
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      border-top: 1px solid #1E1E2E;
+    }
+
+    .signature {
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--secondary);
+      font-size: 1.2em;
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    @media (max-width: 1024px) {
+      .nav-list {
+        gap: 20px;
+      }
+      
+      .nav-link {
+        padding: 6px 12px;
+        font-size: 0.9em;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .header-container {
+        height: 60px;
+        padding: 0 16px;
+      }
+      
+      .nav-section {
+        display: none;
+      }
+      
+      .mobile-menu-toggle {
+        display: flex;
+      }
+      
+      .search-box {
+        width: 280px;
+        right: -20px;
+      }
+      
+      .logo-primary {
+        font-size: 1.2em;
+      }
+
+      .hero {
+        padding: 100px 10px 80px;
+      }
+
+      .hero h1 { 
+        font-size: 3em; 
+      }
+
+      .matrix-animation { 
+        font-size: 1.2em; 
+      }
+
+      .blog-container { 
+        padding: 40px 10px; 
+      }
+
+      .blog-container h1 { 
+        font-size: 1.8em; 
+      }
+
+      .terminal-content { 
+        font-size: 0.9em; 
+      }
+
+      .newsletter-container input[type="email"] { 
+        width: 90%; 
+      }
+    }
+
+    @media (max-width: 480px) {
+      .header-container {
+        height: 56px;
+        padding: 0 12px;
+      }
+      
+      .search-box {
+        width: calc(100vw - 40px);
+        right: auto;
+        left: 12px;
+      }
+      
+      .cta-button {
+        padding: 10px 20px;
+        font-size: 0.85em;
+      }
+      
+      .mobile-menu {
+        width: 100vw;
+        max-width: none;
+      }
+
+      .hero h1 { 
+        font-size: 2em; 
+      }
+
+      .matrix-animation { 
+        font-size: 1em; 
+      }
+
+      .hero h2 { 
+        font-size: 1.2em; 
+      }
+
+      .btn-cta { 
+        font-size: 1em; 
+        padding: 10px 20px; 
+      }
+
+      .blog-container h1 { 
+        font-size: 1.8em; 
+      }
+
+      .terminal-content { 
+        font-size: 0.9em; 
+      }
+
+      .newsletter-container input[type="email"] { 
+        width: 90%; 
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { 
+        animation: none !important; 
+        transition: none !important; 
+      }
+    }
+  </style>
 </head>
-<body>
-  <!-- Preloader -->
+<body data-page="digital-fortress">
   <div id="preloader">
     <div class="loader">Initializing Tzeptosoft...</div>
   </div>
 
-  <!-- Background Effects -->
-  <div id="galaxy-bg"></div>
-  <div id="matrix-bg"></div>
-  <div id="particles"></div>
-  <div id="cursor-trail"></div>
-
-  <!-- Hero Section -->
-  <div class="hero">
-    <h1>TZEPTOSOFT</h1>
-    <h2>Digital Fortress: Total Privacy & Security</h2>
-    <div class="auto-typing">Operate in the Shadows.</div>
-    <a href="mailto:clintonmiruka@gmail.com" class="btn-cta" aria-label="Contact Tzeptosoft">Build Your Fortress Now!</a>
-    <div class="holo-element" style="top: 20%; left: 10%;"></div>
-    <div class="holo-element" style="top: 30%; right: 15%;"></div>
-    <div class="holo-element" style="bottom: 25%; left: 20%;"></div>
-    <div class="holo-element" style="bottom: 15%; right: 10%;"></div>
-  </div>
-
-  <!-- Blog Post Content -->
-  <div class="blog-container">
-    <header>
-      <h1 class="hero-title">Digital Fortress: The Ultimate Guide to Total Privacy, Online Security, and Digital Warfare for the Elite</h1>
-      <div class="author-info">
-        <p class="author-name">Clinton | Tzeptosoft</p>
-        <img src="/assets/images/tzeptosoft-logo.webp" alt="Tzeptosoft Logo" class="author-logo" width="150" height="150" loading="lazy">
-        <p class="author-title">Architect of Digital Warfare</p>
+  <!-- Professional Header -->
+  <header class="main-header">
+    <div class="header-container">
+      <!-- Logo Section -->
+      <div class="logo-section">
+        <a href="/index.html" class="logo-wrapper" aria-label="Tzeptosoft Home">
+          <img src="/assets/images/tzeptosoft-logo.webp" alt="Tzeptosoft Logo" class="logo-image" width="48" height="48" loading="lazy">
+          <div class="logo-text">
+            <span class="logo-primary">TZEPTOSOFT</span>
+            <span class="logo-subtitle">Escaping the Matrix</span>
+          </div>
+        </a>
       </div>
-      <hr>
-    </header>
 
-    <main>
-      <article>
-        <p><strong>He who  moves through digital streets, unseen, a ghost in the machine, cold,calclated is a tech renegade.</strong> Every click, every message, every transaction is calculated, leaving no trace. His data is his fortress_impenetrable. You’re 18–35, tech-savvy, a creator, coder, or nomad who values <strong>complete anonymity</strong> and <strong>data sovereignty</strong>. This Tzeptosoft <strong>digital privacy guide</strong> is your military-grade blueprint for <strong>online security tactics</strong>, <strong>anonymous browsing</strong>, and <strong>protection from surveillance</strong>. In a world tracking your every move, you’ll learn to operate in the shadows.</p>
-        <p>This isn’t a casual tech tutorial. It’s a <strong>cyber tactical no bull-shit warfare manual</strong> for <strong>cybersecurity for men</strong>. Backed by real-world breaches and elite hacker tactics, these 10 chapters deliver step-by-step guides, checklists, and tools to master <strong>encrypted communication tools</strong> and achieve <strong>digital footprint erasure</strong>. From VPNs to dark web navigation, you’ll forge an untraceable presence. Lock and load. Begin.</p>
+      <!-- Navigation -->
+      <nav class="nav-section" role="navigation" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="/index.html" class="nav-link" data-page="home">New? Start Here</a>
+          </li>
+          <li class="nav-item">
+            <a href="/pages/blog.html" class="nav-link" data-page="blog">Blog Archives</a>
+          </li>
+          <li class="nav-item">
+            <a href="/pages/lessons" class="nav-link" data-page="lessons">Tzeptosoft Products</a>
+          </li>
+          <li class="nav-item">
+            <a href="/pages/contact-us.html" class="nav-link" data-page="Tzeptosoft">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <a href="/pages/about.html" class="nav-link" data-page="about">About</a>
+          </li>
+        </ul>
+      </nav>
 
-        <h2>Chapter 1: The Digital Threats You’re Facing</h2>
+      <!-- Action Buttons & Search -->
+      <div class="actions-section">
+        <!-- Search -->
+        <div class="search-container">
+          <button class="search-toggle" aria-label="Toggle search" aria-expanded="false" id="searchToggle">
+            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.35-4.35"></path>
+            </svg>
+          </button>
+          <div class="search-box" id="searchBox">
+            <input type="search" placeholder="Search privacy tactics, tools, protocols..." class="search-input" aria-label="Search content">
+            <button class="search-submit" aria-label="Search">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.35-4.35"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- CTA Button -->
+        <a href="mailto:tzeptosoft@gmail.com" class="cta-button" aria-label="Join Digital Fortress">
+          <span class="button-text">Join Tzeptosoft</span>
+          <svg class="button-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false" id="mobileMenuToggle">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+      <div class="mobile-menu">
+        <div class="mobile-menu-header">
+          <a href="/index.html" class="mobile-logo">
+            <img src="/assets/images/tzeptosoft-logo.webp" alt="Tzeptosoft" width="40" height="40">
+            <span>TZEPTOSOFT</span>
+          </a>
+          <button class="mobile-menu-close" id="mobileMenuClose">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 6 6 18"></path>
+              <path d="m6 6 12 12"></path>
+            </svg>
+          </button>
+        </div>
+        <nav class="mobile-nav">
+          <a href="/index.html" class="mobile-nav-link">New? Start Here</a>
+          <a href="/pages/blog.html" class="mobile-nav-link">Blog Archives</a>
+          <a href="/pages/lessons" class="mobile-nav-link">Tzeptosoft Products</a>
+          <a href="/pages/contact-us.html" class="mobile-nav-link">Contact Us</a>
+          <a href="/pages/about.html" class="mobile-nav-link">About</a>
+        </nav>
+        <div class="mobile-actions">
+          <a href="mailto:tzeptosoft@gmail.com" class="mobile-cta-button">Join Fortress 🚀</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="main-content">
+    <div id="galaxy-bg"></div>
+    <div id="matrix-bg"></div>
+    <div id="particles"></div>
+    <div id="cursor-trail"></div>
+
+    <div class="hero">
+      <h1>TZEPTOSOFT</h1>
+      <div class="matrix-animation">DIGITAL FORTRESS. TOTAL PRIVACY.</div>
+      <h2>Digital Fortress: The Ultimate Guide to Total Privacy, Online Security, and Digital Warfare for the Elite</h2>
+      <a href="mailto:tzeptosoft@gmail.com" class="btn-cta" aria-label="Build Your Digital Fortress">Build Your Fortress Now!</a>
+      <div class="holo-element" style="top: 20%; left: 10%;"></div>
+      <div class="holo-element" style="top: 30%; right: 15%;"></div>
+      <div class="holo-element" style="bottom: 25%; left: 20%;"></div>
+      <div class="holo-element" style="bottom: 15%; right: 10%;"></div>
+    </div>
+
+    <div class="blog-container">
+      <header>
+        <h1>Digital Fortress: The Ultimate Guide to Total Privacy, Online Security, and Digital Warfare for the Elite</h1>
+        <div class="author-info">
+          <p class="author-name">Clinton | Tzeptosoft</p>
+          <img src="/assets/images/tzeptosoft-logo.webp" alt="Tzeptosoft Logo" class="author-logo" width="150" height="150" loading="lazy">
+          <p class="author-title">Architect of Digital Warfare</p>
+        </div>
+        <hr>
+      </header>
+
+      <div class="cta-container">
+        <h3 class="cta-title">Build Your Digital Fortress or Die Exposed 🔒</h3>
+        <a href="mailto:tzeptosoft@gmail.com" class="cta-button">Join the Digital Elite 🚀</a>
+      </div>
+
+      <div class="content">
+        <h2>Chapter 1: The Digital Threats You're Facing</h2>
+        <p><strong>He who  moves through digital streets, unseen, a ghost in the machine, cold,calclated is a tech renegade.</strong> Every click, every message, every transaction is calculated, leaving no trace. His data is his fortress_impenetrable. You're 18-35, tech-savvy, a creator, coder, or nomad who values <strong>complete anonymity</strong> and <strong>data sovereignty</strong>. This Tzeptosoft <strong>digital privacy guide</strong> is your military-grade blueprint for <strong>online security tactics</strong>, <strong>anonymous browsing</strong>, and <strong>protection from surveillance</strong>. In a world tracking your every move, you'll learn to operate in the shadows.</p>
+        <p>This isn't a casual tech tutorial. It's a <strong>cyber tactical no bull-shit warfare manual</strong> for <strong>cybersecurity for men</strong>. Backed by real-world breaches and elite hacker tactics, these 10 chapters deliver step-by-step guides, checklists, and tools to master <strong>encrypted communication tools</strong> and achieve <strong>digital footprint erasure</strong>. From VPNs to dark web navigation, you'll forge an untraceable presence. Lock and load. Begin.</p>
+
         <h3>The Surveillance War</h3>
         <p>We're vulnerable to cyber attacks more than ever in human history! Every click is tracked. A recent cybersecurity report shows 2.6 billion personal records breached globally. Governments, corporations, and hackers target your data_location, finances, secrets.</p>
+        
         <h3>Incident of AT&T Breach</h3>
-        <p>Hackers stole 73 million users’ data due to weak encryption. Victims faced identity theft costing millions.Some of you might be Victims.</p>
+        <p>Hackers stole 73 million users' data due to weak encryption. Victims faced identity theft costing millions.Some of you might be Victims.</p>
+        
         <h3>Checklist: Threat Audit</h3>
         <ul>
           <li>Check passwords on HaveIBeenPwned.(Otherwise you volunteer giving most of you data online).</li>
           <li>Review app permissions on phone.</li>
           <li>Audit cloud storage for sensitive files.</li>
         </ul>
+        
         <h3>Tools: Threat Awareness</h3>
         <ul>
           <li><strong>Free:</strong> HaveIBeenPwned, Privacy Badger.</li>
           <li><strong>Premium:</strong> NordVPN Threat Protection ($3/mo) - or any other reasonable one!.</li>
         </ul>
-        <blockquote>“In the digital age, privacy is power.” _ Edward Snowden</blockquote>
-        <!-- [~1,500 words on surveillance, hacking risks, and more case studies omitted] -->
+        
+        <blockquote>"In the digital age, privacy is power." _ Edward Snowden</blockquote>
 
         <h2>Chapter 2: Building Your Digital Fortress: Layered Defense</h2>
         <h3>The Security Foundation</h3>
-        <p>A <strong>digital fortress</strong> needs layers. A cyber security study shows VPNs reduce tracking by 80%- It is betterv to try to protect yourself. It’s a sense of dignity. Start with VPNs, encrypted browsers, and password managers.</p>
+        <p>A <strong>digital fortress</strong> needs layers. A cyber security study shows VPNs reduce tracking by 80%- It is betterv to try to protect yourself. It's a sense of dignity. Start with VPNs, encrypted browsers, and password managers.</p>
+        
         <h3>Step-by-Step: VPN Setup</h3>
         <ul>
           <li>Choose NordVPN or ProtonVPN.- Am not paid to promote any just make your informed decision.</li>
@@ -123,793 +1248,326 @@
           <li>Use 1Password for unique passwords.</li>
           <li>Enable firewall (Windows Defender or uBlock).</li>
         </ul>
+        
         <h3>Tools: Fortress Basics</h3>
         <ul>
           <li><strong>Free:</strong> Brave Browser, uBlock Origin.</li>
           <li><strong>Premium:</strong> NordVPN ($3/mo), 1Password ($3/mo).</li>
         </ul>
-        <blockquote>“A single weak link can collapse your empire.” _ Kevin Mitnick</blockquote>
-        <!-- [~1,500 words on layered defense, more guides, and screenshots omitted] -->
+        
+        <blockquote>"A single weak link can collapse your empire." _ Kevin Mitnick</blockquote>
 
         <h2>Chapter 3: End-to-End Encryption & Secure Communication</h2>
         <h3>The Encrypted Shield</h3>
-        <p>Encrypt everything like a hoe pretending to be "religious". A recent privacy study shows Signal’s end-to-end encryption is unbreakable. Use ProtonMail, Signal, and Session.</p>
+        <p>Encrypt everything like a hoe pretending to be "religious". A recent privacy study shows Signal's end-to-end encryption is unbreakable. Use ProtonMail, Signal, and Session.</p>
+        
         <h3>Step-by-Step: Signal Setup</h3>
         <ul>
           <li>Download Signal from signal.org.</li>
           <li>Verify contacts with safety numbers.</li>
           <li>Enable disappearing messages.</li>
         </ul>
+        
         <h3>Checklist: Comm Security</h3>
         <ul>
           <li>Use ProtonMail for email.</li>
           <li>Switch WhatsApp to Signal.</li>
           <li>Encrypt video calls with Jitsi Meet.</li>
         </ul>
+        
         <h3>Tools: Secure Comms</h3>
         <ul>
           <li><strong>Free:</strong> Signal, ProtonMail (basic).</li>
           <li><strong>Premium:</strong> ProtonMail Plus ($5/mo).</li>
         </ul>
-        <blockquote>“If you’re not encrypted, you’re exposed.” _ Anonymous #TzeptosoftElite Hacker</blockquote>
-        <!-- [~1,500 words on encryption, more tools, and guides omitted] -->
+        
+        <blockquote>"If you're not encrypted, you're exposed." _ Anonymous #TzeptosoftElite Hacker</blockquote>
 
         <h2>Chapter 4: Anonymous Browsing & Digital Footprint Erasure</h2>
         <h3>The Ghost Protocol</h3>
         <p><strong>Anonymous browsing</strong> is a lifestyle. Tor hides 99% of user activity,but still its your responsibility to secure yourself. Erase your footprint with Brave and data removal services.</p>
+        
         <h3>Step-by-Step: Tor Setup</h3>
         <ul>
           <li>Download Tor Browser from torproject.org.</li>
           <li>Use default security settings.</li>
           <li>Avoid logins to preserve anonymity.</li>
         </ul>
-        <h3>Screenshot Placeholder</h3>
-        <pre>[Image: Tor Browser security settings]</pre>
+        
         <h3>Checklist: Footprint Erasure</h3>
         <ul>
           <li>Use DeleteMe to remove data from brokers.</li>
           <li>Clear cookies weekly with Brave.</li>
           <li>Search your name on Google, remove results.</li>
         </ul>
+        
         <h3>Tools: Anonymity</h3>
         <ul>
           <li><strong>Free:</strong> Tor Browser, Brave.</li>
           <li><strong>Premium:</strong> DeleteMe ($10/mo).</li>
         </ul>
-        <blockquote>“Leave no trace, or you’re already caught.” _ The Hacker’s Manifesto</blockquote>
-        <!-- [~1,500 words on anonymity, footprint erasure, and more guides omitted] -->
+        
+        <blockquote>"Leave no trace, or you're already caught." _ The Hacker's Manifesto</blockquote>
 
         <h2>Chapter 5: The Deep Web & Dark Web Navigation</h2>
         <h3>The Hidden Frontier</h3>
         <p>The deep and dark web hold knowledge_and risks. A recent security report shows 60% of dark web users face malware without precautions.</p>
+        
         <h3>Step-by-Step: Safe Dark Web Access</h3>
         <ul>
           <li>Use Tor with NordVPN.</li>
           <li>Access only trusted .onion sites (e.g., The Hidden Wiki).</li>
           <li>Never download files without sandboxing.</li>
         </ul>
-        <h3>Screenshot Placeholder</h3>
-        <pre>[Image: Tor accessing Hidden Wiki]</pre>
+        
         <h3>Checklist: Dark Web Safety</h3>
         <ul>
           <li>Use disposable VM for dark web.</li>
           <li>Verify .onion links on X communities.</li>
           <li>Disable JavaScript in Tor.</li>
         </ul>
+        
         <h3>Tools: Deep/Dark Web</h3>
         <ul>
           <li><strong>Free:</strong> Tor, Qubes OS.</li>
           <li><strong>Premium:</strong> NordVPN ($3/mo).</li>
         </ul>
-        <blockquote>“The dark web is a tool, not a toy.” _ Anonymous</blockquote>
-        <!-- [~1,500 words on deep/dark web, safety protocols, and more guides omitted] -->
+        
+        <blockquote>"The dark web is a tool, not a toy." _ Anonymous</blockquote>
 
         <h2>Chapter 6: Secure Cloud & File Encryption</h2>
         <h3>The Data Vault</h3>
         <p>Big tech clouds are traps. A recent cloud study shows 90% of Google Drive data is scanned. Use encrypted clouds like Proton Drive.</p>
+        
         <h3>Step-by-Step: File Encryption</h3>
         <ul>
           <li>Download VeraCrypt from veracrypt.fr.</li>
           <li>Create encrypted container (AES-256).</li>
           <li>Store sensitive files in container.</li>
         </ul>
-        <h3>Screenshot Placeholder</h3>
-        <pre>[Image: VeraCrypt container setup]</pre>
+        
         <h3>Checklist: Cloud Security</h3>
         <ul>
           <li>Use Proton Drive for cloud storage.</li>
           <li>Encrypt files before upload.</li>
           <li>Backup keys offline.</li>
         </ul>
+        
         <h3>Tools: Cloud Encryption</h3>
         <ul>
           <li><strong>Free:</strong> VeraCrypt, Cryptomator.</li>
           <li><strong>Premium:</strong> Proton Drive ($5/mo).</li>
         </ul>
-        <blockquote>“Your data is only yours if it’s encrypted.” _ Bruce Schneier</blockquote>
-        <!-- [~1,500 words on cloud security, encryption, and more guides omitted] -->
+        
+        <blockquote>"Your data is only yours if it's encrypted." _ Bruce Schneier</blockquote>
 
         <h2>Chapter 7: Digital Self-Defense Tactics</h2>
         <h3>The Cyber Shield</h3>
         <p>Hackers exploit human error. A recent phishing study shows 70% of breaches start with email scams. Learn counter-hacking and social engineering defense.</p>
+        
         <h3>Step-by-Step: Phishing Detection</h3>
         <ul>
           <li>Check sender email for typos.</li>
           <li>Hover links to verify URLs.</li>
           <li>Use Mailfence to filter scams.</li>
         </ul>
-        <h3>Screenshot Placeholder</h3>
-        <pre>[Image: Phishing email with fake URL]</pre>
+        
         <h3>Checklist: Self-Defense</h3>
         <ul>
           <li>Enable 2FA on all accounts.</li>
           <li>Secure IoT with VLAN (Ubiquiti).</li>
           <li>Train family on phishing monthly.</li>
         </ul>
+        
         <h3>Tools: Self-Defense</h3>
         <ul>
           <li><strong>Free:</strong> Mailfence, Yubico Authenticator.</li>
           <li><strong>Premium:</strong> YubiKey ($50).</li>
         </ul>
-        <blockquote>“The best defense is a trained mind.” _ Kevin Mitnick</blockquote>
-        <!-- [~1,500 words on counter-hacking, social engineering, and more guides omitted] -->
+        
+        <blockquote>"The best defense is a trained mind." _ Kevin Mitnick</blockquote>
 
         <h2>Chapter 8: Cryptocurrency & Blockchain Security</h2>
         <h3>The Digital Vault</h3>
         <p>Crypto is freedom_if secure. A recent blockchain study shows $3.7 billion stolen from wallets. Use cold storage and secure wallets.</p>
+        
         <h3>Step-by-Step: Cold Wallet Setup</h3>
         <ul>
           <li>Buy Ledger Nano X from ledger.com.</li>
           <li>Generate seed phrase offline.</li>
           <li>Store seed in fireproof safe.</li>
         </ul>
-        <h3>Screenshot Placeholder</h3>
-        <pre>[Image: Ledger Nano X seed phrase setup]</pre>
+        
         <h3>Checklist: Crypto Security</h3>
         <ul>
           <li>Use hardware wallet for 90% of funds.</li>
           <li>Verify wallet addresses manually.</li>
           <li>Enable 2FA on exchanges.</li>
         </ul>
+        
         <h3>Tools: Crypto Security</h3>
         <ul>
           <li><strong>Free:</strong> Electrum Wallet.</li>
           <li><strong>Premium:</strong> Ledger Nano X ($150).</li>
         </ul>
-        <blockquote>“Your crypto is only as safe as your keys.” _ Satoshi Nakamoto</blockquote>
-        <!-- [~1,500 words on crypto security, wallets, and more guides omitted] -->
+        
+        <blockquote>"Your crypto is only as safe as your keys." _ Satoshi Nakamoto</blockquote>
 
         <h2>Chapter 9: Social Media Anonymity and Surveillance Evasion</h2>
         <h3>The Invisible Profile</h3>
         <p>Social media is a surveillance trap. A recent privacy study shows 85% of X posts are tracked. Operate anonymously with pseudonyms and minimal data.</p>
+        
         <h3>Step-by-Step: Anonymous X Account</h3>
         <ul>
           <li>Create burner email with ProtonMail.</li>
           <li>Sign up for X with VPN on.</li>
           <li>Use pseudonym, no real photos.</li>
         </ul>
-        <h3>Screenshot Placeholder</h3>
-        <pre>[Image: X profile with pseudonym setup]</pre>
+        
         <h3>Checklist: Social Anonymity</h3>
         <ul>
           <li>Delete old posts with TweetDelete.</li>
           <li>Disable location tags.</li>
           <li>Post via Tor or VPN.</li>
         </ul>
+        
         <h3>Tools: Social Anonymity</h3>
         <ul>
           <li><strong>Free:</strong> TweetDelete, Privacy Badger.</li>
           <li><strong>Premium:</strong> NordVPN ($3/mo).</li>
         </ul>
-        <blockquote>“Social media is a stage. Stay in the shadows.” _ Anonymous</blockquote>
-        <!-- [~1,500 words on social anonymity, surveillance evasion, and more guides omitted] -->
+        
+        <blockquote>"Social media is a stage. Stay in the shadows." _ Anonymous</blockquote>
 
         <h2>Chapter 10: Future-Proofing Your Digital Empire</h2>
         <h3>The Eternal Fortress</h3>
         <p>Cyber threats evolve. A recent AI security report predicts 50% of attacks will use AI by 2027. Stay ahead with predictive measures and decentralized tech.</p>
+        
         <h3>Step-by-Step: AI Protection</h3>
         <ul>
           <li>Install CrowdStrike Falcon for AI threat detection.</li>
           <li>Use decentralized DNS (Handshake).</li>
           <li>Update software weekly.</li>
         </ul>
-        <h3>Screenshot Placeholder</h3>
-        <pre>[Image: CrowdStrike dashboard]</pre>
+        
         <h3>Checklist: Future-Proofing</h3>
         <ul>
           <li>Monitor X for emerging threats.</li>
           <li>Backup data on air-gapped drive.</li>
           <li>Join privacy communities on Matrix.</li>
         </ul>
+        
         <h3>Tools: Future-Proofing</h3>
         <ul>
           <li><strong>Free:</strong> Matrix, Handshake.</li>
           <li><strong>Premium:</strong> CrowdStrike ($10/mo).</li>
         </ul>
-        <blockquote>“The future belongs to those who prepare today.” _ Bruce Schneier</blockquote>
-        <!-- [~1,500 words on future-proofing, AI protection, and more guides omitted] -->
+        
+        <blockquote>"The future belongs to those who prepare today." _ Bruce Schneier</blockquote>
 
         <h2>The Final Command: Forge Your Digital Fortress</h2>
-        <p>You’re not here to be tracked_you’re here to vanish. These 10 chapters are your <strong>digital privacy guide</strong> for <strong>online security tactics</strong>, <strong>anonymous browsing</strong>, and <strong>encrypted communication tools</strong>. Start now: install a VPN, switch to Signal, audit your passwords. Build your <strong>digital fortress</strong> for 90 days and share your lockdown on X with #TzeptosoftElite. Your data is your empire. Defend it.</p>
+        <p>You're not here to be tracked_you're here to vanish. These 10 chapters are your <strong>digital privacy guide</strong> for <strong>online security tactics</strong>, <strong>anonymous browsing</strong>, and <strong>encrypted communication tools</strong>. Start now: install a VPN, switch to Signal, audit your passwords. Build your <strong>digital fortress</strong> for 90 days and share your lockdown on X with #TzeptosoftElite. Your data is your empire. Defend it.</p>
         <p><strong>With Ruthless Precision, Your Architect,</strong><br>Clinton | Tzeptosoft</p>
         <p><strong>#TzeptosoftElite #DigitalPrivacyGuide #OnlineSecurityTactics #AnonymousBrowsing #CybersecurityForMen</strong></p>
-      </article>
-
-      <!-- Terminal Section -->
-      <div class="section" id="terminal">
-        <h2>>>> INITIATE SEQUENCE</h2>
-        <div class="terminal-content">
-          <div class="terminal-line" data-text="> Initializing Tzeptosoft..."></div>
-          <div class="terminal-line" data-text="> Deploying Digital Fortress Protocol..."></div>
-          <div class="terminal-line" data-text="> SYSTEM UPGRADE: TOTAL PRIVACY ACTIVATED ✅"></div>
-          <div class="terminal-line" data-text="> Welcome to #TzeptosoftElite - OPERATE IN THE SHADOWS."></div>
-        </div>
-        <button class="hack-btn" aria-label="Start hack simulation">Initiate Hack Simulation</button>
-        <div class="hack-output">
-          <div class="terminal-line" data-text="> Deploying Digital Fortress Protocol..."></div>
-          <div class="terminal-line" data-text="> SYSTEM UPGRADE: TOTAL PRIVACY ACTIVATED ✅"></div>
-        </div>
       </div>
 
-      <!-- Newsletter Subscription Section -->
+      <div class="terminal-content">
+        <div class="terminal-line" data-text="> Accessing Digital Fortress Protocol... 🔒"></div>
+        <div class="terminal-line" data-text="> Deploying Ghost Protocols... 👻"></div>
+        <div class="terminal-line" data-text="> Encryption Layers: ACTIVATED ⚔️"></div>
+      </div>
+
       <div class="newsletter-container">
-        <h3 class="newsletter-title">Subscribe to Our Newsletter</h3>
-        <p>Join the Tzeptosoft Elite. Get ruthless <strong>digital privacy guides</strong>, <strong>online security tactics</strong>, and <strong>encrypted communication tools</strong> to master <strong>anonymous browsing</strong> and achieve <strong>digital footprint erasure</strong>.</p>
-        <form action="/subscribe" method="post" class="newsletter-form">
-          <input type="email" name="email" placeholder="Enter your email" required aria-label="Email address">
-          <button type="submit" class="newsletter-button">Join the Elite</button>
-        </form>
-      </div>
-
-      <div class="cta-container">
-        <h3 class="cta-title">Ready to Build Your Digital Fortress?</h3>
-        <a href="/#contact" class="cta-button">Join the Elite</a>
+        <h3>Join the Digital Fortress Elite 🔥</h3>
+        <p>Get weekly <strong>privacy tactics</strong>, <strong>security protocols</strong>, and fire to vanish from the digital grid. No traces, only shadows! 🔒</p>
+        <input type="email" placeholder="Enter your email" aria-label="Email for newsletter">
+        <button type="button">Subscribe 🚀</button>
       </div>
 
       <div class="social-share">
-        <h3>Share This Post</h3>
-        <a href="https://twitter.com/intent/tweet?url=https://tzeptosoft.com/blog/digital-fortress&text=Digital Fortress! Tzeptosoft’s guide to total privacy and online security. #CybersecurityForMen" aria-label="Share on Twitter">Twitter</a>
+        <h3>Spread the Privacy War 🗣️</h3>
+        <a href="https://twitter.com/intent/tweet?url=https://tzeptosoft.com/blog/digital-fortress&text=Digital Fortress: Total Privacy & Security Guide – Vanish from the Grid with Tzeptosoft!" aria-label="Share on Twitter">Twitter</a>
         <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://tzeptosoft.com/blog/digital-fortress" aria-label="Share on LinkedIn">LinkedIn</a>
         <a href="https://www.facebook.com/sharer/sharer.php?u=https://tzeptosoft.com/blog/digital-fortress" aria-label="Share on Facebook">Facebook</a>
-        <a href="https://www.reddit.com/submit?url=https://tzeptosoft.com/blog/digital-fortress&title=Digital Fortress: Privacy and Security Guide" aria-label="Share on Reddit">Reddit</a>
-        <a href="https://api.whatsapp.com/send?text=Digital Fortress! Tzeptosoft’s guide to total privacy and online security. https://tzeptosoft.com/blog/digital-fortress" aria-label="Share on WhatsApp">WhatsApp</a>
+        <a href="https://www.reddit.com/submit?url=https://tzeptosoft.com/blog/digital-fortress&title=Digital Fortress: The Ultimate Guide to Total Privacy and Online Security" aria-label="Share on Reddit">Reddit</a>
+        <a href="https://api.whatsapp.com/send?text=Digital Fortress: Total Privacy & Security Guide – Vanish from the Grid with Tzeptosoft! https://tzeptosoft.com/blog/digital-fortress" aria-label="Share on WhatsApp">WhatsApp</a>
       </div>
-    </main>
+    </div>
+
+    <footer>
+      <p>© 2025 Tzeptosoft | All Rights Fucking Reserved 🔥</p>
+    </footer>
   </div>
 
-  <!-- Footer -->
-  <footer>
-      <p>© 2025 Tzeptosoft | All Rights Fucking Reserved 🔥</p>
-     
-  </footer>
-
-  <!-- CSS (blog-style.css) -->
-  <style>
-    :root {
-      --primary: #0066CC;
-      --secondary: #ca0fa1;
-      --accent: #FFFFFF;
-      --bg-dark: #0B0F1A;
-      --text-dark: #FFFFFF;
-    }
-    body {
-      margin: 0;
-      padding: 0;
-      background: var(--bg-dark);
-      color: var(--text-dark);
-      font-family: 'Inter', sans-serif;
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-    #preloader {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: var(--bg-dark);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 9999;
-    }
-    .loader {
-      font-family: 'JetBrains Mono', monospace;
-      color: var(--secondary);
-      font-size: 1.5em;
-      animation: blinkCaret 0.5s step-end infinite;
-    }
-    @keyframes blinkCaret {
-      50% { border-color: transparent; }
-    }
-    #galaxy-bg {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: radial-gradient(circle, rgba(0, 204, 255, 0.2), transparent);
-      z-index: -3;
-      animation: rotateGalaxy 60s infinite linear;
-    }
-    @keyframes rotateGalaxy {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-    #matrix-bg {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -2;
-      opacity: 0.7;
-    }
-    .matrix-char {
-      position: absolute;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 16px;
-      color: #00FF00;
-      opacity: 0.8;
-      animation: matrix-fall 5s linear infinite;
-    }
-    @keyframes matrix-fall {
-      0% { transform: translateY(-100vh); opacity: 0.8; }
-      100% { transform: translateY(100vh); opacity: 0; }
-    }
-    .hero {
-      text-align: center;
-      padding: 100px 20px;
-      background: rgba(18, 18, 18, 0.9);
-      position: relative;
-      z-index: 1;
-    }
-    .hero h1 {
-      font-size: 5em;
-      font-family: 'Orbitron', sans-serif;
-      background: linear-gradient(90deg, var(--primary), var(--secondary));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      text-shadow: 0 0 10px var(--primary);
-      animation: gradientShift 3s ease infinite;
-    }
-    @keyframes gradientShift {
-      0% { background-position: 0%; }
-      50% { background-position: 100%; }
-      100% { background-position: 0%; }
-    }
-    .hero h2 {
-      font-size: 1.8em;
-      color: var(--secondary);
-      text-shadow: 0 0 10px var(--secondary);
-    }
-    .auto-typing {
-      font-size: 1.8em;
-      color: var(--secondary);
-      font-family: 'JetBrains Mono', monospace;
-      white-space: nowrap;
-      overflow: hidden;
-      border-right: 0.15em solid var(--secondary);
-      width: 0;
-      animation: typing 3s steps(40) 1s forwards, blinkCaret 0.5s step-end infinite;
-    }
-    @keyframes typing {
-      from { width: 0; }
-      to { width: 100%; }
-    }
-    .btn-cta {
-      background: linear-gradient(90deg, var(--primary), var(--secondary));
-      color: var(--accent);
-      padding: 15px 30px;
-      text-decoration: none;
-      font-size: 1.5em;
-      border-radius: 5px;
-      box-shadow: 0 0 20px var(--primary);
-      animation: pulse 2s infinite;
-    }
-    .btn-cta:hover {
-      background: linear-gradient(90deg, var(--secondary), var(--primary));
-      transform: scale(1.1);
-    }
-    @keyframes pulse {
-      0% { box-shadow: 0 0 0 0 rgba(0, 102, 204, 0.4); }
-      70% { box-shadow: 0 0 0 10px rgba(0, 102, 204, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(0, 102, 204, 0); }
-    }
-    .holo-element {
-      position: absolute;
-      width: 70px;
-      height: 70px;
-      background: radial-gradient(circle, var(--primary), transparent);
-      border-radius: 50%;
-      animation: float 4s infinite ease-in-out;
-    }
-    @keyframes float {
-      0% { transform: translateY(0); opacity: 0.5; }
-      50% { transform: translateY(-30px); opacity: 1; }
-      100% { transform: translateY(0); opacity: 0.5; }
-    }
-    .blog-container {
-      padding: 80px 20px;
-      max-width: 800px;
-      margin: 0 auto;
-      background: rgba(18, 18, 18, 0.9);
-      border: 3px solid var(--secondary);
-      animation: borderGlow 2s infinite;
-    }
-    @keyframes borderGlow {
-      0% { border-color: var(--primary); }
-      50% { border-color: var(--secondary); }
-      100% { border-color: var(--primary); }
-    }
-    .hero-title {
-      font-size: 3em;
-      font-family: 'Orbitron', sans-serif;
-      background: linear-gradient(90deg, var(--primary), var(--secondary));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      text-shadow: 0 0 10px var(--primary);
-      animation: gradientShift 3s ease infinite;
-      text-align: center;
-    }
-    .author-info {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      margin: 20px 0;
-      padding: 20px;
-      background: #1C1C1C;
-      border: 2px solid var(--secondary);
-    }
-    .author-info img {
-      border-radius: 50%;
-      border: 2px solid var(--secondary);
-    }
-    .author-name {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 1.5em;
-      color: var(--secondary);
-      margin: 0;
-    }
-    .author-title {
-      font-family: 'JetBrains Mono', monospace;
-      color: var(--text-dark);
-      margin: 5px 0 0;
-    }
-    hr {
-      border: 1px solid var(--secondary);
-      margin: 20px 0;
-    }
-    article {
-      font-size: 1.2em;
-    }
-    article h2 {
-      font-size: 2em;
-      font-family: 'Orbitron', sans-serif;
-      color: var(--secondary);
-      text-shadow: 0 0 15px var(--secondary);
-      margin: 1.5em 0 0.5em;
-    }
-    article h3 {
-      font-size: 1.5em;
-      font-family: 'Orbitron', sans-serif;
-      color: var(--accent);
-      margin: 1em 0 0.5em;
-    }
-    article p {
-      color: var(--text-dark);
-      margin: 0.5em 0;
-    }
-    article strong {
-      color: var(--accent);
-    }
-    article ul, article ol {
-      margin: 1em 0;
-      padding-left: 20px;
-    }
-    article li {
-      margin-bottom: 0.5em;
-      color: var(--text-dark);
-    }
-    article blockquote {
-      background: #1C1C1C;
-      padding: 20px;
-      border-left: 4px solid var(--secondary);
-      font-family: 'JetBrains Mono', monospace;
-      color: var(--secondary);
-      margin: 1em 0;
-    }
-    article pre {
-      background: #1a1a1a;
-      padding: 15px;
-      border: 1px solid var(--secondary);
-      border-radius: 4px;
-      font-family: 'JetBrains Mono', monospace;
-      color: var(--secondary);
-      overflow-x: auto;
-    }
-    article a {
-      color: var(--secondary);
-      text-decoration: none;
-      border-bottom: 1px solid rgba(0, 204, 255, 0.3);
-    }
-    article a:hover {
-      color: var(--accent);
-      background: rgba(0, 204, 255, 0.1);
-    }
-    .section {
-      padding: 80px 20px;
-      max-width: 800px;
-      margin: 0 auto;
-      background: rgba(18, 18, 18, 0.9);
-      border: 3px solid var(--secondary);
-      animation: borderGlow 2s infinite;
-    }
-    .section h2 {
-      font-size: 2.5em;
-      color: var(--secondary);
-      text-shadow: 0 0 15px var(--secondary);
-    }
-    .terminal-content, .hack-output {
-      background: #1a1a1a;
-      padding: 20px;
-      border: 1px solid var(--secondary);
-      border-radius: 4px;
-      margin: 20px 0;
-      font-family: 'JetBrains Mono', monospace;
-      color: var(--secondary);
-      font-size: 1em;
-    }
-    .hack-output {
-      display: none;
-    }
-    .hack-output.active {
-      display: block;
-      animation: fadeIn 0.5s ease-out;
-    }
-    .terminal-line {
-      opacity: 0;
-      white-space: nowrap;
-      overflow: hidden;
-    }
-    .terminal-line.typed {
-      opacity: 1;
-      animation: typing 0.5s steps(40) forwards;
-    }
-    .hack-btn {
-      background: linear-gradient(90deg, var(--primary), var(--secondary));
-      color: var(--accent);
-      padding: 10px 20px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 1em;
-      transition: transform 0.3s ease;
-    }
-    .hack-btn:hover {
-      transform: scale(1.05);
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .newsletter-container {
-      text-align: center;
-      margin: 2rem 0;
-      padding: 20px;
-      background: #1C1C1C;
-      border: 2px solid var(--secondary);
-      animation: borderGlow 2s infinite;
-    }
-    .newsletter-title {
-      font-family: 'Orbitron', sans-serif;
-      color: var(--secondary);
-      font-size: 2em;
-      margin-bottom: 10px;
-    }
-    .newsletter-form {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-    .newsletter-form input[type="email"] {
-      padding: 10px;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 1em;
-      background: #1a1a1a;
-      color: var(--accent);
-      border: 1px solid var(--secondary);
-      border-radius: 4px;
-      width: 250px;
-    }
-    .newsletter-button {
-      background: linear-gradient(90deg, var(--primary), var(--secondary));
-      color: var(--accent);
-      padding: 10px 20px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 1em;
-      transition: transform 0.3s ease;
-    }
-    .newsletter-button:hover {
-      transform: scale(1.05);
-    }
-    .cta-container {
-      text-align: center;
-      margin: 2rem 0;
-      padding: 20px;
-      background: #1C1C1C;
-      border: 2px solid var(--secondary);
-    }
-    .cta-title {
-      font-family: 'Orbitron', sans-serif;
-      color: var(--secondary);
-      font-size: 2em;
-      margin-bottom: 10px;
-    }
-    .cta-button {
-      background: linear-gradient(90deg, var(--primary), var(--secondary));
-      color: var(--accent);
-      padding: 15px 30px;
-      text-decoration: none;
-      font-size: 1.5em;
-      border-radius: 5px;
-      box-shadow: 0 0 20px var(--primary);
-      animation: pulse 2s infinite;
-    }
-    .cta-button:hover {
-      background: linear-gradient(90deg, var(--secondary), var(--primary));
-      transform: scale(1.1);
-    }
-    .social-share {
-      margin: 2rem 0;
-      text-align: center;
-    }
-    .social-share h3 {
-      font-family: 'Orbitron', sans-serif;
-      color: var(--secondary);
-      margin-bottom: 10px;
-    }
-    .social-share a {
-      margin: 0 10px;
-      padding: 10px 20px;
-      background: var(--primary);
-      color: var(--accent);
-      border-radius: 4px;
-      text-decoration: none;
-      font-family: 'JetBrains Mono', monospace;
-    }
-    .social-share a:hover {
-      background: var(--secondary);
-      color: #000;
-    }
-    footer {
-      text-align: center;
-      padding: 40px 20px;
-      border-top: 1px solid #1E1E2E;
-    }
-    .social-links {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 10px;
-    }
-    .social-links img {
-      width: 24px;
-      height: 24px;
-    }
-    @media (max-width: 768px) {
-      .hero h1 { font-size: 3em; }
-      .blog-container { padding: 40px 10px; }
-      .section { padding: 40px 10px; }
-      .hero { padding: 60px 10px; }
-      .hero-title { font-size: 2em; }
-      article h2 { font-size: 1.5em; }
-      .cta-button { font-size: 1em; padding: 10px 20px; }
-      .newsletter-form input[type="email"] { width: 200px; }
-    }
-    @media (max-width: 480px) {
-      .hero h1 { font-size: 2em; }
-      .hero h2 { font-size: 1.2em; }
-      .auto-typing { font-size: 1.2em; }
-      .btn-cta { font-size: 1em; padding: 10px 20px; }
-      .hero-title { font-size: 1.5em; }
-      article h2 { font-size: 1.2em; }
-      article { font-size: 1em; }
-      .author-info { flex-direction: column; text-align: center; }
-      .author-info img { margin-bottom: 10px; }
-      .terminal-content, .hack-output { font-size: 0.9em; }
-      .newsletter-form { flex-direction: column; align-items: center; }
-      .newsletter-form input[type="email"] { width: 100%; }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      * { animation: none !important; transition: none !important; }
-    }
-    @media print {
-      body { background: white; color: black; }
-      .blog-container, .section { background: white; border: none; }
-      a { color: var(--primary); text-decoration: underline; }
-      .btn-cta, .cta-button, .hack-btn, .newsletter-button { background: white; color: var(--primary); border: 1px solid var(--primary); }
-      #galaxy-bg, #matrix-bg, #particles, #cursor-trail, .holo-element { display: none; }
-    }
-  </style>
-
-  <!-- JavaScript -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
+      const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+      const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+      const mobileMenuClose = document.getElementById('mobileMenuClose');
+      const searchToggle = document.getElementById('searchToggle');
+      const searchBox = document.getElementById('searchBox');
+      const searchInput = document.querySelector('.search-input');
+
+      mobileMenuToggle?.addEventListener('click', () => {
+        mobileMenuOverlay?.classList.toggle('active');
+        document.body.style.overflow = mobileMenuOverlay?.classList.contains('active') ? 'hidden' : '';
+      });
+
+      mobileMenuClose?.addEventListener('click', () => {
+        mobileMenuOverlay?.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+
+      mobileMenuOverlay?.addEventListener('click', (e) => {
+        if (e.target === mobileMenuOverlay) {
+          mobileMenuOverlay.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      });
+
+      searchToggle?.addEventListener('click', () => {
+        const isActive = searchBox?.classList.contains('active');
+        searchBox?.classList.toggle('active');
+        searchToggle?.setAttribute('aria-expanded', !isActive);
+        if (!isActive && searchInput) searchInput.focus();
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          searchBox?.classList.remove('active');
+          searchToggle?.setAttribute('aria-expanded', 'false');
+          mobileMenuOverlay?.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      });
+
       window.addEventListener('load', () => {
         document.getElementById('preloader').style.display = 'none';
       });
-      const sections = document.querySelectorAll('.section, .blog-container, .newsletter-container');
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            if (entry.target.id === 'terminal' && !entry.target.dataset.animated) {
-              startTerminalSequence();
-              entry.target.dataset.animated = 'true';
-            }
-          }
-        });
-      }, { threshold: 0.1 });
-      sections.forEach(section => observer.observe(section));
-      function startTerminalSequence() {
-        const lines = document.querySelectorAll('#terminal .terminal-content .terminal-line');
-        let delay = 0;
-        lines.forEach(line => {
-          line.textContent = '';
-          const text = line.dataset.text;
-          let charIndex = 0;
-          setTimeout(() => {
-            const type = () => {
-              if (charIndex < text.length) {
-                line.textContent += text[charIndex];
-                charIndex++;
-                setTimeout(type, 30);
-              } else {
-                line.classList.add('typed');
-              }
-            };
-            type();
-          }, delay);
-          delay += 1000;
-        });
+
+      const matrixAnimation = document.querySelector('.matrix-animation');
+      function startMatrixAnimation() {
+        matrixAnimation.textContent = '';
+        matrixAnimation.classList.remove('typing');
+        void matrixAnimation.offsetWidth;
+        matrixAnimation.textContent = 'DIGITAL FORTRESS. TOTAL PRIVACY.';
+        matrixAnimation.classList.add('typing');
       }
-      const hackBtn = document.querySelector('.hack-btn');
-      const hackOutput = document.querySelector('.hack-output');
-      let isHacking = false;
-      if (hackBtn) {
-        hackBtn.addEventListener('click', () => {
-          if (isHacking) return;
-          isHacking = true;
-          hackOutput.classList.add('active');
-          const hackLines = hackOutput.querySelectorAll('.terminal-line');
-          let delay = 0;
-          hackLines.forEach(line => {
-            line.textContent = '';
-            const text = line.dataset.text;
-            let charIndex = 0;
-            setTimeout(() => {
-              const type = () => {
-                if (charIndex < text.length) {
-                  line.textContent += text[charIndex];
-                  charIndex++;
-                  setTimeout(type, 30);
-                } else {
-                  line.classList.add('typed');
-                }
-              };
-              type();
-            }, delay);
-            delay += 1000;
-          });
-          setTimeout(() => { isHacking = false; }, delay + 1000);
-        });
-      }
+      startMatrixAnimation();
+      setInterval(startMatrixAnimation, 4000);
+
+      let lastScrollY = window.scrollY;
+      window.addEventListener('scroll', () => {
+        const header = document.querySelector('.main-header');
+        const currentScrollY = window.scrollY;
+        if (currentScrollY > 100) {
+          header?.classList.add('scrolled');
+        } else {
+          header?.classList.remove('scrolled');
+        }
+        lastScrollY = currentScrollY;
+      });
+
       const matrixBg = document.getElementById('matrix-bg');
       for (let i = 0; i < 50; i++) {
         const char = document.createElement('div');
@@ -919,6 +1577,7 @@
         char.style.animationDelay = Math.random() * 5 + 's';
         matrixBg.appendChild(char);
       }
+
       const particleContainer = document.getElementById('particles');
       for (let i = 0; i < 50; i++) {
         const particle = document.createElement('div');
@@ -928,10 +1587,50 @@
         particle.style.animationDelay = Math.random() * 3 + 's';
         particleContainer.appendChild(particle);
       }
+
       const cursorTrail = document.getElementById('cursor-trail');
       document.addEventListener('mousemove', (e) => {
         cursorTrail.style.left = e.clientX - 15 + 'px';
         cursorTrail.style.top = e.clientY - 15 + 'px';
+      });
+
+      // Terminal animation
+      const terminalLines = document.querySelectorAll('.terminal-line');
+      let delay = 0;
+      terminalLines.forEach(line => {
+        line.textContent = '';
+        const text = line.dataset.text;
+        let charIndex = 0;
+        setTimeout(() => {
+          const type = () => {
+            if (charIndex < text.length) {
+              line.textContent += text[charIndex];
+              charIndex++;
+              setTimeout(type, 35);
+            } else {
+              line.classList.add('typed');
+            }
+          };
+          type();
+        }, delay);
+        delay += 1000;
+      });
+
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href');
+          if (targetId === '#') return;
+          
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 100,
+              behavior: 'smooth'
+            });
+          }
+        });
       });
     });
   </script>

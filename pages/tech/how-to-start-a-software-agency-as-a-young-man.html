@@ -6,13 +6,11 @@
   <meta name="description" content="Learn how to start a software agency as a young man with this no-BS blueprint. Mindset shifts, business setup, must-have skills, and client acquisition tactics for bold, driven coders ready to build a tech empire.">
   <meta name="keywords" content="start a software agency, software agency blueprint, tech entrepreneur, young entrepreneur, coding business, client acquisition, software development skills, mindset for success, Tzeptosoft, startup guide, business setup">
   <meta name="author" content="Clinton | Tzeptosoft">
-  <!-- Open Graph Tags -->
   <meta property="og:title" content="How to Start a Software Agency as a Young Man | Tzeptosoft">
   <meta property="og:description" content="Learn how to start a software agency as a young man with this no-BS blueprint. Mindset shifts, business setup, must-have skills, and client acquisition tactics for bold, driven coders ready to build a tech empire.">
   <meta property="og:image" content="https://tzeptosoft.com/assets/og-software-agency.webp">
   <meta property="og:url" content="https://tzeptosoft.com/blog/start-software-agency">
   <meta property="og:type" content="article">
-  <!-- Twitter Card Tags -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="How to Start a Software Agency as a Young Man | Tzeptosoft">
   <meta name="twitter:description" content="Learn how to start a software agency as a young man with this no-BS blueprint. Mindset shifts, business setup, must-have skills, and client acquisition tactics for bold, driven coders ready to build a tech empire.">
@@ -20,52 +18,505 @@
   <title>How to Start a Software Agency as a Young Man | Tzeptosoft</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Mono:wght@700&family=Orbitron:wght@900&family=JetBrains+Mono:wght@400;700&display=swap">
   <link rel="icon" type="image/webp" href="/assets/favicon.webp">
-  <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     "headline": "How to Start a Software Agency as a Young Man",
     "description": "Learn how to start a software agency as a young man with this no-BS blueprint. Mindset shifts, business setup, must-have skills, and client acquisition tactics for bold, driven coders ready to build a tech empire.",
-    "author": {
-      "@type": "Person",
-      "name": "Clinton"
-    },
+    "author": { "@type": "Person", "name": "Clinton" },
     "publisher": {
       "@type": "Organization",
       "name": "Tzeptosoft",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://tzeptosoft.com/assets/logo.webp"
-      }
+      "logo": { "@type": "ImageObject", "url": "https://tzeptosoft.com/assets/logo.webp" }
     },
     "image": "https://tzeptosoft.com/assets/start-software-agency.webp",
     "url": "https://tzeptosoft.com/blog/start-software-agency"
   }
   </script>
   <style>
-    /* Core Variables */
     :root {
-      --primary: #0066CC;
-      --secondary: #00CCFF;
-      --accent: #FFFFFF;
-      --bg-dark: #0B0F1A;
-      --text-dark: #FFFFFF;
-      --matrix-green: #00FF00;
-      --shadow-dark: rgba(0, 102, 204, 0.4);
-      --error-red: #FF3333;
-      --success-green: #33FF33;
+  --primary: #0066CC;
+  --secondary: #00CCFF;
+  --accent: #FFFFFF;
+  --bg-dark: #0B0F1A;
+  --text-dark: #FFFFFF;
+  --matrix-green: #00FF00;
+}
+
+    /* Header Styles */
+    .main-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(11, 15, 26, 0.95);
+      backdrop-filter: blur(20px);
+      border-bottom: 2px solid transparent;
+      animation: headerSlideIn 0.6s ease-out;
+      box-shadow: 0 8px 32px rgba(0, 102, 204, 0.1);
     }
 
-    /* Global Reset */
-    body {
+    @keyframes headerSlideIn {
+      from {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .main-header.scrolled {
+      border-bottom-color: rgba(0, 204, 255, 0.2);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 70px;
+      position: relative;
+    }
+
+    .logo-section {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .logo-wrapper:hover {
+      transform: scale(1.05);
+    }
+
+    .logo-image {
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(0, 204, 255, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    .logo-primary {
+      font-size: 1.4em;
+      font-weight: 900;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-shadow: 0 0 10px rgba(0, 102, 204, 0.5);
+    }
+
+    .logo-subtitle {
+      font-size: 0.75em;
+      color: var(--secondary);
+      font-weight: 600;
+      opacity: 0.8;
+      margin-top: 2px;
+    }
+
+    .nav-section {
+      display: flex;
+    }
+
+    .nav-list {
+      display: flex;
+      list-style: none;
       margin: 0;
       padding: 0;
-      background: var(--bg-dark);
+      gap: 30px;
+      align-items: center;
+    }
+
+    .nav-item {
+      position: relative;
+    }
+
+    .nav-link {
+      display: block;
+      padding: 8px 16px;
       color: var(--text-dark);
+      text-decoration: none;
       font-family: 'Inter', sans-serif;
-      line-height: 1.8;
-      overflow-x: hidden;
+      font-weight: 500;
+      font-size: 0.95em;
+      position: relative;
+      transition: all 0.3s ease;
+      border-radius: 6px;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--secondary);
+      background: rgba(0, 204, 255, 0.1);
+      box-shadow: 0 0 20px rgba(0, 204, 255, 0.2);
+      transform: translateY(-2px);
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 80%;
+    }
+
+    .actions-section {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .search-container {
+      position: relative;
+    }
+
+    .search-toggle {
+      background: none;
+      border: 2px solid rgba(0, 204, 255, 0.3);
+      border-radius: 8px;
+      padding: 8px;
+      color: var(--secondary);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .search-toggle:hover {
+      border-color: var(--secondary);
+      box-shadow: 0 0 20px rgba(0, 204, 255, 0.4);
+      transform: scale(1.05);
+    }
+
+    .search-icon {
+      width: 20px;
+      height: 20px;
+    }
+
+    .search-box {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 300px;
+      background: rgba(28, 28, 28, 0.95);
+      border: 2px solid var(--secondary);
+      border-radius: 8px;
+      padding: 12px;
+      margin-top: 8px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 40px rgba(0, 102, 204, 0.2);
+      z-index: 1001;
+    }
+
+    .search-box.active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .search-input {
+      width: 100%;
+      background: rgba(18, 18, 18, 0.8);
+      border: 1px solid rgba(0, 204, 255, 0.3);
+      border-radius: 6px;
+      padding: 10px 12px;
+      color: var(--text-dark);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.9em;
+    }
+
+    .search-input::placeholder {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .search-input:focus {
+      outline: none;
+      border-color: var(--secondary);
+      box-shadow: 0 0 0 3px rgba(0, 204, 255, 0.2);
+    }
+
+    .search-submit {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: var(--secondary);
+      cursor: pointer;
+      padding: 4px;
+      width: 20px;
+      height: 20px;
+    }
+
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: var(--accent);
+      text-decoration: none;
+      border-radius: 8px;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 600;
+      font-size: 0.9em;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(0, 102, 204, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: left 0.5s;
+    }
+
+    .cta-button:hover::before {
+      left: 100%;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(0, 102, 204, 0.4);
+    }
+
+    .button-icon {
+      width: 16px;
+      height: 16px;
+      transition: transform 0.3s ease;
+    }
+
+    .cta-button:hover .button-icon {
+      transform: translateX(4px);
+    }
+
+    .mobile-menu-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 30px;
+      height: 30px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+      z-index: 1001;
+    }
+
+    .hamburger-line {
+      width: 100%;
+      height: 3px;
+      background: var(--secondary);
+      border-radius: 2px;
+      transition: all 0.3s ease;
+      transform-origin: center;
+    }
+
+    .mobile-menu-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: rgba(11, 15, 26, 0.98);
+      backdrop-filter: blur(20px);
+      z-index: 999;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.4s ease;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .mobile-menu-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .mobile-menu {
+      width: 320px;
+      max-width: 90vw;
+      background: linear-gradient(135deg, rgba(18, 18, 18, 0.95), rgba(11, 15, 26, 0.95));
+      border-left: 3px solid var(--secondary);
+      padding: 0;
+      transform: translateX(100%);
+      transition: transform 0.4s ease;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+    }
+
+    .mobile-menu-overlay.active .mobile-menu {
+      transform: translateX(0);
+    }
+
+    .mobile-menu-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 20px;
+      border-bottom: 1px solid rgba(0, 204, 255, 0.2);
+    }
+
+    .mobile-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-dark);
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.2em;
+    }
+
+    .mobile-menu-close {
+      background: none;
+      border: none;
+      color: var(--secondary);
+      cursor: pointer;
+      padding: 8px;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .mobile-menu-close:hover {
+      background: rgba(0, 204, 255, 0.1);
+      box-shadow: 0 0 20px rgba(0, 204, 255, 0.2);
+    }
+
+    .mobile-nav {
+      padding: 20px 0;
+      flex: 1;
+    }
+
+    .mobile-nav-link {
+      display: block;
+      padding: 16px 24px;
+      color: var(--text-dark);
+      text-decoration: none;
+      font-family: 'Inter', sans-serif;
+      font-size: 1.1em;
+      font-weight: 500;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .mobile-nav-link::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 0;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      transition: width 0.3s ease;
+      z-index: -1;
+    }
+
+    .mobile-nav-link:hover::before,
+    .mobile-nav-link.active::before {
+      width: 100%;
+    }
+
+    .mobile-nav-link:hover,
+    .mobile-nav-link.active {
+      color: var(--accent);
+      padding-left: 32px;
+    }
+
+    .mobile-actions {
+      padding: 20px 24px;
+      border-top: 1px solid rgba(0, 204, 255, 0.2);
+    }
+
+    .mobile-cta-button {
+      display: inline-block;
+      width: 100%;
+      padding: 16px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: var(--accent);
+      text-decoration: none;
+      border-radius: 8px;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 600;
+      text-align: center;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(0, 102, 204, 0.3);
+    }
+
+    .mobile-cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(0, 102, 204, 0.4);
+    }
+
+    /* Preloader */
+    #preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--bg-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+
+    .loader {
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--secondary);
+      font-size: 1.5em;
+      animation: blinkCaret 0.5s step-end infinite;
+    }
+
+    @keyframes blinkCaret {
+      50% { border-color: transparent; }
     }
 
     /* Background Effects */
@@ -79,6 +530,7 @@
       z-index: -3;
       animation: rotateGalaxy 60s infinite linear;
     }
+
     @keyframes rotateGalaxy {
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
@@ -93,6 +545,7 @@
       z-index: -2;
       opacity: 0.7;
     }
+
     .matrix-char {
       position: absolute;
       font-family: 'JetBrains Mono', monospace;
@@ -101,6 +554,7 @@
       opacity: 0.8;
       animation: matrix-fall 5s linear infinite;
     }
+
     @keyframes matrix-fall {
       0% { transform: translateY(-100vh); opacity: 0.8; }
       100% { transform: translateY(100vh); opacity: 0; }
@@ -114,6 +568,7 @@
       height: 100%;
       z-index: -1;
     }
+
     .particle {
       position: absolute;
       width: 5px;
@@ -122,13 +577,13 @@
       border-radius: 50%;
       animation: drift 10s infinite linear;
     }
+
     @keyframes drift {
       0% { transform: translate(0, 0); opacity: 0.5; }
       50% { opacity: 1; }
       100% { transform: translate(100px, 100px); opacity: 0.5; }
     }
 
-    /* Cursor Trail */
     #cursor-trail {
       position: fixed;
       width: 30px;
@@ -136,28 +591,35 @@
       background: radial-gradient(circle, var(--secondary), transparent);
       border-radius: 50%;
       pointer-events: none;
-      z-index: 1000;
+      z-index: 100;
       transition: all 0.1s ease;
+    }
+
+    .main-content {
+      position: relative;
     }
 
     /* Hero Section */
     .hero {
       text-align: center;
-      padding: 120px 20px;
+      padding: 120px 20px 100px;
       background: rgba(18, 18, 18, 0.9);
       position: relative;
       z-index: 1;
+      margin-top: 0;
     }
+
     .hero h1 {
-      font-size: 5.5em;
+      font-size: 5em;
       font-family: 'Orbitron', sans-serif;
       background: linear-gradient(90deg, var(--primary), var(--secondary));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      text-shadow: 0 0 15px var(--primary);
+      text-shadow: 0 0 10px var(--primary);
       animation: gradientShift 3s ease infinite;
       margin-bottom: 0;
     }
+
     .matrix-animation {
       font-family: 'JetBrains Mono', monospace;
       font-size: 1.8em;
@@ -168,29 +630,35 @@
       white-space: nowrap;
       display: inline-block;
     }
+
     .matrix-animation.typing {
       animation: typeMatrix 2s steps(20) forwards, glitch 0.1s infinite alternate;
     }
+
     @keyframes typeMatrix {
       from { width: 0; }
       to { width: 100%; }
     }
+
     @keyframes glitch {
       0% { transform: translate(0); opacity: 1; }
       50% { transform: translate(2px, -2px); opacity: 0.8; }
       100% { transform: translate(-2px, 2px); opacity: 0.9; }
     }
+
     @keyframes gradientShift {
       0% { background-position: 0%; }
       50% { background-position: 100%; }
       100% { background-position: 0%; }
     }
+
     .hero h2 {
       font-size: 2em;
       color: var(--secondary);
       text-shadow: 0 0 10px var(--secondary);
       margin-top: 20px;
     }
+
     .btn-cta {
       background: linear-gradient(90deg, var(--primary), var(--secondary));
       color: var(--accent);
@@ -203,17 +671,18 @@
       margin-top: 20px;
       display: inline-block;
     }
+
     .btn-cta:hover {
       background: linear-gradient(90deg, var(--secondary), var(--primary));
       transform: scale(1.1);
     }
+
     @keyframes pulse {
       0% { box-shadow: 0 0 0 0 var(--shadow-dark); }
       70% { box-shadow: 0 0 0 10px rgba(0, 102, 204, 0); }
       100% { box-shadow: 0 0 0 0 rgba(0, 102, 204, 0); }
     }
 
-    /* Holographic Elements */
     .holo-element {
       position: absolute;
       width: 80px;
@@ -222,6 +691,7 @@
       border-radius: 50%;
       animation: float 4s infinite ease-in-out;
     }
+
     @keyframes float {
       0% { transform: translateY(0); opacity: 0.5; }
       50% { transform: translateY(-30px); opacity: 1; }
@@ -237,44 +707,58 @@
       border: 3px solid var(--secondary);
       animation: borderGlow 2s infinite;
     }
+
     @keyframes borderGlow {
       0% { border-color: var(--primary); }
       50% { border-color: var(--secondary); }
       100% { border-color: var(--primary); }
     }
+
     .blog-container h1 {
       font-size: 3em;
       color: var(--secondary);
       text-shadow: 0 0 15px var(--secondary);
       font-family: 'Orbitron', sans-serif;
+      text-align: center;
     }
+
     .blog-container h2 {
       font-size: 2.2em;
       color: var(--secondary);
       font-family: 'Orbitron', sans-serif;
       margin-top: 2.5em;
     }
+
     .blog-container h3 {
       font-size: 1.8em;
       color: var(--secondary);
       font-family: 'Space Mono', monospace;
       margin-top: 2em;
     }
+
     .blog-container h4 {
       font-size: 1.4em;
       color: var(--secondary);
       font-family: 'JetBrains Mono', monospace;
       margin-top: 1.5em;
     }
+
     .blog-container p {
       color: var(--text-dark);
       font-size: 1.3em;
       margin-bottom: 1em;
     }
+
+    .highlight {
+      color: var(--secondary);
+      font-weight: 600;
+    }
+
     .blog-container ul {
       list-style: none;
       padding: 0;
     }
+
     .blog-container li {
       background: #1C1C1C;
       padding: 20px;
@@ -282,10 +766,12 @@
       margin-bottom: 20px;
       transition: transform 0.3s ease;
     }
+
     .blog-container li:hover {
       transform: translateY(-10px);
       box-shadow: 0 0 40px var(--secondary);
     }
+
     .blog-container blockquote {
       font-family: 'JetBrains Mono', monospace;
       color: var(--secondary);
@@ -296,30 +782,32 @@
       font-size: 1.2em;
     }
 
-    /* Author Info */
     .author-info {
       margin: 30px 0;
       text-align: center;
     }
+
     .author-name {
       font-family: 'JetBrains Mono', monospace;
       color: var(--secondary);
       font-size: 1.4em;
     }
+
     .author-title {
       color: var(--text-dark);
       font-size: 1.1em;
     }
+
     .author-logo {
       max-width: 120px;
       height: auto;
     }
+
     hr {
       border: 1px solid var(--secondary);
       margin: 30px 0;
     }
 
-    /* CTA Container */
     .cta-container {
       text-align: center;
       margin: 30px 0;
@@ -328,27 +816,14 @@
       border: 2px solid var(--secondary);
       border-radius: 4px;
     }
+
     .cta-title {
       font-family: 'Orbitron', sans-serif;
       color: var(--secondary);
       font-size: 2em;
       margin-bottom: 10px;
     }
-    .cta-button {
-      background: linear-gradient(90deg, var(--primary), var(--secondary));
-      color: var(--accent);
-      padding: 12px 24px;
-      text-decoration: none;
-      border-radius: 4px;
-      font-family: 'JetBrains Mono', monospace;
-      display: inline-block;
-    }
-    .cta-button:hover {
-      background: linear-gradient(90deg, var(--secondary), var(--primary));
-      transform: scale(1.05);
-    }
 
-    /* Newsletter Section */
     .newsletter-container {
       text-align: center;
       margin: 50px 0;
@@ -357,16 +832,19 @@
       border: 2px solid var(--secondary);
       border-radius: 4px;
     }
+
     .newsletter-container h3 {
       font-family: 'Orbitron', sans-serif;
       color: var(--secondary);
       font-size: 2em;
       margin-bottom: 15px;
     }
+
     .newsletter-container p {
       font-size: 1.3em;
       margin-bottom: 20px;
     }
+
     .newsletter-container input[type="email"] {
       padding: 12px;
       width: 80%;
@@ -377,6 +855,7 @@
       font-family: 'JetBrains Mono', monospace;
       border-radius: 4px;
     }
+
     .newsletter-container button {
       padding: 12px 24px;
       background: linear-gradient(90deg, var(--primary), var(--secondary));
@@ -387,22 +866,24 @@
       cursor: pointer;
       margin-top: 10px;
     }
+
     .newsletter-container button:hover {
       background: linear-gradient(90deg, var(--secondary), var(--primary));
       transform: scale(1.05);
     }
 
-    /* Social Share */
     .social-share {
       margin: 3rem 0;
       text-align: center;
     }
+
     .social-share h3 {
       font-family: 'Orbitron', sans-serif;
       color: var(--secondary);
       font-size: 1.8em;
       margin-bottom: 15px;
     }
+
     .social-share a {
       margin: 0 12px;
       padding: 12px 24px;
@@ -412,12 +893,12 @@
       text-decoration: none;
       font-family: 'JetBrains Mono', monospace;
     }
+
     .social-share a:hover {
       background: var(--secondary);
       color: #000;
     }
 
-    /* Terminal Content */
     .terminal-content {
       background: #1a1a1a;
       padding: 25px;
@@ -428,21 +909,23 @@
       color: var(--secondary);
       font-size: 1.1em;
     }
+
     .terminal-line {
       opacity: 0;
       white-space: nowrap;
       overflow: hidden;
     }
+
     .terminal-line.typed {
       opacity: 1;
       animation: typing 0.5s steps(40) forwards;
     }
+
     @keyframes typing {
       from { width: 0; }
       to { width: 100%; }
     }
 
-    /* Checklist Styling */
     .checklist-container {
       margin: 30px 0;
       padding: 20px;
@@ -450,12 +933,14 @@
       border: 2px solid var(--secondary);
       border-radius: 4px;
     }
+
     .checklist-container h3 {
       font-family: 'Orbitron', sans-serif;
       color: var(--secondary);
       font-size: 1.8em;
       margin-bottom: 15px;
     }
+
     .checklist-item {
       display: flex;
       align-items: center;
@@ -463,19 +948,21 @@
       font-family: 'JetBrains Mono', monospace;
       font-size: 1.2em;
     }
+
     .checklist-item input[type="checkbox"] {
       margin-right: 15px;
       accent-color: var(--secondary);
     }
+
     .checklist-item label {
       color: var(--text-dark);
     }
+
     .checklist-item.completed label {
       text-decoration: line-through;
       color: var(--success-green);
     }
 
-    /* Resource Box */
     .resource-box {
       margin: 30px 0;
       padding: 20px;
@@ -483,46 +970,41 @@
       border: 2px solid var(--secondary);
       border-radius: 4px;
     }
+
     .resource-box h3 {
       font-family: 'Orbitron', sans-serif;
       color: var(--secondary);
       font-size: 1.8em;
       margin-bottom: 15px;
     }
+
     .resource-box ul {
       list-style: disc;
       padding-left: 20px;
     }
+
     .resource-box li {
       background: none;
       border: none;
       padding: 10px 0;
       font-size: 1.2em;
     }
+
     .resource-box a {
       color: var(--secondary);
       text-decoration: underline;
     }
+
     .resource-box a:hover {
       color: var(--primary);
     }
 
-    /* Footer */
     footer {
       text-align: center;
       padding: 50px 20px;
       border-top: 1px solid #1E1E2E;
     }
-    .social-links {
-      display: flex;
-      justify-content: center;
-      gap: 25px;
-      margin-top: 15px;
-    }
-    .social-links img {
-      width: 28px;
-      height: 28px;
-    }
+
     .signature {
       font-family: 'JetBrains Mono', monospace;
       color: var(--secondary);
@@ -531,496 +1013,742 @@
       text-align: center;
     }
 
-    /* Responsive Design */
+    @media (max-width: 1024px) {
+      .nav-list {
+        gap: 20px;
+      }
+      
+      .nav-link {
+        padding: 6px 12px;
+        font-size: 0.9em;
+      }
+    }
+
     @media (max-width: 768px) {
-      .hero h1 { font-size: 3.5em; }
-      .matrix-animation { font-size: 1.4em; }
-      .blog-container { padding: 50px 15px; }
-      .hero { padding: 80px 15px; }
-      .newsletter-container input[type="email"] { width: 90%; }
-      .blog-container h1 { font-size: 2.5em; }
-      .blog-container h2 { font-size: 1.8em; }
-      .blog-container p { font-size: 1.2em; }
+      .header-container {
+        height: 60px;
+        padding: 0 16px;
+      }
+      
+      .nav-section {
+        display: none;
+      }
+      
+      .mobile-menu-toggle {
+        display: flex;
+      }
+      
+      .search-box {
+        width: 280px;
+        right: -20px;
+      }
+      
+      .logo-primary {
+        font-size: 1.2em;
+      }
+
+      .hero {
+        padding: 100px 10px 80px;
+      }
+
+      .hero h1 { 
+        font-size: 3.5em; 
+      }
+
+      .matrix-animation { 
+        font-size: 1.4em; 
+      }
+
+      .blog-container { 
+        padding: 50px 15px; 
+      }
+
+      .blog-container h1 { 
+        font-size: 2.5em; 
+      }
+
+      .blog-container h2 { 
+        font-size: 1.8em; 
+      }
+
+      .blog-container p { 
+        font-size: 1.2em; 
+      }
+
+      .terminal-content { 
+        font-size: 0.9em; 
+      }
+
+      .newsletter-container input[type="email"] { 
+        width: 90%; 
+      }
     }
+
     @media (max-width: 480px) {
-      .hero h1 { font-size: 2.5em; }
-      .matrix-animation { font-size: 1.2em; }
-      .hero h2 { font-size: 1.5em; }
-      .btn-cta { font-size: 1.2em; padding: 12px 24px; }
-      .blog-container h1 { font-size: 2em; }
-      .blog-container h2 { font-size: 1.6em; }
-      .terminal-content { font-size: 0.9em; }
-      .checklist-item { font-size: 1em; }
+      .header-container {
+        height: 56px;
+        padding: 0 12px;
+      }
+      
+      .search-box {
+        width: calc(100vw - 40px);
+        right: auto;
+        left: 12px;
+      }
+      
+      .cta-button {
+        padding: 10px 20px;
+        font-size: 0.85em;
+      }
+      
+      .mobile-menu {
+        width: 100vw;
+        max-width: none;
+      }
+
+      .hero h1 { 
+        font-size: 2.5em; 
+      }
+
+      .matrix-animation { 
+        font-size: 1.2em; 
+      }
+
+      .hero h2 { 
+        font-size: 1.5em; 
+      }
+
+      .btn-cta { 
+        font-size: 1.2em; 
+        padding: 12px 24px; 
+      }
+
+      .blog-container h1 { 
+        font-size: 2em; 
+      }
+
+      .blog-container h2 { 
+        font-size: 1.6em; 
+      }
+
+      .terminal-content { 
+        font-size: 0.9em; 
+      }
+
+      .checklist-item { 
+        font-size: 1em; 
+      }
     }
+
     @media (prefers-reduced-motion: reduce) {
-      * { animation: none !important; transition: none !important; }
-    }
-    @media print {
-      body { background: white; color: black; }
-      .blog-container { background: white; border: none; }
-      a { color: var(--primary); text-decoration: underline; }
-      .btn-cta, .cta-button { background: white; color: var(--primary); border: 1px solid var(--primary); }
-      #galaxy-bg, #matrix-bg, #particles, #cursor-trail, .holo-element, .matrix-animation { display: none; }
+      * { 
+        animation: none !important; 
+        transition: none !important; 
+      }
     }
   </style>
 </head>
-<body>
-  <!-- Background Effects -->
-  <div id="galaxy-bg"></div>
-  <div id="matrix-bg"></div>
-  <div id="particles"></div>
-  <div id="cursor-trail"></div>
-
-  <!-- Hero Section -->
-  <div class="hero">
-    <h1>TZEPTOSOFT</h1>
-    <div class="matrix-animation">BUILD YOUR EMPIRE</div>
-    <h2>How to Start a Software Agency as a Young Man</h2>
-    <a href="mailto:tzeptosoft@gmail.com" class="btn-cta" aria-label="Contact Tzeptosoft">Launch Your Agency Now</a>
-    <div class="holo-element" style="top: 15%; left: 10%;"></div>
-    <div class="holo-element" style="top: 25%; right: 12%;"></div>
-    <div class="holo-element" style="bottom: 20%; left: 15%;"></div>
-    <div class="holo-element" style="bottom: 10%; right: 10%;"></div>
-    <div class="holo-element" style="top: 10%; left: 20%;"></div>
-    <div class="holo-element" style="bottom: 15%; right: 18%;"></div>
-    <div class="holo-element" style="top: 20%; left: 25%;"></div>
-    <div class="holo-element" style="bottom: 25%; right: 20%;"></div>
+<body data-page="software-agency">
+  <div id="preloader">
+    <div class="loader">Initializing Tzeptosoft... 🚀</div>
   </div>
 
-  <!-- Blog Content -->
-  <div class="blog-container">
-    <header>
-      <h1>How to Start a Software Agency as a Young Man</h1>
-      <div class="author-info">
-        <p class="author-name">Clinton | Tzeptosoft</p>
-        <img src="/assets/images/tzeptosoft-logo.webp" alt="Tzeptosoft Logo" class="author-logo" width="150" height="150" loading="lazy">
-        <p class="author-title">Architect of Digital Empires</p>
-      </div>
-      <hr>
-    </header>
-
-    <!-- CTA Container -->
-    <div class="cta-container">
-      <h3 class="cta-title">Ready to Build Your Software Empire?</h3>
-      <a href="#contact" class="cta-button">Join the CodeForge</a>
-    </div>
-
-    <!-- Main Content -->
-    <div class="content">
-      <p>Brother, you’re not here to punch a clock or grind for someone else’s dream. You’re a young lion, hungry for greatness, ready to carve your name into the tech world. Starting a software agency isn’t just a business_it’s a declaration of war on mediocrity. It’s about building an empire that delivers value, commands respect, and stacks cash while you sleep. This isn’t for the faint-hearted. It’s for the bold, the driven, the relentless.</p>
-      <p>This blueprint is your battle plan. It’s a no-BS guide to launching a software agency from scratch, even if you’re a complete beginner. We’ll cover the mindset shifts to forge an unbreakable will, the business setup to hit the ground running, the skills to deliver world-class software, and the tactics to land your first clients. This isn’t theory_it’s a manual for domination. Twice as long as my last post, because you deserve every detail to win.</p>
-      <p>The stakes are high. The tech world rewards those who execute and punishes those who hesitate. You’re not just starting an agency_you’re building a legacy. Let’s fucking roll.</p>
-
-      <!-- Section 1: Mindset Shifts -->
-      <h2>1. Mindset Shifts: Forge the Mind of a Tech Emperor</h2>
-      <p>Before you write a line of code or pitch a client, you need to rewire your brain. The world is full of coders who stay small because they think small. You’re different. You’re a king in the making, and your mindset is your crown. Here are the shifts to make you unstoppable.</p>
-
-      <h3>1.1 Embrace the Long Game</h3>
-      <p>Success isn’t instant. Building an agency takes time, grit, and relentless consistency. Forget get-rich-quick schemes_focus on stacking small wins daily. Every line of code, every client call, every late night is an investment in your empire. Patience plus action equals power.</p>
-      <h4>Action Step</h4>
-      <p>Write down your 5-year vision. Where’s your agency? How many clients? What’s your revenue? Read it daily to stay locked in.</p>
-      <h4>Case Study</h4>
-      <p>Basecamp started as a small agency. Founders Jason Fried and DHH focused on long-term value, not quick bucks. Today, Basecamp’s a $100M+ company, built on patience and execution.</p>
-      <blockquote>“The long game isn’t sexy, but it’s the only game that builds empires.”_Tzeptosoft</blockquote>
-
-      <h3>1.2 Own Your Failures</h3>
-      <p>You’ll fuck up. Projects will crash, clients will ghost, and you’ll doubt yourself. Good. Failure is your mentor, not your enemy. Each mistake teaches you how to win. Embrace it, analyze it, and keep moving. Kings don’t quit_they adapt.</p>
-      <h4>Action Step</h4>
-      <p>After every setback, write a “Failure Report.” What went wrong? What’s the lesson? How will you crush it next time? Keep a journal of these to track your growth.</p>
-      <h4>Case Study</h4>
-      <p>Slack’s founder Stewart Butterfield pivoted from a failed gaming startup to a $27B communication platform. He owned his failures, learned, and built a titan.</p>
-      <blockquote>“Failure is just feedback. Use it to sharpen your blade.”_Tzeptosoft</blockquote>
-
-      <h3>1.3 Think Like a CEO, Not a Coder</h3>
-      <p>You’re not just a programmer_you’re a business owner. Your job isn’t to write perfect code; it’s to solve problems, deliver value, and grow revenue. Shift from obsessing over syntax to obsessing over impact. Clients don’t care about your tech stack_they care about results.</p>
-      <h4>Action Step</h4>
-      <p>Read “The E-Myth Revisited” by Michael Gerber. It’ll teach you to think like a CEO who builds systems, not a technician who just codes.</p>
-      <h4>Power Move</h4>
-      <p>Practice explaining a tech project in plain English. If you can’t sell the value to a non-technical client, you’re not ready.</p>
-      <blockquote>“Coders build apps. CEOs build empires. Be both.”_Tzeptosoft</blockquote>
-
-      <h3>1.4 Cultivate Relentless Discipline</h3>
-      <p>Talent is overrated. Discipline is your superpower. The world is full of “geniuses” who never launch because they lack the grit to show up daily. Commit to consistent action_code, learn, pitch, repeat. Discipline turns dreams into dynasties.</p>
-      <h4>Action Step</h4>
-      <p>Create a daily schedule. Block 2 hours for coding, 1 hour for learning, 1 hour for outreach. Stick to it for 30 days. Track progress in a tool like Notion.</p>
-      <h4>Case Study</h4>
-      <p>Elon Musk’s discipline is legendary. He coded Zip2’s early versions while sleeping on office floors. That grind built a $307M exit. Discipline > talent.</p>
-      <blockquote>“Discipline is freedom. Grind now, reign later.”_Tzeptosoft</blockquote>
-
-      <h3>1.5 Build a Warrior’s Confidence</h3>
-      <p>Imposter syndrome is a lie. You don’t need a degree or 10 years of experience to start. You need balls and a willingness to learn. Confidence comes from action, not perfection. Act like the man who’s already running a $1M agency, and you’ll become him.</p>
-      <h4>Action Step</h4>
-      <p>Record a 1-minute video pitching your agency. Watch it, critique it, and redo it until you sound like a boss. Confidence is a muscle_train it.</p>
-      <h4>Power Move</h4>
-      <p>Join a local entrepreneurs’ meetup. Introduce yourself as a software agency founder. Own the title, even if you’re just starting.</p>
-      <blockquote>“Confidence isn’t arrogance_it’s earned belief. Act like you belong.”_Tzeptosoft</blockquote>
-
-      <div class="checklist-container">
-        <h3>Mindset Checklist</h3>
-        <div class="checklist-item">
-          <input type="checkbox" id="mindset1">
-          <label for="mindset1">Write my 5-year agency vision.</label>
-        </div>
-        <div class="checklist-item">
-          <input type="checkbox" id="mindset2">
-          <label for="mindset2">Start a Failure Report journal.</label>
-        </div>
-        <div class="checklist-item">
-          <input type="checkbox" id="mindset3">
-          <label for="mindset3">Read “The E-Myth Revisited.”</label>
-        </div>
-        <div class="checklist-item">
-          <input type="checkbox" id="mindset4">
-          <label for="mindset4">Set a daily schedule for 30 days.</label>
-        </div>
-        <div class="checklist-item">
-          <input type="checkbox" id="mindset5">
-          <label for="mindset5">Record a pitch video and refine it.</label>
-        </div>
+  <!-- Professional Header -->
+  <header class="main-header">
+    <div class="header-container">
+      <!-- Logo Section -->
+      <div class="logo-section">
+        <a href="/index.html" class="logo-wrapper" aria-label="Tzeptosoft Home">
+          <img src="/assets/images/tzeptosoft-logo.webp" alt="Tzeptosoft Logo" class="logo-image" width="48" height="48" loading="lazy">
+          <div class="logo-text">
+            <span class="logo-primary">TZEPTOSOFT</span>
+            <span class="logo-subtitle">Escaping the Matrix</span>
+          </div>
+        </a>
       </div>
 
-      <!-- Section 2: Business Setup -->
-      <h2>2. Business Setup: Lay the Foundation for Your Empire</h2>
-      <p>Your agency is a machine. Set it up right, and it’ll run like a Ferrari. Screw it up, and you’ll crash before you start. Here’s how to build a lean, legal, and professional operation from day one.</p>
-
-      <h3>2.1 Choose Your Niche</h3>
-      <p>Don’t be a jack-of-all-trades. Specialize in a niche to stand out and charge premium rates. Focus on industries like e-commerce, healthcare, or fintech, or services like web apps, mobile apps, or automation. Niching down makes you the go-to expert.</p>
-      <h4>Action Step</h4>
-      <p>Research 3 industries you’re interested in. Check their pain points on forums like Reddit or X. Pick one with high demand and low competition.</p>
-      <h4>Power Move</h4>
-      <p>Create a niche-specific portfolio. Build a sample e-commerce dashboard or healthcare app to show clients you mean business.</p>
-      <blockquote>“A focused agency is a wealthy agency. Pick your battlefield.”_Tzeptosoft</blockquote>
-
-      <h3>2.2 Name Your Agency</h3>
-      <p>Your agency’s name is your brand. Make it bold, memorable, and reflective of your mission. Avoid generic names like “Tech Solutions.” Think “CodeForge” or “IronByte”_names that scream power and precision.</p>
-      <h4>Action Step</h4>
-      <p>Brainstorm 10 names. Check domain availability on GoDaddy or Namecheap. Secure a .com domain for credibility.</p>
-      <h4>Power Move</h4>
-      <p>Design a logo using Canva or hire a designer on Fiverr. Make it sleek and professional_first impressions matter.</p>
-      <blockquote>“Your name is your battle cry. Make it echo.”_Tzeptosoft</blockquote>
-
-      <h3>2.3 Legalize Your Business</h3>
-      <p>Don’t skip the legal stuff_it protects you and builds trust. Register your business, get an EIN (if in the US), and open a business bank account. Consider an LLC for liability protection. Consult a local accountant to stay compliant.</p>
-      <h4>Action Step</h4>
-      <p>Research your country’s business registration process. In the US, use LegalZoom or your state’s website to file an LLC for $100-$300.</p>
-      <h4>Power Move</h4>
-      <p>Get a basic contract template from Rocket Lawyer. Customize it for client projects to cover scope, payment, and deliverables.</p>
-      <blockquote>“A legal agency is a trusted agency. Cover your ass.”_Tzeptosoft</blockquote>
-
-      <h3>2.4 Build a Professional Online Presence</h3>
-      <p>Your website is your digital storefront. It needs to scream credibility and convert visitors into clients. Use a simple platform like Next.js or WordPress. Include an About page, Services page, Portfolio, and Contact form.</p>
-      <h4>Action Step</h4>
-      <p>Launch a website using Vercel or Hostinger. Use a template like Astra (WordPress) or a Next.js starter. Keep it clean and client-focused.</p>
-      <h4>Power Move</h4>
-      <p>Write a killer “About” page. Tell your story as a driven young founder solving real problems. Make clients want to work with you.</p>
-      <h4>Case Study</h4>
-      <p>Toptal’s sleek website positions them as an elite dev agency. Their clear messaging and portfolio landed them $200M+ in revenue.</p>
-      <blockquote>“Your website is your handshake. Make it firm.”_Tzeptosoft</blockquote>
-
-      <h3>2.5 Set Up Basic Systems</h3>
-      <p>Streamline operations with tools. Use Trello or Notion for project management, QuickBooks for invoicing, and Google Workspace for email and docs. Automate repetitive tasks with Zapier to save time.</p>
-      <h4>Action Step</h4>
-      <p>Sign up for free trials of Trello, QuickBooks, and Google Workspace. Set up a basic workflow: client inquiry → proposal → invoice → delivery.</p>
-      <h4>Power Move</h4>
-      <p>Create a client onboarding checklist in Notion. Include steps like “Sign contract,” “Collect deposit,” and “Kickoff call.”</p>
-      <blockquote>“Systems scale empires. Chaos kills them.”_Tzeptosoft</blockquote>
-
-      <h3>2.6 Price Your Services Right</h3>
-      <p>Don’t undervalue yourself. Charge based on value, not hours. Start with $50-$100/hour or $1,000-$5,000 per project for small clients. Offer fixed-price projects to avoid scope creep. Raise rates as you gain experience.</p>
-      <h4>Action Step</h4>
-      <p>Research competitors’ pricing on Upwork or Clutch. Create a pricing sheet with 3 tiers: Basic ($1,000), Pro ($3,000), Premium ($5,000).</p>
-      <h4>Power Move</h4>
-      <p>Practice value-based pricing. For a $10,000 project that saves a client $100,000, your fee is a steal. Sell the ROI, not the hours.</p>
-      <blockquote>“Charge like a king, not a peasant. Your value is your worth.”_Tzeptosoft</blockquote>
-
-      <div class="checklist-container">
-        <h3>Business Setup Checklist</h3>
-        <div class="checklist-item">
-          <input type="checkbox" id="setup1">
-          <label for="setup1">Pick a niche and research demand.</label>
-        </div>
-        <div class="checklist-item">
-          <input type="checkbox" id="setup2">
-          <label for="setup2">Choose a bold agency name and secure domain.</label>
-        </div>
-        <div class="checklist-item">
-          <input type="checkbox" id="setup3">
-          <label for="setup3">Register business and open bank account.</label>
-        </div>
-        <div class="checklist-item">
-          <input type="checkbox" id="setup4">
-          <label for="setup4">Launch a professional website.</label>
-        </div>
-        <div class="checklist-item">
-          <input type="checkbox" id="setup5">
-          <label for="setup5">Set up project and invoicing tools.</label>
-        </div>
-        <div class="checklist-item">
-          <input type="checkbox" id="setup6">
-          <label for="setup6">Create a pricing sheet with 3 tiers.</label>
-        </div>
-      </div>
-
-      <div class="resource-box">
-        <h3>Business Setup Resources</h3>
-        <ul>
-          <li><a href="https://www.legalzoom.com">LegalZoom</a> - Affordable business registration and legal templates.</li>
-          <li><a href="https://www.namecheap.com">Namecheap</a> - Cheap domains with reliable service.</li>
-          <li><a href="https://vercel.com">Vercel</a> - Easy hosting for Next.js websites.</li>
-          <li><a href="https://www.notion.so">Notion</a> - Free project management and documentation.</li>
-          <li><a href="https://www.quickbooks.intuit.com">QuickBooks</a> - Invoicing and accounting for beginners.</li>
+      <!-- Navigation -->
+      <nav class="nav-section" role="navigation" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="/index.html" class="nav-link" data-page="home">New? Start Here</a>
+          </li>
+          <li class="nav-item">
+            <a href="/pages/blog.html" class="nav-link" data-page="blog">Blog Archives</a>
+          </li>
+          <li class="nav-item">
+            <a href="/pages/lessons" class="nav-link" data-page="lessons">Tzeptosoft Products</a>
+          </li>
+          <li class="nav-item">
+            <a href="/pages/contact-us.html" class="nav-link" data-page="Tzeptosoft">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <a href="/pages/about.html" class="nav-link" data-page="about">About</a>
+          </li>
         </ul>
+      </nav>
+
+      <!-- Action Buttons & Search -->
+      <div class="actions-section">
+        <!-- Search -->
+        <div class="search-container">
+          <button class="search-toggle" aria-label="Toggle search" aria-expanded="false" id="searchToggle">
+            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.35-4.35"></path>
+            </svg>
+          </button>
+          <div class="search-box" id="searchBox">
+            <input type="search" placeholder="Search lessons, tactics, blueprints..." class="search-input" aria-label="Search content">
+            <button class="search-submit" aria-label="Search">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.35-4.35"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- CTA Button -->
+        <a href="mailto:tzeptosoft@gmail.com" class="cta-button" aria-label="Join Tzeptosoft">
+          <span class="button-text">Join Tzeptosoft</span>
+          <svg class="button-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false" id="mobileMenuToggle">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
       </div>
+    </div>
 
-      <!-- Section 3: Skills Needed -->
-      <h2>3. Skills Needed: Arm Yourself with Elite Tools</h2>
-      <p>You don’t need to be a coding god to start, but you need enough skill to deliver value. Focus on versatile, high-impact skills that let you build real solutions fast. Here’s your arsenal.</p>
-
-      <h3>3.1 Core Programming Skills</h3>
-      <p>Learn at least one language to build functional apps. JavaScript (with React and Node.js) is ideal for web and backend. Python (with Django or Flask) is great for rapid prototyping and automation. Start with one, master it, then expand.</p>
-      <h4>Action Step</h4>
-      <p>Take a free JavaScript course on freeCodeCamp. Build a to-do app with React in 2 weeks.</p>
-      <h4>Power Move</h4>
-      <p>Deploy a small project (e.g., a portfolio site) on Netlify. Share it on X to get feedback and build credibility.</p>
-      <blockquote>“One language, mastered, is worth more than ten half-learned.”_Tzeptosoft</blockquote>
-
-      <h3>3.2 Web Development Fundamentals</h3>
-      <p>Most clients need websites or web apps. Learn HTML, CSS, and JavaScript basics. Master a framework like React or Vue for dynamic interfaces. Understand responsive design to make apps look great on all devices.</p>
-      <h4>Action Step</h4>
-      <p>Build a landing page with HTML, CSS, and Tailwind CSS. Make it mobile-friendly and deploy it on GitHub Pages.</p>
-      <h4>Power Move</h4>
-      <p>Learn Next.js for SEO-friendly web apps. Build a blog prototype with a CMS like Sanity.io.</p>
-      <h4>Case Study</h4>
-      <p>Webflow’s founders used web dev skills to build a no-code platform, now valued at $4B. Basic skills, big impact.</p>
-      <blockquote>“Web dev is your bread and butter. Nail it.”_Tzeptosoft</blockquote>
-
-      <h3>3.3 Database and Backend Basics</h3>
-      <p>Apps need data. Learn SQL for querying databases like PostgreSQL or MySQL. Understand REST APIs and how to build them with Node.js or Django. This lets you create dynamic, data-driven apps.</p>
-      <h4>Action Step</h4>
-      <p>Take a SQL course on Codecademy. Write queries to filter and sort a sample dataset.</p>
-      <h4>Power Move</h4>
-      <p>Build a simple API with Express.js. Connect it to a PostgreSQL database and test it with Postman.</p>
-      <blockquote>“Data is the lifeblood of apps. Control it.”_Tzeptosoft</blockquote>
-
-      <h3>3.4 Project Management and Communication</h3>
-      <p>Clients expect you to manage projects and communicate clearly. Learn Agile basics (sprints, standups) to keep projects on track. Practice explaining technical concepts in simple terms. Use tools like Slack for client updates.</p>
-      <h4>Action Step</h4>
-      <p>Read “Scrum: The Art of Doing Twice the Work in Half the Time” by Jeff Sutherland. Apply one Agile principle to a personal project.</p>
-      <h4>Power Move</h4>
-      <p>Create a client update template. Include progress, blockers, and next steps. Practice sending it to a friend as a mock client.</p>
-      <blockquote>“Clear communication wins trust. Trust wins contracts.”_Tzeptosoft</blockquote>
-
-      <h3>3.5 Basic Design Sense</h3>
-      <p>You don’t need to be a designer, but you need an eye for clean, functional UI. Learn Figma basics for wireframes. Study UX principles like hierarchy and usability. Use pre-built UI kits to speed up development.</p>
-      <h4>Action Step</h4>
-      <p>Create a wireframe for a client dashboard in Figma. Focus on clarity and ease of use.</p>
-      <h4>Power Move</h4>
-      <p>Redesign a bad website (e.g., a local business’s site) in Figma. Pitch it to them for free to build your portfolio.</p>
-      <blockquote>“Good design sells. Bad design repels.”_Tzeptosoft</blockquote>
-
-      <h3>3.6 Continuous Learning</h3>
-      <p>Tech moves fast. Stay sharp by learning constantly. Follow blogs like Smashing Magazine, watch YouTube channels like Fireship, and join communities on Discord or X. Allocate 5 hours a week to learning.</p>
-      <h4>Action Step</h4>
-      <p>Subscribe to 3 tech newsletters (e.g., Hacker Noon, CSS-Tricks). Read one article daily and take notes.</p>
-      <h4>Power Move</h4>
-      <p>Join a coding community on Discord. Ask one question or share one project weekly to build connections.</p>
-      <blockquote>“Stop learning, start losing. Stay hungry.”_Tzeptosoft</blockquote>
-
-      <div class="checklist-container">
-        <h3>Skills Checklist</h3>
-        <div class="checklist-item">
-          <input type="checkbox" id="skill1">
-          <label for="skill1">Complete a JavaScript course and build a to-do app.</label>
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+      <div class="mobile-menu">
+        <div class="mobile-menu-header">
+          <a href="/index.html" class="mobile-logo">
+            <img src="/assets/images/tzeptosoft-logo.webp" alt="Tzeptosoft" width="40" height="40">
+            <span>TZEPTOSOFT</span>
+          </a>
+          <button class="mobile-menu-close" id="mobileMenuClose">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 6 6 18"></path>
+              <path d="m6 6 12 12"></path>
+            </svg>
+          </button>
         </div>
-        <div class="checklist-item">
-          <input type="checkbox" id="skill2">
-          <label for="skill2">Build a mobile-friendly landing page.</label>
-        </div>
-        <div class="checklist-item">
-          <input type="checkbox" id="skill3">
-          <label for="skill3">Learn SQL and write basic queries.</label>
-        </div>
-        <div class="checklist-item">
-          <input type="checkbox" id="skill4">
-          <label for="skill4">Read “Scrum” and apply one principle.</label>
-        </div>
-        <div class="checklist-item">
-          <input type="checkbox" id="skill5">
-          <label for="skill5">Create a wireframe in Figma.</label>
-        </div>
-        <div class="checklist-item">
-          <input type="checkbox" id="skill6">
-          <label for="skill6">Join a coding community and engage weekly.</label>
+        <nav class="mobile-nav">
+          <a href="/index.html" class="mobile-nav-link">New? Start Here</a>
+          <a href="/pages/blog.html" class="mobile-nav-link">Blog Archives</a>
+          <a href="/pages/lessons" class="mobile-nav-link">Tzeptosoft Products</a>
+          <a href="/pages/contact-us.html" class="mobile-nav-link">Contact Us</a>
+          <a href="/pages/about.html" class="mobile-nav-link">About</a>
+        </nav>
+        <div class="mobile-actions">
+          <a href="mailto:tzeptosoft@gmail.com" class="mobile-cta-button">Join Tzeptosoft 🚀</a>
         </div>
       </div>
+    </div>
+  </header>
 
-      <div class="resource-box">
-        <h3>Skills Resources</h3>
+  <div class="main-content">
+    <div id="galaxy-bg"></div>
+    <div id="matrix-bg"></div>
+    <div id="particles"></div>
+    <div id="cursor-trail"></div>
+
+    <!-- Hero Section -->
+    <div class="hero">
+      <h1>TZEPTOSOFT</h1>
+      <div class="matrix-animation">BUILD YOUR EMPIRE</div>
+      <h2>How to Start a Software Agency as a Young Man</h2>
+      <a href="mailto:tzeptosoft@gmail.com" class="btn-cta" aria-label="Contact Tzeptosoft">Launch Your Agency Now</a>
+      <div class="holo-element" style="top: 15%; left: 10%;"></div>
+      <div class="holo-element" style="top: 25%; right: 12%;"></div>
+      <div class="holo-element" style="bottom: 20%; left: 15%;"></div>
+      <div class="holo-element" style="bottom: 10%; right: 10%;"></div>
+      <div class="holo-element" style="top: 10%; left: 20%;"></div>
+      <div class="holo-element" style="bottom: 15%; right: 18%;"></div>
+      <div class="holo-element" style="top: 20%; left: 25%;"></div>
+      <div class="holo-element" style="bottom: 25%; right: 20%;"></div>
+    </div>
+
+    <!-- Blog Content -->
+    <div class="blog-container">
+      <header>
+        <h1>How to Start a Software Agency as a Young Man</h1>
+        <div class="author-info">
+          <p class="author-name">Clinton | Tzeptosoft</p>
+          <img src="/assets/images/tzeptosoft-logo.webp" alt="Tzeptosoft Logo" class="author-logo" width="150" height="150" loading="lazy">
+          <p class="author-title">Architect of Digital Empires</p>
+        </div>
+        <hr>
+      </header>
+
+      <!-- CTA Container -->
+      <div class="cta-container">
+        <h3 class="cta-title">Ready to Build Your Software Empire?</h3>
+        <a href="mailto:tzeptosoft@gmail.com" class="cta-button">Join the CodeForge 🚀</a>
+      </div>
+
+      <!-- Main Content -->
+      <div class="content">
+        <p>Brother, you're not here to punch a clock or grind for someone else's dream. You're a young lion, hungry for greatness, ready to carve your name into the tech world. Starting a software agency isn't just a business_it's a declaration of war on mediocrity. It's about building an empire that delivers value, commands respect, and stacks cash while you sleep. This isn't for the faint-hearted. It's for the bold, the driven, the relentless.</p>
+        <p>This blueprint is your battle plan. It's a no-BS guide to launching a software agency from scratch, even if you're a complete beginner. We'll cover the mindset shifts to forge an unbreakable will, the business setup to hit the ground running, the skills to deliver world-class software, and the tactics to land your first clients. This isn't theory_it's a manual for domination. Twice as long as my last post, because you deserve every detail to win.</p>
+        <p>The stakes are high. The tech world rewards those who execute and punishes those who hesitate. You're not just starting an agency_you're building a legacy. Let's fucking roll.</p>
+
+        <!-- Section 1: Mindset Shifts -->
+        <h2>1. Mindset Shifts: Forge the Mind of a Tech Emperor</h2>
+        <p>Before you write a line of code or pitch a client, you need to rewire your brain. The world is full of coders who stay small because they think small. You're different. You're a king in the making, and your mindset is your crown. Here are the shifts to make you unstoppable.</p>
+
+        <h3>1.1 Embrace the Long Game</h3>
+        <p>Success isn't instant. Building an agency takes time, grit, and relentless consistency. Forget get-rich-quick schemes_focus on stacking small wins daily. Every line of code, every client call, every late night is an investment in your empire. Patience plus action equals power.</p>
+        <h4>Action Step</h4>
+        <p>Write down your 5-year vision. Where's your agency? How many clients? What's your revenue? Read it daily to stay locked in.</p>
+        <h4>Case Study</h4>
+        <p>Basecamp started as a small agency. Founders Jason Fried and DHH focused on long-term value, not quick bucks. Today, Basecamp's a $100M+ company, built on patience and execution.</p>
+        <blockquote>"The long game isn't sexy, but it's the only game that builds empires."_Tzeptosoft</blockquote>
+
+        <h3>1.2 Own Your Failures</h3>
+        <p>You'll fuck up. Projects will crash, clients will ghost, and you'll doubt yourself. Good. Failure is your mentor, not your enemy. Each mistake teaches you how to win. Embrace it, analyze it, and keep moving. Kings don't quit_they adapt.</p>
+        <h4>Action Step</h4>
+        <p>After every setback, write a "Failure Report." What went wrong? What's the lesson? How will you crush it next time? Keep a journal of these to track your growth.</p>
+        <h4>Case Study</h4>
+        <p>Slack's founder Stewart Butterfield pivoted from a failed gaming startup to a $27B communication platform. He owned his failures, learned, and built a titan.</p>
+        <blockquote>"Failure is just feedback. Use it to sharpen your blade."_Tzeptosoft</blockquote>
+
+        <h3>1.3 Think Like a CEO, Not a Coder</h3>
+        <p>You're not just a programmer_you're a business owner. Your job isn't to write perfect code; it's to solve problems, deliver value, and grow revenue. Shift from obsessing over syntax to obsessing over impact. Clients don't care about your tech stack_they care about results.</p>
+        <h4>Action Step</h4>
+        <p>Read "The E-Myth Revisited" by Michael Gerber. It'll teach you to think like a CEO who builds systems, not a technician who just codes.</p>
+        <h4>Power Move</h4>
+        <p>Practice explaining a tech project in plain English. If you can't sell the value to a non-technical client, you're not ready.</p>
+        <blockquote>"Coders build apps. CEOs build empires. Be both."_Tzeptosoft</blockquote>
+
+        <h3>1.4 Cultivate Relentless Discipline</h3>
+        <p>Talent is overrated. Discipline is your superpower. The world is full of "geniuses" who never launch because they lack the grit to show up daily. Commit to consistent action_code, learn, pitch, repeat. Discipline turns dreams into dynasties.</p>
+        <h4>Action Step</h4>
+        <p>Create a daily schedule. Block 2 hours for coding, 1 hour for learning, 1 hour for outreach. Stick to it for 30 days. Track progress in a tool like Notion.</p>
+        <h4>Case Study</h4>
+        <p>Elon Musk's discipline is legendary. He coded Zip2's early versions while sleeping on office floors. That grind built a $307M exit. Discipline > talent.</p>
+        <blockquote>"Discipline is freedom. Grind now, reign later."_Tzeptosoft</blockquote>
+
+        <h3>1.5 Build a Warrior's Confidence</h3>
+        <p>Imposter syndrome is a lie. You don't need a degree or 10 years of experience to start. You need balls and a willingness to learn. Confidence comes from action, not perfection. Act like the man who's already running a $1M agency, and you'll become him.</p>
+        <h4>Action Step</h4>
+        <p>Record a 1-minute video pitching your agency. Watch it, critique it, and redo it until you sound like a boss. Confidence is a muscle_train it.</p>
+        <h4>Power Move</h4>
+        <p>Join a local entrepreneurs' meetup. Introduce yourself as a software agency founder. Own the title, even if you're just starting.</p>
+        <blockquote>"Confidence isn't arrogance_it's earned belief. Act like you belong."_Tzeptosoft</blockquote>
+
+        <div class="checklist-container">
+          <h3>Mindset Checklist</h3>
+          <div class="checklist-item">
+            <input type="checkbox" id="mindset1">
+            <label for="mindset1">Write my 5-year agency vision.</label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="mindset2">
+            <label for="mindset2">Start a Failure Report journal.</label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="mindset3">
+            <label for="mindset3">Read "The E-Myth Revisited."</label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="mindset4">
+            <label for="mindset4">Set a daily schedule for 30 days.</label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="mindset5">
+            <label for="mindset5">Record a pitch video and refine it.</label>
+          </div>
+        </div>
+
+        <!-- Section 2: Business Setup -->
+        <h2>2. Business Setup: Lay the Foundation for Your Empire</h2>
+        <p>Your agency is a machine. Set it up right, and it'll run like a Ferrari. Screw it up, and you'll crash before you start. Here's how to build a lean, legal, and professional operation from day one.</p>
+
+        <h3>2.1 Choose Your Niche</h3>
+        <p>Don't be a jack-of-all-trades. Specialize in a niche to stand out and charge premium rates. Focus on industries like e-commerce, healthcare, or fintech, or services like web apps, mobile apps, or automation. Niching down makes you the go-to expert.</p>
+        <h4>Action Step</h4>
+        <p>Research 3 industries you're interested in. Check their pain points on forums like Reddit or X. Pick one with high demand and low competition.</p>
+        <h4>Power Move</h4>
+        <p>Create a niche-specific portfolio. Build a sample e-commerce dashboard or healthcare app to show clients you mean business.</p>
+        <blockquote>"A focused agency is a wealthy agency. Pick your battlefield."_Tzeptosoft</blockquote>
+
+        <h3>2.2 Name Your Agency</h3>
+        <p>Your agency's name is your brand. Make it bold, memorable, and reflective of your mission. Avoid generic names like "Tech Solutions." Think "CodeForge" or "IronByte"_names that scream power and precision.</p>
+        <h4>Action Step</h4>
+        <p>Brainstorm 10 names. Check domain availability on GoDaddy or Namecheap. Secure a .com domain for credibility.</p>
+        <h4>Power Move</h4>
+        <p>Design a logo using Canva or hire a designer on Fiverr. Make it sleek and professional_first impressions matter.</p>
+        <blockquote>"Your name is your battle cry. Make it echo."_Tzeptosoft</blockquote>
+
+        <h3>2.3 Legalize Your Business</h3>
+        <p>Don't skip the legal stuff_it protects you and builds trust. Register your business, get an EIN (if in the US), and open a business bank account. Consider an LLC for liability protection. Consult a local accountant to stay compliant.</p>
+        <h4>Action Step</h4>
+        <p>Research your country's business registration process. In the US, use LegalZoom or your state's website to file an LLC for $100-$300.</p>
+        <h4>Power Move</h4>
+        <p>Get a basic contract template from Rocket Lawyer. Customize it for client projects to cover scope, payment, and deliverables.</p>
+        <blockquote>"A legal agency is a trusted agency. Cover your ass."_Tzeptosoft</blockquote>
+
+        <h3>2.4 Build a Professional Online Presence</h3>
+        <p>Your website is your digital storefront. It needs to scream credibility and convert visitors into clients. Use a simple platform like Next.js or WordPress. Include an About page, Services page, Portfolio, and Contact form.</p>
+        <h4>Action Step</h4>
+        <p>Launch a website using Vercel or Hostinger. Use a template like Astra (WordPress) or a Next.js starter. Keep it clean and client-focused.</p>
+        <h4>Power Move</h4>
+        <p>Write a killer "About" page. Tell your story as a driven young founder solving real problems. Make clients want to work with you.</p>
+        <h4>Case Study</h4>
+        <p>Toptal's sleek website positions them as an elite dev agency. Their clear messaging and portfolio landed them $200M+ in revenue.</p>
+        <blockquote>"Your website is your handshake. Make it firm."_Tzeptosoft</blockquote>
+
+        <h3>2.5 Set Up Basic Systems</h3>
+        <p>Streamline operations with tools. Use Trello or Notion for project management, QuickBooks for invoicing, and Google Workspace for email and docs. Automate repetitive tasks with Zapier to save time.</p>
+        <h4>Action Step</h4>
+        <p>Sign up for free trials of Trello, QuickBooks, and Google Workspace. Set up a basic workflow: client inquiry → proposal → invoice → delivery.</p>
+        <h4>Power Move</h4>
+        <p>Create a client onboarding checklist in Notion. Include steps like "Sign contract," "Collect deposit," and "Kickoff call."</p>
+        <blockquote>"Systems scale empires. Chaos kills them."_Tzeptosoft</blockquote>
+
+        <h3>2.6 Price Your Services Right</h3>
+        <p>Don't undervalue yourself. Charge based on value, not hours. Start with $50-$100/hour or $1,000-$5,000 per project for small clients. Offer fixed-price projects to avoid scope creep. Raise rates as you gain experience.</p>
+        <h4>Action Step</h4>
+        <p>Research competitors' pricing on Upwork or Clutch. Create a pricing sheet with 3 tiers: Basic ($1,000), Pro ($3,000), Premium ($5,000).</p>
+        <h4>Power Move</h4>
+        <p>Practice value-based pricing. For a $10,000 project that saves a client $100,000, your fee is a steal. Sell the ROI, not the hours.</p>
+        <blockquote>"Charge like a king, not a peasant. Your value is your worth."_Tzeptosoft</blockquote>
+
+        <div class="checklist-container">
+          <h3>Business Setup Checklist</h3>
+          <div class="checklist-item">
+            <input type="checkbox" id="setup1">
+            <label for="setup1">Pick a niche and research demand.</label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="setup2">
+            <label for="setup2">Choose a bold agency name and secure domain.</label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="setup3">
+            <label for="setup3">Register business and open bank account.</label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="setup4">
+            <label for="setup4">Launch a professional website.</label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="setup5">
+            <label for="setup5">Set up project and invoicing tools.</label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="setup6">
+            <label for="setup6">Create a pricing sheet with 3 tiers.</label>
+          </div>
+        </div>
+
+        <div class="resource-box">
+          <h3>Business Setup Resources</h3>
+          <ul>
+            <li><a href="https://www.legalzoom.com">LegalZoom</a> - Affordable business registration and legal templates.</li>
+            <li><a href="https://www.namecheap.com">Namecheap</a> - Cheap domains with reliable service.</li>
+            <li><a href="https://vercel.com">Vercel</a> - Easy hosting for Next.js websites.</li>
+            <li><a href="https://www.notion.so">Notion</a> - Free project management and documentation.</li>
+            <li><a href="https://www.quickbooks.intuit.com">QuickBooks</a> - Invoicing and accounting for beginners.</li>
+          </ul>
+        </div>
+
+        <!-- Section 3: Skills Needed -->
+        <h2>3. Skills Needed: Arm Yourself with Elite Tools</h2>
+        <p>You don't need to be a coding god to start, but you need enough skill to deliver value. Focus on versatile, high-impact skills that let you build real solutions fast. Here's your arsenal.</p>
+
+        <h3>3.1 Core Programming Skills</h3>
+        <p>Learn at least one language to build functional apps. JavaScript (with React and Node.js) is ideal for web and backend. Python (with Django or Flask) is great for rapid prototyping and automation. Start with one, master it, then expand.</p>
+        <h4>Action Step</h4>
+        <p>Take a free JavaScript course on freeCodeCamp. Build a to-do app with React in 2 weeks.</p>
+        <h4>Power Move</h4>
+        <p>Deploy a small project (e.g., a portfolio site) on Netlify. Share it on X to get feedback and build credibility.</p>
+        <blockquote>"One language, mastered, is worth more than ten half-learned."_Tzeptosoft</blockquote>
+
+        <h3>3.2 Web Development Fundamentals</h3>
+        <p>Most clients need websites or web apps. Learn HTML, CSS, and JavaScript basics. Master a framework like React or Vue for dynamic interfaces. Understand responsive design to make apps look great on all devices.</p>
+        <h4>Action Step</h4>
+        <p>Build a landing page with HTML, CSS, and Tailwind CSS. Make it mobile-friendly and deploy it on GitHub Pages.</p>
+        <h4>Power Move</h4>
+        <p>Learn Next.js for SEO-friendly web apps. Build a blog prototype with a CMS like Sanity.io.</p>
+        <h4>Case Study</h4>
+        <p>Webflow's founders used web dev skills to build a no-code platform, now valued at $4B. Basic skills, big impact.</p>
+        <blockquote>"Web dev is your bread and butter. Nail it."_Tzeptosoft</blockquote>
+
+        <h3>3.3 Database and Backend Basics</h3>
+        <p>Apps need data. Learn SQL for querying databases like PostgreSQL or MySQL. Understand REST APIs and how to build them with Node.js or Django. This lets you create dynamic, data-driven apps.</p>
+        <h4>Action Step</h4>
+        <p>Take a SQL course on Codecademy. Write queries to filter and sort a sample dataset.</p>
+        <h4>Power Move</h4>
+        <p>Build a simple API with Express.js. Connect it to a PostgreSQL database and test it with Postman.</p>
+        <blockquote>"Data is the lifeblood of apps. Control it."_Tzeptosoft</blockquote>
+
+        <h3>3.4 Project Management and Communication</h3>
+        <p>Clients expect you to manage projects and communicate clearly. Learn Agile basics (sprints, standups) to keep projects on track. Practice explaining technical concepts in simple terms. Use tools like Slack for client updates.</p>
+        <h4>Action Step</h4>
+        <p>Read "Scrum: The Art of Doing Twice the Work in Half the Time" by Jeff Sutherland. Apply one Agile principle to a personal project.</p>
+        <h4>Power Move</h4>
+        <p>Create a client update template. Include progress, blockers, and next steps. Practice sending it to a friend as a mock client.</p>
+        <blockquote>"Clear communication wins trust. Trust wins contracts."_Tzeptosoft</blockquote>
+
+        <h3>3.5 Basic Design Sense</h3>
+        <p>You don't need to be a designer, but you need an eye for clean, functional UI. Learn Figma basics for wireframes. Study UX principles like hierarchy and usability. Use pre-built UI kits to speed up development.</p>
+        <h4>Action Step</h4>
+        <p>Create a wireframe for a client dashboard in Figma. Focus on clarity and ease of use.</p>
+        <h4>Power Move</h4>
+        <p>Redesign a bad website (e.g., a local business's site) in Figma. Pitch it to them for free to build your portfolio.</p>
+        <blockquote>"Good design sells. Bad design repels."_Tzeptosoft</blockquote>
+
+        <h3>3.6 Continuous Learning</h3>
+        <p>Tech moves fast. Stay sharp by learning constantly. Follow blogs like Smashing Magazine, watch YouTube channels like Fireship, and join communities on Discord or X. Allocate 5 hours a week to learning.</p>
+        <h4>Action Step</h4>
+        <p>Subscribe to 3 tech newsletters (e.g., Hacker Noon, CSS-Tricks). Read one article daily and take notes.</p>
+        <h4>Power Move</h4>
+        <p>Join a coding community on Discord. Ask one question or share one project weekly to build connections.</p>
+        <blockquote>"Stop learning, start losing. Stay hungry."_Tzeptosoft</blockquote>
+
+        <div class="checklist-container">
+          <h3>Skills Checklist</h3>
+          <div class="checklist-item">
+            <input type="checkbox" id="skill1">
+            <label for="skill1">Complete a JavaScript course and build a to-do app.</label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="skill2">
+            <label for="skill2">Build a mobile-friendly landing page.</label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="skill3">
+            <label for="skill3">Learn SQL and write basic queries.</label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="skill4">
+            <label for="skill4">Read "Scrum" and apply one principle.</label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="skill5">
+            <label for="skill5">Create a wireframe in Figma.</label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="skill6">
+            <label for="skill6">Join a coding community and engage weekly.</label>
+          </div>
+        </div>
+
+        <div class="resource-box">
+          <h3>Skills Resources</h3>
+          <ul>
+            <li><a href="https://www.freecodecamp.org">freeCodeCamp</a> - Free coding tutorials for web dev.</li>
+            <li><a href="https://www.codecademy.com">Codecademy</a> - Interactive courses for SQL and Python.</li>
+            <li><a href="https://www.figma.com">Figma</a> - Free design tool for wireframes and UI.</li>
+            <li><a href="https://www.smashingmagazine.com">Smashing Magazine</a> - Web dev and design articles.</li>
+            <li><a href="https://fireship.io">Fireship</a> - Quick, high-energy tech tutorials on YouTube.</li>
+          </ul>
+        </div>
+
+        <!-- Section 4: First Client Acquisition Tactics -->
+        <h2>4. First Client Acquisition Tactics: Land Your First Deal</h2>
+        <p>Clients are the lifeblood of your agency. Without them, you're just a coder with a dream. These tactics will get you your first paying clients, even with zero experience. Hustle hard, and you'll be signing contracts in weeks.</p>
+
+        <h3>4.1 Build a Portfolio That Sells</h3>
+        <p>Clients want proof you can deliver. Build 3-5 sample projects in your niche (e.g., a Shopify dashboard for e-commerce). Host them on GitHub or your website. Include case studies explaining the problem, solution, and impact.</p>
+        <h4>Action Step</h4>
+        <p>Build a sample project (e.g., a booking app for salons). Write a 300-word case study and add it to your website.</p>
+        <h4>Power Move</h4>
+        <p>Offer a free mini-project to a local business in exchange for a testimonial. Use it to boost your portfolio's credibility.</p>
+        <h4>Case Study</h4>
+        <p>Thoughtbot's portfolio showcases detailed case studies, landing them clients like Sony. A strong portfolio closes deals.</p>
+        <blockquote>"Your portfolio is your resume. Make it undeniable."_Tzeptosoft</blockquote>
+
+        <h3>4.2 Leverage Your Network</h3>
+        <p>Your first clients are closer than you think. Tell friends, family, and acquaintances you're starting an agency. Ask for referrals to small businesses or startups. One warm intro can land a $5,000 project.</p>
+        <h4>Action Step</h4>
+        <p>Message 10 people in your network. Say: "I'm launching a software agency. Know any businesses needing web or app dev?" Follow up in a week.</p>
+        <h4>Power Move</h4>
+        <p>Attend a local Chamber of Commerce event. Pitch your services to 5 business owners. Collect business cards and follow up.</p>
+        <blockquote>"Your network is your net worth. Work it."_Tzeptosoft</blockquote>
+
+        <h3>4.3 Cold Outreach Like a Pro</h3>
+        <p>Cold emails and DMs work if you're strategic. Target small businesses in your niche (e.g., gyms, restaurants). Personalize every message, focus on their pain points, and offer a clear solution. Follow up 3 times.</p>
+        <h4>Action Step</h4>
+        <p>Find 20 businesses on Google Maps. Send a cold email: "I noticed your website is slow. I can build a fast, modern site for $2,000. Can we chat?"</p>
+        <h4>Power Move</h4>
+        <p>Use Hunter.io to find business owners' emails. Track open rates with Mailtrack to refine your pitch.</p>
+        <h4>Case Study</h4>
+        <p>Chris Lema landed $10,000+ in agency deals through cold outreach. His secret? Hyper-personalized emails and relentless follow-ups.</p>
+        <blockquote>"Cold outreach is a numbers game. Play it to win."_Tzeptosoft</blockquote>
+
+        <h3>4.4 Use Freelance Platforms Strategically</h3>
+        <p>Platforms like Upwork and Fiverr are goldmines for beginners. Create a niche-specific profile, bid on small projects, and overdeliver. Use earnings to fund your agency's growth.</p>
+        <h4>Action Step</h4>
+        <p>Create an Upwork profile. Bid on 5 projects under $500. Write custom proposals highlighting your niche expertise.</p>
+        <h4>Power Move</h4>
+        <p>After completing a project, ask for a 5-star review and a referral. Reviews build trust and attract bigger clients.</p>
+        <blockquote>"Freelance platforms are your launchpad. Use them, then leap."_Tzeptosoft</blockquote>
+
+        <h3>4.5 Content Marketing for Credibility</h3>
+        <p>Share your knowledge to attract clients. Write blog posts, create YouTube tutorials, or post on X about coding tips. Content positions you as an expert, driving inbound leads.</p>
+        <h4>Action Step</h4>
+        <p>Write a 500-word blog post: "5 Ways a Custom App Can 10x Your Business." Share it on Medium and X.</p>
+        <h4>Power Move</h4>
+        <p>Record a 5-minute YouTube video: "How I Built a $1,000 App in a Weekend." Optimize it with keywords for SEO.</p>
+        <h4>Case Study</h4>
+        <p>Neil Patel's blog drives millions to his agency. Content builds trust and closes deals without cold calls.</p>
+        <blockquote>"Content is your megaphone. Shout your expertise."_Tzeptosoft</blockquote>
+
+        <h3>4.6 Deliver Exceptional Value</h3>
+        <p>Your first client is your reputation. Overdeliver on quality, communication, and deadlines. A happy client refers others and hires you again. Aim for a "wow" experience every time.</p>
+        <h4>Action Step</h4>
+        <p>For your first project, add a free bonus (e.g., a performance audit). Tell the client it's a thank-you for trusting you.</p>
+        <h4>Power Move</h4>
+        <p>After delivery, send a feedback survey. Use positive responses as testimonials on your website.</p>
+        <blockquote>"One thrilled client is worth ten cold leads. Wow them."_Tzeptosoft</blockquote>
+
+        <div class="checklist-container">
+          <h3>Client Acquisition Checklist</h3>
+          <div class="checklist-item">
+            <input type="checkbox" id="client1">
+            <label for="client1">Build a niche portfolio with 3 projects.</label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="client2">
+            <label for="client2">Message 10 network contacts for referrals.</label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="client3">
+            <label for="client3">Send 20 cold emails to businesses.</label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="client4">
+            <label for="client4">Create an Upwork profile and bid on 5 projects.</label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="client5">
+            <label for="client5">Write a blog post and share it online.</label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="client6">
+            <label for="client6">Add a free bonus to my first project.</label>
+          </div>
+        </div>
+
+        <div class="resource-box">
+          <h3>Client Acquisition Resources</h3>
+          <ul>
+            <li><a href="https://www.upwork.com">Upwork</a> - Freelance platform for small projects.</li>
+            <li><a href="https://hunter.io">Hunter.io</a> - Find business email addresses.</li>
+            <li><a href="https://www.medium.com">Medium</a> - Publish blogs to reach clients.</li>
+            <li><a href="https://clutch.co">Clutch</a> - Research competitor agencies and pricing.</li>
+            <li><a href="https://www.mailtrack.io">Mailtrack</a> - Track email opens for cold outreach.</li>
+          </ul>
+        </div>
+
+        <!-- Final Call to Action -->
+        <h2>Your Mission: Launch Your Empire</h2>
+        <p>This isn't a blog post_it's a fucking manifesto. You've got the mindset, the setup, the skills, and the tactics to start a software agency that dominates. The world is yours if you execute. Founders who build their own solutions raise more capital, move faster, and win bigger. That's the power of being a creator, not a bystander.</p>
+        <h3>Immediate Action Plan</h3>
         <ul>
-          <li><a href="https://www.freecodecamp.org">freeCodeCamp</a> - Free coding tutorials for web dev.</li>
-          <li><a href="https://www.codecademy.com">Codecademy</a> - Interactive courses for SQL and Python.</li>
-          <li><a href="https://www.figma.com">Figma</a> - Free design tool for wireframes and UI.</li>
-          <li><a href="https://www.smashingmagazine.com">Smashing Magazine</a> - Web dev and design articles.</li>
-          <li><a href="https://fireship.io">Fireship</a> - Quick, high-energy tech tutorials on YouTube.</li>
+          <li><strong>Day 1:</strong> Write your 5-year vision and pick a niche.</li>
+          <li><strong>Week 1:</strong> Register your business, launch a website, and build a sample project.</li>
+          <li><strong>Month 1:</strong> Master one language, send 50 cold emails, and bid on 10 Upwork projects.</li>
+          <li><strong>90 Days:</strong> Land your first $1,000 client and deliver a "wow" project.</li>
         </ul>
+        <h3>Reflection CTA</h3>
+        <p>Sit down tonight. Ask: *What's stopping me from starting my agency?* Write the answer, then crush that excuse. Code something, pitch someone, or register your business by midnight. Momentum is everything.</p>
+        <h3>Vision for You</h3>
+        <p>Picture this: You're 25, running a $500K agency. Your team's building apps for global brands, your bank account's stacked, and your name's synonymous with innovation. You didn't wait for permission. You built. You conquered.</p>
+        <blockquote>"The world doesn't owe you shit. Build your empire, or watch someone else do it."_Tzeptosoft's CodeForge</blockquote>
+        <p><strong>Code. Build. Dominate. – TZEPTOSOFT</strong></p>
+        <p class="signature">With love, Your man, Clinton</p>
       </div>
 
-      <!-- Section 4: First Client Acquisition Tactics -->
-      <h2>4. First Client Acquisition Tactics: Land Your First Deal</h2>
-      <p>Clients are the lifeblood of your agency. Without them, you’re just a coder with a dream. These tactics will get you your first paying clients, even with zero experience. Hustle hard, and you’ll be signing contracts in weeks.</p>
-
-      <h3>4.1 Build a Portfolio That Sells</h3>
-      <p>Clients want proof you can deliver. Build 3-5 sample projects in your niche (e.g., a Shopify dashboard for e-commerce). Host them on GitHub or your website. Include case studies explaining the problem, solution, and impact.</p>
-      <h4>Action Step</h4>
-      <p>Build a sample project (e.g., a booking app for salons). Write a 300-word case study and add it to your website.</p>
-      <h4>Power Move</h4>
-      <p>Offer a free mini-project to a local business in exchange for a testimonial. Use it to boost your portfolio’s credibility.</p>
-      <h4>Case Study</h4>
-      <p>Thoughtbot’s portfolio showcases detailed case studies, landing them clients like Sony. A strong portfolio closes deals.</p>
-      <blockquote>“Your portfolio is your resume. Make it undeniable.”_Tzeptosoft</blockquote>
-
-      <h3>4.2 Leverage Your Network</h3>
-      <p>Your first clients are closer than you think. Tell friends, family, and acquaintances you’re starting an agency. Ask for referrals to small businesses or startups. One warm intro can land a $5,000 project.</p>
-      <h4>Action Step</h4>
-      <p>Message 10 people in your network. Say: “I’m launching a software agency. Know any businesses needing web or app dev?” Follow up in a week.</p>
-      <h4>Power Move</h4>
-      <p>Attend a local Chamber of Commerce event. Pitch your services to 5 business owners. Collect business cards and follow up.</p>
-      <blockquote>“Your network is your net worth. Work it.”_Tzeptosoft</blockquote>
-
-      <h3>4.3 Cold Outreach Like a Pro</h3>
-      <p>Cold emails and DMs work if you’re strategic. Target small businesses in your niche (e.g., gyms, restaurants). Personalize every message, focus on their pain points, and offer a clear solution. Follow up 3 times.</p>
-      <h4>Action Step</h4>
-      <p>Find 20 businesses on Google Maps. Send a cold email: “I noticed your website is slow. I can build a fast, modern site for $2,000. Can we chat?”</p>
-      <h4>Power Move</h4>
-      <p>Use Hunter.io to find business owners’ emails. Track open rates with Mailtrack to refine your pitch.</p>
-      <h4>Case Study</h4>
-      <p>Chris Lema landed $10,000+ in agency deals through cold outreach. His secret? Hyper-personalized emails and relentless follow-ups.</p>
-      <blockquote>“Cold outreach is a numbers game. Play it to win.”_Tzeptosoft</blockquote>
-
-      <h3>4.4 Use Freelance Platforms Strategically</h3>
-      <p>Platforms like Upwork and Fiverr are goldmines for beginners. Create a niche-specific profile, bid on small projects, and overdeliver. Use earnings to fund your agency’s growth.</p>
-      <h4>Action Step</h4>
-      <p>Create an Upwork profile. Bid on 5 projects under $500. Write custom proposals highlighting your niche expertise.</p>
-      <h4>Power Move</h4>
-      <p>After completing a project, ask for a 5-star review and a referral. Reviews build trust and attract bigger clients.</p>
-      <blockquote>“Freelance platforms are your launchpad. Use them, then leap.”_Tzeptosoft</blockquote>
-
-      <h3>4.5 Content Marketing for Credibility</h3>
-      <p>Share your knowledge to attract clients. Write blog posts, create YouTube tutorials, or post on X about coding tips. Content positions you as an expert, driving inbound leads.</p>
-      <h4>Action Step</h4>
-      <p>Write a 500-word blog post: “5 Ways a Custom App Can 10x Your Business.” Share it on Medium and X.</p>
-      <h4>Power Move</h4>
-      <p>Record a 5-minute YouTube video: “How I Built a $1,000 App in a Weekend.” Optimize it with keywords for SEO.</p>
-      <h4>Case Study</h4>
-      <p>Neil Patel’s blog drives millions to his agency. Content builds trust and closes deals without cold calls.</p>
-      <blockquote>“Content is your megaphone. Shout your expertise.”_Tzeptosoft</blockquote>
-
-      <h3>4.6 Deliver Exceptional Value</h3>
-      <p>Your first client is your reputation. Overdeliver on quality, communication, and deadlines. A happy client refers others and hires you again. Aim for a “wow” experience every time.</p>
-      <h4>Action Step</h4>
-      <p>For your first project, add a free bonus (e.g., a performance audit). Tell the client it’s a thank-you for trusting you.</p>
-      <h4>Power Move</h4>
-      <p>After delivery, send a feedback survey. Use positive responses as testimonials on your website.</p>
-      <blockquote>“One thrilled client is worth ten cold leads. Wow them.”_Tzeptosoft</blockquote>
-
-      <div class="checklist-container">
-        <h3>Client Acquisition Checklist</h3>
-        <div class="checklist-item">
-          <input type="checkbox" id="client1">
-          <label for="client1">Build a niche portfolio with 3 projects.</label>
-        </div>
-        <div class="checklist-item">
-          <input type="checkbox" id="client2">
-          <label for="client2">Message 10 network contacts for referrals.</label>
-        </div>
-        <div class="checklist-item">
-          <input type="checkbox" id="client3">
-          <label for="client3">Send 20 cold emails to businesses.</label>
-        </div>
-        <div class="checklist-item">
-          <input type="checkbox" id="client4">
-          <label for="client4">Create an Upwork profile and bid on 5 projects.</label>
-        </div>
-        <div class="checklist-item">
-          <input type="checkbox" id="client5">
-          <label for="client5">Write a blog post and share it online.</label>
-        </div>
-        <div class="checklist-item">
-          <input type="checkbox" id="client6">
-          <label for="client6">Add a free bonus to my first project.</label>
-        </div>
+      <!-- Newsletter Signup -->
+      <div class="newsletter-container">
+        <h3>Join the CodeForge Newsletter 🔥</h3>
+        <p>Get weekly strategies to launch your agency, crush obstacles, and build a tech empire. No fluff, only fire.</p>
+        <input type="email" placeholder="Enter your email" aria-label="Email for newsletter">
+        <button type="button">Subscribe 🚀</button>
       </div>
 
-      <div class="resource-box">
-        <h3>Client Acquisition Resources</h3>
-        <ul>
-          <li><a href="https://www.upwork.com">Upwork</a> - Freelance platform for small projects.</li>
-          <li><a href="https://hunter.io">Hunter.io</a> - Find business email addresses.</li>
-          <li><a href="https://www.medium.com">Medium</a> - Publish blogs to reach clients.</li>
-          <li><a href="https://clutch.co">Clutch</a> - Research competitor agencies and pricing.</li>
-          <li><a href="https://www.mailtrack.io">Mailtrack</a> - Track email opens for cold outreach.</li>
-        </ul>
+      <!-- Terminal Animation -->
+      <div class="terminal-content">
+        <div class="terminal-line" data-text="> Accessing Tzeptosoft archives... 🚀"></div>
+        <div class="terminal-line" data-text="> Loading Software Agency Blueprint... 💪"></div>
+        <div class="terminal-line" data-text="> Signal transfer: SUCCESS ✅"></div>
       </div>
 
-      <!-- Final Call to Action -->
-      <h2>Your Mission: Launch Your Empire</h2>
-      <p>This isn’t a blog post_it’s a fucking manifesto. You’ve got the mindset, the setup, the skills, and the tactics to start a software agency that dominates. The world is yours if you execute. Founders who build their own solutions raise more capital, move faster, and win bigger. That’s the power of being a creator, not a bystander.</p>
-      <h3>Immediate Action Plan</h3>
-      <ul>
-        <li><strong>Day 1:</strong> Write your 5-year vision and pick a niche.</li>
-        <li><strong>Week 1:</strong> Register your business, launch a website, and build a sample project.</li>
-        <li><strong>Month 1:</strong> Master one language, send 50 cold emails, and bid on 10 Upwork projects.</li>
-        <li><strong>90 Days:</strong> Land your first $1,000 client and deliver a “wow” project.</li>
-      </ul>
-      <h3>Reflection CTA</h3>
-      <p>Sit down tonight. Ask: *What’s stopping me from starting my agency?* Write the answer, then crush that excuse. Code something, pitch someone, or register your business by midnight. Momentum is everything.</p>
-      <h3>Vision for You</h3>
-      <p>Picture this: You’re 25, running a $500K agency. Your team’s building apps for global brands, your bank account’s stacked, and your name’s synonymous with innovation. You didn’t wait for permission. You built. You conquered.</p>
-      <blockquote>“The world doesn’t owe you shit. Build your empire, or watch someone else do it.”_Tzeptosoft’s CodeForge</blockquote>
-      <p><strong>Code. Build. Dominate. – TZEPTOSOFT</strong></p>
-      <p class="signature">With love, Your man, Clinton</p>
+      <!-- Social Sharing -->
+      <div class="social-share">
+        <h3>Share This Blueprint 🗣️</h3>
+        <a href="https://twitter.com/intent/tweet?url=https://tzeptosoft.com/blog/start-software-agency&text=Launch your software agency with Tzeptosoft's no-BS blueprint!" aria-label="Share on Twitter">Twitter</a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://tzeptosoft.com/blog/start-software-agency" aria-label="Share on LinkedIn">LinkedIn</a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://tzeptosoft.com/blog/start-software-agency" aria-label="Share on Facebook">Facebook</a>
+        <a href="https://www.reddit.com/submit?url=https://tzeptosoft.com/blog/start-software-agency&title=How to Start a Software Agency" aria-label="Share on Reddit">Reddit</a>
+        <a href="https://api.whatsapp.com/send?text=Launch your software agency with Tzeptosoft's no-BS blueprint! https://tzeptosoft.com/blog/start-software-agency" aria-label="Share on WhatsApp">WhatsApp</a>
+      </div>
     </div>
 
-    <!-- Newsletter Signup -->
-    <div class="newsletter-container">
-      <h3>Join the CodeForge Newsletter</h3>
-      <p>Get weekly strategies to launch your agency, crush obstacles, and build a tech empire. No fluff, only fire.</p>
-      <input type="email" placeholder="Enter your email" aria-label="Email for newsletter">
-      <button type="button">Subscribe</button>
-    </div>
-
-    <!-- Terminal Animation -->
-    <div class="terminal-content">
-      <div class="terminal-line" data-text="> Accessing Tzeptosoft archives..."></div>
-      <div class="terminal-line" data-text="> Loading Software Agency Blueprint..."></div>
-      <div class="terminal-line" data-text="> Signal transfer: SUCCESS ✅"></div>
-    </div>
-
-    <!-- Social Sharing -->
-    <div class="social-share">
-      <h3>Share This Blueprint</h3>
-      <a href="https://twitter.com/intent/tweet?url=https://tzeptosoft.com/blog/start-software-agency&text=Launch your software agency with Tzeptosoft’s no-BS blueprint!" aria-label="Share on Twitter">Twitter</a>
-      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://tzeptosoft.com/blog/start-software-agency" aria-label="Share on LinkedIn">LinkedIn</a>
-      <a href="https://www.facebook.com/sharer/sharer.php?u=https://tzeptosoft.com/blog/start-software-agency" aria-label="Share on Facebook">Facebook</a>
-      <a href="https://www.reddit.com/submit?url=https://tzeptosoft.com/blog/start-software-agency&title=How to Start a Software Agency" aria-label="Share on Reddit">Reddit</a>
-      <a href="https://api.whatsapp.com/send?text=Launch your software agency with Tzeptosoft’s no-BS blueprint! https://tzeptosoft.com/blog/start-software-agency" aria-label="Share on WhatsApp">WhatsApp</a>
-    </div>
+    <!-- Footer -->
+    <footer>
+      <p>© 2025 Tzeptosoft | All Rights Fucking Reserved 🔥</p>
+    </footer>
   </div>
 
-  <!-- Footer -->
-  <footer>
-    <p>© Tzeptosoft | All Rights Reserved</p>
-    <div class="social-links">
-      <a href="https://twitter.com/tzeptosoft" aria-label="Twitter"><img src="/assets/twitter.webp" alt="Twitter" width="28" height="28" loading="lazy"></a>
-      <a href="https://linkedin.com/company/tzeptosoft" aria-label="LinkedIn"><img src="/assets/linkedin.webp" alt="LinkedIn" width="28" height="28" loading="lazy"></a>
-      <a href="https://github.com/tzeptosoft" aria-label="GitHub"><img src="/assets/github.webp" alt="GitHub" width="28" height="28" loading="lazy"></a>
-    </div>
-  </footer>
-
-  <!-- JavaScript -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      // Matrix Animation
+      const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+      const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+      const mobileMenuClose = document.getElementById('mobileMenuClose');
+      const searchToggle = document.getElementById('searchToggle');
+      const searchBox = document.getElementById('searchBox');
+      const searchInput = document.querySelector('.search-input');
+
+      mobileMenuToggle?.addEventListener('click', () => {
+        mobileMenuOverlay?.classList.toggle('active');
+        document.body.style.overflow = mobileMenuOverlay?.classList.contains('active') ? 'hidden' : '';
+      });
+
+      mobileMenuClose?.addEventListener('click', () => {
+        mobileMenuOverlay?.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+
+      mobileMenuOverlay?.addEventListener('click', (e) => {
+        if (e.target === mobileMenuOverlay) {
+          mobileMenuOverlay.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      });
+
+      searchToggle?.addEventListener('click', () => {
+        const isActive = searchBox?.classList.contains('active');
+        searchBox?.classList.toggle('active');
+        searchToggle?.setAttribute('aria-expanded', !isActive);
+        if (!isActive && searchInput) searchInput.focus();
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          searchBox?.classList.remove('active');
+          searchToggle?.setAttribute('aria-expanded', 'false');
+          mobileMenuOverlay?.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      });
+
+      window.addEventListener('load', () => {
+        document.getElementById('preloader').style.display = 'none';
+      });
+
       const matrixAnimation = document.querySelector('.matrix-animation');
       function startMatrixAnimation() {
         matrixAnimation.textContent = '';
@@ -1032,46 +1760,18 @@
       startMatrixAnimation();
       setInterval(startMatrixAnimation, 4000);
 
-      // Scroll Reveal
-      const sections = document.querySelectorAll('.blog-container, .terminal-content, .checklist-container, .resource-box');
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            if (entry.target.classList.contains('terminal-content') && !entry.target.dataset.animated) {
-              startTerminalSequence();
-              entry.target.dataset.animated = 'true';
-            }
-          }
-        });
-      }, { threshold: 0.1 });
-      sections.forEach(section => observer.observe(section));
+      let lastScrollY = window.scrollY;
+      window.addEventListener('scroll', () => {
+        const header = document.querySelector('.main-header');
+        const currentScrollY = window.scrollY;
+        if (currentScrollY > 100) {
+          header?.classList.add('scrolled');
+        } else {
+          header?.classList.remove('scrolled');
+        }
+        lastScrollY = currentScrollY;
+      });
 
-      // Terminal Animation
-      function startTerminalSequence() {
-        const lines = document.querySelectorAll('.terminal-content .terminal-line');
-        let delay = 0;
-        lines.forEach(line => {
-          line.textContent = '';
-          const text = line.dataset.text;
-          let charIndex = 0;
-          setTimeout(() => {
-            const type = () => {
-              if (charIndex < text.length) {
-                line.textContent += text[charIndex];
-                charIndex++;
-                setTimeout(type, 30);
-              } else {
-                line.classList.add('typed');
-              }
-            };
-            type();
-          }, delay);
-          delay += 1000;
-        });
-      }
-
-      // Matrix Background
       const matrixBg = document.getElementById('matrix-bg');
       for (let i = 0; i < 60; i++) {
         const char = document.createElement('div');
@@ -1082,7 +1782,6 @@
         matrixBg.appendChild(char);
       }
 
-      // Particles
       const particleContainer = document.getElementById('particles');
       for (let i = 0; i < 60; i++) {
         const particle = document.createElement('div');
@@ -1093,11 +1792,32 @@
         particleContainer.appendChild(particle);
       }
 
-      // Cursor Trail
       const cursorTrail = document.getElementById('cursor-trail');
       document.addEventListener('mousemove', (e) => {
         cursorTrail.style.left = e.clientX - 15 + 'px';
         cursorTrail.style.top = e.clientY - 15 + 'px';
+      });
+
+      // Terminal animation
+      const terminalLines = document.querySelectorAll('.terminal-line');
+      let delay = 0;
+      terminalLines.forEach(line => {
+        line.textContent = '';
+        const text = line.dataset.text;
+        let charIndex = 0;
+        setTimeout(() => {
+          const type = () => {
+            if (charIndex < text.length) {
+              line.textContent += text[charIndex];
+              charIndex++;
+              setTimeout(type, 35);
+            } else {
+              line.classList.add('typed');
+            }
+          };
+          type();
+        }, delay);
+        delay += 1000;
       });
 
       // Checklist Interactivity
@@ -1109,6 +1829,23 @@
             item.classList.add('completed');
           } else {
             item.classList.remove('completed');
+          }
+        });
+      });
+
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href');
+          if (targetId === '#') return;
+          
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 100,
+              behavior: 'smooth'
+            });
           }
         });
       });
