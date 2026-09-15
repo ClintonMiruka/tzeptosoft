@@ -89,6 +89,8 @@
             const items = [...results.querySelectorAll('.search-result')];
             if (event.key === 'Escape') {
                 results.hidden = true;
+                search.hidden = true;
+                document.querySelector('.search-btn')?.setAttribute('aria-expanded', 'false');
                 input.blur();
             } else if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
                 event.preventDefault();

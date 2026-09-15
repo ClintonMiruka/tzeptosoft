@@ -9,10 +9,13 @@
     document.addEventListener('click', (event) => {
         const toggle = event.target.closest('.nav-toggle');
         if (!toggle) return;
+        const header = document.querySelector('[data-site-header]');
         const navigation = document.getElementById(toggle.getAttribute('aria-controls'));
         const open = toggle.getAttribute('aria-expanded') === 'true';
         toggle.setAttribute('aria-expanded', String(!open));
         navigation?.classList.toggle('is-open', !open);
+        header?.classList.remove('header-hidden');
+        header?.classList.add('header-visible');
     });
 
     document.addEventListener('click', (event) => {
@@ -25,6 +28,7 @@
     document.addEventListener('click', (event) => {
         const searchButton = event.target.closest('.search-btn');
         if (!searchButton) return;
+        const header = document.querySelector('[data-site-header]');
         let search = document.getElementById('site-search');
         if (!search) {
             search = document.createElement('form');
@@ -37,10 +41,12 @@
         const expanded = searchButton.getAttribute('aria-expanded') === 'true';
         searchButton.setAttribute('aria-expanded', String(!expanded));
         search.hidden = expanded;
+        header?.classList.remove('header-hidden');
+        header?.classList.add('header-visible');
         if (!expanded) search.querySelector('input')?.focus();
     });
 
-    let previousScrollY = window.scrollY;
+    let lastScrollY = window.scrollY;
     let scrollFrame;
 
     window.addEventListener('scroll', () => {
@@ -48,18 +54,20 @@
         scrollFrame = window.requestAnimationFrame(() => {
             const header = document.querySelector('[data-site-header]');
             const currentScrollY = window.scrollY;
-            const navigationOpen = document.querySelector('.primary-nav.is-open');
             if (header) {
-                header.classList.toggle('is-scrolled', currentScrollY > 8);
-                if (currentScrollY <= 0 || currentScrollY < previousScrollY || navigationOpen) {
+                const delta = currentScrollY - lastScrollY;
+                if (currentScrollY <= 20) {
                     header.classList.remove('header-hidden');
-                    header.classList.add('header-visible');
-                } else if (currentScrollY > previousScrollY && currentScrollY > 8) {
+                    header.classList.remove('header-visible', 'header-scrolled');
+                } else if (delta > 4) {
                     header.classList.add('header-hidden');
                     header.classList.remove('header-visible');
+                } else if (delta < -2) {
+                    header.classList.remove('header-hidden');
+                    header.classList.add('header-visible');
                 }
             }
-            previousScrollY = currentScrollY;
+            lastScrollY = currentScrollY;
             scrollFrame = undefined;
         });
     }, { passive: true });
