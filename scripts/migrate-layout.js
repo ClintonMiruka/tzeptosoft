@@ -2,6 +2,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const { execFileSync } = require('child_process');
 
 const root = path.resolve(__dirname, '..');
 const pageCssDir = path.join(root, 'assets/css/pages');
@@ -62,3 +63,4 @@ for (const filePath of filesIn(path.join(root, 'pages')).concat([path.join(root,
 }
 
 console.log('Migrated static HTML pages to the shared layout.');
+execFileSync(process.execPath, [path.join(__dirname, 'generate-search-index.js')], { stdio: 'inherit' });

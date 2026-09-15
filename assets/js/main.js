@@ -1,6 +1,11 @@
 (function () {
     'use strict';
 
+    const searchScript = document.createElement('script');
+    searchScript.src = `${'../'.repeat(Math.max(0, new URL(document.baseURI).pathname.split('/').length - 2))}assets/js/search.js`;
+    searchScript.defer = true;
+    document.head.append(searchScript);
+
     document.addEventListener('click', (event) => {
         const toggle = event.target.closest('.nav-toggle');
         if (!toggle) return;
