@@ -1,0 +1,18 @@
+{
+  "rewrites": [
+    { "source": "/blog-archives", "destination": "/pages/blog.html" },
+    { "source": "/products", "destination": "/pages/about.html" },
+    { "source": "/contact", "destination": "/pages/contact-us.html" },
+    { "source": "/about", "destination": "/pages/about.html" },
+    { "source": "/join", "destination": "/pages/contact-us.html" },
+    { "source": "/for-men/date-many-women-guide", "destination": "/pages/Relationships/why-you-should-date-many-women-before-you-marry-a-practical-guide-for-men.html" },
+    { "source": "/for-men/women-dont-want-nice-guys", "destination": "/pages/Relationships/women-dont-wat-nice-guys.html" },
+    { "source": "/for-men/career-domination", "destination": "/pages/wealth/master-your-money.html" },
+    { "source": "/for-women/10-savage-lessons", "destination": "/pages/femininity/10-savage-lessons-for-women.html" },
+    { "source": "/for-women/feminine-value", "destination": "/pages/femininity/what-is-it-like-to-be-a-30-year-old-unmarried-woman.html" },
+    { "source": "/for-women/family-building", "destination": "/pages/femininity/what-is-it-like-to-be-a-30-year-old-unmarried-woman.html" },
+    { "source": "/for-women/relationship-wisdom", "destination": "/pages/Relationships/why-you-should-date-many-women-before-you-marry-a-practical-guide-for-men.html" },
+    { "source": "/for-men/masculine-mindset", "destination": "/pages/masculinity/the-masculine-void-why-modern-men-feel-empty-even-when-they-win.html" },
+    { "source": "/:path*", "destination": "/:path*" }
+  ]
+}

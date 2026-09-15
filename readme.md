@@ -22,7 +22,19 @@ tzeptosoft/
 └── README.md                      # This file
 ```
 
-Each file is  standalone HTML  _ no frameworks, no bloat, no dependencies.  
+Each page is static HTML with shared layout components, one global stylesheet, and vanilla JavaScript. The pages remain framework-free and deployable to any static host.
+
+## Shared architecture
+
+- `components/head.html`, `components/header.html`, and `components/footer.html` are the reusable layout fragments.
+- `assets/css/global.css` contains the design tokens, reset, responsive navigation, and footer styles.
+- `assets/css/pages/` contains styles extracted from individual pages.
+- `assets/js/layout-loader.js` injects the header and footer into `#site-header` and `#site-footer` placeholders.
+- `assets/js/main.js` owns shared navigation behavior.
+- Run `node scripts/migrate-layout.js` after adding legacy HTML to standardize its layout.
+
+Serve the repository through a local HTTP server when testing component loading; browser `fetch()` does not load partials from `file://` URLs.
+
 Because complexity is for pussies.
 
 ---
