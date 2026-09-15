@@ -40,7 +40,27 @@
         if (!expanded) search.querySelector('input')?.focus();
     });
 
+    let previousScrollY = window.scrollY;
+    let scrollFrame;
+
     window.addEventListener('scroll', () => {
-        document.querySelector('[data-site-header]')?.classList.toggle('is-scrolled', window.scrollY > 8);
+        if (scrollFrame) return;
+        scrollFrame = window.requestAnimationFrame(() => {
+            const header = document.querySelector('[data-site-header]');
+            const currentScrollY = window.scrollY;
+            const navigationOpen = document.querySelector('.primary-nav.is-open');
+            if (header) {
+                header.classList.toggle('is-scrolled', currentScrollY > 8);
+                if (currentScrollY <= 0 || currentScrollY < previousScrollY || navigationOpen) {
+                    header.classList.remove('header-hidden');
+                    header.classList.add('header-visible');
+                } else if (currentScrollY > previousScrollY && currentScrollY > 8) {
+                    header.classList.add('header-hidden');
+                    header.classList.remove('header-visible');
+                }
+            }
+            previousScrollY = currentScrollY;
+            scrollFrame = undefined;
+        });
     }, { passive: true });
 }());
