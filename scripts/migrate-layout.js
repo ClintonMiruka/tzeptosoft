@@ -64,3 +64,4 @@ for (const filePath of filesIn(path.join(root, 'pages')).concat([path.join(root,
 
 console.log('Migrated static HTML pages to the shared layout.');
 execFileSync(process.execPath, [path.join(__dirname, 'generate-search-index.js')], { stdio: 'inherit' });
+execFileSync(process.execPath, [path.join(__dirname, 'build-blog-index.js')], { stdio: 'inherit' });

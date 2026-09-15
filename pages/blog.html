@@ -53,7 +53,7 @@
             <p class="blog-hero-subtitle">Every article, every lesson, every piece of raw wisdom from Tzeptosoft. 140+ articles of unfiltered truth to escape the matrix and build your empire.</p>
             <div class="stats-counter">
                 <div class="stat-item">
-                    <div class="stat-number">140+</div>
+                    <div class="stat-number" data-post-count>0 articles</div>
                     <div class="stat-label">Articles</div>
                 </div>
                 <div class="stat-item">
@@ -75,15 +75,15 @@
         <div class="blog-container">
             <!-- Filters and Controls -->
             <div class="blog-controls">
-                <div class="category-filters">
-                    <button class="filter-btn active" data-category="all">All Articles</button>
-                    <button class="filter-btn" data-category="masculinity">Masculinity</button>
-                    <button class="filter-btn" data-category="femininity">Femininity</button>
-                    <button class="filter-btn" data-category="wealth">Wealth</button>
-                    <button class="filter-btn" data-category="mindset">Mindset</button>
-                    <button class="filter-btn" data-category="tech">Tech</button>
-                    <button class="filter-btn" data-category="relationships">Relationships</button>
-                    <button class="filter-btn" data-category="life">Life</button>
+                <div class="category-tabs" role="tablist" aria-label="Article categories">
+                    <button class="tab-btn active" type="button" role="tab" aria-selected="true" data-category="all">All Articles</button>
+                    <button class="tab-btn" type="button" role="tab" aria-selected="false" data-category="masculinity">Masculinity</button>
+                    <button class="tab-btn" type="button" role="tab" aria-selected="false" data-category="femininity">Femininity</button>
+                    <button class="tab-btn" type="button" role="tab" aria-selected="false" data-category="wealth">Wealth</button>
+                    <button class="tab-btn" type="button" role="tab" aria-selected="false" data-category="mindset">Mindset</button>
+                    <button class="tab-btn" type="button" role="tab" aria-selected="false" data-category="tech">Tech</button>
+                    <button class="tab-btn" type="button" role="tab" aria-selected="false" data-category="relationships">Relationships</button>
+                    <button class="tab-btn" type="button" role="tab" aria-selected="false" data-category="life">Life</button>
                 </div>
                 <div class="sort-controls">
                     <span class="sort-label">Sort by:</span>
@@ -97,8 +97,8 @@
             </div>
 
             <!-- Articles Grid -->
-            <div class="articles-archive-grid" id="articlesGrid">
-                <!-- Articles will be dynamically loaded here -->
+            <div class="blog-grid" id="blog-grid" aria-live="polite">
+                <p class="blog-empty">Loading article index...</p>
             </div>
 
             <!-- Pagination -->
@@ -118,6 +118,7 @@
     <div id="site-footer"></div>
     <script src="../assets/js/layout-loader.js" defer></script>
     <script src="../assets/js/main.js" defer></script>
+    <script src="../assets/js/blog-renderer.js" defer></script>
     <script src="../assets/js/pages/pages-blog-html.js" defer></script>
 </body>
 </html>
