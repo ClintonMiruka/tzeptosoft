@@ -239,9 +239,7 @@ Code in this repo is  MIT Licensed  _ do whatever, just don't be lame.
 
 The shared comment drawer uses Firebase Realtime Database when configured. Open `assets/js/firebase-config.js`, replace the `YOUR_*` placeholders with the web app settings from the Firebase Console, and deploy `database.rules.json` as the Realtime Database rules. The file intentionally falls back to local preview mode until every Firebase value is supplied.
 
-Create a Realtime Database in the Firebase project, enable **Authentication > Sign-in method > Anonymous**, then paste the rules from `database.rules.json` into **Realtime Database > Rules**. The client scopes post threads under `comments/{page_id}` and the global feed under `comments/global`; authenticated likes and dislikes use atomic `+1` transactions. Existing comments created under the previous open rules may need migration if they do not contain `likes` and `dislikes` fields.
-
-The comment form also applies a honeypot, 30-second client cooldown, 3-2,000 character validation, and lightweight promotional-spam filtering. These browser checks improve UX but are not security boundaries; Firebase rules and server-side moderation remain authoritative.
+Create a Realtime Database in the Firebase project, then paste the rules from `database.rules.json` into **Realtime Database > Rules**. The client scopes post threads under `comments/{page_id}` and the global feed under `comments/global`; likes and dislikes use atomic transactions.
 
 ---
 
