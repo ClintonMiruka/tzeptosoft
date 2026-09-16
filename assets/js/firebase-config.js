@@ -1,4 +1,5 @@
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js';
+import { getAuth, signInAnonymously } from 'https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js';
 import {
     getDatabase,
     ref,
@@ -21,5 +22,7 @@ const firebaseConfig = {
 const isConfigured = Object.values(firebaseConfig).every((value) => !value.includes('YOUR_'));
 const app = isConfigured ? initializeApp(firebaseConfig) : null;
 const db = app ? getDatabase(app) : null;
+const auth = app ? getAuth(app) : null;
+const authReady = auth ? signInAnonymously(auth) : Promise.resolve(null);
 
-export { db, isConfigured, ref, push, onValue, runTransaction, serverTimestamp };
+export { db, isConfigured, authReady, ref, push, onValue, runTransaction, serverTimestamp };

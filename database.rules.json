@@ -1,27 +1,33 @@
 {
   "rules": {
     "comments": {
-      ".read": true,
       "$page_id": {
+        ".read": true,
         "$comment_id": {
-          ".write": "newData.exists()",
-          ".validate": "newData.hasChildren(['author', 'text', 'timestamp'])",
+          ".write": "auth != null && !data.exists() && newData.exists()",
+          ".validate": "newData.hasChildren(['author', 'text', 'timestamp', 'likes', 'dislikes'])",
           "author": {
+            ".write": "auth != null && !data.exists()",
             ".validate": "newData.isString() && newData.val().length > 0 && newData.val().length <= 30"
           },
           "text": {
-            ".validate": "newData.isString() && newData.val().length > 0 && newData.val().length <= 280"
+            ".write": "auth != null && !data.exists()",
+            ".validate": "newData.isString() && newData.val().length > 0 && newData.val().length <= 2000"
           },
           "timestamp": {
+            ".write": "auth != null && !data.exists()",
             ".validate": "newData.isNumber() && newData.val() <= now"
           },
           "likes": {
+            ".write": "auth != null && data.exists() && newData.isNumber() && newData.val() == data.val() + 1",
             ".validate": "newData.isNumber() && newData.val() >= 0"
           },
           "dislikes": {
+            ".write": "auth != null && data.exists() && newData.isNumber() && newData.val() == data.val() + 1",
             ".validate": "newData.isNumber() && newData.val() >= 0"
           },
           "pageUrl": {
+            ".write": "auth != null && !data.exists()",
             ".validate": "newData.isString() && newData.val().length <= 2048"
           },
           "$other": {

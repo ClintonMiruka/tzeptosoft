@@ -2,32 +2,36 @@
     <span aria-hidden="true">💬</span>
     <span class="comments-trigger__badge" data-unread-count hidden>0</span>
 </button>
-<div class="comments-backdrop" data-comments-backdrop hidden></div>
-<aside class="comments-drawer" id="community-drawer" aria-labelledby="comments-title" aria-hidden="true">
+<div class="comments-backdrop" data-comments-backdrop hidden aria-hidden="true"></div>
+<aside class="comments-drawer" id="community-drawer" role="dialog" aria-modal="true" aria-labelledby="comments-title" aria-hidden="true" tabindex="-1">
     <div class="comments-drawer__header">
         <div>
             <p class="comments-eyebrow">LIVE COMMUNITY FEED</p>
             <h2 id="comments-title">Community Wisdom</h2>
             <p class="comments-viewers"><span class="comments-status-dot"></span><span data-viewer-count>1</span> viewing now</p>
         </div>
-        <button class="comments-icon-button" type="button" data-comments-close aria-label="Close community comments">&times;</button>
+        <button class="comments-icon-button" id="close-comment-drawer" type="button" data-comments-close aria-label="Close community comments">&times;</button>
     </div>
     <div class="comments-tabs" role="tablist" aria-label="Comment feed scope">
         <button class="comments-tab is-active" type="button" role="tab" aria-selected="true" data-feed-tab="post">This Post</button>
         <button class="comments-tab" type="button" role="tab" aria-selected="false" data-feed-tab="global">Global Matrix Feed</button>
     </div>
     <div class="comments-drawer__body">
-        <div class="comments-notice" data-comments-notice role="status">Connecting to the community feed...</div>
-        <div class="comments-list" data-comments-list aria-live="polite"></div>
+        <div class="comments-notice" data-comments-notice role="status" aria-live="polite" aria-atomic="true">Connecting to the community feed...</div>
+        <div class="comments-list" data-comments-list aria-live="polite" aria-atomic="false" aria-label="Community comments list"></div>
         <p class="comments-empty" data-comments-empty hidden>No transmissions yet. Start the conversation.</p>
     </div>
     <form class="comments-form" data-comments-form>
+        <div class="comments-honeypot" aria-hidden="true">
+            <label for="website_hp_check">Leave this field blank</label>
+            <input type="text" id="website_hp_check" name="website_hp_check" tabindex="-1" autocomplete="off">
+        </div>
         <label for="comment-name">Display name</label>
-        <input id="comment-name" name="author" type="text" maxlength="32" placeholder="Warrior99" autocomplete="nickname" required>
+        <input id="comment-name" name="author" type="text" maxlength="30" placeholder="Warrior99" autocomplete="nickname" required>
         <label for="comment-text">Your transmission</label>
-        <textarea id="comment-text" name="text" maxlength="280" rows="3" placeholder="Share a useful insight..." required></textarea>
+        <textarea id="comment-text" name="text" maxlength="2000" rows="3" placeholder="Share a useful insight..." required></textarea>
         <div class="comments-form__footer">
-            <span data-character-count>0/280</span>
+            <span data-character-count>0/2000</span>
             <button class="comments-submit" type="submit"><span aria-hidden="true">➤</span> Send</button>
         </div>
     </form>

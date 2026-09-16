@@ -5,10 +5,14 @@ import {
     push,
     onValue,
     runTransaction,
-    serverTimestamp
+    serverTimestamp,
+    authReady
 } from './firebase-config.js';
 
-const MAX_LENGTH = 280;
+const SUBMISSION_COOLDOWN_MS = 30000;
+const MIN_COMMENT_LENGTH = 3;
+const MAX_LENGTH = 2000;
+const BLOCKED_WORDS = ['spamlink', 'casino', 'free money', 'buy now', 'crypto scam'];
 const STORAGE_PREFIX = 'tzeptosoft-comments:';
 const VOTE_PREFIX = 'tzeptosoft-comment-votes:';
 const state = {
@@ -18,6 +22,8 @@ const state = {
     storageKey: '',
     firebasePath: ''
 };
+
+let lastFocusedElement = null;
 
 const root = document.getElementById('comments-root');
 if (!root) throw new Error('Comments root was not found.');
@@ -33,6 +39,8 @@ const elements = {
     form: root.querySelector('[data-comments-form]'),
     name: root.querySelector('#comment-name'),
     text: root.querySelector('#comment-text'),
+    honeypot: root.querySelector('#website_hp_check'),
+    submit: root.querySelector('.comments-submit'),
     count: root.querySelector('[data-character-count]'),
     unread: root.querySelector('[data-unread-count]')
 };
@@ -40,9 +48,69 @@ const elements = {
 const pagePath = window.location.pathname || '/';
 const pageId = pagePath.replace(/^\/+|\/+$/g, '').replace(/[/.]/g, '_').replace(/[^a-zA-Z0-9_-]/g, '_') || 'home';
 
+function isPreviewEnvironment() {
+    const host = window.location.hostname || '';
+    return (
+        host === 'localhost' ||
+        host === '127.0.0.1' ||
+        host.endsWith('.vercel.app') ||
+        !isConfigured ||
+        (window.firebaseConfig && window.firebaseConfig.apiKey === 'YOUR_FIREBASE_API_KEY')
+    );
+}
+
+function renderPreviewBanner() {
+    if (!elements.drawer || elements.drawer.querySelector('#preview-env-banner')) return;
+
+    const banner = document.createElement('div');
+    banner.id = 'preview-env-banner';
+    banner.className = 'preview-env-banner';
+    banner.textContent = '🛠️ Preview Mode: Comments stored locally in browser storage.';
+
+    const drawerHeader = elements.drawer.querySelector('.comments-drawer__header');
+    if (drawerHeader) {
+        drawerHeader.after(banner);
+    }
+}
+
 function setNotice(message, isError) {
     elements.notice.textContent = message;
     elements.notice.classList.toggle('is-error', Boolean(isError));
+}
+
+function getFocusableElements() {
+    return [...elements.drawer.querySelectorAll(
+        'button:not([disabled]), [href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
+    )].filter((element) => !element.hasAttribute('disabled') && element.offsetParent !== null);
+}
+
+function handleDrawerKeyDown(event) {
+    if (!elements.drawer.classList.contains('is-open')) return;
+
+    if (event.key === 'Escape' || event.keyCode === 27) {
+        event.preventDefault();
+        setOpen(false);
+        return;
+    }
+
+    if (event.key === 'Tab' || event.keyCode === 9) {
+        const focusables = getFocusableElements();
+        if (!focusables.length) return;
+
+        const firstElement = focusables[0];
+        const lastElement = focusables[focusables.length - 1];
+
+        if (event.shiftKey && document.activeElement === firstElement) {
+            lastElement.focus();
+            event.preventDefault();
+            return;
+        }
+
+        if (!event.shiftKey && document.activeElement === lastElement) {
+            firstElement.focus();
+            event.preventDefault();
+        }
+    }
 }
 
 function setOpen(open) {
@@ -50,10 +118,21 @@ function setOpen(open) {
     elements.drawer.setAttribute('aria-hidden', String(!open));
     elements.trigger.setAttribute('aria-expanded', String(open));
     elements.backdrop.hidden = !open;
+    elements.backdrop.setAttribute('aria-hidden', String(!open));
     document.body.classList.toggle('comments-locked', open);
+
     if (open) {
+        lastFocusedElement = document.activeElement;
         elements.unread.hidden = true;
-        elements.text.focus();
+        const focusTarget = elements.close || elements.name || elements.text;
+        focusTarget?.focus();
+        document.addEventListener('keydown', handleDrawerKeyDown);
+        return;
+    }
+
+    document.removeEventListener('keydown', handleDrawerKeyDown);
+    if (lastFocusedElement && typeof lastFocusedElement.focus === 'function') {
+        lastFocusedElement.focus();
     }
 }
 
@@ -118,6 +197,7 @@ function sanitizeText(text) {
 }
 
 function loadLocalFeed() {
+    renderPreviewBanner();
     state.comments = readLocal();
     render();
     setNotice('Local preview mode. Add Firebase credentials for shared live comments.', false);
@@ -131,58 +211,115 @@ function loadLocalFeed() {
 }
 
 function loadFirebaseFeed() {
-    state.unsubscribe?.();
-    state.firebasePath = state.feed === 'post' ? `comments/${pageId}` : 'comments/global';
-    const commentsReference = ref(db, state.firebasePath);
-    state.unsubscribe = onValue(commentsReference, (snapshot) => {
-        const value = snapshot.val() || {};
-        state.comments = Object.entries(value).map(([id, comment]) => ({ id, ...comment }));
-        render();
-        setNotice('Live community feed connected.', false);
-    }, (error) => {
-        console.error(error);
-        setNotice('Live connection failed. Check Firebase rules and configuration.', true);
+    return authReady.then(() => {
+        state.unsubscribe?.();
+        state.firebasePath = state.feed === 'post' ? `comments/${pageId}` : 'comments/global';
+        const commentsReference = ref(db, state.firebasePath);
+        state.unsubscribe = onValue(commentsReference, (snapshot) => {
+            const value = snapshot.val() || {};
+            state.comments = Object.entries(value).map(([id, comment]) => ({ id, ...comment }));
+            render();
+            setNotice('Live community feed connected.', false);
+        }, (error) => {
+            console.error(error);
+            setNotice('Live connection failed. Check Firebase rules and configuration.', true);
+        });
     });
 }
 
 function refreshFeed() {
     state.storageKey = `${STORAGE_PREFIX}${state.feed === 'post' ? pageId : 'global'}`;
-    if (!isConfigured || !db) {
+    if (isPreviewEnvironment()) {
+        renderPreviewBanner();
         loadLocalFeed();
         return;
     }
-    loadFirebaseFeed();
+    loadFirebaseFeed().catch((error) => {
+        console.error(error);
+        setNotice('Live authentication failed. Using local preview mode.', true);
+        loadLocalFeed();
+    });
 }
 
 async function submitComment(event) {
     event.preventDefault();
-    const text = sanitizeText(elements.text.value.trim());
+    if (elements.honeypot?.value.trim()) {
+        console.warn('Comment rejected by honeypot.');
+        elements.form.reset();
+        return;
+    }
+
+    const lastSubmission = Number.parseInt(localStorage.getItem('tzeptosoft_last_comment_time') || '0', 10);
+    const elapsed = Date.now() - lastSubmission;
+    if (lastSubmission && elapsed < SUBMISSION_COOLDOWN_MS) {
+        const remaining = Math.ceil((SUBMISSION_COOLDOWN_MS - elapsed) / 1000);
+        setNotice(`Please wait ${remaining} seconds before posting again.`, true);
+        return;
+    }
+
     const author = elements.name.value.trim();
-    if (!author || author.length > 30 || !text || text.length > MAX_LENGTH) return;
+    const text = sanitizeText(elements.text.value.trim());
+    const normalizedContent = `${author} ${text}`.toLowerCase();
+    if (!author || author.length > 30) {
+        setNotice('Use a display name of 1-30 characters.', true);
+        return;
+    }
+    if (text.length < MIN_COMMENT_LENGTH) {
+        setNotice(`Comment must be at least ${MIN_COMMENT_LENGTH} characters.`, true);
+        return;
+    }
+    if (text.length > MAX_LENGTH) {
+        setNotice(`Comment must be ${MAX_LENGTH} characters or fewer.`, true);
+        return;
+    }
+    if (BLOCKED_WORDS.some((word) => normalizedContent.includes(word))) {
+        setNotice('This comment contains restricted promotional language.', true);
+        return;
+    }
+
     localStorage.setItem('tzeptosoft-comment-name', author);
     const comment = { author, text, timestamp: isConfigured ? serverTimestamp() : Date.now(), likes: 0, dislikes: 0, pageUrl: pagePath };
-    elements.text.value = '';
-    updateCount();
-    if (isConfigured && db) {
-        await push(ref(db, state.firebasePath), comment);
-    } else {
-        writeLocal([{ ...comment, timestamp: Date.now(), id: `local-${Date.now()}` }, ...readLocal()]);
+    elements.submit.disabled = true;
+    elements.submit.textContent = 'Posting...';
+    try {
+        if (isConfigured && db) {
+            await authReady;
+            await push(ref(db, state.firebasePath), comment);
+        } else {
+            writeLocal([{ ...comment, timestamp: Date.now(), id: `local-${Date.now()}` }, ...readLocal()]);
+        }
+        elements.form.reset();
+        elements.name.value = author;
+        localStorage.setItem('tzeptosoft_last_comment_time', Date.now().toString());
+        updateCount();
+        setNotice('Transmission sent.', false);
+    } catch (error) {
+        console.error(error);
+        setNotice('Transmission rejected. Please try again.', true);
+    } finally {
+        elements.submit.disabled = false;
+        elements.submit.textContent = 'Send';
     }
-    setNotice('Transmission sent.', false);
 }
 
 async function vote(commentId, voteType) {
     if (localStorage.getItem(`${VOTE_PREFIX}${commentId}`)) return;
     const field = voteType === 'like' ? 'likes' : 'dislikes';
-    if (isConfigured && db) {
-        const commentFieldReference = ref(db, `${state.firebasePath}/${commentId}/${field}`);
-        await runTransaction(commentFieldReference, (value) => (value || 0) + 1);
-    } else {
-        const comments = readLocal().map((comment) => comment.id === commentId ? { ...comment, [field]: (comment[field] || 0) + 1 } : comment);
-        writeLocal(comments);
+    try {
+        if (isConfigured && db) {
+            await authReady;
+            const commentFieldReference = ref(db, `${state.firebasePath}/${commentId}/${field}`);
+            await runTransaction(commentFieldReference, (value) => (value || 0) + 1);
+        } else {
+            const comments = readLocal().map((comment) => comment.id === commentId ? { ...comment, [field]: (comment[field] || 0) + 1 } : comment);
+            writeLocal(comments);
+        }
+        localStorage.setItem(`${VOTE_PREFIX}${commentId}`, voteType);
+        render();
+    } catch (error) {
+        console.error(error);
+        setNotice('Vote rejected. Please try again.', true);
     }
-    localStorage.setItem(`${VOTE_PREFIX}${commentId}`, voteType);
-    render();
 }
 
 function updateCount() {
@@ -194,9 +331,6 @@ elements.close.addEventListener('click', () => setOpen(false));
 elements.backdrop.addEventListener('click', () => setOpen(false));
 elements.form.addEventListener('submit', submitComment);
 elements.text.addEventListener('input', updateCount);
-document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape' && elements.drawer.classList.contains('is-open')) setOpen(false);
-});
 root.addEventListener('click', (event) => {
     const voteButton = event.target.closest('[data-vote]');
     if (voteButton) vote(voteButton.dataset.commentId, voteButton.dataset.vote);

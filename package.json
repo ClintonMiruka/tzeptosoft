@@ -1,0 +1,9 @@
+{
+  "name": "tzeptosoft",
+  "private": true,
+  "scripts": {
+    "validate": "node scripts/validate-build.js",
+    "build:seo": "node scripts/build-seo.js",
+    "build": "npm run validate && npm run build:seo"
+  }
+}

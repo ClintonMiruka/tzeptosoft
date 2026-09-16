@@ -2,7 +2,7 @@
     'use strict';
 
     const searchScript = document.createElement('script');
-    searchScript.src = `${'../'.repeat(Math.max(0, new URL(document.baseURI).pathname.split('/').length - 2))}assets/js/search.js`;
+    searchScript.src = `${'../'.repeat(Math.max(0, new URL(document.baseURI).pathname.split('/').length - 2))}assets/js/search.js?v=20260917`;
     searchScript.defer = true;
     document.head.append(searchScript);
 

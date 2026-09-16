@@ -43,7 +43,7 @@
             .then((html) => {
                 root.innerHTML = html.replaceAll('{{root}}', rootPath);
                 const script = document.createElement('script');
-                script.src = `${rootPath}assets/js/comments.js`;
+                script.src = `${rootPath}assets/js/comments.js?v=20260917`;
                 script.type = 'module';
                 script.defer = true;
                 document.body.append(script);

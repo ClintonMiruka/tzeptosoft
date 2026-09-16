@@ -24,14 +24,52 @@
         return recordsPromise;
     }
 
+    function keywordsFor(record) {
+        return Array.isArray(record.keywords) ? record.keywords : [];
+    }
+
     function score(record, query) {
-        const fields = [record.title, record.category, record.keywords.join(' '), record.snippet].map((field) => field.toLowerCase());
+        const fields = [record.title, record.category, keywordsFor(record).join(' '), record.snippet]
+            .map((field) => String(field || '').toLowerCase());
         const terms = query.toLowerCase().split(/\s+/).filter(Boolean);
         return terms.reduce((total, term) => total + fields.reduce((fieldTotal, field, index) => fieldTotal + (field.includes(term) ? [12, 5, 8, 3][index] : 0), 0), 0);
     }
 
     function matches(records, query) {
         return records.map((record) => ({ record, value: score(record, query) })).filter((item) => item.value > 0).sort((a, b) => b.value - a.value).slice(0, 8).map((item) => item.record);
+    }
+
+    function createSearchResultItem(record, container, isTag, tagResults) {
+        const item = document.createElement('button');
+        item.type = 'button';
+        item.className = isTag ? 'search-result search-result--tag' : 'search-result';
+
+        if (isTag) {
+            item.dataset.query = record;
+            const marker = document.createElement('span');
+            marker.setAttribute('aria-hidden', 'true');
+            marker.textContent = '#';
+            const tag = document.createElement('span');
+            tag.textContent = record;
+            item.append(marker, tag);
+            item.addEventListener('click', () => selectResult(tagResults[0], container));
+            return item;
+        }
+
+        item.dataset.url = record.url || '';
+        const icon = document.createElement('span');
+        icon.className = 'search-result__icon';
+        icon.setAttribute('aria-hidden', 'true');
+        icon.textContent = '>';
+        const content = document.createElement('span');
+        const title = document.createElement('strong');
+        title.textContent = record.title || 'Untitled article';
+        const details = document.createElement('small');
+        details.textContent = `${record.category || 'General'} · ${record.snippet || ''}`;
+        content.append(title, details);
+        item.append(icon, content);
+        item.addEventListener('click', () => selectResult(record, container));
+        return item;
     }
 
     function renderResults(container, query, records) {
@@ -43,26 +81,11 @@
             return results;
         }
 
-        const tags = [...new Set(results.flatMap((record) => record.keywords).filter((keyword) => keyword.toLowerCase().includes(query.toLowerCase())))].slice(0, 4);
-        tags.forEach((tag) => {
-            const item = document.createElement('button');
-            item.type = 'button';
-            item.className = 'search-result search-result--tag';
-            item.dataset.query = tag;
-            item.innerHTML = `<span aria-hidden="true">#</span><span>${tag}</span>`;
-            item.addEventListener('click', () => selectResult(results[0], container));
-            container.append(item);
-        });
-
-        results.forEach((record) => {
-            const item = document.createElement('button');
-            item.type = 'button';
-            item.className = 'search-result';
-            item.dataset.url = record.url;
-            item.innerHTML = `<span class="search-result__icon" aria-hidden="true">&gt;</span><span><strong>${record.title}</strong><small>${record.category} · ${record.snippet}</small></span>`;
-            item.addEventListener('click', () => selectResult(record, container));
-            container.append(item);
-        });
+        const tags = [...new Set(results.flatMap(keywordsFor).filter((keyword) => keyword.toLowerCase().includes(query.toLowerCase())))].slice(0, 4);
+        const fragment = document.createDocumentFragment();
+        tags.forEach((tag) => fragment.appendChild(createSearchResultItem(tag, container, true, results)));
+        results.forEach((record) => fragment.appendChild(createSearchResultItem(record, container, false, results)));
+        container.appendChild(fragment);
         container.hidden = false;
         return results;
     }
