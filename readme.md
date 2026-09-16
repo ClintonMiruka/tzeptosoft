@@ -235,6 +235,12 @@ You may  not :
 
 Code in this repo is  MIT Licensed  _ do whatever, just don't be lame.
 
+## 💬 LIVE COMMENTS FIREBASE SETUP
+
+The shared comment drawer uses Firebase Realtime Database when configured. Open `assets/js/firebase-config.js`, replace the `YOUR_*` placeholders with the web app settings from the Firebase Console, and deploy `database.rules.json` as the Realtime Database rules. The file intentionally falls back to local preview mode until every Firebase value is supplied.
+
+Create a Realtime Database in the Firebase project, then paste the rules from `database.rules.json` into **Realtime Database > Rules**. The client scopes post threads under `comments/{page_id}` and the global feed under `comments/global`; likes and dislikes use atomic transactions.
+
 ---
 
 ## 🔥 FINAL WORD

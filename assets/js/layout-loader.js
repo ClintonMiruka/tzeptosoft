@@ -25,6 +25,33 @@
         document.querySelector(`[data-nav="${activePage}"]`)?.setAttribute('aria-current', 'page');
     }
 
-    Promise.all([loadComponent('site-header', 'header.html'), loadComponent('site-footer', 'footer.html')])
+    function loadComments() {
+        const root = document.createElement('div');
+        root.id = 'comments-root';
+        document.body.append(root);
+
+        const stylesheet = document.createElement('link');
+        stylesheet.rel = 'stylesheet';
+        stylesheet.href = `${rootPath}assets/css/comments.css`;
+        document.head.append(stylesheet);
+
+        return fetch(`${rootPath}components/comments.html`)
+            .then((response) => {
+                if (!response.ok) throw new Error('Unable to load comments.html');
+                return response.text();
+            })
+            .then((html) => {
+                root.innerHTML = html.replaceAll('{{root}}', rootPath);
+                const script = document.createElement('script');
+                script.src = `${rootPath}assets/js/comments.js`;
+                script.type = 'module';
+                script.defer = true;
+                document.body.append(script);
+            })
+            .catch((error) => console.error(error));
+    }
+
+    const rootPath = root;
+    Promise.all([loadComponent('site-header', 'header.html'), loadComponent('site-footer', 'footer.html'), loadComments()])
         .then(markActiveNavigation);
 }());

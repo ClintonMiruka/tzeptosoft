@@ -1,0 +1,34 @@
+{
+  "rules": {
+    "comments": {
+      ".read": true,
+      "$page_id": {
+        "$comment_id": {
+          ".write": "newData.exists()",
+          ".validate": "newData.hasChildren(['author', 'text', 'timestamp'])",
+          "author": {
+            ".validate": "newData.isString() && newData.val().length > 0 && newData.val().length <= 30"
+          },
+          "text": {
+            ".validate": "newData.isString() && newData.val().length > 0 && newData.val().length <= 280"
+          },
+          "timestamp": {
+            ".validate": "newData.isNumber() && newData.val() <= now"
+          },
+          "likes": {
+            ".validate": "newData.isNumber() && newData.val() >= 0"
+          },
+          "dislikes": {
+            ".validate": "newData.isNumber() && newData.val() >= 0"
+          },
+          "pageUrl": {
+            ".validate": "newData.isString() && newData.val().length <= 2048"
+          },
+          "$other": {
+            ".validate": false
+          }
+        }
+      }
+    }
+  }
+}
