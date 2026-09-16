@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Offline | Tzeptosoft</title>
+  <style>
+    :root {
+      --bg: #0b1020;
+      --panel: #121b2d;
+      --text: #edf6ff;
+      --muted: #b7c3d9;
+      --accent: #21d4c2;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background: radial-gradient(circle at top, #152643, var(--bg));
+      color: var(--text);
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 2rem;
+    }
+    .card {
+      max-width: 520px;
+      background: rgba(18, 27, 45, 0.9);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 18px;
+      padding: 2rem;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+    }
+    h1 { font-size: clamp(2rem, 5vw, 3rem); margin: 0 0 0.75rem; }
+    p { margin: 0; color: var(--muted); line-height: 1.6; }
+    .status {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.6rem 1rem;
+      border-radius: 999px;
+      background: rgba(33, 212, 194, 0.12);
+      color: var(--accent);
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <h1>You're offline</h1>
+    <p>Tzeptosoft is temporarily unavailable without an internet connection. Your latest cached content is still available on this device.</p>
+    <div class="status">Offline mode active</div>
+  </main>
+</body>
+</html>
