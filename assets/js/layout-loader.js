@@ -8,7 +8,7 @@
         const target = document.getElementById(targetId);
         if (!target) return Promise.resolve();
 
-        return fetch(`${root}components/${fileName}`)
+        return fetch(`${root}components/${fileName}?v=20260916`)
             .then((response) => {
                 if (!response.ok) throw new Error(`Unable to load ${fileName}`);
                 return response.text();
@@ -35,7 +35,7 @@
         stylesheet.href = `${rootPath}assets/css/comments.css`;
         document.head.append(stylesheet);
 
-        return fetch(`${rootPath}components/comments.html`)
+        return fetch(`${rootPath}components/comments.html?v=20260916`)
             .then((response) => {
                 if (!response.ok) throw new Error('Unable to load comments.html');
                 return response.text();
