@@ -220,7 +220,7 @@ Just pure HTML/CSS/JS that works anywhere.
 ## ⚖️ LICENSE
 
  TZEPTOSOFT CONTENT LICENSE   
-All written content © 2025 Tzeptosoft.  
+All written content © 2026 Tzeptosoft.
 You may:
 - Read it
 - Share it (with credit)
