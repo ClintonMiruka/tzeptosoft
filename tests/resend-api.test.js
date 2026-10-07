@@ -86,16 +86,28 @@ test('contact endpoint sends escaped email to the fixed inbox', async () => {
     assert.doesNotMatch(MockResend.lastEmail.html, /<script>|<img/);
 });
 
-test('newsletter endpoint requires configuration and validates the email', async () => {
+test('newsletter endpoint requires only the API key and validates the email', async () => {
     setEnv({});
     const unavailable = await invoke(subscribe, { email: 'reader@example.com' });
     assert.equal(unavailable.statusCode, 500);
     assert.match(unavailable.payload.details, /RESEND_API_KEY/);
-    assert.match(unavailable.payload.details, /RESEND_AUDIENCE_ID/);
 
-    setEnv({ RESEND_API_KEY: 'test-key', RESEND_AUDIENCE_ID: 'audience-id' });
+    setEnv({ RESEND_API_KEY: 'test-key' });
     const invalid = await invoke(subscribe, { email: 'bad-address' });
     assert.equal(invalid.statusCode, 400);
+});
+
+test('newsletter endpoint adds a contact globally without an audience ID', async () => {
+    setEnv({ RESEND_API_KEY: 'test-key' });
+    MockResend.contactResult = { data: { id: 'contact-id' }, error: null };
+    const response = await invoke(subscribe, { email: ' reader@example.com ' });
+
+    assert.equal(response.statusCode, 200);
+    assert.deepEqual(response.payload, { success: true });
+    assert.deepEqual(MockResend.lastContact, {
+        email: 'reader@example.com',
+        unsubscribed: false
+    });
 });
 
 test('newsletter endpoint adds trimmed email to the configured audience', async () => {

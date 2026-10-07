@@ -39,18 +39,18 @@ module.exports = async function subscribe(req, res) {
 
     const apiKey = process.env.RESEND_API_KEY;
     const audienceId = process.env.RESEND_AUDIENCE_ID;
-    if (!apiKey || !audienceId) {
-        const missing = [!apiKey && 'RESEND_API_KEY', !audienceId && 'RESEND_AUDIENCE_ID'].filter(Boolean);
-        return reply(res, 500, { success: false, error: 'Newsletter service is not configured. Please try again later.', details: `Missing server environment variable: ${missing.join(', ')}.` });
+    if (!apiKey) {
+        return reply(res, 500, { success: false, error: 'Newsletter service is not configured. Please try again later.', details: 'Missing server environment variable: RESEND_API_KEY.' });
     }
 
     const resend = new Resend(apiKey);
     try {
-        const { error } = await resend.contacts.create({
+        const contact = {
             email,
-            audienceId,
             unsubscribed: false
-        });
+        };
+        if (audienceId) contact.audienceId = audienceId;
+        const { error } = await resend.contacts.create(contact);
 
         if (error) {
             if (/already exists|already a contact|contact already/i.test(error.message || '')) {
