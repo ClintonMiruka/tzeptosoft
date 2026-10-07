@@ -1,4 +1,46 @@
 document.addEventListener('DOMContentLoaded', () => {
+      const contactForm = document.getElementById('contact-form');
+      contactForm?.addEventListener('submit', async (event) => {
+        event.preventDefault();
+
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
+        const status = document.getElementById('contact-form-status');
+        const submitButton = contactForm.querySelector('button[type="submit"]');
+
+        if (!email || !message) {
+          alert('Please provide your email address and a message.');
+          return;
+        }
+
+        submitButton.disabled = true;
+        status.textContent = 'Sending your message...';
+
+        try {
+          const response = await fetch('/api/send', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name, email, message })
+          });
+          const result = await response.json();
+
+          if (!response.ok || !result.success) {
+            throw new Error(result.error || 'Message could not be sent.');
+          }
+
+          contactForm.reset();
+          status.textContent = 'Your message has been sent.';
+          alert('Your message has been sent.');
+        } catch (error) {
+          status.textContent = 'Unable to send your message. Please try again or email tzeptosoft@gmail.com.';
+          alert('Unable to send your message. Please try again or email tzeptosoft@gmail.com.');
+          console.error('Contact form submission failed:', error);
+        } finally {
+          submitButton.disabled = false;
+        }
+      });
+
       // Matrix Animation
       const matrixBg = document.getElementById('matrix-bg');
       if (matrixBg) {

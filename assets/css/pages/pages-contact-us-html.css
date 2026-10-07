@@ -739,6 +739,54 @@
       background: rgba(0, 102, 204, 0.3);
     }
 
+    .contact-form-panel {
+      display: grid;
+      gap: 12px;
+      max-width: 680px;
+      margin: 48px auto 0;
+      padding: 28px;
+      border: 1px solid var(--secondary);
+      border-radius: 8px;
+      background: rgba(28, 28, 28, 0.8);
+      text-align: left;
+    }
+
+    .contact-form-panel h3 {
+      margin: 0 0 8px;
+      color: var(--secondary);
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    .contact-form-panel label {
+      color: var(--text-primary, #fff);
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .contact-form-panel input,
+    .contact-form-panel textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid rgba(0, 204, 255, 0.5);
+      border-radius: 4px;
+      background: rgba(0, 0, 0, 0.35);
+      color: #fff;
+      font: inherit;
+    }
+
+    .contact-form-panel textarea {
+      resize: vertical;
+    }
+
+    .contact-form-panel button {
+      justify-content: center;
+      justify-self: start;
+    }
+
+    #contact-form-status {
+      min-height: 1.5em;
+      margin: 0;
+    }
+
     /* PROTOCOL MATRIX */
     .protocol-matrix {
       max-width: 1000px;
@@ -1236,6 +1284,7 @@
       .contact-card { padding: 20px; }
       .card-icon-large { font-size: 2.5em; }
       .contact-card h3 { font-size: 1.3em; }
+      .contact-form-panel { padding: 20px; }
       .comms-grid h2 { font-size: 1.8em; }
       .network-item { padding: 20px; }
     }
