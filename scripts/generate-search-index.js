@@ -4,7 +4,8 @@ const fs = require('fs');
 const path = require('path');
 
 const root = path.resolve(__dirname, '..');
-const output = path.join(root, 'assets/data/search-index.json');
+const siteRoot = path.resolve(process.env.SITE_ROOT || root);
+const output = path.join(siteRoot, 'assets/data/search-index.json');
 
 function walk(directory) {
     return fs.readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {
@@ -21,13 +22,13 @@ function firstMatch(source, expression) {
     return source.match(expression)?.[1] || '';
 }
 
-const files = [path.join(root, 'index.html'), ...walk(path.join(root, 'pages'))]
+const files = [path.join(siteRoot, 'index.html'), ...walk(path.join(siteRoot, 'pages'))]
     .filter((file) => file.endsWith('.html'))
     .sort();
 
 const index = files.map((file) => {
     const source = fs.readFileSync(file, 'utf8');
-    const relative = path.relative(root, file).split(path.sep).join('/');
+    const relative = path.relative(siteRoot, file).split(path.sep).join('/');
     const title = text(firstMatch(source, /<title[^>]*>([\s\S]*?)<\/title>/i) || firstMatch(source, /<h1[^>]*>([\s\S]*?)<\/h1>/i) || path.basename(file, '.html'));
     const description = text(firstMatch(source, /<meta[^>]+name=["']description["'][^>]+content=["']([^"']*)["']/i));
     const keywordMeta = firstMatch(source, /<meta[^>]+name=["']keywords["'][^>]+content=["']([^"']*)["']/i);
@@ -47,4 +48,4 @@ const index = files.map((file) => {
 
 fs.mkdirSync(path.dirname(output), { recursive: true });
 fs.writeFileSync(output, `${JSON.stringify(index)}\n`);
-console.log(`Generated ${index.length} search records at ${path.relative(root, output)}.`);
+console.log(`Generated ${index.length} search records at ${path.relative(siteRoot, output)}.`);

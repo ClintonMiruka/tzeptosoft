@@ -1,5 +1,7 @@
 # TZEPTOSOFT _ ESCAPE THE MATRIX ⚔️🔥
 
+> **Current publishing guide:** See [PUBLISHING.md](PUBLISHING.md) for the Markdown article workflow, local preview, build checks, and hosting notes. The legacy setup instructions below describe an older `/blog/` structure and are not the current publishing process.
+
 >  No bullshit. No sugar-coating. No apologies.   
 > A digital war room for men and women who refuse to be caged. Built to dominate.
 

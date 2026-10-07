@@ -4,7 +4,8 @@ const fs = require('fs');
 const path = require('path');
 
 const root = path.resolve(__dirname, '..');
-const output = path.join(root, 'assets/data/posts-index.json');
+const siteRoot = path.resolve(process.env.SITE_ROOT || root);
+const output = path.join(siteRoot, 'assets/data/posts-index.json');
 const categories = new Set(['masculinity', 'femininity', 'wealth', 'mindset', 'tech', 'relationships', 'life']);
 
 function walk(directory) {
@@ -32,10 +33,10 @@ function dateFor(source) {
     return match(source, /<time[^>]+datetime=["']([^"']+)["']/i) || match(source, /["']datePublished["']\s*:\s*["']([^"']+)["']/i) || '2025-01-01';
 }
 
-const files = walk(path.join(root, 'pages')).filter((file) => file.endsWith('.html'));
+const files = walk(path.join(siteRoot, 'pages')).filter((file) => file.endsWith('.html'));
 const posts = files.map((file) => {
     const source = fs.readFileSync(file, 'utf8');
-    const relative = path.relative(root, file).split(path.sep).join('/');
+    const relative = path.relative(siteRoot, file).split(path.sep).join('/');
     const title = text(match(source, /<title[^>]*>([\s\S]*?)<\/title>/i) || match(source, /<h1[^>]*>([\s\S]*?)<\/h1>/i) || path.basename(file, '.html'));
     const description = text(match(source, /<meta[^>]+name=["']description["'][^>]+content=["']([^"']+)["']/i));
     const paragraphs = [...source.matchAll(/<p[^>]*>([\s\S]*?)<\/p>/gi)].map((item) => text(item[1])).filter((item) => item.length > 30);
@@ -53,4 +54,4 @@ const posts = files.map((file) => {
 
 fs.mkdirSync(path.dirname(output), { recursive: true });
 fs.writeFileSync(output, `${JSON.stringify(posts, null, 2)}\n`);
-console.log(`Indexed ${posts.length} blog posts at ${path.relative(root, output)}.`);
+console.log(`Indexed ${posts.length} blog posts at ${path.relative(siteRoot, output)}.`);

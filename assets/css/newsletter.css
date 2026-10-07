@@ -1,0 +1,59 @@
+.newsletter-status {
+    min-height: 1.5em;
+    margin: 0.6rem 0 0;
+    color: var(--text-muted, #d1d5db);
+    font-size: 0.9rem;
+}
+
+.newsletter-status.is-error {
+    color: var(--color-danger, #ff5c7a);
+}
+
+.newsletter-container button:disabled,
+.newsletter-form button:disabled,
+#newsletterForm button:disabled {
+    cursor: wait;
+    opacity: 0.7;
+}
+
+.newsletter-success-dialog {
+    width: min(100% - 2rem, 28rem);
+    padding: 2rem;
+    border: 1px solid var(--color-line, #344054);
+    border-radius: 8px;
+    background: var(--color-surface, #121829);
+    color: var(--color-text, #fff);
+    text-align: center;
+}
+
+.newsletter-success-dialog::backdrop {
+    background: rgb(0 0 0 / 65%);
+    backdrop-filter: blur(3px);
+}
+
+.newsletter-success-dialog__close {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.65rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.newsletter-success-dialog__icon {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.newsletter-success-dialog h2 {
+    margin: 0.5rem 0;
+}
+
+.newsletter-success-dialog :focus-visible {
+    outline: 3px solid var(--color-accent, #21d4c2);
+    outline-offset: 3px;
+}

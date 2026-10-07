@@ -1,0 +1,20 @@
+{
+  "name": "tzeptosoft-static-site",
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "eleventy --config=.eleventy.js --serve",
+    "build": "eleventy --config=.eleventy.js",
+    "check": "npm run build && node scripts/check-site.js && npm test",
+    "test": "node --test",
+    "new-article": "node scripts/new-article.js"
+  },
+  "dependencies": {
+    "resend": "^6.32.1"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2"
+  }
+}

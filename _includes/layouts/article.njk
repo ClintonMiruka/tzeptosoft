@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ description | escape }}">
+    <meta name="author" content="{{ author | default('Clinton | Tzeptosoft') | escape }}">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="{{ title | escape }} | Tzeptosoft">
+    <meta property="og:description" content="{{ description | escape }}">
+    {% if coverImage %}<meta property="og:image" content="https://tzeptosoft.com{{ coverImage }}">{% endif %}
+    <title>{{ title | escape }} | Tzeptosoft</title>
+    <link rel="canonical" href="https://tzeptosoft.com/pages/{{ category }}/{{ slug }}.html">
+    <script>/* Apply the saved theme before rendering. */(function(){var s=localStorage.getItem('tzeptosoft-theme'),d=window.matchMedia('(prefers-color-scheme: dark)').matches;document.documentElement.setAttribute('data-theme',s||(d?'dark':'light'));}());</script>
+    <link rel="stylesheet" href="/assets/css/global.css?v=20260916">
+    <link rel="stylesheet" href="/assets/css/article.css">
+    <link rel="icon" type="image/webp" href="/assets/favicon.webp">
+    <script src="/assets/js/theme.js?v=20260916"></script>
+    <script type="application/ld+json">{{ structuredDataJson | safe }}</script>
+</head>
+<body data-page="blog">
+    <div id="site-header"></div>
+    <main class="article-page">
+        <article class="published-article">
+            <header class="published-article__header">
+                <p class="published-article__category">{{ category | title }}</p>
+                <h1>{{ title }}</h1>
+                <p class="published-article__dek">{{ description }}</p>
+                <div class="published-article__byline">
+                    <span>{{ author | default('Clinton | Tzeptosoft') }}</span>
+                    <time datetime="{{ date | dateIso }}">{{ date | dateReadable }}</time>
+                </div>
+                {% if coverImage %}
+                <figure class="published-article__cover">
+                    <img src="{{ coverImage }}" alt="{{ coverAlt | escape }}" width="1200" height="675" fetchpriority="high">
+                    {% if coverCaption %}<figcaption>{{ coverCaption }}</figcaption>{% endif %}
+                </figure>
+                {% endif %}
+            </header>
+            <div class="published-article__body">{{ content | safe }}</div>
+        </article>
+    </main>
+    <div id="site-footer"></div>
+    <script src="/assets/js/layout-loader.js?v=20260916" defer></script>
+    <script src="/assets/js/main.js" defer></script>
+</body>
+</html>
