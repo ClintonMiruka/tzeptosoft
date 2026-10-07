@@ -86,6 +86,12 @@
             input.setCustomValidity('');
         });
 
+        if (window.showThankYouModal) {
+            window.showThankYouModal('newsletter', {
+                title: '🎉 You\'re Subscribed!',
+                message: 'Thank you for joining our community! You\'ve been successfully added to our official newsletter.'
+            });
+        }
         showSuccessToast();
     }
 

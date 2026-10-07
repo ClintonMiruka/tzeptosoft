@@ -3,15 +3,47 @@
 
     const rootPath = `${'../'.repeat(Math.max(0, new URL(document.baseURI).pathname.split('/').length - 2))}`;
 
+    const faviconLinks = [
+        { rel: 'icon', type: 'image/png', sizes: '32x32', href: `${rootPath}assets/images/favicon-32x32.png` },
+        { rel: 'icon', type: 'image/png', sizes: '16x16', href: `${rootPath}assets/images/favicon-16x16.png` },
+        { rel: 'apple-touch-icon', sizes: '180x180', href: `${rootPath}assets/images/apple-touch-icon.png` }
+    ];
+
+    faviconLinks.forEach((linkInfo) => {
+        const selector = `link[rel="${linkInfo.rel}"]${linkInfo.sizes ? `[sizes="${linkInfo.sizes}"]` : ''}`;
+        if (!document.head.querySelector(selector)) {
+            const link = document.createElement('link');
+            link.rel = linkInfo.rel;
+            if (linkInfo.type) link.type = linkInfo.type;
+            if (linkInfo.sizes) link.sizes = linkInfo.sizes;
+            link.href = linkInfo.href;
+            document.head.append(link);
+        }
+    });
+
     const searchScript = document.createElement('script');
     searchScript.src = `${rootPath}assets/js/search.js`;
     searchScript.defer = true;
     document.head.append(searchScript);
 
+    const cookieConsentScript = document.createElement('script');
+    cookieConsentScript.src = `${rootPath}assets/js/cookie-consent.js`;
+    cookieConsentScript.defer = true;
+    document.head.append(cookieConsentScript);
+
     const newsletterScript = document.createElement('script');
     newsletterScript.src = `${rootPath}assets/js/newsletter.js`;
     newsletterScript.defer = true;
     document.head.append(newsletterScript);
+
+    const thankYouScript = document.createElement('script');
+    thankYouScript.src = `${rootPath}assets/js/modal-thankyou.js`;
+    thankYouScript.defer = true;
+    document.head.append(thankYouScript);
+
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register(`${rootPath}sw.js`, { scope: `${rootPath}` }).catch((error) => console.warn('Service worker registration failed:', error));
+    }
 
     document.addEventListener('click', (event) => {
         const toggle = event.target.closest('.nav-toggle');
