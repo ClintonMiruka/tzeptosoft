@@ -1,5 +1,10 @@
 {
-  "type": "module",
+  "name": "tzeptosoft",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build.js build",
+    "help": "node scripts/build.js --help"
+  },
   "dependencies": {
     "resend": "^6.32.1"
   }

@@ -1,0 +1,192 @@
+:root {
+            --primary: #0066CC;
+            --secondary: #00CCFF;
+            --accent: #FFFFFF;
+            --bg-dark: #0B0F1A;
+            --text-dark: #FFFFFF;
+            --matrix-green: #00FF00;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--bg-dark);
+            color: var(--text-dark);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* Footer Styles */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid #1E1E2E;
+            background: rgba(11, 15, 26, 0.95);
+            margin-top: auto;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1.1em;
+            color: var(--text-dark);
+            opacity: 0.9;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .social-link:hover {
+            background: var(--secondary);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 204, 255, 0.3);
+        }
+
+        .social-link svg {
+            width: 20px;
+            height: 20px;
+            color: var(--text-dark);
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .footer-link {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 0.9em;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .footer-link:hover {
+            color: var(--secondary);
+        }
+
+        .footer-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--secondary);
+            transition: width 0.3s ease;
+        }
+
+        .footer-link:hover::after {
+            width: 100%;
+        }
+
+        .copyright {
+            margin-top: 30px;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9em;
+        }
+
+        .signature {
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--secondary);
+            font-size: 1.2em;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            footer {
+                padding: 30px 15px;
+            }
+
+            .footer-links {
+                gap: 20px;
+                margin-top: 20px;
+            }
+
+            .social-links {
+                gap: 15px;
+            }
+
+            .social-link {
+                width: 35px;
+                height: 35px;
+            }
+
+            .social-link svg {
+                width: 18px;
+                height: 18px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            footer {
+                padding: 20px 10px;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 15px;
+                align-items: center;
+            }
+
+            .social-links {
+                gap: 12px;
+            }
+
+            .social-link {
+                width: 32px;
+                height: 32px;
+            }
+
+            .social-link svg {
+                width: 16px;
+                height: 16px;
+            }
+
+            footer p {
+                font-size: 1em;
+            }
+
+            .signature {
+                font-size: 1.1em;
+            }
+        }
