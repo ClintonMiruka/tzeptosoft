@@ -41,8 +41,8 @@
             <div style="display:flex; align-items:flex-start; gap:12px;">
                 <div style="font-size: 1.45rem; line-height: 1;">🎉</div>
                 <div>
-                    <div style="font-size: 1.05rem; font-weight: 700; margin-bottom: 6px; color: #d1fae5;">You're Subscribed!</div>
-                    <div style="font-size: 0.95rem; line-height: 1.5; color: rgba(255,255,255,0.9);">Congratulations! You've been added to our official newsletter list. Stay tuned for updates directly in your inbox.</div>
+                    <div style="font-size: 1.05rem; font-weight: 700; margin-bottom: 6px; color: #d1fae5;">🎉 You're Subscribed!</div>
+                    <div style="font-size: 0.95rem; line-height: 1.5; color: rgba(255,255,255,0.9);">Thank you for joining our community! You've been successfully added to our official newsletter.</div>
                 </div>
             </div>
         `;
