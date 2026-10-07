@@ -3,8 +3,7 @@
 
     const storageKey = 'tzeptosoft-theme';
     const savedTheme = localStorage.getItem(storageKey);
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const initialTheme = savedTheme || (prefersDark ? 'dark' : 'light');
+    const initialTheme = savedTheme || 'dark';
 
     document.documentElement.setAttribute('data-theme', initialTheme);
 

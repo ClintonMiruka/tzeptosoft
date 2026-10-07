@@ -19,13 +19,6 @@
     });
 
     document.addEventListener('click', (event) => {
-        const themeButton = event.target.closest('.theme-btn');
-        if (!themeButton) return;
-        const enabled = document.documentElement.classList.toggle('theme-light');
-        themeButton.setAttribute('aria-pressed', String(enabled));
-    });
-
-    document.addEventListener('click', (event) => {
         const searchButton = event.target.closest('.search-btn');
         if (!searchButton) return;
         const header = document.querySelector('[data-site-header]');

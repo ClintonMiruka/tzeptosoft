@@ -115,6 +115,12 @@ for (const file of [path.join(output, 'index.html'), ...walk(path.join(output, '
     if (!/\bsrc=["']\/assets\/js\/newsletter\.js(?:\?[^"']*)?["']/i.test(html)) {
         errors.push(`${path.relative(output, file)}: shared newsletter frontend is not loaded`);
     }
+    if (!/\bhref=["']\/assets\/css\/theme-overrides\.css(?:\?[^"']*)?["']/i.test(html)) {
+        errors.push(`${path.relative(output, file)}: shared semantic theme stylesheet is not loaded`);
+    }
+    if (/t=s\|\|\(d\?'dark':'light'\)/.test(html)) {
+        errors.push(`${path.relative(output, file)}: first-visit theme bootstrap still follows system light mode`);
+    }
 }
 
 const markdownFiles = walk(path.join(root, 'content', 'posts')).filter((file) => file.endsWith('.md'));

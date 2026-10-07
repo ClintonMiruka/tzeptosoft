@@ -11,12 +11,15 @@ import {
 const MAX_LENGTH = 280;
 const STORAGE_PREFIX = 'tzeptosoft-comments:';
 const VOTE_PREFIX = 'tzeptosoft-comment-votes:';
+const PREVIEW_VIEWER_COUNTS = [3, 7, 11, 13, 17, 19, 23, 31, 37, 43];
 const state = {
     feed: 'post',
     comments: [],
     unsubscribe: null,
     storageKey: '',
-    firebasePath: ''
+    firebasePath: '',
+    previewViewerTimer: null,
+    previewViewerIndex: 0
 };
 
 const root = document.getElementById('comments-root');
@@ -34,7 +37,10 @@ const elements = {
     name: root.querySelector('#comment-name'),
     text: root.querySelector('#comment-text'),
     count: root.querySelector('[data-character-count]'),
-    unread: root.querySelector('[data-unread-count]')
+    unread: root.querySelector('[data-unread-count]'),
+    viewerCount: root.querySelector('[data-viewer-count]'),
+    viewerLabel: root.querySelector('[data-viewer-label]'),
+    viewerDot: root.querySelector('[data-viewer-dot]')
 };
 
 const pagePath = window.location.pathname || '/';
@@ -118,6 +124,7 @@ function sanitizeText(text) {
 }
 
 function loadLocalFeed() {
+    setPreviewViewerMode(true);
     state.comments = readLocal();
     render();
     setNotice('Local preview mode. Add Firebase credentials for shared live comments.', false);
@@ -131,6 +138,7 @@ function loadLocalFeed() {
 }
 
 function loadFirebaseFeed() {
+    setPreviewViewerMode(false);
     state.unsubscribe?.();
     state.firebasePath = state.feed === 'post' ? `comments/${pageId}` : 'comments/global';
     const commentsReference = ref(db, state.firebasePath);
@@ -143,6 +151,32 @@ function loadFirebaseFeed() {
         console.error(error);
         setNotice('Live connection failed. Check Firebase rules and configuration.', true);
     });
+}
+
+function setPreviewViewerMode(enabled) {
+    window.clearTimeout(state.previewViewerTimer);
+    state.previewViewerTimer = null;
+    elements.viewerCount.hidden = !enabled;
+    elements.viewerLabel.textContent = enabled ? 'simulated previews' : 'Presence tracking unavailable';
+    elements.viewerDot.classList.toggle('comments-status-dot--inactive', !enabled);
+
+    if (!enabled) return;
+
+    state.previewViewerIndex = 0;
+    elements.viewerCount.textContent = PREVIEW_VIEWER_COUNTS[state.previewViewerIndex];
+    const scheduleNext = () => {
+        const delay = 6000 + Math.floor(Math.random() * 5000);
+        state.previewViewerTimer = window.setTimeout(() => {
+            state.previewViewerIndex = (state.previewViewerIndex + 1) % PREVIEW_VIEWER_COUNTS.length;
+            elements.viewerCount.classList.add('is-changing');
+            window.setTimeout(() => {
+                elements.viewerCount.textContent = PREVIEW_VIEWER_COUNTS[state.previewViewerIndex];
+                elements.viewerCount.classList.remove('is-changing');
+                scheduleNext();
+            }, 180);
+        }, delay);
+    };
+    scheduleNext();
 }
 
 function refreshFeed() {
