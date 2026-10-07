@@ -1,0 +1,35 @@
+[debug] [2026-10-02T08:35:54.600Z] ----------------------------------------------------------------------
+[debug] [2026-10-02T08:35:54.603Z] Command:       /usr/bin/node /home/clinton/.npm-global/bin/firebase init hosting
+[debug] [2026-10-02T08:35:54.604Z] CLI Version:   15.32.1
+[debug] [2026-10-02T08:35:54.604Z] Platform:      linux
+[debug] [2026-10-02T08:35:54.604Z] Node Version:  v26.10.0
+[debug] [2026-10-02T08:35:54.604Z] Detected Agent: unknown
+[debug] [2026-10-02T08:35:54.605Z] Time:          Fri Oct 02 2026 11:35:54 GMT+0300 (East Africa Time)
+[debug] [2026-10-02T08:35:54.605Z] ----------------------------------------------------------------------
+[debug] 
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/clinton/tzeptosoft
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2026-10-02T08:37:53.820Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-10-02T08:37:53.821Z] > authorizing via signed-in user (tzeptosoft@gmail.com)
+[debug] [2026-10-02T08:38:33.715Z] Checked if tokens are valid: true, expires at: 1790933751814
+[debug] [2026-10-02T08:38:33.715Z] Checked if tokens are valid: true, expires at: 1790933751814
+[debug] [2026-10-02T08:38:33.719Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1/projects:checkProjectId [none]
+[debug] [2026-10-02T08:38:33.719Z] >>> [apiv2][body] POST https://firebase.googleapis.com/v1/projects:checkProjectId {"proposedId":"Tzeptosoft"}
+[debug] [2026-10-02T08:38:34.926Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1/projects:checkProjectId 200
+[debug] [2026-10-02T08:38:34.927Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1/projects:checkProjectId {"projectIdStatus":"PROJECT_ID_NOT_VALID","suggestedProjectId":"tzeptosoft-f407b"}
