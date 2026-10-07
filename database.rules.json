@@ -6,6 +6,12 @@
         "$comment_id": {
           ".write": "newData.exists()",
           ".validate": "newData.hasChildren(['author', 'text', 'timestamp'])",
+            "id": {
+              ".validate": "newData.isString() && newData.val() == $comment_id"
+            },
+            "parentId": {
+              ".validate": "newData.isString() && newData.val().length > 0 && newData.val().length <= 100"
+            },
           "author": {
             ".validate": "newData.isString() && newData.val().length > 0 && newData.val().length <= 30"
           },

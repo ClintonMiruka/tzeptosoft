@@ -42,20 +42,27 @@ html[data-theme='dark'] {
 
 html[data-theme='light'] {
     color-scheme: light;
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8fafc;
+    --text-primary: #0f172a;
+    --text-secondary: #334155;
+    --accent-blue: #2563eb;
+    --border-color: #e2e8f0;
+    --text-glow: none;
     --bg-main: #f8fafc;
     --bg-surface: #ffffff;
     --bg-card: #ffffff;
-    --bg-banner: #eef4fb;
-    --bg-hover: #eaf2fb;
-    --text-main: #172033;
-    --text-muted: #4b5b73;
-    --text-heading: #101827;
+    --bg-banner: #ffffff;
+    --bg-hover: #ffffff;
+    --text-main: #0f172a;
+    --text-muted: #0f172a;
+    --text-heading: #0f172a;
     --text-inverse: #ffffff;
-    --border-subtle: #d9e2ee;
-    --border-strong: #aebdd0;
-    --accent-primary: #075db8;
-    --accent-hover: #064b91;
-    --accent-glow: rgba(7, 93, 184, 0.14);
+    --border-subtle: rgba(15, 23, 42, 0.22);
+    --border-strong: #0f172a;
+    --accent-primary: #2563eb;
+    --accent-hover: #1d4ed8;
+    --accent-glow: rgba(37, 99, 235, 0.18);
     --color-bg: var(--bg-main);
     --color-surface: var(--bg-surface);
     --color-surface-raised: var(--bg-hover);
@@ -63,22 +70,25 @@ html[data-theme='light'] {
     --color-muted: var(--text-muted);
     --color-line: var(--border-subtle);
     --color-primary: var(--accent-primary);
-    --color-accent: #087f78;
-    --color-danger: #b4233a;
-    --color-success: #08784f;
-    --color-warning: #8a5700;
-    --color-info: #075db8;
-    --surface-overlay: rgba(248, 250, 252, 0.97);
+    --color-accent: #2563eb;
+    --color-danger: #0f172a;
+    --color-success: #0f172a;
+    --color-warning: #0f172a;
+    --color-info: #2563eb;
+    --surface-overlay: #ffffff;
     --field-background: #ffffff;
-    --code-background: #eaf0f7;
-    --code-text: #182b46;
-    --focus-ring: #087f78;
+    --code-background: #ffffff;
+    --code-text: #0f172a;
+    --focus-ring: #2563eb;
     --primary: var(--accent-primary);
-    --secondary: #087f78;
-    --accent: var(--text-heading);
+    --secondary: #2563eb;
+    --accent: #0f172a;
     --bg-dark: var(--bg-main);
     --text-dark: var(--text-main);
-    --matrix-green: #08784f;
+    --matrix-green: #0f172a;
+    --dark-bg: #f8fafc;
+    --card-bg: #ffffff;
+    --blog-card-bg: #ffffff;
 }
 
 html,
@@ -229,4 +239,225 @@ html[data-theme='light'] body :is(button, [role='button'], .btn-join, .btn-cta,
     body {
         transition: none;
     }
+}
+
+html[data-theme='light'],
+html[data-theme='light'] body {
+    background-color: #f8fafc !important;
+    color: #0f172a !important;
+}
+
+html[data-theme='light'] body :is(h1, h2, h3, h4, h5, h6, p, li, label, blockquote,
+    figcaption, time, small, strong, em, span, .muted, .subtitle, .tagline, .read-time,
+    .comments-notice, .comments-viewers, .comments-empty, .comment-card__time,
+    .footer-mission, .footer-bottom, .published-article__dek) {
+    color: #0f172a !important;
+}
+
+html[data-theme='light'] body :is(a:not([class*='button']):not([class*='btn']):not(.social-icon),
+    .comment-action:hover, .comment-action.is-selected, .comments-tab.is-active,
+    .icon-btn:hover, .icon-btn[aria-pressed='true']) {
+    color: #2563eb !important;
+}
+
+html[data-theme='light'] body :is(.hero, .top-box, .featured-card, .card, .post-card,
+    .cta-box, .blog-container, .newsletter-container, .terminal-content, .content,
+    .main-content, .section, [class*='card'], [class*='container'], [class*='panel'],
+    [class*='modal'], .comments-drawer, .comments-form, .comment-card, .site-header,
+    .site-footer, .site-search, .search-results, .search-result, .contact-form-section,
+    .contact-form, input, textarea, select, pre, code, kbd, samp) {
+    background-color: #ffffff !important;
+    border-color: rgba(15, 23, 42, 0.22) !important;
+    color: #0f172a !important;
+}
+
+html[data-theme='light'] body :is(button, [role='button']) {
+    color: #0f172a;
+}
+
+html[data-theme='light'] body :is(.btn-join, .btn-cta, .btn-primary, .cta-button,
+    .get-in-touch-btn, .comments-submit, .contact-form__submit, .newsletter-button,
+    .blog-card__link) {
+    background-color: #2563eb !important;
+    border-color: #2563eb !important;
+    color: #ffffff !important;
+}
+
+html[data-theme='light'] body :is(.btn-join, .btn-cta, .btn-primary, .cta-button,
+    .get-in-touch-btn, .comments-submit, .contact-form__submit, .newsletter-button,
+    .blog-card__link) * {
+    color: #ffffff !important;
+}
+
+html[data-theme='light'] body :is(.btn-join, .btn-cta, .btn-primary, .cta-button,
+    .get-in-touch-btn, .comments-submit, .contact-form__submit, .newsletter-button,
+    .blog-card__link):hover {
+    background-color: #1d4ed8 !important;
+    border-color: #1d4ed8 !important;
+}
+
+html[data-theme='light'] body :is(a, button, input, textarea, select, summary, [tabindex]):focus-visible {
+    outline-color: #2563eb !important;
+}
+
+html[data-theme='light'] body :is(.card, .post-card, .blog-card, .article-card,
+    .archive-article-card, [class$='-card'], [class*='-card '], article:not(.published-article)) {
+    background: var(--card-background-light, #ffffff) !important;
+    background-color: #ffffff !important;
+    border: 1px solid var(--card-border-light, #e2e8f0) !important;
+    box-shadow: var(--card-shadow-light, 0 4px 6px -1px rgba(0, 0, 0, 0.05)) !important;
+}
+
+html[data-theme='light'] body :is(.card, .post-card, .blog-card, .article-card,
+    .archive-article-card, [class$='-card'], [class*='-card '], article:not(.published-article))
+    :is(h1, h2, h3, h4, h5, h6, .card-title, .article-card-title, .article-title, .blog-card__title) {
+    color: #0f172a !important;
+    -webkit-text-fill-color: #0f172a !important;
+    text-shadow: none !important;
+}
+
+html[data-theme='light'] body :is(.card, .post-card, .blog-card, .article-card,
+    .archive-article-card, [class$='-card'], [class*='-card '], article:not(.published-article))
+    :is(p, .excerpt, .card-text, .article-card-excerpt, .blog-card__description) {
+    color: var(--card-text-light, #1e293b) !important;
+    -webkit-text-fill-color: var(--card-text-light, #1e293b) !important;
+}
+
+html[data-theme='light'] body :is(.card, .post-card, .blog-card, .article-card,
+    .archive-article-card, [class$='-card'], [class*='-card '], article:not(.published-article))
+    :is(.read-time, .views, [class*='meta'], [class*='date'], [class*='view'], time, svg) {
+    color: var(--card-meta-light, #475569) !important;
+    -webkit-text-fill-color: var(--card-meta-light, #475569) !important;
+    border-color: #e2e8f0 !important;
+}
+
+html[data-theme='light'] body :is(.tag, .category-badge, .pill, .article-category,
+    .blog-card__category, .article-category-badge, [class*='category-badge'],
+    [class^='badge-'], [class*=' badge-']) {
+    background: var(--category-pill-background-light, #eff6ff) !important;
+    border: 1px solid #dbeafe !important;
+    color: var(--category-pill-text-light, #1d4ed8) !important;
+    -webkit-text-fill-color: var(--category-pill-text-light, #1d4ed8) !important;
+    text-shadow: none !important;
+}
+
+html[data-theme='light'] body :is(.blog-grid, .articles-grid, .articles-archive-grid) {
+    background-color: #f8fafc !important;
+    color: #0f172a !important;
+}
+
+html[data-theme='light'] body {
+    background: #f8fafc !important;
+    background-color: #f8fafc !important;
+    color: #0f172a !important;
+}
+
+html[data-theme='light'] body :is(main, #app, .hero, .hero-section, .banner,
+    .wrapper, .content-wrapper, .container, section, .main-content, .blog-container,
+    .author-info, .chapter-nav, .article-content, .article-body, .content,
+    [class$='-wrapper'], [class*='-wrapper '], [class$='-container'],
+    [class*='-container '], [class$='-section'], [class*='-section ']) {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+}
+
+html[data-theme='light'] body main {
+    background: #f8fafc !important;
+    background-color: #f8fafc !important;
+}
+
+html[data-theme='light'] body :is(#galaxy-bg, #matrix-bg, #particles, #cursor-trail) {
+    display: none !important;
+}
+
+html[data-theme='light'] body :is(h1, h2, h3, h4, h5, h6, .title, .heading,
+    .hero-title, .hero-subtitle, .banner-title, .section-title, .card-title) {
+    color: #0f172a !important;
+    -webkit-text-fill-color: #0f172a !important;
+    text-shadow: none !important;
+    background-image: none !important;
+    background-clip: border-box !important;
+}
+
+html[data-theme='light'] body :is(.hero, .hero-section, .banner, [class*='banner']) * {
+    text-shadow: none !important;
+}
+
+html[data-theme='light'] body :is(p, li, blockquote, figcaption, .subtitle,
+    .hero-description, .hero-subtitle, .banner-description, .section-description) {
+    color: #1e293b !important;
+    -webkit-text-fill-color: #1e293b !important;
+}
+
+html[data-theme='light'] body :is(small, time, .read-time, .views, .metadata,
+    [class*='meta'], [class*='date'], [class*='view']) {
+    color: #475569 !important;
+    -webkit-text-fill-color: #475569 !important;
+}
+
+html[data-theme='light'] body :is(button, [role='button'], .btn, .btn-primary,
+    .btn-cta, .cta-btn, .cta-button, .btn-join, .get-in-touch-btn,
+    .comments-trigger, .comments-submit, .contact-form__submit,
+    .newsletter-button, .blog-card__link, a[class*='btn'], a[class*='button']) {
+    background: #2563eb !important;
+    background-color: #2563eb !important;
+    border: 1px solid #2563eb !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    text-shadow: none !important;
+}
+
+html[data-theme='light'] body :is(button, [role='button'], .btn, .btn-primary,
+    .btn-cta, .cta-btn, .cta-button, .btn-join, .get-in-touch-btn,
+    .comments-trigger, .comments-submit, .contact-form__submit,
+    .newsletter-button, .blog-card__link, a[class*='btn'], a[class*='button']) * {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    text-shadow: none !important;
+}
+
+html[data-theme='light'] body :is(button, [role='button'], .btn, .btn-primary,
+    .btn-cta, .cta-btn, .cta-button, .btn-join, .get-in-touch-btn,
+    .comments-trigger, .comments-submit, .contact-form__submit,
+    .newsletter-button, .blog-card__link, a[class*='btn'], a[class*='button']):hover {
+    background: #1d4ed8 !important;
+    background-color: #1d4ed8 !important;
+    border-color: #1d4ed8 !important;
+    color: #ffffff !important;
+}
+
+html[data-theme='light'] body :is(.btn-secondary, .btn-outline, .button-secondary,
+    .button-outline, [class*='btn-outline'], [class*='outline-btn'], .icon-btn,
+    .theme-btn, .nav-toggle, .comments-icon-button, .comment-action) {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    border: 1px solid #2563eb !important;
+    color: #2563eb !important;
+    -webkit-text-fill-color: #2563eb !important;
+    text-shadow: none !important;
+}
+
+html[data-theme='light'] body :is(.btn-secondary, .btn-outline, .button-secondary,
+    .button-outline, [class*='btn-outline'], [class*='outline-btn'], .icon-btn,
+    .theme-btn, .nav-toggle, .comments-icon-button, .comment-action) * {
+    color: #2563eb !important;
+    -webkit-text-fill-color: #2563eb !important;
+}
+
+html[data-theme='light'] body :is(button, a):is(.btn-secondary, .btn-outline,
+    .button-secondary, .button-outline, [class*='btn-outline'], [class*='outline-btn'],
+    .icon-btn, .theme-btn, .nav-toggle, .comments-icon-button, .comment-action) {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    border: 1px solid #2563eb !important;
+    color: #2563eb !important;
+    -webkit-text-fill-color: #2563eb !important;
+    text-shadow: none !important;
+}
+
+html[data-theme='light'] body :is(button, a):is(.btn-secondary, .btn-outline,
+    .button-secondary, .button-outline, [class*='btn-outline'], [class*='outline-btn'],
+    .icon-btn, .theme-btn, .nav-toggle, .comments-icon-button, .comment-action) * {
+    color: #2563eb !important;
+    -webkit-text-fill-color: #2563eb !important;
 }

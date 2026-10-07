@@ -3,6 +3,7 @@ import {
     getDatabase,
     ref,
     push,
+    set,
     onValue,
     runTransaction,
     serverTimestamp
@@ -19,8 +20,12 @@ const firebaseConfig = {
     measurementId: 'G-QNJBCD54ET'
 };
 
-const isConfigured = Object.values(firebaseConfig).every((value) => !value.includes('YOUR_'));
+const requiredConfigFields = ['apiKey', 'authDomain', 'databaseURL', 'projectId', 'appId'];
+const isConfigured = requiredConfigFields.every((field) => {
+    const value = firebaseConfig[field];
+    return typeof value === 'string' && value.trim().length > 0 && !value.includes('YOUR_');
+});
 const app = isConfigured ? initializeApp(firebaseConfig) : null;
 const db = app ? getDatabase(app) : null;
 
-export { db, isConfigured, ref, push, onValue, runTransaction, serverTimestamp };
+export { db, isConfigured, ref, push, set, onValue, runTransaction, serverTimestamp };

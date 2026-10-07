@@ -3,23 +3,22 @@ import {
     isConfigured,
     ref,
     push,
+    set,
     onValue,
-    runTransaction,
-    serverTimestamp
+    runTransaction
 } from './firebase-config.js';
 
 const MAX_LENGTH = 280;
-const STORAGE_PREFIX = 'tzeptosoft-comments:';
 const VOTE_PREFIX = 'tzeptosoft-comment-votes:';
-const PREVIEW_VIEWER_COUNTS = [3, 7, 11, 13, 17, 19, 23, 31, 37, 43];
 const state = {
     feed: 'post',
     comments: [],
     unsubscribe: null,
-    storageKey: '',
+    connectionUnsubscribe: null,
     firebasePath: '',
-    previewViewerTimer: null,
-    previewViewerIndex: 0
+    replyToId: null,
+    sending: false,
+    connected: false
 };
 
 const root = document.getElementById('comments-root');
@@ -38,7 +37,6 @@ const elements = {
     text: root.querySelector('#comment-text'),
     count: root.querySelector('[data-character-count]'),
     unread: root.querySelector('[data-unread-count]'),
-    viewerCount: root.querySelector('[data-viewer-count]'),
     viewerLabel: root.querySelector('[data-viewer-label]'),
     viewerDot: root.querySelector('[data-viewer-dot]')
 };
@@ -49,6 +47,12 @@ const pageId = pagePath.replace(/^\/+|\/+$/g, '').replace(/[/.]/g, '_').replace(
 function setNotice(message, isError) {
     elements.notice.textContent = message;
     elements.notice.classList.toggle('is-error', Boolean(isError));
+}
+
+function setConnection(connected) {
+    state.connected = connected;
+    elements.viewerLabel.textContent = connected ? 'Live sync connected' : 'Live sync unavailable';
+    elements.viewerDot.classList.toggle('comments-status-dot--inactive', !connected);
 }
 
 function setOpen(open) {
@@ -64,7 +68,7 @@ function setOpen(open) {
 }
 
 function formatTime(timestamp) {
-    const date = typeof timestamp === 'number' ? timestamp : Date.now();
+    const date = Number(timestamp) || Date.now();
     const seconds = Math.max(0, Math.floor((Date.now() - date) / 1000));
     if (seconds < 60) return 'just now';
     if (seconds < 3600) return `${Math.floor(seconds / 60)}m ago`;
@@ -73,147 +77,154 @@ function formatTime(timestamp) {
 }
 
 function avatarColor(name) {
-    let hash = 0;
-    for (let index = 0; index < name.length; index += 1) hash = name.charCodeAt(index) + ((hash << 5) - hash);
-    return `hsl(${Math.abs(hash) % 360} 68% 66%)`;
+    return 'var(--comments-avatar-background)';
 }
 
 function escapeHtml(value) {
     return String(value).replace(/[&<>'"]/g, (character) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[character]));
 }
 
-function render() {
-    const comments = state.comments.slice().sort((first, second) => Number(second.timestamp) - Number(first.timestamp));
-    elements.list.innerHTML = comments.map((comment) => {
-        const vote = localStorage.getItem(`${VOTE_PREFIX}${comment.id}`);
-        const author = escapeHtml(comment.author);
-        const timestamp = Number(comment.timestamp) || Date.now();
-        return `<article class="comment-card">
+function buildTree() {
+    const nodes = new Map(state.comments.map((comment) => [comment.id, { ...comment, children: [] }]));
+    const roots = [];
+    nodes.forEach((comment) => {
+        const parent = comment.parentId && nodes.get(comment.parentId);
+        if (parent) parent.children.push(comment);
+        else roots.push(comment);
+    });
+    const newestFirst = (first, second) => Number(second.timestamp) - Number(first.timestamp);
+    roots.sort(newestFirst);
+    nodes.forEach((comment) => comment.children.sort(newestFirst));
+    return roots;
+}
+
+function renderComment(comment, depth = 0) {
+    const vote = localStorage.getItem(`${VOTE_PREFIX}${comment.id}`);
+    const author = escapeHtml(comment.author || 'Anonymous');
+    const id = escapeHtml(comment.id);
+    const timestamp = Number(comment.timestamp) || Date.now();
+    const replyForm = state.replyToId === comment.id ? `<form class="comment-reply-form" data-reply-form="${id}">
+        <label class="sr-only" for="reply-${id}">Reply to ${author}</label>
+        <textarea id="reply-${id}" name="text" maxlength="${MAX_LENGTH}" rows="2" placeholder="Write a reply..." required></textarea>
+        <div class="comment-reply-form__footer"><span>${MAX_LENGTH} characters max</span><button class="comments-submit" type="submit" ${state.sending ? 'disabled' : ''}>Reply</button></div>
+    </form>` : '';
+    const children = comment.children.map((child) => renderComment(child, depth + 1)).join('');
+    return `<article class="comment-thread" style="--thread-depth:${Math.min(depth, 5)}">
+        <div class="comment-card">
             <div class="comment-card__meta">
-                <span class="comment-card__avatar" style="background:${avatarColor(comment.author)}" aria-hidden="true">${escapeHtml(comment.author.charAt(0).toUpperCase())}</span>
+                <span class="comment-card__avatar" aria-hidden="true">${escapeHtml((comment.author || '?').charAt(0).toUpperCase())}</span>
                 <p class="comment-card__author">${author}</p>
                 <time class="comment-card__time" datetime="${new Date(timestamp).toISOString()}">${formatTime(timestamp)}</time>
             </div>
-            <p class="comment-card__text">${escapeHtml(comment.text)}</p>
+            <p class="comment-card__text">${escapeHtml(comment.text || '')}</p>
             <div class="comment-card__actions">
-                <button class="comment-action ${vote === 'like' ? 'is-selected' : ''}" type="button" data-vote="like" data-comment-id="${comment.id}" ${vote ? 'disabled' : ''}>👍 ${comment.likes || 0}</button>
-                <button class="comment-action ${vote === 'dislike' ? 'is-selected' : ''}" type="button" data-vote="dislike" data-comment-id="${comment.id}" ${vote ? 'disabled' : ''}>👎 ${comment.dislikes || 0}</button>
-                <button class="comment-action" type="button" data-reply="${author}">Reply</button>
+                <button class="comment-action ${vote === 'like' ? 'is-selected' : ''}" type="button" data-vote="like" data-comment-id="${id}" ${vote ? 'disabled' : ''}>Like ${comment.likes || 0}</button>
+                <button class="comment-action ${state.replyToId === comment.id ? 'is-selected' : ''}" type="button" data-reply="${id}" aria-expanded="${state.replyToId === comment.id}">Reply</button>
             </div>
-        </article>`;
-    }).join('');
+            ${replyForm}
+        </div>
+        ${children ? `<div class="comment-thread__children">${children}</div>` : ''}
+    </article>`;
+}
+
+function render() {
+    const comments = buildTree();
+    elements.list.innerHTML = comments.map((comment) => renderComment(comment)).join('');
     elements.empty.hidden = comments.length > 0;
-}
-
-function readLocal() {
-    try {
-        return JSON.parse(localStorage.getItem(state.storageKey) || '[]');
-    } catch (error) {
-        return [];
-    }
-}
-
-function writeLocal(comments) {
-    localStorage.setItem(state.storageKey, JSON.stringify(comments));
-    state.comments = comments;
-    render();
+    elements.form.querySelector('button[type="submit"]').disabled = !isConfigured || !state.connected || state.sending;
 }
 
 function sanitizeText(text) {
-    return text.replace(/(?:fuck|shit|bitch|cunt|asshole)/gi, (word) => '*'.repeat(word.length));
-}
-
-function loadLocalFeed() {
-    setPreviewViewerMode(true);
-    state.comments = readLocal();
-    render();
-    setNotice('Local preview mode. Add Firebase credentials for shared live comments.', false);
-    window.addEventListener('storage', (event) => {
-        if (event.key === state.storageKey) {
-            state.comments = readLocal();
-            render();
-            if (!elements.drawer.classList.contains('is-open')) elements.unread.hidden = false;
-        }
-    });
-}
-
-function loadFirebaseFeed() {
-    setPreviewViewerMode(false);
-    state.unsubscribe?.();
-    state.firebasePath = state.feed === 'post' ? `comments/${pageId}` : 'comments/global';
-    const commentsReference = ref(db, state.firebasePath);
-    state.unsubscribe = onValue(commentsReference, (snapshot) => {
-        const value = snapshot.val() || {};
-        state.comments = Object.entries(value).map(([id, comment]) => ({ id, ...comment }));
-        render();
-        setNotice('Live community feed connected.', false);
-    }, (error) => {
-        console.error(error);
-        setNotice('Live connection failed. Check Firebase rules and configuration.', true);
-    });
-}
-
-function setPreviewViewerMode(enabled) {
-    window.clearTimeout(state.previewViewerTimer);
-    state.previewViewerTimer = null;
-    elements.viewerCount.hidden = !enabled;
-    elements.viewerLabel.textContent = enabled ? 'simulated previews' : 'Presence tracking unavailable';
-    elements.viewerDot.classList.toggle('comments-status-dot--inactive', !enabled);
-
-    if (!enabled) return;
-
-    state.previewViewerIndex = 0;
-    elements.viewerCount.textContent = PREVIEW_VIEWER_COUNTS[state.previewViewerIndex];
-    const scheduleNext = () => {
-        const delay = 6000 + Math.floor(Math.random() * 5000);
-        state.previewViewerTimer = window.setTimeout(() => {
-            state.previewViewerIndex = (state.previewViewerIndex + 1) % PREVIEW_VIEWER_COUNTS.length;
-            elements.viewerCount.classList.add('is-changing');
-            window.setTimeout(() => {
-                elements.viewerCount.textContent = PREVIEW_VIEWER_COUNTS[state.previewViewerIndex];
-                elements.viewerCount.classList.remove('is-changing');
-                scheduleNext();
-            }, 180);
-        }, delay);
-    };
-    scheduleNext();
+    return text;
 }
 
 function refreshFeed() {
-    state.storageKey = `${STORAGE_PREFIX}${state.feed === 'post' ? pageId : 'global'}`;
+    state.unsubscribe?.();
+    state.connectionUnsubscribe?.();
+    state.comments = [];
+    state.replyToId = null;
+    render();
     if (!isConfigured || !db) {
-        loadLocalFeed();
+        setConnection(false);
+        setNotice('Comments are unavailable because Firebase is not configured.', true);
         return;
     }
-    loadFirebaseFeed();
+
+    state.firebasePath = state.feed === 'post' ? `comments/${pageId}` : 'comments/global';
+    const commentsReference = ref(db, state.firebasePath);
+    state.connectionUnsubscribe = onValue(ref(db, '.info/connected'), (snapshot) => {
+        const connected = snapshot.val() === true;
+        setConnection(connected);
+        if (!connected) setNotice('Connection lost. Reconnecting to live comments...', true);
+        else setNotice('Live comments are syncing...', false);
+        render();
+    }, (error) => {
+        console.error('Firebase connection state failed:', error);
+        setConnection(false);
+        setNotice('Unable to reach Firebase. Check your connection and try again.', true);
+    });
+    state.unsubscribe = onValue(commentsReference, (snapshot) => {
+        const value = snapshot.val() || {};
+        state.comments = Object.entries(value).map(([id, comment]) => ({ ...comment, id }));
+        render();
+        if (state.connected) setNotice('Live comments synced.', false);
+        if (!elements.drawer.classList.contains('is-open')) elements.unread.hidden = false;
+    }, (error) => {
+        console.error('Firebase comments subscription failed:', error);
+        setConnection(false);
+        setNotice('Live comments could not load. Check Firebase access and your connection.', true);
+    });
 }
 
 async function submitComment(event) {
     event.preventDefault();
-    const text = sanitizeText(elements.text.value.trim());
+    const isReply = event.target.matches('[data-reply-form]');
+    const textInput = isReply ? event.target.elements.text : elements.text;
+    const text = sanitizeText(textInput.value.trim());
     const author = elements.name.value.trim();
-    if (!author || author.length > 30 || !text || text.length > MAX_LENGTH) return;
+    if (!isConfigured || !db || !state.connected || state.sending || !author || author.length > 30 || !text || text.length > MAX_LENGTH) return;
     localStorage.setItem('tzeptosoft-comment-name', author);
-    const comment = { author, text, timestamp: isConfigured ? serverTimestamp() : Date.now(), likes: 0, dislikes: 0, pageUrl: pagePath };
-    elements.text.value = '';
-    updateCount();
-    if (isConfigured && db) {
-        await push(ref(db, state.firebasePath), comment);
-    } else {
-        writeLocal([{ ...comment, timestamp: Date.now(), id: `local-${Date.now()}` }, ...readLocal()]);
+    const parentId = isReply ? event.target.dataset.replyForm : null;
+    state.sending = true;
+    const submitButton = event.target.querySelector('button[type="submit"]');
+    submitButton.disabled = true;
+    setNotice('Sending your comment...', false);
+    let sent = false;
+    try {
+        const commentReference = push(ref(db, state.firebasePath));
+        await set(commentReference, {
+            id: commentReference.key,
+            parentId,
+            author,
+            text,
+            timestamp: Date.now(),
+            likes: 0
+        });
+        textInput.value = '';
+        if (isReply) state.replyToId = null;
+        else updateCount();
+        sent = true;
+        setNotice('Your comment was sent.', false);
+    } catch (error) {
+        console.error('Firebase comment submission failed:', error);
+        setNotice('Your comment could not be sent. Check your connection and try again.', true);
+    } finally {
+        state.sending = false;
+        if (sent) render();
+        else submitButton.disabled = false;
     }
-    setNotice('Transmission sent.', false);
 }
 
 async function vote(commentId, voteType) {
-    if (localStorage.getItem(`${VOTE_PREFIX}${commentId}`)) return;
+    if (!isConfigured || !db || !state.connected || localStorage.getItem(`${VOTE_PREFIX}${commentId}`)) return;
     const field = voteType === 'like' ? 'likes' : 'dislikes';
-    if (isConfigured && db) {
-        const commentFieldReference = ref(db, `${state.firebasePath}/${commentId}/${field}`);
+    const commentFieldReference = ref(db, `${state.firebasePath}/${commentId}/${field}`);
+    try {
         await runTransaction(commentFieldReference, (value) => (value || 0) + 1);
-    } else {
-        const comments = readLocal().map((comment) => comment.id === commentId ? { ...comment, [field]: (comment[field] || 0) + 1 } : comment);
-        writeLocal(comments);
+    } catch (error) {
+        console.error('Firebase comment reaction failed:', error);
+        setNotice('Your reaction could not be saved. Check your connection and try again.', true);
+        return;
     }
     localStorage.setItem(`${VOTE_PREFIX}${commentId}`, voteType);
     render();
@@ -227,7 +238,11 @@ elements.trigger.addEventListener('click', () => setOpen(true));
 elements.close.addEventListener('click', () => setOpen(false));
 elements.backdrop.addEventListener('click', () => setOpen(false));
 elements.form.addEventListener('submit', submitComment);
-elements.text.addEventListener('input', updateCount);
+elements.text.addEventListener('input', () => {
+    updateCount();
+    if (elements.text.value.trim()) setNotice('Drafting your comment...', false);
+    else if (state.connected) setNotice('Live comments synced.', false);
+});
 document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape' && elements.drawer.classList.contains('is-open')) setOpen(false);
 });
@@ -236,9 +251,9 @@ root.addEventListener('click', (event) => {
     if (voteButton) vote(voteButton.dataset.commentId, voteButton.dataset.vote);
     const replyButton = event.target.closest('[data-reply]');
     if (replyButton) {
-        elements.text.value = `@${replyButton.dataset.reply} `;
-        updateCount();
-        elements.text.focus();
+        state.replyToId = state.replyToId === replyButton.dataset.reply ? null : replyButton.dataset.reply;
+        render();
+        if (state.replyToId) root.querySelector(`[data-reply-form="${CSS.escape(state.replyToId)}"] textarea`)?.focus();
     }
     const tab = event.target.closest('[data-feed-tab]');
     if (tab && state.feed !== tab.dataset.feedTab) {
@@ -250,6 +265,10 @@ root.addEventListener('click', (event) => {
         });
         refreshFeed();
     }
+});
+
+root.addEventListener('submit', (event) => {
+    if (event.target.matches('[data-reply-form]')) submitComment(event);
 });
 
 elements.name.value = localStorage.getItem('tzeptosoft-comment-name') || '';
