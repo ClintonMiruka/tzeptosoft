@@ -9,13 +9,14 @@ import {
 } from 'https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js';
 
 const firebaseConfig = {
-    apiKey: 'YOUR_API_KEY',
-    authDomain: 'YOUR_PROJECT_ID.firebaseapp.com',
-    databaseURL: 'https://YOUR_PROJECT_ID-default-rtdb.firebaseio.com',
-    projectId: 'YOUR_PROJECT_ID',
-    storageBucket: 'YOUR_PROJECT_ID.appspot.com',
-    messagingSenderId: 'YOUR_SENDER_ID',
-    appId: 'YOUR_APP_ID'
+    apiKey: 'AIzaSyChcwSjIbImdxl38fEZqC5803jiLSXLNYA',
+    authDomain: 'tzeptosoft-comments.firebaseapp.com',
+    databaseURL: 'https://tzeptosoft-comments-default-rtdb.firebaseio.com',
+    projectId: 'tzeptosoft-comments',
+    storageBucket: 'tzeptosoft-comments.firebasestorage.app',
+    messagingSenderId: '111764232266',
+    appId: '1:111764232266:web:1007abbff6c1de49d86eb3',
+    measurementId: 'G-QNJBCD54ET'
 };
 
 const isConfigured = Object.values(firebaseConfig).every((value) => !value.includes('YOUR_'));
