@@ -1,6 +1,14 @@
 import { Resend } from 'resend';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+function getResendClient() {
+  const apiKey = process.env.RESEND_API_KEY;
+
+  if (!apiKey) {
+    throw new Error('RESEND_API_KEY is not configured.');
+  }
+
+  return new Resend(apiKey);
+}
 
 function escapeHtml(value) {
   return String(value ?? '').replace(/[&<>"']/g, (character) => ({
@@ -24,6 +32,7 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: 'Email and message are required' });
     }
 
+    const resend = getResendClient();
     const safeName = escapeHtml(name || 'Website Visitor');
     const safeEmail = escapeHtml(email);
     const safeMessage = escapeHtml(message).replace(/\r?\n/g, '<br>');
