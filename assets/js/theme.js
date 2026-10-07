@@ -32,5 +32,5 @@
 
     updateButton(initialTheme);
     new MutationObserver(() => updateButton(document.documentElement.getAttribute('data-theme') || initialTheme))
-        .observe(document.documentElement, { childList: true, subtree: true });
+        .observe(document.body, { childList: true, subtree: true });
 }());

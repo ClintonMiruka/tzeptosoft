@@ -98,8 +98,6 @@ img { max-width: 100%; height: auto; }
 a { color: var(--accent-primary); }
 button, input, textarea, select { font: inherit; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
-.brand-link { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
-.brand-logo { display: block; width: 56px; height: 56px; object-fit: contain; }
 
 .site-header {
     position: fixed !important;
@@ -200,21 +198,143 @@ main { width: min(100% - 2rem, var(--content-width)); margin: 0 auto; }
     .site-search input, .search-results { width: 100%; }
 }
 
-html,
-body,
-.site-header,
-.site-footer {
+html[data-theme='light'] body {
+    background-color: var(--bg-main) !important;
+    color: var(--text-main) !important;
+}
+
+html[data-theme='light'] main,
+html[data-theme='light'] .main-content,
+html[data-theme='light'] .blog-container,
+html[data-theme='light'] .content,
+html[data-theme='light'] article,
+html[data-theme='light'] .section,
+html[data-theme='light'] .site-header,
+html[data-theme='light'] .site-footer,
+html[data-theme='light'] [class*='card'],
+html[data-theme='light'] [class*='container'],
+html[data-theme='light'] [class*='panel'],
+html[data-theme='light'] [class*='modal'] {
+    background-color: var(--bg-surface) !important;
+    color: var(--text-main);
+    border-color: var(--border-subtle);
+}
+
+html[data-theme='light'] h1,
+html[data-theme='light'] h2,
+html[data-theme='light'] h3,
+html[data-theme='light'] h4,
+html[data-theme='light'] h5,
+html[data-theme='light'] h6,
+html[data-theme='light'] strong,
+html[data-theme='light'] .section-title,
+html[data-theme='light'] .card-title {
+    color: var(--text-main);
+}
+
+html[data-theme='light'] p,
+html[data-theme='light'] li,
+html[data-theme='light'] time,
+html[data-theme='light'] label {
+    color: var(--text-muted);
+}
+
+html[data-theme='light'] input,
+html[data-theme='light'] textarea,
+html[data-theme='light'] select {
+    background-color: var(--bg-surface) !important;
+    color: var(--text-main) !important;
+    border-color: var(--border-strong) !important;
+}
+
+html[data-theme] body,
+html[data-theme] p,
+html[data-theme] span,
+html[data-theme] li,
+html[data-theme] blockquote,
+html[data-theme] label,
+html[data-theme] input,
+html[data-theme] textarea,
+html[data-theme] select {
+    color: var(--text-main);
+}
+
+html[data-theme] h1,
+html[data-theme] h2,
+html[data-theme] h3,
+html[data-theme] h4,
+html[data-theme] h5,
+html[data-theme] h6,
+html[data-theme] strong,
+html[data-theme] b,
+html[data-theme] .title,
+html[data-theme] .heading {
+    color: var(--text-heading);
+}
+
+html[data-theme] .muted,
+html[data-theme] .subtitle,
+html[data-theme] .tagline,
+html[data-theme] time,
+html[data-theme] .read-time {
+    color: var(--text-muted);
+}
+
+html[data-theme] .hero,
+html[data-theme] .top-box,
+html[data-theme] .featured-card,
+html[data-theme] .card,
+html[data-theme] .post-card,
+html[data-theme] .cta-box,
+html[data-theme] .blog-container,
+html[data-theme] .newsletter-container,
+html[data-theme] .terminal-content {
+    background: var(--bg-card) !important;
+    border-color: var(--border-subtle) !important;
+    color: var(--text-main) !important;
     transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
 }
 
-html[data-theme='light'] .blog-container,
-html[data-theme='light'] .newsletter-container,
-html[data-theme='light'] .terminal-content {
-    background: var(--bg-surface);
-    color: var(--text-main);
+html[data-theme] .hero *,
+html[data-theme] .top-box *,
+html[data-theme] .featured-card *,
+html[data-theme] .card *,
+html[data-theme] .post-card *,
+html[data-theme] .cta-box * {
+    color: inherit;
 }
 
-html[data-theme='light'] .blog-container li {
-    background: var(--bg-card);
-    color: var(--text-main);
+html[data-theme] .hero .matrix-animation,
+html[data-theme] .hero h2,
+html[data-theme] .hero .brand-tagline,
+html[data-theme] .top-box .subtitle,
+html[data-theme] .hero .subtitle {
+    color: var(--text-muted) !important;
+}
+
+html[data-theme] .hero .btn-cta,
+html[data-theme] .btn-primary,
+html[data-theme] .cta-button,
+html[data-theme] .get-in-touch-btn,
+html[data-theme] .btn-join {
+    background: var(--accent-primary) !important;
+    color: #ffffff !important;
+}
+
+html[data-theme] .hero .btn-cta:hover,
+html[data-theme] .btn-primary:hover,
+html[data-theme] .cta-button:hover,
+html[data-theme] .get-in-touch-btn:hover,
+html[data-theme] .btn-join:hover {
+    background: var(--accent-hover) !important;
+    color: #ffffff !important;
+}
+
+html[data-theme] .blog-container li,
+html[data-theme] .newsletter-container input,
+html[data-theme] .search-box,
+html[data-theme] .search-input {
+    background: var(--bg-banner) !important;
+    color: var(--text-main) !important;
+    border-color: var(--border-subtle) !important;
 }

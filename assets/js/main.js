@@ -1,17 +1,10 @@
 (function () {
     'use strict';
 
-    const rootPath = `${'../'.repeat(Math.max(0, new URL(document.baseURI).pathname.split('/').length - 2))}`;
-
     const searchScript = document.createElement('script');
-    searchScript.src = `${rootPath}assets/js/search.js`;
+    searchScript.src = `${'../'.repeat(Math.max(0, new URL(document.baseURI).pathname.split('/').length - 2))}assets/js/search.js`;
     searchScript.defer = true;
     document.head.append(searchScript);
-
-    const newsletterScript = document.createElement('script');
-    newsletterScript.src = `${rootPath}assets/js/newsletter.js`;
-    newsletterScript.defer = true;
-    document.head.append(newsletterScript);
 
     document.addEventListener('click', (event) => {
         const toggle = event.target.closest('.nav-toggle');
@@ -23,6 +16,13 @@
         navigation?.classList.toggle('is-open', !open);
         header?.classList.remove('header-hidden');
         header?.classList.add('header-visible');
+    });
+
+    document.addEventListener('click', (event) => {
+        const themeButton = event.target.closest('.theme-btn');
+        if (!themeButton) return;
+        const enabled = document.documentElement.classList.toggle('theme-light');
+        themeButton.setAttribute('aria-pressed', String(enabled));
     });
 
     document.addEventListener('click', (event) => {

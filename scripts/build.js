@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 
-/*
+/ 
  * TZEPTOSOFT BUILD SCRIPT
  * ⚔️ No bullshit, just building empires
- *
+ * 
  * Usage:
- * node scripts/build.js --help
- * node scripts/build.js new-article "Article Title" "Category"
- * node scripts/build.js deploy --env=production
+ * node build.js --help
+ * node build.js new-article "Article Title" "Category"
+ * node build.js deploy --env=production
  */
 
 const fs = require('fs');
